@@ -1479,3 +1479,7 @@ UPDATE `zp_mangosd`.`gameobject_template` SET `type`='3', `faction`='114' WHERE 
 
 /********** Primordial Behemoth added missing spell *******************/
 UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param1`=23391 WHERE  `id`=1220602;
+
+/******** Hydrospawn resistance ****************/
+UPDATE `zp_mangosd`.`creature_template` SET `resistance4`=100 WHERE  `entry`=13280;
+UPDATE `zp_mangosd`.`creature_template` SET `resistance4`=50 WHERE  `entry`=14350;
