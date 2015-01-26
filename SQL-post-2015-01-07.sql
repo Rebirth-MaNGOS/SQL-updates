@@ -1483,3 +1483,6 @@ UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param1`=23391 WHERE  `id`
 /******** Hydrospawn resistance ****************/
 UPDATE `zp_mangosd`.`creature_template` SET `resistance4`=100 WHERE  `entry`=13280;
 UPDATE `zp_mangosd`.`creature_template` SET `resistance4`=50 WHERE  `entry`=14350;
+
+/********* Razzashi Venombrood AI **************/
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_razzashi_venombrood' WHERE  `entry`=14532;
