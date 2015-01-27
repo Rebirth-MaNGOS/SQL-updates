@@ -1493,3 +1493,8 @@ UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`=0.68, `speed_run`=0.5, 
 /**************** Add Glutton text on aggro *****************/
 REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (856704, 8567, 4, 0, 100, 2, 0, 0, 0, 0, 1, -2013, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Glutton - Yell on Aggro');
 REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-2013, 'Me smell stench of the living!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 5823, 1, 0, 0, 'Glutton - Yell on aggro');
+
+/*********** Obsidian Sentinel AI *****************/
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='mob_obsidian_sentinel' WHERE  `entry`=7023;
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE  `entry`=7209;
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (720901, 7209, 0, 0, 100, 3, 10000, 15000, 10000, 25000, 11, 9941, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Obsidian Shard - Cast Obsidian Reflection');
