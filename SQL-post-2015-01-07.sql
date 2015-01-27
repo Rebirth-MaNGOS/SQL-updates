@@ -1486,3 +1486,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `resistance4`=50 WHERE  `entry`=1435
 
 /********* Razzashi Venombrood AI **************/
 UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_razzashi_venombrood' WHERE  `entry`=14532;
+
+/*********** Atal'ai Deathwalker's Spirit, now aggro players ***********/
+UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`=0.68, `speed_run`=0.5, `mindmg`=412.2, `maxdmg`=499.1, `unit_flags`=0 WHERE  `entry`=8317;
