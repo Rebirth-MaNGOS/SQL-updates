@@ -1489,3 +1489,7 @@ UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_razzashi_venombroo
 
 /*********** Atal'ai Deathwalker's Spirit, now aggro players ***********/
 UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`=0.68, `speed_run`=0.5, `mindmg`=412.2, `maxdmg`=499.1, `unit_flags`=0 WHERE  `entry`=8317;
+
+/**************** Add Glutton text on aggro *****************/
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (856704, 8567, 4, 0, 100, 2, 0, 0, 0, 0, 1, -2013, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Glutton - Yell on Aggro');
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-2013, 'Me smell stench of the living!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 5823, 1, 0, 0, 'Glutton - Yell on aggro');
