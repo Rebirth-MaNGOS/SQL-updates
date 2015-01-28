@@ -1498,3 +1498,6 @@ REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-2013, 'Me smell stench of
 UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='mob_obsidian_sentinel' WHERE  `entry`=7023;
 UPDATE `zp_mangosd`.`creature_template` SET `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE  `entry`=7209;
 REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (720901, 7209, 0, 0, 100, 3, 10000, 15000, 10000, 25000, 11, 9941, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Obsidian Shard - Cast Obsidian Reflection');
+
+-- Updated target for Ancient stone keeper
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param2`=4 WHERE  `id`=720601;
