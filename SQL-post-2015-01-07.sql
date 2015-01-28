@@ -1501,3 +1501,6 @@ REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (720901, 7209, 0, 0, 100,
 
 -- Updated target for Ancient stone keeper
 UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param2`=4 WHERE  `id`=720601;
+
+/********** EoM Hazza'rah adds *************/
+UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`=0.5, `speed_run`=0.5 WHERE  `entry`=15163;
