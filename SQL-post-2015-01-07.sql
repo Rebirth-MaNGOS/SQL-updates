@@ -1464,9 +1464,13 @@ REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `posi
 -- Orgrimmar
 REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (1712703, 179881, 1, 1539.23, -4422.79, 7.8, 5.3, 0, 0, 0, 0, -1, 0, 0);
 
--- Turn in Alliance talk.
+-- Turn-in Alliance talk
 REPLACE INTO `zp_mangosd`.`db_script_string` (`entry`, `content_default`) VALUES ('2000005253', 'Citizens of the Alliance, the Lord of Blackrock is slain! Nefarian has been subdued by $N and $G his : her; allies!');
 REPLACE INTO `zp_mangosd`.`db_script_string` (`entry`, `content_default`) VALUES ('2000005254', 'Let your spirits rise! Rally around your champion, bask in $G his : her; glory! Revel in the rallying cry of the dragon slayer!');
+
+--Turn-in Horde talk
+REPLACE INTO `zp_mangosd`.`db_script_string` (`entry`, `content_default`) VALUES ('2000005251', 'NEFARIAN IS SLAIN! people of Orgrimmar, bow down before the might of $N and $G his : her; allies for they have laid a blow against the Black Dragonflight that is sure to stir the Aspects from their malaise! This defeat shall surely be felt by the father of the Black Flight: Deathwing reels in pain and anguish this day!');
+REPLACE INTO `zp_mangosd`.`db_script_string` (`entry`, `content_default`) VALUES ('2000005252', ' Be lifted by $N\'s accomplishment! Revel in $G his : her; rallying cry!');
 
 -- Nef turn-in quest_end_script Alliance
 DELETE FROM zp_mangosd.quest_end_scripts WHERE id = 7782;
@@ -1476,6 +1480,15 @@ REPLACE INTO zp_mangosd.quest_end_scripts (`id`, `delay`, `command`, `datalong`,
 REPLACE INTO zp_mangosd.quest_end_scripts (`id`, `delay`, `command`, `datalong`, `datalong2`) VALUES ('7782', '10', '9', '1712704', '127800');
 UPDATE `zp_mangosd`.`quest_template` SET `CompleteScript`='7782' WHERE `entry`='7782';
 UPDATE `zp_mangosd`.`gameobject_template` SET `type`='3', `faction`='114' WHERE `entry`='179882';
+
+-- Nef turn-in quest_end_script Horde
+DELETE FROM zp_mangosd.quest_end_scripts WHERE id = 7784;
+REPLACE INTO zp_mangosd.quest_end_scripts (`id`, `delay`, `command`, `datalong`, `datalong4`, `dataint`) VALUES ('7784', '4', '0', '1', '1', '2000005251');
+REPLACE INTO zp_mangosd.quest_end_scripts (`id`, `delay`, `command`, `datalong`, `datalong4`, `dataint`) VALUES ('7784', '12', '0', '1', '1', '2000005252');
+REPLACE INTO zp_mangosd.quest_end_scripts (`id`, `delay`, `command`, `datalong`, `datalong2`) VALUES ('7784', '15', '15', '22888', '0');
+REPLACE INTO zp_mangosd.quest_end_scripts (`id`, `delay`, `command`, `datalong`, `datalong2`) VALUES ('7784', '10', '9', '1712703', '127800');
+UPDATE `zp_mangosd`.`quest_template` SET `CompleteScript`='7784' WHERE `entry`='7784';
+UPDATE `zp_mangosd`.`gameobject_template` SET `type`='3', `faction`='114' WHERE `entry`='179881';
 
 /********** Primordial Behemoth added missing spell *******************/
 UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param1`=23391 WHERE  `id`=1220602;
