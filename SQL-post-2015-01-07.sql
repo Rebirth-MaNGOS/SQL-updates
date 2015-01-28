@@ -1492,3 +1492,28 @@ UPDATE `zp_mangosd`.`gameobject_template` SET `type`='3', `faction`='114' WHERE 
 
 /********** Primordial Behemoth added missing spell *******************/
 UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param1`=23391 WHERE  `id`=1220602;
+
+/******** Hydrospawn resistance ****************/
+UPDATE `zp_mangosd`.`creature_template` SET `resistance4`=100 WHERE  `entry`=13280;
+UPDATE `zp_mangosd`.`creature_template` SET `resistance4`=50 WHERE  `entry`=14350;
+
+/********* Razzashi Venombrood AI **************/
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_razzashi_venombrood' WHERE  `entry`=14532;
+
+/*********** Atal'ai Deathwalker's Spirit, now aggro players ***********/
+UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`=0.68, `speed_run`=0.5, `mindmg`=412.2, `maxdmg`=499.1, `unit_flags`=0 WHERE  `entry`=8317;
+
+/**************** Add Glutton text on aggro *****************/
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (856704, 8567, 4, 0, 100, 2, 0, 0, 0, 0, 1, -2013, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Glutton - Yell on Aggro');
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-2013, 'Me smell stench of the living!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 5823, 1, 0, 0, 'Glutton - Yell on aggro');
+
+/*********** Obsidian Sentinel AI *****************/
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='mob_obsidian_sentinel' WHERE  `entry`=7023;
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE  `entry`=7209;
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (720901, 7209, 0, 0, 100, 3, 10000, 15000, 10000, 25000, 11, 9941, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Obsidian Shard - Cast Obsidian Reflection');
+
+-- Updated target for Ancient stone keeper
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param2`=4 WHERE  `id`=720601;
+
+/********** EoM Hazza'rah adds *************/
+UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`=0.5, `speed_run`=0.5 WHERE  `entry`=15163;
