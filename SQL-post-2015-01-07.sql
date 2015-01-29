@@ -1586,3 +1586,9 @@ UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_param3`=10000, `event_param
 -- Baron Aquanis adjust resistances
 UPDATE `zp_mangosd`.`creature_template` SET `resistance4`=110, `resistance6`=56 WHERE  `entry`=12876;
 
+/********** stockades ********/
+-- Targorr adjust AI
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_type`=0, `event_flags`=3, `event_param1`=3000, `event_param2`=4000, `event_param3`=8000, `event_param4`=16000 WHERE  `id`=169601;
+
+-- Kam Deepfury, add armor
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=800 WHERE  `entry`=1666;
