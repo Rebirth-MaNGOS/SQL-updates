@@ -1561,3 +1561,10 @@ UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_type`=0, `event_param1`=500
 -- Bazzalan
 REPLACE INTO `creature_ai_scripts` VALUES (1151902, 11519, 0, 0, 100, 3, 0, 10000, 15000, 30000, 11, 744, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Bazzalan - Cast Poison');
 UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_type`=0, `event_param1`=4000, `event_param2`=6000 WHERE  `id`=1151901;
+
+-- Edwin Vancleef text adjusted
+REPLACE INTO `creature_ai_scripts` VALUES (63908, 639, 2, 0, 100, 2, 25, 0, 0, 0, 1, -173, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Edwin VanCleef - Yell at 25% HP');
+REPLACE INTO `creature_ai_scripts` VALUES (63905, 639, 2, 0, 100, 2, 50, 26, 0, 0, 1, -172, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Edwin VanCleef - Yell at 50% HP');
+REPLACE INTO `creature_ai_scripts` VALUES (63903, 639, 2, 0, 100, 2, 75, 51, 0, 0, 1, -171, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Edwin VanCleef - Yell at 75% HP');
+REPLACE INTO `creature_ai_scripts` VALUES (63901, 639, 0, 0, 100, 3, 5000, 15000, 8000, 16000, 11, 12787, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Edwin VanCleef - Cast Thrash');
+
