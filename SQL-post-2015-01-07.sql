@@ -1550,3 +1550,14 @@ DELETE FROM zp_mangosd.spell_bonus_data WHERE entry = 2054 OR entry = 2050;
 
 -- Rotgrip, add missing spell
 REPLACE INTO zp_mangosd.`creature_ai_scripts` VALUES (1359603, 13596, 0, 0, 100, 3, 5000, 10000, 6000, 10000, 11, 15976, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Rotgrip - Cast Puncture');
+
+/********** RFC Bosses AI *********************/
+-- Jergosh the invoker
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_type`=0, `event_param1`=1000, `event_param2`=10000 WHERE  `id`=1151802;
+
+-- Taragam the hungerer
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_type`=0, `event_param1`=5000, `event_param2`=7000, `action1_param2`=1 WHERE  `id`=1152001;
+
+-- Bazzalan
+REPLACE INTO `creature_ai_scripts` VALUES (1151902, 11519, 0, 0, 100, 3, 0, 10000, 15000, 30000, 11, 744, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Bazzalan - Cast Poison');
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_type`=0, `event_param1`=4000, `event_param2`=6000 WHERE  `id`=1151901;
