@@ -1547,3 +1547,6 @@ DELETE FROM zp_mangosd.spell_bonus_data WHERE entry = 5185;
 
 -- Remove incorrect coefficents for Heal and Lesser Heal
 DELETE FROM zp_mangosd.spell_bonus_data WHERE entry = 2054 OR entry = 2050;
+
+-- Rotgrip, add missing spell
+REPLACE INTO zp_mangosd.`creature_ai_scripts` VALUES (1359603, 13596, 0, 0, 100, 3, 5000, 10000, 6000, 10000, 11, 15976, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Rotgrip - Cast Puncture');
