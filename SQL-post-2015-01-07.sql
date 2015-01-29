@@ -1582,3 +1582,7 @@ REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15085, 996332, 100, 0
 -- Lady Moongazer update dmg and net
 UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=41, `maxdmg`=49, `minrangedmg`=40.8089, `maxrangedmg`=60.64 WHERE  `entry`=2184;
 UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_param3`=10000, `event_param4`=25000 WHERE  `id`=218406;
+
+-- Baron Aquanis adjust resistances
+UPDATE `zp_mangosd`.`creature_template` SET `resistance4`=110, `resistance6`=56 WHERE  `entry`=12876;
+
