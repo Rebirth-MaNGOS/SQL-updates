@@ -1579,3 +1579,6 @@ REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15083, 996330, 100, 0
 REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15084, 996331, 100, 0, -996331, 2, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15085, 996332, 100, 0, -996332, 2, 0, 0, 0);
 
+-- Lady Moongazer update dmg and net
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=41, `maxdmg`=49, `minrangedmg`=40.8089, `maxrangedmg`=60.64 WHERE  `entry`=2184;
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_param3`=10000, `event_param4`=25000 WHERE  `id`=218406;
