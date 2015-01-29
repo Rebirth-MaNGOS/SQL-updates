@@ -1534,3 +1534,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=152, `faction_H`=152 WHE
 UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=152, `faction_H`=152 WHERE  `entry`=4517;
 UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=152, `faction_H`=152 WHERE  `entry`=4516;
 UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=152, `faction_H`=152 WHERE  `entry`=4515;
+
+-- Agathelos The Raging, should now use left for dead, but it doesn't do FD as it should
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param3`=2 WHERE  `id`=442202;
