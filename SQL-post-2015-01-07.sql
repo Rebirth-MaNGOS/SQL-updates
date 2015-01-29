@@ -1537,3 +1537,7 @@ UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=152, `faction_H`=152 WHE
 
 -- Agathelos The Raging, should now use left for dead, but it doesn't do FD as it should
 UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param3`=2 WHERE  `id`=442202;
+
+-- Noxxion should now do nature dmg
+UPDATE `zp_mangosd`.`creature_template` SET `dmgschool`=3 WHERE  `entry`=13282;
+UPDATE `zp_mangosd`.`creature_template` SET `dmgschool`=3 WHERE  `entry`=13456;
