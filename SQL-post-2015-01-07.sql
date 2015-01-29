@@ -1517,3 +1517,13 @@ UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param2`=4 WHERE  `id`=720
 
 /********** EoM Hazza'rah adds *************/
 UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`=0.5, `speed_run`=0.5 WHERE  `entry`=15163;
+
+-- Madservant add random say
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1511105, 15111, 4, 0, 10, 34, 0, 0, 0, 0, 1, -228, 0, 0, 1, -15111, 0, 0, 0, 0, 0, 0, 'Mad Servant - Random say on Aggro');
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-15111, 'Troll mojo da strongest mojo!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Mad Servant Yell');
+
+-- mad VW immune banish
+UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=131072 WHERE  `entry`=15146;
+
+-- galgann firehammer remove wrong spell
+DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=729104;
