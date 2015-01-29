@@ -1541,3 +1541,9 @@ UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param3`=2 WHERE  `id`=442
 -- Noxxion should now do nature dmg
 UPDATE `zp_mangosd`.`creature_template` SET `dmgschool`=3 WHERE  `entry`=13282;
 UPDATE `zp_mangosd`.`creature_template` SET `dmgschool`=3 WHERE  `entry`=13456;
+
+-- Remove incorrect coefficient for Healing Touch from the DB
+DELETE FROM zp_mangosd.spell_bonus_data WHERE entry = 5185;
+
+-- Remove incorrect coefficents for Heal and Lesser Heal
+DELETE FROM zp_mangosd.spell_bonus_data WHERE entry = 2054 OR entry = 2050;
