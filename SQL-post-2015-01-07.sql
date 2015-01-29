@@ -1563,3 +1563,45 @@ UPDATE zp_mangosd.`item_template` SET `spellid_2`='0' WHERE (`entry`='19377');
 UPDATE zp_mangosd.`item_template` SET `spelltrigger_2`='0' WHERE (`entry`='19377');
 UPDATE zp_mangosd.`item_template` SET `spellcooldown_2`='0' WHERE (`entry`='19377');
 UPDATE zp_mangosd.`item_template` SET `spellcategorycooldown_2`='0' WHERE (`entry`='19377');
+
+/********** RFC Bosses AI *********************/
+-- Jergosh the invoker
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_type`=0, `event_param1`=1000, `event_param2`=10000 WHERE  `id`=1151802;
+
+-- Taragam the hungerer
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_type`=0, `event_param1`=5000, `event_param2`=7000, `action1_param2`=1 WHERE  `id`=1152001;
+
+-- Bazzalan
+REPLACE INTO zp_mangosd.`creature_ai_scripts` VALUES (1151902, 11519, 0, 0, 100, 3, 0, 10000, 15000, 30000, 11, 744, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Bazzalan - Cast Poison');
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_type`=0, `event_param1`=4000, `event_param2`=6000 WHERE  `id`=1151901;
+
+-- Edwin Vancleef text adjusted
+REPLACE INTO zp_mangosd.`creature_ai_scripts` VALUES (63908, 639, 2, 0, 100, 2, 25, 0, 0, 0, 1, -173, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Edwin VanCleef - Yell at 25% HP');
+REPLACE INTO zp_mangosd.`creature_ai_scripts` VALUES (63905, 639, 2, 0, 100, 2, 50, 26, 0, 0, 1, -172, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Edwin VanCleef - Yell at 50% HP');
+REPLACE INTO zp_mangosd.`creature_ai_scripts` VALUES (63903, 639, 2, 0, 100, 2, 75, 51, 0, 0, 1, -171, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Edwin VanCleef - Yell at 75% HP');
+REPLACE INTO zp_mangosd.`creature_ai_scripts` VALUES (63901, 639, 0, 0, 100, 3, 5000, 15000, 8000, 16000, 11, 12787, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Edwin VanCleef - Cast Thrash');
+
+/**************** EoM always drop 1-3 tokens ******************/
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996330, 19942, 50, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996331, 19940, 50, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996332, 19941, 50, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996333, 19939, 50, 0, 1, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15082, 996333, 100, 0, -996333, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15083, 996330, 100, 0, -996330, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15084, 996331, 100, 0, -996331, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15085, 996332, 100, 0, -996332, 2, 0, 0, 0);
+
+-- Lady Moongazer update dmg and net
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=41, `maxdmg`=49, `minrangedmg`=40.8089, `maxrangedmg`=60.64 WHERE  `entry`=2184;
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_param3`=10000, `event_param4`=25000 WHERE  `id`=218406;
+
+-- Baron Aquanis adjust resistances
+UPDATE `zp_mangosd`.`creature_template` SET `resistance4`=110, `resistance6`=56 WHERE  `entry`=12876;
+
+/********** stockades ********/
+-- Targorr adjust AI
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_type`=0, `event_flags`=3, `event_param1`=3000, `event_param2`=4000, `event_param3`=8000, `event_param4`=16000 WHERE  `id`=169601;
+
+-- Kam Deepfury, add armor
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=800 WHERE  `entry`=1666;
