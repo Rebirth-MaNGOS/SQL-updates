@@ -1541,3 +1541,6 @@ UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param3`=2 WHERE  `id`=442
 -- Noxxion should now do nature dmg
 UPDATE `zp_mangosd`.`creature_template` SET `dmgschool`=3 WHERE  `entry`=13282;
 UPDATE `zp_mangosd`.`creature_template` SET `dmgschool`=3 WHERE  `entry`=13456;
+
+-- Rotgrip, add missing spell
+REPLACE INTO `creature_ai_scripts` VALUES (1359603, 13596, 0, 0, 100, 3, 5000, 10000, 6000, 10000, 11, 15976, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Rotgrip - Cast Puncture');
