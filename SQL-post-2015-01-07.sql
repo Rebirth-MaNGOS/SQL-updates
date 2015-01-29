@@ -1568,3 +1568,14 @@ REPLACE INTO `creature_ai_scripts` VALUES (63905, 639, 2, 0, 100, 2, 50, 26, 0, 
 REPLACE INTO `creature_ai_scripts` VALUES (63903, 639, 2, 0, 100, 2, 75, 51, 0, 0, 1, -171, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Edwin VanCleef - Yell at 75% HP');
 REPLACE INTO `creature_ai_scripts` VALUES (63901, 639, 0, 0, 100, 3, 5000, 15000, 8000, 16000, 11, 12787, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Edwin VanCleef - Cast Thrash');
 
+/**************** EoM always drop 1-3 tokens ******************/
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996330, 19942, 50, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996331, 19940, 50, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996332, 19941, 50, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996333, 19939, 50, 0, 1, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15082, 996333, 100, 0, -996333, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15083, 996330, 100, 0, -996330, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15084, 996331, 100, 0, -996331, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15085, 996332, 100, 0, -996332, 2, 0, 0, 0);
+
