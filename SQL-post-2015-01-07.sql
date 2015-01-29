@@ -1527,3 +1527,10 @@ UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=131072 WHERE 
 
 -- galgann firehammer remove wrong spell
 DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=729104;
+
+/************ RFK Death's heads npcs' faction ***********/
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=152, `faction_H`=152 WHERE  `entry`=4519;
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=152, `faction_H`=152 WHERE  `entry`=4518;
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=152, `faction_H`=152 WHERE  `entry`=4517;
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=152, `faction_H`=152 WHERE  `entry`=4516;
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=152, `faction_H`=152 WHERE  `entry`=4515;
