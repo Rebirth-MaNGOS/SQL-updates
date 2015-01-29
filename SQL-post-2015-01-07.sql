@@ -1605,3 +1605,24 @@ UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_type`=0, `event_flags`=3, `
 
 -- Kam Deepfury, add armor
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=800 WHERE  `entry`=1666;
+
+/************** Lady Sarevess Pat ****************/
+UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`=0.8 WHERE  `entry`=4831;
+REPLACE INTO `creature_movement` VALUES (26129, 1, -302.05, 412.589, -57.1593, 120000, 0, 0, 0, 0, 0, 0, 0, 0, 3011939, 3.54762, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 2, -312.707, 410.213, -56.719, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3011940, 3.36698, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 3, -334.764, 406.938, -54.8015, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3011941, 3.44552, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 4, -348.45, 399.215, -54.065, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3011942, 4.02671, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 5, -352.514, 385.733, -54.4759, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3011943, 4.6943, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 6, -346.362, 364.325, -54.313, 5000, 0, 0, 0, 0, 0, 0, 0, 0, 3011944, 5.16946, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 7, -335.04, 341.304, -53.8388, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3011945, 5.16946, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 8, -320.801, 332.149, -54.449, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3011946, 5.63284, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 9, -305.149, 322.49, -53.8442, 2000, 0, 0, 0, 0, 0, 0, 0, 0, 3011947, 6.0923, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 10, -298.894, 322.407, -53.0833, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3011948, 0.319612, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 11, -292.396, 326.322, -52.1724, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3011949, 1.54876, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 12, -296.123, 331.369, -52.6067, 20000, 0, 0, 0, 0, 0, 0, 0, 0, 3011950, 2.6601, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 13, -329.654, 347.246, -53.55, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3011951, 2.69937, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 14, -341.597, 356.43, -54.138, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3011952, 1.93361, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 15, -344.447, 373.109, -54.5549, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3011953, 0.771216, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 16, -324.192, 393.943, -54.1204, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3011954, 0.759435, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 17, -309.131, 406.696, -56.7146, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3011955, 0.759435, 0, 0);
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=26219;
