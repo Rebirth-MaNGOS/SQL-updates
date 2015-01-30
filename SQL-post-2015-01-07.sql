@@ -1483,10 +1483,14 @@ UPDATE `zp_mangosd`.`gameobject_template` SET `type`='3', `faction`='114' WHERE 
 
 -- Nef turn-in quest_end_script Horde
 DELETE FROM zp_mangosd.quest_end_scripts WHERE id = 7784;
-REPLACE INTO zp_mangosd.quest_end_scripts (`id`, `delay`, `command`, `datalong`, `datalong4`, `dataint`) VALUES ('7784', '4', '0', '1', '1', '2000005251');
-REPLACE INTO zp_mangosd.quest_end_scripts (`id`, `delay`, `command`, `datalong`, `datalong4`, `dataint`) VALUES ('7784', '12', '0', '1', '1', '2000005252');
-REPLACE INTO zp_mangosd.quest_end_scripts (`id`, `delay`, `command`, `datalong`, `datalong2`) VALUES ('7784', '15', '15', '22888', '0');
-REPLACE INTO zp_mangosd.quest_end_scripts (`id`, `delay`, `command`, `datalong`, `datalong2`) VALUES ('7784', '10', '9', '1712703', '127800');
+REPLACE INTO zp_mangosd.quest_end_scripts (`id`, `delay`, `command`, `datalong2`, `x`, `y`, `z`) VALUES ('7784', '0', '3', '4200', '1544.5', '-4426', '10.6');
+REPLACE INTO zp_mangosd.quest_end_scripts (`id`, `delay`, `command`, `datalong2`, `x`, `y`, `z`) VALUES ('7784', '5', '3', '1000', '1545', '-4425', '10.5');
+REPLACE INTO zp_mangosd.quest_end_scripts (`id`, `delay`, `command`, `datalong`, `datalong4`, `dataint`) VALUES ('7784', '9', '0', '1', '1', '2000005251');
+REPLACE INTO zp_mangosd.quest_end_scripts (`id`, `delay`, `command`, `datalong`, `datalong4`, `dataint`) VALUES ('7784', '17', '0', '1', '1', '2000005252');
+REPLACE INTO zp_mangosd.quest_end_scripts (`id`, `delay`, `command`, `datalong`, `datalong2`) VALUES ('7784', '20', '15', '22888', '0');
+REPLACE INTO zp_mangosd.quest_end_scripts (`id`, `delay`, `command`, `datalong`, `datalong2`) VALUES ('7784', '15', '9', '1712703', '127800');
+REPLACE INTO zp_mangosd.quest_end_scripts (`id`, `delay`, `command`, `datalong2`, `x`, `y`, `z`) VALUES ('7784', '25', '3', '4500', '1567.83', '-4395.20', '7');
+REPLACE INTO zp_mangosd.quest_end_scripts (`id`, `delay`, `command`, `datalong2`, `x`, `y`, `z`) VALUES ('7784', '30', '3', '1000', '1565.79', '-4395.27', '7');
 UPDATE `zp_mangosd`.`quest_template` SET `CompleteScript`='7784' WHERE `entry`='7784';
 UPDATE `zp_mangosd`.`gameobject_template` SET `type`='3', `faction`='114' WHERE `entry`='179881';
 
