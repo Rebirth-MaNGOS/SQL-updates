@@ -1646,3 +1646,9 @@ REPLACE INTO `script_texts` VALUES (-1109008, 'Hakkar shall live again!', NULL, 
 
 UPDATE `zp_scriptdevzerod`.`script_texts` SET `content_default`='The shield be down! Rise up Atal\'ai! Rise up!', `sound`=5861 WHERE  `entry`=-1109006;
 UPDATE `zp_scriptdevzerod`.`script_texts` SET `sound`=5864 WHERE  `entry`=-1109005;
+
+-- Add armor to Nekrum, ZF
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=2215 WHERE  `entry`=7796;
+
+-- add text for witch doctor Zum'Rah(the npc doesn't do it, only in db for now)
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1209008, 'How dare you enter my sanctum!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Witch Doctor ZumRah');
