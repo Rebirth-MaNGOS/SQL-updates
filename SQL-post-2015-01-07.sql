@@ -1609,3 +1609,100 @@ UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_type`=0, `event_flags`=3, `
 
 -- Kam Deepfury, add armor
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=800 WHERE  `entry`=1666;
+
+/************** Lady Sarevess Pat ****************/
+UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`=0.8 WHERE  `entry`=4831;
+REPLACE INTO `creature_movement` VALUES (26129, 1, -302.05, 412.589, -57.1593, 120000, 0, 0, 0, 0, 0, 0, 0, 0, 3011939, 3.54762, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 2, -312.707, 410.213, -56.719, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3011940, 3.36698, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 3, -334.764, 406.938, -54.8015, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3011941, 3.44552, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 4, -348.45, 399.215, -54.065, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3011942, 4.02671, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 5, -352.514, 385.733, -54.4759, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3011943, 4.6943, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 6, -346.362, 364.325, -54.313, 5000, 0, 0, 0, 0, 0, 0, 0, 0, 3011944, 5.16946, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 7, -335.04, 341.304, -53.8388, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3011945, 5.16946, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 8, -320.801, 332.149, -54.449, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3011946, 5.63284, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 9, -305.149, 322.49, -53.8442, 2000, 0, 0, 0, 0, 0, 0, 0, 0, 3011947, 6.0923, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 10, -298.894, 322.407, -53.0833, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3011948, 0.319612, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 11, -292.396, 326.322, -52.1724, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3011949, 1.54876, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 12, -296.123, 331.369, -52.6067, 20000, 0, 0, 0, 0, 0, 0, 0, 0, 3011950, 2.6601, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 13, -329.654, 347.246, -53.55, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3011951, 2.69937, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 14, -341.597, 356.43, -54.138, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3011952, 1.93361, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 15, -344.447, 373.109, -54.5549, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3011953, 0.771216, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 16, -324.192, 393.943, -54.1204, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3011954, 0.759435, 0, 0);
+REPLACE INTO `creature_movement` VALUES (26129, 17, -309.131, 406.696, -56.7146, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3011955, 0.759435, 0, 0);
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=26219;
+
+-- Fallen champion add armor
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=1706 WHERE  `entry`=6488;
+
+-- Azshir the sleepless add armor
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=1540 WHERE  `entry`=6490;
+
+/*************** Zul'Farrak *******************/
+-- Antu'sul missing text
+REPLACE INTO `script_texts` VALUES (-1209007, 'The children of Sul will protect their master. Rise once more Sul\'ithuz!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Antusul Text');
+REPLACE INTO `script_texts` VALUES (-1209006, 'Rise and defend your master!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Antusul Text');
+REPLACE INTO `script_texts` VALUES (-1209005, 'Lunch has arrived my beautiful children. Tear them to pieces!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Antusul Text');
+
+/************* Sunken temple **************/
+-- Jammal'an missing text + soundfiles
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1109007, 'The Soulflayer comes!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 5862, 1, 0, 0, 'Jammalan Aggro Yell');
+REPLACE INTO `script_texts` VALUES (-1109008, 'Hakkar shall live again!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 5865, 1, 0, 0, 'Jammalan Yell on HP');
+
+UPDATE `zp_scriptdevzerod`.`script_texts` SET `content_default`='The shield be down! Rise up Atal\'ai! Rise up!', `sound`=5861 WHERE  `entry`=-1109006;
+UPDATE `zp_scriptdevzerod`.`script_texts` SET `sound`=5864 WHERE  `entry`=-1109005;
+
+-- Add armor to Nekrum, ZF
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=2215 WHERE  `entry`=7796;
+
+-- add text for witch doctor Zum'Rah(the npc doesn't do it, only in db for now)
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1209008, 'How dare you enter my sanctum!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Witch Doctor ZumRah');
+
+/************** DM North, add missing weapons *****************/
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (14321, 5196, 2214, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (14325, 15268, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (14323, 4825, 15569, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (14326, 6738, 2214, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (11441, 18376, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (11450, 13018, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (11445, 3192, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (11501, 8199, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (14324, 2226, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (14351, 15261, 0, 0);
+
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=11450 WHERE  `entry`=11450;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=11441 WHERE  `entry`=11441;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=14325 WHERE  `entry`=14325;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=14326 WHERE  `entry`=14326;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=14323 WHERE  `entry`=14323;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=14321 WHERE  `entry`=14321;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=11445 WHERE  `entry`=11445;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=14324 WHERE  `entry`=14324;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=14351 WHERE  `entry`=14351;
+
+-- Quest Bitter Rivals
+
+DELETE FROM `zp_mangosd`.`gameobject` WHERE  `id`=269 LIMIT 1;
+DELETE FROM `zp_mangosd`.`gameobject` WHERE  `id`=270 LIMIT 1;
+REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (1712706, 269, 0, -5607.46, -548.192, 392.985, 1.26101, 0, 0, 0.589553, 0.80773, 30, 100, 1);
+
+-- Quest Ghost-o-plasm Roundup
+
+REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCredit2`, `modelid_1`, `modelid_2`, `name`, `subname`, `gossip_menu_id`, `minlevel`, `maxlevel`, `minhealth`, `maxhealth`, `minmana`, `maxmana`, `armor`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `aggrorangeoverride`, `unit_class`, `unit_flags`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `PetSpellDataId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `Civilian`, `RacialLeader`, `RegenHealth`, `equipment_id`, `trainer_id`, `vendor_id`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`) VALUES (11560, 0, 0, 11370, 0, 'Magrami Spectre', NULL, 0, 38, 39, 1556, 1635, 0, 0, 0, 21, 21, 0, 1.47, 1.11286, 0, 0, 88, 106, 0, 45, 1, 1620, 1782, 0, 0, 0, 0, 0, 0, 0, 0, 0, 55.5984, 76.4478, 100, 6, 0, 11560, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 140, 'EventAI', 1, 3, 0, 0, 1, 0, 0, 0, 8388624, 0, 'mob_magrami_spectre');
+
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (3008918, 11560, 1, 0, 0, -2316.32, 1375.9, 63.5882, 5.2789, 25, 5, 0, 1556, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (3008919, 11560, 1, 0, 0, -2294.6, 1393.51, 63.5881, 0.856325, 25, 5, 0, 1635, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (3008920, 11560, 1, 0, 0, -2299.93, 1363.49, 63.6054, 4.68671, 25, 5, 0, 1556, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (3008921, 11560, 1, 0, 0, -2313.18, 1331.75, 64.7918, 0.56336, 25, 5, 0, 1635, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (3008922, 11560, 1, 0, 0, -2287.39, 1329.2, 63.5888, 6.08471, 25, 5, 0, 1635, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (3008923, 11560, 1, 0, 0, -2251.43, 1334.52, 63.5888, 5.78233, 25, 5, 0, 1556, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (3008924, 11560, 1, 0, 0, -2265.45, 1315.02, 63.5952, 4.6867, 25, 5, 0, 1556, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (3008925, 11560, 1, 0, 0, -2227.74, 1307.65, 63.5884, 5.70772, 25, 5, 0, 1556, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (3008926, 11560, 1, 0, 0, -2195.25, 1313.87, 63.5887, 0.0175073, 25, 5, 0, 1635, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (3008927, 11560, 1, 0, 0, -2224.93, 1336.37, 70.1509, 2.80567, 25, 5, 0, 1556, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (3008928, 11560, 1, 0, 0, -2249.43, 1374, 73.7531, 1.96922, 25, 5, 0, 1635, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (3008929, 11560, 1, 0, 0, -2276.93, 1387.22, 66.7571, 3.51489, 25, 5, 0, 1556, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (3008930, 11560, 1, 0, 0, -2251.79, 1416.98, 77.9582, 0.838247, 25, 5, 0, 1635, 0, 0, 1);
+
+
+
+
