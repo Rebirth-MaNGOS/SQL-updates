@@ -1626,3 +1626,10 @@ REPLACE INTO `creature_movement` VALUES (26129, 15, -344.447, 373.109, -54.5549,
 REPLACE INTO `creature_movement` VALUES (26129, 16, -324.192, 393.943, -54.1204, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3011954, 0.759435, 0, 0);
 REPLACE INTO `creature_movement` VALUES (26129, 17, -309.131, 406.696, -56.7146, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3011955, 0.759435, 0, 0);
 UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=26219;
+
+-- Fallen champion add armor
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=1706 WHERE  `entry`=6488;
+
+-- Azshir the sleepless add armor
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=1540 WHERE  `entry`=6490;
+
