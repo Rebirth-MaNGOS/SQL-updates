@@ -1707,4 +1707,6 @@ REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment
 -- same size as Vael, slightly big but slightly too close to tank
 UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=5, `combat_reach`=6 WHERE  `modelid`=11380;
 
+-- Fix songflower always being up in Felwood
+UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`=-180 WHERE  `guid`=48959;
 
