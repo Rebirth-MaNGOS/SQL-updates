@@ -1639,3 +1639,10 @@ REPLACE INTO `script_texts` VALUES (-1209007, 'The children of Sul will protect 
 REPLACE INTO `script_texts` VALUES (-1209006, 'Rise and defend your master!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Antusul Text');
 REPLACE INTO `script_texts` VALUES (-1209005, 'Lunch has arrived my beautiful children. Tear them to pieces!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Antusul Text');
 
+/************* Sunken temple **************/
+-- Jammal'an missing text + soundfiles
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1109007, 'The Soulflayer comes!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 5862, 1, 0, 0, 'Jammalan Aggro Yell');
+REPLACE INTO `script_texts` VALUES (-1109008, 'Hakkar shall live again!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 5865, 1, 0, 0, 'Jammalan Yell on HP');
+
+UPDATE `zp_scriptdevzerod`.`script_texts` SET `content_default`='The shield be down! Rise up Atal\'ai! Rise up!', `sound`=5861 WHERE  `entry`=-1109006;
+UPDATE `zp_scriptdevzerod`.`script_texts` SET `sound`=5864 WHERE  `entry`=-1109005;
