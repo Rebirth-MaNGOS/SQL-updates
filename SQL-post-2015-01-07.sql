@@ -1703,6 +1703,8 @@ REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (3008929, 11560, 1, 0, 0, -2276.93, 1387.22, 66.7571, 3.51489, 25, 5, 0, 1556, 0, 0, 1);
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (3008930, 11560, 1, 0, 0, -2251.79, 1416.98, 77.9582, 0.838247, 25, 5, 0, 1635, 0, 0, 1);
 
-
+/***************** Nefarian hitbox *********************/
+-- same size as Vael, slightly big but slightly too close to tank
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=5, `combat_reach`=6 WHERE  `modelid`=11380;
 
 
