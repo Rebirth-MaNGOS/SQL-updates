@@ -1675,3 +1675,11 @@ UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=11445 WHERE  `entry`=
 UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=14324 WHERE  `entry`=14324;
 UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=14351 WHERE  `entry`=14351;
 
+-- Quest Bitter Rivals
+
+DELETE FROM `zp_mangosd`.`gameobject` WHERE  `id`=269 LIMIT 1;
+DELETE FROM `zp_mangosd`.`gameobject` WHERE  `id`=270 LIMIT 1;
+REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (1712706, 269, 0, -5607.46, -548.192, 392.985, 1.26101, 0, 0, 0.589553, 0.80773, 30, 100, 1);
+
+
+
