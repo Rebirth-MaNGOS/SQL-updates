@@ -1652,3 +1652,26 @@ UPDATE `zp_mangosd`.`creature_template` SET `armor`=2215 WHERE  `entry`=7796;
 
 -- add text for witch doctor Zum'Rah(the npc doesn't do it, only in db for now)
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1209008, 'How dare you enter my sanctum!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Witch Doctor ZumRah');
+
+/************** DM North, add missing weapons *****************/
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (14321, 5196, 2214, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (14325, 15268, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (14323, 4825, 15569, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (14326, 6738, 2214, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (11441, 18376, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (11450, 13018, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (11445, 3192, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (11501, 8199, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (14324, 2226, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (14351, 15261, 0, 0);
+
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=11450 WHERE  `entry`=11450;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=11441 WHERE  `entry`=11441;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=14325 WHERE  `entry`=14325;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=14326 WHERE  `entry`=14326;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=14323 WHERE  `entry`=14323;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=14321 WHERE  `entry`=14321;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=11445 WHERE  `entry`=11445;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=14324 WHERE  `entry`=14324;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=14351 WHERE  `entry`=14351;
+
