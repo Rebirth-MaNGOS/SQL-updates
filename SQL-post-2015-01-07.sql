@@ -1633,3 +1633,9 @@ UPDATE `zp_mangosd`.`creature_template` SET `armor`=1706 WHERE  `entry`=6488;
 -- Azshir the sleepless add armor
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=1540 WHERE  `entry`=6490;
 
+/*************** Zul'Farrak *******************/
+-- Antu'sul missing text
+REPLACE INTO `script_texts` VALUES (-1209007, 'The children of Sul will protect their master. Rise once more Sul\'ithuz!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Antusul Text');
+REPLACE INTO `script_texts` VALUES (-1209006, 'Rise and defend your master!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Antusul Text');
+REPLACE INTO `script_texts` VALUES (-1209005, 'Lunch has arrived my beautiful children. Tear them to pieces!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Antusul Text');
+
