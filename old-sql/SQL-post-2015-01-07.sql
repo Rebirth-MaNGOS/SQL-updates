@@ -1464,7 +1464,7 @@ REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `posi
 REPLACE INTO `zp_mangosd`.`db_script_string` (`entry`, `content_default`) VALUES ('2000005253', 'Citizens of the Alliance, the Lord of Blackrock is slain! Nefarian has been subdued by $N and $G his : her; allies!');
 REPLACE INTO `zp_mangosd`.`db_script_string` (`entry`, `content_default`) VALUES ('2000005254', 'Let your spirits rise! Rally around your champion, bask in $G his : her; glory! Revel in the rallying cry of the dragon slayer!');
 
---Turn-in Horde talk
+-- Turn-in Horde talk
 REPLACE INTO `zp_mangosd`.`db_script_string` (`entry`, `content_default`) VALUES ('2000005251', 'NEFARIAN IS SLAIN! people of Orgrimmar, bow down before the might of $N and $G his : her; allies for they have laid a blow against the Black Dragonflight that is sure to stir the Aspects from their malaise! This defeat shall surely be felt by the father of the Black Flight: Deathwing reels in pain and anguish this day!');
 REPLACE INTO `zp_mangosd`.`db_script_string` (`entry`, `content_default`) VALUES ('2000005252', ' Be lifted by $N\'s accomplishment! Revel in $G his : her; rallying cry!');
 
