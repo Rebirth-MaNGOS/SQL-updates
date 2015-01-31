@@ -1957,3 +1957,14 @@ UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`=-180 WHERE  `guid`=48959;
 -- Scald, rare, added spell + ai + armor + fire dmg
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=2431, `dmgschool`=2, `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE  `entry`=8281;
 REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (828101, 8281, 0, 0, 100, 1, 1000, 10000, 5000, 15000, 11, 15661, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Scald - Cast Immolate');
+
+/################# HOTFIX PATCHES ##########################/
+-- Walking speed for eyes of Naxxramas.
+UPDATE zp_mangosd.`creature_template` SET `speed_walk`='0.7' WHERE (`entry`='10411');
+
+
+-- Bitter Rivals
+
+-- Script for Jarven
+
+REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCredit2`, `modelid_1`, `modelid_2`, `name`, `subname`, `gossip_menu_id`, `minlevel`, `maxlevel`, `minhealth`, `maxhealth`, `minmana`, `maxmana`, `armor`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `aggrorangeoverride`, `unit_class`, `unit_flags`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `PetSpellDataId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `Civilian`, `RacialLeader`, `RegenHealth`, `equipment_id`, `trainer_id`, `vendor_id`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`) VALUES (1373, 0, 0, 3438, 0, 'Jarven Thunderbrew', NULL, 0, 15, 15, 644, 644, 0, 0, 20, 55, 55, 2, 0.99, 1.11286, 0, 0, 17, 22, 0, 9, 1, 2000, 0, 0, 1, 4608, 0, 0, 0, 0, 0, 0, 24.552, 33.759, 100, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 0, 0, 1, 1315, 0, 0, 0, 2, 'npc_jarven_thunderbrew');
