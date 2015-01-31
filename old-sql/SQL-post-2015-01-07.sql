@@ -1958,7 +1958,7 @@ UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`=-180 WHERE  `guid`=48959;
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=2431, `dmgschool`=2, `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE  `entry`=8281;
 REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (828101, 8281, 0, 0, 100, 1, 1000, 10000, 5000, 15000, 11, 15661, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Scald - Cast Immolate');
 
-/################# HOTFIX PATCHES ##########################/
+/*################# HOTFIX PATCHES ##########################*/
 -- Walking speed for eyes of Naxxramas.
 UPDATE zp_mangosd.`creature_template` SET `speed_walk`='0.7' WHERE (`entry`='10411');
 
