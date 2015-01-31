@@ -1683,7 +1683,10 @@ UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=14351 WHERE  `entry`=
 
 DELETE FROM `zp_mangosd`.`gameobject` WHERE  `id`=269 LIMIT 1;
 DELETE FROM `zp_mangosd`.`gameobject` WHERE  `id`=270 LIMIT 1;
-REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (1712706, 269, 0, -5607.46, -548.192, 392.985, 1.26101, 0, 0, 0.589553, 0.80773, 30, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject_template` (`entry`, `type`, `displayId`, `name`, `faction`, `flags`, `size`, `data0`, `data1`, `data2`, `data3`, `data4`, `data5`, `data6`, `data7`, `data8`, `data9`, `data10`, `data11`, `data12`, `data13`, `data14`, `data15`, `data16`, `data17`, `data18`, `data19`, `data20`, `data21`, `data22`, `data23`, `mingold`, `maxgold`, `ScriptName`) VALUES (269, 2, 32, 'Guarded Thunder Ale Barrel', 84, 0, 1, 0, 0, 0, 9027, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
+REPLACE INTO `zp_mangosd`.`gameobject_template` (`entry`, `type`, `displayId`, `name`, `faction`, `flags`, `size`, `data0`, `data1`, `data2`, `data3`, `data4`, `data5`, `data6`, `data7`, `data8`, `data9`, `data10`, `data11`, `data12`, `data13`, `data14`, `data15`, `data16`, `data17`, `data18`, `data19`, `data20`, `data21`, `data22`, `data23`, `mingold`, `maxgold`, `ScriptName`) VALUES (270, 2, 32, 'Unguarded Thunder Ale Barrel', 84, 64, 1, 0, 193, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
+REPLACE INTO `zp_mangosd`.`gossip_menu` (`entry`, `text_id`, `cond_1`, `cond_1_val_1`, `cond_1_val_2`, `cond_2`, `cond_2_val_1`, `cond_2_val_2`) VALUES (9027, 12198, 0, 0, 0, 0, 0, 0);
+
 
 -- Quest Ghost-o-plasm Roundup
 
