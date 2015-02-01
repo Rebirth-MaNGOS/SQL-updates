@@ -1979,3 +1979,9 @@ REPLACE INTO zp_mangosd.`quest_template` (`entry`, `Method`, `ZoneOrSort`, `MinL
 -- Pyrewood village timers updated
 UPDATE `zp_mangosd`.`game_event` SET `length`=840 WHERE  `entry`=50;
 UPDATE `zp_mangosd`.`game_event` SET `length`=540 WHERE  `entry`=51;
+
+-- Delete mob in Dire Maul West inside pylon
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=133821;
+
+-- Hitbox adjusted for Immol'thar
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.2, `combat_reach`=2 WHERE  `modelid`=14173;
