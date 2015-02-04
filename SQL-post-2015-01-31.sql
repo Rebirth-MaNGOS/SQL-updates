@@ -43,3 +43,12 @@ REPLACE INTO `creature` VALUES (37087, 4456, 1, 4691, 0, -3612.95, -4463.9, 13.6
 UPDATE zp_mangosd.`quest_template` SET `Objectives`='Speak with Fiora Longears on the docks at Theramore in Dustwallow Marsh.' WHERE (`entry`='1132');
 UPDATE zp_mangosd.`quest_template` SET `Details`='Oh, to be at sea once again! To feel the kiss of the wind, and to have the waves rock me like my blessed mother, long ago!$B$BOh, I wish I had your fortune, good $c, for I see the sea in your future!$B$BIt\'s my job to tell eager souls of the land of Kalimdor, the land of opportunity! If you\'re willing to try your luck across the sea, then take a ship from here to the lovely port of Theramore. Speak 
 there with my partner, the elf, Fiora Longears.$B$BShe\'ll start you on your Kalimdor adventure!' WHERE (`entry`='1132');
+
+-- AQ20 + 40, no longer facing the wrong way when entering/exiting
+-- AQ20
+UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_orientation`=2.697 WHERE  `id`=4008;
+UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_orientation`=5.7967 WHERE  `id`=4006;
+-- AQ40
+UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_orientation`=0.958183 WHERE  `id`=4010;
+UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_orientation`=4.12491 WHERE  `id`=4012;
+
