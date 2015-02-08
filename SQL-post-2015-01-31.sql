@@ -80,3 +80,16 @@ REPLACE INTO `creature_ai_texts` VALUES (-421, 'Deja vu. For a moment I thought 
 -- add chanced missing text
 REPLACE INTO `creature_ai_scripts` VALUES (352002, 3520, 1, 0, 100, 33, 0, 0, 180000, 180000, 1, -423, -424, -425, 1, -421, 0, 0, 0, 0, 0, 0, 'Ol\' Emma - Random Say 1 OOC');
 
+/************* Emerald Dragons hitbox ***************/
+-- Taerar
+UPDATE `zp_mangosd`.`creature_model_info` SET `combat_reach`=6 WHERE  `modelid`=15363;
+
+-- Ysondre
+UPDATE `zp_mangosd`.`creature_model_info` SET `combat_reach`=6 WHERE  `modelid`=15364;
+
+-- Lethon
+UPDATE `zp_mangosd`.`creature_model_info` SET `combat_reach`=6 WHERE  `modelid`=15365;
+
+-- Emeriss
+UPDATE `zp_mangosd`.`creature_model_info` SET `combat_reach`=6 WHERE  `modelid`=15366;
+
