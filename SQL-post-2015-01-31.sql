@@ -93,3 +93,6 @@ UPDATE `zp_mangosd`.`creature_model_info` SET `combat_reach`=6 WHERE  `modelid`=
 -- Emeriss
 UPDATE `zp_mangosd`.`creature_model_info` SET `combat_reach`=6 WHERE  `modelid`=15366;
 
+-- Onyxia Whelps no longer skinnable
+UPDATE `zp_mangosd`.`creature_template` SET `skinloot`=0 WHERE  `entry`=11262;
+UPDATE `zp_mangosd`.`creature_template` SET `skinloot`=0 WHERE  `entry`=100001;
