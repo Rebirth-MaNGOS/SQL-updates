@@ -206,4 +206,8 @@ REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (10300, 45, 5510, -492
 -- Shade of Taerar misc updates
 UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=66620, `maxhealth`=66620, `armor`=4351, `speed_run`=1.8, `scale`=0.8, `minmana`=0, `maxmana`=0, `maxgold`=0 WHERE `entry`=15302;
 
+-- Demented druid hp and dream fog speed + drop no gold
+UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=0.75, `maxgold`=0 WHERE  `entry`=15224;
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=2441, `maxhealth`=2441, `armor`=1342 WHERE  `entry`=15260;
+
 
