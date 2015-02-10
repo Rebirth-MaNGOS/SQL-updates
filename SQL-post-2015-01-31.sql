@@ -124,7 +124,7 @@ UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=120 WHERE  `guid`=41759;
 -- Add all text
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1000807, 'This blue light... It\'s strange. What do you think it means?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Ranshalla SAY_ENTER_OWL_THICKET');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1000808, 'We\'ve found it!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Ranshalla SAY_REACH_TORCH_1');
-REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1000809, 'Please, light this while I am channeling', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Ranshalla SAY_REACH_TORCH_2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1000809, 'Please, light this while I am channeling.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Ranshalla SAY_REACH_TORCH_2');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1000810, 'This is the place. Let\'s light it.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Ranshalla SAY_REACH_TORCH_3');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1000811, 'Let\'s find the next one.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Ranshalla SAY_AFTER_TORCH_1');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1000812, 'We must continue on now.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Ranshalla SAY_AFTER_TORCH_2');
