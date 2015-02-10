@@ -212,3 +212,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=2441, `maxhealth`=2441, 
 
 -- SQL for setting the correct number of starting players for AV.
 UPDATE `zp_mangosd`.`battleground_template` SET `MinPlayersPerTeam`=17 WHERE  `id`=1;
+
+-- Adjusted damage for Lethon
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=1435, `maxdmg`=1785 WHERE  `entry`=14888;
