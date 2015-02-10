@@ -202,3 +202,8 @@ REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (10300, 42, 5511.31, -
 REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (10300, 43, 5509.49, -4922.29, 846.33, 0, '');
 REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (10300, 44, 5517.66, -4920.82, 845.12, 0, 'escort paused');
 REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (10300, 45, 5510, -4921, 845, 0, 'Make sure Ranshalla doesn\'t despawn because getting to last WP');
+
+-- Shade of Taerar misc updates
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=66620, `maxhealth`=66620, `armor`=4351, `speed_run`=1.8, `scale`=0.8, `minmana`=0, `maxmana`=0, `maxgold`=0 WHERE `entry`=15302;
+
+
