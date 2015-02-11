@@ -292,4 +292,6 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1000890, 'You have come
 UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=9538 WHERE  `entry`=9538;
 REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (9538, 11607, 0, 0);
 
+-- Armor for Jeklik
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=3961 WHERE  `entry`=14517;
 
