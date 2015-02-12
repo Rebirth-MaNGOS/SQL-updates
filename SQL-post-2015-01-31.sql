@@ -310,3 +310,6 @@ UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=5, `combat_reach
 
 -- Missing AI for the Goblin Engi Trainer in Ratchet.
 update zp_mangosd.creature_template set ScriptName = "npc_prof_engineering" where entry = 8738;
+
+-- Remove the Inlaid Mithril recipe from the engineering trainer in Ratchet.
+DELETE FROM zp_mangosd.npc_trainer WHERE entry = 8738 AND spell = 12909 LIMIT 1;
