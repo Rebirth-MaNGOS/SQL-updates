@@ -307,3 +307,6 @@ UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=2, `combat_reach
 
 -- Ony Hitbox
 UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=5, `combat_reach`=6 WHERE  `modelid`=8570;
+
+-- Missing AI for the Goblin Engi Trainer in Ratchet.
+update zp_mangosd.creature_template set ScriptName = "npc_prof_engineering" where entry = 8738;
