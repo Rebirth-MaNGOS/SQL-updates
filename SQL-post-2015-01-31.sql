@@ -302,3 +302,8 @@ REPLACE INTO `zp_mangosd`.`quest_template` VALUES (5762, 2, 400, 28, 31, 0, 0, 0
 UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action2_type`=0, `action2_param1`=0, `action2_param2`=0, `comment`='Gurubashi Champion - Cast Battle Shout' WHERE  `id`=1135601;
 REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1135604, 11356, 0, 0, 100, 3, 1000, 10000, 8000, 18000, 11, 22886, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Gurubashi Champion - Cast Berserker Charge');
 
+-- 3 drakes BWL hitbox
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=2, `combat_reach`=2 WHERE  `modelid`=6377;
+
+-- Ony Hitbox
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=5, `combat_reach`=6 WHERE  `modelid`=8570;
