@@ -66,8 +66,8 @@ UPDATE `zp_mangosd`.`creature_template` SET `armor`=4861 WHERE  `entry`=16042;
 
 /*************** Tome of Valor, quest ******************/
 -- add missing text
-REPLACE INTO `script_texts` VALUES (-1000099, 'You won\'t ruin my lands, you scum!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Daphne Stillwell Yell');
-REPLACE INTO `script_texts` VALUES (-1001000, 'Kill them! Take the farm!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Defias Raider Tome of Valor');
+REPLACE INTO zp_mangosd.`script_texts` VALUES (-1000099, 'You won\'t ruin my lands, you scum!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Daphne Stillwell Yell');
+REPLACE INTO zp_mangosd.`script_texts` VALUES (-1001000, 'Kill them! Take the farm!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Defias Raider Tome of Valor');
 
 -- remove random mob inside dwarven inn in SW
 DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=54621;
