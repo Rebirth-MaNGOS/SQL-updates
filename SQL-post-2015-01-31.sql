@@ -58,8 +58,8 @@ UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=28, `faction_H`=28 WHERE
 /*********** Lady Hederine AI + loot ***************/
 UPDATE `zp_mangosd`.`creature_template` SET `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE  `entry`=10201;
 
-REPLACE INTO `creature_ai_scripts` VALUES (1020101, 10201, 0, 0, 100, 1, 8000, 13000, 17000, 30000, 11, 7645, 5, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Lady Hederine - Cast Dominate Mind');
-REPLACE INTO `creature_loot_template` VALUES (10201, 10267, 44, 0, 1, 1, 0, 0, 0);
+REPLACE INTO zp_mangosd.`creature_ai_scripts` VALUES (1020101, 10201, 0, 0, 100, 1, 8000, 13000, 17000, 30000, 11, 7645, 5, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Lady Hederine - Cast Dominate Mind');
+REPLACE INTO zp_mangosd.`creature_loot_template` VALUES (10201, 10267, 44, 0, 1, 1, 0, 0, 0);
 
 -- Lord Valthalak armor
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=4861 WHERE  `entry`=16042;
