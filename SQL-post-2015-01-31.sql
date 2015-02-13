@@ -357,3 +357,20 @@ UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_orientation`=3.088 WHERE 
 UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_position_x`=-9016.95, `target_position_y`=885.755, `target_orientation`=5.411 WHERE  `id`=704;
 UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_orientation`=5.350132 WHERE  `id`=702;
 
+
+-- Muggle's SQL
+REPLACE INTO `zp_mangosd`.`item_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('21740', '21724', '100', '0', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`item_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('21740', '21725', '100', '0', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`item_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('21740', '21726', '100', '0', '1', '1', '0', '0', '0');
+
+
+REPLACE INTO `zp_mangosd`.`item_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('21741', '21730', '100', '0', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`item_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('21741', '21731', '100', '0', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`item_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('21741', '21732', '100', '0', '1', '1', '0', '0', '0');
+
+
+REPLACE INTO `zp_mangosd`.`item_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('21742', '21727', '100', '0', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`item_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('21742', '21728', '100', '0', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`item_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('21742', '21729', '100', '0', '1', '1', '0', '0', '0');
+
+
