@@ -313,3 +313,47 @@ update zp_mangosd.creature_template set ScriptName = "npc_prof_engineering" wher
 
 -- Remove the Inlaid Mithril recipe from the engineering trainer in Ratchet.
 DELETE FROM zp_mangosd.npc_trainer WHERE entry = 8738 AND spell = 12909 LIMIT 1;
+
+/****************** Should no longer face the wrong way if entering/exiting instance ***********/
+-- bfd
+UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_orientation`=4.4217 WHERE  `id`=259;
+--brd
+UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_orientation`=1.886 WHERE  `id`=1472;
+-- BRS
+UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_orientation`=2.202 WHERE  `id`=1470;
+-- deadmines
+UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_orientation`=4.618 WHERE  `id`=119;
+-- deadmines exit
+UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_orientation`=1.6681 WHERE  `id`=121;
+-- Dire maul
+UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_orientation`=2.4944 WHERE  `id`=3197;
+-- gnomer
+UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_orientation`=4.7186 WHERE  `id`=322;
+-- gnomer backdoor
+UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_orientation`=4.6181 WHERE  `id`=525;
+-- maraudon
+UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_orientation`=1.753 WHERE  `id`=3126;
+-- rfd
+UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_orientation`=1.124 WHERE  `id`=444;
+--rfk
+UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_orientation`=4.332 WHERE  `id`=242;
+-- scholo
+UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_orientation`=3.587 WHERE  `id`=2568;
+-- stockades
+UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_orientation`=3.779 WHERE  `id`=503;
+-- strat ud
+UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_orientation`=2.007 WHERE  `id`=2221;
+-- ST
+UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_orientation`=28996 WHERE  `id`=448;
+-- ulda
+UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_orientation`=1.682 WHERE  `id`=286;
+-- ulda
+UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_orientation`=3.1478 WHERE  `id`=288;
+-- ulda backdoor
+UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_orientation`=2.8996 WHERE  `id`=882;
+-- ZF
+UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_orientation`=3.088 WHERE  `id`=922;
+-- SW Wizard sanctum
+UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_position_x`=-9016.95, `target_position_y`=885.755, `target_orientation`=5.411 WHERE  `id`=704;
+UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_orientation`=5.350132 WHERE  `id`=702;
+
