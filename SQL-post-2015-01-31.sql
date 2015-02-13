@@ -75,10 +75,10 @@ DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=54621;
 /************ Ol' Emma, Npc SW *****************/
 -- add texts/correct
 UPDATE `zp_mangosd`.`creature_ai_texts` SET `content_default`='Where\'s the water, Emma? Get the water, Emma? If\'n it weren\'t fer me, that lot wouldn\'t know what water looks like.' WHERE  `entry`=-426;
-REPLACE INTO `creature_ai_texts` VALUES (-421, 'Deja vu. For a moment I thought I was back home... before the plague...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, '3520');
+REPLACE INTO zp_mangosd.`creature_ai_texts` VALUES (-421, 'Deja vu. For a moment I thought I was back home... before the plague...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, '3520');
 
 -- add chanced missing text
-REPLACE INTO `creature_ai_scripts` VALUES (352002, 3520, 1, 0, 100, 33, 0, 0, 180000, 180000, 1, -423, -424, -425, 1, -421, 0, 0, 0, 0, 0, 0, 'Ol\' Emma - Random Say 1 OOC');
+REPLACE INTO zp_mangosd.`creature_ai_scripts` VALUES (352002, 3520, 1, 0, 100, 33, 0, 0, 180000, 180000, 1, -423, -424, -425, 1, -421, 0, 0, 0, 0, 0, 0, 'Ol\' Emma - Random Say 1 OOC');
 
 /************* Emerald Dragons hitbox ***************/
 -- Taerar
