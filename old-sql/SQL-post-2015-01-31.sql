@@ -373,4 +373,6 @@ REPLACE INTO `zp_mangosd`.`item_loot_template` (`entry`, `item`, `ChanceOrQuestC
 REPLACE INTO `zp_mangosd`.`item_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('21742', '21728', '100', '0', '1', '1', '0', '0', '0');
 REPLACE INTO `zp_mangosd`.`item_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('21742', '21729', '100', '0', '1', '1', '0', '0', '0');
 
+/************ HOTFIX eye of naxxramas hp *******************/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=260, `maxhealth`=280 WHERE  `entry`=10411;
 
