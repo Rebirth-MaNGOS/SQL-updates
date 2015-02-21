@@ -106,3 +106,5 @@ UPDATE `zp_mangosd`.`db_script_string` SET `content_default`='Get it while it\'s
 UPDATE `zp_mangosd`.`db_script_string` SET `content_default`='Fresh bread for sale!' WHERE  `entry`=2000005101;
 UPDATE `zp_mangosd`.`db_script_string` SET `content_default`='Fresh bread for sale!' WHERE  `entry`=2000005099;
 
+-- Simone for Epic hunter chain, added head to loot table
+UPDATE `zp_mangosd`.`creature_template` SET `lootid`=14533 WHERE  `entry`=14527;
