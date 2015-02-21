@@ -95,3 +95,8 @@ UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`=5 WHERE  `guid`=13949;
 
 -- Haljan Oakheart, should no longer sell clam meat
 DELETE FROM `zp_mangosd`.`npc_vendor` WHERE  `entry`=3962 AND `item`=5503;
+
+-- Darkmaster Gandling, added missing weapon
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (1853, 13937, 0, 0);
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=1853, `armor`=2761 WHERE  `entry`=1853;
+
