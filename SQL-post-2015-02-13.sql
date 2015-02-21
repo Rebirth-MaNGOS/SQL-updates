@@ -90,5 +90,8 @@ UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1, `combat_reach
 UPDATE `zp_mangosd`.`creature_model_info` SET `combat_reach`=0.6 WHERE  `modelid`=10925;
 UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.5, `combat_reach`=1.5 WHERE  `modelid`=6688;
 
+-- Pitted iron chest, respawn. BFD, 5sec instead of 3min for q item
+UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`=5 WHERE  `guid`=13949;
 
-
+-- Haljan Oakheart, should no longer sell clam meat
+DELETE FROM `zp_mangosd`.`npc_vendor` WHERE  `entry`=3962 AND `item`=5503;
