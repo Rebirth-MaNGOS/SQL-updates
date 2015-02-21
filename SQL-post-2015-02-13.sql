@@ -100,3 +100,9 @@ DELETE FROM `zp_mangosd`.`npc_vendor` WHERE  `entry`=3962 AND `item`=5503;
 REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (1853, 13937, 0, 0);
 UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=1853, `armor`=2761 WHERE  `entry`=1853;
 
+-- Thomas Miller, adjusted text
+UPDATE `zp_mangosd`.`db_script_string` SET `content_default`='Get it while it\'s hot.' WHERE  `entry`=2000005100;
+UPDATE `zp_mangosd`.`db_script_string` SET `content_default`='Get it while it\'s hot.' WHERE  `entry`=2000005102;
+UPDATE `zp_mangosd`.`db_script_string` SET `content_default`='Fresh bread for sale!' WHERE  `entry`=2000005101;
+UPDATE `zp_mangosd`.`db_script_string` SET `content_default`='Fresh bread for sale!' WHERE  `entry`=2000005099;
+
