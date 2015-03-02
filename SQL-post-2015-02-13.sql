@@ -464,3 +464,7 @@ UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='npc_senti
 -- delete aura/buff she had to not move(visible debuff, rip)
 DELETE FROM `zp_mangosd`.`creature_addon` WHERE `guid`=38663;
 
+-- Vendors in Darnasus should now be able to repair also
+UPDATE `zp_mangosd`.`creature_template` SET `npcflag`=16388 WHERE  `entry`=4232;
+UPDATE `zp_mangosd`.`creature_template` SET `npcflag`=16388 WHERE  `entry`=4233;
+UPDATE `zp_mangosd`.`creature_template` SET `npcflag`=16388 WHERE  `entry`=4171;
