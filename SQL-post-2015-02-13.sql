@@ -534,3 +534,9 @@ UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.1, `combat_rea
 UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=0.8, `combat_reach`=0.9 WHERE  `modelid`=7923;
 -- Krixix
 UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1, `combat_reach`=1 WHERE  `modelid`=14498;
+
+-- Bingle's missing supplies quest, adjust spawntimers(down)
+UPDATE zp_mangosd.`gameobject` SET `spawntimesecs`='60' WHERE (`guid`='12863') LIMIT 1;
+UPDATE zp_mangosd.`gameobject` SET `spawntimesecs`='60' WHERE (`guid`='12864') LIMIT 1;
+UPDATE zp_mangosd.`gameobject` SET `spawntimesecs`='60' WHERE (`guid`='12871') LIMIT 1;
+UPDATE zp_mangosd.`gameobject` SET `spawntimesecs`='60' WHERE (`guid`='12872') LIMIT 1;
