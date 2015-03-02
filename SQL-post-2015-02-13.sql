@@ -514,3 +514,23 @@ REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (3584, 20, 4505.03, 27
 
 -- don't use old scripts
 UPDATE `zp_mangosd`.`quest_template` SET `StartScript`=0 WHERE  `entry`=945;
+
+/********************* BWL Hitboxes *****************/
+-- Death Talon Captain
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.5, `combat_reach`=1.6 WHERE  `modelid`=14544;
+-- Death Talon Flamescale
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.5, `combat_reach`=1.6 WHERE  `modelid`=8310;
+-- Death Talon Seether
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.5, `combat_reach`=1.6 WHERE  `modelid`=12893;
+-- Death Talon Wyrmkin
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.5, `combat_reach`=1.6 WHERE  `modelid`=12894;
+-- Blackwing Warlock
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1, `combat_reach`=1 WHERE  `modelid`=14292;
+-- Blackwing Technician
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1, `combat_reach`=1 WHERE  `modelid`=13991;
+-- enraged felguard
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.1, `combat_reach`=1.2 WHERE  `modelid`=14152;
+-- Blackwing Spellbinder
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=0.8, `combat_reach`=0.9 WHERE  `modelid`=7923;
+-- Krixix
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1, `combat_reach`=1 WHERE  `modelid`=14498;
