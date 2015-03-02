@@ -476,3 +476,6 @@ REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (10429, 12583, 0, 0);
 -- Updated Hitbox for Flamewaker elite and healer
 UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1, `combat_reach`=1 WHERE  `modelid`=12161;
 UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1, `combat_reach`=1 WHERE  `modelid`=13029;
+
+-- Blackwood tracker AI updated, random time in combat instead of within a range
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_type`=0, `event_param2`=15000, `event_param3`=10000 WHERE  `id`=1171302;
