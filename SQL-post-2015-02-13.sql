@@ -546,3 +546,6 @@ UPDATE zp_mangosd.`gameobject` SET `spawntimesecs`='60' WHERE (`guid`='12872') L
 REPLACE INTO `gameobject` VALUES (42889, 103680, 0, -9072.71, 833.487, 108.418, 0.36439, 0, 0, 0.181189, 0.983448, 60, 0, 0);
 -- add pre q
 UPDATE `zp_mangosd`.`quest_template` SET `PrevQuestId`=1919 WHERE  `entry`=1920;
+
+-- remove scarlet wristguards from Syndicate Spy's loot table
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=2242 AND `item`=24054;
