@@ -479,3 +479,7 @@ UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1, `combat_reach
 
 -- Blackwood tracker AI updated, random time in combat instead of within a range
 UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_type`=0, `event_param2`=15000, `event_param3`=10000 WHERE  `id`=1171302;
+
+-- Add GO light for Priest Epic Quest
+REPLACE INTO `gameobject` VALUES (1712726, 179693, 0, 3339.37, -2977.07, 162.696, 0.530169, 0, 0, 0.261991, 0.96507, -900, 100, 1);
+
