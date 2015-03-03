@@ -567,3 +567,10 @@ REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (9546003, 9546, 1, 0, 100
 REPLACE INTO `zp_mangosd`.`quest_start_scripts` VALUES (4265, 11, 7, 4265, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
 REPLACE INTO `zp_mangosd`.`quest_start_scripts` VALUES (4265, 1, 10, 9546, 15000, 0, 0, 0, 0, 0, 0, 0, -5314.81, 430.89, 11.79, 3.46, '');
 
+/******** A daughters love, quest RP ***********/
+-- add text
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720011, 'I shall cling to the love of my daugter and hope that I will find forgiveness under the Light for my sins.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Morgan Ladimore, Say 2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720010, 'My sword Archeus served me well in life, but as at last my spirit may pass from the unhappy existance, I need it no longer.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Morgan Ladimore, Say 1');
+-- add AI
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='npc_morgan_ladimore' WHERE  `entry`=3301;
+
