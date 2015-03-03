@@ -549,3 +549,21 @@ UPDATE `zp_mangosd`.`quest_template` SET `PrevQuestId`=1919 WHERE  `entry`=1920;
 
 -- remove scarlet wristguards from Syndicate Spy's loot table
 DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=2242 AND `item`=24054;
+
+/**************** Freed from the Hive, quest ***************/
+-- remove old
+DELETE FROM `zp_mangosd`.`quest_start_scripts` WHERE  `id`=4265 LIMIT 5;
+-- add AI
+UPDATE `zp_mangosd`.`creature_template` SET `unit_flags`=128, `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE  `entry`=9546;
+-- add text
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-4265, 'Oh man, I thought I was dead for sure. Ugh... still dizzy...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'Raschal Say 1');
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-4266, 'I can get back to the Stronghold on my own, I think. Now that you bought me some time, I should be able to stealth out of here. Who ever you are... thank you. May Elune bless you always!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 2, 'Raschal Say 2');
+-- add RP, THIS IS A HACK
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (9546002, 9546, 1, 0, 100, 0, 9000, 9000, 0, 0, 1, -4266, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Raschal Say 2');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (9546001, 9546, 1, 0, 100, 0, 2000, 2000, 0, 0, 1, -4265, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Raschal Say 1');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (9546004, 9546, 1, 0, 100, 0, 8500, 8500, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Rashal Emote None');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (9546003, 9546, 1, 0, 100, 0, 2500, 2500, 0, 0, 5, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Rashal Emote Stun');
+-- add spawn and quest complete
+REPLACE INTO `zp_mangosd`.`quest_start_scripts` VALUES (4265, 11, 7, 4265, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
+REPLACE INTO `zp_mangosd`.`quest_start_scripts` VALUES (4265, 1, 10, 9546, 15000, 0, 0, 0, 0, 0, 0, 0, -5314.81, 430.89, 11.79, 3.46, '');
+
