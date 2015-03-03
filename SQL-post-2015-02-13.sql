@@ -574,3 +574,14 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720010, 'My sword Arch
 -- add AI
 UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='npc_morgan_ladimore' WHERE  `entry`=3301;
 
+/************ Missing diplomat RP text, sw + wetlands ************/
+-- add texts wetlands
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720012, 'Oh, it\'s on now! But you thought I\'d be alone too, huh?!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'tapoke slim jahn SAY_AGGRO');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720013, 'Okay, okay! No need to get all violent. I\'ll talk. I\'ll talk!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 20, 'tapoke slim jahn SAY_DEFEAT');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720014, 'Whoa! This is way more than what I bargained for, you\'re on your own, Slim!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'slim\'s friend SAY_FRIEND_DEFEAT');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720015, 'I have a few notes from the job back at my place. I\'ll get them and then meet you back in the inn.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'tapoke slim jahn SAY_NOTES');
+-- add text stormwind part
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720016, 'It\'s okay, boys. Back off. You\'ve done enough. I\'ll meet up with you later.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Dashel stonefist Say End');
+-- delete old script to spawn mobs in SW
+DELETE FROM `zp_mangosd`.`quest_start_scripts` WHERE  `id`=1447 LIMIT 2;
+
