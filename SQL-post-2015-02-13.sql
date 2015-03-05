@@ -594,8 +594,10 @@ UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_pained' WHERE  `en
 UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='npc_archmage_tervosh' WHERE  `entry`=4967;
 UPDATE `zp_mangosd`.`creature_template` SET `unit_class`=2 WHERE  `entry`=4966;
 -- Move hendel slightly
-REPLACE INTO `creature` VALUES (31274, 4966, 1, 2967, 0, -2895.34, -3346.51, 31.8728, 3.04343, 360, 0, 0, 600000, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (31274, 4966, 1, 2967, 0, -2895.34, -3346.51, 31.8728, 3.04343, 360, 0, 0, 600000, 0, 0, 0);
 
 -- missing diplomat wetlands text
-REPLACE INTO `script_texts` VALUES (-1720019, 'I\'m glad the commotions died down some around here. The last thing this place needs is another brawl.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Mikhail, SAY_END');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720019, 'I\'m glad the commotions died down some around here. The last thing this place needs is another brawl.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Mikhail, SAY_END');
 
+-- update faction for rare Singer
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=87, `faction_H`=87 WHERE  `entry`=2600;
