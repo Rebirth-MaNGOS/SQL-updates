@@ -585,3 +585,17 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720016, 'It\'s okay, b
 -- delete old script to spawn mobs in SW
 DELETE FROM `zp_mangosd`.`quest_start_scripts` WHERE  `id`=1447 LIMIT 2;
 
+-- add outro text and fix wrong text, missing diplomat dustwallow
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720017, 'Farewell. We shall speak again, I\'m sure.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Tervosh Say Bye');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720018, 'Approach, newbie!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Hendel, SAY_AGGRO');
+UPDATE `zp_scriptdevzerod`.`script_texts` SET `content_default`='Why don\'t we deal with you now, Hendel? Lady Proudmoore will speak to you back in the tower.' WHERE  `entry`=-1000411;
+-- add AI
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_pained' WHERE  `entry`=4965;
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='npc_archmage_tervosh' WHERE  `entry`=4967;
+UPDATE `zp_mangosd`.`creature_template` SET `unit_class`=2 WHERE  `entry`=4966;
+-- Move hendel slightly
+REPLACE INTO `creature` VALUES (31274, 4966, 1, 2967, 0, -2895.34, -3346.51, 31.8728, 3.04343, 360, 0, 0, 600000, 0, 0, 0);
+
+-- missing diplomat wetlands text
+REPLACE INTO `script_texts` VALUES (-1720019, 'I\'m glad the commotions died down some around here. The last thing this place needs is another brawl.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Mikhail, SAY_END');
+
