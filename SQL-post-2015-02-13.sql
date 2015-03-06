@@ -1067,3 +1067,7 @@ DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=56343;
 DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=55472;
 DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=56341;
 DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=56344;
+
+-- add ai so they spawn 3 adds when they die
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='mob_theradrim_guardian' WHERE  `entry`=11784;
+
