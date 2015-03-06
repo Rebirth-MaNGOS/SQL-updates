@@ -880,3 +880,38 @@ REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (55344, 55344, 0, 0, 2);
 REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (55463, 55464, 15, 90, 2);
 REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (55463, 55463, 0, 0, 2);
 
+/*************** Shadowsilk Poacher pat, searing gorge ************/
+-- add dummy
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3029676, 800008, 0, 0, 0, -6475.96, -1653.18, 296.906, 0.48647, 25, 5, 0, 646473, 0, 0, 2);
+
+-- Formations mid, L, R, Behind, Infront
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (3029676, 3029676, 0, 0, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (3029676, 5768, 0, 0, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (3029676, 5772, 4, 90, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (3029676, 5769, 4, 270, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (3029676, 5770, 4, 180, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (3029676, 5771, 4, 0, 2);
+
+-- add wp
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3029676, 1, -6471.82, -1651.23, 297.861, 10000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.458985, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3029676, 2, -6454.12, -1642.49, 303.743, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.458985, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3029676, 3, -6435.4, -1641.61, 310.828, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.027016, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3029676, 4, -6430.96, -1628.94, 314.906, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.28365, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3029676, 5, -6437.08, -1603.75, 320.266, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.88448, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3029676, 6, -6449.19, -1600.16, 318.879, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.94477, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3029676, 7, -6464.95, -1601.15, 316.311, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.33354, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3029676, 8, -6477.78, -1594.97, 318.479, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.62668, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3029676, 9, -6486.92, -1589.8, 318.747, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.62668, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3029676, 10, -6508.11, -1582.08, 316.367, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.00368, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3029676, 11, -6517.2, -1582.03, 315.622, 5000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.25108, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3029676, 12, -6509.54, -1587.83, 315.982, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.63476, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3029676, 13, -6497.73, -1591.82, 315.684, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.63476, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3029676, 14, -6497.6, -1604.27, 309.626, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.00113, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3029676, 15, -6507.7, -1612.93, 303.371, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.80085, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3029676, 16, -6515.99, -1621.79, 299.031, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.06789, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3029676, 17, -6524.71, -1637.18, 294.857, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.40168, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3029676, 18, -6532.44, -1645.74, 291.537, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.51418, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3029676, 19, -6537.55, -1661.71, 287.93, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.50771, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3029676, 20, -6524.99, -1665.04, 292.579, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6.13348, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3029676, 21, -6507.72, -1664.68, 294.447, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.093763, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3029676, 22, -6490.51, -1659.7, 295.541, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.396142, 0, 0);
