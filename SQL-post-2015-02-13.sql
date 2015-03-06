@@ -866,3 +866,17 @@ REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (10812, 13348, 0, 0);
 UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=10812 WHERE  `entry`=10812;
 -- demon
 UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1, `combat_reach`=1 WHERE  `modelid`=10691;
+
+/********** Maraudon, linked all Primordial Behemoth 2 and 2 at the slope just before last boss
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (55345, 55348, 15, 90, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (55345, 55345, 0, 0, 2);
+
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (55338, 55341, 15, 90, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (55338, 55338, 0, 0, 2);
+
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (55344, 55347, 15, 90, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (55344, 55344, 0, 0, 2);
+
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (55463, 55464, 15, 90, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (55463, 55463, 0, 0, 2);
+
