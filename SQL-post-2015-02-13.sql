@@ -772,3 +772,33 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720022, 'The abominati
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720023, 'The beast is slain! All\'s well in Darkshire!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 6, 0, 0, 'Town crier, YELL_STITCHES_DOWN');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720021, 'ROAAAARR!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Stitches YELL_AGGRO');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720020, 'DARKSHIRE... I HUNGER!!!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 6, 0, 0, 'Stitches YELL_SPAWN');
+
+
+/******************* Hunter epic chain, SQL for movement related *******************/
+-- klinfran
+update `zp_scriptdevzerod`.`script_waypoint` set entry  = '14529' where entry = '4602';
+-- artorius
+update `zp_scriptdevzerod`.`script_waypoint` set entry  = '14531' where entry = '42301';
+-- solenor
+update `zp_scriptdevzerod`.`script_waypoint` set entry  = '14536' where entry = '43224';
+-- simone
+update `zp_scriptdevzerod`.`script_waypoint` set entry  = '14527' where entry = '24439';
+
+-- update movements for each demon
+UPDATE `zp_mangosd`.`creature` SET `position_x`=-7085.75, `position_y`=-593.299, `position_z`=-269.205, `MovementType`=0 WHERE  `guid`=24439;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=43224;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=42301;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4602;
+-- template
+UPDATE `zp_mangosd`.`creature_template` SET `MovementType`=0 WHERE  `entry`=14531;
+UPDATE `zp_mangosd`.`creature_template` SET `MovementType`=0 WHERE  `entry`=14527;
+UPDATE `zp_mangosd`.`creature_template` SET `MovementType`=0 WHERE  `entry`=14536;
+UPDATE `zp_mangosd`.`creature_template` SET `MovementType`=0 WHERE  `entry`=14529;
+-- precious
+UPDATE `zp_mangosd`.`creature_template` SET `MovementType`=0 WHERE  `entry`=14528;
+UPDATE `zp_mangosd`.`creature` SET `position_x`=-7085.95, `position_y`=-595.299, `position_z`=-269.205, `MovementType`=0 WHERE  `guid`=24440;
+-- precious follow simone
+REPLACE INTO `creature_formations` VALUES (24439, 24439, 0, 0, 2);
+REPLACE INTO `creature_formations` VALUES (24439, 24440, 2, 90, 2);
+
+
