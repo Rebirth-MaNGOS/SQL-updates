@@ -859,4 +859,10 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3029675, 22, 4502.5, 640.5
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3029675, 23, 4514.95, 653.86, 26.4309, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.840342, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3029675, 24, 4520.32, 663.911, 24.454, 5000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.2409, 0, 0);
 
-
+-- Stratholme, balnazzar added missing weapon and fix hitbox
+-- in human hitbox + weapon
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=0.5, `combat_reach`=0.5 WHERE  `modelid`=10545;
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (10812, 13348, 0, 0);
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=10812 WHERE  `entry`=10812;
+-- demon
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1, `combat_reach`=1 WHERE  `modelid`=10691;
