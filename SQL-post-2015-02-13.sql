@@ -1184,3 +1184,8 @@ REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-1136, 'Southshore shall p
 REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-1137, 'Revenge shall be mine at last!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Helcular\'s Remains Random Yell');
 REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (243302, 2433, 11, 0, 100, 0, 0, 0, 0, 0, 1, -1136, -1137, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Helcular Random Yell on Spawn');
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=2941, `MovementType`=1 WHERE  `entry`=2433;
+
+-- Extinguishing the Idol
+-- make the brazier end the quest
+REPLACE INTO `gameobject_involvedrelation` VALUES (152097, 3525);
+UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`=-10 WHERE  `guid`=1712258;
