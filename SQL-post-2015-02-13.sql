@@ -1071,3 +1071,110 @@ DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=56344;
 -- add ai so they spawn 3 adds when they die
 UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='mob_theradrim_guardian' WHERE  `entry`=11784;
 
+/****** Pool the Theradrim Guardians and Shardlings in Maraudon ***********/
+-- add new creatures
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3029685, 11783, 349, 0, 0, 258.512, -95.8133, -129.621, 4.50402, 25, 5, 0, 2402, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3029684, 11783, 349, 0, 0, 256.701, -93.2553, -129.621, 4.87708, 25, 5, 0, 2402, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3029686, 11783, 349, 0, 0, 253.444, -91.92, -129.621, 4.65324, 25, 5, 0, 2402, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3029683, 11783, 349, 0, 0, 254.65, -93.5962, -129.621, 4.87708, 25, 5, 0, 2402, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3029687, 11784, 349, 0, 0, 310.007, -336.261, -116.995, 1.17785, 25, 5, 0, 7456, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3029688, 11784, 349, 0, 0, 180.599, -306.65, -172.737, 3.65579, 25, 5, 0, 7551, 0, 0, 1);
+
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3030707, 11784, 349, 0, 0, 147.055, -198.464, -171.818, 5.39544, 25, 5, 0, 7456, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3030708, 11784, 349, 0, 0, -128.305, -365.74, -170.419, 1.11501, 25, 5, 0, 7551, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3030709, 11784, 349, 0, 0, 110.939, -266.735, -108.677, 2.63867, 25, 5, 0, 7551, 0, 0, 1);
+
+-- add them to wp groups
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (3029678, 3029687, 4, 90, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (3029679, 3030709, 4, 90, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (3029680, 3030708, 4, 90, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (3029681, 3029688, 4, 90, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (3029682, 3030707, 4, 90, 2);
+
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (3029677, 3029683, 4, 160, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (3029677, 3029684, 4, 200, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (3029677, 3029685, 2, 170, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (3029677, 3029686, 2, 190, 2);
+
+-- pools
+-- 1 st group
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (55466, 2058, 0, 'Theradrim Guardian');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (3029683, 2059, 0, 'Theradrim Shardling');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (3029684, 2059, 0, 'Theradrim Shardling');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (3029685, 2059, 0, 'Theradrim Shardling');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (3029686, 2059, 0, 'Theradrim Shardling');
+
+REPLACE INTO `zp_mangosd`.`pool_pool` VALUES (2059, 2060, 0, 'Maraudon - Theradrim Shardling 1');
+REPLACE INTO `zp_mangosd`.`pool_pool` VALUES (2058, 2060, 0, 'Maraudon - Theradrim Guardian 1');
+
+REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2060, 1, 'Maraudon - Master 1');
+REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2059, 4, 'Maraudon - Theradrim shardling 1');
+REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2058, 1, 'Maraudon - Theradrim Guardian 1');
+
+-- 2nd group
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (3029687, 2061, 0, 'Theradrim Guardian');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (56516, 2062, 0, 'Theradrim Shardling');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (56517, 2062, 0, 'Theradrim Shardling');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (56518, 2062, 0, 'Theradrim Shardling');
+
+REPLACE INTO `zp_mangosd`.`pool_pool` VALUES (2062, 2063, 0, 'Maraudon - Theradrim Shardling 2');
+REPLACE INTO `zp_mangosd`.`pool_pool` VALUES (2061, 2063, 0, 'Maraudon - Theradrim Guardian 2');
+
+REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2063, 1, 'Maraudon - Master 2');
+REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2062, 3, 'Maraudon - Theradrim shardling 2');
+REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2061, 1, 'Maraudon - Theradrim Guardian 2');
+
+-- 3rd group
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (3030709, 2064, 0, 'Theradrim Guardian');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (88990, 2065, 0, 'Theradrim Shardling');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (88991, 2065, 0, 'Theradrim Shardling');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (88992, 2065, 0, 'Theradrim Shardling');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (88993, 2065, 0, 'Theradrim Shardling');
+
+REPLACE INTO `zp_mangosd`.`pool_pool` VALUES (2065, 2066, 0, 'Maraudon - Theradrim Shardling 3');
+REPLACE INTO `zp_mangosd`.`pool_pool` VALUES (2064, 2066, 0, 'Maraudon - Theradrim Guardian 3');
+
+REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2066, 1, 'Maraudon - Master 3');
+REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2065, 4, 'Maraudon - Theradrim shardling 3');
+REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2064, 1, 'Maraudon - Theradrim Guardian 3');
+
+-- 4th group
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (3030708, 2067, 0, 'Theradrim Guardian');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (89048, 2068, 0, 'Theradrim Shardling');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (89049, 2068, 0, 'Theradrim Shardling');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (89050, 2068, 0, 'Theradrim Shardling');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (89051, 2068, 0, 'Theradrim Shardling');
+
+REPLACE INTO `zp_mangosd`.`pool_pool` VALUES (2068, 2069, 0, 'Maraudon - Theradrim Shardling 4');
+REPLACE INTO `zp_mangosd`.`pool_pool` VALUES (2067, 2069, 0, 'Maraudon - Theradrim Guardian 4');
+
+REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2069, 1, 'Maraudon - Master 4');
+REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2068, 4, 'Maraudon - Theradrim shardling 4');
+REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2067, 1, 'Maraudon - Theradrim Guardian 4');
+
+-- 5th group
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (3029688, 2070, 0, 'Theradrim Guardian');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (56502, 2071, 0, 'Theradrim Shardling');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (56503, 2071, 0, 'Theradrim Shardling');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (56504, 2071, 0, 'Theradrim Shardling');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (56505, 2071, 0, 'Theradrim Shardling');
+
+REPLACE INTO `zp_mangosd`.`pool_pool` VALUES (2071, 2072, 0, 'Maraudon - Theradrim Shardling 5');
+REPLACE INTO `zp_mangosd`.`pool_pool` VALUES (2070, 2072, 0, 'Maraudon - Theradrim Guardian 5');
+
+REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2072, 1, 'Maraudon - Master 5');
+REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2071, 4, 'Maraudon - Theradrim shardling 5');
+REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2070, 1, 'Maraudon - Theradrim Guardian 5');
+
+-- 6th group
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (3030707, 2073, 0, 'Theradrim Guardian');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (56486, 2074, 0, 'Theradrim Shardling');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (56487, 2074, 0, 'Theradrim Shardling');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (56488, 2074, 0, 'Theradrim Shardling');
+
+REPLACE INTO `zp_mangosd`.`pool_pool` VALUES (2074, 2075, 0, 'Maraudon - Theradrim Shardling 6');
+REPLACE INTO `zp_mangosd`.`pool_pool` VALUES (2073, 2075, 0, 'Maraudon - Theradrim Guardian 6');
+
+REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2075, 1, 'Maraudon - Master 6');
+REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2074, 3, 'Maraudon - Theradrim shardling 6');
+REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2073, 1, 'Maraudon - Theradrim Guardian 6');
