@@ -1178,3 +1178,9 @@ REPLACE INTO `zp_mangosd`.`pool_pool` VALUES (2073, 2075, 0, 'Maraudon - Theradr
 REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2075, 1, 'Maraudon - Master 6');
 REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2074, 3, 'Maraudon - Theradrim shardling 6');
 REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2073, 1, 'Maraudon - Theradrim Guardian 6');
+
+/*********** Helcular's remains npc, added missing text ******/
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-1136, 'Southshore shall pay in blood!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Helcular\'s Remains Random Yell');
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-1137, 'Revenge shall be mine at last!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Helcular\'s Remains Random Yell');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (243302, 2433, 11, 0, 100, 0, 0, 0, 0, 0, 1, -1136, -1137, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Helcular Random Yell on Spawn');
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=2941, `MovementType`=1 WHERE  `entry`=2433;
