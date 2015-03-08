@@ -1189,3 +1189,7 @@ UPDATE `zp_mangosd`.`creature_template` SET `armor`=2941, `MovementType`=1 WHERE
 -- make the brazier end the quest
 REPLACE INTO `gameobject_involvedrelation` VALUES (152097, 3525);
 UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`=-10 WHERE  `guid`=1712258;
+
+-- fix for SW guards pointing to enchanter instead of cooking trainer
+REPLACE INTO `zp_mangosd`.`points_of_interest` VALUES (42, -8641, 423.502, 6, 99, 0, 'Pig and Whistle Tavern');
+UPDATE `zp_mangosd`.`gossip_menu_option` SET `action_poi_id`=42 WHERE  `menu_id`=421 AND `id`=2;
