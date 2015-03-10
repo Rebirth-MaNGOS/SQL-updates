@@ -1708,3 +1708,6 @@ REPLACE INTO `zp_mangosd`.`game_event_creature` VALUES (3031772, 48);
 -- Readd patrol dummies in UBRS.
 REPLACE INTO `creature` VALUES (229021, 800008, 229, 0, 0, 80.5972, -318.551, 55.7807, 1.30102, 10800, 5, 0, 646473, 0, 0, 1);
 REPLACE INTO `creature` VALUES (229022, 800008, 229, 0, 0, 72.0597, -288.625, 60.6402, 4.72458, 10800, 5, 0, 646473, 0, 0, 2);
+
+-- Copied Onyxias mechanics immunity mask to Nefarian.
+UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`='650870623' WHERE `entry`='11583';
