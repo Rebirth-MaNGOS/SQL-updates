@@ -1722,3 +1722,15 @@ REPLACE INTO `zp_mangosd`.`creature` VALUES (3031773, 800468, 0, 10045, 0, -1094
 -- priest epic q respawn timer
 -- respawn time 5min
 UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=300 WHERE  `guid`=3001174;
+
+/************ Death from Below quest *************/
+-- add texts
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720031, 'If we can just hold them now, I am sure we will be in the clear.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Shakes O\'breen - Say 2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720030, 'You\'ve plundered our treasures for too long. Prepare to meet your watery grave!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Daggerspine Marauder - yell 1');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720029, 'All hands to battle stations! Naga incoming!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Shakes O\'breen - Say start');
+
+-- add ai
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_shakes_obreen' WHERE  `entry`=2610;
+
+-- add spell coords for cannon spell
+REPLACE INTO `zp_mangosd`.`spell_target_position` VALUES (4170, 0, -2143, -1982, 11.81, 0);
