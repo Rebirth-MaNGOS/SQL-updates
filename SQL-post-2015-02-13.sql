@@ -1711,3 +1711,10 @@ REPLACE INTO `creature` VALUES (229022, 800008, 229, 0, 0, 72.0597, -288.625, 60
 
 -- Copied Onyxias mechanics immunity mask to Nefarian.
 UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`='650870623' WHERE `entry`='11583';
+
+-- Stitches event, add dummy crier
+-- add npc
+REPLACE INTO `creature_template` VALUES (800468, 0, 0, 10045, 0, 'Town Crier', 'Dummy for Stitches', 0, 1, 1, 649999, 649999, 0, 0, 0, 35, 35, 0, 1, 1.14286, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 2, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5242886, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 4, 0, 0, 1, 0, 0, 0, 0, 128, '');
+
+-- add in world
+REPLACE INTO `creature` VALUES (3031773, 800468, 0, 10045, 0, -10943.2, -381.596, 40.5464, 0.650675, 25, 5, 0, 0, 0, 0, 0);
