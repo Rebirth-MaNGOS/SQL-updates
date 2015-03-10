@@ -1706,15 +1706,19 @@ REPLACE INTO `zp_mangosd`.`game_event_creature` VALUES (3031771, 48);
 REPLACE INTO `zp_mangosd`.`game_event_creature` VALUES (3031772, 48);
 
 -- Readd patrol dummies in UBRS.
-REPLACE INTO `creature` VALUES (229021, 800008, 229, 0, 0, 80.5972, -318.551, 55.7807, 1.30102, 10800, 5, 0, 646473, 0, 0, 1);
-REPLACE INTO `creature` VALUES (229022, 800008, 229, 0, 0, 72.0597, -288.625, 60.6402, 4.72458, 10800, 5, 0, 646473, 0, 0, 2);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (229021, 800008, 229, 0, 0, 80.5972, -318.551, 55.7807, 1.30102, 10800, 5, 0, 646473, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (229022, 800008, 229, 0, 0, 72.0597, -288.625, 60.6402, 4.72458, 10800, 5, 0, 646473, 0, 0, 2);
 
 -- Copied Onyxias mechanics immunity mask to Nefarian.
 UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`='650870623' WHERE `entry`='11583';
 
 -- Stitches event, add dummy crier
 -- add npc
-REPLACE INTO `creature_template` VALUES (800468, 0, 0, 10045, 0, 'Town Crier', 'Dummy for Stitches', 0, 1, 1, 649999, 649999, 0, 0, 0, 35, 35, 0, 1, 1.14286, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 2, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5242886, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 4, 0, 0, 1, 0, 0, 0, 0, 128, '');
+REPLACE INTO `zp_mangosd`.`creature_template` VALUES (800468, 0, 0, 10045, 0, 'Town Crier', 'Dummy for Stitches', 0, 1, 1, 649999, 649999, 0, 0, 0, 35, 35, 0, 1, 1.14286, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 2, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5242886, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 4, 0, 0, 1, 0, 0, 0, 0, 128, '');
 
 -- add in world
-REPLACE INTO `creature` VALUES (3031773, 800468, 0, 10045, 0, -10943.2, -381.596, 40.5464, 0.650675, 25, 5, 0, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3031773, 800468, 0, 10045, 0, -10943.2, -381.596, 40.5464, 0.650675, 25, 5, 0, 0, 0, 0, 0);
+
+-- priest epic q respawn timer
+-- respawn time 5min
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=300 WHERE  `guid`=3001174;
