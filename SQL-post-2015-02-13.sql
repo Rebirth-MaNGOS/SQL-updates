@@ -1740,10 +1740,10 @@ REPLACE INTO `zp_mangosd`.`gameobject_template` VALUES (113529, 10, 1287, 'Arath
 REPLACE INTO `zp_mangosd`.`gameobject_template` VALUES (113531, 10, 245, 'Cannon', 0, 4, 0.6, 0, 667, 0, 196608, 1, 0, 0, 0, 0, 0, 4170, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
 
 -- zone req for mining veins to drop bloodshard, only in barrens
-REPLACE INTO `gameobject_loot_template` VALUES (1502, 5075, 2, 0, 1, 3, 4, 17, 0);
-REPLACE INTO `gameobject_loot_template` VALUES (1503, 5075, 2, 0, 1, 3, 4, 17, 0);
-REPLACE INTO `gameobject_loot_template` VALUES (1735, 5075, 2, 0, 1, 3, 4, 17, 0);
-REPLACE INTO `gameobject_loot_template` VALUES (2626, 5075, 2, 0, 1, 3, 4, 17, 0);
-REPLACE INTO `gameobject_loot_template` VALUES (2627, 5075, 2, 0, 1, 3, 4, 17, 0);
-REPLACE INTO `gameobject_loot_template` VALUES (18092, 5075, 2, 0, 1, 3, 4, 17, 0);
-REPLACE INTO `gameobject_loot_template` VALUES (18093, 5075, 2, 0, 1, 3, 4, 17, 0);
+REPLACE INTO `zp_mangosd`.`gameobject_loot_template` VALUES (1502, 5075, 2, 0, 1, 3, 4, 17, 0);
+REPLACE INTO `zp_mangosd`.`gameobject_loot_template` VALUES (1503, 5075, 2, 0, 1, 3, 4, 17, 0);
+REPLACE INTO `zp_mangosd`.`gameobject_loot_template` VALUES (1735, 5075, 2, 0, 1, 3, 4, 17, 0);
+REPLACE INTO `zp_mangosd`.`gameobject_loot_template` VALUES (2626, 5075, 2, 0, 1, 3, 4, 17, 0);
+REPLACE INTO `zp_mangosd`.`gameobject_loot_template` VALUES (2627, 5075, 2, 0, 1, 3, 4, 17, 0);
+REPLACE INTO `zp_mangosd`.`gameobject_loot_template` VALUES (18092, 5075, 2, 0, 1, 3, 4, 17, 0);
+REPLACE INTO `zp_mangosd`.`gameobject_loot_template` VALUES (18093, 5075, 2, 0, 1, 3, 4, 17, 0);
