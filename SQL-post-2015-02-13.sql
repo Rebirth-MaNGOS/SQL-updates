@@ -1734,3 +1734,7 @@ UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_shakes_obreen' WHE
 
 -- add spell coords for cannon spell
 REPLACE INTO `zp_mangosd`.`spell_target_position` VALUES (4170, 0, -2143, -1982, 11.81, 0);
+
+-- fix the cannon
+REPLACE INTO `zp_mangosd`.`gameobject_template` VALUES (113529, 10, 1287, 'Arathi Cannon Fire', 390, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
+REPLACE INTO `zp_mangosd`.`gameobject_template` VALUES (113531, 10, 245, 'Cannon', 0, 4, 0.6, 0, 667, 0, 196608, 1, 0, 0, 0, 0, 0, 4170, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
