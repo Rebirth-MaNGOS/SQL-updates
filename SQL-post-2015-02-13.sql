@@ -1747,3 +1747,16 @@ REPLACE INTO `zp_mangosd`.`gameobject_loot_template` VALUES (2626, 5075, 2, 0, 1
 REPLACE INTO `zp_mangosd`.`gameobject_loot_template` VALUES (2627, 5075, 2, 0, 1, 3, 4, 17, 0);
 REPLACE INTO `zp_mangosd`.`gameobject_loot_template` VALUES (18092, 5075, 2, 0, 1, 3, 4, 17, 0);
 REPLACE INTO `zp_mangosd`.`gameobject_loot_template` VALUES (18093, 5075, 2, 0, 1, 3, 4, 17, 0);
+
+-- SM Armory, added pat to a mob
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=40142;
+
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40142, 1, 1707.45, -363.317, 18.6779, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.18571, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40142, 2, 1738.83, -363.323, 7.89574, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6.26447, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40142, 3, 1753.23, -364.368, 7.89825, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.071604, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40142, 4, 1753.88, -383.217, 7.90119, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.7408, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40142, 5, 1774.71, -383.168, 7.90728, 3000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.040188, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40142, 6, 1754.2, -383.384, 7.91259, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.1268, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40142, 7, 1754.01, -365.264, 7.91481, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.59135, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40142, 8, 1742.82, -362.866, 7.91719, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.15429, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40142, 9, 1719.67, -363.16, 17.3958, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.15429, 0, 0);
