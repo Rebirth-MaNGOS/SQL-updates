@@ -1801,3 +1801,8 @@ REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (3031777, 2076, 0, 'Hearthsinge
 REPLACE INTO `zp_mangosd`.`creature` VALUES (3031776, 10558, 329, 0, 0, 3693.51, -3364.95, 130.738, 3.45604, 604800, 0, 0, 6960, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature` VALUES (3031777, 10558, 329, 0, 0, 3683.18, -3331.27, 125.03, 3.22042, 604800, 0, 0, 6960, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature` VALUES (3031775, 10558, 329, 0, 0, 3716.25, -3500.36, 130.531, 1.94414, 604800, 0, 0, 6960, 0, 0, 0);
+
+-- highborne summoner immol'thar event
+-- lower rank fireball so they can't solo immol'thar LOL
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param1`=11839 WHERE  `id`=1146603;
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param1`=11839 WHERE  `id`=1146602;
