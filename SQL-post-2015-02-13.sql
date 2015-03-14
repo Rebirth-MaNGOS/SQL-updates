@@ -1790,3 +1790,14 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (56609, 12, 685.201, -499.9
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (56609, 13, 688.626, -499.466, -214.28, 14000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.412012, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (56609, 14, 682.229, -497.441, -213.855, 6000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.412012, 0, 0);
 
+/************* Hearthsinger Forresten, strat pool spawn ***************/
+-- add pool
+REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2076, 1, 'Stratholme - Hearthsinger Forresten');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (52150, 2076, 0, 'Hearthsinger Forresten - Spawn 1');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (3031775, 2076, 0, 'Hearthsinger Forresten - Spawn 2');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (3031776, 2076, 0, 'Hearthsinger Forresten - Spawn 3');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (3031777, 2076, 0, 'Hearthsinger Forresten - Spawn 4');
+-- add to world
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3031776, 10558, 329, 0, 0, 3693.51, -3364.95, 130.738, 3.45604, 604800, 0, 0, 6960, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3031777, 10558, 329, 0, 0, 3683.18, -3331.27, 125.03, 3.22042, 604800, 0, 0, 6960, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3031775, 10558, 329, 0, 0, 3716.25, -3500.36, 130.531, 1.94414, 604800, 0, 0, 6960, 0, 0, 0);
