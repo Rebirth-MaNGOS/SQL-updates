@@ -1878,3 +1878,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `skinloot`=0 WHERE  `entry`=10157;
 
 -- add missing spell for Gazz'uz
 REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (320402, 3204, 1, 0, 100, 1, 1000, 1000, 1800000, 1800000, 11, 20798, 0, 1, 11, 12746, 0, 2, 0, 0, 0, 0, 'Gazz\'uz - Cast Demon Skin and Summon VW on Spawn');
+
+-- only cast mana burn on low hp(once).
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1148001, 11480, 2, 0, 100, 2, 5, 0, 0, 0, 11, 22936, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Arcane Aberration - Cast Mana Burn on Low HP');
