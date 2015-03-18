@@ -1887,3 +1887,6 @@ REPLACE INTO `gameobject_template` VALUES (180517, 6, 6432, 'Putrid Mushroom', 1
 
 -- Captain Armando Ossex added missing armor, is now considered elite.
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=4392, `rank`=1 WHERE  `entry`=16392;
+
+-- Level adjustment for the quest Venom to the Undercity
+UPDATE `zp_mangosd`.`quest_template` SET `MinLevel`='48' WHERE (`entry`='2938') limit 1;
