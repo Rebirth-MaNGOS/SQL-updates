@@ -1869,3 +1869,9 @@ update `zp_mangosd`.`quest_template` set minlevel='48', questlevel='55' where ti
 UPDATE `zp_mangosd`.`gameobject_template` SET `displayId`=0 WHERE  `entry`=177272;
 -- no more a melon in Pools of Arlithrien Moonwell
 UPDATE `zp_mangosd`.`gameobject_template` SET `displayId`=0 WHERE  `entry`=19551;
+
+-- moonkins are no longer skinnable(darkshore)
+UPDATE `zp_mangosd`.`creature_template` SET `skinloot`=0 WHERE  `entry`=10160;
+UPDATE `zp_mangosd`.`creature_template` SET `skinloot`=0 WHERE  `entry`=10159;
+UPDATE `zp_mangosd`.`creature_template` SET `skinloot`=0 WHERE  `entry`=10158;
+UPDATE `zp_mangosd`.`creature_template` SET `skinloot`=0 WHERE  `entry`=10157;
