@@ -1884,3 +1884,6 @@ REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1148001, 11480, 2, 0, 10
 
 -- Putrid Mushrooms now cast spell whenever someone is close
 REPLACE INTO `gameobject_template` VALUES (180517, 6, 6432, 'Putrid Mushroom', 14, 0, 1, 0, 0, 5, 22948, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
+
+-- Captain Armando Ossex added missing armor, is now considered elite.
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=4392, `rank`=1 WHERE  `entry`=16392;
