@@ -1887,3 +1887,33 @@ REPLACE INTO `gameobject_template` VALUES (180517, 6, 6432, 'Putrid Mushroom', 1
 
 -- Captain Armando Ossex added missing armor, is now considered elite.
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=4392, `rank`=1 WHERE  `entry`=16392;
+
+-- add weapon to Foreman Marcrid
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=18440 WHERE  `entry`=1844;
+-- add missing weapon
+REPLACE INTO `creature_equip_template` VALUES (18440, 6830, 0, 0);
+-- missing waypoints
+REPLACE INTO `creature_movement` VALUES (49769, 1, 2423.12, -1686.73, 102.448, 20000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.25865, 0, 0);
+REPLACE INTO `creature_movement` VALUES (49769, 2, 2408.71, -1663.24, 104.877, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.8581, 0, 0);
+REPLACE INTO `creature_movement` VALUES (49769, 3, 2407.13, -1627.82, 106.461, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.64604, 0, 0);
+REPLACE INTO `creature_movement` VALUES (49769, 4, 2396.44, -1602.87, 111.847, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.09372, 0, 0);
+REPLACE INTO `creature_movement` VALUES (49769, 5, 2379.86, -1584.08, 110.465, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.12513, 0, 0);
+REPLACE INTO `creature_movement` VALUES (49769, 6, 2373.4, -1563.22, 108.101, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.86988, 0, 0);
+REPLACE INTO `creature_movement` VALUES (49769, 7, 2370.5, -1550.43, 105.862, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.64211, 0, 0);
+REPLACE INTO `creature_movement` VALUES (49769, 8, 2367.02, -1522.27, 103.409, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.71673, 0, 0);
+REPLACE INTO `creature_movement` VALUES (49769, 9, 2363.93, -1509.01, 100.848, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.7992, 0, 0);
+REPLACE INTO `creature_movement` VALUES (49769, 10, 2374.85, -1502.83, 101.462, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.389405, 0, 0);
+REPLACE INTO `creature_movement` VALUES (49769, 11, 2385.61, -1501.03, 101.299, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.149858, 0, 0);
+REPLACE INTO `creature_movement` VALUES (49769, 12, 2395.19, -1508.34, 102.078, 5000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.62408, 0, 0);
+REPLACE INTO `creature_movement` VALUES (49769, 13, 2388.39, -1502.83, 101.526, 60000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.49427, 0, 0);
+REPLACE INTO `creature_movement` VALUES (49769, 14, 2366.57, -1507.91, 101.277, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.36999, 0, 0);
+REPLACE INTO `creature_movement` VALUES (49769, 15, 2365.61, -1513.28, 102.004, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.53631, 0, 0);
+REPLACE INTO `creature_movement` VALUES (49769, 16, 2375, -1549.73, 107.008, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.96435, 0, 0);
+REPLACE INTO `creature_movement` VALUES (49769, 17, 2386.97, -1596.22, 111.67, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.96435, 0, 0);
+REPLACE INTO `creature_movement` VALUES (49769, 18, 2397.8, -1617.06, 109.42, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.19211, 0, 0);
+REPLACE INTO `creature_movement` VALUES (49769, 19, 2410.7, -1641.75, 104.789, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.19604, 0, 0);
+REPLACE INTO `creature_movement` VALUES (49769, 20, 2412.19, -1675.25, 102.847, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.929, 0, 0);
+REPLACE INTO `creature_movement` VALUES (49769, 21, 2418.94, -1684.49, 102.44, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.35312, 0, 0);
+-- add movement
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=49769;
+
