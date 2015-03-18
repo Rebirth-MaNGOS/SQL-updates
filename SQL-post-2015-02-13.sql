@@ -1877,4 +1877,4 @@ UPDATE `zp_mangosd`.`creature_template` SET `skinloot`=0 WHERE  `entry`=10158;
 UPDATE `zp_mangosd`.`creature_template` SET `skinloot`=0 WHERE  `entry`=10157;
 
 -- add missing spell for Gazz'uz
-REPLACE INTO `creature_ai_scripts` VALUES (320402, 3204, 1, 0, 100, 1, 1000, 1000, 1800000, 1800000, 11, 20798, 0, 1, 11, 12746, 0, 2, 0, 0, 0, 0, 'Gazz\'uz - Cast Demon Skin and Summon VW on Spawn');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (320402, 3204, 1, 0, 100, 1, 1000, 1000, 1800000, 1800000, 11, 20798, 0, 1, 11, 12746, 0, 2, 0, 0, 0, 0, 'Gazz\'uz - Cast Demon Skin and Summon VW on Spawn');
