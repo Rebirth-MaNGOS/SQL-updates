@@ -1816,3 +1816,45 @@ REPLACE INTO `zp_mangosd`.`quest_template` (`entry`, `Method`, `ZoneOrSort`, `Mi
 REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCredit2`, `modelid_1`, `modelid_2`, `name`, `subname`, `gossip_menu_id`, `minlevel`, `maxlevel`, `minhealth`, `maxhealth`, `minmana`, `maxmana`, `armor`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `aggrorangeoverride`, `unit_class`, `unit_flags`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `PetSpellDataId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `Civilian`, `RacialLeader`, `RegenHealth`, `equipment_id`, `trainer_id`, `vendor_id`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`) VALUES (14663, 0, 0, 4588, 0, 'Corrupted Stoneskin Totem VI', NULL, 0, 54, 54, 3100, 3100, 0, 0, 0, 14, 14, 0, 1.22, 1.11286, 0, 0, 9, 9, 0, 4, 1, 1470, 1617, 0, 0, 0, 0, 0, 0, 0, 0, 0, 69.8544, 96.0498, 100, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10405, 0, 0, 0, 0, 5, 25, '', 0, 3, 0, 0, 1, 0, 0, 0, 0, 0, '');
 REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCredit2`, `modelid_1`, `modelid_2`, `name`, `subname`, `gossip_menu_id`, `minlevel`, `maxlevel`, `minhealth`, `maxhealth`, `minmana`, `maxmana`, `armor`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `aggrorangeoverride`, `unit_class`, `unit_flags`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `PetSpellDataId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `Civilian`, `RacialLeader`, `RegenHealth`, `equipment_id`, `trainer_id`, `vendor_id`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`) VALUES (14664, 0, 0, 4587, 0, 'Corrupted Healing Stream Totem V', NULL, 0, 60, 60, 3800, 3800, 0, 0, 0, 14, 14, 0, 1.26, 1.11286, 0, 0, 9, 9, 0, 4, 1, 1410, 1551, 0, 0, 0, 0, 0, 0, 0, 0, 0, 74.448, 102.366, 100, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10461, 0, 0, 0, 0, 5, 25, '', 0, 3, 0, 0, 1, 0, 0, 0, 0, 0, '');
 
+/*************** Attack on Hammerfall event ****************/
+-- Formations mid, L, R, Behind, Infront
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (3031778, 3031778, 0, 0, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (3031778, 3031779, 0, 0, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (3031778, 3031780, 4, 90, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (3031778, 3031781, 4, 270, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (3031778, 3031782, 4, 180, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (3031778, 3031783, 4, 0, 2);
+
+-- waypoints
+REPLACE INTO `creature_movement` VALUES (3031778, 1, -1196, -3413.77, 31.3578, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 5.45013, 0, 0);
+REPLACE INTO `creature_movement` VALUES (3031778, 2, -1171.04, -3441.23, 32.7547, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.45013, 0, 0);
+REPLACE INTO `creature_movement` VALUES (3031778, 3, -1171.55, -3452.7, 32.6668, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.66473, 0, 0);
+REPLACE INTO `creature_movement` VALUES (3031778, 4, -1181.88, -3470.69, 34.3699, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.17779, 0, 0);
+REPLACE INTO `creature_movement` VALUES (3031778, 5, -1169.81, -3510.84, 40.5714, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.04565, 0, 0);
+REPLACE INTO `creature_movement` VALUES (3031778, 6, -1158.99, -3529.61, 46.7085, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.48154, 0, 0);
+REPLACE INTO `creature_movement` VALUES (3031778, 7, -1148.14, -3540.38, 50.2787, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.78392, 0, 0);
+REPLACE INTO `creature_movement` VALUES (3031778, 8, -1118.01, -3553.28, 49.0816, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.84675, 0, 0);
+REPLACE INTO `creature_movement` VALUES (3031778, 9, -1089.07, -3553.9, 49.5817, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6.25516, 0, 0);
+REPLACE INTO `creature_movement` VALUES (3031778, 10, -1024.86, -3549.47, 56.2649, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.078, 0, 0);
+REPLACE INTO `creature_movement` VALUES (3031778, 11, -1012.69, -3564.93, 56.7241, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.37944, 0, 0);
+REPLACE INTO `creature_movement` VALUES (3031778, 12, -1007.18, -3537.62, 56.7505, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.37391, 0, 0);
+REPLACE INTO `creature_movement` VALUES (3031778, 13, -971.238, -3500.27, 55.443, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.828057, 0, 0);
+REPLACE INTO `creature_movement` VALUES (3031778, 14, -976.104, -3480.63, 56.7168, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.81373, 0, 0);
+
+-- add event
+REPLACE INTO `zp_mangosd`.`game_event` VALUES (26, '2008-01-01 00:00:00', '2020-12-31 19:59:59', 90, 10, 0, 'Attack on Hammerfall');
+-- add to event
+REPLACE INTO `zp_mangosd`.`game_event_creature` VALUES (3031778, 26);
+REPLACE INTO `zp_mangosd`.`game_event_creature` VALUES (3031779, 26);
+REPLACE INTO `zp_mangosd`.`game_event_creature` VALUES (3031780, 26);
+REPLACE INTO `zp_mangosd`.`game_event_creature` VALUES (3031781, 26);
+REPLACE INTO `zp_mangosd`.`game_event_creature` VALUES (3031782, 26);
+REPLACE INTO `zp_mangosd`.`game_event_creature` VALUES (3031783, 26);
+
+-- add to world
+REPLACE INTO `creature` VALUES (3031778, 800008, 0, 0, 0, -1196.76, -3412.76, 31.3804, 5.18309, 25, 5, 0, 646473, 0, 0, 2);
+REPLACE INTO `creature` VALUES (3031779, 2552, 0, 0, 0, -1197.15, -3412.85, 31.4238, 6.05095, 1800, 0, 0, 1049, 0, 0, 0);
+REPLACE INTO `creature` VALUES (3031780, 2552, 0, 0, 0, -1195.87, -3409.95, 31.2382, 5.84282, 1800, 0, 0, 1259, 0, 0, 0);
+REPLACE INTO `creature` VALUES (3031781, 2552, 0, 0, 0, -1198.19, -3414.89, 31.636, 5.84282, 1800, 0, 0, 1259, 0, 0, 0);
+REPLACE INTO `creature` VALUES (3031782, 2552, 0, 0, 0, -1199.27, -3411.22, 31.5983, 5.84282, 1800, 0, 0, 1049, 0, 0, 0);
+REPLACE INTO `creature` VALUES (3031783, 2552, 0, 0, 0, -1194.04, -3413.68, 31.1664, 5.84282, 1800, 0, 0, 1049, 0, 0, 0);
