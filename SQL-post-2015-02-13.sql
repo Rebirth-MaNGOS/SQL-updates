@@ -1917,3 +1917,6 @@ REPLACE INTO `creature_movement` VALUES (49769, 21, 2418.94, -1684.49, 102.44, 0
 -- add movement
 UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=49769;
 
+-- Level adjustment for the quest Venom to the Undercity
+UPDATE `zp_mangosd`.`quest_template` SET `MinLevel`='48' WHERE (`entry`='2938') limit 1;
+
