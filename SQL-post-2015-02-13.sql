@@ -1881,3 +1881,6 @@ REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (320402, 3204, 1, 0, 100,
 
 -- only cast mana burn on low hp(once).
 REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1148001, 11480, 2, 0, 100, 2, 5, 0, 0, 0, 11, 22936, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Arcane Aberration - Cast Mana Burn on Low HP');
+
+-- Putrid Mushrooms now cast spell whenever someone is close
+REPLACE INTO `gameobject_template` VALUES (180517, 6, 6432, 'Putrid Mushroom', 14, 0, 1, 0, 0, 5, 22948, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
