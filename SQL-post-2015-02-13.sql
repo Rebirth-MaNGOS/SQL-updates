@@ -1861,3 +1861,6 @@ REPLACE INTO `creature` VALUES (3031783, 2552, 0, 0, 0, -1194.04, -3413.68, 31.1
 
 -- River Crocolisk should no longer have skinnable icon at all times
 UPDATE `zp_mangosd`.`creature_template` SET `unit_flags`=32768 WHERE  `entry`=1150;
+
+-- some sql for quest lvl
+update `zp_mangosd`.`quest_template` set minlevel='48', questlevel='55' where title like 'salve via%';
