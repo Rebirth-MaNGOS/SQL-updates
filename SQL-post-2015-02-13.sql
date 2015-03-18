@@ -1858,3 +1858,6 @@ REPLACE INTO `creature` VALUES (3031780, 2552, 0, 0, 0, -1195.87, -3409.95, 31.2
 REPLACE INTO `creature` VALUES (3031781, 2552, 0, 0, 0, -1198.19, -3414.89, 31.636, 5.84282, 1800, 0, 0, 1259, 0, 0, 0);
 REPLACE INTO `creature` VALUES (3031782, 2552, 0, 0, 0, -1199.27, -3411.22, 31.5983, 5.84282, 1800, 0, 0, 1049, 0, 0, 0);
 REPLACE INTO `creature` VALUES (3031783, 2552, 0, 0, 0, -1194.04, -3413.68, 31.1664, 5.84282, 1800, 0, 0, 1049, 0, 0, 0);
+
+-- River Crocolisk should no longer have skinnable icon at all times
+UPDATE `zp_mangosd`.`creature_template` SET `unit_flags`=32768 WHERE  `entry`=1150;
