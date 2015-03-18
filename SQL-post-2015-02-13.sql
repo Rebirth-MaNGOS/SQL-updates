@@ -1864,3 +1864,8 @@ UPDATE `zp_mangosd`.`creature_template` SET `unit_flags`=32768 WHERE  `entry`=11
 
 -- some sql for quest lvl
 update `zp_mangosd`.`quest_template` set minlevel='48', questlevel='55' where title like 'salve via%';
+
+-- no longer cooked meat in SW moonwell
+UPDATE `zp_mangosd`.`gameobject_template` SET `displayId`=0 WHERE  `entry`=177272;
+-- no more a melon in Pools of Arlithrien Moonwell
+UPDATE `zp_mangosd`.`gameobject_template` SET `displayId`=0 WHERE  `entry`=19551;
