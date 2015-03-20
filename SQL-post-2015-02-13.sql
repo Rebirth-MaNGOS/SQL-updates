@@ -2286,3 +2286,6 @@ REPLACE INTO `creature_movement` VALUES (34192, 23, 2719.59, -1898.02, 207.93, 0
 
 -- update to right bear form
 UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param1`=5487 WHERE  `id`=379701;
+
+-- Doctor Theolen Krastinov add missing text
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720041, 'The doctor is in!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Doctor Theolen Krastinov - Say aggro');
