@@ -2289,3 +2289,9 @@ UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param1`=5487 WHERE  `id`=
 
 -- Doctor Theolen Krastinov add missing text
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720041, 'The doctor is in!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Doctor Theolen Krastinov - Say aggro');
+
+-- Deeds in scholo for q, 10 sec respawn instead of 5min
+UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`=10 WHERE  `guid`=43221;
+UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`=10 WHERE  `guid`=43222;
+UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`=10 WHERE  `guid`=43223;
+UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`=10 WHERE  `guid`=43224;
