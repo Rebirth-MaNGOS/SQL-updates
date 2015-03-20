@@ -1922,3 +1922,23 @@ UPDATE `zp_mangosd`.`quest_template` SET `MinLevel`='48' WHERE (`entry`='2938') 
 
 -- add throw as a reward for quest Stealing Supplies
 UPDATE `zp_mangosd`.`quest_template` SET `RewChoiceItemId3`=3463 WHERE  `entry`=1370;
+
+/************* The tear of the moons, quest end RP ***************/
+-- add quest end script
+UPDATE `zp_mangosd`.`quest_template` SET `CompleteScript`=857 WHERE  `entry`=857;
+-- add text, missing emotes tho
+REPLACE INTO `zp_mangosd`.`db_script_string` VALUES (2000006008, 'The power of the Tear of the Moons is mine! Mine I say!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+REPLACE INTO `zp_mangosd`.`db_script_string` VALUES (2000006009, 'Power! Glorious power!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+-- add the RP
+REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (857, 2, 0, 0, 0, 0, 0, 0, 2000006008, 0, 0, 0, 0, 0, 0, 0, 'Feegly - SAY');
+REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (857, 3, 1, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Feegly - Emote Roar');
+REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (857, 6, 15, 2152, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Feegly - Emote Work');
+REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (857, 11, 0, 0, 0, 0, 0, 0, 2000006009, 0, 0, 0, 0, 0, 0, 0, 'Feegly - SAY 2');
+REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (857, 18, 15, 5142, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Feegly - Morph to Trogg');
+REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (857, 20, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, -4218, -2342, 91.72, 4.65, 'Feegly - Move in to tent');
+REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (857, 25, 15, 28748, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Feegly - Dies');
+-- change position of Feegly
+REPLACE INTO `zp_mangosd`.`creature` VALUES (14138, 3421, 1, 1406, 0, -4218.61, -2337.25, 91.8175, 2.44996, 180, 0, 0, 600000, 0, 0, 0);
+
+-- correct a random say for some npc in burning steppes
+UPDATE `zp_mangosd`.`db_script_string` SET `content_default`='Bijou lost! SQUAWK! *cough*' WHERE  `entry`=2000005002;
