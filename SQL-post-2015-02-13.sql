@@ -1966,3 +1966,9 @@ REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (383303, 3833, 0, 0, 100,
 
 -- Old Icebeard respawn rate down to 1.30 from 3 min
 UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=90 WHERE  `guid`=3111;
+
+-- twilight avenger ai
+-- add enrage
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1188001, 11880, 2, 0, 100, 0, 30, 0, 0, 0, 11, 8599, 0, 1, 1, -46, 0, 0, 0, 0, 0, 0, 'Twilight Avenger - Cast Enrage at 30% HP');
+-- add ai
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE  `entry`=11880;
