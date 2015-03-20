@@ -2250,12 +2250,12 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3031793, 245, 94.3417, 174
 UPDATE `zp_mangosd`.`creature_template` SET `resistance5`=175 WHERE  `entry`=2318;
 
 -- adjust Guard dmg to vanilla values
-UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=185, `maxdmg`=200 WHERE  `entry`=3296;
-UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=185, `maxdmg`=200 WHERE  `entry`=4262;
-UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=185, `maxdmg`=200 WHERE  `entry`=68;
-UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=185, `maxdmg`=200 WHERE  `entry`=5595;
-UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=185, `maxdmg`=200 WHERE  `entry`=3084;
-UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=185, `maxdmg`=200 WHERE  `entry`=5624;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=195, `maxdmg`=215 WHERE  `entry`=3296;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=195, `maxdmg`=215 WHERE  `entry`=4262;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=195, `maxdmg`=215 WHERE  `entry`=68;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=195, `maxdmg`=215 WHERE  `entry`=5595;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=195, `maxdmg`=215 WHERE  `entry`=3084;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=195, `maxdmg`=215 WHERE  `entry`=5624;
 
 -- Cenarion Protector, add missing pat
 UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=34192;
