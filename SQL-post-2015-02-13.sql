@@ -2310,3 +2310,6 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (47631, 5, 905.323, -386.97
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (47631, 6, 938.767, -419.197, -55.118, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.53768, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (47631, 7, 988.109, -368.958, -66.7186, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.797802, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (47631, 8, 962.584, -342.771, -71.6746, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.36467, 0, 0);
+
+-- Scholomance Neophyte add missing spell, fear
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1047011, 10470, 0, 0, 100, 3, 9000, 15000, 18000, 25000, 11, 12096, 4, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Scholomance Neophyte - Cast Fear');
