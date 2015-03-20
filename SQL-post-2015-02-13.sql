@@ -1975,3 +1975,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `AIName`='EventAI', `ScriptName`='mo
 
 -- Hagg Taurenbane should now immune to most but root/daze
 UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=545270683 WHERE  `entry`=5859;
+
+-- Shardtooth Bear should longer drop lvl 20 greys
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=7444 AND `item`=24058;
