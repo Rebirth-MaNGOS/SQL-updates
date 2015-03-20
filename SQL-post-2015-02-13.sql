@@ -1963,3 +1963,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_feegly_the_exiled'
 
 -- Cenarion Vindicator added missing spell Corrupt Forces of Nature
 REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (383303, 3833, 0, 0, 100, 1, 35000, 65000, 120000, 150000, 11, 21968, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Cenarion Vindicator - Cast Corrupt Forces of Nature');
+
+-- Old Icebeard respawn rate down to 1.30 from 3 min
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=90 WHERE  `guid`=3111;
