@@ -2246,3 +2246,5 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3031793, 243, 53.6212, 169
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3031793, 244, 68.817, 1720.64, 88.147, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.802283, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3031793, 245, 94.3417, 1744.57, 86.2411, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.778721, 0, 0);
 
+-- Argus Shadow Mage added missing shadow resistance
+UPDATE `zp_mangosd`.`creature_template` SET `resistance5`=175 WHERE  `entry`=2318;
