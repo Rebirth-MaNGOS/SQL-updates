@@ -1972,3 +1972,6 @@ UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=90 WHERE  `guid`=3111;
 REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1188001, 11880, 2, 0, 100, 0, 30, 0, 0, 0, 11, 8599, 0, 1, 1, -46, 0, 0, 0, 0, 0, 0, 'Twilight Avenger - Cast Enrage at 30% HP');
 -- add ai
 UPDATE `zp_mangosd`.`creature_template` SET `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE  `entry`=11880;
+
+-- Hagg Taurenbane should now immune to most but root/daze
+UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=545270683 WHERE  `entry`=5859;
