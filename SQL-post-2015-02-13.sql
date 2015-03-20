@@ -1961,3 +1961,5 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720037, 'The power of 
 -- add script
 UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_feegly_the_exiled' WHERE  `entry`=3421;
 
+-- Cenarion Vindicator added missing spell Corrupt Forces of Nature
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (383303, 3833, 0, 0, 100, 1, 35000, 65000, 120000, 150000, 11, 21968, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 'Cenarion Vindicator - Cast Corrupt Forces of Nature');
