@@ -2298,3 +2298,15 @@ UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`=10 WHERE  `guid`=43224;
 
 -- Darkmaster Gandling, update hitbox
 UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=0.6, `combat_reach`=0.7 WHERE  `modelid`=11070;
+
+-- Fineous Darkvire add wp movement
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=47631;
+-- waypoints
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (47631, 1, 958.533, -338.65, -71.4476, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.3254, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (47631, 2, 987.066, -366.488, -66.3553, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.51804, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (47631, 3, 965.728, -392.062, -60.8377, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.00616, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (47631, 4, 940.537, -417.84, -55.0535, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.92369, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (47631, 5, 905.323, -386.973, -49.5358, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.39609, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (47631, 6, 938.767, -419.197, -55.118, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.53768, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (47631, 7, 988.109, -368.958, -66.7186, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.797802, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (47631, 8, 962.584, -342.771, -71.6746, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.36467, 0, 0);
