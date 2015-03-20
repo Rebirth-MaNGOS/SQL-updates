@@ -1978,3 +1978,7 @@ UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=545270683 WHE
 
 -- Shardtooth Bear should longer drop lvl 20 greys
 DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=7444 AND `item`=24058;
+
+-- "Pretty Boy" Duncan add AI, armor and run away at 15%.
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=936, `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE  `entry`=2545;
+REPLACE INTO `creature_ai_scripts` VALUES (254501, 2545, 2, 0, 100, 0, 15, 0, 0, 0, 25, 0, 0, 0, 1, -47, 0, 0, 0, 0, 0, 0, '"Pretty Boy" Duncan - Flee at 15% HP');
