@@ -1982,3 +1982,7 @@ DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=7444 AND `item`
 -- "Pretty Boy" Duncan add AI, armor and run away at 15%.
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=936, `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE  `entry`=2545;
 REPLACE INTO `creature_ai_scripts` VALUES (254501, 2545, 2, 0, 100, 0, 15, 0, 0, 0, 25, 0, 0, 0, 1, -47, 0, 0, 0, 0, 0, 0, '"Pretty Boy" Duncan - Flee at 15% HP');
+
+-- Isalien add missing text
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720039, 'In life, I focused my energies on healing others. Let us see in death how much pain I can cause!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Isalien - Yell Aggro');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720040, 'My torture is ended and now I can join the Goddess. Thank you so very much!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Isalien - Yell Death');
