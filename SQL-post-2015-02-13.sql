@@ -1951,3 +1951,13 @@ DELETE FROM `zp_mangosd`.`creature_addon` WHERE  `guid`=37062;
 -- Young Threshadon in the loch and Deep Sea Threshadon should no longer move on land
 UPDATE `zp_mangosd`.`creature_template` SET `InhabitType`=2 WHERE  `entry`=2188;
 UPDATE `zp_mangosd`.`creature_template` SET `InhabitType`=2 WHERE  `entry`=1224;
+
+/************ The tear of the moons ********/
+-- change position of Feegly
+REPLACE INTO `zp_mangosd`.`creature` VALUES (14138, 3421, 1, 1406, 0, -4218.61, -2337.25, 91.8175, 2.44996, 180, 0, 0, 600000, 0, 0, 0);
+-- add text
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720038, 'Power! Glorious power!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Feegly - Say 2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720037, 'The power of the Tear of the Moons is mine! Mine I say!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Feegly - Say 1');
+-- add script
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_feegly_the_exiled' WHERE  `entry`=3421;
+
