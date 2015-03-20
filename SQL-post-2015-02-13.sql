@@ -2256,3 +2256,33 @@ UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=185, `maxdmg`=200 WHERE  `e
 UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=185, `maxdmg`=200 WHERE  `entry`=5595;
 UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=185, `maxdmg`=200 WHERE  `entry`=3084;
 UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=185, `maxdmg`=200 WHERE  `entry`=5624;
+
+-- Cenarion Protector, add missing pat
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=34192;
+
+REPLACE INTO `creature_movement` VALUES (34192, 1, 2714.97, -1899.44, 207.822, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.92793, 0, 0);
+REPLACE INTO `creature_movement` VALUES (34192, 2, 2708.57, -1899.28, 208.777, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.82975, 0, 0);
+REPLACE INTO `creature_movement` VALUES (34192, 3, 2702.35, -1897.57, 211.253, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.54308, 0, 0);
+REPLACE INTO `creature_movement` VALUES (34192, 4, 2698.82, -1893.76, 214.071, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.15431, 0, 0);
+REPLACE INTO `creature_movement` VALUES (34192, 5, 2696.26, -1887.69, 216.518, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.69093, 0, 0);
+REPLACE INTO `creature_movement` VALUES (34192, 6, 2695.92, -1874.59, 219.804, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.56526, 0, 0);
+REPLACE INTO `creature_movement` VALUES (34192, 7, 2697.89, -1869.53, 221.842, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.905527, 0, 0);
+REPLACE INTO `creature_movement` VALUES (34192, 8, 2703.86, -1865.82, 225.455, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.281135, 0, 0);
+REPLACE INTO `creature_movement` VALUES (34192, 9, 2709.28, -1866.12, 228.84, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6.11664, 0, 0);
+REPLACE INTO `creature_movement` VALUES (34192, 10, 2714.68, -1868.29, 231.809, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.66112, 0, 0);
+REPLACE INTO `creature_movement` VALUES (34192, 11, 2719.33, -1873.9, 233.191, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.31947, 0, 0);
+REPLACE INTO `creature_movement` VALUES (34192, 12, 2721.57, -1879.43, 234.375, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.92677, 0, 0);
+REPLACE INTO `creature_movement` VALUES (34192, 13, 2720.68, -1885.25, 234.438, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.52229, 0, 0);
+REPLACE INTO `creature_movement` VALUES (34192, 14, 2721.01, -1878.5, 234.214, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.49458, 0, 0);
+REPLACE INTO `creature_movement` VALUES (34192, 15, 2716.76, -1869.92, 232.242, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.17003, 0, 0);
+REPLACE INTO `creature_movement` VALUES (34192, 16, 2708.65, -1866.55, 228.489, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.77871, 0, 0);
+REPLACE INTO `creature_movement` VALUES (34192, 17, 2702.43, -1866.89, 224.526, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.49735, 0, 0);
+REPLACE INTO `creature_movement` VALUES (34192, 18, 2696.89, -1872.91, 220.65, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.96859, 0, 0);
+REPLACE INTO `creature_movement` VALUES (34192, 19, 2696.18, -1886.33, 216.766, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.65974, 0, 0);
+REPLACE INTO `creature_movement` VALUES (34192, 20, 2698.78, -1893.62, 214.13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.07599, 0, 0);
+REPLACE INTO `creature_movement` VALUES (34192, 21, 2704.52, -1898.26, 210.247, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.6454, 0, 0);
+REPLACE INTO `creature_movement` VALUES (34192, 22, 2713.73, -1899.71, 207.793, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6.16377, 0, 0);
+REPLACE INTO `creature_movement` VALUES (34192, 23, 2719.59, -1898.02, 207.93, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.281133, 0, 0);
+
+-- update to right bear form
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param1`=5487 WHERE  `id`=379701;
