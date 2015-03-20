@@ -2295,3 +2295,6 @@ UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`=10 WHERE  `guid`=43221;
 UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`=10 WHERE  `guid`=43222;
 UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`=10 WHERE  `guid`=43223;
 UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`=10 WHERE  `guid`=43224;
+
+-- Darkmaster Gandling, update hitbox
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=0.6, `combat_reach`=0.7 WHERE  `modelid`=11070;
