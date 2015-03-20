@@ -1942,3 +1942,25 @@ REPLACE INTO `zp_mangosd`.`creature` VALUES (14138, 3421, 1, 1406, 0, -4218.61, 
 
 -- correct a random say for some npc in burning steppes
 UPDATE `zp_mangosd`.`db_script_string` SET `content_default`='Bijou lost! SQUAWK! *cough*' WHERE  `entry`=2000005002;
+
+/**************** For love eternal sql **************/
+-- add script as AI
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='npc_cerellean_whiteclaw' WHERE  `entry`=3644;
+-- make sure anaya won't move around
+UPDATE `zp_mangosd`.`creature_template` SET `MovementType`=0 WHERE  `entry`=3843;
+-- add correct timing for text for anaya
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (384301, 3843, 1, 0, 100, 0, 13000, 13000, 0, 0, 1, -666, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Anaya - OOC Say 1 (Quest: 963)');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (384302, 3843, 1, 0, 100, 0, 35000, 35000, 0, 0, 1, -667, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Anaya - OOC Say 2 (Quest: 963)');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (384303, 3843, 1, 0, 100, 0, 41000, 41000, 0, 0, 1, -668, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Anaya - OOC Say 3 (Quest: 963)');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (384304, 3843, 1, 0, 100, 0, 51000, 51000, 0, 0, 1, -669, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Anaya - OOC Say 4 (Quest: 963)');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (384305, 3843, 1, 0, 100, 0, 60000, 60000, 0, 0, 1, -670, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Anaya - OOC Say 5 (Quest: 963) UNUSED FOR NOW');
+
+-- add texts
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720032, ' Anaya...? Do my eyes deceive me? Is it really you?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Cerellan - Say 1');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720033, 'That the fates should be so cruel as to permit us only this after a thousand years apart...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Cerellan - Say 2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720034, 'Do you hate me, my love? That I was forced to destroy your living form, that your spirit be released from unhappy bondage.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Cerellan - Say 3');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720035, ' No! Anaya... Anaya! Don\'t leave me! Please...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Cerellan - Say 4');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720036, 'How, my love? How will I find the strength to face the ages of the world without you by my side...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Cerellan - Say 5');
+
+-- remove that he is always on his knee
+DELETE FROM `zp_mangosd`.`creature_addon` WHERE  `guid`=37062;
