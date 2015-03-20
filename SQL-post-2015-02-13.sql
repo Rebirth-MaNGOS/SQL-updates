@@ -1920,3 +1920,5 @@ UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=49769;
 -- Level adjustment for the quest Venom to the Undercity
 UPDATE `zp_mangosd`.`quest_template` SET `MinLevel`='48' WHERE (`entry`='2938') limit 1;
 
+-- add throw as a reward for quest Stealing Supplies
+UPDATE `zp_mangosd`.`quest_template` SET `RewChoiceItemId3`=3463 WHERE  `entry`=1370;
