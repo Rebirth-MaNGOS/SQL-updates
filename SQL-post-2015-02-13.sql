@@ -1964,3 +1964,7 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720036, 'How, my love?
 
 -- remove that he is always on his knee
 DELETE FROM `zp_mangosd`.`creature_addon` WHERE  `guid`=37062;
+
+-- Young Threshadon in the loch and Deep Sea Threshadon should no longer move on land
+UPDATE `zp_mangosd`.`creature_template` SET `InhabitType`=2 WHERE  `entry`=2188;
+UPDATE `zp_mangosd`.`creature_template` SET `InhabitType`=2 WHERE  `entry`=1224;
