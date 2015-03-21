@@ -2313,3 +2313,6 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (47631, 8, 962.584, -342.77
 
 -- Scholomance Neophyte add missing spell, fear
 REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1047011, 10470, 0, 0, 100, 3, 9000, 15000, 18000, 25000, 11, 12096, 4, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Scholomance Neophyte - Cast Fear');
+
+-- bloodscalp hunters should no longer cast cubes
+UPDATE `zp_mangosd`.`creature_equip_template_raw` SET `equipinfo3`='436146178' WHERE (`entry`='1774') limit 1;
