@@ -2404,3 +2404,12 @@ UPDATE `zp_mangosd`.`creature` SET `spawndist`=5, `MovementType`=1 WHERE  `guid`
 
 -- Rattlegore is no longer immune to stun
 UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=617297883 WHERE  `entry`=11622;
+
+/***************** HOT PATCH ******************/
+-- add missing dummies in maraudon
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3029677, 800008, 349, 0, 0, 254.51, -93.8884, -129.621, 4.96712, 25, 5, 0, 646473, 0, 0, 2);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3029678, 800008, 349, 0, 0, 312.443, -343.248, -117.354, 1.34251, 25, 5, 0, 646473, 0, 0, 2);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3029679, 800008, 349, 0, 0, 109.5, -269.956, -108.676, 2.70126, 25, 5, 0, 646473, 0, 0, 2);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3029680, 800008, 349, 0, 0, -133.242, -363.87, -170.419, 1.31527, 25, 5, 0, 646473, 0, 0, 2);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3029681, 800008, 349, 0, 0, 176.795, -304.535, -172.385, 3.59289, 25, 5, 0, 646473, 0, 0, 2);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3029682, 800008, 349, 0, 0, 151.491, -195.682, -171.857, 4.88487, 25, 5, 0, 646473, 0, 0, 2);
