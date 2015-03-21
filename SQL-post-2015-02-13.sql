@@ -2329,3 +2329,15 @@ REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (328901, 3289, 1, 0, 100,
 REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (808, 0, 0, 0, 0, 0, 0, 0, 2000006008, 0, 0, 0, 0, 0, 0, 0, 'Master Gadrin - Say on quest complete');
 REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (808, 1, 10, 3289, 15000, 0, 0, 0, 0, 0, 0, 0, -821, -4922, 19.3, 2.3, 'Spawn Spirit of Minshina');
 
+-- Moon Priestes Amara linked to her adds.
+-- delete old waypoints
+DELETE FROM `zp_mangosd`.`creature_movement` WHERE  `id`=46416 LIMIT 25;
+DELETE FROM `zp_mangosd`.`creature_movement` WHERE  `id`=46414 LIMIT 24;
+
+-- remove waypoint movement
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=46416;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=46414;
+-- add formation
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (46394, 46394, 0, 0, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (46394, 46414, 2, 120, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (46394, 46416, 2, 240, 2);
