@@ -2398,3 +2398,6 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3033894, 38, -1143.96, -21
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3033894, 39, -1138.35, -2079.62, 84.5232, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.40963, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3033894, 40, -1149.74, -2059.78, 88.4163, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.29713, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3033894, 41, -1166.49, -2046.93, 92.0206, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.04187, 0, 0);
+
+-- Yarrog Baneshadow random movement
+UPDATE `zp_mangosd`.`creature` SET `spawndist`=5, `MovementType`=1 WHERE  `guid`=12303;
