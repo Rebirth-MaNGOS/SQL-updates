@@ -2316,3 +2316,16 @@ REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1047011, 10470, 0, 0, 10
 
 -- bloodscalp hunters should no longer cast cubes
 UPDATE `zp_mangosd`.`creature_equip_template_raw` SET `equipinfo3`='436146178' WHERE (`entry`='1774') limit 1;
+
+/************** minshina's skull quest end RP ************/
+-- add text
+REPLACE INTO `zp_mangosd`.`db_script_string` VALUES (2000006008, 'I thank you, $N. And my brother thanks you.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+UPDATE `zp_mangosd`.`quest_template` SET `CompleteScript`=808 WHERE  `entry`=808;
+
+-- make spirit of minshina bow
+UPDATE `zp_mangosd`.`creature_template` SET `MovementType`=0, `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE  `entry`=3289;
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (328901, 3289, 1, 0, 100, 0, 2000, 2000, 0, 0, 5, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Spirit of Minshina - Do emote Bow');
+-- add script to quest end
+REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (808, 0, 0, 0, 0, 0, 0, 0, 2000006008, 0, 0, 0, 0, 0, 0, 0, 'Master Gadrin - Say on quest complete');
+REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (808, 1, 10, 3289, 15000, 0, 0, 0, 0, 0, 0, 0, -821, -4922, 19.3, 2.3, 'Spawn Spirit of Minshina');
+
