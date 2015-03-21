@@ -2401,3 +2401,6 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3033894, 41, -1166.49, -20
 
 -- Yarrog Baneshadow random movement
 UPDATE `zp_mangosd`.`creature` SET `spawndist`=5, `MovementType`=1 WHERE  `guid`=12303;
+
+-- Rattlegore is no longer immune to stun
+UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=617297883 WHERE  `entry`=11622;
