@@ -2341,3 +2341,8 @@ UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=46414;
 REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (46394, 46394, 0, 0, 2);
 REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (46394, 46414, 2, 120, 2);
 REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (46394, 46416, 2, 240, 2);
+
+-- Burning Blade Fanatic should now move around some
+UPDATE `zp_mangosd`.`creature` SET `spawndist`=5, `MovementType`=1 WHERE  `id`=3197;
+-- Burning Blade Apprentice should now move around some
+UPDATE `zp_mangosd`.`creature` SET `spawndist`=5, `MovementType`=1 WHERE  `id`=3198;
