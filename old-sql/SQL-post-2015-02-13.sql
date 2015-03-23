@@ -2422,3 +2422,9 @@ UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=864000 WHERE  `guid`=84592 LI
 UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=864000 WHERE  `guid`=84589 LIMIT 1;
 UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=864000 WHERE  `guid`=84573 LIMIT 1;
 UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=864000 WHERE  `guid`=84591 LIMIT 1;
+
+-- missing dummy for helcular
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3033894, 800008, 1, 0, 0, -1165.19, -2041.07, 92.2107, 0.443581, 25, 5, 0, 646473, 0, 0, 2);
+
+-- Mythology of the titans down to 10 sec respawn from 5min, SM q item
+UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`=10 WHERE  `guid`=15008;
