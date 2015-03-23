@@ -2416,3 +2416,9 @@ REPLACE INTO `zp_mangosd`.`creature` VALUES (3029682, 800008, 349, 0, 0, 151.491
 
 -- Spellbinders in BWL should no longer be skinnable.
 UPDATE `zp_mangosd`.`creature_template` SET `skinloot`=0 WHERE  `entry`=12457 LIMIT 1;
+
+-- Increased spawn time for trash in bwl.
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=864000 WHERE  `guid`=84592 LIMIT 1;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=864000 WHERE  `guid`=84589 LIMIT 1;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=864000 WHERE  `guid`=84573 LIMIT 1;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=864000 WHERE  `guid`=84591 LIMIT 1;
