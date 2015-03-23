@@ -2413,3 +2413,6 @@ REPLACE INTO `zp_mangosd`.`creature` VALUES (3029679, 800008, 349, 0, 0, 109.5, 
 REPLACE INTO `zp_mangosd`.`creature` VALUES (3029680, 800008, 349, 0, 0, -133.242, -363.87, -170.419, 1.31527, 25, 5, 0, 646473, 0, 0, 2);
 REPLACE INTO `zp_mangosd`.`creature` VALUES (3029681, 800008, 349, 0, 0, 176.795, -304.535, -172.385, 3.59289, 25, 5, 0, 646473, 0, 0, 2);
 REPLACE INTO `zp_mangosd`.`creature` VALUES (3029682, 800008, 349, 0, 0, 151.491, -195.682, -171.857, 4.88487, 25, 5, 0, 646473, 0, 0, 2);
+
+-- Spellbinders in BWL should no longer be skinnable.
+UPDATE `zp_mangosd`.`creature_template` SET `skinloot`=0 WHERE  `entry`=12457 LIMIT 1;
