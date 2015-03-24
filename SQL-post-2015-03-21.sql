@@ -25,7 +25,7 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49003, 10, 164.808, 37.653
 
 -- 2nd spectral researcher
 -- delete old 
-DELETE FROM `zp_mangosd`.`zp_mangosd`.`creature_movement` WHERE  `id`=91351 LIMIT 12;
+DELETE FROM `zp_mangosd`.`creature_movement` WHERE  `id`=91351 LIMIT 12;
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (91351, 1, 193.813, -18.7228, 115.708, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.75091, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (91351, 2, 198.724, -18.5765, 115.708, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.038518, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (91351, 3, 198.532, -7.44517, 115.708, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.59753, 0, 0);
@@ -39,7 +39,7 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (91351, 10, 182.22, -14.065
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (91351, 11, 192.545, -7.26656, 115.708, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.529373, 0, 0);
 
 -- blood steward wp remove old
-DELETE FROM `zp_mangosd`.`zp_mangosd`.`creature_movement` WHERE  `id`=91374 LIMIT 9;
+DELETE FROM `zp_mangosd`.`creature_movement` WHERE  `id`=91374 LIMIT 9;
 -- waypoints
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (91374, 1, 160.879, -0.682247, 115.708, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.16048, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (91374, 2, 160.91, -2.1452, 115.708, 60000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.7941, 0, 0);
@@ -98,7 +98,7 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3033971, 7, 174.183, 38.40
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3033971, 8, 162.371, 44.7878, 115.708, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.67352, 0, 0);
 
 -- skeleton pat
-DELETE FROM `zp_mangosd`.`zp_mangosd`.`creature_movement` WHERE  `id`=48846 LIMIT 9;
+DELETE FROM `zp_mangosd`.`creature_movement` WHERE  `id`=48846 LIMIT 9;
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (48846, 1, 182.604, 35.6954, 115.709, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.73518, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (48846, 2, 183.363, 2.39803, 115.709, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.73518, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (48846, 3, 222.348, 2.45622, 115.709, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.011007, 0, 0);
@@ -106,7 +106,7 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (48846, 4, 222.115, 36.4122
 
 -- 3rd room spider pat
 -- remove old wp and add new
-DELETE FROM `zp_mangosd`.`zp_mangosd`.`creature_movement` WHERE  `id`=91327 LIMIT 5;
+DELETE FROM `zp_mangosd`.`creature_movement` WHERE  `id`=91327 LIMIT 5;
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (91327, 1, 218.073, 162.318, 109.64, 15000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.44578, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (91327, 2, 207.737, 159.4, 109.795, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.36862, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (91327, 3, 185.902, 159.913, 109.639, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.10552, 0, 0);
@@ -132,7 +132,7 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (48780, 10, 171.635, 126.38
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (48780, 11, 172.897, 127.004, 109.627, 180000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.482262, 0, 0);
 
 -- adept pat
-DELETE FROM `zp_mangosd`.`zp_mangosd`.`creature_movement` WHERE  `id`=48787 LIMIT 8;
+DELETE FROM `zp_mangosd`.`creature_movement` WHERE  `id`=48787 LIMIT 8;
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (48787, 1, 222.68, 176.545, 109.64, 15000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.60817, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (48787, 2, 223.241, 166.884, 109.64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.7851, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (48787, 3, 228.294, 160.758, 109.64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.41735, 0, 0);
@@ -508,7 +508,7 @@ UPDATE `zp_mangosd`.`creature_template` SET `minmana`=8910, `maxmana`=8965, `agg
 
 -- missing weapon for darkreaver
 REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (14516, 18396, 0, 0);
-UPDATE `zp_mangosd`.`creature_template` SET `minmana`=10,250, `maxmana`=10,272, `aggrorangeoverride`=40, `equipment_id`=14516 WHERE  `entry`=14516;
+UPDATE `zp_mangosd`.`creature_template` SET `minmana`=10250, `maxmana`=10272, `aggrorangeoverride`=40, `equipment_id`=14516 WHERE  `entry`=14516;
 
 -- missing yell
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720042, 'ENOUGH - this ends now! You fools will be added to my bone collection!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Death Knight Darkreaver - Yell on Spawn');
