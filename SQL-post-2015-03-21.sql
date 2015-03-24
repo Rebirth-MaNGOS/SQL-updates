@@ -440,3 +440,24 @@ REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (3033970, 2103, 0, 'Scholomance
 
 REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (91393, 2104, 0, 'Scholomance Neophyte');
 REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (3033971, 2104, 0, 'Scholomance Acolyte');
+
+/************* Most bosses are no longer immune to stun *******************/
+-- ras
+UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=617297883 WHERE  `entry`=10508;
+-- malicia
+UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=617297883 WHERE  `entry`=10505;
+-- polkelt
+UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=617297883 WHERE  `entry`=10901;
+-- ravenian
+UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=617297883 WHERE  `entry`=10507;
+-- vectus
+UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=617297883 WHERE  `entry`=10432;
+UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=617297883 WHERE  `entry`=800016;
+-- jandice
+UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=617297883 WHERE  `entry`=10504;
+-- alexei
+UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=617297883 WHERE  `entry`=10503;
+-- lady barov
+UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=617297883 WHERE  `entry`=10502;
+-- marduk
+UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=617297883 WHERE  `entry`=10433;
