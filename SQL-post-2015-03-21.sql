@@ -1,7 +1,5 @@
 /*********************** Scholo Revamp ****************************************/
 -- MISC
--- add emote point script
-REPLACE INTO `zp_mangosd`.`creature_movement_scripts` VALUES (5, 8, 1, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Scholomance Creature do Point Emote');
 -- Spectral Teacher add missing spell banish
 REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1050003, 10500, 0, 0, 100, 3, 11000, 15000, 20000, 26000, 11, 8994, 5, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Spectral Teacher - Cast Banish');
 -- set right faction for Blood Steward of Kirtonos
@@ -471,8 +469,10 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720043, 'Ah, here we a
 
 -- add dummy
 REPLACE INTO `creature_template` VALUES (800470, 0, 0, 10812, 0, 'J\'eevee', NULL, 0, 58, 58, 4484, 4484, 0, 0, 0, 35, 35, 0, 1.25, 0.95, 0, 0, 154, 184, 0, 78, 1, 1430, 1573, 0, 0, 0, 0, 0, 0, 0, 0, 0, 72.9872, 100.357, 100, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 60, 298, '', 2, 3, 0, 0, 1, 0, 0, 0, 0, 0, 'npc_jeevee_dummy');
--- update where he spawns
-UPDATE `zp_mangosd`.`event_scripts` SET `datalong`=800470, `x`=39.1377, `y`=156.06, `z`=83.54, `o`=1.621, `comments`='Spawn J\'eevee' WHERE `id`=8438 LIMIT 1;
+
+-- remove old / make sql run-able again
+DELETE FROM `zp_mangosd`.`event_scripts` WHERE  `id`=8438 LIMIT 2;
+REPLACE INTO `zp_mangosd`.`event_scripts` VALUES (8438, 0, 10, 800470, 180000, 0, 0, 0, 0, 0, 0, 0, 39.1377, 156.06, 83.54, 1.621, 'Spawn J\'eevee');
 -- hack the quest credit for now
 REPLACE INTO `zp_mangosd`.`event_scripts` VALUES (8438, 33, 7, 7629, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Complete quest 7629');
 
@@ -520,6 +520,26 @@ REPLACE INTO `creature_template` VALUES (800469, 0, 0, 6296, 0, 'Paladin Event D
 UPDATE `zp_mangosd`.`quest_template` SET `CompleteScript`=823 WHERE  `entry`=823;
 
 REPLACE INTO `zp_mangosd`.`db_script_string` VALUES (2000006009, 'What?? The Burning Blade is spreading! We must investigate!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+-- remove old if sql is run again
+DELETE FROM `zp_mangosd`.`quest_end_scripts` WHERE  `id`=823 LIMIT 2;
 REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (823, 3, 1, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Orgnil Emote on Quest Complete');
 REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (823, 3, 0, 0, 0, 0, 0, 0, 2000006009, 0, 0, 0, 0, 0, 0, 0, 'Orgnil Say on Quest Complete');
+
+
+/************ Scripts on movement, re-add these and remove duplicates ************/
+-- Remove all old and replace with no double scripts
+DELETE FROM `zp_mangosd`.`creature_movement_scripts` WHERE  `id`=1 LIMIT 10;
+DELETE FROM `zp_mangosd`.`creature_movement_scripts` WHERE  `id`=2 LIMIT 10;
+DELETE FROM `zp_mangosd`.`creature_movement_scripts` WHERE  `id`=3 LIMIT 10;
+DELETE FROM `zp_mangosd`.`creature_movement_scripts` WHERE  `id`=4 LIMIT 10;
+DELETE FROM `zp_mangosd`.`creature_movement_scripts` WHERE  `id`=5 LIMIT 10;
+
+-- add them again
+REPLACE INTO `zp_mangosd`.`creature_movement_scripts` VALUES (1, 0, 25, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Make Creature Run');
+REPLACE INTO `zp_mangosd`.`creature_movement_scripts` VALUES (2, 0, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Make Creature Walk');
+REPLACE INTO `zp_mangosd`.`creature_movement_scripts` VALUES (3, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Stop Movement');
+REPLACE INTO `zp_mangosd`.`creature_movement_scripts` VALUES (4, 0, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Despawn Creature');
+REPLACE INTO `zp_mangosd`.`creature_movement_scripts` VALUES (5, 8, 1, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Scholomance Creature do Point Emote');
+
+
 
