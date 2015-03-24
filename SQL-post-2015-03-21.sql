@@ -570,3 +570,13 @@ REPLACE INTO `quest_end_scripts` VALUES (640, 2, 15, 2152, 0, 0, 0, 0, 0, 0, 0, 
 /******** Lost but not forgotten - add missing cry emote ******/
 -- cry when the player turns in quest
 UPDATE `zp_mangosd`.`quest_template` SET `OfferRewardEmote1`=18 WHERE  `entry`=816;
+
+/********** Parts for Kravel quest end RP *************/
+-- don't kneel 24/7
+DELETE FROM `zp_mangosd`.`creature_addon` WHERE  `guid`=21570;
+-- add script for quest end rp
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_kravel_koalbeard' WHERE  `entry`=4452;
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720047, 'There, that should do it...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Kravel Koalbeard - say');
+
+-- add custom box that players can't interact with
+REPLACE INTO `zp_mangosd`.`gameobject_template` VALUES (175168, 10, 336, 'Parts Crate', 14, 16, 0.5, 0, 0, 0, 196608, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
