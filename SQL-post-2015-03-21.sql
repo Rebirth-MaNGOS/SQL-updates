@@ -553,4 +553,5 @@ DELETE FROM `zp_mangosd`.`quest_start_scripts` WHERE  `id`=621 LIMIT 2;
 REPLACE INTO `quest_end_scripts` VALUES (621, 1, 0, 0, 0, 0, 0, 0, 2000006010, 0, 0, 0, 0, 0, 0, 0, 'Zanzil\'s Secret - quest end say 1');
 REPLACE INTO `quest_end_scripts` VALUES (621, 5, 0, 0, 0, 0, 0, 0, 2000006011, 0, 0, 0, 0, 0, 0, 0, 'Zanzil\'s Secret - quest end say 2');
 
-
+-- Giant Yeti remove skinning when mob is alive
+UPDATE `zp_mangosd`.`creature_template` SET `unit_flags`=0 WHERE  `entry`=2251;
