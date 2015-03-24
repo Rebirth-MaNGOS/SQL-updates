@@ -494,7 +494,27 @@ REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (800470, 13, 33.08
 -- remove old kill req for q
 UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=2, `ReqCreatureOrGOId1`=0, `ReqCreatureOrGOCount1`=0 WHERE  `entry`=7629;
 
+/************* Paladin mount event scholo ****************/
+-- script for the non aspect waves
+UPDATE `zp_mangosd`.`creature_template` SET `aggrorangeoverride`=40, `AIName`='', `ScriptName`='mob_aspect' WHERE  `entry`=14514;
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='mob_aspect' WHERE  `entry`=14513;
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='mob_aspect' WHERE  `entry`=14512;
+UPDATE `zp_mangosd`.`creature_template` SET `minmana`=4813, `maxmana`=4868, `AIName`='', `ScriptName`='mob_aspect' WHERE  `entry`=14511;
 
+UPDATE `zp_mangosd`.`creature_template` SET `aggrorangeoverride`=40 WHERE  `entry`=14518;
+UPDATE `zp_mangosd`.`creature_template` SET `aggrorangeoverride`=40 WHERE  `entry`=14519;
+UPDATE `zp_mangosd`.`creature_template` SET `aggrorangeoverride`=40 WHERE  `entry`=14520;
+UPDATE `zp_mangosd`.`creature_template` SET `minmana`=8910, `maxmana`=8965, `aggrorangeoverride`=40 WHERE  `entry`=14521;
+
+-- missing weapon for darkreaver
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (14516, 18396, 0, 0);
+UPDATE `zp_mangosd`.`creature_template` SET `minmana`=10,250, `maxmana`=10,272, `aggrorangeoverride`=40, `equipment_id`=14516 WHERE  `entry`=14516;
+
+-- missing yell
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720042, 'ENOUGH - this ends now! You fools will be added to my bone collection!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Death Knight Darkreaver - Yell on Spawn');
+
+-- dummy for paladin event
+REPLACE INTO `creature_template` VALUES (800469, 0, 0, 6296, 0, 'Paladin Event Dummy', 'lol it\'s a frog', 0, 1, 1, 649999, 649999, 0, 0, 0, 35, 35, 0, 1, 1.14286, 3, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 2, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5242886, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 4, 0, 0, 1, 0, 0, 0, 0, 128, 'npc_paladin_event');
 
 -- Report to Orgnil RP at quest complete
 UPDATE `zp_mangosd`.`quest_template` SET `CompleteScript`=823 WHERE  `entry`=823;
