@@ -461,3 +461,35 @@ UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=617297883 WHE
 UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=617297883 WHERE  `entry`=10502;
 -- marduk
 UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=617297883 WHERE  `entry`=10433;
+
+/**************** Imp Delivery quest, scholo warlock event *************/
+-- add text
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720046, 'I\'m finished. The parchment is made. Now, return to Gorzeeki...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'J\'eevee - say 4');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720045, 'And now... the final step!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'J\'eevee - say 3');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720044, 'Oh right! Over here now...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'J\'eevee - say 2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720043, 'Ah, here we are! Well let\'s get to work. Shall we...?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'J\'eevee - say 1');
+
+-- add dummy
+REPLACE INTO `creature_template` VALUES (800470, 0, 0, 10812, 0, 'J\'eevee', NULL, 0, 58, 58, 4484, 4484, 0, 0, 0, 35, 35, 0, 1.25, 0.95, 0, 0, 154, 184, 0, 78, 1, 1430, 1573, 0, 0, 0, 0, 0, 0, 0, 0, 0, 72.9872, 100.357, 100, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 60, 298, '', 2, 3, 0, 0, 1, 0, 0, 0, 0, 0, 'npc_jeevee_dummy');
+-- update where he spawns
+UPDATE `zp_mangosd`.`event_scripts` SET `datalong`=800470, `x`=39.1377, `y`=156.06, `z`=83.54, `o`=1.621, `comments`='Spawn J\'eevee' WHERE `id`=8438 LIMIT 1;
+-- hack the quest credit for now
+REPLACE INTO `zp_mangosd`.`event_scripts` VALUES (8438, 33, 7, 7629, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Complete quest 7629');
+
+-- Add movement
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (800470, 1, 39.1377, 156.06, 83.5456, 2000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.621, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (800470, 2, 39.1102, 159.549, 83.5456, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.58967, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (800470, 3, 36.9212, 161.013, 83.5456, 2500, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.59498, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (800470, 4, 38.9113, 159.71, 83.5456, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.69338, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (800470, 5, 40.7344, 154.849, 83.5456, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.81766, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (800470, 6, 45.652, 155.032, 83.5456, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.026723, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (800470, 7, 47.2449, 158.505, 83.5456, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.47971, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (800470, 8, 44.9292, 160.89, 83.5456, 4000, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2.46538, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (800470, 9, 46.5044, 158.528, 83.5456, 2000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.56633, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (800470, 10, 46.1312, 154.611, 83.5456, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.61738, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (800470, 11, 36.4877, 155.261, 83.5456, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.01909, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (800470, 12, 29.6432, 159.96, 83.5456, 2000, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2.54, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (800470, 13, 33.0833, 161.14, 83.5456, 60000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.058142, 0, 0);
+
+-- remove old kill req for q
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=2, `ReqCreatureOrGOId1`=0, `ReqCreatureOrGOCount1`=0 WHERE  `entry`=7629;
