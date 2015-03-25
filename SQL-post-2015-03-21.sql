@@ -624,3 +624,26 @@ UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_kinweelay' WHERE  
 -- add text
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720053, 'I am eager to hear what so angry an orc has to say.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'Kin\'weelay - say 1, 1240');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720054, 'Peer into the cauldron, $N. Marg wishes to speak...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'Kin\'weelay - say 2, 1240');
+
+/************** Suspicious Hoofprints quest end RP **************/
+-- add waypoints
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (4972, 1, -3156.64, -2900.26, 34.0025, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0.399108, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (4972, 2, -3149.29, -2897.16, 34.1336, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.399108, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (4972, 3, -3147.19, -2893.58, 34.2069, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.988156, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (4972, 4, -3148.16, -2889.44, 34.1586, 11000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.92671, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (4972, 5, -3144.6, -2887.16, 34.1211, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.677924, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (4972, 6, -3138.47, -2873.03, 34.7201, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.15309, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (4972, 7, -3138.19, -2861.83, 34.7308, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.54579, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (4972, 8, -3132.42, -2853.72, 34.8295, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.674008, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (4972, 9, -3095.46, -2822, 34.2606, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.709351, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (4972, 10, -3093.77, -2815.63, 34.4839, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.38479, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (4972, 11, -3105.21, -2798.61, 34.0884, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 2.13878, 0, 0);
+
+-- text
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720057, 'Understood. I will return shortly.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'Kagoro say');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720056, 'Go to the Shady Rest Inn and follow the tracks. See where they lead and report back to me.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'Krog say 2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720055, 'Kagoro, I require your presence!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Krog say 1');
+
+-- add script and movement
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_krog' WHERE  `entry`=4926;
+UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=1.21, `MovementType`=2 WHERE  `entry`=4972;
