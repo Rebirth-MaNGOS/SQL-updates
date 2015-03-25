@@ -586,3 +586,15 @@ REPLACE INTO `zp_mangosd`.`gameobject_template` VALUES (175168, 10, 336, 'Parts 
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720048, 'Here goes nothing...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 2, 'Maybell Maclure - say');
 UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_maybell_maclure' WHERE  `entry`=251;
 
+/************** Vyletongue Corruption quest start rp ************/
+-- add start text at quest start and add text
+UPDATE `zp_mangosd`.`quest_template` SET `StartScript`=7041 WHERE  `entry`=7029;
+UPDATE `zp_mangosd`.`quest_template` SET `StartScript`=7041 WHERE  `entry`=7041;
+
+REPLACE INTO `zp_mangosd`.`db_script_string` VALUES (2000006013, '$N, please take a look at the sample of the Vylestem vine that I took from the caverns, so that you know what to look for...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+
+-- remove old if sql is run again and add the text
+DELETE FROM `zp_mangosd`.`quest_start_scripts` WHERE  `id`=7041 LIMIT 2;
+REPLACE INTO `zp_mangosd`.`quest_start_scripts` VALUES (7041, 0, 0, 0, 0, 0, 0, 0, 2000006013, 0, 0, 0, 0, 0, 0, 0, 'Talendria say on quest start');
+
