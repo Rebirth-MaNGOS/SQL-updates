@@ -603,3 +603,7 @@ UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='npc_gormu
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720049, 'What is this power that flows through me? Is this the power of shamanism that Tor\'gan spoke of...?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Gor\'mul - say 1');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720050, 'Amazing! I feel... renewed. My Strength returns!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 15, 'Gor\'mul - say 2');
 
+-- captured farmers should move some
+UPDATE `zp_mangosd`.`creature` SET `spawndist`=3, `MovementType`=1 WHERE  `guid`=15891;
+UPDATE `zp_mangosd`.`creature` SET `spawndist`=3, `MovementType`=1 WHERE  `guid`=15892;
+UPDATE `zp_mangosd`.`creature` SET `spawndist`=3, `MovementType`=1 WHERE  `guid`=15893;
