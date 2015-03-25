@@ -647,3 +647,7 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720055, 'Kagoro, I req
 -- add script and movement
 UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_krog' WHERE  `entry`=4926;
 UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=1.21, `MovementType`=2 WHERE  `entry`=4972;
+
+-- Help for the new GM chat faction select.
+REPLACE INTO `zp_mangosd`.`command` (`name`, `security`, `help`) VALUES ('gm factionchat', '1', 'Syntax: .gm factionchat [#faction] - Set which faction the GM uses in channels. 0 is Alliance and 1 is Horde. Call without an argument to see which faction is currently used.');
+
