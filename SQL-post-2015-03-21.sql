@@ -607,3 +607,7 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720050, 'Amazing! I fe
 UPDATE `zp_mangosd`.`creature` SET `spawndist`=3, `MovementType`=1 WHERE  `guid`=15891;
 UPDATE `zp_mangosd`.`creature` SET `spawndist`=3, `MovementType`=1 WHERE  `guid`=15892;
 UPDATE `zp_mangosd`.`creature` SET `spawndist`=3, `MovementType`=1 WHERE  `guid`=15893;
+
+-- Elixir of Pain
+-- add script to stanley
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='npc_stanley' WHERE  `entry`=2274;
