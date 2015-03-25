@@ -619,3 +619,8 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720051, 'You can\'t hi
 
 -- add ai
 UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_kinweelay' WHERE  `entry`=2519;
+
+/************* The troll witchdoctor quest end RP **************/
+-- add text
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720053, 'I am eager to hear what so angry an orc has to say.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'Kin\'weelay - say 1, 1240');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720054, 'Peer into the cauldron, $N. Marg wishes to speak...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'Kin\'weelay - say 2, 1240');
