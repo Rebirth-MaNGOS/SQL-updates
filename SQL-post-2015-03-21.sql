@@ -580,3 +580,9 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720047, 'There, that s
 
 -- add custom box that players can't interact with
 REPLACE INTO `zp_mangosd`.`gameobject_template` VALUES (175168, 10, 336, 'Parts Crate', 14, 16, 0.5, 0, 0, 0, 196608, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
+
+/************* The escape quest end RP, sql *************/
+-- add text and script
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720048, 'Here goes nothing...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 2, 'Maybell Maclure - say');
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_maybell_maclure' WHERE  `entry`=251;
+
