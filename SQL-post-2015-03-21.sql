@@ -611,3 +611,11 @@ UPDATE `zp_mangosd`.`creature` SET `spawndist`=3, `MovementType`=1 WHERE  `guid`
 -- Elixir of Pain
 -- add script to stanley
 UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='npc_stanley' WHERE  `entry`=2274;
+
+/********* The mind's eye RP horde *************/
+-- add text for mind's eye RP and brd bridge event
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720052, 'I have shaped Yenniku\'s Soul Gem, $N.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'Kin\'weelay - say 1');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720051, 'You can\'t hide from us. Prepare to burn!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Anvilrage Guardsman yell on spawn');
+
+-- add ai
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_kinweelay' WHERE  `entry`=2519;
