@@ -660,3 +660,12 @@ DELETE FROM `zp_mangosd`.`quest_end_scripts` WHERE  `id`=252 LIMIT 1;
 -- move the text from aiscripts to scriptdev
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720058, 'Undead are crawling all over the land.  Where is the Stormwind Army?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Lord Ebonlocke - Random Say');
 
+/***************** The Temple of Atal'Hakkar rp, adjusted ai for Fel'zerul ************/
+-- remove old wrong AI
+DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=144301;
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='' WHERE  `entry`=1443;
+
+UPDATE `zp_mangosd`.`quest_template` SET `CompleteScript`=1445 WHERE  `entry`=1445;
+-- remove old if sql is run again
+DELETE FROM `zp_mangosd`.`quest_end_scripts` WHERE  `id`=1445 LIMIT 1;
+REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (1445, 1, 15, 7437, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Fel\'zerul - Cast spell Break Stuff');
