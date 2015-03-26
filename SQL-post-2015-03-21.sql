@@ -651,3 +651,12 @@ UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=1.21, `MovementType`=2 W
 -- Help for the new GM chat faction select.
 REPLACE INTO `zp_mangosd`.`command` (`name`, `security`, `help`) VALUES ('gm factionchat', '1', 'Syntax: .gm factionchat [#faction] - Set which faction the GM uses in channels. 0 is Alliance and 1 is Horde. Call without an argument to see which faction is currently used.');
 
+/************* Stitches Event *****************'/
+-- add AI
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='npc_ello_ebonlocke' WHERE  `entry`=263;
+
+-- remove old SQL, no need to spawn him in DB anymore
+DELETE FROM `zp_mangosd`.`quest_end_scripts` WHERE  `id`=252 LIMIT 1;
+-- move the text from aiscripts to scriptdev
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720058, 'Undead are crawling all over the land.  Where is the Stormwind Army?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Lord Ebonlocke - Random Say');
+
