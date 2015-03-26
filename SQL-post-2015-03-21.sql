@@ -669,3 +669,24 @@ UPDATE `zp_mangosd`.`quest_template` SET `CompleteScript`=1445 WHERE  `entry`=14
 -- remove old if sql is run again
 DELETE FROM `zp_mangosd`.`quest_end_scripts` WHERE  `id`=1445 LIMIT 1;
 REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (1445, 1, 15, 7437, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Fel\'zerul - Cast spell Break Stuff');
+
+/*************** Shadow Hunter Vosh'gajin and her adds, lbrs ********************/
+-- make them kneel and channel
+REPLACE INTO `zp_mangosd`.`creature_addon` VALUES (43522, 0, 8, 1, 16, 0, 0, '12380');
+REPLACE INTO `zp_mangosd`.`creature_addon` VALUES (43551, 0, 8, 1, 16, 0, 0, '12380');
+REPLACE INTO `zp_mangosd`.`creature_addon` VALUES (43550, 0, 8, 1, 16, 0, 0, '12380');
+
+-- turn them the right way
+UPDATE `zp_mangosd`.`creature` SET `orientation`=3.054 WHERE  `guid`=43522;
+UPDATE `zp_mangosd`.`creature` SET `orientation`=1.601 WHERE  `guid`=43551;
+UPDATE `zp_mangosd`.`creature` SET `orientation`=4.6617 WHERE  `guid`=43550;
+
+-- link them
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (43522, 43522, 0, 0, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (43522, 43551, 10, 120, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (43522, 43550, 10, 240, 2);
+
+-- move the table to right position
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (632546, 175950, 229, -128.406, -482.324, 25.5927, 6.28, 0, 0, 0, 0, 20, 100, 1);
+
+
