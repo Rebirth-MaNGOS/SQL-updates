@@ -658,7 +658,7 @@ UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='npc_ello_
 -- remove old SQL, no need to spawn him in DB anymore
 DELETE FROM `zp_mangosd`.`quest_end_scripts` WHERE  `id`=252 LIMIT 1;
 -- move the text from aiscripts to scriptdev
-REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720058, 'Undead are crawling all over the land.  Where is the Stormwind Army?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Lord Ebonlocke - Random Say');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720058, 'Undead are crawling all over the land. Where is the Stormwind Army?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Lord Ebonlocke - Random Say');
 
 /***************** The Temple of Atal'Hakkar rp, adjusted ai for Fel'zerul ************/
 -- remove old wrong AI
@@ -693,5 +693,21 @@ REPLACE INTO `zp_mangosd`.`gameobject` VALUES (632546, 175950, 229, -128.406, -4
 -- add text and script
 UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_sea_wolf_mackinley' WHERE  `entry`=2501;
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720059, 'Bah! $N, this foot won\'t budge!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, '"Sea Wolf" MacKinley - say');
+
+/************* The corrupter *************/
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720067, '[Demonic] Parn Parn xi rikk mannor no shi rikk', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Lord Azrethoc\'s Image - say 3');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720066, '[Demonic] Rethule', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Lord Azrethoc\'s Image - say 2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720065, '[Demonic] Kar refir xi raka no shi', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Lord Azrethoc\'s Image - say 1');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720064, 'Yes, come. My master and I shall be waiting.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'Jugkar Grim\'rod\'s Image - say 2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720063, 'Pathetic forsaken weakling. You wish to see my master? So be it.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'Jugkar Grim\'rod\'s Image - say 1');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720062, 'An interesting turn of events.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'Maurin Bonesplitter - say 3');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720061, '[Demonic] X amir rikk zila parn Amanalar Ante rikk thorje xi no', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 15, 'Maurin Bonesplitter - say 2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720060, 'This should only take a moment, $N.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Maurin Bonesplitter - say 1');
+
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_maurin_bonesplitter' WHERE  `entry`=4498;
+
+-- images same lvl as non images, lvl1 before didnt look good
+UPDATE `zp_mangosd`.`creature_template` SET `minlevel`=40, `maxlevel`=40, `minhealth`=4549, `maxhealth`=4549, `rank`=1 WHERE  `entry`=5772;
+UPDATE `zp_mangosd`.`creature_template` SET `minlevel`=40, `maxlevel`=40, `minhealth`=1385, `maxhealth`=1385, `minmana`=1283, `maxmana`=1283 WHERE  `entry`=5773;
 
 
