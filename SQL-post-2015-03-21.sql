@@ -710,4 +710,11 @@ UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_maurin_bonesplitte
 UPDATE `zp_mangosd`.`creature_template` SET `minlevel`=40, `maxlevel`=40, `minhealth`=4549, `maxhealth`=4549, `rank`=1 WHERE  `entry`=5772;
 UPDATE `zp_mangosd`.`creature_template` SET `minlevel`=40, `maxlevel`=40, `minhealth`=1385, `maxhealth`=1385, `minmana`=1283, `maxmana`=1283 WHERE  `entry`=5773;
 
+/*************** Making sense of it RP *************/
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_j_d_collie' WHERE  `entry`=9117;
+-- add text + text for zamek's distraction
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720068, 'Hehehe! Things go boom!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Zamek - say');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720069, 'Now, let\'s see... If I am correct, then... Hmmm...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'J.D. Collie - Say 1');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720070, 'Blue and red... Just as I thought...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 6, 'J.D. Collie - Say 2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720071, '$N, that\'s it! I finally understand!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 5, 'J.D. Collie - Say 3');
 
