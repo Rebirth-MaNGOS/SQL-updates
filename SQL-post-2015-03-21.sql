@@ -718,3 +718,12 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720069, 'Now, let\'s s
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720070, 'Blue and red... Just as I thought...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 6, 'J.D. Collie - Say 2');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720071, '$N, that\'s it! I finally understand!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 5, 'J.D. Collie - Say 3');
 
+/***************** New debug table ****************/
+CREATE TABLE `zp_charactersd`.`character_bugreport` (
+      `id` INT NOT NULL AUTO_INCREMENT,
+      `creator` INT NOT NULL,
+      `title` VARCHAR(200) NOT NULL,
+      `text` VARCHAR(550) NOT NULL,
+      `date` INT NOT NULL,
+      PRIMARY KEY (`id`),
+      UNIQUE INDEX `id_UNIQUE` (`id` ASC));
