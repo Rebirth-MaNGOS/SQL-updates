@@ -727,3 +727,8 @@ CREATE TABLE `zp_charactersd`.`character_bugreport` (
       `date` INT NOT NULL,
       PRIMARY KEY (`id`),
       UNIQUE INDEX `id_UNIQUE` (`id` ASC));
+
+/**************** Bloodscalp clan heads, quest end rp ****************/
+-- add script and text
+UPDATE `zp_mangosd`.`gameobject_template` SET `ScriptName`='go_bubbling_cauldron' WHERE  `entry`=2076;
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720072, 'Ah, good $N. Now let us see what tale these heads tell...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Kin\'weelay - say 1, 584');
