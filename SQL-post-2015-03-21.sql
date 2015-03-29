@@ -732,3 +732,7 @@ CREATE TABLE `zp_charactersd`.`character_bugreport` (
 -- add script and text
 UPDATE `zp_mangosd`.`gameobject_template` SET `ScriptName`='go_bubbling_cauldron' WHERE  `entry`=2076;
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720072, 'Ah, good $N. Now let us see what tale these heads tell...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Kin\'weelay - say 1, 584');
+
+-- Nothing but the truth, muggle
+UPDATE `zp_mangosd`.`quest_template` SET `NextQuestInChain`='1388' WHERE (`entry`='1383') limit 1;
+UPDATE `zp_mangosd`.`quest_template` SET `PrevQuestId`='1383' WHERE (`entry`='1388') limit 1;
