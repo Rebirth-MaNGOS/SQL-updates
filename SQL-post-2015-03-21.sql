@@ -739,3 +739,12 @@ UPDATE `zp_mangosd`.`quest_template` SET `PrevQuestId`='1383' WHERE (`entry`='13
 
 -- remove gnoll text from dark iron lookout
 DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=856602;
+
+/**************** Nothing but the truth, quest end RP ****************/
+-- lower his respawn time since he dies at end of quest and add AI
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=60 WHERE  `guid`=38881;
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_infiltrator_marksen' WHERE  `entry`=5416;
+-- add text
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720073, 'That was refreshing. Now there\'s information that needs to be told...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'Infiltrator Marksen - say 1');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720074, 'I believe the Forsaken are misleading the allies of the Horde.... wait... I feel so... dizzy...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'Infiltrator Marksen - say 2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720075, 'AAAAAAAAAAAAAAAAARGH!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Infiltrator Marksen - say 3');
