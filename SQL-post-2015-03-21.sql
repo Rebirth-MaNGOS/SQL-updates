@@ -736,3 +736,6 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720072, 'Ah, good $N. 
 -- Nothing but the truth, muggle
 UPDATE `zp_mangosd`.`quest_template` SET `NextQuestInChain`='1388' WHERE (`entry`='1383') limit 1;
 UPDATE `zp_mangosd`.`quest_template` SET `PrevQuestId`='1383' WHERE (`entry`='1388') limit 1;
+
+-- remove gnoll text from dark iron lookout
+DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=856602;
