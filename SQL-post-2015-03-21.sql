@@ -748,3 +748,7 @@ UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_infiltrator_markse
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720073, 'That was refreshing. Now there\'s information that needs to be told...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'Infiltrator Marksen - say 1');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720074, 'I believe the Forsaken are misleading the allies of the Horde.... wait... I feel so... dizzy...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'Infiltrator Marksen - say 2');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720075, 'AAAAAAAAAAAAAAAAARGH!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Infiltrator Marksen - say 3');
+
+-- Gravis Slipknot rare, add missing text on aggro
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-14221, 'Greetings, hapless adventurer. I ask only that you wait a moment...and BLEED!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, NULL);
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1422102, 14221, 4, 0, 100, 0, 0, 0, 0, 0, 1, -14221, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Gravis Slipknot - Say on aggro');
