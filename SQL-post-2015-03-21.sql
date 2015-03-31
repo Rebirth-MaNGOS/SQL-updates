@@ -752,3 +752,6 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720075, 'AAAAAAAAAAAAA
 -- Gravis Slipknot rare, add missing text on aggro
 REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-14221, 'Greetings, hapless adventurer. I ask only that you wait a moment...and BLEED!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, NULL);
 REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1422102, 14221, 4, 0, 100, 0, 0, 0, 0, 0, 1, -14221, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Gravis Slipknot - Say on aggro');
+
+-- Snow Tracker Wolf, remove lvl 49 loot pool, lvl7 mob
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=1138 AND `item`=24029;
