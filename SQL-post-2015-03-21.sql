@@ -828,4 +828,17 @@ REPLACE INTO `creature` VALUES (3033984, 5434, 1, 0, 0, -3954.87, -4672.61, -10.
 -- Spectral Projection, add AI, hp, mana armor
 UPDATE `zp_mangosd`.`creature_template` SET `maxhealth`=1371, `minmana`=899, `maxmana`=931, `armor`=1831, `ScriptName`='mob_spectral_projection' WHERE  `entry`=11263;
 
+/************ Searing Gorge ****************/
+-- Overseer Maltorius, one add is there, change it to elite and add the missing one
+UPDATE `zp_mangosd`.`creature` SET `id`=8504 WHERE  `guid`=5846;
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3033985, 8504, 0, 7865, 0, -6631.38, -1232.6, 209.809, 0.806935, 500, 0, 0, 4860, 0, 0, 0);
+
+-- Overseer Maltorius change faction so he chains with adds
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=54, `faction_H`=54 WHERE  `entry`=14621;
+
+-- Dark iron lookouts in Towers should be sentries, add missing mob
+UPDATE `zp_mangosd`.`creature` SET `id`=8504 WHERE  `guid`=6831;
+UPDATE `zp_mangosd`.`creature` SET `id`=8504 WHERE  `guid`=6830;
+UPDATE `zp_mangosd`.`creature` SET `id`=8504 WHERE  `guid`=6832;
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3033986, 8504, 0, 7865, 0, -7023.98, -1282.34, 258.527, 4.86585, 500, 0, 0, 4860, 0, 0, 0);
 
