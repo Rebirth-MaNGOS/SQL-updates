@@ -825,3 +825,7 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (45501, 60, -8649.72, 903.0
 DELETE FROM `zp_mangosd`.`creature` WHERE `id` = 4388;
 REPLACE INTO `creature` VALUES (3033984, 5434, 1, 0, 0, -3954.87, -4672.61, -10.331, 0.799656, 360, 50, 0, 7139, 0, 0, 1);
 
+-- Spectral Projection, add AI, hp, mana armor
+UPDATE `zp_mangosd`.`creature_template` SET `maxhealth`=1371, `minmana`=899, `maxmana`=931, `armor`=1831, `ScriptName`='mob_spectral_projection' WHERE  `entry`=11263;
+
+
