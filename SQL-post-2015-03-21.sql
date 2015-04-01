@@ -821,3 +821,7 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (45501, 58, -8680.2, 877.34
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (45501, 59, -8653.46, 899.879, 98.186, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0.700157, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (45501, 60, -8649.72, 903.036, 98.5892, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.700157, 0, 0);
 
+-- remove all Young Murk Thresher(they were added in tbc for 1 quest) and add a coral shark to the water under theramore bridge.
+DELETE FROM `zp_mangosd`.`creature` WHERE `id` = 4388;
+REPLACE INTO `creature` VALUES (3033984, 5434, 1, 0, 0, -3954.87, -4672.61, -10.331, 0.799656, 360, 50, 0, 7139, 0, 0, 1);
+
