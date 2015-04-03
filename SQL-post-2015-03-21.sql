@@ -922,3 +922,7 @@ DELETE FROM `zp_mangosd`.`creature_addon` WHERE  `guid`=3004081;
 
 -- move and change to invoker
 REPLACE INTO `zp_mangosd`.`creature` VALUES (3004082, 9262, 229, 0, 962, -106.966, -493.499, -18.4564, 1.42699, 10800, 0, 0, 8636, 2241, 0, 0);
+
+-- farmer ray and Salma Saldean removed lvl 40 loot
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=232 AND `item`=24041;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=235 AND `item`=24041;
