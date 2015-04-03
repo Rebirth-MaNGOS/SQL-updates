@@ -926,3 +926,7 @@ REPLACE INTO `zp_mangosd`.`creature` VALUES (3004082, 9262, 229, 0, 962, -106.96
 -- farmer ray and Salma Saldean removed lvl 40 loot
 DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=232 AND `item`=24041;
 DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=235 AND `item`=24041;
+
+-- Ally + horde Reason for the Season quest, add to winterveil only
+REPLACE INTO `zp_mangosd`.`game_event_quest` VALUES (6964, 2);
+REPLACE INTO `zp_mangosd`.`game_event_quest` VALUES (7062, 2);
