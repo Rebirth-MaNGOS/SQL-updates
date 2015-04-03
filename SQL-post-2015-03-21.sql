@@ -656,7 +656,7 @@ REPLACE INTO `zp_mangosd`.`command` (`name`, `security`, `help`) VALUES ('gm fac
 UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='npc_ello_ebonlocke' WHERE  `entry`=263;
 
 -- remove old SQL, no need to spawn him in DB anymore
-DELETE FROM `zp_mangosd`.`quest_end_scripts` WHERE  `id`=252 LIMIT 1;
+DELETE FROM `zp_mangosd`.`quest_end_scripts` WHERE  `id`=252 LIMIT 10;
 -- move the text from aiscripts to scriptdev
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720058, 'Undead are crawling all over the land. Where is the Stormwind Army?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Lord Ebonlocke - Random Say');
 
@@ -842,3 +842,51 @@ UPDATE `zp_mangosd`.`creature` SET `id`=8504 WHERE  `guid`=6830;
 UPDATE `zp_mangosd`.`creature` SET `id`=8504 WHERE  `guid`=6832;
 REPLACE INTO `zp_mangosd`.`creature` VALUES (3033986, 8504, 0, 7865, 0, -7023.98, -1282.34, 258.527, 4.86585, 500, 0, 0, 4860, 0, 0, 0);
 
+/***************** LBRS, minor updates with trash position / pooling *************************/
+-- add some
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3033972, 9098, 229, 0, 839, 12.0946, -329.609, 48.7673, 3.17185, 10800, 0, 0, 7657, 2041, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3033973, 9097, 229, 0, 839, 12.0946, -329.609, 48.7673, 3.17185, 10800, 0, 0, 7657, 2041, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3033974, 9045, 229, 0, 839, 12.0946, -329.609, 48.7673, 3.17185, 10800, 0, 0, 7657, 2041, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3033975, 9259, 229, 0, 1092, -38.5424, -407.458, -18.935, 3.05009, 10800, 0, 0, 10440, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3033976, 9261, 229, 0, 962, -42.2847, -407.011, -18.9349, 6.25844, 10800, 0, 0, 8636, 2241, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3033977, 9259, 229, 0, 1092, -52.9863, -427.01, -18.935, 3.31318, 10800, 0, 0, 10812, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3033978, 9262, 229, 0, 866, -56.271, -430.239, -18.935, 2.0801, 10800, 0, 0, 8418, 3362, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3033979, 9261, 229, 0, 962, -61.3528, -429.771, -18.935, 0.336521, 10800, 0, 0, 8337, 2163, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3033980, 9259, 229, 0, 1092, -60.7762, -425.832, -18.935, 5.39056, 10800, 0, 0, 10440, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3033981, 9098, 229, 0, 918, 8.17083, -333.219, 48.7171, 1.07337, 10800, 0, 0, 9824, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3033982, 9045, 229, 0, 111, 7.77787, -326.513, 48.783, 5.41806, 10800, 2, 0, 7667, 2041, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3033983, 9097, 229, 0, 1092, 8.17083, -333.219, 48.7171, 1.07337, 10800, 0, 0, 9824, 0, 0, 0);
+-- change some mobs to different ones
+UPDATE `zp_mangosd`.`creature` SET `id`=9097 WHERE  `guid`=229004;
+UPDATE `zp_mangosd`.`creature` SET `id`=9257 WHERE  `guid`=471971;
+
+-- change the pool a bit
+-- remove old if sql is run again
+DELETE FROM `zp_mangosd`.`pool_creature` WHERE  `pool_entry`=2038 LIMIT 3;
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (471971, 2038, 0, 'Scarshield Warlock');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (3033983, 2038, 0, 'Scarshield Spellbinder');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (3033981, 2038, 0, 'Scarshield Legionnaire');
+
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (229004, 2039, 0, 'Scarshield Warlock');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (3033982, 2039, 0, 'Scarshield Legionnaire');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (471975, 2039, 0, 'Scarshield Spellbinder');
+
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (3033974, 2077, 0, 'Scarshield Warlock');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (3033973, 2077, 0, 'Scarshield Legionnaire');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (3033972, 2077, 0, 'Scarshield Spellbinder');
+
+-- add pools and update name
+REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2077, 1, 'Blackrock Spire - Room A - VI Spellbinder Warlock Legionnaire');
+REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2039, 1, 'Blackrock Spire - Room A - V Spellbinder Warlock Legionnaire');
+REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2038, 1, 'Blackrock Spire - Room A - IV Spellbinder Warlock Legionnaire');
+
+-- move some/change
+REPLACE INTO `zp_mangosd`.`creature` VALUES (44151, 9262, 229, 9648, 0, -26.7195, -412.484, -18.935, 0.61536, 10800, 0, 0, 600000, 3362, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (44078, 9262, 229, 9644, 0, -42.1517, -422.76, -18.935, 5.58692, 10800, 0, 0, 600000, 2163, 0, 0);
+
+-- delete 
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=44149;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=43768;
+
+REPLACE INTO `zp_mangosd`.`creature_addon` VALUES (44009, 0, 8, 1, 0, 0, 0, '13236');
+UPDATE `zp_mangosd`.`creature` SET `orientation`=5.261 WHERE  `guid`=44009;
