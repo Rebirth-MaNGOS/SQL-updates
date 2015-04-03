@@ -890,3 +890,35 @@ DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=43768;
 
 REPLACE INTO `zp_mangosd`.`creature_addon` VALUES (44009, 0, 8, 1, 0, 0, 0, '13236');
 UPDATE `zp_mangosd`.`creature` SET `orientation`=5.261 WHERE  `guid`=44009;
+
+/************* LBRS part II *******************/
+-- sitting mob
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3033988, 9259, 229, 0, 1092, -88.3194, -463.155, -18.935, 1.97677, 10800, 0, 0, 10440, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_addon` VALUES (3033988, 0, 1, 1, 16, 12, 0, NULL);
+
+-- add missing mobs
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3033989, 9262, 229, 0, 866, -79.3226, -424.602, -18.9349, 3.81066, 10800, 3, 0, 8418, 3362, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3033990, 9259, 229, 0, 1092, -80.4816, -429.997, -18.9349, 6.15508, 10800, 3, 0, 10812, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3033991, 9259, 229, 0, 1092, -99.3726, -459.313, -18.9349, 0.751534, 10800, 3, 0, 10440, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3033992, 9261, 229, 0, 962, -106.954, -457.814, -18.935, 0.69655, 10800, 3, 0, 8636, 2241, 0, 1);
+
+-- move and make a mob sit
+REPLACE INTO `zp_mangosd`.`creature` VALUES (44314, 9261, 229, 9644, 0, -117.361, -480.934, -18.4564, 4.99269, 10800, 0, 0, 600000, 2163, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_addon` VALUES (44314, 0, 1, 1, 16, 12, 0, NULL);
+
+-- move a bit
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3004080, 9262, 229, 0, 866, -113.471, -484.479, -18.4564, 3.26482, 10800, 0, 0, 8418, 3362, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3004081, 9259, 229, 0, 1092, -117.752, -486.871, -18.4564, 1.11283, 10800, 0, 0, 10812, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (44304, 9259, 229, 9664, 0, -80.3603, -449.516, -18.935, 4.12876, 10800, 0, 0, 600000, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (44305, 9262, 229, 9648, 0, -77.4447, -452.565, -18.935, 3.04884, 10800, 0, 0, 600000, 3362, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (44306, 9259, 229, 9664, 0, -83.5752, -454.275, -18.935, 0.826152, 10800, 0, 0, 600000, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (44307, 9261, 229, 9644, 0, -84.9689, -450.334, -18.935, 6.28074, 10800, 0, 0, 600000, 2163, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (44308, 9259, 229, 9664, 0, -93.9332, -437.188, -18.935, 3.13916, 10800, 0, 0, 600000, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (44309, 9261, 229, 9644, 0, -96.9196, -434.385, -18.935, 4.67461, 10800, 0, 0, 600000, 2163, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (44310, 9262, 229, 9648, 0, -99.8426, -437.173, -18.935, 0.101233, 10800, 0, 0, 600000, 3362, 0, 0);
+
+-- shouldn't sit
+DELETE FROM `zp_mangosd`.`creature_addon` WHERE  `guid`=3004081;
+
+-- move and change to invoker
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3004082, 9262, 229, 0, 962, -106.966, -493.499, -18.4564, 1.42699, 10800, 0, 0, 8636, 2241, 0, 0);
