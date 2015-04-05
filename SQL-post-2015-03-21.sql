@@ -930,3 +930,6 @@ DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=235 AND `item`=
 -- Ally + horde Reason for the Season quest, add to winterveil only
 REPLACE INTO `zp_mangosd`.`game_event_quest` VALUES (6964, 2);
 REPLACE INTO `zp_mangosd`.`game_event_quest` VALUES (7062, 2);
+
+-- remove "skinnable" from Hulking Mountain Lion while it's alive
+UPDATE `zp_mangosd`.`creature_template` SET `unit_flags`=0 WHERE  `entry`=2407;
