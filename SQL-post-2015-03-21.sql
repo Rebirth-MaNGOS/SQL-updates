@@ -936,3 +936,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `unit_flags`=0 WHERE  `entry`=2407;
 
 -- Ragglesnout should now be considered rare elite
 UPDATE `zp_mangosd`.`creature_template` SET `rank`=2 WHERE  `entry`=7354;
+
+-- Creeping Doom adds at Solenor the slayer, move all changes to DB instead of script
+UPDATE `zp_mangosd`.`creature_template` SET `subname`='Solenor the Slayer\'s Guardian', `minhealth`=190, `maxhealth`=200, `faction_A`=90, `faction_H`=90, `speed_walk`=0.35, `speed_run`=0.35, `mindmg`=250, `maxdmg`=290 WHERE  `entry`=14761;
