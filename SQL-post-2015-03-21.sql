@@ -933,3 +933,6 @@ REPLACE INTO `zp_mangosd`.`game_event_quest` VALUES (7062, 2);
 
 -- remove "skinnable" from Hulking Mountain Lion while it's alive
 UPDATE `zp_mangosd`.`creature_template` SET `unit_flags`=0 WHERE  `entry`=2407;
+
+-- Ragglesnout should now be considered rare elite
+UPDATE `zp_mangosd`.`creature_template` SET `rank`=2 WHERE  `entry`=7354;
