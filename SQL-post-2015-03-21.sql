@@ -966,3 +966,34 @@ UPDATE `zp_mangosd`.`gameobject_template` SET `faction`=0 WHERE  `entry`=20920;
 
 -- 1 charges to the crate and don't remove when it's empty
 UPDATE `zp_mangosd`.`item_template` SET `spellcharges_1`=1 WHERE  `entry`=5880;
+
+/************** The key to freedom quest end RP *******************/
+-- give Locheed wp movement and add script
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `MovementType`=2, `ScriptName`='npc_locheed' WHERE  `entry`=9876;
+
+-- add script to the gobj where you turn in quest
+UPDATE `zp_mangosd`.`gameobject_template` SET `ScriptName`='go_wooden_outhouse' WHERE  `entry`=173265;
+
+-- waypoints
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (9876, 1, -7026.18, -1784.22, 265.769, 10000, 1, 0, 0, 0, 0, 0, 0, 0, 0, 3.56994, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (9876, 2, -7039.51, -1787.65, 265.832, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.35396, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (9876, 3, -7061.61, -1789.12, 265.832, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.21651, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (9876, 4, -7074.18, -1796.82, 267.838, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.71131, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (9876, 5, -7089.55, -1794.87, 269.936, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.02409, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (9876, 6, -7107.18, -1794.8, 271.07, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 3.20473, 0, 0);
+
+-- add text
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720076, 'Ach! Thank you so much, $N! I\'m free! Finally!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 4, 'Locheed - say 1');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720077, 'You take care of yourself! I\'m getting out of here.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Locheed - say 2');
+
+-- remove quest end script
+UPDATE `zp_mangosd`.`quest_template` SET `CompleteScript`=0 WHERE  `entry`=4451;
+
+-- text remove old text
+DELETE FROM `zp_mangosd`.`creature_ai_texts` WHERE  `entry`=-442105;
+
+-- remove old AI
+DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=987601;
+
+-- remove old if sql is run again
+DELETE FROM `zp_mangosd`.`quest_end_scripts` WHERE  `id`=4451 LIMIT 1;
