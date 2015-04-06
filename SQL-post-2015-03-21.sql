@@ -1003,3 +1003,9 @@ UPDATE `zp_mangosd`.`quest_template` SET `OfferRewardText`='Good day, $N. The Li
 
 -- add missing loot for Overlord Wyrmthalak, chillpike
 REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (9568, 13148, 0, 1, 1, 1, 0, 0, 0);
+
+/************** Headhunting quest end RP **************/
+-- add text
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720078, 'I am done inspecting the skulls, $N, and I am relieved. Yenniku is not among them...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'Nimboya - say 1');
+-- add script
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_nimboya' WHERE  `entry`=2497;
