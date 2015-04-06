@@ -939,3 +939,30 @@ UPDATE `zp_mangosd`.`creature_template` SET `rank`=2 WHERE  `entry`=7354;
 
 -- Creeping Doom adds at Solenor the slayer, move all changes to DB instead of script
 UPDATE `zp_mangosd`.`creature_template` SET `subname`='Solenor the Slayer\'s Guardian', `minhealth`=190, `maxhealth`=200, `faction_A`=90, `faction_H`=90, `speed_walk`=0.35, `speed_run`=0.35, `mindmg`=250, `maxdmg`=290 WHERE  `entry`=14761;
+
+/************ Blueleaf tubers, RFK quest ********************/
+-- add script and friendly all, otherwise it runs in and dies
+UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`=1.18, `faction_A`=35, `faction_H`=35, `ScriptName`='npc_snufflenose_gopher' WHERE  `entry`=4781;
+
+-- add tubers
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (1712736, 20920, 47, 2066.18, 1597.19, 63.0311, 4.71792, 0, 0, 0.705148, -0.70906, -10, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (1712735, 20920, 47, 2067.34, 1660.22, 61.2332, 4.17207, 0, 0, 0.870175, -0.492744, -10, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (1712734, 20920, 47, 2088.67, 1674.38, 61.2318, 2.8958, 0, 0, 0.992458, 0.122587, -10, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (1712733, 20920, 47, 2127.36, 1732.26, 51.9471, 3.0882, 0, 0, 0.999644, 0.0266907, -10, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (1712732, 20920, 47, 2162.78, 1731.09, 53.0717, 2.39313, 0, 0, 0.930788, 0.365558, -10, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (1712731, 20920, 47, 2156.48, 1677.4, 59.1101, 0.323602, 0, 0, 0.161096, 0.986939, -10, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (1712730, 20920, 47, 2116.88, 1667.56, 59.3707, 3.20601, 0, 0, 0.999481, -0.0322053, -10, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (1712729, 20920, 47, 2135.12, 1677.49, 58.2743, 3.82255, 0, 0, 0.942595, -0.333939, -10, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (1712728, 20920, 47, 2170.73, 1705.24, 54.8642, 6.23372, 0, 0, 0.0247307, -0.999694, -10, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (1712727, 20920, 47, 2167.96, 1691.22, 57.2232, 4.12886, 0, 0, 0.880617, -0.473829, -10, 100, 1);
+
+-- add larger area to summon the snufflenose
+UPDATE `zp_mangosd`.`gameobject_template` SET `size`=3 WHERE  `entry`=300011;
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (1712737, 300011, 47, 2078.78, 1670.43, 61.2145, 0.217597, 0, 0, 0.108584, 0.994087, 180, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (1712738, 300011, 47, 2170.2, 1698.85, 55.807, 1.1051, 0, 0, 0.524858, 0.85119, 180, 100, 1);
+
+-- change faction so tubers are lootable
+UPDATE `zp_mangosd`.`gameobject_template` SET `faction`=0 WHERE  `entry`=20920; 
+
+-- 1 charges to the crate and don't remove when it's empty
+UPDATE `zp_mangosd`.`item_template` SET `spellcharges_1`=1 WHERE  `entry`=5880;
