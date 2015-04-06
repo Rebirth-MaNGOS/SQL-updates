@@ -997,3 +997,6 @@ DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=987601;
 
 -- remove old if sql is run again
 DELETE FROM `zp_mangosd`.`quest_end_scripts` WHERE  `id`=4451 LIMIT 1;
+
+-- add missing text when turning in "The Test of Righteousness"
+UPDATE `zp_mangosd`.`quest_template` SET `OfferRewardText`='Good day, $N. The Light is with you, I trust? What\'s that? You were sent by Duthorian!? My wife, how is she? I knew there was going to be trouble if I left. Please tell me she\'s... oh, thank goodness. I\'m so glad that she\'s safe. The Defias were a threat long before these attacks, but now the King\'s advisors cannot deny it. What else did Duthorian have to say? You\'re the one that was sent to protect my wife? Then I thank you again, $N. I couldn\'t think of a better test of valor than that.' WHERE  `entry`=1653;
