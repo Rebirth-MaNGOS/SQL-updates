@@ -1081,3 +1081,8 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (53788, 48, -15.485, -18.70
 -- add script and text
 UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_elder_torntusk' WHERE  `entry`=14757;
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720086, 'Finally, I am free! I come home soon, my dear!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 4, 'Elder Torntusk - say');
+
+/*************** Return to Witch Doctor Uzer'i quest end rp ****************/
+-- add script and text
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='npc_witch_doctor_uzeri' WHERE  `entry`=8115;
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720087, 'The muisek vessels are now ready, $N.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'Witch Doctor Uzer\'i - say');
