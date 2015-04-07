@@ -1077,3 +1077,7 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (53788, 46, 14.3408, -29.19
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (53788, 47, -4.10616, -29.5579, -4.29689, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.15364, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (53788, 48, -15.485, -18.7088, -4.29689, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.38002, 0, 0);
 
+/************* Recover the Key! quest end RP ***************/
+-- add script and text
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_elder_torntusk' WHERE  `entry`=14757;
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720086, 'Finally, I am free! I come home soon, my dear!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 4, 'Elder Torntusk - say');
