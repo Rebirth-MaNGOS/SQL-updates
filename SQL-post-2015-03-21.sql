@@ -1086,3 +1086,11 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720086, 'Finally, I am
 -- add script and text
 UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='npc_witch_doctor_uzeri' WHERE  `entry`=8115;
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720087, 'The muisek vessels are now ready, $N.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'Witch Doctor Uzer\'i - say');
+
+/********** Pyrewood village, add 10min respawn for all worgen ******************/
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=600 WHERE  `id`=1892;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=600 WHERE  `id`=1893;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=600 WHERE  `id`=1896;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=600 WHERE  `id`=3529;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=600 WHERE  `id`=3531;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=600 WHERE  `id`=3533;
