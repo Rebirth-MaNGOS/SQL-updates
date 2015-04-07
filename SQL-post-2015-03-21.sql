@@ -1094,3 +1094,6 @@ UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=600 WHERE  `id`=1896;
 UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=600 WHERE  `id`=3529;
 UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=600 WHERE  `id`=3531;
 UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=600 WHERE  `id`=3533;
+
+-- add missing spell for Shleipnarr
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (828002, 8280, 0, 0, 100, 1, 9000, 14000, 15000, 21000, 11, 7399, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Shleipnarr - Cast Terrify');
