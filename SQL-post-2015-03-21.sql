@@ -1097,3 +1097,21 @@ UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=600 WHERE  `id`=3533;
 
 -- add missing spell for Shleipnarr
 REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (828002, 8280, 0, 0, 100, 1, 9000, 14000, 15000, 21000, 11, 7399, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Shleipnarr - Cast Terrify');
+
+/****************** Zamek's Distraction **************/
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_zamek' WHERE  `entry`=4709;
+
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (4709, 1, -6234.56, -3918.74, -59.397, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (4709, 2, -6242.88, -3897.95, -60.9095, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (4709, 3, -6260.23, -3872.27, -58.7499, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (4709, 4, -6271.08, -3854.34, -58.7499, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (4709, 5, -6266.86, -3847.29, -58.7499, 3000, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (4709, 6, -6271.4, -3857.22, -58.7499, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (4709, 7, -6251.64, -3906.35, -61.2247, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (4709, 8, -6228.78, -3945.11, -58.7496, 0, NULL);
+
+-- don't use DB scripts
+UPDATE `zp_mangosd`.`quest_template` SET `CompleteScript`=0 WHERE  `entry`=1191;
+
+-- remove old if sql is run again
+DELETE FROM `zp_mangosd`.`quest_end_scripts` WHERE  `id`=1191 LIMIT 6;
