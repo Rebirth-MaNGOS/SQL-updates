@@ -1115,3 +1115,10 @@ UPDATE `zp_mangosd`.`quest_template` SET `CompleteScript`=0 WHERE  `entry`=1191;
 
 -- remove old if sql is run again
 DELETE FROM `zp_mangosd`.`quest_end_scripts` WHERE  `id`=1191 LIMIT 6;
+
+-- crimson elite weapon
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=25004 WHERE  `entry`=12128;
+-- bwl drakonids missing weapon
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=1431 WHERE  `entry`=14265;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=1431 WHERE  `entry`=14261;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=1431 WHERE  `entry`=14302;
