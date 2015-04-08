@@ -1122,3 +1122,26 @@ UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=25004 WHERE  `entry`=
 UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=1431 WHERE  `entry`=14265;
 UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=1431 WHERE  `entry`=14261;
 UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=1431 WHERE  `entry`=14302;
+
+/*********** Scepter of Celebras, maraudon event ***************/
+-- change to right model, set speed and add mana
+UPDATE `zp_mangosd`.`creature` SET `modelid`=13715 WHERE  `guid`=466568;
+UPDATE `zp_mangosd`.`creature_template` SET `minmana`=2708, `maxmana`=2708, `speed_walk`=0.95 WHERE  `entry`=13716;
+ 
+-- make the book clickable
+UPDATE `zp_mangosd`.`gameobject_template` SET `flags`=0, `data3`=0 WHERE  `entry`=178965;
+
+-- delete old waypoints
+DELETE FROM `zp_scriptdevzerod`.`script_waypoint` WHERE  `entry`=13716;
+
+-- add waypoints
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (13716, 0, 652.18, 84.55, -86.83, 8000, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (13716, 1, 657.41, 81.4, -86.83, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (13716, 2, 657.23, 73.6, -86.82, 21000, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (13716, 3, 653.37, 73.88, -85.85, 5000, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (13716, 4, 657.23, 73.6, -86.82, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (13716, 5, 656.09, 66.63, -86.82, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (13716, 6, 651.28, 65.96, -86.75, 5000, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (13716, 7, 656.09, 66.63, -86.82, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (13716, 8, 657.41, 81.4, -86.83, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (13716, 9, 652.18, 84.55, -86.83, 3600000, NULL);
