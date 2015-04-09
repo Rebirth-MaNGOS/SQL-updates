@@ -1145,3 +1145,13 @@ REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (13716, 6, 651.28, 65.
 REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (13716, 7, 656.09, 66.63, -86.82, 0, NULL);
 REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (13716, 8, 657.41, 81.4, -86.83, 0, NULL);
 REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (13716, 9, 652.18, 84.55, -86.83, 3600000, NULL);
+
+/******* Strat UD, ash'ari crystals should now be flying over the ziggurats ****************/
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `id`=10415;
+
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (53955, 1, 3847.58, -3748.46, 195.809, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.36136, 9832, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (53968, 1, 3838.85, -3500.02, 192.029, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.21853, 9832, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (53963, 1, 4057.59, -3665.95, 183.078, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.44346, 9832, 0);
+
+-- get the crystal flying
+UPDATE `zp_mangosd`.`creature_template` SET `InhabitType`=4 WHERE  `entry`=10415;
