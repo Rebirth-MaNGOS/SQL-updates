@@ -1155,3 +1155,6 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (53963, 1, 4057.59, -3665.9
 
 -- get the crystal flying
 UPDATE `zp_mangosd`.`creature_template` SET `InhabitType`=4 WHERE  `entry`=10415;
+
+-- add armor for bronze drakonids, sql from muggle
+UPDATE zp_mangosd.`creature_template` SET `armor`='3791' WHERE (`entry`='14263') limit 1;
