@@ -1161,3 +1161,6 @@ UPDATE zp_mangosd.`creature_template` SET `armor`='3791' WHERE (`entry`='14263')
 
 -- Preserved Holly should now expire after 14 days irl
 UPDATE `zp_mangosd`.`item_template` SET `Duration`=1209600, `ExtraFlags`=2 WHERE  `entry`=21213;
+
+-- Andre Firebeard should no longer have a chance of dropping a Wastewander Water Pouch.
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=7883 AND `item`=8483;
