@@ -1164,3 +1164,6 @@ UPDATE `zp_mangosd`.`item_template` SET `Duration`=1209600, `ExtraFlags`=2 WHERE
 
 -- Andre Firebeard should no longer have a chance of dropping a Wastewander Water Pouch.
 DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=7883 AND `item`=8483;
+
+-- Remove Dark Iron dwarf text from Horde scout
+DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=1168002;
