@@ -1167,3 +1167,11 @@ DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=7883 AND `item`
 
 -- Remove Dark Iron dwarf text from Horde scout
 DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=1168002;
+
+-- Attack on Hammerfall event, change id to something without gobj spawning
+UPDATE `zp_mangosd`.`game_event` SET `entry`=53 WHERE  `entry`=26;
+UPDATE `zp_mangosd`.`game_event_creature` SET `event`=53 WHERE  `event`=26;
+
+-- Fix some orcish texts 
+UPDATE `zp_mangosd`.`creature_ai_texts` SET `content_default`='Feel the power of the Blackrock Orcs!', `language`=1 WHERE  `entry`=-377;
+UPDATE `zp_mangosd`.`creature_ai_texts` SET `content_default`='You are no match for the Blackrock Orcs!', `language`=1 WHERE  `entry`=-376;
