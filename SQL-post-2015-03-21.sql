@@ -1172,6 +1172,7 @@ DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=1168002;
 UPDATE `zp_mangosd`.`game_event` SET `entry`=53 WHERE  `entry`=26;
 UPDATE `zp_mangosd`.`game_event_creature` SET `event`=53 WHERE  `event`=26;
 
--- Fix some orcish texts 
+-- Fix some orcish texts and a dwarf one
 UPDATE `zp_mangosd`.`creature_ai_texts` SET `content_default`='Feel the power of the Blackrock Orcs!', `language`=1 WHERE  `entry`=-377;
 UPDATE `zp_mangosd`.`creature_ai_texts` SET `content_default`='You are no match for the Blackrock Orcs!', `language`=1 WHERE  `entry`=-376;
+UPDATE `zp_mangosd`.`creature_ai_texts` SET `content_default`='Get him!', `language`=6 WHERE  `entry`=-374;
