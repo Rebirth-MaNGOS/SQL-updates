@@ -1176,3 +1176,22 @@ UPDATE `zp_mangosd`.`game_event_creature` SET `event`=53 WHERE  `event`=26;
 UPDATE `zp_mangosd`.`creature_ai_texts` SET `content_default`='Feel the power of the Blackrock Orcs!', `language`=1 WHERE  `entry`=-377;
 UPDATE `zp_mangosd`.`creature_ai_texts` SET `content_default`='You are no match for the Blackrock Orcs!', `language`=1 WHERE  `entry`=-376;
 UPDATE `zp_mangosd`.`creature_ai_texts` SET `content_default`='Get him!', `language`=6 WHERE  `entry`=-374;
+
+/**************** Lbrs *****************/
+-- Change the 5th mosh'aru tablet to 6th(and vice versa) and move one of them
+UPDATE `zp_mangosd`.`gameobject` SET `id`=175949 WHERE  `guid`=632546;
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (632545, 175950, 229, -11.1471, -465.995, -17.0121, 4.69, 0, 0, 0, 0, 20, 100, 1);
+
+-- Add new gobj Bijou's Belongings
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (1712739, 175334, 229, 36.8277, -445.441, -18.696, 2.78692, 0, 0, 0.984317, 0.176407, 180, 255, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (1712740, 175334, 229, -8.78935, -462.742, -18.6443, 3.19924, 0, 0, 0.999585, -0.0288222, 180, 255, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (1712741, 175334, 229, -162.082, -494.891, -18.4564, 6.15625, 0, 0, 0.0634229, -0.997987, 180, 255, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (1712742, 175334, 229, -78.2078, -402.853, -18.935, 5.50045, 0, 0, 0.381452, -0.924389, 180, 255, 1);
+
+-- add pool and link each to the pool
+REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2105, 1, 'Bijou\'s Belongings - LBRS');
+REPLACE INTO `zp_mangosd`.`pool_gameobject` VALUES (82614, 2105, 0, 'Bijou\'s Belongings');
+REPLACE INTO `zp_mangosd`.`pool_gameobject` VALUES (1712739, 2105, 0, 'Bijou\'s Belongings');
+REPLACE INTO `zp_mangosd`.`pool_gameobject` VALUES (1712740, 2105, 0, 'Bijou\'s Belongings');
+REPLACE INTO `zp_mangosd`.`pool_gameobject` VALUES (1712741, 2105, 0, 'Bijou\'s Belongings');
+REPLACE INTO `zp_mangosd`.`pool_gameobject` VALUES (1712742, 2105, 0, 'Bijou\'s Belongings');
