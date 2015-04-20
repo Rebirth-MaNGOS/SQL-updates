@@ -1195,3 +1195,6 @@ REPLACE INTO `zp_mangosd`.`pool_gameobject` VALUES (1712739, 2105, 0, 'Bijou\'s 
 REPLACE INTO `zp_mangosd`.`pool_gameobject` VALUES (1712740, 2105, 0, 'Bijou\'s Belongings');
 REPLACE INTO `zp_mangosd`.`pool_gameobject` VALUES (1712741, 2105, 0, 'Bijou\'s Belongings');
 REPLACE INTO `zp_mangosd`.`pool_gameobject` VALUES (1712742, 2105, 0, 'Bijou\'s Belongings');
+
+-- Stonevault cave hunter should no longer throw cubes
+UPDATE `zp_mangosd`.`creature_equip_template_raw` SET `equipinfo3`='436146178' WHERE (`entry`='741') limit 1;
