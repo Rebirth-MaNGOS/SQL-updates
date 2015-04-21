@@ -1201,3 +1201,9 @@ UPDATE `zp_mangosd`.`creature_equip_template_raw` SET `equipinfo3`='436146178' W
 
 -- Fix for item name
 UPDATE `zp_mangosd`.`item_template` SET `name`='\"Mage-Eye\" Blunderbuss' WHERE (`entry`='3041') limit 1;
+
+-- Corporal Keeshan armor and update faction to hostile to mobs
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=931, `faction_A`=10, `faction_H`=10 WHERE  `entry`=349;
+
+-- Nef shouldn't have mana
+UPDATE `zp_mangosd`.`creature_template` SET `minmana`=0, `maxmana`=0 WHERE  `entry`=11583;
