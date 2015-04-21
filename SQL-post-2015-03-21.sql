@@ -1207,3 +1207,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `armor`=931, `faction_A`=10, `factio
 
 -- Nef shouldn't have mana
 UPDATE `zp_mangosd`.`creature_template` SET `minmana`=0, `maxmana`=0 WHERE  `entry`=11583;
+
+-- Update hitbox for Gyth
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.8, `combat_reach`=1.9 WHERE  `modelid`=9723;
