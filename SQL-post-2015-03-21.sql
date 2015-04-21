@@ -1210,3 +1210,19 @@ UPDATE `zp_mangosd`.`creature_template` SET `minmana`=0, `maxmana`=0 WHERE  `ent
 
 -- Update hitbox for Gyth
 UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.8, `combat_reach`=1.9 WHERE  `modelid`=9723;
+
+/*************** The Calling quest *******************/
+-- should now be a raid quest
+UPDATE `zp_mangosd`.`quest_template` SET `Type`=62 WHERE  `entry`=8315;
+
+-- add armor to mobs
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=5932 WHERE  `entry`=15288;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=5932 WHERE  `entry`=15286;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=5932 WHERE  `entry`=15290;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=5341 WHERE  `entry`=14862;
+
+-- add the dummy
+REPLACE INTO `zp_mangosd`.`creature_template` VALUES (800479, 0, 0, 6296, 0, 'The Calling Event Dummy', 'lol it\'s another frog', 0, 1, 1, 649999, 649999, 0, 0, 0, 35, 35, 0, 1, 1.14286, 2, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 2, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5242886, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 4, 0, 0, 1, 0, 0, 0, 0, 128, 'npc_the_calling_event');
+-- spawn dummy when using the quest item
+UPDATE `zp_mangosd`.`event_scripts` SET `datalong`=800479, `datalong2`=1800000 WHERE  `id`=9208 LIMIT 1;
+
