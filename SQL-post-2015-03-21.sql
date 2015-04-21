@@ -1198,3 +1198,6 @@ REPLACE INTO `zp_mangosd`.`pool_gameobject` VALUES (1712742, 2105, 0, 'Bijou\'s 
 
 -- Stonevault cave hunter should no longer throw cubes
 UPDATE `zp_mangosd`.`creature_equip_template_raw` SET `equipinfo3`='436146178' WHERE (`entry`='741') limit 1;
+
+-- Fix for item name
+UPDATE `zp_mangosd`.`item_template` SET `name`='\"Mage-Eye\" Blunderbuss' WHERE (`entry`='3041') limit 1;
