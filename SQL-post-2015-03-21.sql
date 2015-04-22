@@ -1230,8 +1230,8 @@ UPDATE `zp_mangosd`.`event_scripts` SET `datalong`=800479, `datalong2`=1800000 W
 DELETE FROM `zp_mangosd`.`reference_loot_template` WHERE  `entry`=24078 AND `item`=1930;
 REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (598, 1930, 1.2, 0, 1, 1, 0, 0, 0);
 
--- Remove lowlvl loot from Blackrock Gladiator's loot table
-DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=4464 AND `item`=24048;
+-- Remove lowlvl loot from Blackhand Veteran's loot table
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=9819 AND `item`=24048;
 
 -- fix item typo
 UPDATE `zp_mangosd`.`item_template` SET `name`='BKP "Sparrow" Smallbore' WHERE  `entry`=3042;
