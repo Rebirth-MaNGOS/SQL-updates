@@ -1235,3 +1235,6 @@ DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=9819 AND `item`
 
 -- fix item typo
 UPDATE `zp_mangosd`.`item_template` SET `name`='BKP "Sparrow" Smallbore' WHERE  `entry`=3042;
+
+-- fix npcs gender
+UPDATE `zp_mangosd`.`creature_model_info` SET `modelid_other_gender`='0' WHERE (`modelid`='4887') limit 1;
