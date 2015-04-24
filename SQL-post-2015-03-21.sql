@@ -1267,3 +1267,6 @@ UPDATE `zp_mangosd`.`item_template` SET `name`='BKP "Sparrow" Smallbore' WHERE  
 
 -- fix npcs gender
 UPDATE `zp_mangosd`.`creature_model_info` SET `modelid_other_gender`='0' WHERE (`modelid`='4887') limit 1;
+
+-- add arcane channeling when clicking on the portal
+UPDATE `zp_mangosd`.`gameobject_template` SET `data2`=23017 WHERE  `entry`=36727;
