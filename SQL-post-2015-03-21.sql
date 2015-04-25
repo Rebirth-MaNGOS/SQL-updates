@@ -1565,3 +1565,92 @@ UPDATE `zp_mangosd`.`creature_template` SET `minmana`=0, `maxmana`=0 WHERE  `ent
 UPDATE `zp_mangosd`.`creature_template` SET `minmana`=0, `maxmana`=0 WHERE  `entry`=14889;
 UPDATE `zp_mangosd`.`creature_template` SET `minmana`=0, `maxmana`=0 WHERE  `entry`=14888;
 UPDATE `zp_mangosd`.`creature_template` SET `minmana`=0, `maxmana`=0 WHERE  `entry`=14887;
+
+/*Nightmare Dragons HP/Damage/Attack Speed*/ 
+/******* SQL from Judgement **********/
+
+/*Lethon*/
+UPDATE `creature_template` SET `minhealth`='832750', `maxhealth`='832750' WHERE (`entry`='14888');
+UPDATE `creature_template` SET `mindmg`='2196', `maxdmg`='2912' WHERE (`entry`='14888');
+UPDATE `creature_template` SET `baseattacktime`='2000' WHERE (`entry`='14888');
+
+/*Emeriss*/
+UPDATE `creature_template` SET `minhealth`='832750', `maxhealth`='832750' WHERE (`entry`='14889');
+UPDATE `creature_template` SET `mindmg`='2196', `maxdmg`='2912' WHERE (`entry`='14889');
+UPDATE `creature_template` SET `baseattacktime`='2000' WHERE (`entry`='14889');
+
+/*Ysondre*/
+UPDATE `creature_template` SET `minhealth`='832750', `maxhealth`='832750' WHERE (`entry`='14887');
+UPDATE `creature_template` SET `mindmg`='2196', `maxdmg`='2912' WHERE (`entry`='14887');
+UPDATE `creature_template` SET `baseattacktime`='2000' WHERE (`entry`='14887');
+
+/*Taerar*/
+UPDATE `creature_template` SET `minhealth`='832750', `maxhealth`='832750' WHERE (`entry`='14890');
+UPDATE `creature_template` SET `mindmg`='2196', `maxdmg`='2912' WHERE (`entry`='14890');
+UPDATE `creature_template` SET `baseattacktime`='2000' WHERE (`entry`='14890');
+
+/*Nightmare Dragons trash and minibosses*/
+
+/*Emeraldon Boughguard*/
+UPDATE `creature_template` SET `minhealth`='80925', `maxhealth`='80925' WHERE (`entry`='12474');
+UPDATE `creature_template` SET `mindmg`='1618', `maxdmg`='2147' WHERE (`entry`='12474');
+UPDATE `creature_template` SET `baseattacktime`='2000' WHERE (`entry`='12474');
+
+/*Emeraldon Oracle*/
+UPDATE `creature_template` SET `minhealth`='62875', `maxhealth`='62875' WHERE (`entry`='12476');
+UPDATE `creature_template` SET `mindmg`='1478', `maxdmg`='1956' WHERE (`entry`='12476');
+UPDATE `creature_template` SET `baseattacktime`='2000' WHERE (`entry`='12476');
+
+/*Emeraldon Tree Warder*/
+UPDATE `creature_template` SET `minhealth`='76300', `maxhealth`='76300' WHERE (`entry`='12475');
+UPDATE `creature_template` SET `mindmg`='1559', `maxdmg`='2068' WHERE (`entry`='12475');
+UPDATE `creature_template` SET `baseattacktime`='2000' WHERE (`entry`='12475');
+
+/*Verdantine Boughguard*/
+UPDATE `creature_template` SET `minhealth`='80925', `maxhealth`='80925' WHERE (`entry`='12477');
+UPDATE `creature_template` SET `mindmg`='1618', `maxdmg`='2147' WHERE (`entry`='12477');
+UPDATE `creature_template` SET `baseattacktime`='2000' WHERE (`entry`='12477');
+
+/*Verdantine Oracle*/
+UPDATE `creature_template` SET `minhealth`='62875', `maxhealth`='62875' WHERE (`entry`='12478');
+UPDATE `creature_template` SET `mindmg`='1478', `maxdmg`='1956' WHERE (`entry`='12478');
+UPDATE `creature_template` SET `baseattacktime`='2000' WHERE (`entry`='12478');
+
+/*Verdantine Tree Warder*/
+UPDATE `creature_template` SET `minhealth`='76300', `maxhealth`='76300' WHERE (`entry`='12479');
+UPDATE `creature_template` SET `mindmg`='1559', `maxdmg`='2068' WHERE (`entry`='12479');
+UPDATE `creature_template` SET `baseattacktime`='2000' WHERE (`entry`='12479');
+
+/*Jademir Boughguard*/
+UPDATE `creature_template` SET `minhealth`='80925', `maxhealth`='80925' WHERE (`entry`='5320');
+UPDATE `creature_template` SET `mindmg`='1618', `maxdmg`='2147' WHERE (`entry`='5320');
+UPDATE `creature_template` SET `baseattacktime`='2000' WHERE (`entry`='5320');
+
+/*Jademir Oracle*/
+UPDATE `creature_template` SET `minhealth`='62875', `maxhealth`='62875' WHERE (`entry`='5317');
+UPDATE `creature_template` SET `mindmg`='1478', `maxdmg`='1956' WHERE (`entry`='5317');
+UPDATE `creature_template` SET `baseattacktime`='2000' WHERE (`entry`='5317');
+
+/*Jademir Tree Warder*/
+UPDATE `creature_template` SET `minhealth`='76300', `maxhealth`='76300' WHERE (`entry`='5319');
+UPDATE `creature_template` SET `mindmg`='1559', `maxdmg`='2068' WHERE (`entry`='5319');
+UPDATE `creature_template` SET `baseattacktime`='2000' WHERE (`entry`='5319');
+
+/*Dreamtracker*/
+UPDATE `creature_template` SET `minhealth`='80925', `maxhealth`='80925' WHERE (`entry`='12496');
+UPDATE `creature_template` SET `mindmg`='1618', `maxdmg`='2147' WHERE (`entry`='12496');
+UPDATE `creature_template` SET `baseattacktime`='1500' WHERE (`entry`='12496');
+
+/*Dreamstalker*/
+UPDATE `creature_template` SET `minhealth`='80925', `maxhealth`='80925' WHERE (`entry`='12498');
+UPDATE `creature_template` SET `mindmg`='1618', `maxdmg`='2147' WHERE (`entry`='12498');
+UPDATE `creature_template` SET `baseattacktime`='1500' WHERE (`entry`='12498');
+
+/*Phantim*/
+UPDATE `creature_template` SET `mindmg`='1618', `maxdmg`='2147' WHERE (`entry`='5314');
+UPDATE `creature_template` SET `baseattacktime`='1500' WHERE (`entry`='5314');
+
+/*Lethlas*/
+UPDATE `creature_template` SET `minhealth`='80925', `maxhealth`='80925' WHERE (`entry`='5312');
+UPDATE `creature_template` SET `mindmg`='1618', `maxdmg`='2147' WHERE (`entry`='5312');
+UPDATE `creature_template` SET `baseattacktime`='1500' WHERE (`entry`='5312');
