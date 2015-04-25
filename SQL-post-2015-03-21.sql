@@ -1254,6 +1254,27 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720108, 'Fascinating, 
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720109, 'Hrm, curious... This ends abruptly. In Tanaris the Qiraji document facing a bronze dragon. There is much missing from this... More information must be found! Surely they are planning to invade Kalimdor once more!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 5, 'Geologist Larksbane - say 22');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720110, 'When the time is right, my lady. All will be clear when the time is right. The master stirs even now. Look to the skies for the Brood of Nozdormu have returned.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'Baristolth of the Shifting Sands - say');
 
+-- emissary roman'khan, mana, walk speed, attack speed, not mechanical and add script
+UPDATE `zp_mangosd`.`creature_template` SET `minmana`=432300, `maxmana`=432300, `speed_walk`=1.0, `baseattacktime`=2100, `type`=10, `ScriptName`='boss_roman_khan' WHERE  `entry`=14862;
+
+-- hitbox
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.2, `combat_reach`=1.4 WHERE  `modelid`=5965;
+
+-- update the pre-bosses
+UPDATE `zp_mangosd`.`creature_template` SET `minmana`=0, `maxmana`=0, `mindmg`=690, `maxdmg`=732, `baseattacktime`=1920, `type`=10, `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE  `entry`=15288;
+UPDATE `zp_mangosd`.`creature_template` SET `minmana`=0, `maxmana`=0, `mindmg`=690, `maxdmg`=732, `baseattacktime`=1920, `type`=10, `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE  `entry`=15286;
+UPDATE `zp_mangosd`.`creature_template` SET `minmana`=0, `maxmana`=0, `mindmg`=690, `maxdmg`=732, `baseattacktime`=1920, `type`=10, `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE  `entry`=15290;
+
+-- hitbox
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.2, `combat_reach`=1.4 WHERE  `modelid`=15355;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.2, `combat_reach`=1.4 WHERE  `modelid`=15356;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.2, `combat_reach`=1.4 WHERE  `modelid`=15357;
+
+-- add ai
+REPLACE INTO `creature_ai_scripts` VALUES (1528601, 15286, 4, 0, 100, 0, 0, 0, 0, 0, 39, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Xil\'xix - Call for help on aggro');
+REPLACE INTO `creature_ai_scripts` VALUES (1528801, 15288, 4, 0, 100, 0, 0, 0, 0, 0, 39, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Aluntir - Call for help on aggro');
+REPLACE INTO `creature_ai_scripts` VALUES (1529001, 15290, 4, 0, 100, 0, 0, 0, 0, 0, 39, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Arakis - Call for help on aggro');
+
 /************ Misc *******************/
 -- stonemason cloak should only drop from defias miner, remove from reference loot table
 DELETE FROM `zp_mangosd`.`reference_loot_template` WHERE  `entry`=24078 AND `item`=1930;
