@@ -1545,6 +1545,13 @@ UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='44016', `maxhealth`='44
 UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1270', `maxdmg`='1684' WHERE (`entry`='11359') limit 1;
 UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='11359') limit 1;
 
+-- Gri'lek add missing armor
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=3945 WHERE  `entry`=15082;
+
+-- mad voidwalker and mad servant armor and immune fear
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=2743, `mechanic_immune_mask`=12714000 WHERE  `entry`=15146;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=2465, `mechanic_immune_mask`=12582928 WHERE  `entry`=15111;
+
 /***************** AQ20 Moam *******************/
 -- mana fiend add armor, hp mana and shouldn't use arcane explosion instantly after spawn
 UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=14652, `maxhealth`=14652, `minmana`=12170, `maxmana`=12170, `armor`=3015 WHERE  `entry`=15527;
