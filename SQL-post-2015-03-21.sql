@@ -1559,3 +1559,9 @@ UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_type`=0, `event_param1`=300
 
 -- Moam attackspeed and hp adjusted
 UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=346450, `maxhealth`=346450, `baseattacktime`=2000 WHERE  `entry`=15340;
+
+-- Taerar, Emeriss, Lethon nor Ysondre should have mana
+UPDATE `zp_mangosd`.`creature_template` SET `minmana`=0, `maxmana`=0 WHERE  `entry`=14890;
+UPDATE `zp_mangosd`.`creature_template` SET `minmana`=0, `maxmana`=0 WHERE  `entry`=14889;
+UPDATE `zp_mangosd`.`creature_template` SET `minmana`=0, `maxmana`=0 WHERE  `entry`=14888;
+UPDATE `zp_mangosd`.`creature_template` SET `minmana`=0, `maxmana`=0 WHERE  `entry`=14887;
