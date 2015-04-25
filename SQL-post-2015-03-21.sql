@@ -1523,3 +1523,11 @@ UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entr
 UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='44016', `maxhealth`='44016' WHERE (`entry`='11359') limit 1;
 UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1270', `maxdmg`='1684' WHERE (`entry`='11359') limit 1;
 UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='11359') limit 1;
+
+/***************** AQ20 Moam *******************/
+-- mana fiend add armor, hp mana and shouldn't use arcane explosion instantly after spawn
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=14652, `maxhealth`=14652, `minmana`=12170, `maxmana`=12170, `armor`=3015 WHERE  `entry`=15527;
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_type`=0, `event_param1`=3000, `event_param2`=8000 WHERE  `id`=1552701;
+
+-- Moam attackspeed and hp adjusted
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=346450, `maxhealth`=346450, `baseattacktime`=2000 WHERE  `entry`=15340;
