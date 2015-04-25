@@ -1270,3 +1270,256 @@ UPDATE `zp_mangosd`.`creature_model_info` SET `modelid_other_gender`='0' WHERE (
 
 -- add arcane channeling when clicking on the portal
 UPDATE `zp_mangosd`.`gameobject_template` SET `data2`=23017 WHERE  `entry`=36727;
+
+/********************* All mobs within Zul'gurub has had their damage, armour, attack speed and other related stats revamped.
+Source: Beastiary
+SQL from Judgement ************************************************************************************************************/
+
+/*Gurubashi Trolls*/
+
+/*Gurubashi Axe Thrower*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='21360', `maxhealth`='21360' WHERE (`entry`='11350') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='416', `maxdmg`='552' WHERE (`entry`='11350') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='11350') limit 1;
+
+/*Gurubashi Bat Rider*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='31440', `maxhealth`='31440' WHERE (`entry`='14750') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1058', `maxdmg`='1403' WHERE (`entry`='14750') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='14750') limit 1;
+
+/*Gurubashi Berserker*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='48555', `maxhealth`='48555' WHERE (`entry`='11352') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1510', `maxdmg`='2004' WHERE (`entry`='11352') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='3000' WHERE (`entry`='11352') limit 1;
+
+/*Gurubashi Blood-drinker*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='18312', `maxhealth`='18312' WHERE (`entry`='11353') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='935', `maxdmg`='1241' WHERE (`entry`='11353') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='11353') limit 1;
+
+/*Gurubashi Champion*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='31440', `maxhealth`='31440' WHERE (`entry`='11356') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='741', `maxdmg`='982' WHERE (`entry`='11356') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='11356') limit 1;
+
+/*Gurubashi Headhunter*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='21364', `maxhealth`='21364' WHERE (`entry`='11351') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='520', `maxdmg`='689' WHERE (`entry`='11351') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='11351') limit 1;
+
+/*Gurubashi Warrior*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='7599', `maxhealth`='7842' WHERE (`entry`='11355') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='322', `maxdmg`='437' WHERE (`entry`='11355') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='11355') limit 1;
+
+/*Hakkari Trolls*/
+
+/*Hakkari Blood Priest*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='15090', `maxhealth`='15090' WHERE (`entry`='11340') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='691', `maxdmg`='782' WHERE (`entry`='11340') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='11340') limit 1;
+
+/*Hakkari Priest*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='17094', `maxhealth`='17094' WHERE (`entry`='11830') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='484', `maxdmg`='641' WHERE (`entry`='11830') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='11830') limit 1;
+
+/*Hakkari Shadow-hunter*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='25150', `maxhealth`='25150' WHERE (`entry`='11339') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='591', `maxdmg`='782' WHERE (`entry`='11339') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='11339') limit 1;
+
+/*Hakkari Shadowcaster*/
+UPDATE `zp_mangosd`.`creature_template` SET `minlevel`='61' WHERE (`entry`='11338') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='25150', `maxhealth`='25150' WHERE (`entry`='11338') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='788', `maxdmg`='1043' WHERE (`entry`='11338') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='11338') limit 1;
+
+/*Hakkari Witch Doctor*/
+UPDATE `zp_mangosd`.`creature_template` SET `minlevel`='60' WHERE (`entry`='11831') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='24420', `maxhealth`='24420' WHERE (`entry`='11831') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='581', `maxdmg`='769' WHERE (`entry`='11831') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='11831') limit 1;
+
+/*Bats*/
+
+/*Bloodseeker Bat*/
+UPDATE `zp_mangosd`.`creature_template` SET `minlevel`='60' WHERE (`entry`='11368') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='5341', `maxhealth`='5341' WHERE (`entry`='11368') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='130', `maxdmg`='172' WHERE (`entry`='11368') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1000' WHERE (`entry`='11831') limit 1;
+
+/*Razzashi snakes*/
+
+/*Razzashi Adder*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='15260', `maxhealth`='15260' WHERE (`entry`='11372') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='436', `maxdmg`='579' WHERE (`entry`='11372') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='11372') limit 1;
+
+/*Razzashi Cobra*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='15260', `maxhealth`='15260' WHERE (`entry`='11373');
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='624', `maxdmg`='827' WHERE (`entry`='11373');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='11373');
+
+/*Razzashi Serpent*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='15260', `maxhealth`='15260' WHERE (`entry`='11371') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='416', `maxdmg`='551' WHERE (`entry`='11371') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='11371') limit 1;
+
+/*Razzashi spiders*/
+
+/*Razzashi Broodwidow*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='31440', `maxhealth`='31440' WHERE (`entry`='11370') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1000', `maxdmg`='1326' WHERE (`entry`='11370') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='11370') limit 1;
+
+/*Razzashi Skitterer*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='4048', `maxhealth`='4306' WHERE (`entry`='14880') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`='3435' WHERE (`entry`='14880') limit 1; 
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='192', `maxdmg`='266' WHERE (`entry`='14880') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='14880') limit 1;
+
+/*Razzashi Venombrood*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='12208', `maxhealth`='12208' WHERE (`entry`='14532') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='520', `maxdmg`='689' WHERE (`entry`='14532') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='14532') limit 1;
+
+/*Razzashi raptors*/
+
+/*Razzazhi raptor*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='15260', `maxhealth`='15260' WHERE (`entry`='14821') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='831', `maxdmg`='1103' WHERE (`entry`='14821') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='14821') limit 1;
+
+/*Cats*/
+
+/*Zulian Cub*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='3052', `maxhealth`='3052' WHERE (`entry`='11360') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='104', `maxdmg`='138' WHERE (`entry`='11360') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1000' WHERE (`entry`='11360') limit 1;
+
+/*Zulian Guardian*/
+UPDATE `zp_mangosd`.`creature_template` SET `minlevel`='61', `maxlevel`='61' WHERE (`entry`='15068') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='6288', `maxhealth`='6288' WHERE (`entry`='15068') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`='4091' WHERE (`entry`='15068') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='593', `maxdmg`='786' WHERE (`entry`='15068') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1000' WHERE (`entry`='15068') limit 1;
+
+/*Zulian Panther*/
+UPDATE `zp_mangosd`.`creature_template` SET `minlevel`='60' WHERE (`entry`='11365') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='21364', `maxhealth`='21364' WHERE (`entry`='11365') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='520', `maxdmg`='689' WHERE (`entry`='11365') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1000' WHERE (`entry`='11365') limit 1;
+
+/*Zulian Prowler*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='3052', `maxhealth`='3052' WHERE (`entry`='15101') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`='3791' WHERE (`entry`='15101') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='83', `maxdmg`='110' WHERE (`entry`='15101') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1000' WHERE (`entry`='15101') limit 1;
+
+/*Zulian Stalker*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='22008', `maxhealth`='22008' WHERE (`entry`='15067') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='529', `maxdmg`='702' WHERE (`entry`='15067') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1000' WHERE (`entry`='15067') limit 1;
+
+/*Zulian Tiger*/
+UPDATE `zp_mangosd`.`creature_template` SET `minlevel`='60', `maxlevel`='60' WHERE (`entry`='11361') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='9156', `maxhealth`='9156' WHERE (`entry`='11361') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='416', `maxdmg`='552' WHERE (`entry`='11361') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1000' WHERE (`entry`='11361') limit 1;
+
+/*Atal'ai&undeads*/
+
+/*Atal'ai Mistress*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='15260', `maxhealth`='15260' WHERE (`entry`='14882') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='364', `maxdmg`='483' WHERE (`entry`='14882') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='14882') limit 1;
+
+/*Withered Mistress*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='12210', `maxhealth`='12210' WHERE (`entry`='14825') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='484', `maxdmg`='641' WHERE (`entry`='14825') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='14825') limit 1;
+
+/*Voodoo Slave*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='12210', `maxhealth`='12210' WHERE (`entry`='14883') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='484', `maxdmg`='641' WHERE (`entry`='14883') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='14883') limit 1;
+
+/*Bosses*/
+
+/*High Priestess Jeklik*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='333125', `maxhealth`='333125' WHERE (`entry`='14517') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`='3795' WHERE (`entry`='14517') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1533', `maxdmg`='2030' WHERE (`entry`='14517') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='14517') limit 1;
+
+/*High Priest Venoxis*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='213200', `maxhealth`='213200' WHERE (`entry`='14507') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1431', `maxdmg`='1895' WHERE (`entry`='14507') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='14507') limit 1;
+
+/*High Priestess Mar'li*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='333125', `maxhealth`='333125' WHERE (`entry`='14510') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1431', `maxdmg`='1895' WHERE (`entry`='14510') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='14510') limit 1;
+
+/*High Priest Thekal*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='133250', `maxhealth`='133250' WHERE (`entry`='14509') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1794', `maxdmg`='2375' WHERE (`entry`='14509') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='14509') limit 1;
+
+/*Jin'do the Hexxer*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='319800', `maxhealth`='319800' WHERE (`entry`='11380') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1738', `maxdmg`='2301' WHERE (`entry`='11380') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='11380') limit 1;
+
+/*Gahz'ranka*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='333100', `maxhealth`='333100' WHERE (`entry`='15114') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`='4691' WHERE (`entry`='15114');
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='2197', `maxdmg`='2912' WHERE (`entry`='15114') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='15114') limit 1;
+
+/*Hakkar*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='1079325', `maxhealth`='1079325' WHERE (`entry`='14834') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='4089', `maxdmg`='5413' WHERE (`entry`='14834') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='14834') limit 1;
+
+/*Misc. mobs*/
+
+/*Witherbark Speaker*/
+UPDATE `zp_mangosd`.`creature_template` SET `minlevel`='61', `maxlevel`='61' WHERE (`entry`='11388') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='2515', `maxhealth`='2515' WHERE (`entry`='11388') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`='3316' WHERE (`entry`='11388') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='493', `maxdmg`='652' WHERE (`entry`='11388') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='11388') limit 1;
+
+/*Vilebranch Speaker*/
+UPDATE `zp_mangosd`.`creature_template` SET `minlevel`='61' WHERE (`entry`='11391');
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='3144', `maxhealth`='3144' WHERE (`entry`='11391') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='529', `maxdmg`='702' WHERE (`entry`='11391') limit 1;
+
+/*Zealot Lor'khan*/
+UPDATE `zp_mangosd`.`creature_template` SET `minlevel`='62' WHERE (`entry`='11347') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='90650', `maxhealth`='90650' WHERE (`entry`='11347') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1205', `maxdmg`='1596' WHERE (`entry`='11347') limit 1;
+
+/*Zealot Zath*/
+UPDATE `zp_mangosd`.`creature_template` SET `minlevel`='62' WHERE (`entry`='11348') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='113295', `maxhealth`='113295' WHERE (`entry`='11348') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1295', `maxdmg`='1717' WHERE (`entry`='11348') limit 1;
+
+/*Zulian Crocolisk*/
+UPDATE `zp_mangosd`.`creature_template` SET `minlevel`='60' WHERE (`entry`='15043') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='416', `maxdmg`='552' WHERE (`entry`='15043') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='15043') limit 1;
+
+/*Hooktooth Frenzy*/
+UPDATE `zp_mangosd`.`creature_template` SET `minlevel`='60' WHERE (`entry`='11374');
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='9156', `maxhealth`='9156' WHERE (`entry`='11374') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='249', `maxdmg`='331' WHERE (`entry`='11374') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='11374') limit 1;
+
+/*Soulflayer*/
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='44016', `maxhealth`='44016' WHERE (`entry`='11359') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1270', `maxdmg`='1684' WHERE (`entry`='11359') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='11359') limit 1;
