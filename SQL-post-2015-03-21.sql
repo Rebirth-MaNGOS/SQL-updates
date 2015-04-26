@@ -1690,3 +1690,22 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (30137, 10, -401.557, 71.60
 
 -- add wp movement
 UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=30137;
+
+/******** The Only Cure is More Green Glow, quest ***********/
+-- add the script as ai
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='mob_radioactive_fallout' WHERE  `entry`=6218;
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='mob_radioactive_fallout' WHERE  `entry`=6219;
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='mob_radioactive_fallout' WHERE  `entry`=6220;
+
+-- delete db ai
+DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE `creature_id`=6218;
+DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE `creature_id`=6219;
+DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE `creature_id`=6220;
+
+-- quest item should have 2h and then removed
+UPDATE `zp_mangosd`.`item_template` SET `Duration`=7200, `ExtraFlags`=2 WHERE  `entry`=9365;
+
+-- some extra sql, not sure if it's already on live
+REPLACE INTO `zp_mangosd`.`spell_script_target` VALUES (12709, 1, 6218);
+REPLACE INTO `zp_mangosd`.`spell_script_target` VALUES (12709, 1, 6219);
+REPLACE INTO `zp_mangosd`.`spell_script_target` VALUES (12709, 1, 6220);
