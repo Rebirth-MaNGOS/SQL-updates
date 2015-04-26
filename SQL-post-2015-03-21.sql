@@ -1552,6 +1552,9 @@ UPDATE `zp_mangosd`.`creature_template` SET `armor`=3945 WHERE  `entry`=15082;
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=2743, `mechanic_immune_mask`=12714000 WHERE  `entry`=15146;
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=2465, `mechanic_immune_mask`=12582928 WHERE  `entry`=15111;
 
+-- Nightmare Illusion add ai (needed for aoe immunity) and armor
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=1543, `ScriptName`='mob_nightmare_illusion' WHERE  `entry`=15163;
+
 /***************** AQ20 Moam *******************/
 -- mana fiend add armor, hp mana and shouldn't use arcane explosion instantly after spawn
 UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=14652, `maxhealth`=14652, `minmana`=12170, `maxmana`=12170, `armor`=3015 WHERE  `entry`=15527;
@@ -1570,87 +1573,101 @@ UPDATE `zp_mangosd`.`creature_template` SET `minmana`=0, `maxmana`=0 WHERE  `ent
 /******* SQL from Judgement **********/
 
 /*Lethon*/
-UPDATE `creature_template` SET `minhealth`='832750', `maxhealth`='832750' WHERE (`entry`='14888');
-UPDATE `creature_template` SET `mindmg`='2196', `maxdmg`='2912' WHERE (`entry`='14888');
-UPDATE `creature_template` SET `baseattacktime`='2000' WHERE (`entry`='14888');
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='832750', `maxhealth`='832750' WHERE (`entry`='14888');
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='2196', `maxdmg`='2912' WHERE (`entry`='14888');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='14888');
 
 /*Emeriss*/
-UPDATE `creature_template` SET `minhealth`='832750', `maxhealth`='832750' WHERE (`entry`='14889');
-UPDATE `creature_template` SET `mindmg`='2196', `maxdmg`='2912' WHERE (`entry`='14889');
-UPDATE `creature_template` SET `baseattacktime`='2000' WHERE (`entry`='14889');
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='832750', `maxhealth`='832750' WHERE (`entry`='14889');
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='2196', `maxdmg`='2912' WHERE (`entry`='14889');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='14889');
 
 /*Ysondre*/
-UPDATE `creature_template` SET `minhealth`='832750', `maxhealth`='832750' WHERE (`entry`='14887');
-UPDATE `creature_template` SET `mindmg`='2196', `maxdmg`='2912' WHERE (`entry`='14887');
-UPDATE `creature_template` SET `baseattacktime`='2000' WHERE (`entry`='14887');
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='832750', `maxhealth`='832750' WHERE (`entry`='14887');
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='2196', `maxdmg`='2912' WHERE (`entry`='14887');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='14887');
 
 /*Taerar*/
-UPDATE `creature_template` SET `minhealth`='832750', `maxhealth`='832750' WHERE (`entry`='14890');
-UPDATE `creature_template` SET `mindmg`='2196', `maxdmg`='2912' WHERE (`entry`='14890');
-UPDATE `creature_template` SET `baseattacktime`='2000' WHERE (`entry`='14890');
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='832750', `maxhealth`='832750' WHERE (`entry`='14890');
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='2196', `maxdmg`='2912' WHERE (`entry`='14890');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='14890');
 
 /*Nightmare Dragons trash and minibosses*/
 
 /*Emeraldon Boughguard*/
-UPDATE `creature_template` SET `minhealth`='80925', `maxhealth`='80925' WHERE (`entry`='12474');
-UPDATE `creature_template` SET `mindmg`='1618', `maxdmg`='2147' WHERE (`entry`='12474');
-UPDATE `creature_template` SET `baseattacktime`='2000' WHERE (`entry`='12474');
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='80925', `maxhealth`='80925' WHERE (`entry`='12474');
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1618', `maxdmg`='2147' WHERE (`entry`='12474');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='12474');
 
 /*Emeraldon Oracle*/
-UPDATE `creature_template` SET `minhealth`='62875', `maxhealth`='62875' WHERE (`entry`='12476');
-UPDATE `creature_template` SET `mindmg`='1478', `maxdmg`='1956' WHERE (`entry`='12476');
-UPDATE `creature_template` SET `baseattacktime`='2000' WHERE (`entry`='12476');
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='62875', `maxhealth`='62875' WHERE (`entry`='12476');
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1478', `maxdmg`='1956' WHERE (`entry`='12476');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='12476');
 
 /*Emeraldon Tree Warder*/
-UPDATE `creature_template` SET `minhealth`='76300', `maxhealth`='76300' WHERE (`entry`='12475');
-UPDATE `creature_template` SET `mindmg`='1559', `maxdmg`='2068' WHERE (`entry`='12475');
-UPDATE `creature_template` SET `baseattacktime`='2000' WHERE (`entry`='12475');
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='76300', `maxhealth`='76300' WHERE (`entry`='12475');
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1559', `maxdmg`='2068' WHERE (`entry`='12475');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='12475');
 
 /*Verdantine Boughguard*/
-UPDATE `creature_template` SET `minhealth`='80925', `maxhealth`='80925' WHERE (`entry`='12477');
-UPDATE `creature_template` SET `mindmg`='1618', `maxdmg`='2147' WHERE (`entry`='12477');
-UPDATE `creature_template` SET `baseattacktime`='2000' WHERE (`entry`='12477');
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='80925', `maxhealth`='80925' WHERE (`entry`='12477');
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1618', `maxdmg`='2147' WHERE (`entry`='12477');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='12477');
 
 /*Verdantine Oracle*/
-UPDATE `creature_template` SET `minhealth`='62875', `maxhealth`='62875' WHERE (`entry`='12478');
-UPDATE `creature_template` SET `mindmg`='1478', `maxdmg`='1956' WHERE (`entry`='12478');
-UPDATE `creature_template` SET `baseattacktime`='2000' WHERE (`entry`='12478');
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='62875', `maxhealth`='62875' WHERE (`entry`='12478');
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1478', `maxdmg`='1956' WHERE (`entry`='12478');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='12478');
 
 /*Verdantine Tree Warder*/
-UPDATE `creature_template` SET `minhealth`='76300', `maxhealth`='76300' WHERE (`entry`='12479');
-UPDATE `creature_template` SET `mindmg`='1559', `maxdmg`='2068' WHERE (`entry`='12479');
-UPDATE `creature_template` SET `baseattacktime`='2000' WHERE (`entry`='12479');
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='76300', `maxhealth`='76300' WHERE (`entry`='12479');
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1559', `maxdmg`='2068' WHERE (`entry`='12479');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='12479');
 
 /*Jademir Boughguard*/
-UPDATE `creature_template` SET `minhealth`='80925', `maxhealth`='80925' WHERE (`entry`='5320');
-UPDATE `creature_template` SET `mindmg`='1618', `maxdmg`='2147' WHERE (`entry`='5320');
-UPDATE `creature_template` SET `baseattacktime`='2000' WHERE (`entry`='5320');
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='80925', `maxhealth`='80925' WHERE (`entry`='5320');
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1618', `maxdmg`='2147' WHERE (`entry`='5320');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='5320');
 
 /*Jademir Oracle*/
-UPDATE `creature_template` SET `minhealth`='62875', `maxhealth`='62875' WHERE (`entry`='5317');
-UPDATE `creature_template` SET `mindmg`='1478', `maxdmg`='1956' WHERE (`entry`='5317');
-UPDATE `creature_template` SET `baseattacktime`='2000' WHERE (`entry`='5317');
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='62875', `maxhealth`='62875' WHERE (`entry`='5317');
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1478', `maxdmg`='1956' WHERE (`entry`='5317');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='5317');
 
 /*Jademir Tree Warder*/
-UPDATE `creature_template` SET `minhealth`='76300', `maxhealth`='76300' WHERE (`entry`='5319');
-UPDATE `creature_template` SET `mindmg`='1559', `maxdmg`='2068' WHERE (`entry`='5319');
-UPDATE `creature_template` SET `baseattacktime`='2000' WHERE (`entry`='5319');
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='76300', `maxhealth`='76300' WHERE (`entry`='5319');
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1559', `maxdmg`='2068' WHERE (`entry`='5319');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='5319');
 
 /*Dreamtracker*/
-UPDATE `creature_template` SET `minhealth`='80925', `maxhealth`='80925' WHERE (`entry`='12496');
-UPDATE `creature_template` SET `mindmg`='1618', `maxdmg`='2147' WHERE (`entry`='12496');
-UPDATE `creature_template` SET `baseattacktime`='1500' WHERE (`entry`='12496');
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='80925', `maxhealth`='80925' WHERE (`entry`='12496');
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1618', `maxdmg`='2147' WHERE (`entry`='12496');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='12496');
 
 /*Dreamstalker*/
-UPDATE `creature_template` SET `minhealth`='80925', `maxhealth`='80925' WHERE (`entry`='12498');
-UPDATE `creature_template` SET `mindmg`='1618', `maxdmg`='2147' WHERE (`entry`='12498');
-UPDATE `creature_template` SET `baseattacktime`='1500' WHERE (`entry`='12498');
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='80925', `maxhealth`='80925' WHERE (`entry`='12498');
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1618', `maxdmg`='2147' WHERE (`entry`='12498');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='12498');
 
 /*Phantim*/
-UPDATE `creature_template` SET `mindmg`='1618', `maxdmg`='2147' WHERE (`entry`='5314');
-UPDATE `creature_template` SET `baseattacktime`='1500' WHERE (`entry`='5314');
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1618', `maxdmg`='2147' WHERE (`entry`='5314');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='5314');
 
 /*Lethlas*/
-UPDATE `creature_template` SET `minhealth`='80925', `maxhealth`='80925' WHERE (`entry`='5312');
-UPDATE `creature_template` SET `mindmg`='1618', `maxdmg`='2147' WHERE (`entry`='5312');
-UPDATE `creature_template` SET `baseattacktime`='1500' WHERE (`entry`='5312');
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='80925', `maxhealth`='80925' WHERE (`entry`='5312');
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1618', `maxdmg`='2147' WHERE (`entry`='5312');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='5312');
+
+/*********** Gnomer **********/
+-- techbot ai
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='boss_techbot' WHERE  `entry`=6231;
+
+-- add text
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720111, 'I am a BOT. I have tons of information. To find out what I know whisper me.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Techbot - say 1');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720112, 'People think I like corndogs, but actually, they give me indigestion !!!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Techbot - say 2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720113, 'Please be patient, we will call your name when it is your turn. We are helping people in the order they appear to us on our screen.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Techbot - say 3');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720114, 'Remember, if you harass the rep or spam the channel, your account may be kicked, banned, or worse.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Techbot - say 4');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720115, 'Techbot is sensitive and those words hurt my ears. :[ Please be nice to me. I just want to help.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Techbot - say 5');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720116, 'There is no COW level... really! I repeat: there is no COW level. Well, maybe there is...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Techbot - say 6');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720117, 'When the rep is talking to you, he will start each line with your name. If you don\'t see your name, he\'s not yet speaking to you.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Techbot - say 7');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720118, 'You are welcome, have a nice day.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Techbot - say 8');
