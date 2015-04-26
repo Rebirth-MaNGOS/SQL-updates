@@ -1709,3 +1709,13 @@ UPDATE `zp_mangosd`.`item_template` SET `Duration`=7200, `ExtraFlags`=2 WHERE  `
 REPLACE INTO `zp_mangosd`.`spell_script_target` VALUES (12709, 1, 6218);
 REPLACE INTO `zp_mangosd`.`spell_script_target` VALUES (12709, 1, 6219);
 REPLACE INTO `zp_mangosd`.`spell_script_target` VALUES (12709, 1, 6220);
+
+/********** BRD Lyceum *****************/
+-- Set 30 sec respawn instead of 5min on all, and then add 5min to the ones at general angerforge
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=30 WHERE `id`=8901;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=300 WHERE `id`=9956;
+
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=300 WHERE  `guid`=45959;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=300 WHERE  `guid`=45958;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=300 WHERE  `guid`=45956;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=300 WHERE  `guid`=45955;
