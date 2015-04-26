@@ -1715,7 +1715,7 @@ REPLACE INTO `zp_mangosd`.`spell_script_target` VALUES (12709, 1, 6220);
 UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=30 WHERE `id`=8901;
 UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=300 WHERE `id`=9956;
 
-UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=300 WHERE  `guid`=45959;
-UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=300 WHERE  `guid`=45958;
-UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=300 WHERE  `guid`=45956;
-UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=300 WHERE  `guid`=45955;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=7200 WHERE  `guid`=45959;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=7200 WHERE  `guid`=45958;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=7200 WHERE  `guid`=45956;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=7200 WHERE  `guid`=45955;
