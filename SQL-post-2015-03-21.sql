@@ -1671,3 +1671,7 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720115, 'Techbot is se
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720116, 'There is no COW level... really! I repeat: there is no COW level. Well, maybe there is...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Techbot - say 6');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720117, 'When the rep is talking to you, he will start each line with your name. If you don\'t see your name, he\'s not yet speaking to you.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Techbot - say 7');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720118, 'You are welcome, have a nice day.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Techbot - say 8');
+
+-- remove dupe bugs that are already spawned and fix techbot spawn rate
+DELETE FROM `zp_mangosd`.`creature` WHERE `id`=7732;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=300 WHERE  `guid`=10996;
