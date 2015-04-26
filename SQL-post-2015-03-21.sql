@@ -1675,3 +1675,18 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720118, 'You are welco
 -- remove dupe bugs that are already spawned and fix techbot spawn rate
 DELETE FROM `zp_mangosd`.`creature` WHERE `id`=7732;
 UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=300 WHERE  `guid`=10996;
+
+-- add waypoints, Viscous Fallout
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (30137, 1, -391.15, 65.0104, -209.721, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.969043, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (30137, 2, -375.059, 98.4395, -210.078, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.1222, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (30137, 3, -369.241, 125.112, -208.567, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.35782, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (30137, 4, -374.568, 141.781, -208.683, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.88011, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (30137, 5, -394.464, 154.968, -209.087, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.72441, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (30137, 6, -413.967, 147.869, -210.976, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.49017, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (30137, 7, -427.896, 119.671, -211.288, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.66434, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (30137, 8, -428.641, 94.3304, -209.359, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.77037, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (30137, 9, -425.424, 83.8621, -209.842, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.03741, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (30137, 10, -401.557, 71.6099, -210.486, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.90134, 0, 0);
+
+-- add wp movement
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=30137;
