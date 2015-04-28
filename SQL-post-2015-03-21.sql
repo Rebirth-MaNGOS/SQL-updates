@@ -1767,3 +1767,6 @@ UPDATE `zp_scriptdevzerod`.`script_texts` SET `type`=6 WHERE  `entry`=-1000401;
 UPDATE `zp_scriptdevzerod`.`script_texts` SET `type`=6 WHERE  `entry`=-1000285;
 UPDATE `zp_scriptdevzerod`.`script_texts` SET `type`=6 WHERE  `entry`=-1000399;
 UPDATE `zp_scriptdevzerod`.`script_texts` SET `type`=6 WHERE  `entry`=-1000360;
+
+-- Syndicate Pathstalker, remove gnoll text
+DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE `id`=258702;
