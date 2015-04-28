@@ -1754,3 +1754,16 @@ REPLACE INTO `zp_mangosd`.`creature_involvedrelation` VALUES (15183, 8381);
 REPLACE INTO `zp_mangosd`.`creature_involvedrelation` VALUES (15183, 8382);
 
 UPDATE `zp_mangosd`.`quest_template` SET `SuggestedPlayers`=20 WHERE  `entry`=8315;
+
+/********** Emerald dragons ************/
+-- set same immunities as ony and nef
+UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=650870623 WHERE  `entry`=14887;
+UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=650870623 WHERE  `entry`=14888;
+UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=650870623 WHERE  `entry`=14889;
+UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=650870623 WHERE  `entry`=14890;
+
+-- yells on aggro should be zone wide
+UPDATE `zp_scriptdevzerod`.`script_texts` SET `type`=6 WHERE  `entry`=-1000401;
+UPDATE `zp_scriptdevzerod`.`script_texts` SET `type`=6 WHERE  `entry`=-1000285;
+UPDATE `zp_scriptdevzerod`.`script_texts` SET `type`=6 WHERE  `entry`=-1000399;
+UPDATE `zp_scriptdevzerod`.`script_texts` SET `type`=6 WHERE  `entry`=-1000360;
