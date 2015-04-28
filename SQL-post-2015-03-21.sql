@@ -1768,6 +1768,9 @@ UPDATE `zp_scriptdevzerod`.`script_texts` SET `type`=6 WHERE  `entry`=-1000285;
 UPDATE `zp_scriptdevzerod`.`script_texts` SET `type`=6 WHERE  `entry`=-1000399;
 UPDATE `zp_scriptdevzerod`.`script_texts` SET `type`=6 WHERE  `entry`=-1000360;
 
+-- all dragons should have 80.5% drop on q item instead of 100%
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=80.5 WHERE `item`=20644;
+
 -- Syndicate Pathstalker, remove gnoll text
 DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE `id`=258702;
 
