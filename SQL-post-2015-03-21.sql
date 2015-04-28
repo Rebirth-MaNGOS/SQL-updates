@@ -1776,3 +1776,14 @@ DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE `item`=23198;
 
 -- add it to magistrate barthilas again
 REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (10435, 23198, 0, 1, 1, 1, 0, 0, 0);
+
+/*********** Waking Legends quest ************/
+-- add talk emotes to text
+UPDATE `zp_scriptdevzerod`.`script_texts` SET `emote`=1 WHERE  `entry`=-1000656;
+UPDATE `zp_scriptdevzerod`.`script_texts` SET `emote`=1 WHERE  `entry`=-1000658;
+UPDATE `zp_scriptdevzerod`.`script_texts` SET `emote`=1 WHERE  `entry`=-1000660;
+UPDATE `zp_scriptdevzerod`.`script_texts` SET `emote`=1 WHERE  `entry`=-1000662;
+UPDATE `zp_scriptdevzerod`.`script_texts` SET `emote`=1 WHERE  `entry`=-1000663;
+
+-- Keeper Remulos should walk faster, added armor and should be elite
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=3941, `speed_walk`=2, `rank`=1 WHERE  `entry`=11832;
