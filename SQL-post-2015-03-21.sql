@@ -1770,3 +1770,9 @@ UPDATE `zp_scriptdevzerod`.`script_texts` SET `type`=6 WHERE  `entry`=-1000360;
 
 -- Syndicate Pathstalker, remove gnoll text
 DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE `id`=258702;
+
+-- Idol of Brutality should only drop from 1 boss, remove all and add it to boss again
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE `item`=23198;
+
+-- add it to magistrate barthilas again
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (10435, 23198, 0, 1, 1, 1, 0, 0, 0);
