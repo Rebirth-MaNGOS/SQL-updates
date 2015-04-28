@@ -1719,3 +1719,7 @@ UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=7200 WHERE  `guid`=45959;
 UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=7200 WHERE  `guid`=45958;
 UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=7200 WHERE  `guid`=45956;
 UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=7200 WHERE  `guid`=45955;
+
+-- Barkeep Kelly has run out of stock and no longer sells Rumsey Rum Black Label
+
+DELETE FROM `zp_mangosd`.`npc_vendor` WHERE (`entry`='2366') AND (`item`='21151');
