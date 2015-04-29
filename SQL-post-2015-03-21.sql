@@ -1790,3 +1790,6 @@ UPDATE `zp_scriptdevzerod`.`script_texts` SET `emote`=1 WHERE  `entry`=-1000663;
 
 -- Keeper Remulos should walk faster, added armor and should be elite
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=3941, `speed_walk`=2, `rank`=1 WHERE  `entry`=11832;
+
+-- when mandokir yells ding jindo should answer with a zone wide yell, not just a yell
+UPDATE `zp_scriptdevzerod`.`script_texts` SET `type`=6 WHERE  `entry`=-1309017;
