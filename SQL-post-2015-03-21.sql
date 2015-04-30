@@ -2246,3 +2246,6 @@ REPLACE INTO `zp_mangosd`.`creature_formations` (`leaderGUID`, `memberGUID`, `di
 REPLACE INTO `zp_mangosd`.`creature_formations` (`leaderGUID`, `memberGUID`, `dist`, `angle`, `groupAI`) VALUES ('54911', '92934', '4', '45', '2');
 REPLACE INTO `zp_mangosd`.`creature_formations` (`leaderGUID`, `memberGUID`, `dist`, `angle`, `groupAI`) VALUES ('54911', '92932', '0', '0', '2');
 REPLACE INTO `zp_mangosd`.`creature_formations` (`leaderGUID`, `memberGUID`, `dist`, `angle`, `groupAI`) VALUES ('54911', '54911', '0', '0', '2');
+
+-- remove skinning and looting from core hounds in MC
+UPDATE `zp_mangosd`.`creature_template` SET `lootid`=0, `skinloot`=0, `mingold`=0, `maxgold`=0 WHERE  `entry`=11671;
