@@ -2273,3 +2273,29 @@ REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES ('33244', '12476', '1', '7974', '0', '3240.11', '-3793.59', '124.704', '3.82742', '600', '0', '0', '600000', '24860', '0', '0');
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES ('33245', '12476', '1', '7974', '0', '3158.41', '-3655.17', '121.924', '0.005229', '600', '0', '0', '600000', '24860', '0', '0');
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES ('33246', '12476', '1', '7974', '0', '3140.91', '-3777.18', '122.477', '3.85199', '600', '0', '0', '600000', '24860', '0', '0');
+
+-- Create tables for the nex exclusive pool system.
+CREATE TABLE `zp_mangosd`.`exclusive_pool_creature` (
+      `guid` INT NOT NULL,
+      `poolID` INT NULL,
+      `groupID` INT NULL DEFAULT 0,
+      PRIMARY KEY (`guid`));
+
+CREATE TABLE `zp_mangosd`.`exclusive_pool_spot` (
+      `id` INT NOT NULL AUTO_INCREMENT,
+      `poolID` INT NULL,
+      `mapID` INT NULL,
+      `x` FLOAT NULL,
+      `y` FLOAT NULL,
+      `z` FLOAT NULL,
+      PRIMARY KEY (`id`));
+
+CREATE TABLE `zp_mangosd`.`exclusive_pool` (
+      `poolID` INT NOT NULL,
+      `respawnTime` INT NULL,
+      PRIMARY KEY (`poolID`));
+
+CREATE TABLE `zp_mangosd`.`exclusive_pool_respawn` (
+      `poolID` INT NOT NULL,
+      `spawntime` INT NULL,
+      PRIMARY KEY (`poolID`));
