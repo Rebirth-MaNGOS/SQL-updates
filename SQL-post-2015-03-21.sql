@@ -2288,6 +2288,7 @@ CREATE TABLE `zp_mangosd`.`exclusive_pool_spot` (
       `x` FLOAT NULL,
       `y` FLOAT NULL,
       `z` FLOAT NULL,
+      `orientation` FLOAT NULL,
       PRIMARY KEY (`id`));
 
 CREATE TABLE `zp_mangosd`.`exclusive_pool` (
