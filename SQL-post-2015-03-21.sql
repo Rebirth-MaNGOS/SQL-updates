@@ -2434,7 +2434,12 @@ REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `pos
 REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES ('52349', '79', '2302', '-6067', '106.817', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES ('52349', '80', '2291', '-6038', '109.058', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 
-INSERT INTO `zp_mangosd`.`command` (`name`, `security`, `help`) VALUES ('bugreport list', '0', 'Syntax: .bugreport list - Lists all bugerports');
-INSERT INTO `zp_mangosd`.`command` (`name`, `security`, `help`) VALUES ('bugreport show', '0', 'Syntax: .bugreport show #report_number - Shows the bugreport with number #report_number.');
-INSERT INTO `zp_mangosd`.`command` (`name`, `security`, `help`) VALUES ('bugreport tickettoreport', '1', 'Syntax: .bugreport tickettoreport \"$title\" #ticket_number-1 - Copy a ticket to the bugreport system. The title should be in quotes and the ticket number is the number in .ti list - 1.');
+REPLACE INTO `zp_mangosd`.`command` (`name`, `security`, `help`) VALUES ('bugreport list', '0', 'Syntax: .bugreport list - Lists all bugerports');
+REPLACE INTO `zp_mangosd`.`command` (`name`, `security`, `help`) VALUES ('bugreport show', '0', 'Syntax: .bugreport show #report_number - Shows the bugreport with number #report_number.');
+REPLACE INTO `zp_mangosd`.`command` (`name`, `security`, `help`) VALUES ('bugreport tickettoreport', '1', 'Syntax: .bugreport tickettoreport \"$title\" #ticket_number-1 - Copy a ticket to the bugreport system. The title should be in quotes and the ticket number is the number in .ti list - 1.');
 
+-- Spawn points for the Nightmare Dragons
+REPLACE INTO `zp_mangosd`.`exclusive_pool_spot` (`poolID`, `mapID`, `x`, `y`, `z`, `orientation`) VALUES ('0', '1', ' 3298.42', ' -3731.81', '173.462', ' 3.03828');
+REPLACE INTO `zp_mangosd`.`exclusive_pool_spot` (`poolID`, `mapID`, `x`, `y`, `z`, `orientation`) VALUES ('0', '1', ' -2873.03', ' 1883.82', '52.6508', '2.76537');
+REPLACE INTO `zp_mangosd`.`exclusive_pool_spot` (`poolID`, `mapID`, `x`, `y`, `z`, `orientation`) VALUES ('0', '0', '855.492', ' -3977.98', '145.832', '3.50304');
+REPLACE INTO `zp_mangosd`.`exclusive_pool_spot` (`poolID`, `mapID`, `x`, `y`, `z`, `orientation`) VALUES ('0', '0', '-10435.6', ' -427.302', '43.7871', '1.60178');
