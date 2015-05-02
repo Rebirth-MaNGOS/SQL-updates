@@ -2458,3 +2458,6 @@ REPLACE INTO `zp_mangosd`.`exclusive_pool_creature` (`guid`, `poolID`, `groupID`
 -- Add the exclusive pool for the Nightmare Dragons
 REPLACE INTO `zp_mangosd`.`exclusive_pool` (`poolID`, `respawnTime`) VALUES ('0', '172800');
 
+-- Dummy shadowsilk poacher from last patch, he wasn't moving so hopefully he does now
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=3029676;
+
