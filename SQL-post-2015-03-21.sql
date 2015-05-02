@@ -2460,5 +2460,7 @@ REPLACE INTO `zp_mangosd`.`exclusive_pool` (`poolID`, `respawnTime`) VALUES ('0'
 
 -- Dummy shadowsilk poacher from last patch, he wasn't moving so hopefully he does now
 UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=3029676;
--- ai for timmy
+
+/**** -- ai for timmy DANGEROUS DO NOT RUN THIS! CRASHES SERVER!
 UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_town_crier' WHERE  `entry`=8666;
+**********/
