@@ -2448,3 +2448,13 @@ REPLACE INTO `zp_mangosd`.`exclusive_pool_spot` (`poolID`, `mapID`, `x`, `y`, `z
 REPLACE INTO `zp_mangosd`.`exclusive_pool_spot` (`poolID`, `mapID`, `x`, `y`, `z`, `orientation`) VALUES ('0', '1', ' -2873.03', ' 1883.82', '52.6508', '2.76537');
 REPLACE INTO `zp_mangosd`.`exclusive_pool_spot` (`poolID`, `mapID`, `x`, `y`, `z`, `orientation`) VALUES ('0', '0', '855.492', ' -3977.98', '145.832', '3.50304');
 REPLACE INTO `zp_mangosd`.`exclusive_pool_spot` (`poolID`, `mapID`, `x`, `y`, `z`, `orientation`) VALUES ('0', '0', '-10435.6', ' -427.302', '43.7871', '1.60178');
+
+-- Add the Nightmare Dragons to the exclusive pool system
+REPLACE INTO `zp_mangosd`.`exclusive_pool_creature` (`guid`, `poolID`, `groupID`) VALUES ('54935', '0', '0');
+REPLACE INTO `zp_mangosd`.`exclusive_pool_creature` (`guid`, `poolID`, `groupID`) VALUES ('54936', '0', '1');
+REPLACE INTO `zp_mangosd`.`exclusive_pool_creature` (`guid`, `poolID`, `groupID`) VALUES ('54937', '0', '2');
+REPLACE INTO `zp_mangosd`.`exclusive_pool_creature` (`guid`, `poolID`, `groupID`) VALUES ('54938', '0', '3');
+
+-- Add the exclusive pool for the Nightmare Dragons
+REPLACE INTO `zp_mangosd`.`exclusive_pool` (`poolID`, `respawnTime`) VALUES ('0', '172800');
+
