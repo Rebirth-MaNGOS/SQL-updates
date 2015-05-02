@@ -8,7 +8,7 @@ UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=233, `faction_H`=233 WHE
 /**************** Add missing pats *********************/
 -- spectral researcher
 -- move to right spawn point
-REPLACE INTO `creature` VALUES (49003, 10499, 289, 0, 0, 164.157, 38.1764, 115.708, 4.68536, 7200, 0, 0, 9306, 7084, 0, 2);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (49003, 10499, 289, 0, 0, 164.157, 38.1764, 115.708, 4.68536, 7200, 0, 0, 9306, 7084, 0, 2);
 -- add wp
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49003, 1, 161.195, 37.6095, 115.708, 10000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.16562, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49003, 2, 161.513, 29.9838, 115.708, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.72463, 0, 0);
@@ -468,7 +468,7 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720044, 'Oh right! Ove
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720043, 'Ah, here we are! Well let\'s get to work. Shall we...?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'J\'eevee - say 1');
 
 -- add dummy
-REPLACE INTO `creature_template` VALUES (800470, 0, 0, 10812, 0, 'J\'eevee', NULL, 0, 58, 58, 4484, 4484, 0, 0, 0, 35, 35, 0, 1.25, 0.95, 0, 0, 154, 184, 0, 78, 1, 1430, 1573, 0, 0, 0, 0, 0, 0, 0, 0, 0, 72.9872, 100.357, 100, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 60, 298, '', 2, 3, 0, 0, 1, 0, 0, 0, 0, 0, 'npc_jeevee_dummy');
+REPLACE INTO `zp_mangosd`.`creature_template` VALUES (800470, 0, 0, 10812, 0, 'J\'eevee', NULL, 0, 58, 58, 4484, 4484, 0, 0, 0, 35, 35, 0, 1.25, 0.95, 0, 0, 154, 184, 0, 78, 1, 1430, 1573, 0, 0, 0, 0, 0, 0, 0, 0, 0, 72.9872, 100.357, 100, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 60, 298, '', 2, 3, 0, 0, 1, 0, 0, 0, 0, 0, 'npc_jeevee_dummy');
 
 -- remove old / make sql run-able again
 DELETE FROM `zp_mangosd`.`event_scripts` WHERE  `id`=8438 LIMIT 2;
@@ -514,7 +514,7 @@ UPDATE `zp_mangosd`.`creature_template` SET `minmana`=10250, `maxmana`=10272, `a
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720042, 'ENOUGH - this ends now! You fools will be added to my bone collection!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Death Knight Darkreaver - Yell on Spawn');
 
 -- dummy for paladin event
-REPLACE INTO `creature_template` VALUES (800469, 0, 0, 6296, 0, 'Paladin Event Dummy', 'lol it\'s a frog', 0, 1, 1, 649999, 649999, 0, 0, 0, 35, 35, 0, 1, 1.14286, 3, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 2, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5242886, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 4, 0, 0, 1, 0, 0, 0, 0, 128, 'npc_paladin_event');
+REPLACE INTO `zp_mangosd`.`creature_template` VALUES (800469, 0, 0, 6296, 0, 'Paladin Event Dummy', 'lol it\'s a frog', 0, 1, 1, 649999, 649999, 0, 0, 0, 35, 35, 0, 1, 1.14286, 3, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 2, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5242886, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 4, 0, 0, 1, 0, 0, 0, 0, 128, 'npc_paladin_event');
 
 -- Report to Orgnil RP at quest complete
 UPDATE `zp_mangosd`.`quest_template` SET `CompleteScript`=823 WHERE  `entry`=823;
@@ -544,14 +544,14 @@ REPLACE INTO `zp_mangosd`.`creature_movement_scripts` VALUES (5, 8, 1, 25, 0, 0,
 /********* Zanzil's Secret quest end RP ***************/
 UPDATE `zp_mangosd`.`quest_template` SET `CompleteScript`=621 WHERE  `entry`=621;
 -- add text
-REPLACE INTO `db_script_string` VALUES (2000006011, 'I\'m sure I can find a use for this mixture...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-REPLACE INTO `db_script_string` VALUES (2000006010, 'Thank you, $N.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+REPLACE INTO `zp_mangosd`.`db_script_string` VALUES (2000006011, 'I\'m sure I can find a use for this mixture...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+REPLACE INTO `zp_mangosd`.`db_script_string` VALUES (2000006010, 'Thank you, $N.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- add rp
 -- remove old if sql is run again
 DELETE FROM `zp_mangosd`.`quest_start_scripts` WHERE  `id`=621 LIMIT 2;
-REPLACE INTO `quest_end_scripts` VALUES (621, 1, 0, 0, 0, 0, 0, 0, 2000006010, 0, 0, 0, 0, 0, 0, 0, 'Zanzil\'s Secret - quest end say 1');
-REPLACE INTO `quest_end_scripts` VALUES (621, 5, 0, 0, 0, 0, 0, 0, 2000006011, 0, 0, 0, 0, 0, 0, 0, 'Zanzil\'s Secret - quest end say 2');
+REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (621, 1, 0, 0, 0, 0, 0, 0, 2000006010, 0, 0, 0, 0, 0, 0, 0, 'Zanzil\'s Secret - quest end say 1');
+REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (621, 5, 0, 0, 0, 0, 0, 0, 2000006011, 0, 0, 0, 0, 0, 0, 0, 'Zanzil\'s Secret - quest end say 2');
 
 -- Giant Yeti remove skinning when mob is alive
 UPDATE `zp_mangosd`.`creature_template` SET `unit_flags`=0 WHERE  `entry`=2251;
@@ -559,13 +559,13 @@ UPDATE `zp_mangosd`.`creature_template` SET `unit_flags`=0 WHERE  `entry`=2251;
 /********** The broken sigil, quest end RP ************/
 UPDATE `zp_mangosd`.`quest_template` SET `CompleteScript`=640 WHERE  `entry`=640;
 -- add text
-REPLACE INTO `db_script_string` VALUES (2000006012, 'Easier than I expected... the sigil of Thoradin is whole, once again.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+REPLACE INTO `zp_mangosd`.`db_script_string` VALUES (2000006012, 'Easier than I expected... the sigil of Thoradin is whole, once again.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- remove old if sql is run again
 DELETE FROM `zp_mangosd`.`quest_end_scripts` WHERE  `id`=640 LIMIT 3;
-REPLACE INTO `quest_end_scripts` VALUES (640, 8, 0, 0, 0, 0, 0, 0, 2000006012, 0, 0, 0, 0, 0, 0, 0, 'Tor\'gan - Say');
-REPLACE INTO `quest_end_scripts` VALUES (640, 8, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Tor\'gan - Emote Say');
-REPLACE INTO `quest_end_scripts` VALUES (640, 2, 15, 2152, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Tor\'gan- Craft Emote on Quest Complete');
+REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (640, 8, 0, 0, 0, 0, 0, 0, 2000006012, 0, 0, 0, 0, 0, 0, 0, 'Tor\'gan - Say');
+REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (640, 8, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Tor\'gan - Emote Say');
+REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (640, 2, 15, 2152, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Tor\'gan- Craft Emote on Quest Complete');
 
 /******** Lost but not forgotten - add missing cry emote ******/
 -- cry when the player turns in quest
@@ -719,6 +719,7 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720070, 'Blue and red.
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720071, '$N, that\'s it! I finally understand!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 5, 'J.D. Collie - Say 3');
 
 /***************** New debug table ****************/
+DROP TABLE `zp_charactersd`.`character_bugreport`;
 CREATE TABLE `zp_charactersd`.`character_bugreport` (
       `id` INT NOT NULL AUTO_INCREMENT,
       `creator` INT NOT NULL,
@@ -823,7 +824,7 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (45501, 60, -8649.72, 903.0
 
 -- remove all Young Murk Thresher(they were added in tbc for 1 quest) and add a coral shark to the water under theramore bridge.
 DELETE FROM `zp_mangosd`.`creature` WHERE `id` = 4388;
-REPLACE INTO `creature` VALUES (3033984, 5434, 1, 0, 0, -3954.87, -4672.61, -10.331, 0.799656, 360, 50, 0, 7139, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3033984, 5434, 1, 0, 0, -3954.87, -4672.61, -10.331, 0.799656, 360, 50, 0, 7139, 0, 0, 1);
 
 -- Spectral Projection, add AI, hp, mana armor
 UPDATE `zp_mangosd`.`creature_template` SET `maxhealth`=1371, `minmana`=899, `maxmana`=931, `armor`=1831, `ScriptName`='mob_spectral_projection' WHERE  `entry`=11263;
@@ -1271,9 +1272,9 @@ UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.2, `combat_rea
 UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.2, `combat_reach`=1.4 WHERE  `modelid`=15357;
 
 -- add ai
-REPLACE INTO `creature_ai_scripts` VALUES (1528601, 15286, 4, 0, 100, 0, 0, 0, 0, 0, 39, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Xil\'xix - Call for help on aggro');
-REPLACE INTO `creature_ai_scripts` VALUES (1528801, 15288, 4, 0, 100, 0, 0, 0, 0, 0, 39, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Aluntir - Call for help on aggro');
-REPLACE INTO `creature_ai_scripts` VALUES (1529001, 15290, 4, 0, 100, 0, 0, 0, 0, 0, 39, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Arakis - Call for help on aggro');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1528601, 15286, 4, 0, 100, 0, 0, 0, 0, 0, 39, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Xil\'xix - Call for help on aggro');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1528801, 15288, 4, 0, 100, 0, 0, 0, 0, 0, 39, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Aluntir - Call for help on aggro');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1529001, 15290, 4, 0, 100, 0, 0, 0, 0, 0, 39, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Arakis - Call for help on aggro');
 
 /************ Misc *******************/
 -- stonemason cloak should only drop from defias miner, remove from reference loot table
@@ -2275,12 +2276,14 @@ REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES ('33246', '12476', '1', '7974', '0', '3140.91', '-3777.18', '122.477', '3.85199', '600', '0', '0', '600000', '24860', '0', '0');
 
 -- Create tables for the nex exclusive pool system.
+DROP TABLE `zp_mangosd`.`exclusive_pool_creature`;
 CREATE TABLE `zp_mangosd`.`exclusive_pool_creature` (
       `guid` INT NOT NULL,
       `poolID` INT NULL,
       `groupID` INT NULL DEFAULT 0,
       PRIMARY KEY (`guid`));
 
+DROP TABLE `zp_mangosd`.`exclusive_pool_spot`;
 CREATE TABLE `zp_mangosd`.`exclusive_pool_spot` (
       `id` INT NOT NULL AUTO_INCREMENT,
       `poolID` INT NULL,
@@ -2291,11 +2294,13 @@ CREATE TABLE `zp_mangosd`.`exclusive_pool_spot` (
       `orientation` FLOAT NULL,
       PRIMARY KEY (`id`));
 
+DROP TABLE `zp_mangosd`.`exclusive_pool`;
 CREATE TABLE `zp_mangosd`.`exclusive_pool` (
       `poolID` INT NOT NULL,
       `respawnTime` INT NULL,
       PRIMARY KEY (`poolID`));
 
+DROP TABLE `zp_mangosd`.`exclusive_pool_respawn`;
 CREATE TABLE `zp_mangosd`.`exclusive_pool_respawn` (
       `poolID` INT NOT NULL,
       `spawntime` INT NULL,
