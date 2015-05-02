@@ -282,25 +282,25 @@ REPLACE INTO `zp_mangosd`.`creature` VALUES (3033968, 10481, 289, 0, 0, 199.619,
 REPLACE INTO `zp_mangosd`.`creature` VALUES (3033969, 10485, 289, 0, 0, 199.619, 92.1293, 104.244, 1.62383, 7200, 5, 0, 2200, 0, 0, 1);
 
 /*************** Delete old mobs in the ghoul room ********************/
-DELETE FROM `zp_mangosd`.`creature` WHERE  `id`=48773 LIMIT 1;
-DELETE FROM `zp_mangosd`.`creature` WHERE  `id`=48772 LIMIT 1;
-DELETE FROM `zp_mangosd`.`creature` WHERE  `id`=48770 LIMIT 1;
-DELETE FROM `zp_mangosd`.`creature` WHERE  `id`=91415 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=48773 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=48772 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=48770 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=91415 LIMIT 1;
 
-DELETE FROM `zp_mangosd`.`creature` WHERE  `id`=48586 LIMIT 1;
-DELETE FROM `zp_mangosd`.`creature` WHERE  `id`=91408 LIMIT 1;
-DELETE FROM `zp_mangosd`.`creature` WHERE  `id`=48765 LIMIT 1;
-DELETE FROM `zp_mangosd`.`creature` WHERE  `id`=48761 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=48586 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=91408 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=48765 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=48761 LIMIT 1;
 
-DELETE FROM `zp_mangosd`.`creature` WHERE  `id`=48570 LIMIT 1;
-DELETE FROM `zp_mangosd`.`creature` WHERE  `id`=91409 LIMIT 1;
-DELETE FROM `zp_mangosd`.`creature` WHERE  `id`=91412 LIMIT 1;
-DELETE FROM `zp_mangosd`.`creature` WHERE  `id`=48585 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=48570 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=91409 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=91412 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=48585 LIMIT 1;
 
-DELETE FROM `zp_mangosd`.`creature` WHERE  `id`=48563 LIMIT 1;
-DELETE FROM `zp_mangosd`.`creature` WHERE  `id`=91417 LIMIT 1;
-DELETE FROM `zp_mangosd`.`creature` WHERE  `id`=91418 LIMIT 1;
-DELETE FROM `zp_mangosd`.`creature` WHERE  `id`=91419 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=48563 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=91417 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=91418 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=91419 LIMIT 1;
 
 /**************** Pools for Ghoul room **********************/
 -- add each master pool
