@@ -2464,3 +2464,7 @@ UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=3029676;
 /**** -- ai for timmy DANGEROUS DO NOT RUN THIS! CRASHES SERVER!
 UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_town_crier' WHERE  `entry`=8666;
 **********/
+
+-- Adjustments for Garrs hitbox and combat reach.
+UPDATE `zp_mangosd`.`creature_model_info` SET `combat_reach`='4.167' WHERE `modelid`='12110';
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`='3' WHERE `modelid`='12110';
