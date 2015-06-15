@@ -97,7 +97,7 @@ REPLACE INTO `zp_mangosd`.`spell_area` VALUES (24412, 3358, 0, 0, 0, 0, 0, 2, 0)
 REPLACE INTO `zp_mangosd`.`spell_area` VALUES (24413, 3358, 0, 0, 0, 0, 0, 2, 0);
 REPLACE INTO `zp_mangosd`.`spell_area` VALUES (24414, 3358, 0, 0, 0, 0, 0, 2, 0);
 
--- Table for defining event resources.
+-- Tables for defining and keeping track of event resources.
 CREATE TABLE `zp_mangosd`.`event_resource` (
     `id` INT NOT NULL,
     `event_id` INT NOT NULL,
@@ -112,3 +112,18 @@ CREATE TABLE `zp_charactersd`.`event_resource_count` (
       `event_id` INT NOT NULL,
       `resource_count` INT NOT NULL,
       PRIMARY KEY (`id`, `event_id`));
+
+ALTER TABLE `zp_charactersd`.`event_resource_count` 
+CHANGE COLUMN `id` `id` INT(11) UNSIGNED NOT NULL ,
+CHANGE COLUMN `event_id` `event_id` INT(11) UNSIGNED NOT NULL ,
+CHANGE COLUMN `resource_count` `resource_count` INT(11) UNSIGNED NOT NULL ;
+
+ALTER TABLE `zp_mangosd`.`event_resource` 
+CHANGE COLUMN `id` `id` INT(11) UNSIGNED NOT NULL ,
+CHANGE COLUMN `event_id` `event_id` INT(11) UNSIGNED NOT NULL ,
+CHANGE COLUMN `resource_id` `resource_id` INT(11) UNSIGNED NOT NULL ,
+CHANGE COLUMN `resource_full_count` `resource_full_count` INT(11) UNSIGNED NOT NULL ;
+
+ALTER TABLE `zp_charactersd`.`event_resource_count` 
+ADD COLUMN `resource_id` VARCHAR(45) NULL AFTER `event_id`;
+
