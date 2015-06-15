@@ -74,3 +74,19 @@ UPDATE `zp_mangosd`.`creature_template` SET `armor`='3791' WHERE (`entry`='12479
 
 -- increase respawn timer of ED trash to 30min
 update `zp_mangosd`.`creature` set `spawntimesecs`='1800' where id in ('5317','5319','5320') or id between '12474' and '12479';
+
+-- add area req for all items saying they're only usable in WSG
+REPLACE INTO `zp_mangosd`.`spell_area` VALUES (23540, 3277, 0, 0, 0, 0, 0, 2, 0);
+REPLACE INTO `zp_mangosd`.`spell_area` VALUES (23541, 3277, 0, 0, 0, 0, 0, 2, 0);
+REPLACE INTO `zp_mangosd`.`spell_area` VALUES (23542, 3277, 0, 0, 0, 0, 0, 2, 0);
+REPLACE INTO `zp_mangosd`.`spell_area` VALUES (23567, 3277, 0, 0, 0, 0, 0, 2, 0);
+REPLACE INTO `zp_mangosd`.`spell_area` VALUES (23568, 3277, 0, 0, 0, 0, 0, 2, 0);
+REPLACE INTO `zp_mangosd`.`spell_area` VALUES (23569, 3277, 0, 0, 0, 0, 0, 2, 0);
+
+-- add area req for all items saying they're only usable in AB
+REPLACE INTO `zp_mangosd`.`spell_area` VALUES (24409, 3358, 0, 0, 0, 0, 0, 2, 0);
+REPLACE INTO `zp_mangosd`.`spell_area` VALUES (24410, 3358, 0, 0, 0, 0, 0, 2, 0);
+REPLACE INTO `zp_mangosd`.`spell_area` VALUES (24411, 3358, 0, 0, 0, 0, 0, 2, 0);
+REPLACE INTO `zp_mangosd`.`spell_area` VALUES (24412, 3358, 0, 0, 0, 0, 0, 2, 0);
+REPLACE INTO `zp_mangosd`.`spell_area` VALUES (24413, 3358, 0, 0, 0, 0, 0, 2, 0);
+REPLACE INTO `zp_mangosd`.`spell_area` VALUES (24414, 3358, 0, 0, 0, 0, 0, 2, 0);
