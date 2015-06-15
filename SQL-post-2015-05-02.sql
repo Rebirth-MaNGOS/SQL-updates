@@ -66,3 +66,11 @@ REPLACE INTO `zp_mangosd`.`spell_chain` VALUES (19440, 19438, 7812, 3, 0);
 REPLACE INTO `zp_mangosd`.`spell_chain` VALUES (19441, 19440, 7812, 4, 0);
 REPLACE INTO `zp_mangosd`.`spell_chain` VALUES (19442, 19441, 7812, 5, 0);
 REPLACE INTO `zp_mangosd`.`spell_chain` VALUES (19443, 19442, 7812, 6, 0);
+
+-- add armor to Hinterland's ED trash (SQL from muggle)
+UPDATE `zp_mangosd`.`creature_template` SET `armor`='4391' WHERE (`entry`='12477') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`='3316' WHERE (`entry`='12478') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`='3791' WHERE (`entry`='12479') limit 1;
+
+-- increase respawn timer of ED trash to 30min
+update `zp_mangosd`.`creature` set `spawntimesecs`='1800' where id in ('5317','5319','5320') or id between '12474' and '12479';
