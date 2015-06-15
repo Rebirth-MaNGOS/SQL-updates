@@ -66,3 +66,6 @@ REPLACE INTO `zp_mangosd`.`spell_chain` VALUES (19440, 19438, 7812, 3, 0);
 REPLACE INTO `zp_mangosd`.`spell_chain` VALUES (19441, 19440, 7812, 4, 0);
 REPLACE INTO `zp_mangosd`.`spell_chain` VALUES (19442, 19441, 7812, 5, 0);
 REPLACE INTO `zp_mangosd`.`spell_chain` VALUES (19443, 19442, 7812, 6, 0);
+
+-- Linking for the horde Dreak'thar in AV
+REPLACE INTO zp_mangosd.creature_formations (`leaderGUID`, `memberGUID`, `dist`, `angle`, `groupAI`) VALUES ('150143', '150150', '5', '0', '2'), ('150143', '150151', '5', '0', '2'), ('150143', '150153', '5', '0', '2'), ('150143', '150152', '5', '0', '2'), ('150143', '3000730', '5', '0', '2'), ('150143', '54299', '5', '0', '2'), ('150143', '3000732', '5', '0', '2'), ('150143', '300731', '5', '0', '2'),('150143', '150143', '5', '0', '2');
