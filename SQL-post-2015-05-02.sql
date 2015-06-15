@@ -96,3 +96,19 @@ REPLACE INTO `zp_mangosd`.`spell_area` VALUES (24411, 3358, 0, 0, 0, 0, 0, 2, 0)
 REPLACE INTO `zp_mangosd`.`spell_area` VALUES (24412, 3358, 0, 0, 0, 0, 0, 2, 0);
 REPLACE INTO `zp_mangosd`.`spell_area` VALUES (24413, 3358, 0, 0, 0, 0, 0, 2, 0);
 REPLACE INTO `zp_mangosd`.`spell_area` VALUES (24414, 3358, 0, 0, 0, 0, 0, 2, 0);
+
+-- Table for defining event resources.
+CREATE TABLE `zp_mangosd`.`event_resource` (
+    `id` INT NOT NULL,
+    `event_id` INT NOT NULL,
+    `resource_id` INT NOT NULL,
+    `resource_full_count` INT NOT NULL,
+    `resource_description` VARCHAR(250) NULL,
+    PRIMARY KEY (`id`, `resource_id`, `event_id`),
+    UNIQUE INDEX `id_UNIQUE` (`id` ASC));
+
+CREATE TABLE `zp_charactersd`.`event_resource_count` (
+      `id` INT NOT NULL,
+      `event_id` INT NOT NULL,
+      `resource_count` INT NOT NULL,
+      PRIMARY KEY (`id`, `event_id`));
