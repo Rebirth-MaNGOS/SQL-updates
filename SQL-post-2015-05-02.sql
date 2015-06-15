@@ -72,3 +72,11 @@ REPLACE INTO zp_mangosd.creature_formations (`leaderGUID`, `memberGUID`, `dist`,
 
 -- Linking for the alliance Vanndaran in AV
 REPLACE INTO zp_mangosd.creature_formations (`leaderGUID`, `memberGUID`, `dist`, `angle`, `groupAI`) VALUES ('150142', '150147', '5', '0', '2'), ('150142', '150146', '5', '0', '2'), ('150142', '150148', '5', '0', '2'), ('150142', '150149', '5', '0', '2'), ('150142', '3000729', '5', '0', '2'), ('150142', '54296', '5', '0', '2'), ('150142', '54294', '5', '0', '2'), ('150142', '53621', '5', '0', '2'),('150142', '54295', '5', '0', '2'), ('150142', '150142', '5', '0', '2');
+
+-- add armor to Hinterland's ED trash (SQL from muggle)
+UPDATE `zp_mangosd`.`creature_template` SET `armor`='4391' WHERE (`entry`='12477') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`='3316' WHERE (`entry`='12478') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`='3791' WHERE (`entry`='12479') limit 1;
+
+-- increase respawn timer of ED trash to 30min
+update `zp_mangosd`.`creature` set `spawntimesecs`='1800' where id in ('5317','5319','5320') or id between '12474' and '12479';
