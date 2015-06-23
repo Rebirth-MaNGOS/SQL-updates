@@ -137,6 +137,7 @@ REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (27860, 0, 0, 0, 0, 'Blade o
 REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (13897, 0, 0, 0, 0, 'Enchant - Fiery Weapon');
 REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (20004, 0, 0, 0, 0, 'Enchant - Life Steal');
 REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (18818, 0, 0, 0, 0, 'Skullflame Shield - Flamestrike');
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (23781, 0, 0, 0, 0, 'Aegis of Preservation - Aegis Heal');
 
 -- Drain life should have 1:1 coef from spelldmg
 REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (16414, 1, 0, 0, 0, 'Item - Wraith Scythe');
