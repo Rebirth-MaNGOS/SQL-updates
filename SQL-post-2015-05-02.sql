@@ -96,3 +96,10 @@ REPLACE INTO `zp_mangosd`.`spell_area` VALUES (24411, 3358, 0, 0, 0, 0, 0, 2, 0)
 REPLACE INTO `zp_mangosd`.`spell_area` VALUES (24412, 3358, 0, 0, 0, 0, 0, 2, 0);
 REPLACE INTO `zp_mangosd`.`spell_area` VALUES (24413, 3358, 0, 0, 0, 0, 0, 2, 0);
 REPLACE INTO `zp_mangosd`.`spell_area` VALUES (24414, 3358, 0, 0, 0, 0, 0, 2, 0);
+
+-- Baron Kazum armor
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=5840 WHERE  `entry`=15205;
+-- Prince Skaldrenox armor
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=4691 WHERE  `entry`=15203;
+-- High Marshal Whirlaxis
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=4691 WHERE  `entry`=15204;
