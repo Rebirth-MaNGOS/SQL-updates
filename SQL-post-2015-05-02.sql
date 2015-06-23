@@ -103,3 +103,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `armor`=5840 WHERE  `entry`=15205;
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=4691 WHERE  `entry`=15203;
 -- High Marshal Whirlaxis
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=4691 WHERE  `entry`=15204;
+
+-- Bloodsail Warlock, removed defias quote
+DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=156404;
