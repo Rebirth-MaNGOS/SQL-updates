@@ -128,3 +128,46 @@ UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param1`=8281 WHERE  `id`=
 UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param1`=8281 WHERE  `id`=530801;
 -- Ressan the Needler
 UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param1`=8281 WHERE  `id`=1035701;
+
+/***************** Spellpower scaling *************/
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (7712, 0, 0, 0, 0, 'Items - Fire Strike');
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (6297, 0, 0, 0, 0, 'Items - Fiery Blaze');
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (16614, 0, 0, 0, 0, 'Storm Gauntlets - Lightning Strike');
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (27860, 0, 0, 0, 0, 'Blade of Eternal Darkness - Engulfing Shadows');
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (13897, 0, 0, 0, 0, 'Enchant - Fiery Weapon');
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (20004, 0, 0, 0, 0, 'Enchant - Life Steal');
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (18818, 0, 0, 0, 0, 'Skullflame Shield - Flamestrike');
+
+-- Drain life should have 1:1 coef from spelldmg
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (16414, 1, 0, 0, 0, 'Item - Wraith Scythe');
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (26693, 1, 0, 0, 0, 'Item - Neretzek, The Blood Drinker');
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (18817, 1, 0, 0, 0, 'Item - Skullflame Shield, Drain Life');
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (24585, 1, 0, 0, 0, 'Item - Ancient Hakkari Manslayer');
+-- Doesn't get 100% more dmg/heal but it's more than before
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (16375, 1, 0, 0, 0, 'Item - Faintly Glowing Skull');
+-- drains 4times so 25% coef each tick
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (16608, 0, 0.25, 0, 0, 'Item - Demon Forged Breastplate');
+
+-- Rogue poisons should have 5% sp coef
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (2818, 0, 0.05, 0, 0, 'Rogue - Deadly Poison Rank 1');
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (2819, 0, 0.05, 0, 0, 'Rogue - Deadly Poison Rank 2');
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (11353, 0, 0.05, 0, 0, 'Rogue - Deadly Poison Rank 3');
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (11354, 0, 0.05, 0, 0, 'Rogue - Deadly Poison Rank 4');
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (25349, 0, 0.05, 0, 0, 'Rogue - Deadly Poison Rank 5');
+
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (8680, 0.05, 0, 0, 0, 'Rogue - Instant Poison Rank 1');
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (8685, 0.05, 0, 0, 0, 'Rogue - Instant Poison Rank 2');
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (8689, 0.05, 0, 0, 0, 'Rogue - Instant Poison Rank 3');
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (11335, 0.05, 0, 0, 0, 'Rogue - Instant Poison Rank 4');
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (11336, 0.05, 0, 0, 0, 'Rogue - Instant Poison Rank 5');
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (11337, 0.05, 0, 0, 0, 'Rogue - Instant Poison Rank 6');
+
+-- Hunter Arcane shot
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (3044, 0.4285, 0, 0, 0, 'Hunter - Arcane Shot Rankt 1');
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (14281, 0.4285, 0, 0, 0, 'Hunter - Arcane Shot Rankt 2');
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (14282, 0.4285, 0, 0, 0, 'Hunter - Arcane Shot Rankt 3');
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (14283, 0.4285, 0, 0, 0, 'Hunter - Arcane Shot Rankt 4');
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (14284, 0.4285, 0, 0, 0, 'Hunter - Arcane Shot Rankt 5');
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (14285, 0.4285, 0, 0, 0, 'Hunter - Arcane Shot Rankt 6');
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (14286, 0.4285, 0, 0, 0, 'Hunter - Arcane Shot Rankt 7');
+REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (14287, 0.4285, 0, 0, 0, 'Hunter - Arcane Shot Rankt 8');
