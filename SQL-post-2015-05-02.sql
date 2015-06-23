@@ -106,3 +106,25 @@ UPDATE `zp_mangosd`.`creature_template` SET `armor`=4691 WHERE  `entry`=15204;
 
 -- Bloodsail Warlock, removed defias quote
 DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=156404;
+
+/************* Added Sonic Burst to 10 mobs that SOMEONE had changed their spell to Dualwield (674) ***********/
+-- Subterranean Diemetradon
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param1`=8281 WHERE  `id`=1332301;
+-- Shrike Bat
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param1`=8281 WHERE  `id`=486101;
+-- Putrid Shrieker
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param1`=8281 WHERE  `id`=853501;
+-- Dark Screecher
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param1`=8281 WHERE  `id`=892702;
+-- Hatecrest Screamer
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param1`=8281 WHERE  `id`=533501;
+-- Monstrous Plaguebat
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param1`=8281 WHERE  `id`=860201;
+-- Vale Screecher
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param1`=8281 WHERE  `id`=530701;
+-- Greater Kraul Bat
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param1`=8281 WHERE  `id`=453901;
+-- Rogue Vale Screecher
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param1`=8281 WHERE  `id`=530801;
+-- Ressan the Needler
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param1`=8281 WHERE  `id`=1035701;
