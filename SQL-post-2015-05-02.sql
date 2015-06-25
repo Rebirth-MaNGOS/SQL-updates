@@ -172,3 +172,6 @@ REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (14284, 0.4285, 0, 0, 0, 'Hu
 REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (14285, 0.4285, 0, 0, 0, 'Hunter - Arcane Shot Rankt 6');
 REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (14286, 0.4285, 0, 0, 0, 'Hunter - Arcane Shot Rankt 7');
 REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (14287, 0.4285, 0, 0, 0, 'Hunter - Arcane Shot Rankt 8');
+
+-- should be 100% drop, Nightmare Engulfed Object
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=100 WHERE `item`=20644;
