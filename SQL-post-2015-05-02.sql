@@ -125,7 +125,7 @@ CHANGE COLUMN `resource_id` `resource_id` INT(11) UNSIGNED NOT NULL ,
 CHANGE COLUMN `resource_full_count` `resource_full_count` INT(11) UNSIGNED NOT NULL ;
 
 ALTER TABLE `zp_charactersd`.`event_resource_count` 
-ADD COLUMN `resource_id` VARCHAR(45) NULL AFTER `event_id`;
+ADD COLUMN `resource_id` INT(11) UNSIGNED NOT NULL AFTER `event_id`;
 
 
 -- Defines for the different resources needed during AQ.
