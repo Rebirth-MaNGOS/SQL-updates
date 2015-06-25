@@ -186,3 +186,20 @@ UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_grd_rawtar' WHERE 
 UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_fish_lindo' WHERE `entry`='15534';
 UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_chief_sharpclaw' WHERE `entry`='15535';
 UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_sgt_maj_germaine' WHERE `entry`='15445';
+
+-- Alliance AQ opening event quests made repeatable
+
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8493 LIMIT 1;
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8495 LIMIT 1;
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8518 LIMIT 1;
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8506 LIMIT 1;
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8504 LIMIT 1;
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8527 LIMIT 1;
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8525 LIMIT 1;
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8500 LIMIT 1;
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8529 LIMIT 1;
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8521 LIMIT 1;
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8510 LIMIT 1;
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8514 LIMIT 1;
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8516 LIMIT 1;
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8523 LIMIT 1;
