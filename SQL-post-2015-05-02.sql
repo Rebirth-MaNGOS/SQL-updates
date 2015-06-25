@@ -211,3 +211,18 @@ ALTER TABLE `zp_charactersd`.`event_resource_count`
 DROP PRIMARY KEY,
 ADD PRIMARY KEY (`id`, `event_id`, `resource_id`);
 
+-- Horde AQ opening event quests made repeatable
+
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8610 LIMIT 1;
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8591 LIMIT 1;
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8589 LIMIT 1;
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8533 LIMIT 1;
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8583 LIMIT 1;
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8605 LIMIT 1;
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8608 LIMIT 1;
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8543 LIMIT 1;
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8601 LIMIT 1;
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8581 LIMIT 1;
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8612 LIMIT 1;
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8614 LIMIT 1;
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8616 LIMIT 1;
