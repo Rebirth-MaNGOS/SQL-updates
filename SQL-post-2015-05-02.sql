@@ -186,3 +186,8 @@ UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_grd_rawtar' WHERE 
 UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_fish_lindo' WHERE `entry`='15534';
 UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_chief_sharpclaw' WHERE `entry`='15535';
 UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_sgt_maj_germaine' WHERE `entry`='15445';
+
+-- Update to the index of the event_resource_count table
+ALTER TABLE `zp_charactersd`.`event_resource_count` 
+DROP PRIMARY KEY,
+ADD PRIMARY KEY (`id`, `event_id`, `resource_id`);
