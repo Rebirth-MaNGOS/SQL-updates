@@ -125,7 +125,7 @@ CHANGE COLUMN `resource_id` `resource_id` INT(11) UNSIGNED NOT NULL ,
 CHANGE COLUMN `resource_full_count` `resource_full_count` INT(11) UNSIGNED NOT NULL ;
 
 ALTER TABLE `zp_charactersd`.`event_resource_count` 
-ADD COLUMN `resource_id` VARCHAR(45) NULL AFTER `event_id`;
+ADD COLUMN `resource_id` INT(11) UNSIGNED NOT NULL AFTER `event_id`;
 
 
 -- Defines for the different resources needed during AQ.
@@ -187,6 +187,7 @@ UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_fish_lindo' WHERE 
 UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_chief_sharpclaw' WHERE `entry`='15535';
 UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_sgt_maj_germaine' WHERE `entry`='15445';
 
+
 -- Alliance AQ opening event quests made repeatable
 
 UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8493 LIMIT 1;
@@ -203,3 +204,10 @@ UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8510 LI
 UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8514 LIMIT 1;
 UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8516 LIMIT 1;
 UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8523 LIMIT 1;
+
+-- Update to the index of the event_resource_count table
+
+ALTER TABLE `zp_charactersd`.`event_resource_count` 
+DROP PRIMARY KEY,
+ADD PRIMARY KEY (`id`, `event_id`, `resource_id`);
+
