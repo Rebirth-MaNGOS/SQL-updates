@@ -155,3 +155,34 @@ INSERT INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `res
 INSERT INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('23', '1', '23', '250000', 'Wool Bandage');
 INSERT INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('24', '1', '24', '250000', 'Mageweave Bandage');
 
+-- Set the AI-scripts for the AQ turnin NPCs
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_sgt_stonebrow' WHERE `entry`='15383';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_cpr_carnes' WHERE `entry`='15431';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_dame_twinbraid' WHERE `entry`='15432';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_pvt_draxlegauge' WHERE `entry`='15434';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_master_nightsong' WHERE `entry`='15437';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_bonnie_stoneflayer' WHERE `entry`='15446';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_pvt_porter' WHERE `entry`='15448';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_marta_finespindle' WHERE `entry`='15450';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_sent_silversky' WHERE `entry`='15451';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_nrs_stonefield' WHERE `entry`='15452';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_kpr_moonshade' WHERE `entry`='15453';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_slicky' WHERE `entry`='15455';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_sarah_sadwhistle' WHERE `entry`='15456';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_hntr_swiftriver' WHERE `entry`='15457';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_miner_cromwell' WHERE `entry`='15459';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_grunt_maug' WHERE `entry`='15460';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_snr_srg_tkelah' WHERE `entry`='15469';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_hrb_proudfeather' WHERE `entry`='15477';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_batrdr_pelikeiki' WHERE `entry`='15508';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_apo_jezel' WHERE `entry`='15512';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_sknr_jamani' WHERE `entry`='15515';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_sgt_umala' WHERE `entry`='15522';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_dr_serratus' WHERE `entry`='15525';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_hlr_longrunner' WHERE `entry`='15528';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_ldy_callow' WHERE `entry`='15529';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_grd_clayhoof' WHERE `entry`='15532';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_grd_rawtar' WHERE `entry`='15533';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_fish_lindo' WHERE `entry`='15534';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_chief_sharpclaw' WHERE `entry`='15535';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_sgt_maj_germaine' WHERE `entry`='15445';
