@@ -418,3 +418,11 @@ REPLACE INTO `zp_mangosd`.`creature_questrelation` (`id`, `quest`) VALUES (15734
 REPLACE INTO `zp_mangosd`.`creature_questrelation` (`id`, `quest`) VALUES (15734, 8834);
 REPLACE INTO `zp_mangosd`.`creature_involvedrelation` (`id`, `quest`) VALUES (15734, 8812);
 REPLACE INTO `zp_mangosd`.`creature_involvedrelation` (`id`, `quest`) VALUES (15734, 8834);
+
+-- Alliance Commendation Officers
+
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12638, 15731, 0, 0, 0, -4934.95, -1197.5, 501.549, 2.56442, 25, 5, 0, 6400, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12639, 15733, 0, 0, 0, -4952.31, -1177.03, 501.55, 5.48784, 25, 5, 0, 789, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12640, 15734, 0, 0, 0, -4973.53, -1196.27, 501.662, 1.89291, 25, 5, 0, 2400, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12641, 15735, 0, 0, 0, -4935.21, -1213.44, 501.642, 3.27461, 25, 5, 0, 789, 0, 0, 0);
+
