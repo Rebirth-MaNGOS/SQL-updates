@@ -343,3 +343,18 @@ VALUES ('29902', '180800', '0', '-4937.29', '-1282.74', '501.672', '2.26893', '0
 -- Update to the position of the Alliance herb resource.
 UPDATE zp_mangosd.gameobject SET position_x = position_x + 1.989258, position_y = position_y + -1.519166 WHERE guid BETWEEN 29907 AND 29911;
 
+-- Alliance bandage supplies
+
+REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (29912, 180678, 0, -4974.11, -1148.22, 510.871, 2.26, 0, 0, 0, 0, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (29913, 180677, 0, -4975.65, -1147.27, 509.251, 2.28638, 0, 0, 0.909961, 0.414694, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (29914, 180676, 0, -4982.78, -1136.1, 501.66, 2.28638, 0, 0, 0.909961, 0.414694, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (29915, 180675, 0, -4969.11, -1143.75, 509.251, 2.28638, 0, 0, 0.909961, 0.414694, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (29916, 180674, 0, -4968.41, -1152.62, 501.926, 2.28638, 0, 0, 0.909961, 0.414694, 25, 100, 1);
+
+-- Alliance Skin supplies
+
+REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (29921, 180696, 0, -4958.51, -1179.32, 501.659, 2.26893, 0, 0, 0, 0, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (29920, 180695, 0, -4958.51, -1179.32, 501.659, 2.26893, 0, 0, 0, 0, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (29919, 180694, 0, -4958.51, -1179.32, 501.659, 2.26893, 0, 0, 0, 0, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (29918, 180693, 0, -4958.51, -1179.32, 501.659, 2.26893, 0, 0, 0, 0, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (29917, 180692, 0, -4958.51, -1179.32, 501.659, 2.26893, 0, 0, 0, 0, 25, 100, 1);
