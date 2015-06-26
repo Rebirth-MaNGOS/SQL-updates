@@ -100,6 +100,7 @@ REPLACE INTO `zp_mangosd`.`spell_area` VALUES (24414, 3358, 0, 0, 0, 0, 0, 2, 0)
 -- Tables for defining and keeping track of event resources.
 DROP TABLE IF EXISTS zp_mangosd.event_resource;
 DROP TABLE IF EXISTS zp_charactersd.event_resource_count;
+DROP TABLE IF EXISTS zp_mangosd.event_resource_gameobject;
 CREATE TABLE `zp_mangosd`.`event_resource` (
     `id` INT NOT NULL,
     `event_id` INT NOT NULL,
@@ -114,6 +115,15 @@ CREATE TABLE `zp_charactersd`.`event_resource_count` (
       `event_id` INT NOT NULL,
       `resource_count` INT NOT NULL,
       PRIMARY KEY (`id`, `event_id`));
+
+CREATE TABLE `zp_mangosd`.`event_resource_gameobject` (
+      `id` INT UNSIGNED NOT NULL,
+      `event_id` INT UNSIGNED NOT NULL,
+      `resource_id` INT UNSIGNED NOT NULL,
+      `resource_limit` INT UNSIGNED NOT NULL,
+      `object_guid` INT UNSIGNED NOT NULL,
+      PRIMARY KEY (`id`, `event_id`, `resource_id`),
+      UNIQUE INDEX `id_UNIQUE` (`id` ASC));
 
 ALTER TABLE `zp_charactersd`.`event_resource_count` 
 CHANGE COLUMN `id` `id` INT(11) UNSIGNED NOT NULL ,
@@ -375,3 +385,4 @@ REPLACE INTO `zp_mangosd`.`creature_template_addon` (`entry`, `mount`, `bytes1`,
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12635, 15539, 0, 0, 1411, -4981.88, -1218.34, 501.673, 3.83461, 25, 5, 0, 1800, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12636, 5595, 0, 0, 783, -4982.99, -1216.14, 501.673, 3.83461, 25, 5, 0, 5194, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12637, 5595, 0, 0, 783, -4979.93, -1219.91, 501.673, 3.82675, 25, 5, 0, 5194, 0, 0, 0);
+
