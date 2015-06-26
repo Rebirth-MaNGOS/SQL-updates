@@ -129,31 +129,31 @@ ADD COLUMN `resource_id` INT(11) UNSIGNED NOT NULL AFTER `event_id`;
 
 
 -- Defines for the different resources needed during AQ.
-REPLACE INTO INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('0', '1', '0', '90000', 'Copper Bar');
-REPLACE INTO INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('1', '1', '1', '26000', 'Purple Lotus');
-REPLACE INTO INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('2', '1', '2', '80000', 'Thick Leather');
-REPLACE INTO INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('3', '1', '3', '17000', 'Spotted Yellowtail');
-REPLACE INTO INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('4', '1', '4', '400000', 'Runecloth Bandage');
-REPLACE INTO INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('5', '1', '5', '28000', 'Iron Bar');
-REPLACE INTO INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('6', '1', '6', '24000', 'Thorium Bar');
-REPLACE INTO INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('7', '1', '7', '20000', 'Artha\'s Tears');
-REPLACE INTO INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('8', '1', '8', '33000', 'Stranglekelp');
-REPLACE INTO INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('9', '1', '9', '180000', 'Light Leather');
-REPLACE INTO INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('10', '1', '10', '110000', 'Medium Leather');
-REPLACE INTO INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('11', '1', '11', '20000', 'Roast Raptor');
-REPLACE INTO INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('12', '1', '12', '14000', 'Rainbow Fin Albacore');
-REPLACE INTO INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('13', '1', '13', '800000', 'Linen Bandage');
-REPLACE INTO INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('14', '1', '14', '600000', 'Silk Bandage');
-REPLACE INTO INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('15', '1', '15', '22000', 'Tin Bar');
-REPLACE INTO INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('16', '1', '16', '18000', 'Mithril Bar');
-REPLACE INTO INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('17', '1', '17', '96000', 'Peacebloom');
-REPLACE INTO INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('18', '1', '18', '19000', 'Firebloom');
-REPLACE INTO INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('19', '1', '19', '60000', 'Heavy Leather');
-REPLACE INTO INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('20', '1', '20', '60000', 'Rugged Leather');
-REPLACE INTO INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('21', '1', '21', '10000', 'Lean Wolf Steak');
-REPLACE INTO INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('22', '1', '22', '10000', 'Baked Salmon');
-REPLACE INTO INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('23', '1', '23', '250000', 'Wool Bandage');
-REPLACE INTO INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('24', '1', '24', '250000', 'Mageweave Bandage');
+REPLACE INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('0', '1', '0', '90000', 'Copper Bar');
+REPLACE INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('1', '1', '1', '26000', 'Purple Lotus');
+REPLACE INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('2', '1', '2', '80000', 'Thick Leather');
+REPLACE INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('3', '1', '3', '17000', 'Spotted Yellowtail');
+REPLACE INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('4', '1', '4', '400000', 'Runecloth Bandage');
+REPLACE INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('5', '1', '5', '28000', 'Iron Bar');
+REPLACE INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('6', '1', '6', '24000', 'Thorium Bar');
+REPLACE INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('7', '1', '7', '20000', 'Artha\'s Tears');
+REPLACE INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('8', '1', '8', '33000', 'Stranglekelp');
+REPLACE INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('9', '1', '9', '180000', 'Light Leather');
+REPLACE INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('10', '1', '10', '110000', 'Medium Leather');
+REPLACE INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('11', '1', '11', '20000', 'Roast Raptor');
+REPLACE INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('12', '1', '12', '14000', 'Rainbow Fin Albacore');
+REPLACE INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('13', '1', '13', '800000', 'Linen Bandage');
+REPLACE INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('14', '1', '14', '600000', 'Silk Bandage');
+REPLACE INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('15', '1', '15', '22000', 'Tin Bar');
+REPLACE INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('16', '1', '16', '18000', 'Mithril Bar');
+REPLACE INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('17', '1', '17', '96000', 'Peacebloom');
+REPLACE INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('18', '1', '18', '19000', 'Firebloom');
+REPLACE INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('19', '1', '19', '60000', 'Heavy Leather');
+REPLACE INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('20', '1', '20', '60000', 'Rugged Leather');
+REPLACE INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('21', '1', '21', '10000', 'Lean Wolf Steak');
+REPLACE INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('22', '1', '22', '10000', 'Baked Salmon');
+REPLACE INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('23', '1', '23', '250000', 'Wool Bandage');
+REPLACE INTO `zp_mangosd`.`event_resource` (`id`, `event_id`, `resource_id`, `resource_full_count`, `resource_description`) VALUES ('24', '1', '24', '250000', 'Mageweave Bandage');
 
 -- Set the AI-scripts for the AQ turnin NPCs
 UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_sgt_stonebrow' WHERE `entry`='15383';
