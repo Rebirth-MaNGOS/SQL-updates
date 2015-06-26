@@ -426,3 +426,9 @@ REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12640, 15734, 0, 0, 0, -4973.53, -1196.27, 501.662, 1.89291, 25, 5, 0, 2400, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12641, 15735, 0, 0, 0, -4935.21, -1213.44, 501.642, 3.27461, 25, 5, 0, 789, 0, 0, 0);
 
+-- Field Marshal Snowfall
+
+REPLACE INTO `zp_mangosd`.`creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (12642, 14347, 0, 0, 0, 0, 0, NULL);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12642, 15701, 0, 0, 1471, -4970.18, -1247.19, 501.679, 4.77944, 25, 0, 0, 2900, 0, 0, 2);
+
+
