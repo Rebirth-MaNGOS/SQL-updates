@@ -98,6 +98,8 @@ REPLACE INTO `zp_mangosd`.`spell_area` VALUES (24413, 3358, 0, 0, 0, 0, 0, 2, 0)
 REPLACE INTO `zp_mangosd`.`spell_area` VALUES (24414, 3358, 0, 0, 0, 0, 0, 2, 0);
 
 -- Tables for defining and keeping track of event resources.
+DROP TABLE IF EXISTS zp_mangosd.event_resource;
+DROP TABLE IF EXISTS zp_charactersd.event_resource_count;
 CREATE TABLE `zp_mangosd`.`event_resource` (
     `id` INT NOT NULL,
     `event_id` INT NOT NULL,
