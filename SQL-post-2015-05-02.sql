@@ -426,3 +426,35 @@ REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12640, 15734, 0, 0, 0, -4973.53, -1196.27, 501.662, 1.89291, 25, 5, 0, 2400, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12641, 15735, 0, 0, 0, -4935.21, -1213.44, 501.642, 3.27461, 25, 5, 0, 789, 0, 0, 0);
 
+
+-- The Alliance bar resource EventMgr objects.
+REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('2', '1', '6', '60', '29901');
+REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('3', '1', '0', '60', '29900');
+REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('4', '1', '5', '60', '29900');
+REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('5', '1', '6', '60', '29900');
+REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('6', '1', '0', '60', '29899');
+REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('7', '1', '5', '60', '29899');
+REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('8', '1', '6', '60', '29899');
+REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('9', '1', '0', '60', '29898');
+REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('10', '1', '5', '60', '29898');
+REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('11', '1', '6', '60', '29898');
+REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('12', '1', '0', '60', '29897');
+REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('13', '1', '5', '60', '29897');
+REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('14', '1', '6', '60', '29897');
+
+UPDATE `zp_mangosd`.`event_resource_gameobject` SET `resource_limit`='9000' WHERE `id`='12' and`event_id`='1' and`resource_id`='0';
+UPDATE `zp_mangosd`.`event_resource_gameobject` SET `resource_limit`='18000' WHERE `id`='9' and`event_id`='1' and`resource_id`='0';
+UPDATE `zp_mangosd`.`event_resource_gameobject` SET `resource_limit`='36000' WHERE `id`='6' and`event_id`='1' and`resource_id`='0';
+UPDATE `zp_mangosd`.`event_resource_gameobject` SET `resource_limit`='54000' WHERE `id`='3' and`event_id`='1' and`resource_id`='0';
+UPDATE `zp_mangosd`.`event_resource_gameobject` SET `resource_limit`='72000' WHERE `id`='0' and`event_id`='1' and`resource_id`='0';
+UPDATE `zp_mangosd`.`event_resource_gameobject` SET `resource_limit`='2800' WHERE `id`='13' and`event_id`='1' and`resource_id`='5';
+UPDATE `zp_mangosd`.`event_resource_gameobject` SET `resource_limit`='5600' WHERE `id`='10' and`event_id`='1' and`resource_id`='5';
+UPDATE `zp_mangosd`.`event_resource_gameobject` SET `resource_limit`='11200' WHERE `id`='7' and`event_id`='1' and`resource_id`='5';
+UPDATE `zp_mangosd`.`event_resource_gameobject` SET `resource_limit`='16800' WHERE `id`='4' and`event_id`='1' and`resource_id`='5';
+UPDATE `zp_mangosd`.`event_resource_gameobject` SET `resource_limit`='22400' WHERE `id`='1' and`event_id`='1' and`resource_id`='5';
+UPDATE `zp_mangosd`.`event_resource_gameobject` SET `resource_limit`='2400' WHERE `id`='14' and`event_id`='1' and`resource_id`='6';
+UPDATE `zp_mangosd`.`event_resource_gameobject` SET `resource_limit`='4800' WHERE `id`='11' and`event_id`='1' and`resource_id`='6';
+UPDATE `zp_mangosd`.`event_resource_gameobject` SET `resource_limit`='9600' WHERE `id`='8' and`event_id`='1' and`resource_id`='6';
+UPDATE `zp_mangosd`.`event_resource_gameobject` SET `resource_limit`='14400' WHERE `id`='5' and`event_id`='1' and`resource_id`='6';
+UPDATE `zp_mangosd`.`event_resource_gameobject` SET `resource_limit`='19200' WHERE `id`='2' and`event_id`='1' and`resource_id`='6';
+
