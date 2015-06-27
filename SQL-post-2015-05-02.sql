@@ -765,7 +765,7 @@ REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `posi
 REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (29942, 180814, 1, 1591.29, -4155.19, 36.2628, 3.70956, 0, 0, 0.959947, -0.28018, 25, 100, 1);
 REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (29941, 180813, 1, 1591.29, -4155.19, 36.2628, 3.70956, 0, 0, 0.959947, -0.28018, 25, 100, 1);
 REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (29940, 180812, 1, 1591.29, -4155.19, 36.2628, 3.70956, 0, 0, 0.959947, -0.28018, 25, 100, 1);
-=======
+
 -- Resource limits for the herb resource for the Horde AQ
 REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('105', '1', '1', '2600', '29935');
 REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('106', '1', '1', '5200', '29936');
