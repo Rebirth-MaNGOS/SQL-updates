@@ -1186,3 +1186,11 @@ UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8614';
 UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8616';
 UPDATE `zp_mangosd`.`creature_template` SET `npcflag`='3' WHERE `entry`='15460';
 UPDATE zp_mangosd.creature_template SET npcflag = 3 WHERE entry IN (15459, 15469, 15533, 15535, 15534, 15512, 15508, 15477, 15528, 15529, 15532, 15522, 15525, 15515);
+
+-- Alliance emissary in Orgrimmar
+
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12647, 15458, 1, 0, 0, 1634.1, -4120.93, 31.0736, 2.07551, 25, 5, 0, 910, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (12647, 14346, 0, 0, 0, 0, 0, NULL);
+
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12648, 3296, 1, 0, 133, 1635.94, -4120, 31.1029, 2.06766, 25, 5, 0, 4957, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12649, 3296, 1, 0, 133, 1632.61, -4121.91, 31.084, 1.98127, 25, 5, 0, 4957, 0, 0, 0);
