@@ -1051,13 +1051,13 @@ VALUES
 UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8525';
 
 -- Purple Lotus Ally
-UPDATE `zp_mangosd`.`quest_template` SET `Method`='2', `RequestItemsText`='Bring 20 purple lotus to Master Nightsong at the airfield in Dun Morogh.' WHERE `entry`='8506';
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8506';
 
 -- Artha's Tears Ally
-UPDATE `zp_mangosd`.`quest_template` SET `Method`='2', `RequestItemsText`='Bring 20 arthas\' tears to Sergeant Major Germaine at the airfield in Dun Morogh.' WHERE `entry`='8510';
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8510';
 
 -- Stranglekelp Ally
-UPDATE `zp_mangosd`.`quest_template` SET `Method`='2', `RequestItemsText`='Bring 20 stranglekelp to Private Draxlegauge at the airfield in Dun Morogh.' WHERE `entry`='8504';
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8504';
 
 -- Spotted Yellowtail Ally
 UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8529';
