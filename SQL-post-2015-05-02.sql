@@ -916,3 +916,170 @@ REPLACE INTO `zp_mangosd`.`quest_template` (`entry`, `Method`, `ZoneOrSort`, `Mi
 REPLACE INTO `zp_mangosd`.`quest_template` (`entry`, `Method`, `ZoneOrSort`, `MinLevel`, `QuestLevel`, `Type`, `RequiredClasses`, `RequiredRaces`, `RequiredSkill`, `RequiredSkillValue`, `RepObjectiveFaction`, `RepObjectiveValue`, `RequiredMinRepFaction`, `RequiredMinRepValue`, `RequiredMaxRepFaction`, `RequiredMaxRepValue`, `SuggestedPlayers`, `LimitTime`, `QuestFlags`, `SpecialFlags`, `PrevQuestId`, `NextQuestId`, `ExclusiveGroup`, `NextQuestInChain`, `SrcItemId`, `SrcItemCount`, `SrcSpell`, `Title`, `Details`, `Objectives`, `OfferRewardText`, `RequestItemsText`, `EndText`, `ObjectiveText1`, `ObjectiveText2`, `ObjectiveText3`, `ObjectiveText4`, `ReqItemId1`, `ReqItemId2`, `ReqItemId3`, `ReqItemId4`, `ReqItemCount1`, `ReqItemCount2`, `ReqItemCount3`, `ReqItemCount4`, `ReqSourceId1`, `ReqSourceId2`, `ReqSourceId3`, `ReqSourceId4`, `ReqSourceCount1`, `ReqSourceCount2`, `ReqSourceCount3`, `ReqSourceCount4`, `ReqCreatureOrGOId1`, `ReqCreatureOrGOId2`, `ReqCreatureOrGOId3`, `ReqCreatureOrGOId4`, `ReqCreatureOrGOCount1`, `ReqCreatureOrGOCount2`, `ReqCreatureOrGOCount3`, `ReqCreatureOrGOCount4`, `ReqSpellCast1`, `ReqSpellCast2`, `ReqSpellCast3`, `ReqSpellCast4`, `RewChoiceItemId1`, `RewChoiceItemId2`, `RewChoiceItemId3`, `RewChoiceItemId4`, `RewChoiceItemId5`, `RewChoiceItemId6`, `RewChoiceItemCount1`, `RewChoiceItemCount2`, `RewChoiceItemCount3`, `RewChoiceItemCount4`, `RewChoiceItemCount5`, `RewChoiceItemCount6`, `RewItemId1`, `RewItemId2`, `RewItemId3`, `RewItemId4`, `RewItemCount1`, `RewItemCount2`, `RewItemCount3`, `RewItemCount4`, `RewRepFaction1`, `RewRepFaction2`, `RewRepFaction3`, `RewRepFaction4`, `RewRepFaction5`, `RewRepValue1`, `RewRepValue2`, `RewRepValue3`, `RewRepValue4`, `RewRepValue5`, `RewOrReqMoney`, `RewMoneyMaxLevel`, `RewSpell`, `RewSpellCast`, `RewMailTemplateId`, `RewMailDelaySecs`, `PointMapId`, `PointX`, `PointY`, `PointOpt`, `DetailsEmote1`, `DetailsEmote2`, `DetailsEmote3`, `DetailsEmote4`, `DetailsEmoteDelay1`, `DetailsEmoteDelay2`, `DetailsEmoteDelay3`, `DetailsEmoteDelay4`, `IncompleteEmote`, `CompleteEmote`, `OfferRewardEmote1`, `OfferRewardEmote2`, `OfferRewardEmote3`, `OfferRewardEmote4`, `OfferRewardEmoteDelay1`, `OfferRewardEmoteDelay2`, `OfferRewardEmoteDelay3`, `OfferRewardEmoteDelay4`, `StartScript`, `CompleteScript`) VALUES (8840, 2, -367, 2, 60, 0, 0, 178, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 8815, 0, 0, 0, 0, 0, 0, 'One Commendation Signet', 'For those adventurers who have but a single commendation signet, I\'ll exchange it for a small amount of recognition with Orgrimmar.$B$BPlease bear in mind that it is better to hand over a stack of ten signets at once; your efforts will receive greater recognition in doing so.  We offer a single signet exchange as a service for those who don\'t have enough for a full stack of ten.$B$BWith that being said, I stand ready to assist you if you still wish to hand in a single signet.', 'Bring a commendation signet to the Orgrimmar Commendation Officer in Orgrimmar.', 'Very well - your deeds have been entered into the records, and you are duly recognized for your efforts. Keep up the good work, $C.$B$BIf you have any more signets to hand in, then I am able to assist you further in that regard.', 'For those adventurers who have but a single commendation signet, I\'ll exchange it for a small amount of recognition with Orgrimmar.$B$BPlease bear in mind that it is better to hand over a stack of ten signets at once; your efforts will receive greater recognition in doing so.  We offer a single signet exchange as a service for those who don\'t have enough for a full stack of ten.$B$BWith that being said, I stand ready to assist you if you still wish to hand in a single signet.', '', '', '', '', '', 21438, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 73, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`quest_template` (`entry`, `Method`, `ZoneOrSort`, `MinLevel`, `QuestLevel`, `Type`, `RequiredClasses`, `RequiredRaces`, `RequiredSkill`, `RequiredSkillValue`, `RepObjectiveFaction`, `RepObjectiveValue`, `RequiredMinRepFaction`, `RequiredMinRepValue`, `RequiredMaxRepFaction`, `RequiredMaxRepValue`, `SuggestedPlayers`, `LimitTime`, `QuestFlags`, `SpecialFlags`, `PrevQuestId`, `NextQuestId`, `ExclusiveGroup`, `NextQuestInChain`, `SrcItemId`, `SrcItemCount`, `SrcSpell`, `Title`, `Details`, `Objectives`, `OfferRewardText`, `RequestItemsText`, `EndText`, `ObjectiveText1`, `ObjectiveText2`, `ObjectiveText3`, `ObjectiveText4`, `ReqItemId1`, `ReqItemId2`, `ReqItemId3`, `ReqItemId4`, `ReqItemCount1`, `ReqItemCount2`, `ReqItemCount3`, `ReqItemCount4`, `ReqSourceId1`, `ReqSourceId2`, `ReqSourceId3`, `ReqSourceId4`, `ReqSourceCount1`, `ReqSourceCount2`, `ReqSourceCount3`, `ReqSourceCount4`, `ReqCreatureOrGOId1`, `ReqCreatureOrGOId2`, `ReqCreatureOrGOId3`, `ReqCreatureOrGOId4`, `ReqCreatureOrGOCount1`, `ReqCreatureOrGOCount2`, `ReqCreatureOrGOCount3`, `ReqCreatureOrGOCount4`, `ReqSpellCast1`, `ReqSpellCast2`, `ReqSpellCast3`, `ReqSpellCast4`, `RewChoiceItemId1`, `RewChoiceItemId2`, `RewChoiceItemId3`, `RewChoiceItemId4`, `RewChoiceItemId5`, `RewChoiceItemId6`, `RewChoiceItemCount1`, `RewChoiceItemCount2`, `RewChoiceItemCount3`, `RewChoiceItemCount4`, `RewChoiceItemCount5`, `RewChoiceItemCount6`, `RewItemId1`, `RewItemId2`, `RewItemId3`, `RewItemId4`, `RewItemCount1`, `RewItemCount2`, `RewItemCount3`, `RewItemCount4`, `RewRepFaction1`, `RewRepFaction2`, `RewRepFaction3`, `RewRepFaction4`, `RewRepFaction5`, `RewRepValue1`, `RewRepValue2`, `RewRepValue3`, `RewRepValue4`, `RewRepValue5`, `RewOrReqMoney`, `RewMoneyMaxLevel`, `RewSpell`, `RewSpellCast`, `RewMailTemplateId`, `RewMailDelaySecs`, `PointMapId`, `PointX`, `PointY`, `PointOpt`, `DetailsEmote1`, `DetailsEmote2`, `DetailsEmote3`, `DetailsEmote4`, `DetailsEmoteDelay1`, `DetailsEmoteDelay2`, `DetailsEmoteDelay3`, `DetailsEmoteDelay4`, `IncompleteEmote`, `CompleteEmote`, `OfferRewardEmote1`, `OfferRewardEmote2`, `OfferRewardEmote3`, `OfferRewardEmote4`, `OfferRewardEmoteDelay1`, `OfferRewardEmoteDelay2`, `OfferRewardEmoteDelay3`, `OfferRewardEmoteDelay4`, `StartScript`, `CompleteScript`) VALUES (8842, 2, -367, 2, 60, 0, 0, 178, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 8817, 0, 0, 0, 0, 0, 0, 'One Commendation Signet', 'For those adventurers who have but a single commendation signet, I\'ll exchange it for a small amount of recognition with Thunder Bluff.$B$BPlease bear in mind that it is better to hand over a stack of ten signets at once; your efforts will receive greater recognition in doing so. We offer a single signet exchange as a service for those who don\'t have enough for a full stack of ten.$B$BWith that being said, I stand ready to assist you if you still wish to hand in a single signet.', 'Bring a commendation signet to the Thunder Bluff Commendation Officer in Orgrimmar.', 'Very well - your deeds have been entered into the records, and you are duly recognized for your efforts. Keep up the good work, $C.$B$BIf you have any more signets to hand in, then I am able to assist you further in that regard.', 'For those adventurers who have but a single commendation signet, I\'ll exchange it for a small amount of recognition with Thunder Bluff.$B$BPlease bear in mind that it is better to hand over a stack of ten signets at once; your efforts will receive greater recognition in doing so. We offer a single signet exchange as a service for those who don\'t have enough for a full stack of ten.$B$BWith that being said, I stand ready to assist you if you still wish to hand in a single signet.', '', '', '', '', '', 21438, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 81, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`quest_template` (`entry`, `Method`, `ZoneOrSort`, `MinLevel`, `QuestLevel`, `Type`, `RequiredClasses`, `RequiredRaces`, `RequiredSkill`, `RequiredSkillValue`, `RepObjectiveFaction`, `RepObjectiveValue`, `RequiredMinRepFaction`, `RequiredMinRepValue`, `RequiredMaxRepFaction`, `RequiredMaxRepValue`, `SuggestedPlayers`, `LimitTime`, `QuestFlags`, `SpecialFlags`, `PrevQuestId`, `NextQuestId`, `ExclusiveGroup`, `NextQuestInChain`, `SrcItemId`, `SrcItemCount`, `SrcSpell`, `Title`, `Details`, `Objectives`, `OfferRewardText`, `RequestItemsText`, `EndText`, `ObjectiveText1`, `ObjectiveText2`, `ObjectiveText3`, `ObjectiveText4`, `ReqItemId1`, `ReqItemId2`, `ReqItemId3`, `ReqItemId4`, `ReqItemCount1`, `ReqItemCount2`, `ReqItemCount3`, `ReqItemCount4`, `ReqSourceId1`, `ReqSourceId2`, `ReqSourceId3`, `ReqSourceId4`, `ReqSourceCount1`, `ReqSourceCount2`, `ReqSourceCount3`, `ReqSourceCount4`, `ReqCreatureOrGOId1`, `ReqCreatureOrGOId2`, `ReqCreatureOrGOId3`, `ReqCreatureOrGOId4`, `ReqCreatureOrGOCount1`, `ReqCreatureOrGOCount2`, `ReqCreatureOrGOCount3`, `ReqCreatureOrGOCount4`, `ReqSpellCast1`, `ReqSpellCast2`, `ReqSpellCast3`, `ReqSpellCast4`, `RewChoiceItemId1`, `RewChoiceItemId2`, `RewChoiceItemId3`, `RewChoiceItemId4`, `RewChoiceItemId5`, `RewChoiceItemId6`, `RewChoiceItemCount1`, `RewChoiceItemCount2`, `RewChoiceItemCount3`, `RewChoiceItemCount4`, `RewChoiceItemCount5`, `RewChoiceItemCount6`, `RewItemId1`, `RewItemId2`, `RewItemId3`, `RewItemId4`, `RewItemCount1`, `RewItemCount2`, `RewItemCount3`, `RewItemCount4`, `RewRepFaction1`, `RewRepFaction2`, `RewRepFaction3`, `RewRepFaction4`, `RewRepFaction5`, `RewRepValue1`, `RewRepValue2`, `RewRepValue3`, `RewRepValue4`, `RewRepValue5`, `RewOrReqMoney`, `RewMoneyMaxLevel`, `RewSpell`, `RewSpellCast`, `RewMailTemplateId`, `RewMailDelaySecs`, `PointMapId`, `PointX`, `PointY`, `PointOpt`, `DetailsEmote1`, `DetailsEmote2`, `DetailsEmote3`, `DetailsEmote4`, `DetailsEmoteDelay1`, `DetailsEmoteDelay2`, `DetailsEmoteDelay3`, `DetailsEmoteDelay4`, `IncompleteEmote`, `CompleteEmote`, `OfferRewardEmote1`, `OfferRewardEmote2`, `OfferRewardEmote3`, `OfferRewardEmote4`, `OfferRewardEmoteDelay1`, `OfferRewardEmoteDelay2`, `OfferRewardEmoteDelay3`, `OfferRewardEmoteDelay4`, `StartScript`, `CompleteScript`) VALUES (8844, 2, -367, 2, 60, 0, 0, 178, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 8818, 0, 0, 0, 0, 0, 0, 'One Commendation Signet', 'For those adventurers who have but a single commendation signet, I\'ll exchange it for a small amount of recognition with the Darkspear tribe.$B$BPlease bear in mind that it is better to hand over a stack of ten signets at once; your efforts will receive greater recognition in doing so.  We offer a single signet exchange as a service for those who don\'t have enough for a full stack of ten.$B$BWith that being said, I stand ready to assist you if you still wish to hand in a single signet.', 'Bring a commendation signet to the Darkspear Commendation Officer in Orgrimmar.', 'Very well - your deeds have been entered into the records, and you are duly recognized for your efforts. Keep up the good work, $C.$B$BIf you have any more signets to hand in, then I am able to assist you further in that regard.', 'For those adventurers who have but a single commendation signet, I\'ll exchange it for a small amount of recognition with the Darkspear tribe.$B$BPlease bear in mind that it is better to hand over a stack of ten signets at once; your efforts will receive greater recognition in doing so.  We offer a single signet exchange as a service for those who don\'t have enough for a full stack of ten.$B$BWith that being said, I stand ready to assist you if you still wish to hand in a single signet.', '', '', '', '', '', 21438, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 530, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+-- Corrected the Alliance Needs More Roast raptor
+REPLACE INTO `zp_mangosd`.`quest_template`
+(`entry`,
+    `Method`,
+    `ZoneOrSort`,
+    `MinLevel`,
+    `QuestLevel`,
+    `Type`,
+    `RequiredClasses`,
+    `RequiredRaces`,
+    `RequiredSkill`,
+    `RequiredSkillValue`,
+    `RepObjectiveFaction`,
+    `RepObjectiveValue`,
+    `RequiredMinRepFaction`,
+    `RequiredMinRepValue`,
+    `RequiredMaxRepFaction`,
+    `RequiredMaxRepValue`,
+    `SuggestedPlayers`,
+    `LimitTime`,
+    `QuestFlags`,
+    `SpecialFlags`,
+    `PrevQuestId`,
+    `NextQuestId`,
+    `ExclusiveGroup`,
+    `NextQuestInChain`,
+    `SrcItemId`,
+    `SrcItemCount`,
+    `SrcSpell`,
+    `Title`,
+    `Details`,
+    `Objectives`,
+    `OfferRewardText`,
+    `RequestItemsText`,
+    `EndText`,
+    `ObjectiveText1`,
+    `ObjectiveText2`,
+    `ObjectiveText3`,
+    `ObjectiveText4`,
+    `ReqItemId1`,
+    `ReqItemId2`,
+    `ReqItemId3`,
+    `ReqItemId4`,
+    `ReqItemCount1`,
+    `ReqItemCount2`,
+    `ReqItemCount3`,
+    `ReqItemCount4`,
+    `ReqSourceId1`,
+    `ReqSourceId2`,
+    `ReqSourceId3`,
+    `ReqSourceId4`,
+    `ReqSourceCount1`,
+    `ReqSourceCount2`,
+    `ReqSourceCount3`,
+    `ReqSourceCount4`,
+    `ReqCreatureOrGOId1`,
+    `ReqCreatureOrGOId2`,
+    `ReqCreatureOrGOId3`,
+    `ReqCreatureOrGOId4`,
+    `ReqCreatureOrGOCount1`,
+    `ReqCreatureOrGOCount2`,
+    `ReqCreatureOrGOCount3`,
+    `ReqCreatureOrGOCount4`,
+    `ReqSpellCast1`,
+    `ReqSpellCast2`,
+    `ReqSpellCast3`,
+    `ReqSpellCast4`,
+    `RewChoiceItemId1`,
+    `RewChoiceItemId2`,
+    `RewChoiceItemId3`,
+    `RewChoiceItemId4`,
+    `RewChoiceItemId5`,
+    `RewChoiceItemId6`,
+    `RewChoiceItemCount1`,
+    `RewChoiceItemCount2`,
+    `RewChoiceItemCount3`,
+    `RewChoiceItemCount4`,
+    `RewChoiceItemCount5`,
+    `RewChoiceItemCount6`,
+    `RewItemId1`,
+    `RewItemId2`,
+    `RewItemId3`,
+    `RewItemId4`,
+    `RewItemCount1`,
+    `RewItemCount2`,
+    `RewItemCount3`,
+    `RewItemCount4`,
+    `RewRepFaction1`,
+    `RewRepFaction2`,
+    `RewRepFaction3`,
+    `RewRepFaction4`,
+    `RewRepFaction5`,
+    `RewRepValue1`,
+    `RewRepValue2`,
+    `RewRepValue3`,
+    `RewRepValue4`,
+    `RewRepValue5`,
+    `RewOrReqMoney`,
+    `RewMoneyMaxLevel`,
+    `RewSpell`,
+    `RewSpellCast`,
+    `RewMailTemplateId`,
+    `RewMailDelaySecs`,
+    `PointMapId`,
+    `PointX`,
+    `PointY`,
+    `PointOpt`,
+    `DetailsEmote1`,
+    `DetailsEmote2`,
+    `DetailsEmote3`,
+    `DetailsEmote4`,
+    `DetailsEmoteDelay1`,
+    `DetailsEmoteDelay2`,
+    `DetailsEmoteDelay3`,
+    `DetailsEmoteDelay4`,
+    `IncompleteEmote`,
+    `CompleteEmote`,
+    `OfferRewardEmote1`,
+    `OfferRewardEmote2`,
+    `OfferRewardEmote3`,
+    `OfferRewardEmote4`,
+    `OfferRewardEmoteDelay1`,
+    `OfferRewardEmoteDelay2`,
+    `OfferRewardEmoteDelay3`,
+    `OfferRewardEmoteDelay4`,
+    `StartScript`,
+    `CompleteScript`)
+VALUES
+('8527', '2', '-365', '1', '60', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '8526', '0', '0', '0', '0', '0', '0', 'The Alliance Needs More Roast Raptor!', 'Hi again $c. I can tell you\'re very excited about all of this. So I suppose you want to bring me another twenty roast raptor. Great. Well you do that. I guess I\'ll see you when you get back.', 'Bring 20 roast raptor to Sarah Sadwhistle at the airfield in Dun Morogh.', '', 'Bring 20 roast raptor to Sarah Sadwhistle at the airfield in Dun Morogh.', '', '', '', '', '', '12210', '0', '0', '0', '20', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '21436', '21511', '0', '0', '5', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
+
+-- Rainbow Fin Ally
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8525';
+
+-- Purple Lotus Ally
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2', `RequestItemsText`='Bring 20 purple lotus to Master Nightsong at the airfield in Dun Morogh.' WHERE `entry`='8506';
+
+-- Artha's Tears Ally
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2', `RequestItemsText`='Bring 20 arthas\' tears to Sergeant Major Germaine at the airfield in Dun Morogh.' WHERE `entry`='8510';
+
+-- Stranglekelp Ally
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2', `RequestItemsText`='Bring 20 stranglekelp to Private Draxlegauge at the airfield in Dun Morogh.' WHERE `entry`='8504';
+
+-- Spotted Yellowtail Ally
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8529';
+
+-- Iron Bars ally
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8495';
+
+-- Copper Bars ally
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8493';
+
+-- Thorium Bars ally
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8500';
+
+-- Thick Leather ally
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8516';
+
+-- Medium Leather ally
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8514';
+
+-- Ally rest turnins
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8512';
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8518';
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8521';
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8523';
+
