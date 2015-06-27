@@ -692,3 +692,17 @@ REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `posi
 REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (29925, 180841, 1, 1684.96, -4130.79, 39.8573, 3.8148, 0, 0, 0.943882, -0.330282, 25, 100, 1);
 REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (29924, 180840, 1, 1684.96, -4130.79, 39.8573, 3.8148, 0, 0, 0.943882, -0.330282, 25, 100, 1);
 REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (29923, 180839, 1, 1684.96, -4130.79, 39.8573, 3.8148, 0, 0, 0.943882, -0.330282, 25, 100, 1);
+
+-- Correct faction for the Horde AQ NPCs
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`='126', `faction_H`='530' WHERE `entry`='15469';
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`='126', `faction_H`='530' WHERE `entry`='15534';
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`='68', `faction_H`='68' WHERE `entry`='15512';
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`='68', `faction_H`='68' WHERE `entry`='15529';
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`='104', `faction_H`='81' WHERE `entry`='15532';
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`='85', `faction_H`='76' WHERE `entry`='15522';
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`='68', `faction_H`='68' WHERE `entry`='15525';
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`='126', `faction_H`='530' WHERE `entry`='15515';
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`='126', `faction_H`='126' WHERE `entry`='15508';
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`='104', `faction_H`='104' WHERE `entry`='15477';
+
+
