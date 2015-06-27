@@ -705,4 +705,13 @@ UPDATE `zp_mangosd`.`creature_template` SET `faction_A`='126', `faction_H`='530'
 UPDATE `zp_mangosd`.`creature_template` SET `faction_A`='126', `faction_H`='126' WHERE `entry`='15508';
 UPDATE `zp_mangosd`.`creature_template` SET `faction_A`='104', `faction_H`='104' WHERE `entry`='15477';
 
+-- Horde Cooking Supplies
+
+REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (29933, 180837, 1, 1618.42, -4094.38, 34.1093, 3.80788, 0, 0, 0.945019, -0.327016, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (29932, 180836, 1, 1618.42, -4094.38, 34.1093, 3.80788, 0, 0, 0.945019, -0.327016, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (29931, 180835, 1, 1618.42, -4094.38, 34.1093, 3.80788, 0, 0, 0.945019, -0.327016, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (29930, 180834, 1, 1618.42, -4094.38, 34.1093, 3.80788, 0, 0, 0.945019, -0.327016, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (29929, 180833, 1, 1618.42, -4094.38, 34.1093, 3.80788, 0, 0, 0.945019, -0.327016, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (29928, 180832, 1, 1618.42, -4094.38, 34.1093, 3.80788, 0, 0, 0.945019, -0.327016, 25, 100, 1);
+
 
