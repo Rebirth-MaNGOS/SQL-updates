@@ -1168,6 +1168,25 @@ REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCred
 REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCredit2`, `modelid_1`, `modelid_2`, `name`, `subname`, `gossip_menu_id`, `minlevel`, `maxlevel`, `minhealth`, `maxhealth`, `minmana`, `maxmana`, `armor`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `aggrorangeoverride`, `unit_class`, `unit_flags`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `PetSpellDataId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `Civilian`, `RacialLeader`, `RegenHealth`, `equipment_id`, `trainer_id`, `vendor_id`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`) VALUES (15738, 0, 0, 15722, 0, 'Undercity Commendation Officer', NULL, 0, 55, 55, 789, 789, 0, 0, 0, 35, 35, 3, 1, 0.95, 0, 0, 50, 73, 0, 28, 1, 2000, 0, 0, 0, 36864, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 0, 0, 1, 0, 0, 0, 0, 2, '');
 REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCredit2`, `modelid_1`, `modelid_2`, `name`, `subname`, `gossip_menu_id`, `minlevel`, `maxlevel`, `minhealth`, `maxhealth`, `minmana`, `maxmana`, `armor`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `aggrorangeoverride`, `unit_class`, `unit_flags`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `PetSpellDataId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `Civilian`, `RacialLeader`, `RegenHealth`, `equipment_id`, `trainer_id`, `vendor_id`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`) VALUES (15739, 0, 0, 15720, 0, 'Thunder Bluff Commendation Officer', NULL, 0, 55, 55, 3000, 3000, 0, 0, 0, 35, 35, 3, 1.125, 0.95, 0, 0, 362, 440, 0, 185, 1, 1216, 1435, 0, 0, 36864, 0, 0, 0, 0, 0, 0, 258.261, 360.038, 100, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 1, 3, 0, 0, 1, 0, 0, 0, 0, 2, '');
 
+-- Updated the Method flag for the horde AQ turnins
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8533';
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8543';
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8546';
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8550';
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8581';
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8583';
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8589';
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8591';
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8601';
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8605';
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8608';
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8610';
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8612';
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8614';
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='2' WHERE `entry`='8616';
+UPDATE `zp_mangosd`.`creature_template` SET `npcflag`='3' WHERE `entry`='15460';
+UPDATE zp_mangosd.creature_template SET npcflag = 3 WHERE entry IN (15459, 15469, 15533, 15535, 15534, 15512, 15508, 15477, 15528, 15529, 15532, 15522, 15525, 15515);
+
 -- Alliance emissary in Orgrimmar
 
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12647, 15458, 1, 0, 0, 1634.1, -4120.93, 31.0736, 2.07551, 25, 5, 0, 910, 0, 0, 0);
