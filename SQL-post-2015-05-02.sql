@@ -731,3 +731,20 @@ REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resour
 REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('88', '1', '15', '13200', '29926');
 REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('89', '1', '15', '17600', '29927');
 
+-- Resource objects for the horde food
+REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('90', '1', '21', '1000', '29929');
+REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('91', '1', '21', '2000', '29930');
+REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('92', '1', '21', '4000', '29931');
+REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('93', '1', '21', '6000', '29932');
+REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('94', '1', '21', '8000', '29933');
+REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('95', '1', '22', '1000', '29929');
+REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('96', '1', '22', '2000', '29930');
+REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('97', '1', '22', '4000', '29931');
+REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('98', '1', '22', '6000', '29932');
+REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('99', '1', '22', '8000', '29933');
+REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('100', '1', '3', '1700', '29929');
+REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('101', '1', '3', '3400', '29930');
+REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('102', '1', '3', '6800', '29931');
+REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('103', '1', '3', '10200', '29932');
+REPLACE INTO `zp_mangosd`.`event_resource_gameobject` (`id`, `event_id`, `resource_id`, `resource_limit`, `object_guid`) VALUES ('104', '1', '3', '13600', '29933');
+
