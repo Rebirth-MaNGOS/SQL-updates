@@ -1242,3 +1242,36 @@ REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `pos
 REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (12650, 14, 1661.54, -4093.41, 35.6742, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.42428, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (12650, 15, 1637.84, -4100.9, 32.1793, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.46355, 0, 0);
 
+
+-- Added the Horde AQ NPCs to the War Effort event.
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12645', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12621', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12620', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12622', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12650', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12648', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12647', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12649', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12632', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12634', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12633', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12644', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12625', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12624', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12623', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12646', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12643', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12629', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12630', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12631', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12627', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12628', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12626', '22');
+
+-- Added the Horde AQ resources to the War Effort event
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES ('29922', '22');
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES ('29928', '22');
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES ('29934', '22');
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES ('29946', '22');
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES ('29940', '22');
+
