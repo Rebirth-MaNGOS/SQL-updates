@@ -189,3 +189,6 @@ UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=2, `combat_reach
 
 -- Reins of the Winterspring Frostsaber should req 75 riding skill, sql from muggle
 UPDATE `zp_mangosd`.`item_template` SET `RequiredSkillRank`='75' WHERE (`entry`='13086') limit 1;
+
+-- spirit shades on lethon should no longer have loot, so no more glowing in the ground
+UPDATE `zp_mangosd`.`creature_template` SET `mingold`=0, `maxgold`=0 WHERE  `entry`=15261;
