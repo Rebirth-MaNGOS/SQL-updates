@@ -175,3 +175,14 @@ REPLACE INTO `zp_mangosd`.`spell_bonus_data` VALUES (14287, 0.4285, 0, 0, 0, 'Hu
 
 -- should be 100% drop, Nightmare Engulfed Object
 UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=100 WHERE `item`=20644;
+
+-- BURU Egg should be damageable and the trigger not
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=14, `faction_H`=14 WHERE  `entry`=15514;
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=35, `faction_H`=35, `flags_extra`=128 WHERE  `entry`=15964;
+-- update some armor hp for buru, p2 buru animation and egg
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=666250, `maxhealth`=666250, `armor`=3795 WHERE  `entry`=15370;
+UPDATE `zp_mangosd`.`creature_template` SET `minlevel`=63, `maxlevel`=63`armor`=3795 WHERE  `entry`=15507;
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=26650, `maxhealth`=26699 WHERE  `entry`=15514;
+-- buru hitbox
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=2.3, `combat_reach`=2.3 WHERE  `modelid`=15654;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=2, `combat_reach`=2 WHERE  `modelid`=15655;
