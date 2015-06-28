@@ -318,7 +318,7 @@ DELETE FROM zp_mangosd.npc_trainer WHERE entry = 8738 AND spell = 12909 LIMIT 1;
 -- bfd
 UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_orientation`=4.4217 WHERE  `id`=259;
 --brd
-UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_orientation`=1.886 WHERE  `id`=1472;
+--UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_orientation`=1.886 WHERE `id`=1472;
 -- BRS
 UPDATE `zp_mangosd`.`areatrigger_teleport` SET `target_orientation`=2.202 WHERE  `id`=1470;
 -- deadmines

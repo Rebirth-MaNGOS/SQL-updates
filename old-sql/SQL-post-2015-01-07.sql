@@ -1,5 +1,4 @@
-﻿-- Update Thunderfury with the correct procrate.
-UPDATE zp_mangosd.item_template SET item_template.spellppmRate_1 = 7 WHERE item_template.entry = 19019;
+﻿
 
 /*************** ESCAPE THROUGH FORCE (REQUIRES RECOMPILATION OF SERVER)************************/
 

@@ -1197,7 +1197,7 @@ REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment
 
 -- Warlord Gorchuk
 
-REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12650, 15700, 1, 0, 0, 1633.97, -4108.3, 29.7337, 3.17926, 25, 5, 0, 3400, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12650, 15700, 1, 0, 0, 1633.97, -4108.3, 29.7337, 3.17926, 25, 5, 0, 3400, 0, 0, 2);
 REPLACE INTO `zp_mangosd`.`creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (12650, 14573, 0, 0, 0, 0, 0, '');
 
 REPLACE INTO `zp_mangosd`.`creature_questrelation` (`id`, `quest`) VALUES (15700, 8851);
@@ -1256,4 +1256,48 @@ REPLACE INTO `creature_template` (`entry`, `KillCredit1`, `KillCredit2`, `modeli
 REPLACE INTO `creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12654, 15704, 1, 0, 0, 1653.49, -4403.29, 18.7416, 4.58039, 25, 5, 0, 6900, 0, 0, 0);
 REPLACE INTO `game_event_creature` (`guid`, `event`) VALUES (12654, 22);
 REPLACE INTO `creature_questrelation` (`id`, `quest`) VALUES (15704, 8792);
+
+-- Added the Horde AQ NPCs to the War Effort event.
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12645', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12621', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12620', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12622', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12650', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12648', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12647', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12649', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12632', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12634', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12633', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12644', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12625', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12624', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12623', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12646', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12643', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12629', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12630', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12631', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12627', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12628', '22');
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12626', '22');
+
+-- Added the Horde AQ resources to the War Effort event
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES ('29922', '22');
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES ('29928', '22');
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES ('29934', '22');
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES ('29946', '22');
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES ('29940', '22');
+
+
+-- Master Sergeant Moonshadow
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12651', '22');
+REPLACE INTO `zp_mangosd`.`creature` (`guid`,`id`,`map`,`modelid`,`equipment_id`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`,`MovementType`) VALUES ('12651', '15709', '1', '0', '973', '9945.47', '2494.95', '1317.5', '4.3487', '25', '5', '0', '881', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_questrelation` (`id`, `quest`) VALUES ('15709', '8795');
+
+-- Field Marshal Snowfall - The Alliance Needs Your Help
+REPLACE INTO `zp_mangosd`.`creature_involvedrelation` (`id`, `quest`) VALUES ('15701', '8795');
+
+-- Master Sergeant Maclure
+REPLACE INTO `zp_mangosd`.`creature_questrelation` (`id`, `quest`) VALUES ('15708', '8795');
 
