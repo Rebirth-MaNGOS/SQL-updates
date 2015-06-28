@@ -1197,7 +1197,7 @@ REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment
 
 -- Warlord Gorchuk
 
-REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12650, 15700, 1, 0, 0, 1633.97, -4108.3, 29.7337, 3.17926, 25, 5, 0, 3400, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12650, 15700, 1, 0, 0, 1633.97, -4108.3, 29.7337, 3.17926, 25, 5, 0, 3400, 0, 0, 2);
 REPLACE INTO `zp_mangosd`.`creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (12650, 14573, 0, 0, 0, 0, 0, '');
 
 REPLACE INTO `zp_mangosd`.`creature_questrelation` (`id`, `quest`) VALUES (15700, 8851);
