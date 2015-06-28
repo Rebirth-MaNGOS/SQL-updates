@@ -186,3 +186,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=26650, `maxhealth`=26699
 -- buru hitbox
 UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=2.3, `combat_reach`=2.3 WHERE  `modelid`=15654;
 UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=2, `combat_reach`=2 WHERE  `modelid`=15655;
+
+-- Reins of the Winterspring Frostsaber should req 75 riding skill, sql from muggle
+UPDATE `zp_mangosd`.`item_template` SET `RequiredSkillRank`='75' WHERE (`entry`='13086') limit 1;
