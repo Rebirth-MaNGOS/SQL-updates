@@ -1275,3 +1275,15 @@ REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES ('299
 REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES ('29946', '22');
 REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES ('29940', '22');
 
+
+-- Master Sergeant Moonshadow
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12651', '22');
+REPLACE INTO `zp_mangosd`.`creature` (`guid`,`id`,`map`,`modelid`,`equipment_id`,`position_x`,`position_y`,`position_z`,`orientation`,`spawntimesecs`,`spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`,`MovementType`) VALUES ('12651', '15709', '1', '0', '973', '9945.47', '2494.95', '1317.5', '4.3487', '25', '5', '0', '881', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_questrelation` (`id`, `quest`) VALUES ('15709', '8795');
+
+-- Field Marshal Snowfall - The Alliance Needs Your Help
+REPLACE INTO `zp_mangosd`.`creature_involvedrelation` (`id`, `quest`) VALUES ('15701', '8795');
+
+-- Master Sergeant Maclure
+REPLACE INTO `zp_mangosd`.`creature_questrelation` (`id`, `quest`) VALUES ('15708', '8795');
+
