@@ -1305,6 +1305,17 @@ REPLACE INTO `zp_mangosd`.`creature_questrelation` (`id`, `quest`) VALUES (15707
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12655, 15707, 0, 0, 0, -4956.28, -930.936, 503.257, 5.36063, 25, 5, 0, 1100, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (12655, 22);
 
+-- Crystalline Tear turn-in
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='0' WHERE `entry`='8305';
+UPDATE `zp_mangosd`.`gameobject_template` SET `ScriptName`='go_crystalline_tear' WHERE `entry`='180633';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_anachronos_trigger' WHERE `entry`='15454';
+DELETE FROM zp_mangosd.creature WHERE id = 15454;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='0', `maxdmg`='0' WHERE `entry`='15414';
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='0', `maxdmg`='0' WHERE `entry`='15421';
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='0', `maxdmg`='0' WHERE `entry`='15422';
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='0', `maxdmg`='0' WHERE `entry`='15423';
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='0', `maxdmg`='0' WHERE `entry`='15424';
+
 -- The Nightmare Intensifies Quest
 
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `comment`) VALUES (-1720148, 'You will be forgiven, Eranikus. Elune will always love you. Break free of the bonds that command you!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Tyrande - AQ event');
