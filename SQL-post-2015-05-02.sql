@@ -111,10 +111,9 @@ CREATE TABLE `zp_mangosd`.`event_resource` (
     UNIQUE INDEX `id_UNIQUE` (`id` ASC));
 
 CREATE TABLE `zp_charactersd`.`event_resource_count` (
-      `id` INT NOT NULL,
       `event_id` INT NOT NULL,
       `resource_count` INT NOT NULL,
-      PRIMARY KEY (`id`, `event_id`));
+      PRIMARY KEY (`event_id`));
 
 CREATE TABLE `zp_mangosd`.`event_resource_gameobject` (
       `id` INT UNSIGNED NOT NULL,
@@ -126,7 +125,6 @@ CREATE TABLE `zp_mangosd`.`event_resource_gameobject` (
       UNIQUE INDEX `id_UNIQUE` (`id` ASC));
 
 ALTER TABLE `zp_charactersd`.`event_resource_count` 
-CHANGE COLUMN `id` `id` INT(11) UNSIGNED NOT NULL ,
 CHANGE COLUMN `event_id` `event_id` INT(11) UNSIGNED NOT NULL ,
 CHANGE COLUMN `resource_count` `resource_count` INT(11) UNSIGNED NOT NULL ;
 
@@ -221,7 +219,7 @@ UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=8523 LI
 
 ALTER TABLE `zp_charactersd`.`event_resource_count` 
 DROP PRIMARY KEY,
-ADD PRIMARY KEY (`id`, `event_id`, `resource_id`);
+ADD PRIMARY KEY (`event_id`, `resource_id`);
 
 -- Horde AQ opening event quests made repeatable
 
