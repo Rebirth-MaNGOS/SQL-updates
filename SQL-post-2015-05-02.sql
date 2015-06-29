@@ -1305,3 +1305,14 @@ REPLACE INTO `zp_mangosd`.`creature_questrelation` (`id`, `quest`) VALUES (15707
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12655, 15707, 0, 0, 0, -4956.28, -930.936, 503.257, 5.36063, 25, 5, 0, 1100, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (12655, 22);
 
+-- Crystalline Tear turn-in
+UPDATE `zp_mangosd`.`quest_template` SET `Method`='0' WHERE `entry`='8305';
+UPDATE `zp_mangosd`.`gameobject_template` SET `ScriptName`='go_crystalline_tear' WHERE `entry`='180633';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_anachronos_trigger' WHERE `entry`='15454';
+DELETE FROM zp_mangosd.creature WHERE id = 15454;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='0', `maxdmg`='0' WHERE `entry`='15414';
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='0', `maxdmg`='0' WHERE `entry`='15421';
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='0', `maxdmg`='0' WHERE `entry`='15422';
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='0', `maxdmg`='0' WHERE `entry`='15423';
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='0', `maxdmg`='0' WHERE `entry`='15424';
+
