@@ -1244,18 +1244,18 @@ REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `pos
 
 -- Horde The horde needs your help quest NPCs
 
-REPLACE INTO `creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12652, 15703, 0, 0, 0, 1572.48, 272.838, -43.104, 4.84451, 25, 5, 0, 1700, 0, 0, 0);
-REPLACE INTO `game_event_creature` (`guid`, `event`) VALUES (12652, 22);
-REPLACE INTO `creature_questrelation` (`id`, `quest`) VALUES (15703, 8792);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12652, 15703, 0, 0, 0, 1572.48, 272.838, -43.104, 4.84451, 25, 5, 0, 1700, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (12652, 22);
+REPLACE INTO `zp_mangosd`.`creature_questrelation` (`id`, `quest`) VALUES (15703, 8792);
 
-REPLACE INTO `creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12653, 15702, 1, 0, 0, -1209.4, 100.907, 134.576, 3.16893, 25, 5, 0, 4120, 0, 0, 0);
-REPLACE INTO `creature_questrelation` (`id`, `quest`) VALUES (15702, 8792);
-REPLACE INTO `game_event_creature` (`guid`, `event`) VALUES (12653, 22);
-REPLACE INTO `creature_template` (`entry`, `KillCredit1`, `KillCredit2`, `modelid_1`, `modelid_2`, `name`, `subname`, `gossip_menu_id`, `minlevel`, `maxlevel`, `minhealth`, `maxhealth`, `minmana`, `maxmana`, `armor`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `aggrorangeoverride`, `unit_class`, `unit_flags`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `PetSpellDataId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `Civilian`, `RacialLeader`, `RegenHealth`, `equipment_id`, `trainer_id`, `vendor_id`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`) VALUES (15702, 0, 0, 15664, 0, 'Senior Sergeant Taiga', 'War Effort Recruiter', 0, 60, 60, 4120, 4120, 0, 0, 0, 104, 104, 3, 1.5, 1.11286, 1.2, 1, 327, 428, 0, 174, 1, 1200, 1450, 0, 0, 0, 0, 0, 0, 0, 0, 0, 78.2, 101.6, 100, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 385, '', 0, 3, 0, 0, 1, 0, 0, 0, 0, 2, '');
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12653, 15702, 1, 0, 0, -1209.4, 100.907, 134.576, 3.16893, 25, 5, 0, 4120, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_questrelation` (`id`, `quest`) VALUES (15702, 8792);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (12653, 22);
+REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCredit2`, `modelid_1`, `modelid_2`, `name`, `subname`, `gossip_menu_id`, `minlevel`, `maxlevel`, `minhealth`, `maxhealth`, `minmana`, `maxmana`, `armor`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `aggrorangeoverride`, `unit_class`, `unit_flags`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `PetSpellDataId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `Civilian`, `RacialLeader`, `RegenHealth`, `equipment_id`, `trainer_id`, `vendor_id`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`) VALUES (15702, 0, 0, 15664, 0, 'Senior Sergeant Taiga', 'War Effort Recruiter', 0, 60, 60, 4120, 4120, 0, 0, 0, 104, 104, 3, 1.5, 1.11286, 1.2, 1, 327, 428, 0, 174, 1, 1200, 1450, 0, 0, 0, 0, 0, 0, 0, 0, 0, 78.2, 101.6, 100, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 385, '', 0, 3, 0, 0, 1, 0, 0, 0, 0, 2, '');
 
-REPLACE INTO `creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12654, 15704, 1, 0, 0, 1653.49, -4403.29, 18.7416, 4.58039, 25, 5, 0, 6900, 0, 0, 0);
-REPLACE INTO `game_event_creature` (`guid`, `event`) VALUES (12654, 22);
-REPLACE INTO `creature_questrelation` (`id`, `quest`) VALUES (15704, 8792);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12654, 15704, 1, 0, 0, 1653.49, -4403.29, 18.7416, 4.58039, 25, 5, 0, 6900, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (12654, 22);
+REPLACE INTO `zp_mangosd`.`creature_questrelation` (`id`, `quest`) VALUES (15704, 8792);
 
 -- Added the Horde AQ NPCs to the War Effort event.
 REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES ('12645', '22');
@@ -1300,4 +1300,10 @@ REPLACE INTO `zp_mangosd`.`creature_involvedrelation` (`id`, `quest`) VALUES ('1
 
 -- Master Sergeant Maclure
 REPLACE INTO `zp_mangosd`.`creature_questrelation` (`id`, `quest`) VALUES ('15708', '8795');
+
+-- Master Sergeant Fizzlebolt
+
+REPLACE INTO `zp_mangosd`.`creature_questrelation` (`id`, `quest`) VALUES (15707, 8795);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12655, 15707, 0, 0, 0, -4956.28, -930.936, 503.257, 5.36063, 25, 5, 0, 1100, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (12655, 22);
 
