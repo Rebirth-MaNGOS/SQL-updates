@@ -1408,3 +1408,12 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `so
 -- Azuregos's Magical Ledger
 
 REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCredit2`, `modelid_1`, `modelid_2`, `name`, `subname`, `gossip_menu_id`, `minlevel`, `maxlevel`, `minhealth`, `maxhealth`, `minmana`, `maxmana`, `armor`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `aggrorangeoverride`, `unit_class`, `unit_flags`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `PetSpellDataId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `Civilian`, `RacialLeader`, `RegenHealth`, `equipment_id`, `trainer_id`, `vendor_id`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`) VALUES (15481, 0, 0, 15473, 0, 'Spirit of Azuregos', NULL, 0, 63, 63, 5000, 5000, 0, 0, 0, 7, 7, 3, 1.1, 0.95, 0, 0, 585, 844, 0, 330, 1, 2000, 0, 0, 1, 768, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 46, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 0, 0, 1, 0, 0, 0, 617299803, 2, 'npc_azuregos_spirit');
+
+-- A Pawn on the Eternal Board dragon AIs
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_merithra' WHERE `entry`='15378';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_arygos' WHERE `entry`='15380';
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_caelestrasz' WHERE `entry`='15379';
+
+-- Coordinates for scepter shattering
+REPLACE INTO `zp_mangosd`.`spell_target_position` (`id`, `target_map`, `target_position_x`, `target_position_y`, `target_position_z`, `target_orientation`) VALUES ('25182', '1', '-8114', '1517', '3.8', '0');
+
