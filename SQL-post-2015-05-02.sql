@@ -1583,11 +1583,15 @@ REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCred
 
 
 -- Placed the giant Colossus bugs in Silithus that spawn during the 10 hour war.
-REPLACE INTO `creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12784, 15740, 1, 0, 0, -7322.63, 1648.95, -31.4682, 3.84444, 25, 5, 0, 3331000, 0, 0, 0);
-REPLACE INTO `creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12785, 15741, 1, 0, 0, -7828.12, 536.281, -35.5381, 2.92552, 25, 5, 0, 3331000, 0, 0, 0);
-REPLACE INTO `creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12786, 15742, 1, 0, 0, -6547.64, 971.98, 0.376849, 3.91513, 25, 5, 0, 3331000, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12784, 15740, 1, 0, 0, -7322.63, 1648.95, -31.4682, 3.84444, 25, 5, 0, 3331000, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12785, 15741, 1, 0, 0, -7828.12, 536.281, -35.5381, 2.92552, 25, 5, 0, 3331000, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12786, 15742, 1, 0, 0, -6547.64, 971.98, 0.376849, 3.91513, 25, 5, 0, 3331000, 0, 0, 0);
 
 -- Updated the Colossus movement speed.
 UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=2.1 WHERE  `entry`=15740;
 UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=2.1 WHERE  `entry`=15741;
 UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=2.1 WHERE  `entry`=15742;
+
+-- Trigger NPC for the Ahn'Qiraj gate event.
+INSERT INTO `zp_mangosd`.`creature_template` (`entry`, `modelid_1`, `modelid_2`, `name`, `minhealth`, `maxhealth`, `minmana`, `maxmana`, `faction_A`, `faction_H`, `speed_walk`, `speed_run`, `scale`, `mindmg`, `maxdmg`, `attackpower`, `baseattacktime`, `unit_class`, `unit_flags`, `type`, `flags_extra`, `ScriptName`) VALUES (17091, 1126, 13069, 'Ahn\'Qiraj Gate Trigger', 8, 8, 100, 100, 35, 35, 1.1, 0.95, 0, 2, 2, 1, 2000, 1, 33555200, 10, 130, 'npc_ahnqiraj_gate_trigger');
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12787, 17091, 1, 0, 0, -8108.13, 1524.25, 2.60941, 0.14046, 25, 5, 0, 8, 100, 0, 0);
