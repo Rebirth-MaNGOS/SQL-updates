@@ -1460,3 +1460,29 @@ REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQu
 REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCredit2`, `modelid_1`, `modelid_2`, `name`, `subname`, `gossip_menu_id`, `minlevel`, `maxlevel`, `minhealth`, `maxhealth`, `minmana`, `maxmana`, `armor`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `aggrorangeoverride`, `unit_class`, `unit_flags`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `PetSpellDataId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `Civilian`, `RacialLeader`, `RegenHealth`, `equipment_id`, `trainer_id`, `vendor_id`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`) VALUES (15571, 0, 0, 15555, 0, 'Maws', NULL, 0, 63, 63, 1165850, 1165850, 0, 0, 4691, 14, 14, 0, 1, 1.11286, 0, 3, 3360, 4111, 0, 1724, 1, 2000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 12, 15571, 0, 0, 0, 0, 0, 0, 0, 0, 3417, 19451, 25744, 0, 0, 0, 0, '', 0, 6, 0, 0, 1, 0, 0, 0, 617299803, 1, 'boss_maws');
 REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (1712767, 180669, 1, 3490.48, -6553.3, 0.502099, 4.66881, 0, 0, 0.722345, -0.691533, 25, 100, 1);
 REPLACE INTO `zp_mangosd`.`creature_model_info` (`modelid`, `bounding_radius`, `combat_reach`, `gender`, `modelid_other_gender`, `modelid_other_team`) VALUES (15555, 2, 2, 2, 0, 0);
+
+-- Colossus AI
+DELETE FROM zp_mangosd.creature_ai_scripts WHERE creature_id IN (15740, 15741, 15742) LIMIT 6;
+INSERT INTO `zp_mangosd`.`creature_ai_scripts` (`creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `action1_type`, `action1_param1`, `action1_param2`, `comment`) VALUES ('15742', '0', '0', '100', '11', '26167', '1', 'Colossus of Ashi - Colossal Smash');
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_param1`='30000', `event_param2`='30000', `event_param3`='30000', `event_param4`='30000' WHERE `creature_id`='15742';
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE `entry`='15742';
+
+
+INSERT INTO `zp_mangosd`.`creature_ai_scripts` (`creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `action1_type`, `action1_param1`, `action1_param2`, `comment`) VALUES ('15741', '0', '0', '100', '11', '26167', '1', 'Colossus of Regal - Colossal Smash');
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_param1`='30000', `event_param2`='30000', `event_param3`='30000', `event_param4`='30000' WHERE `creature_id`='15741';
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE `entry`='15741';
+
+
+INSERT INTO `zp_mangosd`.`creature_ai_scripts` (`creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `action1_type`, `action1_param1`, `action1_param2`, `comment`) VALUES ('15740', '0', '0', '100', '11', '26167', '1', 'Colossus of Zora - Colossal Smash');
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_param1`='30000', `event_param2`='30000', `event_param3`='30000', `event_param4`='30000' WHERE `creature_id`='15740';
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE `entry`='15740';
+
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='3331000', `maxhealth`='3331000', `armor`='4691', `mindmg`='6370', `maxdmg`='8445', `RegenHealth`='0' WHERE `entry`='15742';
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='3331000', `maxhealth`='3331000', `mindmg`='6370', `maxdmg`='8445', `AIName`='EventAI', `RegenHealth`='0', `ScriptName`='mob_eventai' WHERE `entry`='15741';
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='3331000', `maxhealth`='3331000', `mindmg`='6370', `maxdmg`='8445', `AIName`='EventAI', `RegenHealth`='0', `ScriptName`='mob_eventai' WHERE `entry`='15740';
+
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` (`entry`, `content_default`, `type`) VALUES ('-15740', '%s lets loose a massive attack.', '2');
+INSERT INTO `zp_mangosd`.`creature_ai_scripts` (`creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`) VALUES ('15740', '0', '0', '100', '0', '30000', '30000', '30000', '30000', '1', '-15740');
+INSERT INTO `zp_mangosd`.`creature_ai_scripts` (`creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`) VALUES ('15741', '0', '0', '100', '0', '30000', '30000', '30000', '30000', '1', '-15740');
+INSERT INTO `zp_mangosd`.`creature_ai_scripts` (`creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`) VALUES ('15742', '0', '0', '100', '0', '30000', '30000', '30000', '30000', '1', '-15740');
+
