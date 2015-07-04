@@ -1595,3 +1595,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=2.1 WHERE  `entry`=15742
 -- Trigger NPC for the Ahn'Qiraj gate event.
 INSERT INTO `zp_mangosd`.`creature_template` (`entry`, `modelid_1`, `modelid_2`, `name`, `minhealth`, `maxhealth`, `minmana`, `maxmana`, `faction_A`, `faction_H`, `speed_walk`, `speed_run`, `scale`, `mindmg`, `maxdmg`, `attackpower`, `baseattacktime`, `unit_class`, `unit_flags`, `type`, `flags_extra`, `ScriptName`) VALUES (17091, 1126, 13069, 'Ahn\'Qiraj Gate Trigger', 8, 8, 100, 100, 35, 35, 1.1, 0.95, 0, 2, 2, 1, 2000, 1, 33555200, 10, 130, 'npc_ahnqiraj_gate_trigger');
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12787, 17091, 1, 0, 0, -8108.13, 1524.25, 2.60941, 0.14046, 25, 5, 0, 8, 100, 0, 0);
+
+-- Colossal Anubisath AI
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_colossal_anubisath' WHERE  `entry`=15743;
