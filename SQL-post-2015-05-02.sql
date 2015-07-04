@@ -1587,3 +1587,7 @@ REPLACE INTO `creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `positi
 REPLACE INTO `creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12785, 15741, 1, 0, 0, -7828.12, 536.281, -35.5381, 2.92552, 25, 5, 0, 3331000, 0, 0, 0);
 REPLACE INTO `creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12786, 15742, 1, 0, 0, -6547.64, 971.98, 0.376849, 3.91513, 25, 5, 0, 3331000, 0, 0, 0);
 
+-- Updated the Colossus movement speed.
+UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=2.1 WHERE  `entry`=15740;
+UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=2.1 WHERE  `entry`=15741;
+UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=2.1 WHERE  `entry`=15742;
