@@ -313,3 +313,6 @@ REPLACE INTO `zp_mangosd`.`creature` VALUES (85304, 15514, 509, 0, 0, -9302.91, 
 REPLACE INTO `zp_mangosd`.`creature` VALUES (85305, 15514, 509, 0, 0, -9300.18, 1267.1, -63.4539, 1.21955, 120, 0, 0, 26656, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature` VALUES (85306, 15514, 509, 0, 0, -9271.2, 1245.07, -63.4566, 5.68061, 120, 0, 0, 26673, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature` VALUES (85307, 15514, 509, 0, 0, -9233.02, 1242.57, -63.284, 3.28123, 120, 0, 0, 26661, 0, 0, 0);
+
+-- Obsidian Destroyer AI
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='mob_obsidian_destroyer' WHERE  `entry`=15338;
