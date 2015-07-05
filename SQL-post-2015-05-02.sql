@@ -277,3 +277,39 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (85301, 32, -9263.01, 1994.
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (85301, 33, -9307.44, 1998.82, 85.5561, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.10544, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (85301, 34, -9338.27, 2012.79, 85.5561, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.70096, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (85301, 35, -9321.63, 2048.44, 85.5561, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.13409, 0, 0);
+
+/********* AQ20 update hitbox for all mobs and bosses **************/
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.5, `combat_reach`=1.6 WHERE  `modelid`=15741;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.5, `combat_reach`=1.6 WHERE  `modelid`=15546;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.8, `combat_reach`=1.8 WHERE  `modelid`=9229;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1, `combat_reach`=1 WHERE  `modelid`=11143;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=3.5, `combat_reach`=3.5 WHERE  `modelid`=15742;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=0.9, `combat_reach`=0.9 WHERE  `modelid`=15354;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.4, `combat_reach`=1.4 WHERE  `modelid`=15437;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.4, `combat_reach`=1.4 WHERE  `modelid`=15738;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.6, `combat_reach`=1.6 WHERE  `modelid`=15376;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=2, `combat_reach`=2 WHERE  `modelid`=15343;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.4, `combat_reach`=1.4 WHERE  `modelid`=12151;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=2.4, `combat_reach`=2.4 WHERE  `modelid`=15392;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.2, `combat_reach`=1.2 WHERE  `modelid`=15336;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.4, `combat_reach`=1.4 WHERE  `modelid`=15464;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.2, `combat_reach`=1.2 WHERE  `modelid`=15347;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.9, `combat_reach`=1.9 WHERE  `modelid`=13096;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=2, `combat_reach`=2 WHERE  `modelid`=15432;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.5, `combat_reach`=1.5 WHERE  `modelid`=11084;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.5, `combat_reach`=1.5 WHERE  `modelid`=15439;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=2, `combat_reach`=2 WHERE  `modelid`=15554;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=2, `combat_reach`=2 WHERE  `modelid`=15431;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.4, `combat_reach`=1.4 WHERE  `modelid`=15483;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.4, `combat_reach`=1.4 WHERE  `modelid`=12153;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1, `combat_reach`=1 WHERE  `modelid`=13509;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.5, `combat_reach`=1.5 WHERE  `modelid`=15463;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.4, `combat_reach`=1.4 WHERE  `modelid`=11095;
+
+-- add buru eggs
+REPLACE INTO `zp_mangosd`.`creature` VALUES (85302, 15514, 509, 0, 0, -9242.15, 1273.64, -63.4076, 0.006106, 120, 0, 0, 26652, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (85303, 15514, 509, 0, 0, -9263.81, 1297.04, -63.4714, 5.44499, 120, 0, 0, 26646, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (85304, 15514, 509, 0, 0, -9302.91, 1303.53, -63.3969, 2.31125, 120, 0, 0, 26650, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (85305, 15514, 509, 0, 0, -9300.18, 1267.1, -63.4539, 1.21955, 120, 0, 0, 26656, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (85306, 15514, 509, 0, 0, -9271.2, 1245.07, -63.4566, 5.68061, 120, 0, 0, 26673, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (85307, 15514, 509, 0, 0, -9233.02, 1242.57, -63.284, 3.28123, 120, 0, 0, 26661, 0, 0, 0);
