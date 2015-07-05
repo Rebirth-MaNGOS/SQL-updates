@@ -1830,7 +1830,7 @@ UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=14, `faction_H`=14 WHERE
 UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=35, `faction_H`=35, `flags_extra`=128 WHERE  `entry`=15964;
 -- update some armor hp for buru, p2 buru animation and egg
 UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=666250, `maxhealth`=666250, `armor`=3795 WHERE  `entry`=15370;
-UPDATE `zp_mangosd`.`creature_template` SET `minlevel`=63, `maxlevel`=63`armor`=3795 WHERE  `entry`=15507;
+UPDATE `zp_mangosd`.`creature_template` SET `minlevel`=63, `maxlevel`=63, `armor`=3795 WHERE  `entry`=15507;
 UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=26650, `maxhealth`=26699 WHERE  `entry`=15514;
 -- buru hitbox
 UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=2.3, `combat_reach`=2.3 WHERE  `modelid`=15654;
@@ -1965,3 +1965,8 @@ REPLACE INTO `zp_mangosd`.`creature` VALUES (85307, 15514, 509, 0, 0, -9233.02, 
 
 -- Obsidian Destroyer AI
 UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='mob_obsidian_destroyer' WHERE  `entry`=15338;
+
+-- shriek/spitting scarab, adjust AI and remove charge from spitting
+DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=1546201;
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_type`=0, `event_param1`=3000, `event_param2`=30000, `event_param3`=15000, `event_param4`=35000, `action1_param2`=4  WHERE  `id`=1546101;
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_param4`=12000 WHERE  `id`=1546202;
