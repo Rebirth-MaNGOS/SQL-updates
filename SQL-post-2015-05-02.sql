@@ -101,6 +101,12 @@ REPLACE INTO `zp_mangosd`.`spell_area` VALUES (24414, 3358, 0, 0, 0, 0, 0, 2, 0)
 DROP TABLE IF EXISTS zp_mangosd.event_resource;
 DROP TABLE IF EXISTS zp_charactersd.event_resource_count;
 DROP TABLE IF EXISTS zp_mangosd.event_resource_gameobject;
+DROP TABLE IF EXISTS `event_resource_status`;
+CREATE TABLE IF NOT EXISTS `zp_charactersd`.`event_resource_status` (
+      `event_id` int(10) unsigned NOT NULL DEFAULT '0',
+      `completed` bit(1) DEFAULT b'0',
+      PRIMARY KEY (`event_id`)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 CREATE TABLE `zp_mangosd`.`event_resource` (
     `id` INT NOT NULL,
     `event_id` INT NOT NULL,
@@ -1970,3 +1976,8 @@ UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='mob_obsid
 DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=1546201;
 UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_type`=0, `event_param1`=3000, `event_param2`=30000, `event_param3`=15000, `event_param4`=35000, `action1_param2`=4  WHERE  `id`=1546101;
 UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_param4`=12000 WHERE  `id`=1546202;
+
+-- Bang the AQ gong
+REPLACE INTO `zp_mangosd`.`gameobject_involvedrelation` (`id`, `quest`) VALUES (180718, 8743);
+UPDATE `zp_mangosd`.`gameobject_template` SET `ScriptName`='go_scarab_gong' WHERE  `entry`=180718;
+UPDATE `zp_mangosd`.`gameobject_template` SET `type`=2 WHERE  `entry`=180718;
