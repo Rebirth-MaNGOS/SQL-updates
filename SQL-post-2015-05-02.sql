@@ -1,3 +1,23 @@
+-- Report to Orgnil RP at quest complete
+-- delete old sql so we can run this more than once
+DELETE FROM `zp_mangosd`.`quest_end_scripts` WHERE  `id`=823 LIMIT 10;
+UPDATE `zp_mangosd`.`quest_template` SET `CompleteScript`=823 WHERE  `entry`=823;
+
+REPLACE INTO `zp_mangosd`.`db_script_string` VALUES (2000006009, 'What?? The Burning Blade is spreading! We must investigate!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (823, 3, 1, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Orgnil Emote on Quest Complete');
+REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (823, 3, 0, 0, 0, 0, 0, 0, 2000006009, 0, 0, 0, 0, 0, 0, 0, 'Orgnil Say on Quest Complete');
+-- new sql
+REPLACE INTO `zp_mangosd`.`db_script_string` VALUES (2000006015, 'Orgnil Soulscar listens to %t\'s report...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (823, 0, 0, 2, 0, 0, 0, 0, 2000006015, 0, 0, 0, 0, 0, 0, 0, 'Orgnil Text Emote on Quest Complete');
+
+-- Quest end RP Barbecued Buzzard Wings
+UPDATE `zp_mangosd`.`quest_template` SET `CompleteScript`=703 WHERE  `entry`=703;
+REPLACE INTO `zp_mangosd`.`db_script_string` VALUES (2000006014, 'Rigglefuzz cooks up a batch of spicy hot buzzard wings for %t.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+-- delete old sql so we can run this more than once
+DELETE FROM `zp_mangosd`.`quest_end_scripts` WHERE  `id`=703 LIMIT 3;
+REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (703, 0, 0, 2, 0, 0, 0, 0, 2000006014, 0, 0, 0, 0, 0, 0, 0, 'Rigglefuzz - emote on Quest Complete');
+
 -- remove low lvl loot from blackhand veteran's loot table
 DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=9819 AND `item`=24075;
 
