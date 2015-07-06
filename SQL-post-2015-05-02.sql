@@ -101,10 +101,10 @@ REPLACE INTO `zp_mangosd`.`spell_area` VALUES (24414, 3358, 0, 0, 0, 0, 0, 2, 0)
 DROP TABLE IF EXISTS zp_mangosd.event_resource;
 DROP TABLE IF EXISTS zp_charactersd.event_resource_count;
 DROP TABLE IF EXISTS zp_mangosd.event_resource_gameobject;
-DROP TABLE IF EXISTS `event_resource_status`;
+DROP TABLE IF EXISTS `zp_charactersd`.`event_resource_status`;
 CREATE TABLE IF NOT EXISTS `zp_charactersd`.`event_resource_status` (
       `event_id` int(10) unsigned NOT NULL DEFAULT '0',
-      `completed` bit(1) DEFAULT b'0',
+      `completed` tinyint(4) DEFAULT NULL,
       PRIMARY KEY (`event_id`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 CREATE TABLE `zp_mangosd`.`event_resource` (
