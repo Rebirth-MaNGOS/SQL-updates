@@ -2080,3 +2080,68 @@ REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCred
 -- Event for the Ten Hour war
 REPLACE INTO `zp_mangosd`.`game_event` (`entry`, `start_time`, `end_time`, `occurence`, `length`, `holiday`, `description`) VALUES (54, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 525600, 600, 0, 'AQ Ten Hour War');
 
+-- 10 hour war event crystals
+
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (2355, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (2356, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (2357, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (2358, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (7744, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (7745, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (7746, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (7747, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (7748, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (7749, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (7750, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (7751, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (7752, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (7753, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (7754, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (7755, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (13395, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (13396, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (13397, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (13398, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (13399, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (13400, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (13401, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (13402, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (13403, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (13404, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (13405, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (13406, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (13407, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (13408, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (13409, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (13410, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (13411, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (13412, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (16210, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (16211, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (16214, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (16215, 54);
+
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (1872, 54);
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (1873, 54);
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (1874, 54);
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (1875, 54);
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (1876, 54);
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (1877, 54);
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (1878, 54);
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (1879, 54);
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (1880, 54);
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (1881, 54);
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (1882, 54);
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (1883, 54);
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (5259, 54);
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (5260, 54);
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (5261, 54);
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (5262, 54);
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (5263, 54);
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (5264, 54);
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (5265, 54);
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (5266, 54);
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (5267, 54);
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (5268, 54);
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (5269, 54);
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (5270, 54);
