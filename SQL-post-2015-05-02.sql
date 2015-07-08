@@ -2171,3 +2171,10 @@ REPLACE INTO `zp_mangosd`.`creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_she
 REPLACE INTO `zp_mangosd`.`creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (11004, 14577, 0, 0, 0, 0, 0, '');
 REPLACE INTO `zp_mangosd`.`creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (11005, 14577, 0, 0, 0, 0, 0, '');
 REPLACE INTO `zp_mangosd`.`creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (11006, 14577, 0, 0, 0, 0, 0, '');
+
+-- AQ Troop Spawning Event
+REPLACE INTO `zp_mangosd`.`game_event` (`entry`, `start_time`, `end_time`, `occurence`, `length`, `holiday`, `description`) VALUES (55, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 525600, 600000, 0, 'AQ Troop Spawn');
+
+-- Duplicate of the Colossal Anubisaths without the patrol AI
+REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `modelid_1`, `name`, `minlevel`, `maxlevel`, `minhealth`, `maxhealth`, `faction_A`, `faction_H`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `attackpower`, `baseattacktime`, `rangeattacktime`, `maxrangedmg`, `lootid`, `mingold`, `maxgold`) VALUES (15755, 15347, 'Colossal Anubisath Warbringer', 63, 63, 327554, 327554, 14, 14, 4.5, 1.11286, 0, 1, 509, 614, 259, 1500, 1650, 1, 15743, 4599, 4836);
+
