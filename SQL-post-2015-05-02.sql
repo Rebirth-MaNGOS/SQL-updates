@@ -2186,3 +2186,14 @@ REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (17152, 15755, 1, 0, 0, -8395.1, 1492.1, 20.3343, 5.8668, 1200, 5, 0, 327554, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (17153, 15755, 1, 0, 0, -8402.02, 1860.93, 77.307, 5.05783, 1200, 5, 0, 327554, 0, 0, 0);
 
+-- Added trigger, anubisaths and the Colossuses to the Ten Hour War
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (12784, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (12785, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (12786, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (12787, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (17149, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (17150, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (17151, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (17152, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (17153, 54);
+
