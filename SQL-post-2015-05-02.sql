@@ -2145,3 +2145,7 @@ REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (5267
 REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (5268, 54);
 REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (5269, 54);
 REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (5270, 54);
+
+-- AQ Troop Spawning Event
+REPLACE INTO `zp_mangosd`.`game_event` (`entry`, `start_time`, `end_time`, `occurence`, `length`, `holiday`, `description`) VALUES (55, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 525600, 600000, 0, 'AQ Troop Spawn');
+
