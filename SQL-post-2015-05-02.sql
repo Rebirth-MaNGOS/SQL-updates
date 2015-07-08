@@ -2145,3 +2145,29 @@ REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (5267
 REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (5268, 54);
 REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (5269, 54);
 REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (5270, 54);
+
+-- Cavalrymen
+
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (10997, 15854, 1, 0, 0, -6823.77, 738.905, 42.1994, 1.90761, 25, 5, 0, 9278, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (10998, 15854, 1, 0, 0, -6824.84, 741.95, 42.2418, 1.90761, 25, 5, 0, 9278, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (10999, 15854, 1, 0, 0, -6825.67, 744.332, 42.3359, 1.90761, 25, 5, 0, 9278, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (11000, 15854, 1, 0, 0, -6826.55, 746.851, 42.4974, 1.90761, 25, 5, 0, 9278, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (11001, 15854, 1, 0, 0, -6827.46, 749.433, 42.6782, 1.89976, 25, 5, 0, 9278, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (10997, 14334, 0, 0, 0, 0, 0, NULL);
+REPLACE INTO `zp_mangosd`.`creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (10998, 14334, 0, 0, 0, 0, 0, NULL);
+REPLACE INTO `zp_mangosd`.`creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (10999, 14334, 0, 0, 0, 0, 0, NULL);
+REPLACE INTO `zp_mangosd`.`creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (11000, 14334, 0, 0, 0, 0, 0, NULL);
+REPLACE INTO `zp_mangosd`.`creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (11001, 14334, 0, 0, 0, 0, 0, NULL);
+
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (11002, 15862, 1, 0, 0, -6827.94, 741.238, 42.1517, 1.8919, 25, 5, 0, 4000, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (11003, 15862, 1, 0, 0, -6828.52, 742.972, 42.1955, 1.8919, 25, 5, 0, 4000, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (11004, 15862, 1, 0, 0, -6829.12, 744.77, 42.3116, 1.8919, 25, 5, 0, 4000, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (11005, 15862, 1, 0, 0, -6829.83, 746.9, 42.4535, 1.8919, 25, 5, 0, 4000, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (11006, 15862, 1, 0, 0, -6830.09, 748.959, 42.558, 2.04505, 25, 5, 0, 4000, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (11002, 14577, 0, 0, 0, 0, 0, '');
+REPLACE INTO `zp_mangosd`.`creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (11003, 14577, 0, 0, 0, 0, 0, '');
+REPLACE INTO `zp_mangosd`.`creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (11004, 14577, 0, 0, 0, 0, 0, '');
+REPLACE INTO `zp_mangosd`.`creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (11005, 14577, 0, 0, 0, 0, 0, '');
+REPLACE INTO `zp_mangosd`.`creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (11006, 14577, 0, 0, 0, 0, 0, '');
