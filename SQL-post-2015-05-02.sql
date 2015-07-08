@@ -1488,7 +1488,7 @@ REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `posi
 REPLACE INTO `zp_mangosd`.`creature_model_info` (`modelid`, `bounding_radius`, `combat_reach`, `gender`, `modelid_other_gender`, `modelid_other_team`) VALUES (15555, 2, 2, 2, 0, 0);
 
 -- Colossus AI
-DELETE FROM zp_mangosd.creature_ai_scripts WHERE creature_id IN (15740, 15741, 15742) LIMIT 6;
+DELETE FROM zp_mangosd.creature_ai_scripts WHERE creature_id IN (15740, 15741, 15742) LIMIT 9;
 INSERT INTO `zp_mangosd`.`creature_ai_scripts` (`creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `action1_type`, `action1_param1`, `action1_param2`, `comment`) VALUES ('15742', '0', '0', '100', '11', '26167', '1', 'Colossus of Ashi - Colossal Smash');
 UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_param1`='30000', `event_param2`='30000', `event_param3`='30000', `event_param4`='30000' WHERE `creature_id`='15742';
 UPDATE `zp_mangosd`.`creature_template` SET `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE `entry`='15742';
