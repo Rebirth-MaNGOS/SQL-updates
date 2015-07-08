@@ -1489,17 +1489,17 @@ REPLACE INTO `zp_mangosd`.`creature_model_info` (`modelid`, `bounding_radius`, `
 
 -- Colossus AI
 DELETE FROM zp_mangosd.creature_ai_scripts WHERE creature_id IN (15740, 15741, 15742) LIMIT 9;
-INSERT INTO `zp_mangosd`.`creature_ai_scripts` (`creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `action1_type`, `action1_param1`, `action1_param2`, `comment`) VALUES ('15742', '0', '0', '100', '11', '26167', '1', 'Colossus of Ashi - Colossal Smash');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` (`creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `action1_type`, `action1_param1`, `action1_param2`, `comment`) VALUES ('15742', '0', '0', '100', '11', '26167', '1', 'Colossus of Ashi - Colossal Smash');
 UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_param1`='30000', `event_param2`='30000', `event_param3`='30000', `event_param4`='30000' WHERE `creature_id`='15742';
 UPDATE `zp_mangosd`.`creature_template` SET `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE `entry`='15742';
 
 
-INSERT INTO `zp_mangosd`.`creature_ai_scripts` (`creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `action1_type`, `action1_param1`, `action1_param2`, `comment`) VALUES ('15741', '0', '0', '100', '11', '26167', '1', 'Colossus of Regal - Colossal Smash');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` (`creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `action1_type`, `action1_param1`, `action1_param2`, `comment`) VALUES ('15741', '0', '0', '100', '11', '26167', '1', 'Colossus of Regal - Colossal Smash');
 UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_param1`='30000', `event_param2`='30000', `event_param3`='30000', `event_param4`='30000' WHERE `creature_id`='15741';
 UPDATE `zp_mangosd`.`creature_template` SET `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE `entry`='15741';
 
 
-INSERT INTO `zp_mangosd`.`creature_ai_scripts` (`creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `action1_type`, `action1_param1`, `action1_param2`, `comment`) VALUES ('15740', '0', '0', '100', '11', '26167', '1', 'Colossus of Zora - Colossal Smash');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` (`creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `action1_type`, `action1_param1`, `action1_param2`, `comment`) VALUES ('15740', '0', '0', '100', '11', '26167', '1', 'Colossus of Zora - Colossal Smash');
 UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_param1`='30000', `event_param2`='30000', `event_param3`='30000', `event_param4`='30000' WHERE `creature_id`='15740';
 UPDATE `zp_mangosd`.`creature_template` SET `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE `entry`='15740';
 
@@ -1508,9 +1508,9 @@ UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='3331000', `maxhealth`='
 UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='3331000', `maxhealth`='3331000', `mindmg`='6370', `maxdmg`='8445', `AIName`='EventAI', `RegenHealth`='0', `ScriptName`='mob_eventai' WHERE `entry`='15740';
 
 REPLACE INTO `zp_mangosd`.`creature_ai_texts` (`entry`, `content_default`, `type`) VALUES ('-15740', '%s lets loose a massive attack.', '2');
-INSERT INTO `zp_mangosd`.`creature_ai_scripts` (`creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`) VALUES ('15740', '0', '0', '100', '0', '30000', '30000', '30000', '30000', '1', '-15740');
-INSERT INTO `zp_mangosd`.`creature_ai_scripts` (`creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`) VALUES ('15741', '0', '0', '100', '0', '30000', '30000', '30000', '30000', '1', '-15740');
-INSERT INTO `zp_mangosd`.`creature_ai_scripts` (`creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`) VALUES ('15742', '0', '0', '100', '0', '30000', '30000', '30000', '30000', '1', '-15740');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` (`creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`) VALUES ('15740', '0', '0', '100', '0', '30000', '30000', '30000', '30000', '1', '-15740');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` (`creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`) VALUES ('15741', '0', '0', '100', '0', '30000', '30000', '30000', '30000', '1', '-15740');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` (`creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`) VALUES ('15742', '0', '0', '100', '0', '30000', '30000', '30000', '30000', '1', '-15740');
 
 -- Nefarius's Corruption
 
@@ -2197,3 +2197,9 @@ REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (17151,
 REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (17152, 54);
 REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (17153, 54);
 
+
+-- Rajaxx Gate Talk
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-1509011, 'Attack and make them pay dearly!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 8603, 1, 0, 0, 'rajaxx SAY_UNK1');
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-1509012, 'Crush them! Drive them out!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 8605, 1, 0, 0, 'rajaxx SAY_UNK2');
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-1509013, 'Do not hesitate! Destroy them!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 8606, 1, 0, 0, 'rajaxx SAY_UNK3');
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-1509014, 'Warriors! Captains! Continue the fight!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 8613, 1, 0, 0, 'rajaxx SAY_UNK4');
