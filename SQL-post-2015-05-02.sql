@@ -2601,3 +2601,20 @@ REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (52740, 15857, 1, 0, 0, -6779.95, 634.574, 9.14664, 3.65739, 25, 5, 0, 4000, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (52741, 15857, 1, 0, 0, -6780.88, 639.898, 11.0534, 3.51601, 25, 5, 0, 4000, 0, 0, 0);
 
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (52726, 55);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (52727, 55);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (52728, 55);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (52729, 55);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (52730, 55);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (52731, 55);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (52732, 55);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (52733, 55);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (52734, 55);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (52735, 55);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (52736, 55);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (52737, 55);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (52738, 55);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (52739, 55);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (52740, 55);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (52741, 55);
+
