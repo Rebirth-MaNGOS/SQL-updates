@@ -2618,3 +2618,25 @@ REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (52739,
 REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (52740, 55);
 REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (52741, 55);
 
+-- Kaldorei marksmen
+
+REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCredit2`, `modelid_1`, `modelid_2`, `name`, `subname`, `gossip_menu_id`, `minlevel`, `maxlevel`, `minhealth`, `maxhealth`, `minmana`, `maxmana`, `armor`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `aggrorangeoverride`, `unit_class`, `unit_flags`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `PetSpellDataId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `Civilian`, `RacialLeader`, `RegenHealth`, `equipment_id`, `trainer_id`, `vendor_id`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`) VALUES (15860, 0, 0, 15689, 0, 'Kaldorei Marksman', NULL, 0, 60, 60, 960, 960, 2434, 2434, 0, 35, 35, 0, 1, 1.11286, 0, 1, 335, 484, 0, 189, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 0, 0, 1, 15860, 0, 0, 0, 0, '');
+REPLACE INTO `zp_mangosd`.`creature_equip_template` (`entry`, `equipentry1`, `equipentry2`, `equipentry3`) VALUES (15860, 18855, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (52742, 15860, 1, 0, 0, -6892.61, 903.267, 30.2302, 2.67949, 25, 5, 0, 960, 2434, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (52743, 15860, 1, 0, 0, -6879.17, 908.905, 31.8162, 2.70698, 25, 5, 0, 960, 2434, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (52744, 15860, 1, 0, 0, -6902.94, 885.535, 31.3395, 3.07455, 25, 5, 0, 960, 2434, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (52745, 15860, 1, 0, 0, -6887.64, 860.983, 35.5763, 3.02193, 25, 5, 0, 960, 2434, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (52746, 15860, 1, 0, 0, -6876.24, 832.373, 40.3973, 3.15015, 25, 5, 0, 960, 2434, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (52747, 15860, 1, 0, 0, -6867.26, 815.657, 42.6114, 2.89568, 25, 5, 0, 960, 2434, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (52748, 15860, 1, 0, 0, -6859.88, 798.849, 42.8934, 3.08417, 25, 5, 0, 960, 2434, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (52742, 55);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (52743, 55);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (52744, 55);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (52745, 55);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (52746, 55);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (52747, 55);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (52748, 55);
+
+
