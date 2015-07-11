@@ -2646,4 +2646,44 @@ REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCred
 -- The Prophet Skeram
 
 REPLACE INTO `zp_mangosd`.`creature_model_info` (`modelid`, `bounding_radius`, `combat_reach`, `gender`, `modelid_other_gender`, `modelid_other_team`) VALUES (15345, 3, 3, 2, 0, 0);
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `comment`) VALUES (-1531006, 'PREPARE... for the return of the ancient ones!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 8618, 1, 0, 0, 'skeram SAY_SPLIT');
+
+-- Battleguard Sartura
+
+REPLACE INTO `zp_mangosd`.`creature_model_info` (`modelid`, `bounding_radius`, `combat_reach`, `gender`, `modelid_other_gender`, `modelid_other_team`) VALUES (15583, 3, 3, 2, 0, 0);
+
+-- Frankriss the Unyielding
+
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87910 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87909 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87908 LIMIT 1
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87937 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87936 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87935 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87934 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87933 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87932 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87931 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87930 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87929 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87928 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87927 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87926 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87925 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87924 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87923 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87922 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87921 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87920 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87919 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87918 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87917 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87916 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87915 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87914 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87913 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87912 LIMIT 1;
+
+REPLACE INTO `zp_mangosd`.`creature_model_info` (`modelid`, `bounding_radius`, `combat_reach`, `gender`, `modelid_other_gender`, `modelid_other_team`) VALUES (15743, 3, 3, 2, 0, 0);
+
 
