@@ -2704,3 +2704,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `flags_extra`=769 WHERE  `entry`=153
 
 -- Phase Lasher add ai
 UPDATE `zp_mangosd`.`creature_template` SET `resistance5`=0, `AIName`='', `ScriptName`='mob_phase_lasher' WHERE  `entry`=13196;
+
+-- Death talon overseer should be considered Dragonkin not humanoid
+UPDATE `zp_mangosd`.`creature_template` SET `type`=2 WHERE  `entry`=12461;
