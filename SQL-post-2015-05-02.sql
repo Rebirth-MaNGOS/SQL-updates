@@ -2686,4 +2686,18 @@ DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87912 LIMIT 1;
 
 REPLACE INTO `zp_mangosd`.`creature_model_info` (`modelid`, `bounding_radius`, `combat_reach`, `gender`, `modelid_other_gender`, `modelid_other_team`) VALUES (15743, 3, 3, 2, 0, 0);
 
+-- Add taunt immune to all emerald dragons
+UPDATE `zp_mangosd`.`creature_template` SET `flags_extra`=256 WHERE  `entry`=14890;
+UPDATE `zp_mangosd`.`creature_template` SET `flags_extra`=256 WHERE  `entry`=14889;
+UPDATE `zp_mangosd`.`creature_template` SET `flags_extra`=256 WHERE  `entry`=14888;
+UPDATE `zp_mangosd`.`creature_template` SET `flags_extra`=256 WHERE  `entry`=14887;
 
+-- nef
+UPDATE `zp_mangosd`.`creature_template` SET `flags_extra`=769 WHERE  `entry`=11583;
+UPDATE `zp_mangosd`.`creature_template` SET `flags_extra`=769 WHERE  `entry`=11584;
+
+-- AQ20 bosses immune to taunt
+UPDATE `zp_mangosd`.`creature_template` SET `flags_extra`=769 WHERE  `entry`=15370;
+UPDATE `zp_mangosd`.`creature_template` SET `flags_extra`=769 WHERE  `entry`=15369;
+UPDATE `zp_mangosd`.`creature_template` SET `flags_extra`=769 WHERE  `entry`=15339;
+UPDATE `zp_mangosd`.`creature_template` SET `flags_extra`=769 WHERE  `entry`=15348;
