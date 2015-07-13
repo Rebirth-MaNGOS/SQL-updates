@@ -2701,3 +2701,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `flags_extra`=769 WHERE  `entry`=153
 UPDATE `zp_mangosd`.`creature_template` SET `flags_extra`=769 WHERE  `entry`=15369;
 UPDATE `zp_mangosd`.`creature_template` SET `flags_extra`=769 WHERE  `entry`=15339;
 UPDATE `zp_mangosd`.`creature_template` SET `flags_extra`=769 WHERE  `entry`=15348;
+
+-- Phase Lasher add ai
+UPDATE `zp_mangosd`.`creature_template` SET `resistance5`=0, `AIName`='', `ScriptName`='mob_phase_lasher' WHERE  `entry`=13196;
