@@ -2989,10 +2989,10 @@ DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87636 LIMIT 1;
 
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (10514, 800008, 531, 0, 0, -8407.74, 2019.22, 9.01069, 4.76386, 25, 5, 0, 646473, 0, 0, 2);
 
-REPLACE INTO `zp_mangosd`.`creature_formations` (`leaderGUID`, `memberGUID`, `dist`, `angle`, `groupAI`) VALUES (10513, 10513, 0, 0, 2);
-REPLACE INTO `zp_mangosd`.`creature_formations` (`leaderGUID`, `memberGUID`, `dist`, `angle`, `groupAI`) VALUES (10513, 87675, 0, 0, 2);
-REPLACE INTO `zp_mangosd`.`creature_formations` (`leaderGUID`, `memberGUID`, `dist`, `angle`, `groupAI`) VALUES (10513, 87676, 4, 0, 2);
-REPLACE INTO `zp_mangosd`.`creature_formations` (`leaderGUID`, `memberGUID`, `dist`, `angle`, `groupAI`) VALUES (10513, 87677, 8, 0, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` (`leaderGUID`, `memberGUID`, `dist`, `angle`, `groupAI`) VALUES (10514, 10514, 0, 0, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` (`leaderGUID`, `memberGUID`, `dist`, `angle`, `groupAI`) VALUES (10514, 87675, 0, 0, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` (`leaderGUID`, `memberGUID`, `dist`, `angle`, `groupAI`) VALUES (10514, 87676, 4, 0, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` (`leaderGUID`, `memberGUID`, `dist`, `angle`, `groupAI`) VALUES (10514, 87677, 8, 0, 2);
 
 REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (10514, 1, -8406.7, 2007.92, 7.31046, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.78742, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (10514, 2, -8405.39, 1990.47, 3.78436, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.78742, 0, 0);
