@@ -3083,3 +3083,17 @@ REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment
 DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87647 LIMIT 1;
 DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87646 LIMIT 1;
 DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87645 LIMIT 1;
+
+-- Dire Maul, outside instance. All doors and torches should now close/reset much faster
+UPDATE `zp_mangosd`.`gameobject_template` SET `data2`=196608 WHERE  `entry`=179510;
+UPDATE `zp_mangosd`.`gameobject_template` SET `data2`=196608 WHERE  `entry`=177192;
+
+UPDATE `zp_mangosd`.`gameobject_template` SET `data2`=196608 WHERE  `entry`=179507;
+UPDATE `zp_mangosd`.`gameobject_template` SET `data2`=196608 WHERE  `entry`=177188;
+
+UPDATE `zp_mangosd`.`gameobject_template` SET `data2`=196608 WHERE  `entry`=177189;
+UPDATE `zp_mangosd`.`gameobject_template` SET `data2`=196608 WHERE  `entry`=179508;
+
+-- add armor for renataki and hazzarah in ZG
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=3795 WHERE  `entry`=15084;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=4450 WHERE  `entry`=15083;
