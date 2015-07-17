@@ -1414,7 +1414,7 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `so
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES ('-1720157', 'Succumb to the endless dream, little ones. Let it consume you!', '0', '1', '0', '0', '');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES ('-1720158', 'Anachronos, this diversion will give you and the young druid time enough to seal the gate. Do not falter. Now, let us see how they deal with chaotic magic.', '0', '0', '0', '0', '');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES ('-1720159', 'Let them feel the wrath of the Blue Flight! May Malygos protect me!', '0', '1', '0', '0', '');
-REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES ('-1720160', ' Do not forget the sacrifices we made on this day, night elf. We have all suffered immensely at the hands of these beasts.', '0', '0', '0', '0', '');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES ('-1720160', 'Do not forget the sacrifices we made on this day, night elf. We have all suffered immensely at the hands of these beasts.', '0', '0', '0', '0', '');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES ('-1720161', 'Alexstrasza grant me the resolve to drive our enemies back!', '0', '1', '0', '0', '');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES ('-1720162', 'It is done dragon. Lead the way...', '0', '0', '0', '0', '');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES ('-1720163', 'NOW, STAGHELM! WE GO NOW! Prepare your magic!', '0', '0', '0', '0', '');
@@ -1424,10 +1424,10 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `so
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES ('-1720167', 'Ancient ones guide my hand... Wake from your slumber! WAKE AND SEAL THIS CURSED PLACE!', '0', '0', '0', '0', '');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES ('-1720168', 'It... It is over, Lord Staghelm. We are victorious. Albeit the cost for this victory was great.', '0', '0', '0', '0', '');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES ('-1720169', 'There is but one duty that remains...', '0', '0', '0', '0', '');
-REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES ('-1720170', ' Before I leave this place, I make one final offering to you, Lord Staghelm. Should a time arise in which you must gain entry to this accursed fortress, use the Scepter of the Shifting Sands on the sacred gong. The magic holding the barrier together will dissipate and the horrors of Ahn\'Qiraj will be unleashed upon the world once more.', '0', '0', '0', '0', '');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES ('-1720170', 'Before I leave this place, I make one final offering to you, Lord Staghelm. Should a time arise in which you must gain entry to this accursed fortress, use the Scepter of the Shifting Sands on the sacred gong. The magic holding the barrier together will dissipate and the horrors of Ahn\'Qiraj will be unleashed upon the world once more.', '0', '0', '0', '0', '');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES ('-1720171', 'After the savagery that my people have witnessed and felt, you expect me to accept another burden dragon? Surely you are mad.', '0', '0', '0', '0', '');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES ('-1720172', 'I want nothing to do with Silithus, the Qiraji and least of all, any damned dragons!', '0', '0', '0', '0', '');
-REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES ('-1720173', ' Lord Staghelm, where are you going? You would shatter our bond for the sake of pride?', '0', '0', '0', '0', '');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES ('-1720173', 'Lord Staghelm, where are you going? You would shatter our bond for the sake of pride?', '0', '0', '0', '0', '');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES ('-1720174', 'My son\'s soul will find no comfort in this hollow victory, dragon. I will have him back. Though it takes a millennia, I WILL have my son back!', '0', '0', '0', '0', '');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `sound`, `type`, `language`, `emote`, `comment`) VALUES ('-1720175', 'And now you know all that there is to know, mortal...', '0', '0', '0', '0', '');
 
@@ -2656,7 +2656,7 @@ REPLACE INTO `zp_mangosd`.`creature_model_info` (`modelid`, `bounding_radius`, `
 
 DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87910 LIMIT 1;
 DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87909 LIMIT 1;
-DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87908 LIMIT 1
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87908 LIMIT 1;
 DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87937 LIMIT 1;
 DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87936 LIMIT 1;
 DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87935 LIMIT 1;
@@ -2925,3 +2925,20 @@ REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `pos
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (87602, 15511, 531, 15656, 0, -8567.49, 2174.4, -4.07939, 4.30511, 6380, 0, 0, 600000, 48984, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (87601, 15543, 531, 15657, 0, -8587.73, 2175.61, -4.18675, 4.90201, 6380, 0, 0, 600000, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (87603, 15544, 531, 0, 0, -8547.74, 2161.5, -3.62916, 3.63439, 6380, 0, 0, 430338, 0, 0, 2);
+
+-- Exiles in Arathi highlands, should now be "banished" when using items on them
+UPDATE `zp_mangosd`.`creature_template` SET `dmgschool`=2, `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE  `entry`=2760;
+UPDATE `zp_mangosd`.`creature_template` SET `dmgschool`=4 WHERE  `entry`=2761;
+UPDATE `zp_mangosd`.`creature_template` SET `dmgschool`=3 WHERE  `entry`=2762;
+
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-2760, '%s is ripped apart as it is banished from this world.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 2, 0, 0, 'Exiles in Arathi - Emote on Death');
+
+-- add immunities 
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (276001, 2760, 11, 0, 100, 0, 0, 0, 0, 0, 44, 4, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Burning Exile - Set fire immunity on spawn');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (276212, 2762, 11, 0, 100, 0, 0, 0, 0, 0, 44, 8, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Thundering Exile - Set nature immunity on spawn');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (276105, 2761, 11, 0, 100, 0, 0, 0, 0, 0, 44, 16, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Cresting Exile - Set frost immunity on spawn');
+
+-- emote
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (276002, 2760, 8, 0, 100, 1, 4130, -1, 0, 0, 37, 0, 0, 0, 1, -2760, 0, 0, 0, 0, 0, 0, 'Burning Exile - Die on Spell hit');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (276104, 2761, 8, 0, 100, 1, 4131, -1, 0, 0, 37, 0, 0, 0, 1, -2760, 0, 0, 0, 0, 0, 0, 'Cresting Exile - Die on Spell hit');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (276211, 2762, 8, 0, 100, 1, 4132, -1, 0, 0, 37, 0, 0, 0, 1, -2760, 0, 0, 0, 0, 0, 0, 'Thundering Exile - Die on Spell hit');
