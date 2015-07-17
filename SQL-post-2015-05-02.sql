@@ -3208,3 +3208,17 @@ REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `pos
 REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (87901, 8, -7957.12, 1310.43, -85.0395, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.14658, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (87901, 9, -7969.46, 1296.59, -76.0882, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.95415, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (87901, 10, -7979.59, 1285.89, -73.2731, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.95415, 0, 0);
+
+-- Dire Maul, outside instance. All doors and torches should now close/reset much faster
+UPDATE `zp_mangosd`.`gameobject_template` SET `data2`=196608 WHERE  `entry`=179510;
+UPDATE `zp_mangosd`.`gameobject_template` SET `data2`=196608 WHERE  `entry`=177192;
+
+UPDATE `zp_mangosd`.`gameobject_template` SET `data2`=196608 WHERE  `entry`=179507;
+UPDATE `zp_mangosd`.`gameobject_template` SET `data2`=196608 WHERE  `entry`=177188;
+
+UPDATE `zp_mangosd`.`gameobject_template` SET `data2`=196608 WHERE  `entry`=177189;
+UPDATE `zp_mangosd`.`gameobject_template` SET `data2`=196608 WHERE  `entry`=179508;
+
+-- add armor for renataki and hazzarah in ZG
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=3795 WHERE  `entry`=15084;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=4450 WHERE  `entry`=15083;
