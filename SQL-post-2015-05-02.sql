@@ -2951,3 +2951,25 @@ REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (87621, 15233, 531, 14521, 0, -8376.47, 2071.94, 9.042, 2.46264, 3520, 3, 0, 600000, 0, 0, 1);
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (87620, 15233, 531, 14521, 0, -8370.18, 2037.11, 9.22506, 0.851792, 3520, 3, 0, 600000, 0, 0, 1);
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (10513, 15233, 531, 0, 0, -8387.41, 2046.95, 9.21116, 5.15263, 25, 3, 0, 62609, 0, 0, 1);
+
+-- Removed vekniss borers, should only be spawned by vekniss warriors at death
+
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87670 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87669 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87668 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87667 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87666 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87665 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87664 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87663 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87662 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87661 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87660 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87659 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87658 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87657 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87656 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87655 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87654 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87653 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87652 LIMIT 1;
