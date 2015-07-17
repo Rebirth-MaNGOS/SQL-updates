@@ -2973,3 +2973,14 @@ DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87655 LIMIT 1;
 DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87654 LIMIT 1;
 DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87653 LIMIT 1;
 DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87652 LIMIT 1;
+
+-- Removed erronous mobs
+
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87638 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87637 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87636 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87635 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87634 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87614 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87615 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87636 LIMIT 1;
