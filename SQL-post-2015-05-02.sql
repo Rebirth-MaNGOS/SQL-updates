@@ -3225,3 +3225,29 @@ UPDATE `zp_mangosd`.`creature_template` SET `armor`=4450 WHERE  `entry`=15083;
 
 -- Mandokir shouldn't be immune to taunt.
 UPDATE `zp_mangosd`.`creature_template` SET `flags_extra`=1 WHERE  `entry`=11382;
+
+-- Mok'rash added missing quotes
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE  `entry`=1493;
+
+-- yells
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (149301, 1493, 11, 0, 100, 0, 0, 0, 0, 0, 1, -1338, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Mok\'rash - Yell on Spawn');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (149302, 1493, 1, 0, 100, 1, 20000, 60000, 180000, 600000, 1, -1139, -1140, -1141, 0, 0, 0, 0, 0, 0, 0, 0, 'Mok\'rash - Random Yell ooc');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (149303, 1493, 1, 0, 100, 1, 180000, 200000, 120000, 600000, 1, -1142, -1143, -1144, 0, 0, 0, 0, 0, 0, 0, 0, 'Mok\'rash - Random Yell ooc 2');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (149304, 1493, 1, 0, 100, 1, 100000, 290000, 120000, 600000, 1, -1145, -1146, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Mok\'rash - Random Yell ooc 3');
+
+-- add texts
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-1138, 'COME OUT TO JANEIRO\'S POINT. I\'M WAITING FOR YOU, SMOTTS...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, '1493');
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-1139, 'SMOTTS, I HAVE YOUR LITTLE BELT... COME GET IT!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, '1493');
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-1140, 'SMOTTS! HEY, SMOTTS!! COME OUT AND PLAY!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, '1493');
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-1141, 'DON\'T LET THIS STATUE BE MY ONLY COMPANY, COME OUT AND PLAY!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, '1493');
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-1143, 'I PROMISE I WON\'T KILL YOUR CREW THIS TIME. HAH! BUT MY BROTHER MIGHT EAT THEM!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, '1493');
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-1144, 'HAVE YOU RUN OUT OF SHIPS TO SEND? WHERE IS YOUR COURAGE?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, '1493');
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-1145, 'I HAVE YOUR LITTLE BELT TIED AROUND MY FINGER, SMOTTS. DON\'T YOU WANT IT BACK?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, '1493');
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-1146, 'YOU WERE SUCH GOOD SPORT THE LAST TIME...COME OUT!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, '1493');
+
+-- Quest, The Flesh Does Not Lie should require 20 samples and not 10 like in tbc.
+UPDATE `zp_mangosd`.`quest_template` SET `Objectives`='Recover 20 Plagued Flesh Samples from Stratholme and return them to Betina Bigglezink. You suspect that any creature in Stratholme would have said flesh sample.', `ReqItemCount1`=20 WHERE  `entry`=5212;
+
+-- Corrected text for Roman, child in SW
+UPDATE `zp_mangosd`.`db_script_string` SET `content_default`='I think I see something.' WHERE  `entry`=2000005120;
+UPDATE `zp_mangosd`.`db_script_string` SET `content_default`='I think I see something.' WHERE  `entry`=2000005118;
