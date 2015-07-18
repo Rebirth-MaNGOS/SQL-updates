@@ -3252,6 +3252,22 @@ UPDATE `zp_mangosd`.`quest_template` SET `Objectives`='Recover 20 Plagued Flesh 
 UPDATE `zp_mangosd`.`db_script_string` SET `content_default`='I think I see something.' WHERE  `entry`=2000005120;
 UPDATE `zp_mangosd`.`db_script_string` SET `content_default`='I think I see something.' WHERE  `entry`=2000005118;
 
+-- Raptor horns quest end rp
+UPDATE `zp_mangosd`.`quest_template` SET `CompleteScript`=865 WHERE  `entry`=865;
+
+REPLACE INTO `zp_mangosd`.`db_script_string` VALUES (2000005667, 'Now let\'s try it...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+REPLACE INTO `zp_mangosd`.`db_script_string` VALUES (2000005668, 'Ugh! That\'s terrible!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+-- delete old sql so we can run this more than once
+DELETE FROM `zp_mangosd`.`quest_end_scripts` WHERE  `id`=865 LIMIT 4;
+REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (865, 0, 0, 0, 0, 0, 0, 0, 2000005667, 0, 0, 0, 0, 0, 0, 0, 'Mebok Mizzyrix - Say');
+REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (865, 6, 0, 0, 0, 0, 0, 0, 2000005668, 0, 0, 0, 0, 0, 0, 0, 'Mebok Mizzyrix - Say');
+
+-- Bom'bay no need for gossip menu, all done in the script
+UPDATE `zp_mangosd`.`creature_template` SET `gossip_menu_id`=0 WHERE  `entry`=10578;
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='npc_bom_bay' WHERE  `entry`=10578;
+UPDATE `zp_mangosd`.`creature` SET `spawndist`=5, `MovementType`=1 WHERE  `guid`=3368;
+
 -- Tunnel before Huhuran
 
 
