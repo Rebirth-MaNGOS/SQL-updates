@@ -3233,7 +3233,7 @@ UPDATE `zp_mangosd`.`creature_template` SET `AIName`='EventAI', `ScriptName`='mo
 REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (149301, 1493, 11, 0, 100, 0, 0, 0, 0, 0, 1, -1338, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Mok\'rash - Yell on Spawn');
 REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (149302, 1493, 1, 0, 100, 1, 20000, 60000, 180000, 600000, 1, -1139, -1140, -1141, 0, 0, 0, 0, 0, 0, 0, 0, 'Mok\'rash - Random Yell ooc');
 REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (149303, 1493, 1, 0, 100, 1, 180000, 200000, 120000, 600000, 1, -1142, -1143, -1144, 0, 0, 0, 0, 0, 0, 0, 0, 'Mok\'rash - Random Yell ooc 2');
-REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (149304, 1493, 1, 0, 100, 1, 100000, 290000, 120000, 600000, 1, -1145, -1146, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Mok\'rash - Random Yell ooc 3');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (149304, 1493, 1, 0, 100, 1, 100000, 290000, 120000, 600000, 1, -1145, -1146, -1144, 0, 0, 0, 0, 0, 0, 0, 0, 'Mok\'rash - Random Yell ooc 3');
 
 -- add texts
 REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-1138, 'COME OUT TO JANEIRO\'S POINT. I\'M WAITING FOR YOU, SMOTTS...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, '1493');
