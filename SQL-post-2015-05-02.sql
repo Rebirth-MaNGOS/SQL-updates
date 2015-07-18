@@ -3222,3 +3222,6 @@ UPDATE `zp_mangosd`.`gameobject_template` SET `data2`=196608 WHERE  `entry`=1795
 -- add armor for renataki and hazzarah in ZG
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=3795 WHERE  `entry`=15084;
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=4450 WHERE  `entry`=15083;
+
+-- Mandokir shouldn't be immune to taunt.
+UPDATE `zp_mangosd`.`creature_template` SET `flags_extra`=1 WHERE  `entry`=11382;
