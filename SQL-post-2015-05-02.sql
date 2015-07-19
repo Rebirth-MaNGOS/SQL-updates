@@ -3281,6 +3281,9 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720180, 'Wha... where 
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720181, 'Yes! I\'m cured! I\'m cure... whoa, got up too fast!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Noggle Ficklespragg - say 2');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720182, 'Thanks for finding my reagents! *yawn* That poison\'s made me... a bit tired...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Noggle Ficklespragg - say 3');
 
+-- The Prodigal Lich Returns quest end RP, add ai and text
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=2950, `AIName`='', `ScriptName`='npc_bethor_iceshard' WHERE  `entry`=1498;
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720183, 'It has been a long time, Bethor, my friend. When time permits, we must speak at length. For we have much to discuss. And thank you, $N. Without your aid I may never have found my way to the Forsaken.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 1, 'Gunther Visage - say 1');
 
 -- Tunnel before Huhuran
 
