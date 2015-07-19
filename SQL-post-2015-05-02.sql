@@ -3268,6 +3268,12 @@ UPDATE `zp_mangosd`.`creature_template` SET `gossip_menu_id`=0 WHERE  `entry`=10
 UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='npc_bom_bay' WHERE  `entry`=10578;
 UPDATE `zp_mangosd`.`creature` SET `spawndist`=5, `MovementType`=1 WHERE  `guid`=3368;
 
+-- Rock Stalker should no longer be elite, set dmg to same as other similar mobs
+UPDATE `zp_mangosd`.`creature_template` SET `rank`=0, `mindmg`=101, `maxdmg`=125, `attackpower`=52, `baseattacktime`=1650 WHERE  `entry`=11739;
+
+-- added web spell
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (4000014, 11739, 0, 0, 100, 1, 3000, 10000, 10000, 25000, 11, 745, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Rock Stalker - Cast Web');
+
 -- Tunnel before Huhuran
 
 
@@ -3940,3 +3946,6 @@ DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87957 LIMIT 1;
 
 -- Qiraji Swarmguard move AI from DB so we can have them running ooc
 UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='mob_qiraji_swarmguard' WHERE  `entry`=15343;
+
+-- Ossirian, update run speed
+UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=1.30 WHERE  `entry`=15339;
