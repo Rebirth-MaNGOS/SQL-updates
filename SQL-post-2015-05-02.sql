@@ -3274,6 +3274,14 @@ UPDATE `zp_mangosd`.`creature_template` SET `rank`=0, `mindmg`=101, `maxdmg`=125
 -- added web spell
 REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (4000014, 11739, 0, 0, 100, 1, 3000, 10000, 10000, 25000, 11, 745, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Rock Stalker - Cast Web');
 
+-- add script and texts for Beetix/Noggle ficklespragg, quests 8277,8278,8282
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_beetix_ficklespragg' WHERE  `entry`=15189;
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_noggle_ficklespragg' WHERE  `entry`=15190;
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720180, 'Wha... where am I? So... weak...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Noggle Ficklespragg - say 1');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720181, 'Yes! I\'m cured! I\'m cure... whoa, got up too fast!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Noggle Ficklespragg - say 2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720182, 'Thanks for finding my reagents! *yawn* That poison\'s made me... a bit tired...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Noggle Ficklespragg - say 3');
+
+
 -- Tunnel before Huhuran
 
 
