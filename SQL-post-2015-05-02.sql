@@ -3285,6 +3285,24 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720182, 'Thanks for fi
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=2950, `AIName`='', `ScriptName`='npc_bethor_iceshard' WHERE  `entry`=1498;
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720183, 'It has been a long time, Bethor, my friend. When time permits, we must speak at length. For we have much to discuss. And thank you, $N. Without your aid I may never have found my way to the Forsaken.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 1, 'Gunther Visage - say 1');
 
+-- SQL for A Little Slime Goes a Long Way
+REPLACE INTO `zp_mangosd`.`item_required_target` VALUES (11953, 2, 6559);
+REPLACE INTO `zp_mangosd`.`item_required_target` VALUES (11953, 2, 6557);
+REPLACE INTO `zp_mangosd`.`item_required_target` VALUES (11953, 2, 8766);
+REPLACE INTO `zp_mangosd`.`item_required_target` VALUES (11953, 2, 2656);
+
+REPLACE INTO `zp_mangosd`.`item_required_target` VALUES (11914, 2, 7086);
+REPLACE INTO `zp_mangosd`.`item_required_target` VALUES (11948, 2, 7092);
+
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='npc_ooze_multi' WHERE  `entry`=6559;
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_ooze_multi' WHERE  `entry`=6557;
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='npc_ooze_multi' WHERE  `entry`=8766;
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_ooze_multi' WHERE  `entry`=2656;
+
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_ooze_multi' WHERE  `entry`=7086;
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='npc_ooze_multi' WHERE  `entry`=7092;
+
+
 -- Tunnel before Huhuran
 
 
