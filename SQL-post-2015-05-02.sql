@@ -3268,6 +3268,23 @@ UPDATE `zp_mangosd`.`creature_template` SET `gossip_menu_id`=0 WHERE  `entry`=10
 UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='npc_bom_bay' WHERE  `entry`=10578;
 UPDATE `zp_mangosd`.`creature` SET `spawndist`=5, `MovementType`=1 WHERE  `guid`=3368;
 
+-- Rock Stalker should no longer be elite, set dmg to same as other similar mobs
+UPDATE `zp_mangosd`.`creature_template` SET `rank`=0, `mindmg`=101, `maxdmg`=125, `attackpower`=52, `baseattacktime`=1650 WHERE  `entry`=11739;
+
+-- added web spell
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (4000014, 11739, 0, 0, 100, 1, 3000, 10000, 10000, 25000, 11, 745, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Rock Stalker - Cast Web');
+
+-- add script and texts for Beetix/Noggle ficklespragg, quests 8277,8278,8282
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_beetix_ficklespragg' WHERE  `entry`=15189;
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_noggle_ficklespragg' WHERE  `entry`=15190;
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720180, 'Wha... where am I? So... weak...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Noggle Ficklespragg - say 1');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720181, 'Yes! I\'m cured! I\'m cure... whoa, got up too fast!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Noggle Ficklespragg - say 2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720182, 'Thanks for finding my reagents! *yawn* That poison\'s made me... a bit tired...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Noggle Ficklespragg - say 3');
+
+-- The Prodigal Lich Returns quest end RP, add ai and text
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=2950, `AIName`='', `ScriptName`='npc_bethor_iceshard' WHERE  `entry`=1498;
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720183, 'It has been a long time, Bethor, my friend. When time permits, we must speak at length. For we have much to discuss. And thank you, $N. Without your aid I may never have found my way to the Forsaken.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 1, 'Gunther Visage - say 1');
+
 -- Tunnel before Huhuran
 
 
@@ -3938,3 +3955,8 @@ DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=87957 LIMIT 1;
  REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCredit2`, `modelid_1`, `modelid_2`, `name`, `subname`, `gossip_menu_id`, `minlevel`, `maxlevel`, `minhealth`, `maxhealth`, `minmana`, `maxmana`, `armor`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `aggrorangeoverride`, `unit_class`, `unit_flags`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `PetSpellDataId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `Civilian`, `RacialLeader`, `RegenHealth`, `equipment_id`, `trainer_id`, `vendor_id`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`) VALUES (15471, 0, 0, 15688, 0, 'Lieutenant General Andorov', NULL, 0, 60, 60, 16754, 16754, 0, 0, 0, 994, 994, 0, 1.5, 1.11286, 0, 1, 1469, 1504, 0, 686, 1, 1500, 1650, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 599, 4836, '', 0, 3, 0, 0, 1, 0, 0, 0, 0, 0, 'npc_general_andorov');
  insert into `zp_mangosd`.`npc_text` (`ID`, `text0_0`, `text0_1`, `lang0`, `prob0`, `em0_0`, `em0_1`, `em0_2`, `em0_3`, `em0_4`, `em0_5`, `text1_0`, `text1_1`, `lang1`, `prob1`, `em1_0`, `em1_1`, `em1_2`, `em1_3`, `em1_4`, `em1_5`, `text2_0`, `text2_1`, `lang2`, `prob2`, `em2_0`, `em2_1`, `em2_2`, `em2_3`, `em2_4`, `em2_5`, `text3_0`, `text3_1`, `lang3`, `prob3`, `em3_0`, `em3_1`, `em3_2`, `em3_3`, `em3_4`, `em3_5`, `text4_0`, `text4_1`, `lang4`, `prob4`, `em4_0`, `em4_1`, `em4_2`, `em4_3`, `em4_4`, `em4_5`, `text5_0`, `text5_1`, `lang5`, `prob5`, `em5_0`, `em5_1`, `em5_2`, `em5_3`, `em5_4`, `em5_5`, `text6_0`, `text6_1`, `lang6`, `prob6`, `em6_0`, `em6_1`, `em6_2`, `em6_3`, `em6_4`, `em6_5`, `text7_0`, `text7_1`, `lang7`, `prob7`, `em7_0`, `em7_1`, `em7_2`, `em7_3`, `em7_4`, `em7_5`) values('14442','<Andorov looks at you grimly.>$B$BIf it bleeds, we can kill it.','','0','1','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0','','','0','0','0','0','0','0','0','0');
 
+-- Qiraji Swarmguard move AI from DB so we can have them running ooc
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='mob_qiraji_swarmguard' WHERE  `entry`=15343;
+
+-- Ossirian, update run speed
+UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=1.30 WHERE  `entry`=15339;
