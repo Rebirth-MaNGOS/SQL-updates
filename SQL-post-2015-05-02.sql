@@ -4087,5 +4087,5 @@ REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCred
 
 -- size of ossirian crystal + trigger
 UPDATE `zp_mangosd`.`gameobject_template` SET `size`=3 WHERE  `entry`=180619;
-UPDATE `zp_mangosd`.`creature_template` SET `scale`=4 WHERE  `entry`=7080;
+UPDATE `zp_mangosd`.`creature_template` SET `scale`=8 WHERE  `entry`=7080;
 
