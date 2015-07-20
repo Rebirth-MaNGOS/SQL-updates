@@ -4084,3 +4084,8 @@ REPLACE INTO `zp_mangosd`.`npc_vendor_template` (`entry`, `item`, `maxcount`, `i
 REPLACE INTO `zp_mangosd`.`npc_vendor_template` (`entry`, `item`, `maxcount`, `incrtime`) VALUES (15471, 22221, 1, 36000);
 
 REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCredit2`, `modelid_1`, `modelid_2`, `name`, `subname`, `gossip_menu_id`, `minlevel`, `maxlevel`, `minhealth`, `maxhealth`, `minmana`, `maxmana`, `armor`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `aggrorangeoverride`, `unit_class`, `unit_flags`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `PetSpellDataId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `Civilian`, `RacialLeader`, `RegenHealth`, `equipment_id`, `trainer_id`, `vendor_id`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`) VALUES (15471, 0, 0, 15688, 0, 'Lieutenant General Andorov', NULL, 0, 60, 60, 16754, 16754, 0, 0, 0, 250, 250, 0, 1.5, 1.11286, 0, 1, 1469, 1504, 0, 686, 1, 1500, 1650, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 599, 4836, '', 0, 3, 0, 0, 1, 1472, 0, 15471, 0, 0, 'npc_general_andorov');
+
+-- size of ossirian crystal + trigger
+UPDATE `zp_mangosd`.`gameobject_template` SET `size`=3 WHERE  `entry`=180619;
+UPDATE `zp_mangosd`.`creature_template` SET `scale`=4 WHERE  `entry`=7080;
+
