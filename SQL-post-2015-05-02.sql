@@ -4204,3 +4204,8 @@ REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `pos
 REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (88015, 34, -8735.52, 1647.85, -83.7327, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.472182, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (88015, 35, -8721.41, 1654.99, -84.8259, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.468255, 0, 0);
 
+-- ZG, Razzashi Skitterer should no longer give 5 rep
+UPDATE `zp_mangosd`.`creature_onkill_reputation` SET `RewOnKillRepValue1`=0 WHERE  `creature_id`=14880;
+
+-- Viscidus glob set right model and size, size 0 before, and set right model id, before 15686 
+UPDATE `zp_mangosd`.`creature_template` SET `modelid_1`=10029, `speed_run`=0.2, `scale`=1 WHERE  `entry`=15667;
