@@ -4290,3 +4290,6 @@ DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE `item`=19821;
 
 -- Witherbark Protector hitbox
 UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=2, `combat_reach`=2 WHERE  `modelid`=12929;
+
+-- Twisted Evils should req 25 instead of 15 items
+UPDATE `zp_mangosd`.`quest_template` SET `ReqItemCount1`=25 WHERE  `entry`=7028;
