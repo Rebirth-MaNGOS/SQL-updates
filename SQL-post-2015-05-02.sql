@@ -4222,3 +4222,47 @@ REPLACE INTO `zp_mangosd`.`creature_model_info` (`modelid`, `bounding_radius`, `
 -- Anubisath Defender template
 
 REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCredit2`, `modelid_1`, `modelid_2`, `name`, `subname`, `gossip_menu_id`, `minlevel`, `maxlevel`, `minhealth`, `maxhealth`, `minmana`, `maxmana`, `armor`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `aggrorangeoverride`, `unit_class`, `unit_flags`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `PetSpellDataId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `Civilian`, `RacialLeader`, `RegenHealth`, `equipment_id`, `trainer_id`, `vendor_id`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`) VALUES (15277, 0, 0, 15351, 0, 'Anubisath Defender', NULL, 0, 62, 62, 482657, 482657, 0, 0, 4391, 14, 14, 0, 1.3, 1.11286, 0, 1, 360, 710, 0, 247, 1, 2000, 2000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 300, 800, 100, 10, 8, 15277, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 0, 0, 1, 0, 0, 0, 1, 0, 'mob_anubisath_defender');
+
+/****** Sunken Temple ***********/
+-- speed, immunities and no taunt of the spirit
+UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=0.3, `mechanic_immune_mask`=650870623, `flags_extra`=256 WHERE  `entry`=8317;
+
+-- Atal'ai Witch Doctor add missing spell hex
+REPLACE INTO `creature_ai_scripts` VALUES (525915, 5259, 0, 0, 100, 3, 8000, 15000, 15000, 28000, 11, 22566, 4, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Atal\'ai Witch Doctor - Cast Hex');
+
+-- shade of eranikus yell
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720184, 'This evil cannot be allowed to enter this world! Come my children!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Shade of Eranikus - Yell on Aggro');
+
+-- avatar of hakkar event flames should stop burning, not a good way since eventually they'll respawn
+UPDATE `zp_mangosd`.`gameobject_template` SET `data3`=999999999 WHERE  `entry`=148418;
+UPDATE `zp_mangosd`.`gameobject_template` SET `data3`=999999999 WHERE  `entry`=148419;
+UPDATE `zp_mangosd`.`gameobject_template` SET `data3`=999999999 WHERE  `entry`=148420;
+UPDATE `zp_mangosd`.`gameobject_template` SET `data3`=999999999 WHERE  `entry`=148421;
+
+-- resistances of mobs Nightmare Scalebane, Nightmare Wyrmkin, Nightmare Wanderer, Nightmare Whelp, Nightmare Suppressor
+UPDATE `zp_mangosd`.`creature_template` SET `resistance3`=150, `resistance5`=0 WHERE  `entry`=5277;
+UPDATE `zp_mangosd`.`creature_template` SET `resistance3`=150, `resistance5`=0 WHERE  `entry`=5280;
+UPDATE `zp_mangosd`.`creature_template` SET `resistance3`=150, `resistance5`=0 WHERE  `entry`=5283;
+UPDATE `zp_mangosd`.`creature_template` SET `resistance3`=150, `resistance5`=0 WHERE  `entry`=8319;
+UPDATE `zp_mangosd`.`creature_template` SET `resistance3`=150, `resistance5`=0 WHERE  `entry`=8497;
+
+-- FOR FUTURE FIX! Chained Essence of Eranikus, the item should spawn NPC and he should do one of these texts as random whisper to the player
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720185, 'It hurts so much... Itharius, my old friend... please help me...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 4, 0, 0, 'Eranikus the Chained - whisper 0');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720186, 'Will the nightmare ever end?! I cannot force myself awake!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 4, 0, 0, 'Eranikus the Chained - whisper 1');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720187, 'Torture me no more! Release me, mortal! The Swamp of Sorrows... mortal... please', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 4, 0, 0, 'Eranikus the Chained - whisper 2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720188, 'My eyes! It burns... it burns...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 4, 0, 0, 'Eranikus the Chained - whisper 3');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720189, 'Foolish mortal, I will rend your soul in two once I am released!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 4, 0, 0, 'Eranikus the Chained - whisper 4');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720190, 'My charge to watch the temple has failed... my corrupted soul knows no peace...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 4, 0, 0, 'Eranikus the Chained - whisper 5');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720191, 'My soul is not a trinket! Mortal, you must release me from these chains!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 4, 0, 0, 'Eranikus the Chained - whisper 6');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720192, 'Foolish mortal, I will rend your soul in two once I am released!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 4, 0, 0, 'Eranikus the Chained - whisper 7');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720193, 'You are an agent of their wicked god, fool. I will see you destroyed!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 4, 0, 0, 'Eranikus the Chained - whisper 8');
+
+-- FOR FUTURE FIX! avatar of hakkar event text
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720201, 'You must not summon our god!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Nightmare Suppressor - Yell 2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720200, 'No! You must not do this!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Nightmare Suppressor - Yell 1');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720199, 'DIE, MORTALS!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Avatar of Hakkar - Yell Aggro');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720198, 'I AM HERE!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Avatar of Hakkar - Yell Spawn');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720197, 'I TASTE THE BLOOD OF LIFE!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Shade of Hakkar - Yell 4');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720196, 'I DRAW CLOSER TO THIS WORLD!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Shade of Hakkar - Yell 3');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720195, 'I AM NEAR!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Shade of Hakkar - Yell 2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720194, 'HAKKAR LIVES!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Shade of Hakkar - Yell 1');
