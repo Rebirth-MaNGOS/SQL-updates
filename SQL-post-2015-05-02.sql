@@ -4281,3 +4281,26 @@ REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCred
 
 REPLACE INTO `zp_mangosd`.`creature_equip_template` (`entry`, `equipentry1`, `equipentry2`, `equipentry3`) VALUES (1480, 21679, 0, 0);
 DELETE FROM `zp_mangosd`.`creature_equip_template_raw` WHERE  `entry`=1480 LIMIT 1;
+
+-- Hakkari Urn, 100% drop on all items
+UPDATE `zp_mangosd`.`item_loot_template` SET `ChanceOrQuestChance`=100 WHERE  `entry`=10773 AND `item`=10780;
+UPDATE `zp_mangosd`.`item_loot_template` SET `ChanceOrQuestChance`=100 WHERE  `entry`=10773 AND `item`=10781;
+UPDATE `zp_mangosd`.`item_loot_template` SET `ChanceOrQuestChance`=100 WHERE  `entry`=10773 AND `item`=10782;
+
+-- no mobs should be allowed to drop voodoo dolls in ZG
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE `item`=19813;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE `item`=19814;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE `item`=19815;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE `item`=19816;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE `item`=19817;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE `item`=19818;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE `item`=19819;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE `item`=19820;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE `item`=19821;
+
+-- Witherbark Protector hitbox
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=2, `combat_reach`=2 WHERE  `modelid`=12929;
+
+-- Twisted Evils should req 25 instead of 15 items
+UPDATE `zp_mangosd`.`quest_template` SET `ReqItemCount1`=25 WHERE  `entry`=7028;
+
