@@ -4475,3 +4475,9 @@ REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` (`entry`, `pointid`, `locatio
 REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` (`entry`, `pointid`, `location_x`, `location_y`, `location_z`, `waittime`, `point_comment`) VALUES (11016, 154, 4873.65, -395.331, 349.895, 0, NULL);
 REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` (`entry`, `pointid`, `location_x`, `location_y`, `location_z`, `waittime`, `point_comment`) VALUES (11016, 155, 4869.47, -394.043, 350.133, 0, NULL);
 REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` (`entry`, `pointid`, `location_x`, `location_y`, `location_z`, `waittime`, `point_comment`) VALUES (11016, 156, 4851.92, -396.445, 351.362, 0, NULL);
+
+-- Bosses for hunter epic chain should be neutral so players can hit them before the challenge starts
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=189, `faction_H`=189 WHERE  `entry`=14531;
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=189, `faction_H`=189 WHERE  `entry`=14527;
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=189, `faction_H`=189 WHERE  `entry`=14536;
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=189, `faction_H`=189 WHERE  `entry`=14529;
