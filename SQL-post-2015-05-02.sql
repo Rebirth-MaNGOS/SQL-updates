@@ -4481,3 +4481,14 @@ UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=189, `faction_H`=189 WHE
 UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=189, `faction_H`=189 WHERE  `entry`=14527;
 UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=189, `faction_H`=189 WHERE  `entry`=14536;
 UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=189, `faction_H`=189 WHERE  `entry`=14529;
+
+-- Quest, get me out of here! text and update respawn time
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720202, 'Thanks $N. Now let\'s get out of here!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'Melizza Brimbuzzle - Say 1');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720203, 'We made it! Thanks again! I\'m going to run ahead!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Melizza Brimbuzzle - Say 2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720204, 'Hey Hornizz! I\'m back! And there are some people behind me who helped me out of a jam.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 5, 'Melizza Brimbuzzle - Say 3');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720205, 'We\'re going to have to scratch the Maraudines off our list. Too hard to work with...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'Melizza Brimbuzzle - Say 4');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720206, 'Well, I\'m off to the Gelkis. They\'re not as dumb as the Maraudines, but they\'re more reasonable.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 3, 'Melizza Brimbuzzle - Say 5');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720207, 'Bye! Better luck next time!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 3, 'Hornizz Brimbuzzle - Say 1');
+
+-- should have 15 min respawn
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=900 WHERE  `guid`=29197;
