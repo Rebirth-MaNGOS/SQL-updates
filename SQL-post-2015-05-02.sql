@@ -4492,3 +4492,49 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720207, 'Bye! Better l
 
 -- should have 15 min respawn
 UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=900 WHERE  `guid`=29197;
+
+-- wp
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 1, -1155.23, 2709.24, 111.114, 1000, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 2, -1159.83, 2711.52, 111.292, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 3, -1164.51, 2711.81, 111.718, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 4, -1179.86, 2707.94, 111.626, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 5, -1194.83, 2700.79, 111.522, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 6, -1207.56, 2694.98, 111.144, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 7, -1263.36, 2669.5, 111.516, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 8, -1273.43, 2665.28, 111.555, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 9, -1277.84, 2661.89, 111.555, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 10, -1289.14, 2646.48, 111.555, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 11, -1300.18, 2632.91, 111.555, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 12, -1316.67, 2614.8, 111.775, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 13, -1322.93, 2606.4, 111.561, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 14, -1329.34, 2597.94, 111.556, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 15, -1339.96, 2587.73, 111.556, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 16, -1350.07, 2578.06, 111.556, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 17, -1358.03, 2567.56, 111.548, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 18, -1362.34, 2560.38, 110.551, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 19, -1363.42, 2557.05, 109.644, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 20, -1366.85, 2543.47, 105.225, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 21, -1371.54, 2528.14, 100.138, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 22, -1375.11, 2518.27, 96.7677, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 23, -1380.3, 2505.44, 92.0183, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 24, -1380.85, 2501.99, 91.1035, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 25, -1383.39, 2483.61, 88.8186, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 26, -1383.39, 2483.61, 88.8186, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 27, -1388.67, 2470.56, 88.8804, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 28, -1389.56, 2459.67, 88.5757, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 29, -1391.95, 2437.11, 88.6181, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 30, -1385.39, 2397.06, 90.3664, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 31, -1379.09, 2366.73, 91.7255, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 32, -1374.75, 2346.18, 91.9955, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 33, -1363.96, 2313.7, 91.829, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 34, -1362.53, 2300.3, 92.3088, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 35, -1358.79, 2255.03, 91.136, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 36, -1353.68, 2213.06, 90.702, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 37, -1354.92, 2200.24, 81.5961, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 38, -1352.88, 2186.12, 74.8362, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 39, -1356.44, 2176.24, 71.8807, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 40, -1377.85, 2128.34, 63.9369, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 41, -1389.55, 2111.88, 61.9097, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 42, -1400.76, 2098.09, 62.104, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 43, -1404.39, 2089.68, 61.825, 22000, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 44, -1402.73, 2093.72, 61.9274, 0, NULL);
