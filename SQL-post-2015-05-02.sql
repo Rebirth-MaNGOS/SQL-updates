@@ -4228,7 +4228,7 @@ REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCred
 UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=0.3, `mechanic_immune_mask`=650870623, `flags_extra`=256 WHERE  `entry`=8317;
 
 -- Atal'ai Witch Doctor add missing spell hex
-REPLACE INTO `creature_ai_scripts` VALUES (525915, 5259, 0, 0, 100, 3, 8000, 15000, 15000, 28000, 11, 22566, 4, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Atal\'ai Witch Doctor - Cast Hex');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (525915, 5259, 0, 0, 100, 3, 8000, 15000, 15000, 28000, 11, 22566, 4, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Atal\'ai Witch Doctor - Cast Hex');
 
 -- shade of eranikus yell
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720184, 'This evil cannot be allowed to enter this world! Come my children!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Shade of Eranikus - Yell on Aggro');
@@ -4538,3 +4538,6 @@ REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 41, -1389.55, 
 REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 42, -1400.76, 2098.09, 62.104, 0, NULL);
 REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 43, -1404.39, 2089.68, 61.825, 22000, NULL);
 REPLACE INTO `zp_scriptdevzerod`.`script_waypoint` VALUES (12277, 44, -1402.73, 2093.72, 61.9274, 0, NULL);
+
+-- Adjustment of the factions for the bugs at the Twin Emperors.
+update zp_mangosd.creature_template set faction_A = 189, faction_H = 189 where entry in (15316, 15317);
