@@ -4260,12 +4260,12 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720193, 'You are an ag
 -- FOR FUTURE FIX! avatar of hakkar event text
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720201, 'You must not summon our god!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Nightmare Suppressor - Yell 2');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720200, 'No! You must not do this!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Nightmare Suppressor - Yell 1');
-REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720199, 'DIE, MORTALS!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Avatar of Hakkar - Yell Aggro');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720199, 'DIE, MORTALS!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 5871, 1, 0, 0, 'Avatar of Hakkar - Yell Aggro');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720198, 'I AM HERE!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Avatar of Hakkar - Yell Spawn');
-REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720197, 'I TASTE THE BLOOD OF LIFE!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Shade of Hakkar - Yell 4');
-REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720196, 'I DRAW CLOSER TO THIS WORLD!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Shade of Hakkar - Yell 3');
-REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720195, 'I AM NEAR!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Shade of Hakkar - Yell 2');
-REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720194, 'HAKKAR LIVES!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Shade of Hakkar - Yell 1');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720197, 'I TASTE THE BLOOD OF LIFE!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 5868, 1, 0, 0, 'Shade of Hakkar - Yell 4');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720196, 'I DRAW CLOSER TO THIS WORLD!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 5867, 1, 0, 0, 'Shade of Hakkar - Yell 3');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720195, 'I AM NEAR!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 5869, 1, 0, 0, 'Shade of Hakkar - Yell 2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720194, 'HAKKAR LIVES!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 5870, 1, 0, 0, 'Shade of Hakkar - Yell 1');
 
 -- Vek'lor weapon
 
