@@ -4727,3 +4727,8 @@ REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment
 
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (10515, 800008, 531, 0, 0, -8334.19, 1652.62, -28.7151, 0.398611, 25, 5, 0, 646473, 0, 0, 2);
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (5230, 800008, 531, 0, 0, -8578.96, 1993.15, -2.44609, 1.50244, 25, 5, 0, 646473, 0, 0, 2);
+
+-- Viscidus: toxin cloud npc added and globs shouldn't have loot
+REPLACE INTO `zp_mangosd`.`creature_template` VALUES (152990, 0, 0, 11686, 0, 'Toxin Cloud', NULL, 0, 1, 1, 250000, 250000, 0, 0, 0, 14, 14, 0, 1.27, 0.75, 0, 1, 0, 0, 0, 0, 1, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 0, 0, 1, 0, 0, 0, 617299803, 1, 'mob_toxin_cloud');
+UPDATE `zp_mangosd`.`creature_template` SET `mingold`=0, `maxgold`=0 WHERE  `entry`=15667;
+
