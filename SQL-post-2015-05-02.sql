@@ -4732,3 +4732,10 @@ REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment
 REPLACE INTO `zp_mangosd`.`creature_template` VALUES (152990, 0, 0, 11686, 0, 'Toxin Cloud', NULL, 0, 1, 1, 250000, 250000, 0, 0, 0, 14, 14, 0, 1.27, 0.75, 0, 1, 0, 0, 0, 0, 1, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 0, 0, 1, 0, 0, 0, 617299803, 1, 'mob_toxin_cloud');
 UPDATE `zp_mangosd`.`creature_template` SET `mingold`=0, `maxgold`=0 WHERE  `entry`=15667;
 
+-- add the npcs that send BG marks in mail as battlemasters to allow the marks to expire within 24h
+REPLACE INTO `zp_mangosd`.`battlemaster_entry` VALUES (15972, 1);
+REPLACE INTO `zp_mangosd`.`battlemaster_entry` VALUES (14623, 2);
+REPLACE INTO `zp_mangosd`.`battlemaster_entry` VALUES (14879, 3);
+
+-- kobold geomancer should now do kobold quote 
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_chance`=10, `action1_param1`=-7, `action1_param2`=-7, `action1_param3`=-8 WHERE  `id`=47603;
