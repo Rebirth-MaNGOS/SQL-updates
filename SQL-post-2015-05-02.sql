@@ -4770,3 +4770,7 @@ UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=617316187 WHE
 
 -- shazz should no longer be interruptable
 UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=650854235 WHERE  `entry`=12264;
+
+-- Thunderaan sql, add script armor etc
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=4691, `baseattacktime`=3000, `ScriptName`='boss_prince_thunderaan' WHERE  `entry`=14435;
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720208, 'My power is discombobulatingly devastating! It is ludicrous that these mortals even attempt to enter my realm!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Prince Thunderaan - Yell');
