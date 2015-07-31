@@ -4774,3 +4774,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=650854235 WHE
 -- Thunderaan sql, add script armor etc
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=4691, `baseattacktime`=3000, `ScriptName`='boss_prince_thunderaan' WHERE  `entry`=14435;
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720208, 'My power is discombobulatingly devastating! It is ludicrous that these mortals even attempt to enter my realm!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Prince Thunderaan - Yell');
+
+-- Heartswood q item shouldn't drop from a mob
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=3730 AND `item`=6912;
