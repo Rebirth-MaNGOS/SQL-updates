@@ -4739,3 +4739,34 @@ REPLACE INTO `zp_mangosd`.`battlemaster_entry` VALUES (14879, 3);
 
 -- kobold geomancer should now do kobold quote 
 UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_chance`=10, `action1_param1`=-7, `action1_param2`=-7, `action1_param3`=-8 WHERE  `id`=47603;
+
+-- wp for Meshlok the Harvester and shambler
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3554, 1, 731.105, -76.9863, -57.4987, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3554, 2, 675.412, -95.2185, -57.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3554, 3, 648.496, -87.5465, -57.4999, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3554, 4, 675.412, -95.2185, -57.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (725, 1, 731.105, -76.9863, -57.4987, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (725, 2, 675.412, -95.2185, -57.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (725, 3, 648.496, -87.5465, -57.4999, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (725, 4, 675.412, -95.2185, -57.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+-- add to world
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3554, 12237, 349, 3386, 0, 731.105, -76.9863, -57.4987, 3.1765, 7200, 3, 1, 600000, 0, 0, 2);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (725, 12224, 349, 3386, 0, 731.105, -76.9863, -57.4987, 3.1765, 7200, 3, 1, 600000, 0, 0, 2);
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=5727, `maxhealth`=5727, `armor`=2780, `speed_walk`=0.75, `rank`=2, `baseattacktime`=1500 WHERE  `entry`=12237;
+
+-- add pool
+REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2107, 1, 'Maraudon - Meshlok the Harvester Rare Spawn');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (3554, 2107, 10, 'Meshlok the Harvester');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (54652, 2107, 45, 'Cavern Lurker');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (725, 2107, 45, 'Cavern Shambler');
+
+-- flame imps in MC and rookery whelps ubrs should no longer be lootable
+UPDATE `zp_mangosd`.`creature_template` SET `lootid`=0, `mingold`=0, `maxgold`=0 WHERE  `entry`=11669;
+UPDATE `zp_mangosd`.`creature_template` SET `lootid`=0, `mingold`=0, `maxgold`=0 WHERE  `entry`=10161;
+
+-- garr immune to bleed
+UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=617316187 WHERE  `entry`=12057;
+
+-- shazz should no longer be interruptable
+UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=650854235 WHERE  `entry`=12264;
