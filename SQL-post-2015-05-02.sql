@@ -4834,3 +4834,5 @@ REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (155460, 19, -9609
 REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (155460, 20, -9637.9, 1541.08, 46, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.40117, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (155460, 21, -9677.14, 1538.72, 47, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.16555, 0, 0);
 
+-- eye tentacles at C'thun right model and size
+UPDATE `zp_mangosd`.`creature_template` SET `modelid_1`=15788, `scale`=0 WHERE  `entry`=15904;
