@@ -4777,3 +4777,34 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720208, 'My power is d
 
 -- Heartswood q item shouldn't drop from a mob
 DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=3730 AND `item`=6912;
+
+/****** Ayamiss adds handling *********/
+-- move ayamiss to right location
+REPLACE INTO `zp_mangosd`.`creature` VALUES (90891, 15369, 509, 15431, 0, -9716.88, 1517.79, 27.4678, 0.762221, 28800, 0, 0, 600000, 0, 0, 0);
+-- update stats for hive'zara swarmer
+UPDATE `zp_mangosd`.`creature_template` SET `minlevel`=60, `minhealth`=305, `maxhealth`=305, `armor`=3791,`speed_walk`=4, `speed_run`=1.5, `mindmg`=78, `maxdmg`=103, `attackpower`=30, `minrangedmg`=80, `maxrangedmg`=120, `mingold`=0, `maxgold`=0, `MovementType`=2, `InhabitType`=4, `ScriptName`='mob_hivezara_swarmer' WHERE  `entry`=15546;
+
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15546, 1, -9744.17, 1495.09, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.35519, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15546, 2, -9741.11, 1521.98, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.46515, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15546, 3, -9689.23, 1521.37, 46, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6.2011, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15546, 4, -9694.92, 1556.16, 46, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.69291, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15546, 5, -9690.47, 1586.97, 47, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.39054, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15546, 6, -9673.82, 1590.63, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6.26786, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15546, 7, -9660.48, 1582.67, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.59634, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15546, 8, -9617.58, 1554.21, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.83589, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15546, 9, -9594.57, 1558.79, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.459836, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15546, 10, -9594.36, 1576.34, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.64186, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15546, 11, -9612.41, 1589.98, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.80032, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15546, 12, -9662.99, 1604.02, 50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.87494, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15546, 13, -9672.52, 1613.75, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.08954, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15546, 14, -9671.7, 1635.06, 47, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.24916, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15546, 15, -9657.21, 1643.48, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.72986, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15546, 16, -9649.23, 1633.04, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.29004, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15546, 17, -9642.08, 1616.06, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.91305, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15546, 18, -9615.96, 1609.03, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.059287, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15546, 19, -9595.8, 1601.21, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.76128, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15546, 20, -9588.75, 1591, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.07406, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15546, 21, -9590.56, 1585.31, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.89204, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15546, 22, -9618.95, 1574.21, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.41295, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15546, 23, -9647.22, 1547.01, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.04127, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15546, 24, -9683.92, 1547.98, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.00847, 0, 0);
