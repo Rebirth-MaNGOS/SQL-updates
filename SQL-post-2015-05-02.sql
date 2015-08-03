@@ -4836,3 +4836,19 @@ REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (155460, 21, -9677
 
 -- eye tentacles at C'thun right model and size
 UPDATE `zp_mangosd`.`creature_template` SET `modelid_1`=15788, `scale`=0 WHERE  `entry`=15904;
+
+-- Mobs added to aq40 ten hour war event
+
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (2349, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (2350, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (2351, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (2352, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (2353, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (2354, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (13413, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (13414, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (13415, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (13416, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (16208, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (16209, 54);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (16212, 54);
