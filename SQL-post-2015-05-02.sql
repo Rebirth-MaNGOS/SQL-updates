@@ -4852,3 +4852,17 @@ REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (13416,
 REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (16208, 54);
 REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (16209, 54);
 REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (16212, 54);
+
+-- Mobs added to aq40 ten hour war event
+
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (12697, 55);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (12699, 55);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (12700, 55);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (12696, 55);
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (12698, 55);
+
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (1271, 55);
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (1270, 55);
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (1269, 55);
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (1268, 55);
+REPLACE INTO `zp_mangosd`.`game_event_gameobject` (`guid`, `event`) VALUES (1267, 55);
