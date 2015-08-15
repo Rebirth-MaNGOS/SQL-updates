@@ -144,3 +144,7 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720214, 'I\'ll get to 
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720215, 'There you have it! The King should be quite pleased, if I do say so myself.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 7, 1, 'Marblesten - Say 2');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720216, 'The King\'s guards should be along shortly to pick up the Memorial. In the mean time, come join me upstairs and let\'s finish our little chat, $N.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 7, 1, 'Marblesten - Say 3');
 
+-- hitbox for ouro
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=2.2, `combat_reach`=2.3 WHERE  `modelid`=15509;
+-- update dirt mounds for ouro encounter
+UPDATE `zp_mangosd`.`creature_template` SET `minlevel`=63, `maxlevel`=63, `minhealth`=999999, `maxhealth`=999999,`faction_A`=14, `faction_H`=14,`speed_run`=0.75, `ScriptName`='mob_dirt_mound' WHERE  `entry`=15712;
