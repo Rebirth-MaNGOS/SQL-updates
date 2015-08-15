@@ -23,3 +23,91 @@ DELETE FROM `zp_mangosd`.`npc_vendor` WHERE (`entry`='8931') AND (`item`='6887')
 UPDATE `zp_mangosd`.`npc_vendor` SET `maxcount`='3' WHERE (`entry`='1313') AND (`item`='2447') limit 1;
 UPDATE `zp_mangosd`.`npc_vendor` SET `maxcount`='3', `incrtime`='9000' WHERE (`entry`='3490') AND (`item`='2447') limit 1;
 UPDATE `zp_mangosd`.`npc_vendor` SET `maxcount`='3', `incrtime`='9000' WHERE (`entry`='3548') AND (`item`='2447') limit 1;
+
+/********* Dire Maul Arena, rares SQL. COMMENTED OUT ADDING THEM FOR NOW **********/
+-- hitbox
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.5, `combat_reach`=1.6 WHERE  `modelid`=14382;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.5, `combat_reach`=1.6 WHERE  `modelid`=10169;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.5, `combat_reach`=1.6 WHERE  `modelid`=10807;
+
+-- add to world, SKIP THIS FOR NOW SINCE HERBS WON'T WORK
+-- REPLACE INTO `zp_mangosd`.`creature` VALUES (3493, 11447, 1, 0, 0, -3706.7, 1091.58, 131.969, 3.07796, 25, 5, 0, 60811, 0, 0, 1);
+-- REPLACE INTO `zp_mangosd`.`creature` VALUES (3494, 11497, 1, 0, 0, -3740.99, 1090.37, 131.969, 3.12371, 28800, 5, 0, 74479, 0, 0, 1);
+-- REPLACE INTO `zp_mangosd`.`creature` VALUES (3495, 11498, 1, 0, 0, -3740.99, 1090.37, 131.969, 3.12371, 28800, 5, 0, 59085, 0, 0, 1);
+
+-- skarr weapon
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (11498, 3855, 0, 0);
+
+-- add scripts
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=4250, `speed_walk`=1, `rank`=2, `baseattacktime`=2000, `AIName`='', `ScriptName`='boss_mushgog' WHERE `entry`=11447;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=4791, `rank`=2, `baseattacktime`=1800, `AIName`='', `equipment_id`=11498, `ScriptName`='boss_skarr_the_unbreakable' WHERE `entry`=11498;
+UPDATE `zp_mangosd`.`creature_template` SET `minmana`=24340, `maxmana`=24340, `armor`=3745, `rank`=2,`speed_run`=1.08, `rank`=2, `baseattacktime`=1600, `AIName`='', `ScriptName`='boss_the_razza' WHERE `entry`=11497;
+
+-- add pool
+REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2108, 1, 'Dire Maul Arena - Rare Spawns');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (3494, 2108, 0, 'The Razza');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (3495, 2108, 0, 'Skarr the Unbreakable');
+
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720209, 'This will teach you to lay off the herb, $N.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'Mushgog - Say Kill');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720210, 'Can that be the Razza down there in the Maul? This is going to be exciting!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 22, 'Griniblix - The Razza Spawn Yell');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720211, 'Woohoo! They are into it now!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 5, 'Griniblix - The Razza Aggro Yell');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720212, 'It\'s time for the main event! Skarr the Unbreakable is in the maul!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 22, 'Griniblix - Skarr Spawn Yell');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720213, 'Looks like Skarr has found his next challenger! Wouldn\'t want to be in that poor fool\'s shoes!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 5, 'Griniblix - Skarr Aggro Yell');
+
+-- add the loot
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (11498, 996304, 100, 0, -996304, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (11498, 1973, 0.12, 0, 0, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (11497, 996304, 100, 0, -996304, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (11447, 996304, 100, 0, -996304, 1, 0, 0, 0);
+
+-- new ref. loot group, almost same as 996302 but no orb of deception
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 1203, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 2564, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 4696, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 5266, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 6622, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 7734, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 9402, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 11302, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13000, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13001, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13002, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13003, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13004, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13007, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13008, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13009, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13013, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13015, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13030, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13036, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13040, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13047, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13053, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13060, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13066, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13067, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13070, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13072, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13073, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13075, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13077, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13083, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13085, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13091, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13096, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13107, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13111, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13113, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13116, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13118, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13120, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13123, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13125, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13126, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13130, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13133, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13135, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13144, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13146, 0, 1, 1, 1, 0, 0, 0);
