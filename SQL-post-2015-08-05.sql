@@ -111,3 +111,36 @@ REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13133, 0, 1,
 REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13135, 0, 1, 1, 1, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13144, 0, 1, 1, 1, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (996304, 13146, 0, 1, 1, 1, 0, 0, 0);
+
+/***********  A King's Tribute quest chain, quest end RP **********/
+-- waterlogged envelope 5 sec respawn instead of 5min
+UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`=5 WHERE  `guid`=14656;
+
+-- add script for Sully Balloo's Letter
+UPDATE `zp_mangosd`.`quest_template` SET `CompleteScript`=637 WHERE  `entry`=637;
+
+-- delete old sql so we can run this more than once
+DELETE FROM `zp_mangosd`.`quest_end_scripts` WHERE  `id`=637 LIMIT 6;
+
+REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (637, 0, 0, 2, 0, 0, 0, 0, 2000006016, 0, 0, 0, 0, 0, 0, 0, 'Sara Balloo Text Emote on Quest Complete');
+REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (637, 5, 0, 0, 0, 0, 0, 0, 2000006017, 0, 0, 0, 0, 0, 0, 0, 'Sara Balloo Say on Quest Complete');
+REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (637, 5, 1, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Sara Balloo Emote on Quest Complete');
+
+REPLACE INTO `zp_mangosd`.`db_script_string` VALUES (2000006016, 'Sara Balloo reads Sully\'s letter page by page.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+REPLACE INTO `zp_mangosd`.`db_script_string` VALUES (2000006017, 'This isn\'t fair! My dearest Sully! Come back to me! No, $N! Why did you bring me such news!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+-- add script for Sara Balloo's Plea
+UPDATE `zp_mangosd`.`quest_template` SET `CompleteScript`=683 WHERE  `entry`=683;
+
+-- delete old sql so we can run this more than once
+DELETE FROM `zp_mangosd`.`quest_end_scripts` WHERE  `id`=683 LIMIT 2;
+REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (683, 0, 0, 2, 0, 0, 0, 0, 2000006018, 0, 0, 0, 0, 0, 0, 0, 'King Magni Bronzebeard Text Emote on Quest Complete');
+REPLACE INTO `zp_mangosd`.`db_script_string` VALUES (2000006018, 'King Magni Bronzebeard carefully studies Sara Balloo\'s note and lets out a long, solemn sigh.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+-- scripted A King's Tribute (2)
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_grand_mason_marblesten' WHERE  `entry`=2790;
+
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720214, 'I\'ll get to work right away, $N!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 7, 5, 'Marblesten - Say 1');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720215, 'There you have it! The King should be quite pleased, if I do say so myself.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 7, 1, 'Marblesten - Say 2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720216, 'The King\'s guards should be along shortly to pick up the Memorial. In the mean time, come join me upstairs and let\'s finish our little chat, $N.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 7, 1, 'Marblesten - Say 3');
+
