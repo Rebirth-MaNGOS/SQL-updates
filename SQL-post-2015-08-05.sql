@@ -148,3 +148,9 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720216, 'The King\'s g
 UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=2.2, `combat_reach`=2.3 WHERE  `modelid`=15509;
 -- update dirt mounds for ouro encounter
 UPDATE `zp_mangosd`.`creature_template` SET `minlevel`=63, `maxlevel`=63, `minhealth`=999999, `maxhealth`=999999,`faction_A`=14, `faction_H`=14,`speed_run`=0.75, `ScriptName`='mob_dirt_mound' WHERE  `entry`=15712;
+
+-- pooling for the rare  spawn Lady Vespia (Ashenvale)
+REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2109, 1, 'Lady Vespia - Rare Spawns');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (32384, 2109, 0, 'Lady Vespia');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (51887, 2109, 0, 'Lady Vespia');
+
