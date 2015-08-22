@@ -154,3 +154,86 @@ REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2109, 1, 'Lady Vespia - Rare S
 REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (32384, 2109, 0, 'Lady Vespia');
 REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (51887, 2109, 0, 'Lady Vespia');
 
+-- wp for Scarlet High Clerist(wpl rare)
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49764, 1, 2690.82, -1953.37, 107.239, 30000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.690716, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49764, 2, 2688.7, -1948.48, 107.239, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.55858, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49764, 3, 2690.63, -1944.29, 107.239, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.836015, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49764, 4, 2693.44, -1942.4, 107.239, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.529709, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49764, 5, 2697.19, -1941.65, 107.239, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6.18458, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49764, 6, 2699.47, -1942.38, 107.239, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.8822, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49764, 7, 2702.18, -1944.55, 107.239, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.26567, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49764, 8, 2703.62, -1947.61, 107.239, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.0811, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49764, 9, 2703.44, -1949.99, 107.239, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.51169, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49764, 10, 2702.01, -1953.02, 107.239, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.0915, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49764, 11, 2699.83, -1954.81, 107.239, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.72237, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49764, 12, 2697.6, -1955.66, 107.239, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.35323, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49764, 13, 2695.11, -1955.49, 107.239, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.93697, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49764, 14, 2691.9, -1953.68, 107.239, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.47358, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49764, 15, 2691.04, -1953, 107.239, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.32574, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49764, 16, 2689.92, -1953.89, 107.239, 30000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.91086, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49764, 17, 2700.96, -1945.14, 101.656, 25000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.710363, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49764, 18, 2694.77, -1950.19, 105.542, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.89123, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49764, 19, 2690.37, -1954.28, 107.239, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.89123, 0, 0);
+
+-- stats
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=67, `faction_H`=67, `speed_walk`=0.95, `rank`=2, `baseattacktime`=1500, `equipment_id`=18390 WHERE  `entry`=1839;
+
+-- move to right spot and wp movement
+REPLACE INTO `zp_mangosd`.`creature` VALUES (49764, 1839, 0, 0, 0, 2690.57, -1953.58, 107.239, 0.612176, 72000, 0, 0, 7635, 2620, 0, 2);
+
+-- loot 
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=1839 AND `item`=24036;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=1839 AND `item`=24029;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=1839 AND `item`=24024;
+-- add real loot
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (1839, 24020, 100, 1, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (1839, 996203, 100, 1, -996203, 1, 0, 0, 0);
+
+-- add weapon
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (18390, 1207, 0, 0);
+
+-- Scarlet Hunter, should not summon a pet, they're already out in the world
+DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=183102;
+
+-- Slaves in BRD shouldn't be so noisy anymore
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_chance`=10 WHERE  `id`=1011601;
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_chance`=10 WHERE  `id`=1011602;
+
+/******** Scarlet Executioner (rare wpl) ************/
+-- delete shit
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=1841 AND `item`=24036;
+
+-- add real loot
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (1841, 24020, 100, 1, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (1841, 996203, 100, 1, -996203, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (1841, 24033, 100, 1, -24033, 1, 0, 0, 0);
+
+-- stats
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=67, `faction_H`=67, `speed_walk`=0.95, `rank`=2, `baseattacktime`=1800, `equipment_id`=18410 WHERE  `entry`=1841;
+
+-- weapon
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (18410, 3191, 0, 0);
+
+-- wp movement
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=49764;
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49765, 1, 2827.47, -1550.89, 186.291, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.66054, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49765, 2, 2827.81, -1553.61, 186.291, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.67486, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49765, 3, 2824.65, -1554.53, 186.291, 30000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.506, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49765, 4, 2827.13, -1553.37, 186.291, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.439016, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49765, 5, 2830.23, -1555.78, 186.291, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.66192, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49765, 6, 2833.8, -1557.25, 186.291, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.026682, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49765, 7, 2835.33, -1557.21, 186.291, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.026682, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49765, 8, 2837.06, -1560.31, 186.291, 30000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.10428, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49765, 9, 2835.84, -1556.93, 186.291, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.94698, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49765, 10, 2837.8, -1555.75, 186.291, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.541119, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49765, 11, 2839.36, -1551.43, 186.291, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.2362, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49765, 12, 2839.27, -1549.48, 186.291, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.75849, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49765, 13, 2843.05, -1548.04, 186.291, 30000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.352624, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49765, 14, 2839.57, -1549.27, 186.291, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.43924, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49765, 15, 2838.01, -1547.3, 186.291, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.23365, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49765, 16, 2834.64, -1545.52, 186.291, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.7795, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49765, 17, 2832.03, -1545.55, 186.291, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.2743, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49765, 18, 2830.66, -1542.05, 186.291, 30000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.96269, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49765, 19, 2831.8, -1545.46, 186.291, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.03359, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49765, 20, 2829.33, -1547.27, 186.291, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.76911, 0, 0);
+
