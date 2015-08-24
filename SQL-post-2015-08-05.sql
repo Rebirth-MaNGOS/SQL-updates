@@ -324,3 +324,9 @@ REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (3497, 2110, 0, 'Baron Longshor
 REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (3498, 2110, 0, 'Baron Longshore');
 REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (3499, 2110, 0, 'Baron Longshore');
 REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (15066, 2110, 0, 'Baron Longshore');
+
+-- Nightmare dragons skinning: fix green dragon scale drop 5-8
+REPLACE INTO `skinning_loot_template` VALUES (15412, 15412, 100, 1, 5, 8, 0, 0, 0);
+
+-- add dream scale to skinning loot
+REPLACE INTO `skinning_loot_template` VALUES (15412, 20381, 100, 2, 3, 5, 0, 0, 0);
