@@ -237,3 +237,8 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49765, 18, 2830.66, -1542.
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49765, 19, 2831.8, -1545.46, 186.291, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.03359, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49765, 20, 2829.33, -1547.27, 186.291, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.76911, 0, 0);
 
+-- add rare Korvok, add equip and remove special drop from reference loot table(SQL from muggle)
+REPLACE INTO `zp_mangosd`.`creature` VALUES ('1550', '2603', '0', '0', '0', '-1190.8', '-1958.86', '25.4792', '5.78396', '18000', '0', '0', '4295', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES ('2603', '5256', '0', '0');
+DELETE FROM `zp_mangosd`.`reference_loot_template` WHERE (`entry`='24052') AND (`item`='5256') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_kovork', `armor`='1340', `AIName`='', `equipment_id`='2603', `speed_walk`='1.05', `speed_run`='0.95' WHERE (`entry`='2603');
