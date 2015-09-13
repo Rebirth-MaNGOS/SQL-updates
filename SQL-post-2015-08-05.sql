@@ -330,3 +330,17 @@ REPLACE INTO `skinning_loot_template` VALUES (15412, 15412, 100, 1, 5, 8, 0, 0, 
 
 -- add dream scale to skinning loot
 REPLACE INTO `skinning_loot_template` VALUES (15412, 20381, 100, 2, 3, 5, 0, 0, 0);
+
+/********** Maraudon, linked all Primordial Behemoth 2 and 2 at the slope just before last boss, posted again **********/
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (55345, 55348, 15, 90, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (55345, 55345, 0, 0, 2);
+
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (55338, 55341, 15, 90, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (55338, 55338, 0, 0, 2);
+
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (55344, 55347, 15, 90, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (55344, 55344, 0, 0, 2);
+
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (55463, 55464, 15, 90, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (55463, 55463, 0, 0, 2);
+
