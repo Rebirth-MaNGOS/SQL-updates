@@ -1010,3 +1010,12 @@ UPDATE `zp_mangosd`.`creature` SET `MovementType`='1' WHERE (`guid`='4361') limi
 UPDATE `zp_mangosd`.`creature` SET `MovementType`='1' WHERE (`guid`='4360') limit 1;
 UPDATE `zp_mangosd`.`creature` SET `MovementType`='1' WHERE (`guid`='4364') limit 1;
 
+-- Captain Fairmount should no longer fear herself
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param2`=1 WHERE  `id`=339303;
+
+-- Bloodscalp Mystic correct spell
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param1`=9532 WHERE  `id`=70103;
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param1`=9532 WHERE  `id`=70102;
+
+-- Dreadsteed faction, 31 before, same as Scholo
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=1080, `faction_H`=1080 WHERE  `entry`=14504;
