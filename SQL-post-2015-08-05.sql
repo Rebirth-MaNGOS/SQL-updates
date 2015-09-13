@@ -1019,3 +1019,15 @@ UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param1`=9532 WHERE  `id`=
 
 -- Dreadsteed faction, 31 before, same as Scholo
 UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=1080, `faction_H`=1080 WHERE  `entry`=14504;
+
+-- Gogger Rock Keeper should no longer cast Earth Shock on self
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param2`=1 WHERE  `id`=1191502;
+DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=1191501;
+DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=1191702;
+DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=1191801;
+
+-- Dalaran Conjuror should now be friendly towards alliance
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=76, `faction_H`=76 WHERE  `entry`=1915;
+
+-- TEMP Foulweald Totem Mound should no longer be visible for players, dispelid 433 before
+UPDATE `zp_mangosd`.`gameobject_template` SET `displayId`=0 WHERE  `entry`=300131;¨
