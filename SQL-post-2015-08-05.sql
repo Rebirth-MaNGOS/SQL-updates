@@ -1034,3 +1034,9 @@ UPDATE `zp_mangosd`.`gameobject_template` SET `displayId`=0 WHERE  `entry`=30013
 
 -- Updates to the Scourge Footsoldier that spawn during priest epic q
 UPDATE `zp_mangosd`.`creature_template` SET `subname`='NULL', `speed_walk`=0.90, `mindmg`=20, `maxdmg`=40, `attackpower`=50, `baseattacktime`=1700, `mingold`=0, `maxgold`=0 WHERE  `entry`=14486;
+
+-- ZG, jinxed hoodoo piles add script aswell as for Gurubashi(npc that does the MC)
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_Gurubashi' WHERE  `entry`=15047;
+
+UPDATE `zp_mangosd`.`gameobject_template` SET `ScriptName`='go_jinxed_hoodoo_pile' WHERE  `entry`=180244;
+UPDATE `zp_mangosd`.`gameobject_template` SET `ScriptName`='go_jinxed_hoodoo_pile' WHERE  `entry`=180247;
