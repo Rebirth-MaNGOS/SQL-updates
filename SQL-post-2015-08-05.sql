@@ -1040,3 +1040,7 @@ UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_Gurubashi' WHERE  
 
 UPDATE `zp_mangosd`.`gameobject_template` SET `ScriptName`='go_jinxed_hoodoo_pile' WHERE  `entry`=180244;
 UPDATE `zp_mangosd`.`gameobject_template` SET `ScriptName`='go_jinxed_hoodoo_pile' WHERE  `entry`=180247;
+
+-- Firegut Ogre Mage add missing spell fireball
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (703405, 7034, 0, 0, 100, 1, 2000, 10000, 21000, 35000, 11, 13140, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Firegut Ogre Mage - Cast Fireball');
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_param1`=15000 WHERE  `id`=703403;
