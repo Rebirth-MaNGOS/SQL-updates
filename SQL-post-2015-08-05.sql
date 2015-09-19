@@ -1050,3 +1050,8 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720217, 'It is true, $
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720218, 'Blood and souls for Hakkar! HAHAHAH!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Yeh\'kinya - Say 2');
 
 UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=30 WHERE  `guid`=23270;
+
+-- Rexxar and Misha added missing armor and should now aggro on ally players
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=3950, `baseattacktime`=1500 WHERE  `entry`=10204;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=5610 WHERE  `entry`=10182;
+UPDATE `zp_mangosd`.`creature_template` SET `flags_extra`=0 WHERE  `entry`=10182;
