@@ -1055,3 +1055,17 @@ UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=30 WHERE  `guid`=23270;
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=3950, `baseattacktime`=1500 WHERE  `entry`=10204;
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=5610 WHERE  `entry`=10182;
 UPDATE `zp_mangosd`.`creature_template` SET `flags_extra`=0 WHERE  `entry`=10182;
+
+-- searing ghoul spells and non elite
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (179505, 1795, 1, 0, 100, 1, 1000, 1000, 600000, 600000, 11, 18968, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Searing Ghoul - Cast Fire Shield on Spawn');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (179504, 1795, 27, 0, 100, 1, 18968, 1, 15000, 30000, 11, 18968, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Searing Ghoul - Cast Fire Shield on Missing Buff');
+UPDATE `zp_mangosd`.`creature_template` SET `rank`=0, `resistance2`=150 WHERE  `entry`=1795;
+
+-- soulless ghoul
+UPDATE `zp_mangosd`.`creature_template` SET `rank`=0, `mindmg`=87, `maxdmg`=118, `baseattacktime`=1500 WHERE  `entry`=1794;
+-- blighted zombie
+UPDATE `zp_mangosd`.`creature_template` SET `rank`=0, `mindmg`=90, `maxdmg`=122, `baseattacktime`=1400 WHERE  `entry`=4475;
+-- Hungering Wraith
+UPDATE `zp_mangosd`.`creature_template` SET `rank`=0, `mindmg`=95, `maxdmg`=125, `baseattacktime`=1400 WHERE  `entry`=1802;
+-- Wailing Death
+UPDATE `zp_mangosd`.`creature_template` SET `rank`=0, `mindmg`=95, `maxdmg`=125, `baseattacktime`=1500 WHERE  `entry`=1804;
