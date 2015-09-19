@@ -1044,3 +1044,9 @@ UPDATE `zp_mangosd`.`gameobject_template` SET `ScriptName`='go_jinxed_hoodoo_pil
 -- Firegut Ogre Mage add missing spell fireball
 REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (703405, 7034, 0, 0, 100, 1, 2000, 10000, 21000, 35000, 11, 13140, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Firegut Ogre Mage - Cast Fireball');
 UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_param1`=15000 WHERE  `id`=703403;
+
+-- SQL for Confront Yeh'kinya, change his respawn to 30 instead of 5min since changing in the script didn't work
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720217, 'It is true, $N. The wheels of doom now turn, inevitably, toward the true return of Hakkar!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 1, 'Yeh\'kinya - Say 1');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720218, 'Blood and souls for Hakkar! HAHAHAH!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Yeh\'kinya - Say 2');
+
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=30 WHERE  `guid`=23270;
