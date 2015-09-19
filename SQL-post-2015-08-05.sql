@@ -1072,3 +1072,18 @@ UPDATE `zp_mangosd`.`creature_template` SET `rank`=0, `mindmg`=95, `maxdmg`=125,
 
 -- Commander Felstrom add script AI
 UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='mob_commander_felstrom' WHERE  `entry`=771;
+
+-- move a centaur a bit and update respawn on prophet
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=10 WHERE  `guid`=29070;
+REPLACE INTO `zp_mangosd`.`creature` VALUES (29079, 11686, 1, 11638, 0, -1435.88, 3004.38, 115.354, 4.3222, 300, 5, 0, 600000, 0, 0, 1);
+-- add new prophets
+REPLACE INTO `zp_mangosd`.`creature` VALUES (11007, 13718, 1, 9426, 0, -1473.47, 2967.32, 122.498, 4.91126, 10, 0, 0, 3932, 1332, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (11008, 13718, 1, 9426, 0, -1445.25, 3004.35, 115.246, 5.02121, 10, 0, 0, 3932, 1332, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (11009, 13718, 1, 9426, 0, -1416.81, 2936.7, 95.2233, 3.34831, 10, 0, 0, 3932, 1332, 0, 0);
+
+-- add pool
+REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2120, 1, 'Maraudon - The Nameless Prophet');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (29070, 2120, 0, 'The Nameless Prophet');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (11007, 2120, 0, 'The Nameless Prophet');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (11008, 2120, 0, 'The Nameless Prophet');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (11009, 2120, 0, 'The Nameless Prophet');
