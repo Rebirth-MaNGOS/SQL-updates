@@ -1069,3 +1069,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `rank`=0, `mindmg`=90, `maxdmg`=122,
 UPDATE `zp_mangosd`.`creature_template` SET `rank`=0, `mindmg`=95, `maxdmg`=125, `baseattacktime`=1400 WHERE  `entry`=1802;
 -- Wailing Death
 UPDATE `zp_mangosd`.`creature_template` SET `rank`=0, `mindmg`=95, `maxdmg`=125, `baseattacktime`=1500 WHERE  `entry`=1804;
+
+-- Commander Felstrom add script AI
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='mob_commander_felstrom' WHERE  `entry`=771;
