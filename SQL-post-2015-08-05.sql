@@ -1160,3 +1160,7 @@ REPLACE INTO `zp_mangosd`.`gameobject_involvedrelation` VALUES (180055, 7944);
 
 -- not repeateable? 1 before
 UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=0 WHERE  `entry`=7944;
+
+-- Crimson Rifleman, stratholme added ranged weapon and they should now attack players
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=10 WHERE  `entry`=11054;
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_param2`=50 WHERE  `id`=1105402;
