@@ -1144,3 +1144,19 @@ UPDATE `zp_mangosd`.`gameobject_template` SET `data2`=3000000 WHERE  `entry`=177
 
 -- Viscidus blob slower speed
 UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=0.1 WHERE  `entry`=15667;
+
+/*********** Sayge's Fortune #24, #25 ********/
+-- add deadmines chest to world
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (87696, 180024, 36, -29.8574, -375.084, 59.3619, 6.13763, 0, 0, 0.0727134, -0.997353, -300, 100, 1);
+-- set right size
+UPDATE `zp_mangosd`.`gameobject_template` SET `size`=0.5 WHERE  `entry`=180024;
+
+-- add wailing caverns chest to DB and world
+REPLACE INTO `zp_mangosd`.`gameobject_template` VALUES (180055, 2, 51, 'Mysterious Wailing Caverns Chest', 0, 0, 0.5, 43, 6791, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (632440, 180055, 43, -108.365, 160.315, -79.8444, 1.52994, 0, 0, 0.692516, 0.721403, -300, 100, 1);
+
+-- add quest to chest
+REPLACE INTO `zp_mangosd`.`gameobject_involvedrelation` VALUES (180055, 7944);
+
+-- not repeateable? 1 before
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=0 WHERE  `entry`=7944;
