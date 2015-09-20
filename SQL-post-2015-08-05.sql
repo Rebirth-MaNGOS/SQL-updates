@@ -1131,3 +1131,16 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 24, -8086.64, 967.6
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 25, -8094.8, 969.188, 55.5875, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.03423, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 26, -8101.19, 968.356, 58.8365, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.28163, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 27, -8109.64, 968.789, 61.763, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.88108, 0, 0);
+
+-- Summon Lord Kragaru when using the statue for quest Book of the Ancients, delete old script first if SQL is run more than once
+DELETE FROM `zp_mangosd`.`gameobject_scripts` WHERE  `id`=640916 LIMIT 5;
+REPLACE INTO `zp_mangosd`.`gameobject_scripts` VALUES (640916, 0, 10, 12369, 60000, 0, 0, 0, 0, 0, 0, 0, 255.45, 2972, 1.41, 1.28, 'Summon Lord Kragaru');
+
+-- delete old Kragaru
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=3000054;
+
+-- Reset the statue after a while
+UPDATE `zp_mangosd`.`gameobject_template` SET `data2`=3000000 WHERE  `entry`=177673;
+
+-- Viscidus blob slower speed
+UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=0.1 WHERE  `entry`=15667;
