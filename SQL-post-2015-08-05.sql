@@ -1087,3 +1087,47 @@ REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (29070, 2120, 0, 'The Nameless 
 REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (11007, 2120, 0, 'The Nameless Prophet');
 REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (11008, 2120, 0, 'The Nameless Prophet');
 REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (11009, 2120, 0, 'The Nameless Prophet');
+
+-- PAT for Deathclasp
+-- remove 2 scorpions that shouldn't be there
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=44365;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=44366;
+
+-- add dummy
+REPLACE INTO `creature` VALUES (11010, 800008, 1, 0, 0, -8103.05, 968.448, 59.6938, 6.02266, 25, 5, 0, 646473, 0, 0, 2);
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=11010;
+
+-- add formation
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (11010, 11010, 0, 0, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (11010, 42921, 0, 0, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (11010, 44397, 4, 90, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (11010, 44396, 4, 270, 2);
+
+-- add wp
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 1, -8100.39, 968.468, 58.5165, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6.27399, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 2, -8094.53, 967.761, 55.6012, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6.08943, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 3, -8085.25, 965.279, 50.5493, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6.01874, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 4, -8079.84, 967.263, 48.0561, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.528809, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 5, -8073.91, 973.643, 45.9538, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.756574, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 6, -8065.7, 981.336, 43.4564, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.764428, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 7, -8063, 990.707, 41.4538, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.43202, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 8, -8061.64, 998.775, 40.1192, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.28672, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 9, -8059.21, 1001.81, 39.6754, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.607349, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 10, -8054.29, 1005.04, 39.1383, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.599495, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 11, -8050.95, 1007.32, 38.7617, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.599495, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 12, -8052.05, 1013.56, 37.9779, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.75796, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 13, -8054.24, 1018.07, 36.5501, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.03285, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 14, -8054.31, 1020.58, 35.4838, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.60088, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 15, -8053.19, 1013.49, 37.9944, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.0959, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 16, -8051.69, 1007.03, 38.812, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.87992, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 17, -8056.82, 1001.97, 39.5531, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.90603, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 18, -8060.65, 997.238, 40.3844, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.22411, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 19, -8063.72, 991.452, 41.5427, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.36548, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 20, -8065.79, 980.637, 43.6017, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.47936, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 21, -8067.05, 975.325, 44.7367, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.47936, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 22, -8076.83, 971.583, 46.9356, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.54474, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 23, -8083.11, 968.047, 49.3658, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.65862, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 24, -8086.64, 967.696, 51.2134, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.09706, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 25, -8094.8, 969.188, 55.5875, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.03423, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 26, -8101.19, 968.356, 58.8365, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.28163, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (11010, 27, -8109.64, 968.789, 61.763, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.88108, 0, 0);
