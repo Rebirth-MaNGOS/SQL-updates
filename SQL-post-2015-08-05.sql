@@ -1164,3 +1164,10 @@ UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=0 WHERE  `entry`=7944;
 -- Crimson Rifleman, stratholme added ranged weapon and they should now attack players
 UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`=10 WHERE  `entry`=11054;
 UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_param2`=50 WHERE  `id`=1105402;
+
+-- Add green channeling to NPC in lower lbrs and remove skinning from mother smolderweb
+REPLACE INTO `zp_mangosd`.`creature_addon` VALUES (44009, 0, 8, 1, 0, 0, 0, '229013');
+UPDATE `zp_mangosd`.`creature_template` SET `skinloot`=0 WHERE  `entry`=10596;
+
+-- Scarshield Portal should not be killable
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (970706, 9707, 4, 0, 100, 3, 0, 0, 0, 0, 18, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Scarshield Portal - Set not attackable on Aggro');
