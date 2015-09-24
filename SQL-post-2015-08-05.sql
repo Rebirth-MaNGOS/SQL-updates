@@ -1171,3 +1171,14 @@ UPDATE `zp_mangosd`.`creature_template` SET `skinloot`=0 WHERE  `entry`=10596;
 
 -- Scarshield Portal should not be killable
 REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (970706, 9707, 4, 0, 100, 3, 0, 0, 0, 0, 18, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Scarshield Portal - Set not attackable on Aggro');
+
+-- Urok Enforcer add armor and weapon
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=3244, `equipment_id`=906 WHERE  `entry`=10601;
+
+-- move urok
+REPLACE INTO `zp_mangosd`.`creature` VALUES (44457, 10584, 229, 11583, 0, -29.3389, -371.765, 49.6932, 5.26885, 1000000, 0, 0, 600000, 2434, 0, 0);
+
+-- Urok's Tribute Pile shouldn't always be up. Corrected direction
+UPDATE `zp_mangosd`.`gameobject` SET `rotation2`=0, `rotation3`=0, `spawntimesecs`=-300 WHERE  `guid`=267256;
+-- longer despawn
+UPDATE `zp_mangosd`.`event_scripts` SET `datalong2`=300 WHERE `id`=4845 AND `datalong`=267256;
