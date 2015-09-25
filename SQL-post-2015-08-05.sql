@@ -1182,3 +1182,14 @@ REPLACE INTO `zp_mangosd`.`creature` VALUES (44457, 10584, 229, 11583, 0, -29.33
 UPDATE `zp_mangosd`.`gameobject` SET `rotation2`=0, `rotation3`=0, `spawntimesecs`=-300 WHERE  `guid`=267256;
 -- longer despawn
 UPDATE `zp_mangosd`.`event_scripts` SET `datalong2`=300 WHERE `id`=4845 AND `datalong`=267256;
+
+-- Wolf master nandos should be pulled solo, so the worgs can be killed and trigger the event
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=16, `faction_H`=16, `AIName`='', `ScriptName`='boss_wolf_master_nandos' WHERE  `entry`=3927;
+-- add text for yell
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720219, 'I can\'t believe it! You\'ve destroyed my pack... Now face my wrath!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Wolf Master Nandos - Yell Pack');
+
+-- delete worgen, moved to boss ai instead
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=16238;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=16239;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=16240;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=16241;
