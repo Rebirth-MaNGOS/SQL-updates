@@ -1193,3 +1193,6 @@ DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=16238;
 DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=16239;
 DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=16240;
 DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=16241;
+
+-- Quest 166 fix emote to player name instead of $N
+UPDATE `zp_mangosd`.`db_script_string` SET `content_default`='The People of Westfall salute %t, a brave and valiant defender of freedom.' WHERE  `entry`=2000000028;
