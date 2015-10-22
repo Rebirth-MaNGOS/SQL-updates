@@ -1512,3 +1512,48 @@ REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2126, 1, 'Sri''skulk - rare sp
 REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (86604, 2126, 0, 'Sri''skulk');
 REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (566, 2126, 0, 'Sri''skulk');
 REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (567, 2126, 0, 'Sri''skulk');
+
+-- set 7day respawn on bosses in DM North
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=604800 WHERE  `guid`=138343;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=604800 WHERE  `guid`=138342;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=604800 WHERE  `guid`=138341;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=604800 WHERE  `guid`=138337;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=604800 WHERE  `guid`=138338;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=604800 WHERE  `guid`=138335;
+
+-- set 7day respawn on bosses in DM East
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=604800 WHERE  `guid`=125700;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=604800 WHERE  `guid`=138113;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=604800 WHERE  `guid`=138344;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=604800 WHERE  `guid`=125412;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=604800 WHERE  `guid`=138122;
+-- D2 trigger
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=604800 WHERE  `guid`=134786;
+
+-- set 7day respawn on bosses in DM West
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=604800 WHERE  `guid`=138115;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=604800 WHERE  `guid`=138114;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=604800 WHERE  `guid`=138121;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=604800 WHERE  `guid`=138100;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=604800 WHERE  `guid`=138140;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=604800 WHERE  `guid`=137881;
+
+-- Tzu'zee add weapon
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (11467, 2163, 2163, 0);
+
+-- hitbox
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1, `combat_reach`=1.1 WHERE  `modelid`=11250;
+
+-- rare elite status
+UPDATE `zp_mangosd`.`creature_template` SET `rank`=2, `equipment_id`=11467 WHERE  `entry`=11467;
+
+-- add to world
+REPLACE INTO `zp_mangosd`.`creature` VALUES (4802, 11467, 429, 11250, 0, 128.643, 561.759, -4.31221, 3.12414, 604800, 0, 0, 600000, 0, 0, 0);
+
+-- add pool
+REPLACE INTO `zp_mangosd`.`pool_template` VALUES (2127, 1, 'Dire Maul West - Tsuzee Rare Spawn');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (4802, 2127, 30, 'Tsuzee');
+REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (136205, 2127, 70, 'Eldreth Apparition');
+
+-- Eldreth Spirit set faction to same as other ghosts in the area, 92 before
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=14, `faction_H`=14 WHERE  `entry`=11472;
