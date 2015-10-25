@@ -1557,3 +1557,7 @@ REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (136205, 2127, 70, 'Eldreth App
 
 -- Eldreth Spirit set faction to same as other ghosts in the area, 92 before
 UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=14, `faction_H`=14 WHERE  `entry`=11472;
+
+-- Theradrim Guardian and Theradrim Shardling in maraudon, make sure all have 2h respawn and right model just in case
+UPDATE `zp_mangosd`.`creature` SET `modelid`=11712, `spawntimesecs`=7200 WHERE  `id`=11784;
+UPDATE `zp_mangosd`.`creature` SET `modelid`=12310, `spawntimesecs`=7200 WHERE  `id`=11783;
