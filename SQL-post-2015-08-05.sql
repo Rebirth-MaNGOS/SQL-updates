@@ -1561,3 +1561,13 @@ UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=14, `faction_H`=14 WHERE
 -- Theradrim Guardian and Theradrim Shardling in maraudon, make sure all have 2h respawn and right model just in case
 UPDATE `zp_mangosd`.`creature` SET `modelid`=11712, `spawntimesecs`=7200 WHERE  `id`=11784;
 UPDATE `zp_mangosd`.`creature` SET `modelid`=12310, `spawntimesecs`=7200 WHERE  `id`=11783;
+
+-- Modified Equipment id for the aq war effort war table in cenarion hold
+
+REPLACE INTO `zp_mangosd`.`creature_equip_template` (`entry`, `equipentry1`, `equipentry2`, `equipentry3`) VALUES (8009, 18867, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` (`entry`, `equipentry1`, `equipentry2`, `equipentry3`) VALUES (8008, 18838, 18838, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` (`entry`, `equipentry1`, `equipentry2`, `equipentry3`) VALUES (1338, 12584, 18825, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_equip_template` (`entry`, `equipentry1`, `equipentry2`, `equipentry3`) VALUES (8008, 18838, 18838, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` (`entry`, `equipentry1`, `equipentry2`, `equipentry3`) VALUES (1338, 12584, 18825, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` (`entry`, `equipentry1`, `equipentry2`, `equipentry3`) VALUES (8009, 18867, 0, 0);
