@@ -1,3 +1,194 @@
+/************ CAUTION! ONLY RUN THIS SQL ONCE, EVER! **************/
+
+/******* Update rep gain for most quests, if you run it more than once you'll kill your whole quest_template table *********/
+
+-- Change rep for all quests that give 75 to 50
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=50 WHERE  `RewRepValue1`=75;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue2`=50 WHERE  `RewRepValue2`=75;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue3`=50 WHERE  `RewRepValue3`=75;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue4`=50 WHERE  `RewRepValue4`=75;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue5`=50 WHERE  `RewRepValue5`=75;
+
+-- Change rep for all quests that give 150 to 75
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=75 WHERE  `RewRepValue1`=150;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue2`=75 WHERE  `RewRepValue2`=150;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue3`=75 WHERE  `RewRepValue3`=150;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue4`=75 WHERE  `RewRepValue4`=150;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue5`=75 WHERE  `RewRepValue5`=150;
+
+-- Change rep for all quests that give 250 to 100
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=100 WHERE  `RewRepValue1`=250;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue2`=100 WHERE  `RewRepValue2`=250;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue3`=100 WHERE  `RewRepValue3`=250;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue4`=100 WHERE  `RewRepValue4`=250;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue5`=100 WHERE  `RewRepValue5`=250;
+
+-- Change rep for all quests that give 350 to 150
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `RewRepValue1`=350;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue2`=150 WHERE  `RewRepValue2`=350;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue3`=150 WHERE  `RewRepValue3`=350;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue4`=150 WHERE  `RewRepValue4`=350;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue5`=150 WHERE  `RewRepValue5`=350;
+
+-- Change rep for all quests that give 500 to 200
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=200 WHERE  `RewRepValue1`=500;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue2`=200 WHERE  `RewRepValue2`=500;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue3`=200 WHERE  `RewRepValue3`=500;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue4`=200 WHERE  `RewRepValue4`=500;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue5`=200 WHERE  `RewRepValue5`=500;
+
+-- Fix rep for AQ chain
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=50 WHERE  `entry`=8303;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=100 WHERE  `entry`=8519;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue2`=100 WHERE  `entry`=8734;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction2`=609, `RewRepValue2`=100 WHERE  `entry`=8735;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction2`=609, `RewRepValue2`=200 WHERE  `entry`=8736;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=369 WHERE  `entry`=8585;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=369 WHERE  `entry`=8586;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction2`=609, `RewRepValue1`=500, `RewRepValue2`=500 WHERE  `entry`=8742;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction2`=609, `RewRepValue1`=500, `RewRepValue2`=500 WHERE  `entry`=8743;
+
+-- timbermaw rep
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=50 WHERE  `entry`=6131;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=50 WHERE  `entry`=6221;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=50 WHERE  `entry`=8461;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=6241;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=8470;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=8471;
+
+-- silithus
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=8364;
+
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=50 WHERE  `entry`=8548;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=50 WHERE  `entry`=8572;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=50 WHERE  `entry`=8574;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=100 WHERE  `entry`=8573;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=50 WHERE  `entry`=8361;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=100 WHERE  `entry`=8282;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=75 WHERE  `entry`=8332;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=25 WHERE  `entry`=8349;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=8348;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=25 WHERE  `entry`=8343;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=100 WHERE  `entry`=8341;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=25 WHERE  `entry`=8351;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=0, `RewRepValue1`=0 WHERE  `entry`=1123;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=0, `RewRepValue1`=0 WHERE  `entry`=6762;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=6845;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=75 WHERE  `entry`=8280;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=100 WHERE  `entry`=5526;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=8321;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=75 WHERE  `entry`=8314;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=75 WHERE  `entry`=4985;
+
+-- zg class armor
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=150 WHERE  `entry`=8079;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=150 WHERE  `entry`=8078;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=150 WHERE  `entry`=8058;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=150 WHERE  `entry`=8067;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=150 WHERE  `entry`=8062;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=150 WHERE  `entry`=8066;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=150 WHERE  `entry`=8073;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=150 WHERE  `entry`=8072;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=150 WHERE  `entry`=8063;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=150 WHERE  `entry`=8060;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=150 WHERE  `entry`=8069;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=150 WHERE  `entry`=8068;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=150 WHERE  `entry`=8065;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=150 WHERE  `entry`=8057;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=150 WHERE  `entry`=8064;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=150 WHERE  `entry`=8055;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=150 WHERE  `entry`=8054;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=150 WHERE  `entry`=8053;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=150 WHERE  `entry`=8059;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=150 WHERE  `entry`=8077;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=150 WHERE  `entry`=8076;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=150 WHERE  `entry`=8061;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=150 WHERE  `entry`=8071;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=150 WHERE  `entry`=8070;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=150 WHERE  `entry`=8075;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=150 WHERE  `entry`=8056;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=150 WHERE  `entry`=8074;
+
+-- class neck quests zg
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=100 WHERE  `entry`=8110;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=100 WHERE  `entry`=8111;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=100 WHERE  `entry`=8112;
+
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=100 WHERE  `entry`=8145;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=100 WHERE  `entry`=8146;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=100 WHERE  `entry`=8147;
+
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=100 WHERE  `entry`=8101;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=100 WHERE  `entry`=8102;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=100 WHERE  `entry`=8103;
+
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=100 WHERE  `entry`=8045;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=100 WHERE  `entry`=8046;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=100 WHERE  `entry`=8047;
+
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=100 WHERE  `entry`=8049;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=100 WHERE  `entry`=8050;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=100 WHERE  `entry`=8051;
+
+-- fixed rogue class quest spelling error!!!!!!!!!!
+UPDATE `zp_mangosd`.`quest_template` SET `Title`='Zandalarian Shadow Talisman', `RewRepFaction1`=270, `RewRepValue1`=100 WHERE  `entry`=8141;
+UPDATE `zp_mangosd`.`quest_template` SET `Title`='Zandalarian Shadow Talisman', `RewRepFaction1`=270, `RewRepValue1`=100 WHERE  `entry`=8142;
+UPDATE `zp_mangosd`.`quest_template` SET `Title`='Zandalarian Shadow Talisman', `RewRepFaction1`=270, `RewRepValue1`=100 WHERE  `entry`=8143;
+
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=100 WHERE  `entry`=8116;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=100 WHERE  `entry`=8117;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=100 WHERE  `entry`=8118;
+
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=100 WHERE  `entry`=8106;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=100 WHERE  `entry`=8107;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=100 WHERE  `entry`=8108;
+
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=100 WHERE  `entry`=8041;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=100 WHERE  `entry`=8042;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=270, `RewRepValue1`=100 WHERE  `entry`=8043;
+
+-- zg rep kills Gahz'ranka should give rep
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15114, 270, 0, 7, 0, 100, 0, 0, 0, 0);
+
+-- Aq drop quest
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=500, `RewRepValue2`=100 WHERE  `entry`=8595;
+
+-- Thorium brotherhood
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=6645;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7653;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7654;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7655;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7656;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7657;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7658;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7659;
+
+-- AD
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=15 WHERE  `entry`=5218;
+
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=50 WHERE  `entry`=9203;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=50 WHERE  `entry`=9201;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=50 WHERE  `entry`=9206;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=50 WHERE  `entry`=9202;
+
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=50 WHERE  `entry`=9200;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=50 WHERE  `entry`=9205;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=50 WHERE  `entry`=9204;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=50 WHERE  `entry`=9198;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction5`=529, `RewRepValue5`=100 WHERE  `entry`=5096;
+
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=529, `RewRepValue1`=100 WHERE  `entry`=9221;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=529, `RewRepValue1`=100 WHERE  `entry`=9222;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=529, `RewRepValue1`=100 WHERE  `entry`=9223;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=529, `RewRepValue1`=100 WHERE  `entry`=9224;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=529, `RewRepValue1`=100 WHERE  `entry`=9225;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=529, `RewRepValue1`=100 WHERE  `entry`=9226;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=529, `RewRepValue1`=100 WHERE  `entry`=9227;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=529, `RewRepValue1`=100 WHERE  `entry`=9228;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=5263;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=5251;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=1199;
+
 -- Eye tentacle correct model, tentacle portal change back to right model
 UPDATE `zp_mangosd`.`creature_template` SET `modelid_1`=15882 WHERE  `entry`=15904;
 UPDATE `zp_mangosd`.`creature_template` SET `modelid_1`=15788 WHERE  `entry`=15726;
