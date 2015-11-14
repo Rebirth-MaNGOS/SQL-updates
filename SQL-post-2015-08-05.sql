@@ -1841,3 +1841,16 @@ REPLACE INTO `zp_mangosd`.`quest_template` (`entry`, `Method`, `ZoneOrSort`, `Mi
 REPLACE INTO `creature` VALUES (21774, 8197, 1, 6370, 0, -8199.68, -4623.56, 8.87246, 1.67894, 600, 5, 0, 600000, 0, 0, 1);
 UPDATE `zp_mangosd`.`creature` SET `spawndist`=5, `MovementType`=1 WHERE  `guid`=21775;
 UPDATE `zp_mangosd`.`creature` SET `spawndist`=5, `MovementType`=1 WHERE  `guid`=21773;
+
+-- PW:S rank 1-10 should do 50% threat
+REPLACE INTO `zp_mangosd`.`spell_threat` VALUES (17, 22, 1, 0);
+REPLACE INTO `zp_mangosd`.`spell_threat` VALUES (592, 44, 1, 0);
+REPLACE INTO `zp_mangosd`.`spell_threat` VALUES (600, 79, 1, 0);
+REPLACE INTO `zp_mangosd`.`spell_threat` VALUES (3747, 117, 1, 0);
+REPLACE INTO `zp_mangosd`.`spell_threat` VALUES (6065, 151, 1, 0);
+REPLACE INTO `zp_mangosd`.`spell_threat` VALUES (6066, 191, 1, 0);
+REPLACE INTO `zp_mangosd`.`spell_threat` VALUES (10898, 242, 1, 0);
+REPLACE INTO `zp_mangosd`.`spell_threat` VALUES (10899, 303, 1, 0);
+REPLACE INTO `zp_mangosd`.`spell_threat` VALUES (10900, 382, 1, 0);
+REPLACE INTO `zp_mangosd`.`spell_threat` VALUES (10901, 471, 1, 0);
+
