@@ -1769,11 +1769,11 @@ REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCred
 REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (15759, 20384, 100, 0, 1, 1, 2, 20402, 1);
 REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (13301, 20384, 100, 0, 1, 1, 2, 20402, 1);
 REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (13136, 20384, 100, 0, 1, 1, 2, 20402, 1);
-REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (11734, 20384, 100, 0, 1, 4, 2, 20402, 1);
-REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (11733, 20384, 100, 0, 1, 4, 2, 20402, 1);
-REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (11732, 20384, 100, 0, 1, 4, 2, 20402, 1);
-REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (11731, 20384, 100, 0, 1, 4, 2, 20402, 1);
-REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (11730, 20384, 100, 0, 1, 4, 2, 20402, 1);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (11734, 20384, 100, 0, 1, 3, 2, 20402, 1);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (11733, 20384, 100, 0, 1, 3, 2, 20402, 1);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (11732, 20384, 100, 0, 1, 3, 2, 20402, 1);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (11731, 20384, 100, 0, 1, 3, 2, 20402, 1);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (11730, 20384, 100, 0, 1, 3, 2, 20402, 1);
 REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (11729, 20384, 100, 0, 1, 3, 2, 20402, 1);
 REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (11728, 20384, 100, 0, 1, 3, 2, 20402, 1);
 REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (11727, 20384, 100, 0, 1, 1, 2, 20402, 1);
@@ -1784,6 +1784,15 @@ REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQu
 REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (11722, 20384, 100, 0, 1, 3, 2, 20402, 1);
 REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (11721, 20384, 100, 0, 1, 3, 2, 20402, 1);
 REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (11698, 20384, 100, 0, 1, 3, 2, 20402, 1);
+
+-- Hive regal mobs, add carapace in extra slot drop chance
+
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (2038401, 20384, 20, 0, 1, 1, 2, 20402, 1);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (11730, 2038401, 100, 0, -2038401, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (11731, 2038401, 100, 0, -2038401, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (11732, 2038401, 100, 0, -2038401, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (11733, 2038401, 100, 0, -2038401, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (11734, 2038401, 100, 0, -2038401, 1, 0, 0, 0);
 
 -- War effort turnin gossip
 
