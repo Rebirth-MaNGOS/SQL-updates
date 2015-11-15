@@ -1964,6 +1964,47 @@ DELETE FROM `zp_mangosd`.`item_loot_template` WHERE  `entry`=21512 AND `item`=13
 -- delete low lvl loot from Diseased Ghoul
 DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=10495 AND `item`=24060;
 
+-- A donation of X cloth, rep back to 150
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7791;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7793;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7794;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7795;
+
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7799;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7800;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7802;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7803;
+
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7804;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7805;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7807;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7808;
+
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7809;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7811;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7813;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7814;
+
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7817;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7818;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7820;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7821;
+
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7822;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7823;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7824;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7826;
+
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7827;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7831;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7833;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7834;
+
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7835;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7836;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=10352;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=10354;
+
 
 
 
