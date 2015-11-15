@@ -2030,3 +2030,15 @@ UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=91045;
 REPLACE INTO `creature_movement` VALUES (91045, 1, 886.146, -205.619, -43.6204, 3000, 0, 0, 0, 0, 0, 0, 4, 0, 0, 4.59701, 0, 0);
 REPLACE INTO `creature_movement` VALUES (91045, 2, 886.146, -205.619, -43.6204, 2500, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.59701, 0, 0);
 
+-- Seeping corruption 1-3 quest SQL, add AI and armor for chemist cuely and thersa
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=1350, `AIName`='', `ScriptName`='npc_chemist_cuely' WHERE  `entry`=8390;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=1450, `ScriptName`='npc_thersa_windsong' WHERE  `entry`=8393;
+-- add texts
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720232, 'There! Job\'s done.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 1, 'Chemist Cuely - Say');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720233, 'Wha... what\'s happening?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 15, 'Thersa Windsong - Say');
+
+-- correct quest text for last part
+UPDATE `zp_mangosd`.`quest_template` SET `OfferRewardText`='I never dreamed the elixir would take hold that quickly. Thank you, $N. I will get to work on the rest of these samples right away. I\'m sure they\'ll be usable by the Lady Sylvanas and the Forsaken soon enough.', `RequestItemsText`='' WHERE  `entry`=3570;
+
+-- super fast respawn for thersa
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=10 WHERE  `guid`=31905;
