@@ -1923,6 +1923,46 @@ REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (11732, 2038401, 100, 
 REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (11733, 2038401, 100, 0, -2038401, 1, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (11734, 2038401, 100, 0, -2038401, 1, 0, 0, 0);
 
+-- adjust drops for 
+UPDATE `zp_mangosd`.`item_loot_template` SET `ChanceOrQuestChance`=2.94, `groupid`=1 WHERE  `entry`=21509;
+UPDATE `zp_mangosd`.`item_loot_template` SET `ChanceOrQuestChance`=1.75, `groupid`=1 WHERE  `entry`=21510;
+UPDATE `zp_mangosd`.`item_loot_template` SET `ChanceOrQuestChance`=1.72, `groupid`=1 WHERE  `entry`=21511;
+UPDATE `zp_mangosd`.`item_loot_template` SET `ChanceOrQuestChance`=1.72, `groupid`=1 WHERE  `entry`=21512;
+UPDATE `zp_mangosd`.`item_loot_template` SET `ChanceOrQuestChance`=1.51, `groupid`=1 WHERE  `entry`=21513;
+
+-- lower drop for white in first box
+UPDATE `zp_mangosd`.`item_loot_template` SET `ChanceOrQuestChance`=0.94 WHERE  `entry`=21509 AND `item`=9746;
+UPDATE `zp_mangosd`.`item_loot_template` SET `ChanceOrQuestChance`=0.94 WHERE  `entry`=21509 AND `item`=9755;
+UPDATE `zp_mangosd`.`item_loot_template` SET `ChanceOrQuestChance`=0.94 WHERE  `entry`=21509 AND `item`=9759;
+UPDATE `zp_mangosd`.`item_loot_template` SET `ChanceOrQuestChance`=0.94 WHERE  `entry`=21509 AND `item`=9762;
+
+-- make up for the % 
+UPDATE `zp_mangosd`.`item_loot_template` SET `ChanceOrQuestChance`=3.94 WHERE  `entry`=21509 AND `item`=6541;
+UPDATE `zp_mangosd`.`item_loot_template` SET `ChanceOrQuestChance`=3.94 WHERE  `entry`=21509 AND `item`=6585;
+UPDATE `zp_mangosd`.`item_loot_template` SET `ChanceOrQuestChance`=3.94 WHERE  `entry`=21509 AND `item`=9755;
+UPDATE `zp_mangosd`.`item_loot_template` SET `ChanceOrQuestChance`=3.94 WHERE  `entry`=21509 AND `item`=9762;
+UPDATE `zp_mangosd`.`item_loot_template` SET `ChanceOrQuestChance`=3.94 WHERE  `entry`=21509 AND `item`=6540;
+UPDATE `zp_mangosd`.`item_loot_template` SET `ChanceOrQuestChance`=3.94 WHERE  `entry`=21509 AND `item`=6537;
+UPDATE `zp_mangosd`.`item_loot_template` SET `ChanceOrQuestChance`=3.94 WHERE  `entry`=21509 AND `item`=6336;
+UPDATE `zp_mangosd`.`item_loot_template` SET `ChanceOrQuestChance`=3.94 WHERE  `entry`=21509 AND `item`=9777;
+UPDATE `zp_mangosd`.`item_loot_template` SET `ChanceOrQuestChance`=1.87 WHERE  `entry`=21513 AND `item`=10175;
+
+-- remove blue and white from 2nd box
+DELETE FROM `zp_mangosd`.`item_loot_template` WHERE  `entry`=21510 AND `item`=13010;
+DELETE FROM `zp_mangosd`.`item_loot_template` WHERE  `entry`=21510 AND `item`=13131;
+DELETE FROM `zp_mangosd`.`item_loot_template` WHERE  `entry`=21510 AND `item`=6566;
+DELETE FROM `zp_mangosd`.`item_loot_template` WHERE  `entry`=21510 AND `item`=6579;
+DELETE FROM `zp_mangosd`.`item_loot_template` WHERE  `entry`=21510 AND `item`=6588;
+
+-- remove blue from 3rd box
+DELETE FROM `zp_mangosd`.`item_loot_template` WHERE  `entry`=21511 AND `item`=13081;
+DELETE FROM `zp_mangosd`.`item_loot_template` WHERE  `entry`=21511 AND `item`=13145;
+
+-- remove blue from 4th box
+DELETE FROM `zp_mangosd`.`item_loot_template` WHERE  `entry`=21512 AND `item`=13029;
+
+
+
 
 
 
