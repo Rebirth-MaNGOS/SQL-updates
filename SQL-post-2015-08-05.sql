@@ -1863,3 +1863,58 @@ REPLACE INTO `zp_mangosd`.`spell_threat` VALUES (10899, 303, 1, 0);
 REPLACE INTO `zp_mangosd`.`spell_threat` VALUES (10900, 382, 1, 0);
 REPLACE INTO `zp_mangosd`.`spell_threat` VALUES (10901, 471, 1, 0);
 
+/******** War effort, commendation quests updated *************/
+-- Nerf all 1 signet turn in q's rep
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=5 WHERE  `Title`='One Commendation Signet';
+
+-- non repetable first part of ten signets
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=0 WHERE  `entry`=8819;
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=0 WHERE  `entry`=8820;
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=0 WHERE  `entry`=8821;
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=0 WHERE  `entry`=8822;
+
+-- orgrimmar
+UPDATE `zp_mangosd`.`creature_questrelation` SET `quest`=8840 WHERE  `id`=15765 AND `quest`=8832;
+UPDATE `zp_mangosd`.`creature_questrelation` SET `quest`=8841 WHERE  `id`=15765 AND `quest`=8833;
+UPDATE `zp_mangosd`.`creature_involvedrelation` SET `quest`=8840 WHERE  `id`=15765 AND `quest`=8832;
+UPDATE `zp_mangosd`.`creature_involvedrelation` SET `quest`=8841 WHERE  `id`=15765 AND `quest`=8833;
+
+UPDATE `zp_mangosd`.`quest_template` SET `Method`=0 WHERE  `Title`='One Commendation Signet' AND `SpecialFlags`=1 limit 8;
+UPDATE `zp_mangosd`.`quest_template` SET `Method`=0 WHERE  `Title`='Ten Commendation Signets' AND `SpecialFlags`=1 limit 8;
+
+-- add request item text
+UPDATE `zp_mangosd`.`quest_template` SET `RequestItemsText`='Ah, here for additional supplies for yourself, are you? Well, I can certainly understand the need for additional materiel... just take a look around if you need any proof.$B$BI\'ll issue you some additional supplies, but you\'ll need to give me an appropriate number of commendation signets in exchange. You won\'t receive any recognition for surrendering the signets in this manner, but you might find something useful that will help keep you alive when battle is finally upon us.' WHERE  `entry` = 8846;
+UPDATE `zp_mangosd`.`quest_template` SET `RequestItemsText`='Ah, here for additional supplies for yourself, are you? Well, I can certainly understand the need for additional materiel... just take a look around if you need any proof.$B$BI\'ll issue you some additional supplies, but you\'ll need to give me an appropriate number of commendation signets in exchange. You won\'t receive any recognition for surrendering the signets in this manner, but you might find something useful that will help keep you alive when battle is finally upon us.' WHERE  `entry` = 8847;
+UPDATE `zp_mangosd`.`quest_template` SET `RequestItemsText`='Ah, here for additional supplies for yourself, are you? Well, I can certainly understand the need for additional materiel... just take a look around if you need any proof.$B$BI\'ll issue you some additional supplies, but you\'ll need to give me an appropriate number of commendation signets in exchange. You won\'t receive any recognition for surrendering the signets in this manner, but you might find something useful that will help keep you alive when battle is finally upon us.' WHERE  `entry` = 8848;
+UPDATE `zp_mangosd`.`quest_template` SET `RequestItemsText`='Ah, here for additional supplies for yourself, are you? Well, I can certainly understand the need for additional materiel... just take a look around if you need any proof.$B$BI\'ll issue you some additional supplies, but you\'ll need to give me an appropriate number of commendation signets in exchange. You won\'t receive any recognition for surrendering the signets in this manner, but you might find something useful that will help keep you alive when battle is finally upon us.' WHERE  `entry` = 8849;
+UPDATE `zp_mangosd`.`quest_template` SET `RequestItemsText`='Ah, here for additional supplies for yourself, are you? Well, I can certainly understand the need for additional materiel... just take a look around if you need any proof.$B$BI\'ll issue you some additional supplies, but you\'ll need to give me an appropriate number of commendation signets in exchange. You won\'t receive any recognition for surrendering the signets in this manner, but you might find something useful that will help keep you alive when battle is finally upon us.' WHERE  `entry` = 8850;
+UPDATE `zp_mangosd`.`quest_template` SET `RequestItemsText`='Ah, here for additional supplies for yourself, are you? Well, I can certainly understand the need for additional materiel... just take a look around if you need any proof.$B$BI\'ll issue you some additional supplies, but you\'ll need to give me an appropriate number of commendation signets in exchange. You won\'t receive any recognition for surrendering the signets in this manner, but you might find something useful that will help keep you alive when battle is finally upon us.' WHERE  `entry` = 8851;
+UPDATE `zp_mangosd`.`quest_template` SET `RequestItemsText`='Ah, here for additional supplies for yourself, are you? Well, I can certainly understand the need for additional materiel... just take a look around if you need any proof.$B$BI\'ll issue you some additional supplies, but you\'ll need to give me an appropriate number of commendation signets in exchange. You won\'t receive any recognition for surrendering the signets in this manner, but you might find something useful that will help keep you alive when battle is finally upon us.' WHERE  `entry` = 8852;
+UPDATE `zp_mangosd`.`quest_template` SET `RequestItemsText`='Ah, here for additional supplies for yourself, are you? Well, I can certainly understand the need for additional materiel... just take a look around if you need any proof.$B$BI\'ll issue you some additional supplies, but you\'ll need to give me an appropriate number of commendation signets in exchange. You won\'t receive any recognition for surrendering the signets in this manner, but you might find something useful that will help keep you alive when battle is finally upon us.' WHERE  `entry` = 8853;
+UPDATE `zp_mangosd`.`quest_template` SET `RequestItemsText`='Ah, here for additional supplies for yourself, are you? Well, I can certainly understand the need for additional materiel... just take a look around if you need any proof.$B$BI\'ll issue you some additional supplies, but you\'ll need to give me an appropriate number of commendation signets in exchange. You won\'t receive any recognition for surrendering the signets in this manner, but you might find something useful that will help keep you alive when battle is finally upon us.' WHERE  `entry` = 8854;
+UPDATE `zp_mangosd`.`quest_template` SET `RequestItemsText`='Ah, here for additional supplies for yourself, are you? Well, I can certainly understand the need for additional materiel... just take a look around if you need any proof.$B$BI\'ll issue you some additional supplies, but you\'ll need to give me an appropriate number of commendation signets in exchange. You won\'t receive any recognition for surrendering the signets in this manner, but you might find something useful that will help keep you alive when battle is finally upon us.' WHERE  `entry` = 8855;
+
+-- add horde text
+UPDATE `zp_mangosd`.`quest_template` SET `Objectives`='Bring five commendation signets to Warlord Gorchuk.' WHERE  `entry`=8851;
+UPDATE `zp_mangosd`.`quest_template` SET `Objectives`='Bring ten commendation signets to Warlord Gorchuk.' WHERE  `entry`=8852;
+UPDATE `zp_mangosd`.`quest_template` SET `Objectives`='Bring fifteen commendation signets to Warlord Gorchuk.' WHERE  `entry`=8853;
+UPDATE `zp_mangosd`.`quest_template` SET `Objectives`='Bring twenty commendation signets to Warlord Gorchuk.' WHERE  `entry`=8854;
+UPDATE `zp_mangosd`.`quest_template` SET `Objectives`='Bring thirty commendation signets to Warlord Gorchuk.' WHERE  `entry`=8855;
+
+-- officer redblade text
+UPDATE `zp_mangosd`.`npc_text` SET `text0_1`='Greetings, $c - I\'m a Commendation Officer acting on behalf of Orgrimmar. It is my duty to assist adventurers who have received Horde Commendation Signets.$B$BI accept signets in different quantities, but the most beneficial exchange for you is to hand in a set of ten at once. I will enter your deeds into our records when you hand in your signets. As a result, you will earn recognition from Orgrimmar for your duty and service.$B$B' WHERE  `ID`=8131;
+
+-- Needs more q should be insta complete
+UPDATE `zp_mangosd`.`quest_template` SET `Method`=0 where `Title` LIKE 'The Alliance needs more%';
+UPDATE `zp_mangosd`.`quest_template` SET `Method`=0 where `Title` LIKE 'The Horde needs more%';
+
+-- horde should recive loot aswell
+UPDATE `zp_mangosd`.`quest_template` SET `RewItemCount1`=1 WHERE  `entry`=8851;
+UPDATE `zp_mangosd`.`quest_template` SET `RewItemCount1`=1 WHERE  `entry`=8852;
+UPDATE `zp_mangosd`.`quest_template` SET `RewItemCount1`=1 WHERE  `entry`=8853;
+UPDATE `zp_mangosd`.`quest_template` SET `RewItemCount1`=1 WHERE  `entry`=8854;
+UPDATE `zp_mangosd`.`quest_template` SET `RewItemCount1`=1 WHERE  `entry`=8855;
+
+
+
+
