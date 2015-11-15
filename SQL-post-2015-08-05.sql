@@ -1961,7 +1961,8 @@ DELETE FROM `zp_mangosd`.`item_loot_template` WHERE  `entry`=21511 AND `item`=13
 -- remove blue from 4th box
 DELETE FROM `zp_mangosd`.`item_loot_template` WHERE  `entry`=21512 AND `item`=13029;
 
-
+-- delete low lvl loot from Diseased Ghoul
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=10495 AND `item`=24060;
 
 
 
