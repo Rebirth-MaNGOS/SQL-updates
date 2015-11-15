@@ -2000,3 +2000,6 @@ UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=10354
 -- Black Amnesty should now procc
 UPDATE `zp_mangosd`.`item_template` SET `spellppmRate_1`=3 WHERE  `entry`=19166;
 
+-- DM tribute, update size of trap and lower speed for guard slip'kik
+UPDATE `zp_mangosd`.`gameobject_template` SET `size`=2 WHERE  `entry`=179512;
+UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`=1.3 WHERE  `entry`=14323;
