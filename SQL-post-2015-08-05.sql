@@ -1953,6 +1953,90 @@ DELETE FROM `zp_mangosd`.`item_loot_template` WHERE  `entry`=21511 AND `item`=13
 -- remove blue from 4th box
 DELETE FROM `zp_mangosd`.`item_loot_template` WHERE  `entry`=21512 AND `item`=13029;
 
+-- lvl 10 War Effort Supplies
+-- add new reference number
+REPLACE INTO `zp_mangosd`.`item_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('21509', '24096', '100', '0', '-24096', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`item_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('21509', '24097', '50', '0', '-24097', '1', '0', '0', '0');
+-- add scrolls to reference group
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24096', '1180', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24096', '955', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24096', '3013', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24096', '1181', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24096', '954', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24096', '3012', '0', '1', '1', '1', '0', '0', '0');
+-- grp2
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24097', '1180', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24097', '955', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24097', '3013', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24097', '1181', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24097', '954', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24097', '3012', '0', '1', '1', '1', '0', '0', '0');
+
+-- lvl 20 War Effort Supplies
+-- add new reference number
+REPLACE INTO `zp_mangosd`.`item_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('21510', '24095', '100', '0', '-24095', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`item_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('21510', '24098', '50', '0', '-24098', '1', '0', '0', '0');
+
+-- add scrolls to reference group
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24095', '1711', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24095', '2290', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24095', '1478', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24095', '1712', '0', '1', '1', '1', '0', '0', '0');
+-- grp2
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24098', '1711', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24098', '2290', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24098', '1478', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24098', '1712', '0', '1', '1', '1', '0', '0', '0');
+
+-- lvl 30 War Effort Supplies
+-- add new reference number
+REPLACE INTO `zp_mangosd`.`item_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('21511', '24094', '100', '0', '-24094', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`item_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('21511', '24099', '50', '0', '-24099', '1', '0', '0', '0');
+-- add scrolls to reference group
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24094', '1477', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24094', '4421', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24094', '4424', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24094', '2289', '0', '1', '1', '1', '0', '0', '0');
+-- grp2
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24099', '1477', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24099', '4421', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24099', '4424', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24099', '2289', '0', '1', '1', '1', '0', '0', '0');
+
+-- lvl 40 War Effort Supplies
+-- add new reference number
+REPLACE INTO `zp_mangosd`.`item_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('21512', '24093', '100', '0', '-24093', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`item_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('21512', '24100', '50', '0', '-24100', '1', '0', '0', '0');
+-- add scrolls to reference group
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24093', '4419', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24093', '4422', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24093', '4425', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24093', '4426', '0', '1', '1', '1', '0', '0', '0');
+-- grp2
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24100', '4419', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24100', '4422', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24100', '4425', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24100', '4426', '0', '1', '1', '1', '0', '0', '0');
+
+-- lvl 50 War Effort Supplies
+-- add new reference number
+REPLACE INTO `zp_mangosd`.`item_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('21513', '24092', '100', '0', '-24092', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`item_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('21513', '24103', '50', '0', '-24103', '1', '0', '0', '0');
+-- add scrolls to reference group
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24092', '10305', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24092', '10306', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24092', '10307', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24092', '10308', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24092', '10309', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24092', '10310', '0', '1', '1', '1', '0', '0', '0');
+-- grp2
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24103', '10305', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24103', '10306', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24103', '10307', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24103', '10308', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24103', '10309', '0', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`reference_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES ('24103', '10310', '0', '1', '1', '1', '0', '0', '0');
+
 -- delete low lvl loot from Diseased Ghoul
 DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=10495 AND `item`=24060;
 
