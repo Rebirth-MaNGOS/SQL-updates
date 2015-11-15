@@ -2003,3 +2003,30 @@ UPDATE `zp_mangosd`.`item_template` SET `spellppmRate_1`=3 WHERE  `entry`=19166;
 -- DM tribute, update size of trap and lower speed for guard slip'kik
 UPDATE `zp_mangosd`.`gameobject_template` SET `size`=2 WHERE  `entry`=179512;
 UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`=1.3 WHERE  `entry`=14323;
+
+/***** BRD Bar, dancing ******/
+REPLACE INTO `zp_mangosd`.`creature_addon` VALUES (46620, 0, 0, 1, 16, 10, 0, NULL);
+REPLACE INTO `zp_mangosd`.`creature_addon` VALUES (90738, 0, 0, 1, 16, 10, 0, NULL);
+REPLACE INTO `zp_mangosd`.`creature_addon` VALUES (90888, 0, 0, 1, 16, 10, 0, NULL);
+REPLACE INTO `zp_mangosd`.`creature_addon` VALUES (90741, 0, 0, 1, 16, 10, 0, NULL);
+REPLACE INTO `zp_mangosd`.`creature_addon` VALUES (91011, 0, 0, 1, 16, 10, 0, NULL);
+REPLACE INTO `zp_mangosd`.`creature_addon` VALUES (48168, 0, 0, 1, 16, 10, 0, NULL);
+
+UPDATE `zp_mangosd`.`creature` SET `orientation`=0.83 WHERE  `guid`=91019;
+
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=91066;
+REPLACE INTO `creature_movement` VALUES (91066, 1, 875.766, -203.385, -42.6759, 2500, 0, 0, 0, 0, 0, 0, 4, 0, 0, 5.38874, 0, 0);
+REPLACE INTO `creature_movement` VALUES (91066, 2, 875.766, -203.385, -42.6759, 1700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.38874, 0, 0);
+
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=48172;
+REPLACE INTO `creature_movement` VALUES (48172, 1, 891.181, -202.894, -43.6204, 4000, 0, 0, 0, 0, 0, 0, 4, 0, 0, 3.79794, 0, 0);
+REPLACE INTO `creature_movement` VALUES (48172, 2, 891.181, -202.894, -43.6204, 4000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.79794, 0, 0);
+
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=91019;
+REPLACE INTO `creature_movement` VALUES (91019, 1, 874.108, -205.199, -43.6204, 4000, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0.83, 0, 0);
+REPLACE INTO `creature_movement` VALUES (91019, 2, 874.108, -205.199, -43.6204, 4000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.83, 0, 0);
+
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=91045;
+REPLACE INTO `creature_movement` VALUES (91045, 1, 886.146, -205.619, -43.6204, 3000, 0, 0, 0, 0, 0, 0, 4, 0, 0, 4.59701, 0, 0);
+REPLACE INTO `creature_movement` VALUES (91045, 2, 886.146, -205.619, -43.6204, 2500, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.59701, 0, 0);
+
