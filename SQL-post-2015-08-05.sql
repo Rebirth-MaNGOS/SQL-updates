@@ -1915,14 +1915,6 @@ UPDATE `zp_mangosd`.`quest_template` SET `RewItemCount1`=1 WHERE  `entry`=8853;
 UPDATE `zp_mangosd`.`quest_template` SET `RewItemCount1`=1 WHERE  `entry`=8854;
 UPDATE `zp_mangosd`.`quest_template` SET `RewItemCount1`=1 WHERE  `entry`=8855;
 
--- Hive regal mobs, add carapace in extra slot drop chance
-REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (2038401, 20384, 20, 0, 1, 1, 2, 20402, 1);
-REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (11730, 2038401, 100, 0, -2038401, 1, 0, 0, 0);
-REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (11731, 2038401, 100, 0, -2038401, 1, 0, 0, 0);
-REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (11732, 2038401, 100, 0, -2038401, 1, 0, 0, 0);
-REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (11733, 2038401, 100, 0, -2038401, 1, 0, 0, 0);
-REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (11734, 2038401, 100, 0, -2038401, 1, 0, 0, 0);
-
 -- adjust drops for 
 UPDATE `zp_mangosd`.`item_loot_template` SET `ChanceOrQuestChance`=2.94, `groupid`=1 WHERE  `entry`=21509;
 UPDATE `zp_mangosd`.`item_loot_template` SET `ChanceOrQuestChance`=1.75, `groupid`=1 WHERE  `entry`=21510;
@@ -2005,6 +1997,6 @@ UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=7836;
 UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=10352;
 UPDATE `zp_mangosd`.`quest_template` SET `RewRepValue1`=150 WHERE  `entry`=10354;
 
-
-
+-- Black Amnesty should now procc
+UPDATE `zp_mangosd`.`item_template` SET `spellppmRate_1`=3 WHERE  `entry`=19166;
 
