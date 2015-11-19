@@ -2176,3 +2176,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=195, `maxdmg`=215 WHERE  `e
 -- Doctor Weavil stats and minions
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=3250, `minhealth`=326000, `maxhealth`=326000, `rank`=1 WHERE  `entry`=15552;
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=2850 WHERE  `entry`=15591;
+
+-- Set the AI for ambassador Zog
+update zp_mangosd.creature_template set ScriptName = "npc_general_zog" where entry = 15539 limit 1;
