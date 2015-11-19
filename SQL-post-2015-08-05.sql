@@ -2126,3 +2126,11 @@ UPDATE `zp_mangosd`.`quest_template` SET `OfferRewardText`='I never dreamed the 
 
 -- super fast respawn for thersa
 UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=10 WHERE  `guid`=31905;
+
+-- Nightmare Corruptor stats and drop
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=832750, `maxhealth`=832750, `armor`=4600 WHERE  `entry`=15625;
+
+- adjust drop rate for Fragment of the Nightmare's Corruption
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=-2 WHERE  `item`=21146;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=-2 WHERE  `item`=21147;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=-2 WHERE  `item`=21148;
