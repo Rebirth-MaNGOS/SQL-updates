@@ -2134,3 +2134,23 @@ UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=832750, `maxhealth`=8327
 UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=-2 WHERE  `item`=21146;
 UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=-2 WHERE  `item`=21147;
 UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=-2 WHERE  `item`=21148;
+
+-- War effort recruiters:
+-- ally stats
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=6600, `maxhealth`=6600, `armor`=2450, `faction_A`=80, `faction_H`=80, `baseattacktime`=2000 WHERE  `entry`=15707;
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=6600, `maxhealth`=6600, `armor`=2450, `faction_A`=80, `faction_H`=80, `rank`=1, `baseattacktime`=2000 WHERE  `entry`=15708;
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=6600, `maxhealth`=6600, `armor`=2450, `faction_A`=80, `faction_H`=80, `npcflag`=2, `mindmg`=166, `maxdmg`=241 WHERE  `entry`=15709;
+-- horde recruiter stats
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=6600, `maxhealth`=6600, `armor`=2450, `faction_A`=104, `faction_H`=104, `mindmg`=166, `maxdmg`=241, `baseattacktime`=2000 WHERE  `entry`=15703;
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=6600, `maxhealth`=6600, `armor`=2450, `baseattacktime`=2000 WHERE  `entry`=15704;
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=6600, `maxhealth`=6600, `armor`=2450, `npcflag`=2, `mindmg`=166, `maxdmg`=241, `baseattacktime`=2000 WHERE  `entry`=15702;
+
+-- move maclure
+REPLACE INTO `creature` VALUES (86424, 15708, 0, 15669, 0, -8813.78, 654.135, 96.0774, 5.29541, 3540, 0, 0, 600000, 0, 0, 0);
+
+-- fix ally quest
+UPDATE `zp_mangosd`.`quest_template` SET `MinLevel`=10, `RequiredRaces`=77, `OfferRewardText`='Hail, $c! Good to see so many of the Alliance, such as yourself, $n, coming out to lend your support in laying the groundwork for the upcoming Ahn\'Qiraj War. The effort here will ensure that we are victorious against the Silithid and their evil masters hidden away inside Ahn\'Qiraj.$b$bSo now that you are here, be sure to speak with the various collectors and offer your assistance in gathering those materials that you are suited to.' WHERE  `entry`=8795;
+
+-- delete duplicate wrong versions of horde q
+DELETE FROM `zp_mangosd`.`creature_questrelation` WHERE  `id`=15704 AND `quest`=8794;
+DELETE FROM `zp_mangosd`.`creature_questrelation` WHERE  `id`=15703 AND `quest`=8793;
