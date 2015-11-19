@@ -2168,3 +2168,7 @@ DELETE FROM `zp_mangosd`.`reference_loot_template` WHERE  `entry`=12006 AND `ite
 
 -- Hooktooth Frenzy no longer skinnable
 UPDATE `zp_mangosd`.`creature_template` SET `skinloot`=0 WHERE  `entry`=11374;
+
+-- SS and TM guards dmg
+UPDATE `zp_mangosd`.`creature_template` SET `minlevel`=50, `maxlevel`=50, `armor`=2953, `mindmg`=195, `maxdmg`=215 WHERE  `entry`=2386;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=195, `maxdmg`=215 WHERE  `entry`=2405;
