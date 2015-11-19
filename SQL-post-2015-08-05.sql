@@ -2181,3 +2181,29 @@ UPDATE `zp_mangosd`.`creature_template` SET `armor`=2850 WHERE  `entry`=15591;
 
 -- Set the AI for ambassador Zog
 update zp_mangosd.creature_template set ScriptName = "npc_general_zog" where entry = 15539 limit 1;
+
+-- meridith add pat
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=40530;
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40530, 1, -10292.1, -4320.71, -35.9552, 5000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.56174, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40530, 2, -10264.6, -4342.08, -35.9787, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.51462, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40530, 3, -10252.6, -4364.1, -36.8838, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.20832, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40530, 4, -10232, -4381.67, -37.29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.64814, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40530, 5, -10207.2, -4402.97, -43.1284, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.29471, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40530, 6, -10196.3, -4408.75, -45.5351, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.005048, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40530, 7, -10181.2, -4406.07, -45.5763, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.476287, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40530, 8, -10168.1, -4397.06, -39.7619, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.570535, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40530, 9, -10154.2, -4380.38, -30.3605, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.02214, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40530, 10, -10163.4, -4362.96, -25.8534, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.06672, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40530, 11, -10172.6, -4346.11, -20.5238, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.06672, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40530, 12, -10184.1, -4334.42, -18.651, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.3259, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40530, 13, -10223.4, -4300.8, -18.3987, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.45942, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40530, 14, -10246.8, -4282.83, -19.3096, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.51832, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40530, 15, -10279, -4263.08, -22.2863, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.49083, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40530, 16, -10291.7, -4252.97, -22.2715, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.4712, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40530, 17, -10300.4, -4247.74, -22.5175, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.91102, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40530, 18, -10318.9, -4247.18, -25.1882, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.28016, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40530, 19, -10335.9, -4259.95, -31.9107, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.92419, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40530, 20, -10335.4, -4277.11, -34.4032, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.14941, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40530, 21, -10320, -4293.44, -35.1733, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.52247, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (40530, 22, -10302.7, -4310.34, -37.0051, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.44786, 0, 0);
+
