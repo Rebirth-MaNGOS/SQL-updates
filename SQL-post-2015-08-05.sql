@@ -2154,3 +2154,17 @@ UPDATE `zp_mangosd`.`quest_template` SET `MinLevel`=10, `RequiredRaces`=77, `Off
 -- delete duplicate wrong versions of horde q
 DELETE FROM `zp_mangosd`.`creature_questrelation` WHERE  `id`=15704 AND `quest`=8794;
 DELETE FROM `zp_mangosd`.`creature_questrelation` WHERE  `id`=15703 AND `quest`=8793;
+
+-- demented druid no drops
+UPDATE `zp_mangosd`.`creature_template` SET `mingold`=0, `maxgold`=0 WHERE  `entry`=15260;
+-- mad voidwalker
+UPDATE `zp_mangosd`.`creature_template` SET `lootid`=0, `mingold`=0, `maxgold`=0 WHERE  `entry`=15146;
+
+-- remove leather from loot table
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE `item`=4304;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE `item`=4234;
+DELETE FROM `zp_mangosd`.`reference_loot_template` WHERE  `entry`=12006 AND `item`=4304;
+DELETE FROM `zp_mangosd`.`reference_loot_template` WHERE  `entry`=12006 AND `item`=8170;
+
+-- Hooktooth Frenzy no longer skinnable
+UPDATE `zp_mangosd`.`creature_template` SET `skinloot`=0 WHERE  `entry`=11374;
