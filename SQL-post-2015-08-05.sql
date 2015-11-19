@@ -2172,3 +2172,7 @@ UPDATE `zp_mangosd`.`creature_template` SET `skinloot`=0 WHERE  `entry`=11374;
 -- SS and TM guards dmg
 UPDATE `zp_mangosd`.`creature_template` SET `minlevel`=50, `maxlevel`=50, `armor`=2953, `mindmg`=195, `maxdmg`=215 WHERE  `entry`=2386;
 UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=195, `maxdmg`=215 WHERE  `entry`=2405;
+
+-- Doctor Weavil stats and minions
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=3250, `minhealth`=326000, `maxhealth`=326000, `rank`=1 WHERE  `entry`=15552;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=2850 WHERE  `entry`=15591;
