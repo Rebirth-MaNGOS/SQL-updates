@@ -2321,3 +2321,6 @@ UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=4 WHERE  
 REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (8717, 21104, 4, 0, 1, 1, 9, 8620, 0);
 UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=6 WHERE  `entry`=7461 AND `item`=21105;
 UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=6 WHERE  `entry`=7463 AND `item`=21105;
+
+-- Gossip handling for Meridith the Mermaiden.
+update zp_mangosd.creature_template set ScriptName = "npc_meridith_the_mermaiden" where entry = 15526;
