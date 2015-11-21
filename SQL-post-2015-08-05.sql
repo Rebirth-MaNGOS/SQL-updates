@@ -2315,3 +2315,9 @@ REPLACE INTO `zp_mangosd`.`npc_text` (`ID`, `text0_0`, `text0_1`, `lang0`, `prob
 
 -- Empty AI for Anochronos during the Pawn on the Eternal Board RP.
 update zp_mangosd.creature_template set ScriptName = "npc_anachronos_rp" where entry = 15381;
+
+-- correct drop rate for draconic for dummies 2-3
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=4 WHERE  `entry`=12396 AND `item`=21104;
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (8717, 21104, 4, 0, 1, 1, 9, 8620, 0);
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=6 WHERE  `entry`=7461 AND `item`=21105;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=6 WHERE  `entry`=7463 AND `item`=21105;
