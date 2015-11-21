@@ -478,10 +478,10 @@ REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (3499, 2110, 0, 'Baron Longshor
 REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (15066, 2110, 0, 'Baron Longshore');
 
 -- Nightmare dragons skinning: fix green dragon scale drop 5-8
-REPLACE INTO `skinning_loot_template` VALUES (15412, 15412, 100, 1, 5, 8, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`skinning_loot_template` VALUES (15412, 15412, 100, 1, 5, 8, 0, 0, 0);
 
 -- add dream scale to skinning loot
-REPLACE INTO `skinning_loot_template` VALUES (15412, 20381, 100, 2, 3, 5, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`skinning_loot_template` VALUES (15412, 20381, 100, 2, 3, 5, 0, 0, 0);
 
 /********** Maraudon, linked all Primordial Behemoth 2 and 2 at the slope just before last boss, posted again **********/
 REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (55345, 55348, 15, 90, 2);
@@ -1246,7 +1246,7 @@ DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=44365;
 DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=44366;
 
 -- add dummy
-REPLACE INTO `creature` VALUES (11010, 800008, 1, 0, 0, -8103.05, 968.448, 59.6938, 6.02266, 25, 5, 0, 646473, 0, 0, 2);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (11010, 800008, 1, 0, 0, -8103.05, 968.448, 59.6938, 6.02266, 25, 5, 0, 646473, 0, 0, 2);
 UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=11010;
 
 -- add formation
@@ -1808,7 +1808,7 @@ REPLACE INTO `zp_mangosd`.`npc_gossip` (`npc_guid`, `textid`) VALUES (12650, 800
 REPLACE INTO `zp_mangosd`.`quest_template` (`entry`, `Method`, `ZoneOrSort`, `MinLevel`, `QuestLevel`, `Type`, `RequiredClasses`, `RequiredRaces`, `RequiredSkill`, `RequiredSkillValue`, `RepObjectiveFaction`, `RepObjectiveValue`, `RequiredMinRepFaction`, `RequiredMinRepValue`, `RequiredMaxRepFaction`, `RequiredMaxRepValue`, `SuggestedPlayers`, `LimitTime`, `QuestFlags`, `SpecialFlags`, `PrevQuestId`, `NextQuestId`, `ExclusiveGroup`, `NextQuestInChain`, `SrcItemId`, `SrcItemCount`, `SrcSpell`, `Title`, `Details`, `Objectives`, `OfferRewardText`, `RequestItemsText`, `EndText`, `ObjectiveText1`, `ObjectiveText2`, `ObjectiveText3`, `ObjectiveText4`, `ReqItemId1`, `ReqItemId2`, `ReqItemId3`, `ReqItemId4`, `ReqItemCount1`, `ReqItemCount2`, `ReqItemCount3`, `ReqItemCount4`, `ReqSourceId1`, `ReqSourceId2`, `ReqSourceId3`, `ReqSourceId4`, `ReqSourceCount1`, `ReqSourceCount2`, `ReqSourceCount3`, `ReqSourceCount4`, `ReqCreatureOrGOId1`, `ReqCreatureOrGOId2`, `ReqCreatureOrGOId3`, `ReqCreatureOrGOId4`, `ReqCreatureOrGOCount1`, `ReqCreatureOrGOCount2`, `ReqCreatureOrGOCount3`, `ReqCreatureOrGOCount4`, `ReqSpellCast1`, `ReqSpellCast2`, `ReqSpellCast3`, `ReqSpellCast4`, `RewChoiceItemId1`, `RewChoiceItemId2`, `RewChoiceItemId3`, `RewChoiceItemId4`, `RewChoiceItemId5`, `RewChoiceItemId6`, `RewChoiceItemCount1`, `RewChoiceItemCount2`, `RewChoiceItemCount3`, `RewChoiceItemCount4`, `RewChoiceItemCount5`, `RewChoiceItemCount6`, `RewItemId1`, `RewItemId2`, `RewItemId3`, `RewItemId4`, `RewItemCount1`, `RewItemCount2`, `RewItemCount3`, `RewItemCount4`, `RewRepFaction1`, `RewRepFaction2`, `RewRepFaction3`, `RewRepFaction4`, `RewRepFaction5`, `RewRepValue1`, `RewRepValue2`, `RewRepValue3`, `RewRepValue4`, `RewRepValue5`, `RewOrReqMoney`, `RewMoneyMaxLevel`, `RewSpell`, `RewSpellCast`, `RewMailTemplateId`, `RewMailDelaySecs`, `PointMapId`, `PointX`, `PointY`, `PointOpt`, `DetailsEmote1`, `DetailsEmote2`, `DetailsEmote3`, `DetailsEmote4`, `DetailsEmoteDelay1`, `DetailsEmoteDelay2`, `DetailsEmoteDelay3`, `DetailsEmoteDelay4`, `IncompleteEmote`, `CompleteEmote`, `OfferRewardEmote1`, `OfferRewardEmote2`, `OfferRewardEmote3`, `OfferRewardEmote4`, `OfferRewardEmoteDelay1`, `OfferRewardEmoteDelay2`, `OfferRewardEmoteDelay3`, `OfferRewardEmoteDelay4`, `StartScript`, `CompleteScript`) VALUES (7737, 0, 51, 52, 60, 81, 0, 0, 0, 0, 0, 0, 59, 3000, 59, 9000, 0, 0, 0, 1, 7722, 0, 0, 0, 0, 0, 0, 'Gaining Acceptance', '', '', 'Keep the residue pouring in!', 'You\'ve worked your way up through the Brotherhood\'s corporate hierarchy, $R. We have begun to look favorably upon you. Quite an accomplishment! $B $BIf you\'re interested in more work and earning more respect amongst us, listen up.$B $BWe can refine the fiery flux by adding a simple Dark Iron residue to the mix. The Dark Iron residue can be found in Blackrock Depths.', '', '', '', '', '', 18945, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 59, 0, 0, 0, 0, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- Move Chronalis, random movement for the other dragons
-REPLACE INTO `creature` VALUES (21774, 8197, 1, 6370, 0, -8199.68, -4623.56, 8.87246, 1.67894, 600, 5, 0, 600000, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (21774, 8197, 1, 6370, 0, -8199.68, -4623.56, 8.87246, 1.67894, 600, 5, 0, 600000, 0, 0, 1);
 UPDATE `zp_mangosd`.`creature` SET `spawndist`=5, `MovementType`=1 WHERE  `guid`=21775;
 UPDATE `zp_mangosd`.`creature` SET `spawndist`=5, `MovementType`=1 WHERE  `guid`=21773;
 
@@ -2060,20 +2060,20 @@ REPLACE INTO `zp_mangosd`.`creature_addon` VALUES (48168, 0, 0, 1, 16, 10, 0, NU
 UPDATE `zp_mangosd`.`creature` SET `orientation`=0.83 WHERE  `guid`=91019;
 
 UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=91066;
-REPLACE INTO `creature_movement` VALUES (91066, 1, 875.766, -203.385, -42.6759, 2500, 0, 0, 0, 0, 0, 0, 4, 0, 0, 5.38874, 0, 0);
-REPLACE INTO `creature_movement` VALUES (91066, 2, 875.766, -203.385, -42.6759, 1700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.38874, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (91066, 1, 875.766, -203.385, -42.6759, 2500, 0, 0, 0, 0, 0, 0, 4, 0, 0, 5.38874, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (91066, 2, 875.766, -203.385, -42.6759, 1700, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.38874, 0, 0);
 
 UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=48172;
-REPLACE INTO `creature_movement` VALUES (48172, 1, 891.181, -202.894, -43.6204, 4000, 0, 0, 0, 0, 0, 0, 4, 0, 0, 3.79794, 0, 0);
-REPLACE INTO `creature_movement` VALUES (48172, 2, 891.181, -202.894, -43.6204, 4000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.79794, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (48172, 1, 891.181, -202.894, -43.6204, 4000, 0, 0, 0, 0, 0, 0, 4, 0, 0, 3.79794, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (48172, 2, 891.181, -202.894, -43.6204, 4000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.79794, 0, 0);
 
 UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=91019;
-REPLACE INTO `creature_movement` VALUES (91019, 1, 874.108, -205.199, -43.6204, 4000, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0.83, 0, 0);
-REPLACE INTO `creature_movement` VALUES (91019, 2, 874.108, -205.199, -43.6204, 4000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.83, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (91019, 1, 874.108, -205.199, -43.6204, 4000, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0.83, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (91019, 2, 874.108, -205.199, -43.6204, 4000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.83, 0, 0);
 
 UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=91045;
-REPLACE INTO `creature_movement` VALUES (91045, 1, 886.146, -205.619, -43.6204, 3000, 0, 0, 0, 0, 0, 0, 4, 0, 0, 4.59701, 0, 0);
-REPLACE INTO `creature_movement` VALUES (91045, 2, 886.146, -205.619, -43.6204, 2500, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.59701, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (91045, 1, 886.146, -205.619, -43.6204, 3000, 0, 0, 0, 0, 0, 0, 4, 0, 0, 4.59701, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (91045, 2, 886.146, -205.619, -43.6204, 2500, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.59701, 0, 0);
 
 -- Seeping corruption 1-3 quest SQL, add AI and armor for chemist cuely and thersa
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=1350, `AIName`='', `ScriptName`='npc_chemist_cuely' WHERE  `entry`=8390;
@@ -2107,7 +2107,7 @@ UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=6600, `maxhealth`=6600, 
 UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=6600, `maxhealth`=6600, `armor`=2450, `npcflag`=2, `mindmg`=166, `maxdmg`=241, `baseattacktime`=2000 WHERE  `entry`=15702;
 
 -- move maclure
-REPLACE INTO `creature` VALUES (86424, 15708, 0, 15669, 0, -8813.78, 654.135, 96.0774, 5.29541, 3540, 0, 0, 600000, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (86424, 15708, 0, 15669, 0, -8813.78, 654.135, 96.0774, 5.29541, 3540, 0, 0, 600000, 0, 0, 0);
 
 -- fix ally quest
 UPDATE `zp_mangosd`.`quest_template` SET `MinLevel`=10, `RequiredRaces`=77, `OfferRewardText`='Hail, $c! Good to see so many of the Alliance, such as yourself, $n, coming out to lend your support in laying the groundwork for the upcoming Ahn\'Qiraj War. The effort here will ensure that we are victorious against the Silithid and their evil masters hidden away inside Ahn\'Qiraj.$b$bSo now that you are here, be sure to speak with the various collectors and offer your assistance in gathering those materials that you are suited to.' WHERE  `entry`=8795;
