@@ -2423,3 +2423,6 @@ REPLACE INTO `zp_mangosd`.`npc_gossip` VALUES (23098, 15192);
 REPLACE INTO `zp_mangosd`.`npc_text` VALUES (11811, 'It... It\'s foggy, $N. I can\'t see anything! Wait... Wait a minute. I see... I see Doctor Weavil\'s hideout. It... YES! I believe he is Holding a chapter of the book!$B$BLet me see if I can zoom this thing out to get a better vantage point.$B$B<Narain appears to be going cross-eyed.>$B$BAlcaz Island! That devious son-of-a-goblin is on Alcaz Island!', NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0);
 UPDATE `zp_mangosd`.`creature_template` SET `gossip_menu_id`=0, `ScriptName`='npc_narain_soothfancy' WHERE  `entry`=11811;
 DELETE FROM `zp_mangosd`.`gossip_menu` WHERE  `entry`=6646;
+
+-- Update greetings text, add , .
+UPDATE `zp_mangosd`.`npc_text` SET `text0_0`='Greetings, $N.', `text0_1`='Greetings, $N.' WHERE  `ID`=16777215;
