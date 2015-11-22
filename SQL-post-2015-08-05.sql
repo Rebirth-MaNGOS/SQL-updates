@@ -2333,3 +2333,93 @@ REPLACE INTO `zp_mangosd`.`gameobject_template` (`entry`, `type`, `displayId`, `
 
 -- SQL for server wide emotes.
 REPLACE INTO zp_mangosd.mangos_string (`entry`, `content_default`) VALUES ('11004', '|cFFFF8000%s|r');
+
+/********** SoSS blue fork **********/
+-- update stats for number two
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=1800, `maxdmg`=2100, `baseattacktime`=2000, `skinloot`=0, `mingold`=0, `maxgold`=0, `mechanic_immune_mask`=75579135 WHERE  `entry`=15554;
+
+-- love song for narain cry
+UPDATE `zp_mangosd`.`quest_template` SET `CompleteEmote`=0, `OfferRewardEmote1`=1, `OfferRewardEmote2`=18, `OfferRewardEmoteDelay2`=3 WHERE  `entry`=8599;
+
+-- weavil no taunt and dmg 
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=1500, `maxdmg`=1750, `baseattacktime`=1500, `mechanic_immune_mask`=75579327, `flags_extra`=258 WHERE  `entry`=15552;
+
+-- all chimaerok
+UPDATE `zp_mangosd`.`creature_template` SET `rank`=1, `mindmg`=700, `maxdmg`=883, `baseattacktime`=1500 WHERE  `entry`=12800; 
+UPDATE `zp_mangosd`.`creature_template` SET `rank`=1, `mindmg`=700, `maxdmg`=883, `baseattacktime`=1500 WHERE  `entry`=12801;
+UPDATE `zp_mangosd`.`creature_template` SET `rank`=1, `mindmg`=700, `maxdmg`=883, `baseattacktime`=1500 WHERE  `entry`=12802;
+
+-- respawn
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=1500 WHERE  `id`=12800;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=1500 WHERE  `id`=12801;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=1500 WHERE  `id`=12802;
+
+-- update Lord Lakmaeran stats, ai and move him
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=1618, `maxdmg`=2147 WHERE  `entry`=12803;
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_param3`=11000, `event_param4`=17000 WHERE  `id`=1280303;
+REPLACE INTO `zp_mangosd`.`creature` VALUES (49970, 12803, 1, 12683, 0, -5705.73, 3370.14, 63.0843, 2.34503, 1500, 20, 0, 600000, 0, 0, 1);
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_param1`=50 WHERE  `id`=1280305;
+
+-- devourer ai
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_param1`=50 WHERE  `id`=1280202;
+
+-- arcane
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_type`=0, `event_param1`=15000, `event_param2`=30000, `event_param3`=20000, `event_param4`=32000, `comment`='Arcane Chimaerok - Cast Magic Reflection' WHERE  `id`=1280110;
+
+-- chimaerok
+DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=1280010;
+
+-- Return to Narain, added eat emote on complete
+UPDATE `zp_mangosd`.`quest_template` SET `OfferRewardEmote1`=7 WHERE  `entry`=8587;
+
+-- scrying goggles drops
+-- remove old 5% from each boss in MC
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE `item`=20951 LIMIT 10;
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (11658, 20951, -1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (11668, 20951, -1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (11665, 20951, -1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (11673, 20951, -1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (11659, 20951, -1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (11667, 20951, -1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (11666, 20951, -1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (12076, 20951, -1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (12100, 20951, -1, 0, 1, 1, 0, 0, 0);
+
+-- swirling maelstrom size
+UPDATE `zp_mangosd`.`gameobject_template` SET `size`=2 WHERE  `entry`=180669;
+
+-- maws faction
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=25, `faction_H`=25 WHERE  `entry`=15571;
+
+-- anachronos ring rep
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=910, `RewRepValue1`=100 WHERE `Title`='The Path of the Protector';
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=910, `RewRepValue1`=100 WHERE `Title`='The Path of the Invoker';
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=910, `RewRepValue1`=100 WHERE `Title`='The Path of the Conqueror';
+
+-- complete text
+UPDATE `zp_mangosd`.`quest_template` SET `OfferRewardText`='Your rise amongst the rank of the Brood is most impressive, $N. May you never stray from the path of the invoker!' WHERE `Title`='The Path of the Invoker';
+UPDATE `zp_mangosd`.`quest_template` SET `OfferRewardText`='Your rise amongst the rank of the Brood is most impressive, $N. May you never stray from the path of the protector!' WHERE `Title`='The Path of the Protector';
+UPDATE `zp_mangosd`.`quest_template` SET `OfferRewardText`='Your rise amongst the rank of the Brood is most impressive, $N. May you never stray from the path of the conqueror!' WHERE `Title`='The Path of the Conqueror';
+
+-- adjust text for first rank of quest
+UPDATE `zp_mangosd`.`quest_template` SET `OfferRewardText`='Impressive, little one. You have gone through much trouble to gain the favor of the Bronze Flight. Your dedication is noted.$B$BThe signet ring of the invoker will greatly enhance your magical and natural abilities.$B$BBe warned, once you have chosen your path, you will have no recourse should you change your mind.', `RequestItemsText`='' WHERE  `entry`=8757;
+UPDATE `zp_mangosd`.`quest_template` SET `OfferRewardText`='Impressive, little one. You have gone through much trouble to gain the favor of the Bronze Flight. Your dedication is noted.$B$BThe signet ring of the defender will offer superior protection against the forces of evil.$B$BBe warned, once you have chosen your path, you will have no recourse should you change your mind.', `RequestItemsText`='' WHERE  `entry`=8747;
+UPDATE `zp_mangosd`.`quest_template` SET `OfferRewardText`='Impressive, little one. You have gone through much trouble to gain the favor of the Bronze Flight. Your dedication is noted.$B$BThe signet ring of the conqueror will greatly enhance your physical attacks.$B$BBe warned, once you have chosen your path, you will have no recourse should you change your mind.', `RequestItemsText`='' WHERE  `entry`=8752;
+
+-- last quest
+UPDATE `zp_mangosd`.`quest_template` SET `OfferRewardText`='Rise, Qiraji Conqueror! Rise and be recognized!', `RequestItemsText`='Never have I seen such tenacity! The Bronze Flight grants you one final enchantment. The Timeless One himself has requested it so!$B$BHand me your signet ring so that I may make the necessary adjustments.' WHERE  `entry`=8756;
+UPDATE `zp_mangosd`.`quest_template` SET `OfferRewardText`='Rise, Protector of Kalimdor! Rise and be recognized!', `RequestItemsText`='Never have I seen such tenacity! The Bronze Flight grants you one final enchantment. The Timeless One himself has requested it so!$B$BHand me your signet ring so that I may make the necessary adjustments.' WHERE  `entry`=8751;
+UPDATE `zp_mangosd`.`quest_template` SET `OfferRewardText`='Rise, Grand Invoker! Rise and be recognized!', `RequestItemsText`='Never have I seen such tenacity! The Bronze Flight grants you one final enchantment. The Timeless One himself has requested it so!$B$BHand me your signet ring so that I may make the necessary adjustments.' WHERE  `entry`=8761;
+
+-- repeateable change ring q
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1, `PrevQuestId`=0 WHERE `Title` LIKE 'The Changing of Paths%' LIMIT 3;
+
+-- gossip and armor for anachronos
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=4691 WHERE  `entry`=15192;
+REPLACE INTO `zp_mangosd`.`npc_text` VALUES (15192, 'It is we who must make the first strike. We cannot be allowed to repeat the mistakes of the past...', NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`npc_gossip` VALUES (23098, 15192);
+
+-- narain change gossip, remove db gossip and move it to script
+REPLACE INTO `zp_mangosd`.`npc_text` VALUES (11811, 'It... It\'s foggy, $N. I can\'t see anything! Wait... Wait a minute. I see... I see Doctor Weavil\'s hideout. It... YES! I believe he is Holding a chapter of the book!$B$BLet me see if I can zoom this thing out to get a better vantage point.$B$B<Narain appears to be going cross-eyed.>$B$BAlcaz Island! That devious son-of-a-goblin is on Alcaz Island!', NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0);
+UPDATE `zp_mangosd`.`creature_template` SET `gossip_menu_id`=0, `ScriptName`='npc_narain_soothfancy' WHERE  `entry`=11811;
+DELETE FROM `zp_mangosd`.`gossip_menu` WHERE  `entry`=6646;
