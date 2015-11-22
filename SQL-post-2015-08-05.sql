@@ -2426,3 +2426,10 @@ DELETE FROM `zp_mangosd`.`gossip_menu` WHERE  `entry`=6646;
 
 -- Update greetings text, add , .
 UPDATE `zp_mangosd`.`npc_text` SET `text0_0`='Greetings, $N.', `text0_1`='Greetings, $N.' WHERE  `ID`=16777215;
+
+-- Raider Jhash and Raider Kerr should be running
+UPDATE `zp_mangosd`.`creature_movement` SET `script_id`=1 WHERE  `id`=3254;
+UPDATE `zp_mangosd`.`creature_movement` SET `script_id`=1 WHERE  `id`=3256;
+-- update speed
+UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`=1.05, `speed_run`=1.43 WHERE  `entry`=10682;
+UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`=1.05, `speed_run`=1.43 WHERE  `entry`=10676;
