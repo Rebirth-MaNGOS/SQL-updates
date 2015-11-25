@@ -2486,3 +2486,6 @@ REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (1421, 44, -11310.
 REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (1421, 45, -11303.9, -369.258, 65.6905, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.204553, 0, 0);
 -- make sure he runs
 UPDATE `zp_mangosd`.`creature_movement_template` SET `script_id`=1 WHERE  `entry`=1421;
+
+-- New AI for Jonathan the Revelator.
+update zp_mangosd.creature_template set ScriptName = "npc_jonathan_the_revelator" where entry = 15693 limit 1;
