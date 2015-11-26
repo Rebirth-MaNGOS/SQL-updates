@@ -2489,3 +2489,7 @@ UPDATE `zp_mangosd`.`creature_movement_template` SET `script_id`=1 WHERE  `entry
 
 -- New AI for Jonathan the Revelator.
 update zp_mangosd.creature_template set ScriptName = "npc_jonathan_the_revelator" where entry = 15693 limit 1;
+
+-- Bloodseeker Bat shouldn't bug out in ZG, Frenzied Bloodseeker Bat added armor
+UPDATE `zp_mangosd`.`creature_template` SET `InhabitType`=4 WHERE  `entry`=11368;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=3791, `InhabitType`=4 WHERE  `entry`=14965;
