@@ -2493,3 +2493,22 @@ update zp_mangosd.creature_template set ScriptName = "npc_jonathan_the_revelator
 -- Bloodseeker Bat shouldn't bug out in ZG, Frenzied Bloodseeker Bat added armor
 UPDATE `zp_mangosd`.`creature_template` SET `InhabitType`=4 WHERE  `entry`=11368;
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=3791, `InhabitType`=4 WHERE  `entry`=14965;
+
+-- move eranikus
+REPLACE INTO `creature` VALUES (39842, 5709, 109, 7806, 0, -660.743, -35.7822, -90.8357, 1.34038, 21600, 0, 0, 600000, 0, 0, 0);
+
+-- the champion returns text
+UPDATE `zp_mangosd`.`quest_template` SET `OfferRewardText`='Your deeds will be known to all, champion. They will sing your praises from Orgrimmar to the far reaches of the South Seas. All will know of the champion of the Bronze Flight, $N.', `RequestItemsText`='<Anachronos nods.>' WHERE  `entry`=8741;
+
+-- Treasure of the Timeless One text added
+UPDATE `zp_mangosd`.`quest_template` SET `OfferRewardText`='Greetings, champion. I am Jonathan, keeper of the sacred gong and eternal watcher of the Bronze Flight.$B$BI have been empowered by the Timeless One himself to grant you an item of your choosing from his timeless treasure trove. May it aid you in your battles against C\'Thun.' WHERE  `entry`=8745;
+
+-- adjust damage
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=3196, `maxdmg`=3912, `attackpower`=890 WHERE  `entry`=15625;
+
+-- weavil AP
+UPDATE `zp_mangosd`.`creature_template` SET `attackpower`=650 WHERE  `entry`=15552;
+
+-- damage for anachronos
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=3950, `maxdmg`=4200 WHERE  `entry`=15192;
+
