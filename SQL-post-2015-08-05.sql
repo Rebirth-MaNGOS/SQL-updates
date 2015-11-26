@@ -2512,3 +2512,8 @@ UPDATE `zp_mangosd`.`creature_template` SET `attackpower`=650 WHERE  `entry`=155
 -- damage for anachronos
 UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=3950, `maxdmg`=4200 WHERE  `entry`=15192;
 
+-- nef shouldn't drop shard unless within 5hours
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=11583 AND `item`=21138;
+
+-- no loot from Bronze Drakonid
+UPDATE `zp_mangosd`.`creature_template` SET `mingold`=0, `maxgold`=0 WHERE  `entry`=14263;
