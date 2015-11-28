@@ -2585,3 +2585,8 @@ REPLACE INTO `zp_mangosd`.`scripted_areatrigger` VALUES (1786, 'at_shadowforge_c
 
 -- bat riders should be immune to interrupt
 UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=42019771 WHERE  `entry`=14750;
+
+-- Zulian Cub add script and text for fleeing
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE  `entry`=11360;
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1136001, 11360, 2, 0, 100, 0, 30, 0, 0, 0, 25, 0, 0, 0, 1, -11360, 0, 0, 0, 0, 0, 0, 'Zulian Cub - Flee at 30% HP');
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-11360, '%s flees to the safety of another Tiger.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 2, 0, 0, 'Zulian Cub');
