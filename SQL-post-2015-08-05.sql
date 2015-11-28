@@ -2582,3 +2582,6 @@ UPDATE `zp_mangosd`.`quest_template` SET `Type`=1, `QuestFlags`=64 WHERE  `entry
 
 -- BRD bridge event area trigger
 REPLACE INTO `zp_mangosd`.`scripted_areatrigger` VALUES (1786, 'at_shadowforge_city_bridge');
+
+-- bat riders should be immune to interrupt
+UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=42019771 WHERE  `entry`=14750;
