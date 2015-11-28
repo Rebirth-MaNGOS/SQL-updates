@@ -2590,3 +2590,13 @@ UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=42019771 WHER
 UPDATE `zp_mangosd`.`creature_template` SET `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE  `entry`=11360;
 REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1136001, 11360, 2, 0, 100, 0, 30, 0, 0, 0, 25, 0, 0, 0, 1, -11360, 0, 0, 0, 0, 0, 0, 'Zulian Cub - Flee at 30% HP');
 REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-11360, '%s flees to the safety of another Tiger.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 2, 0, 0, 'Zulian Cub');
+
+-- Hakkari Witch Doctor move AI to script
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='npc_hakkari_witch_doctor' WHERE  `entry`=11831;
+
+-- spell target and faction so disease cloud does dmg
+REPLACE INTO `zp_mangosd`.`spell_script_target` VALUES (24058, 1, 15010);
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=28, `faction_H`=28 WHERE  `entry`=15010;
+
+-- Razzashi Broodwidow should spawn skitterers, not venombrood
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_razzashi_broodwidow' WHERE  `entry`=11370;
