@@ -2578,4 +2578,4 @@ REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (14749, 43, -12272
 REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (14749, 44, -12285.7, -1387.77, 148.471, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.23573, 0, 0);
 
 -- decoy should be elite not raid q
-UPDATE `zp_mangosd`.`quest_template` SET `Type`=1, `QuestFlags`=0 WHERE  `entry`=8606;
+UPDATE `zp_mangosd`.`quest_template` SET `Type`=1, `QuestFlags`=64 WHERE  `entry`=8606;
