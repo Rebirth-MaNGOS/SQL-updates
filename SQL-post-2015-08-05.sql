@@ -2579,3 +2579,6 @@ REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (14749, 44, -12285
 
 -- decoy should be elite not raid q
 UPDATE `zp_mangosd`.`quest_template` SET `Type`=1, `QuestFlags`=64 WHERE  `entry`=8606;
+
+-- BRD bridge event area trigger
+REPLACE INTO `zp_mangosd`.`scripted_areatrigger` VALUES (1786, 'at_shadowforge_city_bridge');
