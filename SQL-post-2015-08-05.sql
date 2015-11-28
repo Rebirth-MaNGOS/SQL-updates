@@ -2600,3 +2600,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=28, `faction_H`=28 WHERE
 
 -- Razzashi Broodwidow should spawn skitterers, not venombrood
 UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_razzashi_broodwidow' WHERE  `entry`=11370;
+
+-- Venoxis hitbox p2
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.2, `combat_reach`=1.3 WHERE  `modelid`=15102;
