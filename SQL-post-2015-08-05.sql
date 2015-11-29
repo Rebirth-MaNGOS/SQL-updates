@@ -2671,3 +2671,6 @@ UPDATE `zp_mangosd`.`gameobject_template` SET `size`=2.5 WHERE  `entry`=180253;
 REPLACE INTO `zp_mangosd`.`gameobject` VALUES (172002, 180254, 309, -11896.9, -1901.16, 65.1479, 0.814206, 0, 0, 0.395951, 0.918272, -10, 100, 1);
 REPLACE INTO `zp_mangosd`.`gameobject` VALUES (172001, 180253, 309, -11896.9, -1901.16, 66.5479, 0.814206, 0, 0, 0.395951, 0.918272, -10, 100, 1);
 REPLACE INTO `zp_mangosd`.`gameobject` VALUES (172000, 180385, 309, -11896.9, -1901.16, 65.1479, 0.814206, 0, 0, 0.395951, 0.918272, -10, 100, 1);
+
+-- new template for dummy
+REPLACE INTO `zp_mangosd`.`creature_template` VALUES (800480, 0, 0, 6296, 0, 'EoM Lightning Dummy', 'lol it\'s another frog', 0, 1, 1, 649999, 649999, 0, 0, 0, 35, 35, 0, 1, 1.14286, 2, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 2, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5242886, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 4, 0, 0, 1, 0, 0, 0, 0, 128, 'npc_edge_of_madness_lightning');
