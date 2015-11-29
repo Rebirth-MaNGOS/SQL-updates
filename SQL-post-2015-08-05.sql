@@ -2603,3 +2603,71 @@ UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_razzashi_broodwido
 
 -- Venoxis hitbox p2
 UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.2, `combat_reach`=1.3 WHERE  `modelid`=15102;
+
+/*** Edge of Madness RP ***/
+-- new templates so we can use more kinds of lightning
+REPLACE INTO `zp_mangosd`.`gameobject_template` VALUES (1833560, 10, 6352, 'Theatric Lightning 2', 0, 0, 0.7, 0, 0, 0, 196608, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
+REPLACE INTO `zp_mangosd`.`gameobject_template` VALUES (1802522, 10, 6352, 'Troll Hero Lightning 4', 114, 0, 0.7, 0, 0, 0, 196608, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
+REPLACE INTO `zp_mangosd`.`gameobject_template` VALUES (1802521, 10, 6352, 'Troll Hero Lightning 3', 114, 0, 0.6, 0, 0, 0, 196608, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
+REPLACE INTO `zp_mangosd`.`gameobject_template` VALUES (1802520, 10, 6352, 'Troll Hero Lightning 2', 114, 0, 0.5, 0, 0, 0, 196608, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
+
+-- add the lightning to the world
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (28672, 183356, 309, -11898.5, -1897.76, 65.1475, 0.750492, 0, 0, 0.366501, 0.930418, 600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10229, 183356, 309, -11885.3, -1911.76, 65.1477, 1.72134, 0, 0, 0.758279, 0.65193, 600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10233, 1833560, 309, -11875.3, -1921.62, 65.1476, 1.34041, 0, 0, 0.621149, 0.783693, 600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10232, 1833560, 309, -11886.7, -1919.75, 65.148, 0.947715, 0, 0, 0.456322, 0.889815, 600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10231, 1833560, 309, -11882.4, -1899.34, 64.8838, 1.61138, 0, 0, 0.721308, 0.692615, 600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10230, 1833560, 309, -11894.2, -1917.27, 65.1479, 1.70955, 0, 0, 0.754424, 0.656388, 600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (28671, 180252, 309, -11889.6, -1925.83, 75.2098, 0.855211, 0, 0, 0.414693, 0.909961, 600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (28670, 180252, 309, -11901.9, -1896.3, 65.1498, 2.44346, 0, 0, 0.939693, 0.34202, 600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10236, 1802520, 309, -11889.9, -1903.2, 70.1485, 3.80265, 0, 0, 0.945871, -0.324543, 600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10235, 1802520, 309, -11901.5, -1910.79, 65.7921, 1.90591, 0, 0, 0.815132, 0.579276, 600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10234, 1802520, 309, -11906.7, -1900.74, 68.147, 0.983069, 0, 0, 0.471979, 0.88161, 600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10240, 1802521, 309, -11894.6, -1913.69, 65.1479, 1.62708, 0, 0, 0.726725, 0.686929, 600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10239, 1802521, 309, -11890.5, -1908.86, 65.1479, 1.62708, 0, 0, 0.726725, 0.686929, 600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10238, 1802521, 309, -11902.2, -1904.64, 68.3485, 1.62708, 0, 0, 0.726725, 0.686929, 600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10237, 1802521, 309, -11877.7, -1928.11, 75.2879, 5.49517, 0, 0, 0.383891, -0.923378, 600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10245, 1802522, 309, -11882.7, -1922.14, 65.3449, 2.923, 0, 0, 0.994033, 0.109078, 600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10244, 1802522, 309, -11883.9, -1912.29, 65.1483, 2.34573, 0, 0, 0.921865, 0.38751, 600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10243, 1802522, 309, -11905, -1912.2, 65.1483, 2.28683, 0, 0, 0.910054, 0.41449, 600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10242, 1802522, 309, -11911.2, -1905.76, 65.1559, 1.81952, 0, 0, 0.789355, 0.613936, 600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10241, 1802522, 309, -11912.6, -1886.6, 65.1472, 2.17295, 0, 0, 0.88499, 0.46561, 600, 100, 1);
+
+-- delete old scripts so we can run sql again
+DELETE FROM `zp_mangosd`.`gameobject_scripts` WHERE  `id`=21608 LIMIT 10;
+DELETE FROM `zp_mangosd`.`gameobject_scripts` WHERE  `id`=21609 LIMIT 10;
+DELETE FROM `zp_mangosd`.`gameobject_scripts` WHERE  `id`=21610 LIMIT 10;
+DELETE FROM `zp_mangosd`.`gameobject_scripts` WHERE  `id`=28704 LIMIT 10;
+
+REPLACE INTO `gameobject_scripts` VALUES (28704, 15, 10, 15082, 900000, 0, 0, 0, 0, 0, 0, 0, -11901.3, -1906.52, 65.36, 0.87, '');
+REPLACE INTO `gameobject_scripts` VALUES (28704, 5, 9, 172000, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Portal Sound');
+REPLACE INTO `gameobject_scripts` VALUES (28704, 5, 9, 172001, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Air Portal');
+REPLACE INTO `gameobject_scripts` VALUES (28704, 5, 9, 172002, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Fire Portal');
+REPLACE INTO `gameobject_scripts` VALUES (28704, 0, 10, 800480, 300000, 0, 0, 0, 0, 0, 0, 0, -11887.1, -1889.8, 63.5037, 0.87, 'Spawn Dummy for weather');
+
+REPLACE INTO `gameobject_scripts` VALUES (21608, 15, 10, 15083, 900000, 0, 0, 0, 0, 0, 0, 0, -11901.3, -1906.52, 65.36, 0.87, '');
+REPLACE INTO `gameobject_scripts` VALUES (21608, 5, 9, 172000, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Portal Sound');
+REPLACE INTO `gameobject_scripts` VALUES (21608, 5, 9, 172001, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Air Portal');
+REPLACE INTO `gameobject_scripts` VALUES (21608, 5, 9, 172002, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Fire Portal');
+REPLACE INTO `gameobject_scripts` VALUES (21608, 0, 10, 800480, 300000, 0, 0, 0, 0, 0, 0, 0, -11887.1, -1889.8, 63.5037, 0.87, 'Spawn Dummy for weather');
+
+REPLACE INTO `gameobject_scripts` VALUES (21609, 15, 10, 15084, 900000, 0, 0, 0, 0, 0, 0, 0, -11901.3, -1906.52, 65.36, 0.87, '');
+REPLACE INTO `gameobject_scripts` VALUES (21609, 5, 9, 172000, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Portal Sound');
+REPLACE INTO `gameobject_scripts` VALUES (21609, 5, 9, 172001, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Air Portal');
+REPLACE INTO `gameobject_scripts` VALUES (21609, 5, 9, 172002, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Fire Portal');
+REPLACE INTO `gameobject_scripts` VALUES (21609, 0, 10, 800480, 300000, 0, 0, 0, 0, 0, 0, 0, -11887.1, -1889.8, 63.5037, 0.87, 'Spawn Dummy for weather');
+
+REPLACE INTO `gameobject_scripts` VALUES (21610, 15, 10, 15085, 900000, 0, 0, 0, 0, 0, 0, 0, -11901.3, -1906.52, 65.36, 0.87, '');
+REPLACE INTO `gameobject_scripts` VALUES (21610, 5, 9, 172000, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Portal Sound');
+REPLACE INTO `gameobject_scripts` VALUES (21610, 5, 9, 172001, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Air Portal');
+REPLACE INTO `gameobject_scripts` VALUES (21610, 5, 9, 172002, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Fire Portal');
+REPLACE INTO `gameobject_scripts` VALUES (21610, 0, 10, 800480, 300000, 0, 0, 0, 0, 0, 0, 0, -11887.1, -1889.8, 63.5037, 0.87, 'Spawn Dummy for weather');
+
+-- fire and air portals should be bigger
+UPDATE `zp_mangosd`.`gameobject_template` SET `size`=3 WHERE  `entry`=180254;
+UPDATE `zp_mangosd`.`gameobject_template` SET `size`=2.5 WHERE  `entry`=180253;
+
+-- add portals and sound to world
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (172002, 180254, 309, -11896.9, -1901.16, 65.1479, 0.814206, 0, 0, 0.395951, 0.918272, -10, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (172001, 180253, 309, -11896.9, -1901.16, 66.5479, 0.814206, 0, 0, 0.395951, 0.918272, -10, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (172000, 180385, 309, -11896.9, -1901.16, 65.1479, 0.814206, 0, 0, 0.395951, 0.918272, -10, 100, 1);
