@@ -3057,3 +3057,44 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (8032, 33, -11547.9, -1280.
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (8032, 34, -11547.9, -1280.5, 77.5287, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.64547, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (8032, 35, -11553.7, -1284.36, 77.5613, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.78292, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (8032, 36, -11561.6, -1289.46, 77.4932, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.62977, 0, 0);
+
+-- Maws should have movement for template, update speed a bit
+UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`=3, `MovementType`=2 WHERE  `entry`=15571;
+
+-- add wp
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15571, 1, 3426.43, -6522.15, -7.74878, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.59396, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15571, 2, 3426.12, -6544.27, -7.74878, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.26939, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15571, 3, 3435.1, -6560.34, -7.74878, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.27332, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15571, 4, 3445.66, -6575.25, -7.74878, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.62282, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15571, 5, 3455.58, -6582.89, -7.74878, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.62675, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15571, 6, 3468.64, -6591.12, -7.74878, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.80739, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15571, 7, 3492.03, -6599.88, -7.74878, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.99196, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15571, 8, 3510.87, -6593.57, -7.74878, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.395998, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15571, 9, 3528.19, -6580.01, -7.74878, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.871164, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15571, 10, 3537.3, -6560, -7.74878, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.31884, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15571, 11, 3534.5, -6539.88, -7.74878, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.80186, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15571, 12, 3521.63, -6523.79, -7.74878, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.3752, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15571, 13, 3503.72, -6507.37, -7.74878, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.6658, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15571, 14, 3482.4, -6502.21, -7.74878, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.18023, 0, 0);
+
+-- remove old script so we can run the sql again
+DELETE FROM `zp_mangosd`.`event_scripts` WHERE  `id`=9542 LIMIT 5;
+REPLACE INTO `zp_mangosd`.`event_scripts` VALUES (9542, 0, 10, 15571, 9000000, 0, 0, 0, 0, 0, 0, 0, 3428.1, -6505.45, -7.74, 4.64501, 'Spawn Maws');
+REPLACE INTO `zp_mangosd`.`event_scripts` VALUES (9542, 0, 10, 800481, 900000, 0, 0, 0, 0, 0, 0, 0, 3483, -6692.79, -2.43, 0.8, 'spawn lightning dummy');
+
+-- add lightning to world
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (9667, 183356, 1, 3511.19, -6548.35, -1.8348, 4.40935, 0, 0, 0.805735, -0.592276, 600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (9668, 1833560, 1, 3483.01, -6555.43, -1.97171, 1.07141, 0, 0, 0.510449, 0.859908, 600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (9669, 1833560, 1, 3466.03, -6631.37, -1.97171, 1.07141, 0, 0, 0.510449, 0.859908, 600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (9670, 1833560, 1, 3601.62, -6637.97, -1.72886, 4.5468, 0, 0, 0.763162, -0.646208, 600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (9671, 180252, 1, 3503.46, -6477.2, -1.90724, 0.973236, 0, 0, 0.467639, 0.883919, 600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (9672, 180252, 1, 3439.02, -6599.93, -1.8348, 2.26522, 0, 0, 0.905522, 0.4243, 600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (9673, 1802520, 1, 3500.09, -6527.55, -1.90724, 3.26267, 0, 0, 0.998168, -0.0605036, 600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (9674, 1802521, 1, 3494.55, -6523.16, -1.72886, 4.751, 0, 0, 0.693323, -0.720627, 600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (9675, 1802521, 1, 3456.02, -6462.33, -1.84311, 0.670859, 0, 0, 0.329175, 0.944269, 600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (9676, 1802521, 1, 3387.19, -6463.2, -1.84311, 1.6801, 0, 0, 0.744675, 0.667427, 600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (9677, 1802521, 1, 3495.8, -6651.96, -1.90724, 4.02451, 0, 0, 0.904129, -0.427259, 600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (9678, 1802522, 1, 3569.74, -6541.61, -1.72886, 5.63065, 0, 0, 0.320511, -0.947245, 600, 100, 1);
+
+-- new kind of dummy for lightning
+REPLACE INTO `zp_mangosd`.`creature_template` VALUES (800481, 0, 0, 6296, 0, 'Maws Lightning Dummy', 'lol it\'s another frog', 0, 1, 1, 649999, 649999, 0, 0, 0, 35, 35, 0, 1, 1.14286, 2, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 2, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5242886, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 6, 0, 0, 1, 0, 0, 0, 0, 128, 'npc_maws_lightning_dummy');
