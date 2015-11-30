@@ -3098,3 +3098,9 @@ REPLACE INTO `zp_mangosd`.`gameobject` VALUES (9678, 1802522, 1, 3569.74, -6541.
 
 -- new kind of dummy for lightning
 REPLACE INTO `zp_mangosd`.`creature_template` VALUES (800481, 0, 0, 6296, 0, 'Maws Lightning Dummy', 'lol it\'s another frog', 0, 1, 1, 649999, 649999, 0, 0, 0, 35, 35, 0, 1, 1.14286, 2, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 2, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5242886, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 6, 0, 0, 1, 0, 0, 0, 0, 128, 'npc_maws_lightning_dummy');
+
+-- Voodoo Spirit stats and AI
+UPDATE `zp_mangosd`.`creature_template` SET `minlevel`=60, `maxlevel`=60, `minhealth`=10000, `maxhealth`=10000, `armor`=3500, `speed_walk`=0.3, `speed_run`=0.3, `mindmg`=0, `maxdmg`=0, `attackpower`=0, `baseattacktime`=2000, `maxgold`=0, `AIName`='EventAI', `mechanic_immune_mask`=650870623, `flags_extra`=256, `ScriptName`='mob_eventai'  WHERE  `entry`=15009;
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1500902, 15009, 4, 0, 100, 2, 0, 0, 0, 0, 11, 17674, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Voodoo spirit - Cast melee immune Aggro');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1500901, 15009, 4, 0, 100, 2, 0, 0, 0, 0, 44, 126, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Voodoo spirit - Set magic Immune all on Aggro');
+
