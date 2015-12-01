@@ -2683,6 +2683,37 @@ UPDATE `zp_mangosd`.`creature_template` SET `modelid_1`=7803 WHERE  `entry`=1508
 UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`=1.2, `speed_run`=1.25 WHERE  `entry`=15111;
 UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_param2`=2000 WHERE  `id`=1511102;
 
+-- movement should be idle for all who follows a dummy
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49063;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49064;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49062;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49067;
+
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4805;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4806;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49065;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49066;
+
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4811;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4812;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4813;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4814;
+
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49057;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49053;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49054;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49055;
+
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4817;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4818;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4819;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4820;
+
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4806;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4807;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4808;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49056;
+
 -- dummies
 REPLACE INTO `creature` VALUES (4803, 800008, 309, 0, 0, -11879.7, -1890.77, 63.5054, 4.70584, 25, 5, 0, 646473, 0, 0, 1);
 REPLACE INTO `creature` VALUES (4804, 800008, 309, 0, 0, -11888.7, -1875.95, 63.504, 3.52775, 25, 5, 0, 646473, 0, 0, 1);
@@ -3076,11 +3107,6 @@ REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15571, 11, 3534.5
 REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15571, 12, 3521.63, -6523.79, -7.74878, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.3752, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15571, 13, 3503.72, -6507.37, -7.74878, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.6658, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (15571, 14, 3482.4, -6502.21, -7.74878, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.18023, 0, 0);
-
--- remove old script so we can run the sql again
-DELETE FROM `zp_mangosd`.`event_scripts` WHERE  `id`=9542 LIMIT 5;
-REPLACE INTO `zp_mangosd`.`event_scripts` VALUES (9542, 0, 10, 15571, 9000000, 0, 0, 0, 0, 0, 0, 0, 3428.1, -6505.45, -7.74, 4.64501, 'Spawn Maws');
-REPLACE INTO `zp_mangosd`.`event_scripts` VALUES (9542, 0, 10, 800481, 900000, 0, 0, 0, 0, 0, 0, 0, 3483, -6692.79, -2.43, 0.8, 'spawn lightning dummy');
 
 -- add lightning to world
 REPLACE INTO `zp_mangosd`.`gameobject` VALUES (9667, 183356, 1, 3511.19, -6548.35, -1.8348, 4.40935, 0, 0, 0.805735, -0.592276, 600, 100, 1);
