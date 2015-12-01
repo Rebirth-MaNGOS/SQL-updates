@@ -3130,3 +3130,5 @@ UPDATE `zp_mangosd`.`creature_template` SET `minlevel`=60, `maxlevel`=60, `minhe
 REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1500902, 15009, 4, 0, 100, 2, 0, 0, 0, 0, 11, 17674, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 'Voodoo spirit - Cast melee immune Aggro');
 REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1500901, 15009, 4, 0, 100, 2, 0, 0, 0, 0, 44, 126, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Voodoo spirit - Set magic Immune all on Aggro');
 
+-- Voodoo Slave add script AI instead
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='npc_voodoo_slave' WHERE  `entry`=14883;
