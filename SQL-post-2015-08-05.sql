@@ -3132,3 +3132,6 @@ REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1500901, 15009, 4, 0, 10
 
 -- Voodoo Slave add script AI instead
 UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='npc_voodoo_slave' WHERE  `entry`=14883;
+
+-- update hitbox for thekal p2
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.5, `combat_reach`=1.6 WHERE  `modelid`=14792;
