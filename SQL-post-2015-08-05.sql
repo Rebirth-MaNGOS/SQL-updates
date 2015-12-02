@@ -3135,3 +3135,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='npc_voodo
 
 -- update hitbox for thekal p2
 UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.5, `combat_reach`=1.6 WHERE  `modelid`=14792;
+
+-- Shade of Jin'do armor and shouldn't drop anything
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=2200, `lootid`=0, `mingold`=0, `maxgold`=0 WHERE  `entry`=14986;
