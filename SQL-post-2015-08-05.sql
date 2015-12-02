@@ -3138,3 +3138,14 @@ UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.5, `combat_rea
 
 -- Shade of Jin'do armor and shouldn't drop anything
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=2200, `lootid`=0, `mingold`=0, `maxgold`=0 WHERE  `entry`=14986;
+
+-- Dark iron taskmaster change to script AI
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='mob_dark_iron_taskmaster' WHERE  `entry`=5846;
+
+-- slave workers faction and AI
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=1250, `faction_A`=54, `faction_H`=54, `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE  `entry`=5843;
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (584301, 5843, 2, 0, 100, 0, 20, 0, 0, 0, 25, 0, 0, 0, 1, -47, 0, 0, 0, 0, 0, 0, 'Slave Worker - Flee at 20% HP');
+
+-- spell Dark Iron Taskmaster Death should only target slaves
+REPLACE INTO `zp_mangosd`.`spell_script_target` VALUES (12613, 1, 5843);
+
