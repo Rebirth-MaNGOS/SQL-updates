@@ -3149,3 +3149,36 @@ REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (584301, 5843, 2, 0, 100,
 -- spell Dark Iron Taskmaster Death should only target slaves
 REPLACE INTO `zp_mangosd`.`spell_script_target` VALUES (12613, 1, 5843);
 
+-- Quest Sathrah's sacrifice, Spirit of Sathrah add movement
+UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`=0.8, `MovementType`=2 WHERE  `entry`=7411;
+
+-- add movement
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (7411, 1, 9637.08, 2515.86, 1331.44, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.00503, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (7411, 2, 9639.09, 2517.29, 1331.51, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.01681, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (7411, 3, 9640.54, 2519.06, 1331.56, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.95005, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (7411, 4, 9643.29, 2522.36, 1331.62, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.19098, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (7411, 5, 9643.06, 2523.75, 1331.53, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.52085, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (7411, 6, 9640.46, 2525.11, 1331.53, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.82323, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (7411, 7, 9639.59, 2525.15, 1331.52, 10000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.29054, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (7411, 8, 9639.64, 2525.69, 1331.57, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.46841, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (7411, 9, 9639.83, 2527.65, 1331.7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.84933, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (7411, 10, 9638.69, 2529.62, 1331.62, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.45802, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (7411, 11, 9638, 2530.97, 1331.54, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.88468, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (7411, 12, 9637.29, 2532.8, 1331.71, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.95143, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (7411, 13, 9635.92, 2534.21, 1331.84, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.35591, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (7411, 14, 9633.82, 2535.76, 1331.71, 2000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.66615, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (7411, 15, 9632.44, 2535.04, 1331.57, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.67538, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (7411, 16, 9630.87, 2532.99, 1331.39, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.24087, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (7411, 17, 9630.62, 2530.71, 1331.35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.64927, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (7411, 18, 9629.21, 2529.2, 1331.45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.96205, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (7411, 19, 9627.35, 2526.15, 1331.54, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.38224, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (7411, 20, 9626.26, 2522.95, 1331.52, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.31155, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (7411, 21, 9626, 2520.8, 1331.69, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.77886, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (7411, 22, 9626.94, 2518.96, 1331.78, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.29329, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (7411, 23, 9628.47, 2517.92, 1331.62, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.91768, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (7411, 24, 9632.04, 2515.72, 1331.73, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.54069, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (7411, 25, 9632.94, 2513.4, 1331.79, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.58781, 0, 0);
+
+-- remove old sql so we can run it again
+DELETE FROM `zp_mangosd`.`event_scripts` WHERE  `id`=2313 LIMIT 2;
+REPLACE INTO `event_scripts` VALUES (2313, 0, 10, 7411, 60000, 0, 0, 0, 0, 0, 0, 0, 9636, 2512.65, 1331.47, 1.75901, 'Spawn Spirit of Sathrah');
