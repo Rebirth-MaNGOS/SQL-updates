@@ -3182,3 +3182,6 @@ REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (7411, 25, 9632.94
 -- remove old sql so we can run it again
 DELETE FROM `zp_mangosd`.`event_scripts` WHERE  `id`=2313 LIMIT 2;
 REPLACE INTO `event_scripts` VALUES (2313, 0, 10, 7411, 60000, 0, 0, 0, 0, 0, 0, 0, 9636, 2512.65, 1331.47, 1.75901, 'Spawn Spirit of Sathrah');
+
+-- Broodlord Lashlayer added head to loot table
+REPLACE INTO `creature_loot_template` VALUES (12017, 20383, -100, 0, 1, 1, 0, 0, 0);
