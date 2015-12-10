@@ -3198,3 +3198,12 @@ REPLACE INTO `zp_mangosd`.`npc_text` VALUES (108, 'The Alliance has gathered a f
 REPLACE INTO `zp_mangosd`.`npc_text` VALUES (109, 'The Alliance has gathered half of the required supples.', NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 1, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`npc_text` VALUES (110, 'The Alliance has gathered three thirds of the required supplies. They are almost ready!', NULL, 0, 1, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`npc_text` VALUES (111, 'The Alliance has gathered all of the required supplies. They are ready to move out!', NULL, 0, 1, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0);
+
+-- added missing creatures on the island in the water outside tanaris
+REPLACE INTO `zp_mangosd`.`creature` VALUES (8100, 7855, 1, 6947, 667, -11289.5, -4722.09, 5.29785, 1.71765, 300, 15, 0, 2328, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (8101, 7855, 1, 6944, 667, -11301.1, -4690.44, 4.64985, 1.8551, 300, 15, 0, 2413, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (8102, 7855, 1, 6944, 667, -11841.6, -4843.94, 5.15254, 6.23762, 300, 0, 0, 2328, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (8103, 7856, 1, 6948, 667, -11835.6, -4844.28, 4.77859, 2.98214, 300, 0, 0, 2413, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (8104, 7856, 1, 6948, 247, -11487, -4682.94, 6.79323, 3.08817, 300, 15, 0, 2322, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (8106, 5423, 1, 0, 0, -11865.7, -4858.73, 0.88166, 1.75299, 300, 5, 0, 2114, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (8105, 5423, 1, 0, 0, -11526.8, -4665.16, 3.18721, 1.63911, 300, 5, 0, 3635, 0, 0, 1);
