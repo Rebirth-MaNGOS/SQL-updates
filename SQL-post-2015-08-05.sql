@@ -3207,3 +3207,7 @@ REPLACE INTO `zp_mangosd`.`creature` VALUES (8103, 7856, 1, 6948, 667, -11835.6,
 REPLACE INTO `zp_mangosd`.`creature` VALUES (8104, 7856, 1, 6948, 247, -11487, -4682.94, 6.79323, 3.08817, 300, 15, 0, 2322, 0, 0, 1);
 REPLACE INTO `zp_mangosd`.`creature` VALUES (8106, 5423, 1, 0, 0, -11865.7, -4858.73, 0.88166, 1.75299, 300, 5, 0, 2114, 0, 0, 1);
 REPLACE INTO `zp_mangosd`.`creature` VALUES (8105, 5423, 1, 0, 0, -11526.8, -4665.16, 3.18721, 1.63911, 300, 5, 0, 3635, 0, 0, 1);
+
+-- Added the AI to the ambassadors
+UPDATE zp_mangosd.creature_template SET ScriptName = "npc_commander_stronghammer" WHERE entry = 15458;
+UPDATE zp_mangosd.creature_template SET ScriptName = "npc_general_zog" WHERE entry = 15539;
