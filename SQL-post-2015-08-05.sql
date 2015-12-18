@@ -3231,3 +3231,13 @@ UPDATE `zp_mangosd`.`creature_template` SET `unit_flags`=770 WHERE  `entry`=1548
 
 -- Mad Servant should now be linked with mobs around
 UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=28, `faction_H`=28 WHERE  `entry`=15111;
+
+-- hazza'rah hitbox
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.5, `combat_reach`=1.7 WHERE  `modelid`=15267;
+
+-- Gahz'ranka hitbox
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.8, `combat_reach`=2.2 WHERE  `modelid`=15288;
+
+-- Nightmare illusion attack speed
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`=1500, `mingold`=0, `maxgold`=0 WHERE  `entry`=15163;
+
