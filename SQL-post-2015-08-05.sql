@@ -3228,3 +3228,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_naxxramas_worshipp
 
 -- Spirit of Azuregos should no longer be attackable
 UPDATE `zp_mangosd`.`creature_template` SET `unit_flags`=770 WHERE  `entry`=15481;
+
+-- Mad Servant should now be linked with mobs around
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=28, `faction_H`=28 WHERE  `entry`=15111;
