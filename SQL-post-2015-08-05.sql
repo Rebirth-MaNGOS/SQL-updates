@@ -3241,3 +3241,6 @@ UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.8, `combat_rea
 -- Nightmare illusion attack speed
 UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`=1500, `mingold`=0, `maxgold`=0 WHERE  `entry`=15163;
 
+-- Skirmish at Echo Ridge corrected quote
+UPDATE `zp_mangosd`.`db_script_string` SET `content_default`='You are Dismissed, $N.' WHERE  `entry`=2000000059;
+
