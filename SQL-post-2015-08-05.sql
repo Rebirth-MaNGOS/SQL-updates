@@ -3225,3 +3225,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `maxgold`=0, `ScriptName`='npc_dream
 -- add ai for Naxxramas Follower and Naxxramas Worshipper
 UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_naxxramas_follower' WHERE  `entry`=16505;
 UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_naxxramas_worshipper' WHERE  `entry`=16506;
+
+-- Spirit of Azuregos should no longer be attackable
+UPDATE `zp_mangosd`.`creature_template` SET `unit_flags`=770 WHERE  `entry`=15481;
