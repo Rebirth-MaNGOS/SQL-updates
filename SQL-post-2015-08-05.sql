@@ -3323,3 +3323,7 @@ UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='50' WHER
 UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='50' WHERE (`entry`='2476') AND (`item`='3563') limit 1;
 UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='40' WHERE (`entry`='2476') AND (`item`='24060') limit 1;
 DELETE FROM `zp_mangosd`.`reference_loot_template` WHERE (`entry`='24062') AND (`item`='6197') limit 1;
+
+-- Marshal Windsor should now have armor
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=4250 WHERE  `entry`=9682;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=4250 WHERE  `entry`=12580;
