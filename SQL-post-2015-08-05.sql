@@ -3244,3 +3244,25 @@ UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`=1500, `mingold`=0, 
 -- Skirmish at Echo Ridge corrected quote
 UPDATE `zp_mangosd`.`db_script_string` SET `content_default`='You are Dismissed, $N.' WHERE  `entry`=2000000059;
 
+-- flesh hunter guid 85111 added wp so it moves back to first wp
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (85111, 32, -9388.75, 1381.58, 21.4139, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.40916, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (85111, 33, -9390.61, 1369.83, 21.3867, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.46806, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (85111, 34, -9397.9, 1357.15, 21.3867, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.18925, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (85111, 35, -9402.39, 1350.7, 21.3867, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.69837, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (85111, 36, -9408.17, 1349.27, 21.3867, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.19179, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (85111, 37, -9422.15, 1349.66, 21.4441, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.08184, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (85111, 38, -9435.36, 1345.44, 21.387, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.65518, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (85111, 39, -9450.43, 1329.91, 21.387, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.36989, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (85111, 40, -9450.35, 1322.37, 21.387, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.74295, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (85111, 41, -9447.18, 1312.14, 20.9455, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.2024, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (85111, 42, -9440.45, 1302.65, 18.3908, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.43409, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (85111, 43, -9435.24, 1298.94, 14.8312, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.88962, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (85111, 44, -9416.43, 1295.03, 6.95714, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6.12131, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (85111, 45, -9399.2, 1292, -4.2241, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6.12131, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (85111, 46, -9381.94, 1289.08, -14.0664, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6.09775, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (85111, 47, -9368.18, 1286.5, -21.2506, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6.09775, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (85111, 48, -9360.91, 1281.8, -23.4029, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.42624, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (85111, 49, -9354.7, 1271.65, -30.5194, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.28879, 0, 0);
+
+-- move it aswell, to fit wp better
+REPLACE INTO `zp_mangosd`.`creature` VALUES (85111, 15335, 509, 0, 0, -9363.46, 1284.25, -24.0262, 5.40267, 3600, 0, 0, 51792, 0, 0, 2);
