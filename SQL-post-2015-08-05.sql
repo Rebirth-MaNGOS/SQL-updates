@@ -2495,7 +2495,7 @@ UPDATE `zp_mangosd`.`creature_template` SET `InhabitType`=4 WHERE  `entry`=11368
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=3791, `InhabitType`=4 WHERE  `entry`=14965;
 
 -- move eranikus
-REPLACE INTO `creature` VALUES (39842, 5709, 109, 7806, 0, -660.743, -35.7822, -90.8357, 1.34038, 21600, 0, 0, 600000, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (39842, 5709, 109, 7806, 0, -660.743, -35.7822, -90.8357, 1.34038, 21600, 0, 0, 600000, 0, 0, 0);
 
 -- the champion returns text
 UPDATE `zp_mangosd`.`quest_template` SET `OfferRewardText`='Your deeds will be known to all, champion. They will sing your praises from Orgrimmar to the far reaches of the South Seas. All will know of the champion of the Bronze Flight, $N.', `RequestItemsText`='<Anachronos nods.>' WHERE  `entry`=8741;
@@ -2529,7 +2529,7 @@ UPDATE `zp_mangosd`.`creature_template` SET `scale`=0 WHERE  `entry`=14941;
 UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.2, `combat_reach`=1.3 WHERE  `modelid`=15191;
 
 -- new bat riders to make
-REPLACE INTO `creature_template` VALUES (14749, 0, 0, 15303, 0, 'Gurubashi Bat Rider', NULL, 0, 61, 61, 31440, 31440, 0, 0, 4091, 28, 28, 0, 1.40, 1.45, 0, 1, 1058, 1403, 0, 302, 1, 2000, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 172.1, 240.07, 100, 7, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 2, 4, 0, 0, 1, 0, 0, 0, 1, 0, 'mob_summoned_gurubashi_bat_rider');
+REPLACE INTO `zp_mangosd`.`creature_template` VALUES (14749, 0, 0, 15303, 0, 'Gurubashi Bat Rider', NULL, 0, 61, 61, 31440, 31440, 0, 0, 4091, 28, 28, 0, 1.40, 1.45, 0, 1, 1058, 1403, 0, 302, 1, 2000, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 172.1, 240.07, 100, 7, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 2, 4, 0, 0, 1, 0, 0, 0, 1, 0, 'mob_summoned_gurubashi_bat_rider');
 
 -- wp
 REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (14749, 1, -12288.7, -1403.93, 145.601, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 4.44272, 0, 0);
@@ -2639,29 +2639,29 @@ DELETE FROM `zp_mangosd`.`gameobject_scripts` WHERE  `id`=21609 LIMIT 10;
 DELETE FROM `zp_mangosd`.`gameobject_scripts` WHERE  `id`=21610 LIMIT 10;
 DELETE FROM `zp_mangosd`.`gameobject_scripts` WHERE  `id`=28704 LIMIT 10;
 
-REPLACE INTO `gameobject_scripts` VALUES (28704, 15, 10, 15082, 900000, 0, 0, 0, 0, 0, 0, 0, -11901.3, -1906.52, 65.36, 0.87, '');
-REPLACE INTO `gameobject_scripts` VALUES (28704, 5, 9, 172000, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Portal Sound');
-REPLACE INTO `gameobject_scripts` VALUES (28704, 5, 9, 172001, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Air Portal');
-REPLACE INTO `gameobject_scripts` VALUES (28704, 5, 9, 172002, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Fire Portal');
-REPLACE INTO `gameobject_scripts` VALUES (28704, 0, 10, 800480, 300000, 0, 0, 0, 0, 0, 0, 0, -11887.1, -1889.8, 63.5037, 0.87, 'Spawn Dummy for weather');
+REPLACE INTO `zp_mangosd`.`gameobject_scripts` VALUES (28704, 15, 10, 15082, 900000, 0, 0, 0, 0, 0, 0, 0, -11901.3, -1906.52, 65.36, 0.87, '');
+REPLACE INTO `zp_mangosd`.`gameobject_scripts` VALUES (28704, 5, 9, 172000, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Portal Sound');
+REPLACE INTO `zp_mangosd`.`gameobject_scripts` VALUES (28704, 5, 9, 172001, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Air Portal');
+REPLACE INTO `zp_mangosd`.`gameobject_scripts` VALUES (28704, 5, 9, 172002, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Fire Portal');
+REPLACE INTO `zp_mangosd`.`gameobject_scripts` VALUES (28704, 0, 10, 800480, 300000, 0, 0, 0, 0, 0, 0, 0, -11887.1, -1889.8, 63.5037, 0.87, 'Spawn Dummy for weather');
 
-REPLACE INTO `gameobject_scripts` VALUES (21608, 15, 10, 15083, 900000, 0, 0, 0, 0, 0, 0, 0, -11901.3, -1906.52, 65.36, 0.87, '');
-REPLACE INTO `gameobject_scripts` VALUES (21608, 5, 9, 172000, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Portal Sound');
-REPLACE INTO `gameobject_scripts` VALUES (21608, 5, 9, 172001, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Air Portal');
-REPLACE INTO `gameobject_scripts` VALUES (21608, 5, 9, 172002, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Fire Portal');
-REPLACE INTO `gameobject_scripts` VALUES (21608, 0, 10, 800480, 300000, 0, 0, 0, 0, 0, 0, 0, -11887.1, -1889.8, 63.5037, 0.87, 'Spawn Dummy for weather');
+REPLACE INTO `zp_mangosd`.`gameobject_scripts` VALUES (21608, 15, 10, 15083, 900000, 0, 0, 0, 0, 0, 0, 0, -11901.3, -1906.52, 65.36, 0.87, '');
+REPLACE INTO `zp_mangosd`.`gameobject_scripts` VALUES (21608, 5, 9, 172000, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Portal Sound');
+REPLACE INTO `zp_mangosd`.`gameobject_scripts` VALUES (21608, 5, 9, 172001, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Air Portal');
+REPLACE INTO `zp_mangosd`.`gameobject_scripts` VALUES (21608, 5, 9, 172002, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Fire Portal');
+REPLACE INTO `zp_mangosd`.`gameobject_scripts` VALUES (21608, 0, 10, 800480, 300000, 0, 0, 0, 0, 0, 0, 0, -11887.1, -1889.8, 63.5037, 0.87, 'Spawn Dummy for weather');
 
-REPLACE INTO `gameobject_scripts` VALUES (21609, 15, 10, 15084, 900000, 0, 0, 0, 0, 0, 0, 0, -11901.3, -1906.52, 65.36, 0.87, '');
-REPLACE INTO `gameobject_scripts` VALUES (21609, 5, 9, 172000, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Portal Sound');
-REPLACE INTO `gameobject_scripts` VALUES (21609, 5, 9, 172001, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Air Portal');
-REPLACE INTO `gameobject_scripts` VALUES (21609, 5, 9, 172002, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Fire Portal');
-REPLACE INTO `gameobject_scripts` VALUES (21609, 0, 10, 800480, 300000, 0, 0, 0, 0, 0, 0, 0, -11887.1, -1889.8, 63.5037, 0.87, 'Spawn Dummy for weather');
+REPLACE INTO `zp_mangosd`.`gameobject_scripts` VALUES (21609, 15, 10, 15084, 900000, 0, 0, 0, 0, 0, 0, 0, -11901.3, -1906.52, 65.36, 0.87, '');
+REPLACE INTO `zp_mangosd`.`gameobject_scripts` VALUES (21609, 5, 9, 172000, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Portal Sound');
+REPLACE INTO `zp_mangosd`.`gameobject_scripts` VALUES (21609, 5, 9, 172001, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Air Portal');
+REPLACE INTO `zp_mangosd`.`gameobject_scripts` VALUES (21609, 5, 9, 172002, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Fire Portal');
+REPLACE INTO `zp_mangosd`.`gameobject_scripts` VALUES (21609, 0, 10, 800480, 300000, 0, 0, 0, 0, 0, 0, 0, -11887.1, -1889.8, 63.5037, 0.87, 'Spawn Dummy for weather');
 
-REPLACE INTO `gameobject_scripts` VALUES (21610, 15, 10, 15085, 900000, 0, 0, 0, 0, 0, 0, 0, -11901.3, -1906.52, 65.36, 0.87, '');
-REPLACE INTO `gameobject_scripts` VALUES (21610, 5, 9, 172000, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Portal Sound');
-REPLACE INTO `gameobject_scripts` VALUES (21610, 5, 9, 172001, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Air Portal');
-REPLACE INTO `gameobject_scripts` VALUES (21610, 5, 9, 172002, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Fire Portal');
-REPLACE INTO `gameobject_scripts` VALUES (21610, 0, 10, 800480, 300000, 0, 0, 0, 0, 0, 0, 0, -11887.1, -1889.8, 63.5037, 0.87, 'Spawn Dummy for weather');
+REPLACE INTO `zp_mangosd`.`gameobject_scripts` VALUES (21610, 15, 10, 15085, 900000, 0, 0, 0, 0, 0, 0, 0, -11901.3, -1906.52, 65.36, 0.87, '');
+REPLACE INTO `zp_mangosd`.`gameobject_scripts` VALUES (21610, 5, 9, 172000, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Portal Sound');
+REPLACE INTO `zp_mangosd`.`gameobject_scripts` VALUES (21610, 5, 9, 172001, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Air Portal');
+REPLACE INTO `zp_mangosd`.`gameobject_scripts` VALUES (21610, 5, 9, 172002, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Respawn EoM Fire Portal');
+REPLACE INTO `zp_mangosd`.`gameobject_scripts` VALUES (21610, 0, 10, 800480, 300000, 0, 0, 0, 0, 0, 0, 0, -11887.1, -1889.8, 63.5037, 0.87, 'Spawn Dummy for weather');
 
 -- fire and air portals should be bigger
 UPDATE `zp_mangosd`.`gameobject_template` SET `size`=3 WHERE  `entry`=180254;
@@ -2715,12 +2715,12 @@ UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4808;
 UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49056;
 
 -- dummies
-REPLACE INTO `creature` VALUES (4803, 800008, 309, 0, 0, -11879.7, -1890.77, 63.5054, 4.70584, 25, 5, 0, 646473, 0, 0, 1);
-REPLACE INTO `creature` VALUES (4804, 800008, 309, 0, 0, -11888.7, -1875.95, 63.504, 3.52775, 25, 5, 0, 646473, 0, 0, 1);
-REPLACE INTO `creature` VALUES (4809, 800008, 309, 0, 0, -11923.4, -1843.22, 58.2982, 6.00566, 25, 5, 0, 646473, 0, 0, 1);
-REPLACE INTO `creature` VALUES (4810, 800008, 309, 0, 0, -11904.3, -1872.08, 64.5695, 2.12972, 25, 5, 0, 646473, 0, 0, 1);
-REPLACE INTO `creature` VALUES (4815, 800008, 309, 0, 0, -11857.1, -1871.8, 63.971, 4.71366, 25, 5, 0, 646473, 0, 0, 1);
-REPLACE INTO `creature` VALUES (4816, 800008, 309, 0, 0, -11864.7, -1849.14, 64.206, 5.04745, 25, 5, 0, 646473, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (4803, 800008, 309, 0, 0, -11879.7, -1890.77, 63.5054, 4.70584, 25, 5, 0, 646473, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (4804, 800008, 309, 0, 0, -11888.7, -1875.95, 63.504, 3.52775, 25, 5, 0, 646473, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (4809, 800008, 309, 0, 0, -11923.4, -1843.22, 58.2982, 6.00566, 25, 5, 0, 646473, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (4810, 800008, 309, 0, 0, -11904.3, -1872.08, 64.5695, 2.12972, 25, 5, 0, 646473, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (4815, 800008, 309, 0, 0, -11857.1, -1871.8, 63.971, 4.71366, 25, 5, 0, 646473, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (4816, 800008, 309, 0, 0, -11864.7, -1849.14, 64.206, 5.04745, 25, 5, 0, 646473, 0, 0, 1);
 
 -- movement for dummies 
 UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=4804;
@@ -3181,10 +3181,10 @@ REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (7411, 25, 9632.94
 
 -- remove old sql so we can run it again
 DELETE FROM `zp_mangosd`.`event_scripts` WHERE  `id`=2313 LIMIT 2;
-REPLACE INTO `event_scripts` VALUES (2313, 0, 10, 7411, 60000, 0, 0, 0, 0, 0, 0, 0, 9636, 2512.65, 1331.47, 1.75901, 'Spawn Spirit of Sathrah');
+REPLACE INTO `zp_mangosd`.`event_scripts` VALUES (2313, 0, 10, 7411, 60000, 0, 0, 0, 0, 0, 0, 0, 9636, 2512.65, 1331.47, 1.75901, 'Spawn Spirit of Sathrah');
 
 -- Broodlord Lashlayer added head to loot table
-REPLACE INTO `creature_loot_template` VALUES (12017, 20383, -100, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (12017, 20383, -100, 0, 1, 1, 0, 0, 0);
 
 -- Add gossip text for war effort ambassadors, 0, 25, 50, 75, 100% gathered mats.
 REPLACE INTO `zp_mangosd`.`npc_text` VALUES (102, 'The Horde has a lot of supplies left to gather. They will not be ready for quite some time.', '', 0, 1, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0);
