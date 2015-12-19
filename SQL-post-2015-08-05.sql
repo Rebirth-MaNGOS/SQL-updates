@@ -2683,37 +2683,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `modelid_1`=7803 WHERE  `entry`=1508
 UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`=1.2, `speed_run`=1.25 WHERE  `entry`=15111;
 UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_param2`=2000 WHERE  `id`=1511102;
 
--- movement should be idle for all who follows a dummy
-UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49063;
-UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49064;
-UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49062;
-UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49067;
-
-UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4805;
-UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4806;
-UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49065;
-UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49066;
-
-UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4811;
-UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4812;
-UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4813;
-UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4814;
-
-UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49057;
-UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49053;
-UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49054;
-UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49055;
-
-UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4817;
-UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4818;
-UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4819;
-UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4820;
-
-UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4806;
-UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4807;
-UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4808;
-UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49056;
-
 -- dummies
 REPLACE INTO `creature` VALUES (4803, 800008, 309, 0, 0, -11879.7, -1890.77, 63.5054, 4.70584, 25, 5, 0, 646473, 0, 0, 1);
 REPLACE INTO `creature` VALUES (4804, 800008, 309, 0, 0, -11888.7, -1875.95, 63.504, 3.52775, 25, 5, 0, 646473, 0, 0, 1);
@@ -2934,6 +2903,37 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (4816, 5, -11864, -1848.18,
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (4816, 6, -11867.4, -1844.9, 63.9977, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.67161, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (4816, 7, -11871.1, -1846.59, 64.0555, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.61802, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (4816, 8, -11865.2, -1849.42, 64.2074, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.78964, 0, 0);
+
+-- movement should be idle for all who follows a dummy
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49063;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49064;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49062;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49067;
+
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4805;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4806;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49065;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49066;
+
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4811;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4812;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4813;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4814;
+
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49057;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49053;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49054;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49055;
+
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4817;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4818;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4819;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4820;
+
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4806;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4807;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=4808;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=49056;
 
 /***** Jin'do pats *****/
 -- dummies
