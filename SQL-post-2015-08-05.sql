@@ -3266,3 +3266,60 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (85111, 49, -9354.7, 1271.6
 
 -- move it aswell, to fit wp better
 REPLACE INTO `zp_mangosd`.`creature` VALUES (85111, 15335, 509, 0, 0, -9363.46, 1284.25, -24.0262, 5.40267, 3600, 0, 0, 51792, 0, 0, 2);
+
+/******* SQL from muggle ******/
+-- *** Dun Morogh ***
+-- Hammerspine - adjusted loot
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES ('1119', '2254', '60', '1', '1', '1', '0', '0', '0');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='40', `groupid`='1' WHERE (`entry`='1119') AND (`item`='763');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='40' WHERE (`entry`='1119') AND (`item`='24076');
+DELETE FROM `zp_mangosd`.`reference_loot_template` WHERE (`entry`='24075') AND (`item`='2254');
+
+-- Great Father Arcticus - adjusted loot
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='50' WHERE (`entry`='1260') AND (`item`='24075');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='20', `groupid`='1' WHERE (`entry`='1260') AND (`item`='2546');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='80', `groupid`='1' WHERE (`entry`='1260') AND (`item`='3223');
+
+-- *** DUSKWOOD ***
+-- Commander Felstrom - adjusted loot
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='40', `groupid`='2' WHERE (`entry`='771') AND (`item`='24048');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`='2' WHERE (`entry`='771') AND (`item`='24051');
+DELETE FROM `zp_mangosd`.`reference_loot_template` WHERE (`entry`='24050') AND (`item`='4464');
+DELETE FROM `zp_mangosd`.`reference_loot_template` WHERE (`entry`='24050') AND (`item`='4465');
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES ('771', '4464', '50', '1', '1', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES ('771', '4465', '50', '1', '1', '1', '0', '0', '0');
+
+-- Lord Malathrom - adjusting loot
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='40', `groupid`='1' WHERE (`entry`='503') AND (`item`='24050');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`='1' WHERE (`entry`='503') AND (`item`='24069');
+DELETE FROM `zp_mangosd`.`reference_loot_template` WHERE (`entry`='24048') AND (`item`='4462');
+
+-- Hide of Lupos, removed from reference loot table, set chance for 2 items to 48% either blue (8%) or green (40%) one
+DELETE FROM `zp_mangosd`.`reference_loot_template` WHERE (`entry`='24062') AND (`item`='3018') limit 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`='3', `ChanceOrQuestChance`='40' WHERE (`entry`='521') AND (`item`='24066') limit 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`='3' WHERE (`entry`='521') AND (`item`='24065') limit 1;
+
+-- Naraxis, grouped 2 named items, removed one of them from reference loot table, set chance for 2nd green item to 40%
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`='2' WHERE (`entry`='574') AND (`item`='4448') limit 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`='2' WHERE (`entry`='574') AND (`item`='4449') limit 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='40' WHERE (`entry`='574') AND (`item`='24048') limit 1;
+DELETE FROM `zp_mangosd`.`reference_loot_template` WHERE (`entry`='24066') AND (`item`='4448') limit 1;
+
+
+-- *** WESTFALL ***
+-- Master Digger - adjusted loot
+DELETE FROM `zp_mangosd`.`reference_loot_template` WHERE (`entry`='24076') AND (`item`='6205');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='50', `groupid`='1' WHERE (`entry`='1424') AND (`item`='6206');
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES ('1424', '6205', '50', '1', '1', '1', '0', '0', '0');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='15' WHERE (`entry`='1424') AND (`item`='24076');
+
+-- Sergeant Brashclaw - reduced drop chance for a 2nd green item
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='15' WHERE (`entry`='506') AND (`item`='24077');
+
+
+-- *** LOCH MODAN ***
+-- Large Loch Crocolisk, adjusted drop chances of green items, chance for 2nd green set to 40%, delete one item from ref table
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='50' WHERE (`entry`='2476') AND (`item`='6197') limit 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='50' WHERE (`entry`='2476') AND (`item`='3563') limit 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='40' WHERE (`entry`='2476') AND (`item`='24060') limit 1;
+DELETE FROM `zp_mangosd`.`reference_loot_template` WHERE (`entry`='24062') AND (`item`='6197') limit 1;
