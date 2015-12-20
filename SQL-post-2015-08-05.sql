@@ -3327,3 +3327,22 @@ DELETE FROM `zp_mangosd`.`reference_loot_template` WHERE (`entry`='24062') AND (
 -- Marshal Windsor should now have armor
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=4250 WHERE  `entry`=9682;
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=4250 WHERE  `entry`=12580;
+
+-- rep for all aq20 trash except rajaxx generals and ayamiss trash
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15343, 609, 0, 5, 0, 5, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15324, 609, 0, 5, 0, 5, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15327, 609, 0, 5, 0, 5, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15325, 609, 0, 5, 0, 5, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15387, 609, 0, 5, 0, 5, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15344, 609, 0, 5, 0, 5, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15338, 609, 0, 5, 0, 5, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15462, 609, 0, 5, 0, 3, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15461, 609, 0, 5, 0, 3, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15335, 609, 0, 5, 0, 5, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15333, 609, 0, 5, 0, 3, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15521, 609, 0, 5, 0, 5, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15555, 609, 0, 5, 0, 1, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15320, 609, 0, 5, 0, 5, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15323, 609, 0, 5, 0, 5, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (155460, 609, 0, 5, 0, 1, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15546, 609, 0, 5, 0, 1, 0, 0, 0, 0);
