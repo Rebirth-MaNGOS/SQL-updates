@@ -3346,3 +3346,7 @@ REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15320, 609, 0, 5,
 REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15323, 609, 0, 5, 0, 5, 0, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (155460, 609, 0, 5, 0, 1, 0, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15546, 609, 0, 5, 0, 1, 0, 0, 0, 0);
+
+-- Kurinaxx should move some and not so fast
+UPDATE `zp_mangosd`.`creature` SET `spawndist`=10 WHERE  `guid`=90805;
+UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`=1 WHERE  `entry`=15348;
