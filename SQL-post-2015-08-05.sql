@@ -2595,7 +2595,7 @@ REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-11360, '%s flees to the s
 UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='npc_hakkari_witch_doctor' WHERE  `entry`=11831;
 
 -- spell target and faction so disease cloud does dmg
-REPLACE INTO `zp_mangosd`.`spell_script_target` VALUES (24058, 1, 15010);
+REPLACE INTO `zp_mangosd`.`spell_script_target` VALUES (24062, 1, 15010);
 UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=28, `faction_H`=28 WHERE  `entry`=15010;
 
 -- Razzashi Broodwidow should spawn skitterers, not venombrood
