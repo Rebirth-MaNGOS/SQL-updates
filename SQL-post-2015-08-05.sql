@@ -3353,3 +3353,9 @@ REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15336, 609, 0, 5,
 -- Kurinaxx should move some and not so fast
 UPDATE `zp_mangosd`.`creature` SET `spawndist`=10 WHERE  `guid`=90805;
 UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`=1 WHERE  `entry`=15348;
+
+-- High Priestess Jeklik, High Priestess Arlokk, High Priest Venoxis and High Priest Thekal should be tauntable
+UPDATE `zp_mangosd`.`creature_template` SET `flags_extra`=1 WHERE  `entry`=14517;
+UPDATE `zp_mangosd`.`creature_template` SET `flags_extra`=1 WHERE  `entry`=14515;
+UPDATE `zp_mangosd`.`creature_template` SET `flags_extra`=1 WHERE  `entry`=14507;
+UPDATE `zp_mangosd`.`creature_template` SET `flags_extra`=1 WHERE  `entry`=14509;
