@@ -3359,3 +3359,7 @@ UPDATE `zp_mangosd`.`creature_template` SET `flags_extra`=1 WHERE  `entry`=14517
 UPDATE `zp_mangosd`.`creature_template` SET `flags_extra`=1 WHERE  `entry`=14515;
 UPDATE `zp_mangosd`.`creature_template` SET `flags_extra`=1 WHERE  `entry`=14507;
 UPDATE `zp_mangosd`.`creature_template` SET `flags_extra`=1 WHERE  `entry`=14509;
+
+-- Needs more q should be lvl10 min
+UPDATE `zp_mangosd`.`quest_template` SET `MinLevel`=1 where `Title` LIKE 'The Alliance needs%';
+UPDATE `zp_mangosd`.`quest_template` SET `MinLevel`=1 where `Title` LIKE 'The Horde needs%';
