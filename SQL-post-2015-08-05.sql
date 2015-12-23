@@ -3431,4 +3431,21 @@ UPDATE `zp_mangosd`.`quest_template` SET `RequestItemsText`='So as you can see, 
 -- salmon
 UPDATE `zp_mangosd`.`quest_template` SET `OfferRewardText`='Oh ya, this be the good stuff. I pack it up real nice so it not go to waste. Thanks be to you for helpin\' me out like this. I\'m thinkin\' you an A-number-one fisherman for all this baked salmonl. An if you happen to fish up and cook even more, you bring it to me here; I make sure everyone know you did!', `RequestItemsText`='The last batch of baked salmon that you donated to the war effort looked very delicious, $C. I must admit that I was tempted to take a few for myself. As you can tell, we have not yet reached our quota here. I am hoping you have returned because you have another stack of baked salmon with you' WHERE  `entry`=8616;
 
+-- remove carapace from non-elite quest mob Hive'Ashi Ambusher and drone
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=13301 AND `item`=20384;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=13136 AND `item`=20384;
+
+-- ashi non elite armor and random regal boss
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=2250 WHERE  `entry`=13136;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=2250 WHERE  `entry`=13301;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=4961 WHERE  `entry`=15620;
+
+-- AI hive ashi wasp
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE  `entry`=11727;
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1172701, 11727, 0, 0, 100, 1, 3000, 5000, 6000, 10000, 11, 19448, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Hive\'Zora Wasp - Cast Poison');
+
+-- Hive'Regal Ambusher AI
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE  `entry`=11730;
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1173001, 11730, 1, 0, 100, 1, 3000, 5000, 60000, 60000, 11, 22766, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 'Hive\'Regal Ambusher - Cast Sneak on ooc');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1173002, 11730, 0, 0, 100, 1, 3000, 5000, 6000, 10000, 11, 744, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Hive\'Regal Ambusher - Cast Poison');
 
