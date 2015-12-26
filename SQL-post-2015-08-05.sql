@@ -3449,3 +3449,5 @@ UPDATE `zp_mangosd`.`creature_template` SET `AIName`='EventAI', `ScriptName`='mo
 REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1173001, 11730, 1, 0, 100, 1, 3000, 5000, 60000, 60000, 11, 22766, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 'Hive\'Regal Ambusher - Cast Sneak on ooc');
 REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1173002, 11730, 0, 0, 100, 1, 3000, 5000, 6000, 10000, 11, 744, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Hive\'Regal Ambusher - Cast Poison');
 
+-- should be 50% drop chance for carapace from hive'zora wasps
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (11727, 20384, 50, 0, 1, 1, 2, 20402, 1);
