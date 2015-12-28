@@ -1206,3 +1206,34 @@ UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=25, `spawndist`=0 WHERE `map`
 UPDATE `zp_mangosd`.`creature` SET `spawndist`=0, `MovementType`=0 WHERE  `id`=153270;
 UPDATE `zp_mangosd`.`creature` SET `spawndist`=0, `MovementType`=0 WHERE  `id`=153250;
 
+-- quest Grark Lorkrub shouldn't be auto complete
+UPDATE `zp_mangosd`.`quest_template` SET `QuestFlags`=2 WHERE  `entry`=4122;
+
+-- req kill morbent fel
+UPDATE `zp_mangosd`.`quest_template` SET `ReqCreatureOrGOId1`=1200, `ReqCreatureOrGOCount1`=1 WHERE  `entry`=55;
+
+-- shouldn't remove aura unless used q item
+DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=120003;
+
+-- add adds
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3505, 604, 0, 0, 0, -10312.9, 376.87, 65.2695, 3.71765, 300, 0, 0, 838, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3506, 1110, 0, 0, 667, -10312.9, 372.225, 65.2676, 2.50813, 300, 0, 0, 891, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3507, 1110, 0, 0, 667, -10322.4, 371.83, 65.2669, 0.415038, 300, 0, 0, 891, 0, 0, 0);
+
+-- spell target for uniting the shattered amulet
+REPLACE INTO `zp_mangosd`.`spell_script_target` VALUES (12938, 1, 7666);
+REPLACE INTO `zp_mangosd`.`spell_script_target` VALUES (12938, 1, 7665);
+REPLACE INTO `zp_mangosd`.`spell_script_target` VALUES (12938, 1, 7667);
+
+-- update emote
+UPDATE `zp_mangosd`.`creature_ai_texts` SET `content_default`='%s seems to no longer be able to cast spells. The Felcurse is working!' WHERE  `entry`=-1058;
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-1059, '%s is noticeably weakened. The Felcurse is working!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 2, 0, 0, '7665');
+
+-- grol
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (766506, 7665, 8, 0, 100, 0, 12938, -1, 0, 0, 0, 0, 0, 0, 1, -1059, 0, 0, 0, 0, 0, 0, 'Grol the Destroyer - emote on spell hit');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (766502, 7665, 8, 0, 100, 0, 12938, -1, 0, 0, 42, 0, 1, 0, 23, 1, 0, 0, 11, 12941, 0, 4, 'Grol the Destroyer - Remove Invincible and Set Phase 2 on Fel Curse Spellhit (Phase 1)');
+
+-- sevine
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='mob_lady_sevine' WHERE  `entry`=7667;
+
+
