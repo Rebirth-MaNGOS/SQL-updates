@@ -1273,3 +1273,19 @@ UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_sethir_the_ancient
 -- add script AI for tortured druid/sentinel
 UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_tortured_druid_sentinel' WHERE  `entry`=12178;
 UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_tortured_druid_sentinel' WHERE  `entry`=12179;
+
+-- AQ20 add Scarab Coffer to world
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10246, 180691, 509, -8716.24, 1545.66, 32.0371, 0.836854, 0, 0, 0.406324, 0.913729, 21600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10247, 180691, 509, -9108.18, 1488.17, 26.1798, 2.55688, 0, 0, 0.957567, 0.28821, 21600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10248, 180691, 509, -8951.36, 1839.78, -0.374717, 1.09996, 0, 0, 0.522672, 0.852534, 21600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10249, 180691, 509, -8769.42, 2008.84, 23.0657, 4.68139, 0, 0, 0.71798, -0.696063, 21600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10250, 180691, 509, -9010.93, 1994.84, 32.1079, 3.00849, 0, 0, 0.997786, 0.0665029, 21600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10251, 180691, 509, -9131.6, 2185.47, 26.9048, 3.83315, 0, 0, 0.940811, -0.338931, 21600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10252, 180691, 509, -9505.93, 2003.66, 107.568, 5.58461, 0, 0, 0.342231, -0.939616, 21600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10253, 180691, 509, -9540.7, 1587.88, 26.1903, 0.903626, 0, 0, 0.436597, 0.899657, 21600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10254, 180691, 509, -9695.8, 1654.47, 22.5454, 2.80036, 0, 0, 0.985481, 0.169788, 21600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10255, 180691, 509, -9312.41, 1174.65, 21.3863, 5.79273, 0, 0, 0.242777, -0.970082, 21600, 100, 1);
+
+-- keys should be bound to the map
+UPDATE `zp_mangosd`.`item_template` SET `Map`=509 WHERE  `entry`=21761;
+UPDATE `zp_mangosd`.`item_template` SET `Map`=531 WHERE  `entry`=21762;
