@@ -1236,4 +1236,5 @@ REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (766502, 7665, 8, 0, 100,
 -- sevine
 UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='mob_lady_sevine' WHERE  `entry`=7667;
 
-
+-- armor and no drops for mindless skeleton
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=1000, `mingold`=0, `maxgold`=0 WHERE  `entry`=11197;
