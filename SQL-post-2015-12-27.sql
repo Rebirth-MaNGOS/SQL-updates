@@ -1238,3 +1238,9 @@ UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='mob_lady_
 
 -- armor and no drops for mindless skeleton
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=1000, `mingold`=0, `maxgold`=0 WHERE  `entry`=11197;
+
+-- Anubrekhan, remove corpse scarabs from world
+DELETE FROM `zp_mangosd`.`creature` WHERE  `id`=16698;
+
+-- ice bomb spell sapphiron
+REPLACE INTO `zp_mangosd`.`spell_target_position` VALUES (29318, 533, 3493.45, -5375.38, 138.168, 0);
