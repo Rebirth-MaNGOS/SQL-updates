@@ -1244,3 +1244,32 @@ DELETE FROM `zp_mangosd`.`creature` WHERE  `id`=16698;
 
 -- ice bomb spell sapphiron
 REPLACE INTO `zp_mangosd`.`spell_target_position` VALUES (29318, 533, 3493.45, -5375.38, 138.168, 0);
+
+-- add missing pat for sethir the ancient
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (2499, 1, 11076.3, 1902.4, 1342.41, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.49517, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (2499, 2, 11073.1, 1905.57, 1339.51, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.28704, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (2499, 3, 11070.4, 1908.69, 1336.96, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.34987, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (2499, 4, 11064.3, 1912.56, 1334.64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.57764, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (2499, 5, 11058.6, 1915.79, 1332.95, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.6444, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (2499, 6, 11054.1, 1917.88, 1332.88, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.73472, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (2499, 7, 11051.2, 1918.11, 1332.12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.17454, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (2499, 8, 11025.3, 1909.83, 1327.61, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.50441, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (2499, 9, 11031.1, 1913.96, 1328.61, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.453135, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (2499, 10, 11037.5, 1916.81, 1329.41, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.445282, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (2499, 11, 11049.3, 1922.02, 1332.13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.402085, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (2499, 12, 11054.6, 1920.71, 1333.14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.91166, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (2499, 13, 11063.9, 1916.11, 1333.95, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.80563, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (2499, 14, 11069.3, 1913.37, 1335.41, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.80956, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (2499, 15, 11074, 1909.03, 1338.24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.40115, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (2499, 16, 11079, 1901.96, 1343.04, 30000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.27157, 0, 0);
+
+-- wp movement
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=2499;
+
+-- armor for adds and AI for sethir
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=230 WHERE  `entry`=6911;
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_sethir_the_ancient' WHERE  `entry`=6909;
+
+-- add script AI for tortured druid/sentinel
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_tortured_druid_sentinel' WHERE  `entry`=12178;
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_tortured_druid_sentinel' WHERE  `entry`=12179;
