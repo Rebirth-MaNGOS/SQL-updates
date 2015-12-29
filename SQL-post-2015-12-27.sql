@@ -1289,3 +1289,6 @@ REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10255, 180691, 509, -9312.41, 117
 -- keys should be bound to the map
 UPDATE `zp_mangosd`.`item_template` SET `Map`=509 WHERE  `entry`=21761;
 UPDATE `zp_mangosd`.`item_template` SET `Map`=531 WHERE  `entry`=21762;
+
+-- Barkeep Morag and Stockade Archers should no longer wield Grand Marshal's Battle Hammer
+DELETE FROM `zp_mangosd`.`creature_equip_template` WHERE  `entry`=15;
