@@ -1292,3 +1292,6 @@ UPDATE `zp_mangosd`.`item_template` SET `Map`=531 WHERE  `entry`=21762;
 
 -- Barkeep Morag and Stockade Archers should no longer wield Grand Marshal's Battle Hammer
 DELETE FROM `zp_mangosd`.`creature_equip_template` WHERE  `entry`=15;
+
+-- fissure plant shouldn't drop, sql from muggle
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE (`item`='5066');
