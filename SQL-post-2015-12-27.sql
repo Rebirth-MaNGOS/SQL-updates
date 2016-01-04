@@ -1295,3 +1295,6 @@ DELETE FROM `zp_mangosd`.`creature_equip_template` WHERE  `entry`=15;
 
 -- fissure plant shouldn't drop, sql from muggle
 DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE (`item`='5066');
+
+-- lower req to 13 instead of 20
+UPDATE `zp_mangosd`.`battleground_template` SET `MinPlayersPerTeam`=13 WHERE  `id`=1;
