@@ -1298,3 +1298,14 @@ DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE (`item`='5066');
 
 -- lower req to 13 instead of 20
 UPDATE `zp_mangosd`.`battleground_template` SET `MinPlayersPerTeam`=13 WHERE  `id`=1;
+
+-- add to world
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (5271, 152093, 1, 2426.33, 1777.67, 383.015, 2.12524, 0, 0, 0.873634, 0.486584, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (5272, 152093, 1, 2383.5, 1808.74, 390.012, 2.77713, 0, 0, 0.983441, 0.181227, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (5273, 152093, 1, 2337.61, 1835.95, 381.221, 3.80992, 0, 0, 0.944684, -0.327981, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (5274, 152093, 1, 2430.24, 1841.39, 363.713, 0.389492, 0, 0, 0.193518, 0.981097, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (5275, 152093, 1, 2493.17, 1862.04, 364.984, 0.259902, 0, 0, 0.129586, 0.991568, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (5276, 152093, 1, 2458.75, 1904, 363.59, 1.77572, 0, 0, 0.775723, 0.631073, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (5277, 152093, 1, 2509.13, 1933.56, 338.827, 1.15526, 0, 0, 0.546039, 0.83776, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (5278, 152093, 1, 2461.85, 1996.83, 339.309, 2.58468, 0, 0, 0.961481, 0.274871, 25, 100, 1);
+
