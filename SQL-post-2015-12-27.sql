@@ -1309,3 +1309,29 @@ REPLACE INTO `zp_mangosd`.`gameobject` VALUES (5276, 152093, 1, 2458.75, 1904, 3
 REPLACE INTO `zp_mangosd`.`gameobject` VALUES (5277, 152093, 1, 2509.13, 1933.56, 338.827, 1.15526, 0, 0, 0.546039, 0.83776, 25, 100, 1);
 REPLACE INTO `zp_mangosd`.`gameobject` VALUES (5278, 152093, 1, 2461.85, 1996.83, 339.309, 2.58468, 0, 0, 0.961481, 0.274871, 25, 100, 1);
 
+/******* Lazy peon quest SQL *********/
+-- add lazy peon text from stock mangos
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1000796, 'Sleepy... so sleepy...', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'lazy peon SAY_AWAKE_2');
+
+-- new gobj so we know where the trees are
+REPLACE INTO `zp_mangosd`.`gameobject_template` VALUES (1757840, 5, 0, 'Tree Dummy', 114, 0, 1.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
+
+-- remove some emote for lazy peons, not used
+DELETE FROM `zp_mangosd`.`creature_template_addon` WHERE  `entry`=10556;
+
+-- add tree dummy to world
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (5279, 1757840, 1, -621.404, -4350.6, 40.9398, 4.6401, 0, 0, 0.732197, -0.681093, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (5280, 1757840, 1, -498.955, -4460.3, 51.4584, 2.85724, 0, 0, 0.98991, 0.141696, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (5281, 1757840, 1, -263.062, -4143.57, 56.6174, 5.74751, 0, 0, 0.264646, -0.964346, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (5282, 1757840, 1, -776.957, -4195.15, 44.7016, 2.23286, 0, 0, 0.898539, 0.438894, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (5283, 1757840, 1, -213.079, -4219.92, 62.1691, 2.23286, 0, 0, 0.898539, 0.438894, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (5284, 1757840, 1, -754.426, -4139.82, 39.783, 1.50637, 0, 0, 0.683964, 0.729516, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (5285, 1757840, 1, -375.278, -4015.22, 50.6179, 2.87689, 0, 0, 0.991254, 0.131967, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (5286, 1757840, 1, -758.11, -4325.82, 45.6622, 4.12567, 0, 0, 0.881373, -0.472422, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (5287, 1757840, 1, -634.754, -4482.88, 46.1817, 4.71078, 0, 0, 0.707675, -0.706539, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (5288, 1757840, 1, -315.827, -4123.98, 52.0157, 1.40033, 0, 0, 0.644343, 0.764737, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (5289, 1757840, 1, -509.181, -4372.16, 45.7156, 0.446068, 0, 0, 0.221189, 0.975231, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (5290, 1757840, 1, -227.954, -4449.45, 63.8429, 0.088711, 0, 0, 0.044341, 0.999016, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (5291, 1757840, 1, -336.339, -4440.04, 54.3248, 4.34165, 0, 0, 0.82532, -0.564665, 25, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (5292, 1757840, 1, -226.276, -4286.23, 64.9822, 5.11526, 0, 0, 0.551334, -0.834284, 25, 100, 1);
+
