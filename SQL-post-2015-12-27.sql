@@ -1496,6 +1496,8 @@ UPDATE `zp_scriptdevzerod`.`script_texts` SET `content_default`='Come forth, ye 
     -- remove Azerothian Diamond 12800
     delete from `zp_mangosd`.`creature_loot_template` where item='12800' and entry in (('11698'),('11721'),('11722'),('11723'),('11724'),('11725'),('11726'),('11727'),('11728'),('11729'),('11730'),('11731'),('11732'),('11733'),('11734'),('12276'),('13136'),('13301'),('15318'),('15319'),('15320'),('15323'),('15325'),('15327'),('15336'),('15449'),('15521'),('15546'),('15555'),('15620'),('15934'),('155460'));
 
+-- warsong report q item shouldn't drop in the world
+    DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE (`entry`='12856') AND (`item`='16746');
 
 
 
