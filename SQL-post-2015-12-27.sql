@@ -1475,3 +1475,5 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (30144, 16, -754.754, 659.0
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (30144, 17, -767.365, 607.044, -292.62, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.47032, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (30144, 18, -771.736, 589.02, -291.06, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.50566, 0, 0);
 
+-- update yell for ysondre
+UPDATE `zp_scriptdevzerod`.`script_texts` SET `content_default`='Come forth, ye Dreamers - and claim your vengeance!' WHERE  `entry`=-1000361;
