@@ -1107,7 +1107,7 @@ REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `pos
 REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES ('85294', '25', '-9204.76', '1926.68', '85.5567', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3.05042', '0', '0');
 
 /*Anubisath Guardian stats*/
-UPDATE `creature_template` SET `mindmg`='1295', `maxdmg`='1717' WHERE (`entry`='15355'); 
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1295', `maxdmg`='1717' WHERE (`entry`='15355'); 
 
 
 -- AI for new wasp
