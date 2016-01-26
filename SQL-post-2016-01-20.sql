@@ -34,3 +34,5 @@ UPDATE `zp_mangosd`.`creature_template` SET `armor`=4500, `speed_run`=1.1, `Scri
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=4750, `speed_run`=1.1, `ScriptName`='mob_av_mount_lieutenant' WHERE  `entry`=13318;
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=4750, `speed_run`=1.1, `ScriptName`='mob_av_mount_lieutenant' WHERE  `entry`=13152;
 
+-- Wildspawn Imp should now have normal aggro range
+UPDATE `zp_mangosd`.`creature_template` SET `aggrorangeoverride`=0 WHERE  `entry`=13276;
