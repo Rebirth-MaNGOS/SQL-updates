@@ -36,3 +36,7 @@ UPDATE `zp_mangosd`.`creature_template` SET `armor`=4750, `speed_run`=1.1, `Scri
 
 -- Wildspawn Imp should now have normal aggro range
 UPDATE `zp_mangosd`.`creature_template` SET `aggrorangeoverride`=0 WHERE  `entry`=13276;
+
+-- Finkle Einhorn and Awbee shouldn't be attackable
+UPDATE `zp_mangosd`.`creature_template` SET `unit_flags`=2 WHERE  `entry`=10740;
+UPDATE `zp_mangosd`.`creature_template` SET `unit_flags`=2 WHERE  `entry`=10776;
