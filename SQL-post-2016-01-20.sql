@@ -51,3 +51,6 @@ UPDATE `zp_mangosd`.`item_template` SET `Material`=0 WHERE  `entry`=723;
 -- sql from muggle, correct quest typo
 UPDATE `zp_mangosd`.`quest_template` SET `OfferRewardText`='Very good, very good! You\'ve done well, $N. Perhaps the interest that is being shown in you is deserved, after all.$b$bThat\'ll be for the others to decide--assuming your imp doesn\'t overpower you and nip your career in the bud. For now, I\'m satisfied that you\'ll probably survive your first few months as a $C.$b$bA word about the imp, $N. As a $R knows, don\'t let its size fool you, its 
 magic can be very dangerous.' WHERE (`entry`='1599');
+
+-- The Flesh Does Not Lie should req lvl 55 no 58
+UPDATE `zp_mangosd`.`quest_template` SET `MinLevel`=55 WHERE  `entry`=5212;
