@@ -40,3 +40,10 @@ UPDATE `zp_mangosd`.`creature_template` SET `aggrorangeoverride`=0 WHERE  `entry
 -- Finkle Einhorn and Awbee shouldn't be attackable
 UPDATE `zp_mangosd`.`creature_template` SET `unit_flags`=2 WHERE  `entry`=10740;
 UPDATE `zp_mangosd`.`creature_template` SET `unit_flags`=2 WHERE  `entry`=10776;
+
+-- Goretusk Liver should now drop without having the quest, and shouldn't be leather
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=38.1 WHERE  `entry`=345 AND `item`=723;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=36.8 WHERE  `entry`=547 AND `item`=723;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=32.8 WHERE  `entry`=157 AND `item`=723;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=32.5 WHERE  `entry`=454 AND `item`=723;
+UPDATE `zp_mangosd`.`item_template` SET `Material`=0 WHERE  `entry`=723;
