@@ -13,3 +13,6 @@ REPLACE INTO `zp_mangosd`.`spell_target_position` VALUES (8912, 0, -5095.6, -785
 UPDATE `zp_mangosd`.`item_template` SET `spellppmRate_1`=1.8 WHERE  `entry`=13361;
 UPDATE `zp_mangosd`.`item_template` SET `spellppmRate_1`=2.6 WHERE  `entry`=6660;
 UPDATE `zp_mangosd`.`item_template` SET `spellppmRate_1`=1 WHERE  `entry`=14576;
+
+-- players who die in blackrock mountain should now get ported to Searing gorge GY
+REPLACE INTO `zp_mangosd`.`game_graveyard_zone` VALUES (636, 25, 0);
