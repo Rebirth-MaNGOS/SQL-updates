@@ -8,3 +8,8 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720235, 'Here you are,
 
 -- coords for the spell
 REPLACE INTO `zp_mangosd`.`spell_target_position` VALUES (8912, 0, -5095.6, -785.54, 496.27, 0);
+
+-- Ebon Hilt of Marduk, Skullforge Reaver and Julie's Dagger - updated proc rate
+UPDATE `zp_mangosd`.`item_template` SET `spellppmRate_1`=1.8 WHERE  `entry`=13361;
+UPDATE `zp_mangosd`.`item_template` SET `spellppmRate_1`=2.6 WHERE  `entry`=6660;
+UPDATE `zp_mangosd`.`item_template` SET `spellppmRate_1`=1 WHERE  `entry`=14576;
