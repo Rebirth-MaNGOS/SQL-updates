@@ -46,3 +46,8 @@ DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE (`entry`='15449') AND (`
 
 DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE (`entry`='11723') AND (`item`='22650');
 DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE (`entry`='15449') AND (`item`='22650');
+
+-- remove mob specific drop from reference loot tables
+DELETE FROM `zp_mangosd`.`reference_loot_template` WHERE (`entry`='24076') AND (`item`='2899');
+-- add Wendigo Collar to Old Icebeard's loot table
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES ('1271', '2899', '25', '0', '1', '1', '0', '0', '0');
