@@ -33,3 +33,16 @@ REPLACE INTO `zp_mangosd`.`quest_template` VALUES (8757, 0, 440, 60, 60, 0, 0, 0
 
 -- druidical remains should now have 3% drop rate instead of 100
 UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=-3 WHERE `item`=22226 LIMIT 5;
+
+-- remove Task Briefing items from loot ables of hive mobs
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE (`entry`='14475') AND (`item`='20943');
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE (`entry`='14475') AND (`item`='20944');
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE (`entry`='15449') AND (`item`='21749');
+
+-- remove dossier drops from hive mobs in Silithus
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE (`entry`='11729') AND (`item`='22649');
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE (`entry`='11737') AND (`item`='22649');
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE (`entry`='15449') AND (`item`='22649');
+
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE (`entry`='11723') AND (`item`='22650');
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE (`entry`='15449') AND (`item`='22650');
