@@ -51,3 +51,10 @@ DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE (`entry`='15449') AND (`
 DELETE FROM `zp_mangosd`.`reference_loot_template` WHERE (`entry`='24076') AND (`item`='2899');
 -- add Wendigo Collar to Old Icebeard's loot table
 REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES ('1271', '2899', '25', '0', '1', '1', '0', '0', '0');
+
+-- Only emerald dragons should drop dream scales
+UPDATE `zp_mangosd`.`creature_template` SET `skinloot`=5319 WHERE  `entry`=5317;
+UPDATE `zp_mangosd`.`creature_template` SET `skinloot`=5320 WHERE  `entry`=5718;
+UPDATE `zp_mangosd`.`creature_template` SET `skinloot`=12477 WHERE  `entry`=12478;
+UPDATE `zp_mangosd`.`creature_template` SET `skinloot`=12479 WHERE  `entry`=12497;
+UPDATE `zp_mangosd`.`creature_template` SET `skinloot`=100001 WHERE  `entry`=15412;
