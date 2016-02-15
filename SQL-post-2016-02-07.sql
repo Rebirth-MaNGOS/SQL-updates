@@ -9,4 +9,6 @@ REPLACE INTO `zp_mangosd`.`spell_target_position` VALUES (29231, 533, 2685.06, -
 REPLACE INTO `zp_mangosd`.`spell_target_position` VALUES (29225, 533, 2725.71, -3463.45, 263.415, 5.45017);
 REPLACE INTO `zp_mangosd`.`spell_target_position` VALUES (29226, 533, 2724.76, -3514.27, 263.067, 2.87018);
 REPLACE INTO `zp_mangosd`.`spell_target_position` VALUES (29267, 533, 2711.72, -3458.56, 262.384, 4.02864);
-
+REPLACE INTO `zp_mangosd`.`spell_target_position` VALUES (29262, 533, 2727.58, -3535.23, 263.012, 2.60314);
+REPLACE INTO `zp_mangosd`.`spell_target_position` VALUES (29238, 533, 2684.95, -3457.55, 262.578, 4.62159);
+REPLACE INTO `zp_mangosd`.`spell_target_position` VALUES (29227, 533, 2663.92, -3464.7, 262.574, 5.15958);
