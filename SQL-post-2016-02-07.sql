@@ -18,3 +18,11 @@ REPLACE INTO `zp_mangosd`.`creature` VALUES ('3508', '15567', '0', '0', '0', '-7
 REPLACE INTO `zp_mangosd`.`game_event_creature` VALUES ('3508', '7');
 REPLACE INTO `zp_mangosd`.`creature` VALUES ('3509', '15561', '0', '0', '0', '519.542', '1557.8', '130.833', '4.43688', '25', '5', '0', '3857', '0', '0', '0');
 REPLACE INTO `zp_mangosd`.`game_event_creature` VALUES ('3509', '7');
+
+-- NEW QUEST EXP MULTIPLIER COMMAND TABLE
+
+CREATE TABLE `zp_charactersd`.`character_questexprate` (
+	`guid` INT(10) UNSIGNED NOT NULL DEFAULT '0',
+	`rate` INT(10) UNSIGNED NULL DEFAULT NULL,
+	PRIMARY KEY (`guid`)
+)
