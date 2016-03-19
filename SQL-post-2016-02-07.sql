@@ -24,3 +24,11 @@ REPLACE INTO `zp_mangosd`.`gameobject_template` (`entry`, `type`, `displayId`, `
 REPLACE INTO `zp_mangosd`.`gameobject_template` (`entry`, `type`, `displayId`, `name`, `faction`, `flags`, `size`, `data0`, `data1`, `data2`, `data3`, `data4`, `data5`, `data6`, `data7`, `data8`, `data9`, `data10`, `data11`, `data12`, `data13`, `data14`, `data15`, `data16`, `data17`, `data18`, `data19`, `data20`, `data21`, `data22`, `data23`, `mingold`, `maxgold`, `ScriptName`) VALUES (180009, 0, 6470, 'Twin Emps Exit Door', 0, 4, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
 REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (7001, 180008, 531, -8929.94, 1344.66, -104.246, 0.7171, 0, 0, 0, 0, 25, 100, 1);
 REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) VALUES (7002, 180009, 531, -9016.38, 1330.49, -104.246, 2.79, 0, 0, 0, 0, 25, 100, 1);
+
+-- NEW QUEST EXP MULTIPLIER COMMAND TABLE
+
+CREATE TABLE `zp_charactersd`.`character_questexprate` (
+	`guid` INT(10) UNSIGNED NOT NULL DEFAULT '0',
+	`rate` INT(10) UNSIGNED NULL DEFAULT NULL,
+	PRIMARY KEY (`guid`)
+)
