@@ -36,3 +36,47 @@ CREATE TABLE `zp_charactersd`.`character_questexprate` (
 -- Theramore Practicing Guard should be fighting, they fight 24/7 but should sit down every 20~~ sec, oh well can't get it to work
 REPLACE INTO `zp_mangosd`.`creature_addon` VALUES (30654, 0, 0, 1, 16, 36, 0, NULL);
 REPLACE INTO `zp_mangosd`.`creature_addon` VALUES (30657, 0, 0, 1, 16, 36, 0, NULL);
+
+-- Remove AI to summon deathguards as it screws up the events where mobs spawn in UC
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=780, `AIName`='', `ScriptName`='' WHERE  `entry`=5665;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=780, `AIName`='', `ScriptName`='' WHERE  `entry`=5664;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=780, `AIName`='', `ScriptName`='' WHERE  `entry`=5663;
+
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=850, `AIName`='', `ScriptName`='' WHERE  `entry`=5679;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=780, `AIName`='', `ScriptName`='' WHERE  `entry`=5656;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=780, `AIName`='', `ScriptName`='' WHERE  `entry`=5655;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=780, `AIName`='', `ScriptName`='' WHERE  `entry`=5659;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=780, `AIName`='', `ScriptName`='' WHERE  `entry`=5660;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=780, `AIName`='', `ScriptName`='' WHERE  `entry`=5658;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=780, `AIName`='', `ScriptName`='' WHERE  `entry`=5657;
+
+-- edward and tyler faction + armor
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=750, `faction_A`=68, `faction_H`=68 WHERE  `entry`=5654;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=750, `faction_A`=68, `faction_H`=68 WHERE  `entry`=5653;
+
+-- text for houser
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-5662, 'Alright you sorry sack of bones. Let\'s see what you\'ve got. Strike your opponent, and don\'t stop till I say so.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'Sergeant Houser - Say 1');
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-5663, 'Can you see yourselves? That is the most pathetic excuse for sword slinging I have ever seen!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 5, 'Sergeant Houser - Say 2');
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-5664, 'The sword isn\'t a tool, it\'s an extension of you. I expect better!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 5, 'Sergeant Houser - Say 3');
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-5665, 'Stop! You maggots call that fighting? That is pathetic! Now put your hearts in it, you don\'t need them anymore anyway!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 5, 'Sergeant Houser - Say 4');
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-5666, 'You\'re dead, not buried. Now show me your best!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 5, 'Sergeant Houser - Say 5');
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-5667, 'You sorry sacks of maggot flesh can do better than that, now prove it!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 5, 'Sergeant Houser - Say 6');
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-5668, 'You don\'t fight for yourselves anymore maggots! You fight for the Queen now so show me something worthy of her!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 5, 'Sergeant Houser - Say 7');
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-5669, 'What do you call that? If that\'s fighting then I\'m Lothar himself!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 5, 'Sergeant Houser - Say 8');
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-5670, 'These piles of wood and straw may show mercy, but the Lich King won\'t!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 5, 'Sergeant Houser - Say 9');
+
+-- houser AI
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (566202, 5662, 1, 0, 10, 1, 0, 0, 60000, 65000, 1, -5662, -5663, -5664, 0, 0, 0, 0, 0, 0, 0, 0, 'Sergeant Houser - Say 1');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (566203, 5662, 1, 0, 10, 1, 30000, 32000, 60000, 62000, 1, -5665, -5666, -5667, 0, 0, 0, 0, 0, 0, 0, 0, 'Sergeant Houser - Say 2');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (566204, 5662, 1, 0, 10, 1, 45000, 50000, 60000, 62000, 1, -5668, -5669, -5670, 0, 0, 0, 0, 0, 0, 0, 0, 'Sergeant Houser - Say 3');
+
+-- AI for malach event
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=950, `AIName`='', `ScriptName`='npc_brother_malach' WHERE  `entry`=5661;
+
+-- delete old brother malach event mobs
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=45211;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=45212;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=45221;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=45222;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=45223;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=45224;
