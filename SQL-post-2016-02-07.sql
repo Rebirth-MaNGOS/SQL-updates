@@ -80,3 +80,8 @@ DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=45221;
 DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=45222;
 DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=45223;
 DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=45224;
+
+-- add DM arena bosses to world
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3493, 11447, 1, 0, 0, -3706.7, 1091.58, 131.969, 3.07796, 25, 5, 0, 60811, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3494, 11497, 1, 0, 0, -3740.99, 1090.37, 131.969, 3.12371, 28800, 5, 0, 74479, 0, 0, 1);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (3495, 11498, 1, 0, 0, -3740.99, 1090.37, 131.969, 3.12371, 28800, 5, 0, 59085, 0, 0, 1);
