@@ -66,9 +66,9 @@ REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-5669, 'What do you call t
 REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-5670, 'These piles of wood and straw may show mercy, but the Lich King won\'t!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 5, 'Sergeant Houser - Say 9');
 
 -- houser AI
-REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (566202, 5662, 1, 0, 10, 1, 0, 0, 60000, 65000, 1, -5662, -5663, -5664, 0, 0, 0, 0, 0, 0, 0, 0, 'Sergeant Houser - Say 1');
-REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (566203, 5662, 1, 0, 10, 1, 30000, 32000, 60000, 62000, 1, -5665, -5666, -5667, 0, 0, 0, 0, 0, 0, 0, 0, 'Sergeant Houser - Say 2');
-REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (566204, 5662, 1, 0, 10, 1, 45000, 50000, 60000, 62000, 1, -5668, -5669, -5670, 0, 0, 0, 0, 0, 0, 0, 0, 'Sergeant Houser - Say 3');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (566202, 5662, 1, 0, 25, 1, 0, 0, 60000, 65000, 1, -5662, -5663, -5664, 0, 0, 0, 0, 0, 0, 0, 0, 'Sergeant Houser - Say 1');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (566203, 5662, 1, 0, 25, 1, 30000, 32000, 60000, 62000, 1, -5665, -5666, -5667, 0, 0, 0, 0, 0, 0, 0, 0, 'Sergeant Houser - Say 2');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (566204, 5662, 1, 0, 25, 1, 45000, 50000, 60000, 62000, 1, -5668, -5669, -5670, 0, 0, 0, 0, 0, 0, 0, 0, 'Sergeant Houser - Say 3');
 
 -- AI for malach event
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=950, `AIName`='', `ScriptName`='npc_brother_malach' WHERE  `entry`=5661;
