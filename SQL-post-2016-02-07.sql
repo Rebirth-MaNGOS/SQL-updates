@@ -27,11 +27,12 @@ REPLACE INTO `zp_mangosd`.`gameobject` (`guid`, `id`, `map`, `position_x`, `posi
 
 -- NEW QUEST EXP MULTIPLIER COMMAND TABLE
 
+DROP TABLE IF EXISTS `zp_charactersd`.`character_questexprate`;
 CREATE TABLE `zp_charactersd`.`character_questexprate` (
-	`guid` INT(10) UNSIGNED NOT NULL DEFAULT '0',
-	`rate` INT(10) UNSIGNED NULL DEFAULT NULL,
-	PRIMARY KEY (`guid`)
-)
+ 	`guid` INT(10) UNSIGNED NOT NULL DEFAULT '0',
+ 	`rate` INT(10) UNSIGNED NULL DEFAULT NULL,
+ 	PRIMARY KEY (`guid`)
+);
 
 -- Theramore Practicing Guard should be fighting, they fight 24/7 but should sit down every 20~~ sec, oh well can't get it to work
 REPLACE INTO `zp_mangosd`.`creature_addon` VALUES (30654, 0, 0, 1, 16, 36, 0, NULL);
