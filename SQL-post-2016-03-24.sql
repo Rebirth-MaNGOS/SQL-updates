@@ -299,3 +299,10 @@ UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='npc_jezel
 DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=45214;
 DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=45146;
 DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=45215;
+
+-- Apothecary Keever event sql
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='npc_apothecary_keever' WHERE  `entry`=5734;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=45218;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=45216;
+
+DELETE FROM `zp_mangosd`.`creature_addon` WHERE  `guid`=31870;
