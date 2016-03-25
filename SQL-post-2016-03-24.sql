@@ -291,3 +291,11 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (32074, 43, 1605.35, 306.40
 
 -- AI for samantha shackleton
 UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='npc_samantha_shackleton' WHERE  `entry`=5700;
+
+-- jezelle pruitt summonin event AI
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='npc_jezelle_pruitt' WHERE  `entry`=5702;
+
+-- delete old mobs
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=45214;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=45146;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=45215;
