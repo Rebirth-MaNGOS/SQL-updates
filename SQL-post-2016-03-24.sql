@@ -530,3 +530,6 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (920300, 128, -5669.56, -35
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (920300, 129, -5683.45, -3553.73, 305.661, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (920300, 130, -5697.93, -3542.56, 305.626, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (920300, 131, -5714.33, -3524.31, 303.827, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+-- Naxx, Widows embrace spell should only hit Faerlina
+REPLACE INTO `zp_mangosd`.`spell_script_target` VALUES (28732, 1, 15953);
