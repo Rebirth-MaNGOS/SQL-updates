@@ -533,3 +533,9 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (920300, 131, -5714.33, -35
 
 -- Naxx, Widows embrace spell should only hit Faerlina
 REPLACE INTO `zp_mangosd`.`spell_script_target` VALUES (28732, 1, 15953);
+
+-- Naxx, update sapphiron birth gobj and add to world, remove sapphiron since he'll be spawned
+REPLACE INTO `zp_mangosd`.`gameobject_template` VALUES (181356, 6, 6747, 'Sapphiron Birth', 114, 32, 1.3, 0, 63, 80, 29250, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'go_sapphiron_birth');
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10300, 181356, 533, 3522.57, -5236.76, 137.63, -1.8, 0, 0, -0.783327, 0.62161, 604800, 100, 1);
+
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=88756;
