@@ -660,3 +660,5 @@ REPLACE INTO `zp_mangosd`.`gameobject` VALUES (65819, 181695, 533, 2749.96, -372
 -- coords for port spell
 REPLACE INTO `zp_mangosd`.`spell_target_position` VALUES (30211, 533, 2794.61, -3707.68, 276.552, 2.32);
 
+-- armor for Prince Tortheldrin
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=4091 WHERE  `entry`=11486;
