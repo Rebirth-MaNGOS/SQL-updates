@@ -662,3 +662,62 @@ REPLACE INTO `zp_mangosd`.`spell_target_position` VALUES (30211, 533, 2794.61, -
 
 -- armor for Prince Tortheldrin
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=4091 WHERE  `entry`=11486;
+
+- Text for Gerard Abernathy event
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720236, 'Didn’t I tell you my new domination techniques would work?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 1');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720237, 'Truly amazing, Gerard. How did you do it?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 6, 'UC RP - 1');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720238, 'It was simple once I broke her spirit.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 1');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720239, 'I am truly impressed, Gerard. I thought you were all talk, but I see I have been proven wrong.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 4, 'UC RP - 1');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720240, 'Didn’t I tell you my new domination techniques would work?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720241, 'I’ve never seen anything like it. No concentration or loss of awareness while the subject is dominated. What did you do to her?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 6, 'UC RP - 2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720242, 'Everyone has a weakness, it’s just a matter of finding it.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720243, 'I don’t agree with your turning to alchemy to fix some of the problems, but I do agree with the results. Very well done.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720244, 'So what do you think of my new toy?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 3');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720245, 'Truly amazing, Gerard. How did you do it?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 6, 'UC RP - 3');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720246, 'I managed to discover that certain parts of the brain when removed or stimulated will make the subject much more docile.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 3');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720247, 'I don’t agree with your turning to alchemy to fix some of the problems, but I do agree with the results. Very well done.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 3');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720248, 'How do you like my pet?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 4');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720249, 'She retains knowledge and speech, and even the self sufficiency to perform tasks for you. Precisely what did you do?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 6, 'UC RP - 4');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720250, 'You don’t expect me to give up all of my secrets, do you?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 4');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720251, 'Bravo, Gerard, you have exceeded yourself yet again.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 4, 'UC RP - 4');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720252, 'As good as I told you it would be, yes?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 5');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720253, 'Amazing! How did you manage a permanent dominate?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 6, 'UC RP - 5');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720254, 'A little torture, a pinch of magic, and an ample helping of invasive surgery. She was conscious, of course.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 5');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720255, 'Did you have to house train her, Gerard?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 5');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720256, 'How do you like my pet?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 6');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720257, 'I don’t approve of your experiments, Gerard, but I must admit the results are impressive. What exactly did you do to her?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 6, 'UC RP - 6');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720258, 'A little ritual torture can go a long way.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 6');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720259, 'An amazing discovery you have made. I would love an opportunity to look at all of the failed experiments.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 6');
+
+-- waypoints
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (41840, 1, 1655.74, 367.394, -60.7686, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.17125, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (41840, 2, 1660.99, 364.464, -60.7729, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.75382, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (41840, 3, 1658.01, 359.376, -60.7521, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.75382, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (41840, 4, 1676.2, 348.088, -60.7777, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.73418, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (41840, 5, 1688.89, 338.089, -60.4799, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.59674, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (41840, 6, 1697.44, 336.399, -60.4801, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.44359, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (41840, 7, 1706.74, 324.819, -55.3924, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.38861, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (41840, 8, 1717.8, 333.386, -49.5954, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.629095, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (41840, 9, 1735.49, 346.527, -55.393, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.640876, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (41840, 10, 1744.08, 335.322, -60.4843, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.36898, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (41840, 11, 1759.55, 339.039, -62.2244, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.169641, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (41840, 12, 1779.34, 348.962, -62.36, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.554487, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (41840, 13, 1793.71, 370.257, -60.1588, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.06107, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (41840, 14, 1785.1, 399.32, -57.2134, 18000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.85825, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (41840, 15, 1793.71, 370.257, -60.1588, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.06107, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (41840, 16, 1779.34, 348.962, -62.36, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.554487, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (41840, 17, 1759.55, 339.039, -62.2244, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.169641, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (41840, 18, 1744.08, 335.322, -60.4843, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.36898, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (41840, 19, 1735.49, 346.527, -55.393, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.640876, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (41840, 20, 1717.8, 333.386, -49.5954, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.629095, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (41840, 21, 1706.74, 324.819, -55.3924, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.38861, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (41840, 22, 1697.44, 336.399, -60.4801, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.44359, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (41840, 23, 1688.89, 338.089, -60.4799, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.59674, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (41840, 24, 1676.2, 348.088, -60.7777, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.73418, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (41840, 25, 1658.01, 359.376, -60.7521, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.75382, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (41840, 26, 1660.99, 364.464, -60.7729, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.75382, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (41840, 27, 1655.74, 367.394, -60.7686, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.17125, 0, 0);
+
+-- Add AI and no movement even tho she has waypoints
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=41840;
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_theresa' WHERE  `entry`=5697;
