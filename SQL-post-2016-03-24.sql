@@ -724,3 +724,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_theresa' WHERE  `e
 
 -- No more exodar reference in Woo ping gossip
 UPDATE `zp_mangosd`.`npc_text` SET `text0_0`='Buliwyf can show you how to swing a mace properly, no matter the size. You can find him within the Timberline Arms in Ironforge.', `text0_1`='Buliwyf can show you how to swing a mace properly, no matter the size. You can find him within the Timberline Arms in Ironforge.odar, training draenei on the Trader\'s Tier.' WHERE  `ID`=10755;
+
+-- Quest exp multiplier command
+REPLACE INTO `zp_mangosd`.`command` (`name`, `security`, `help`) VALUES ('questexp', 0, 'Syntax: .questexp #rate sets the quest experience reward multiplier. Valid range is 1 - 5.');
