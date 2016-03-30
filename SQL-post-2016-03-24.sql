@@ -663,7 +663,7 @@ REPLACE INTO `zp_mangosd`.`spell_target_position` VALUES (30211, 533, 2794.61, -
 -- armor for Prince Tortheldrin
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=4091 WHERE  `entry`=11486;
 
-- Text for Gerard Abernathy event
+-- Text for Gerard Abernathy event
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720236, 'Didn’t I tell you my new domination techniques would work?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 1');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720237, 'Truly amazing, Gerard. How did you do it?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 6, 'UC RP - 1');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720238, 'It was simple once I broke her spirit.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 1');
