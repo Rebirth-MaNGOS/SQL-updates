@@ -721,3 +721,6 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (41840, 27, 1655.74, 367.39
 -- Add AI and no movement even tho she has waypoints
 UPDATE `zp_mangosd`.`creature` SET `MovementType`=0 WHERE  `guid`=41840;
 UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_theresa' WHERE  `entry`=5697;
+
+-- No more exodar reference in Woo ping gossip
+UPDATE `zp_mangosd`.`npc_text` SET `text0_0`='Buliwyf can show you how to swing a mace properly, no matter the size. You can find him within the Timberline Arms in Ironforge.', `text0_1`='Buliwyf can show you how to swing a mace properly, no matter the size. You can find him within the Timberline Arms in Ironforge.odar, training draenei on the Trader\'s Tier.' WHERE  `ID`=10755;
