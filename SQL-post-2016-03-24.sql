@@ -727,3 +727,12 @@ UPDATE `zp_mangosd`.`npc_text` SET `text0_0`='Buliwyf can show you how to swing 
 
 -- Quest exp multiplier command
 REPLACE INTO `zp_mangosd`.`command` (`name`, `security`, `help`) VALUES ('questexp', 0, 'Syntax: .questexp #rate sets the quest experience reward multiplier. Valid range is 1 - 5.');
+
+-- Weapon skill table
+DROP TABLE IF EXISTS `zp_charactersd`.`character_axemaceskill`;
+CREATE TABLE `zp_charactersd`.`character_axemaceskill` (
+	`guid` INT(10) NOT NULL DEFAULT '0',
+	`axe` INT(10) NULL DEFAULT NULL,
+	`mace` INT(10) NULL DEFAULT NULL,
+	PRIMARY KEY (`guid`)
+);
