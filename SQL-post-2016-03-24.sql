@@ -742,3 +742,8 @@ UPDATE `zp_mangosd`.`creature_template` SET `lootid`='0' WHERE (`entry`='7549') 
 -- remove money loot from frogs
 UPDATE `zp_mangosd`.`creature_template` SET `maxgold`='0' WHERE (`entry`='7549') limit 1;
 UPDATE `zp_mangosd`.`creature_template` SET `maxgold`='0' WHERE (`entry`='7550') limit 1;
+
+-- fix more vendors/trainers who are also questgiver
+REPLACE INTO `zp_mangosd`.`creature_template` VALUES ('1694', '0', '0', '3392', '0', 'Loslor Rudge', 'Engineering Supplies', '0', '10', '10', '413', '413', '0', '0', '20', '55', '55', '7', '0.96', '0.95', '0', '0', '9', '13', '0', '5', '1', '1910', '2101', '0', '1', '0', '0', '0', '0', '0', '0', '0', '16.808', '23.111', '100', '7', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '3', '0', '0', '1', '643', '0', '0', '0', '2', '');
+REPLACE INTO `zp_mangosd`.`creature_template` VALUES ('2910', '0', '0', '4900', '0', 'Prospector Ryedol', 'Explorers\' League', '0', '35', '35', '2016', '2016', '0', '0', '0', '55', '55', '7', '1.05', '0.95', '0', '0', '51', '65', '0', '27', '1', '2000', '0', '0', '1', '4608', '0', '0', '0', '0', '0', '0', '51.128', '70.301', '100', '7', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '3', '1', '0', '1', '865', '0', '0', '0', '2', '');
+
