@@ -733,3 +733,12 @@ REPLACE INTO `zp_mangosd`.`creature_template` VALUES ('6301', '0', '0', '5023', 
 REPLACE INTO `zp_mangosd`.`creature_template` VALUES ('14740', '0', '0', '14772', '0', 'Katoom the Angler', 'Fishing Trainer & Supplies', '0', '40', '40', '2471', '2471', '0', '0', '3250', '1494', '1494', '23', '1.1', '0.95', '0', '0', '64', '83', '0', '34', '1', '2000', '0', '0', '1', '36864', '0', '0', '2', '0', '0', '0', '55.968', '76.956', '100', '7', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '3', '0', '0', '1', '2069', '0', '0', '0', '2', '');
 REPLACE INTO `zp_mangosd`.`creature_template` VALUES ('14737', '0', '0', '14769', '0', 'Smith Slagtree', 'Blacksmithing Supplies', '0', '45', '45', '2972', '2972', '0', '0', '3600', '1494', '1494', '16391', '1.1', '0.95', '0', '0', '72', '93', '0', '38', '1', '2000', '0', '0', '1', '36864', '0', '0', '0', '0', '0', '0', '61.776', '84.942', '100', '7', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '3', '0', '0', '1', '443', '0', '0', '0', '2', '');
 
+-- correct model of Tree Frog
+UPDATE `zp_mangosd`.`creature_template` SET `modelid_1`='14936' WHERE (`entry`='7549') limit 1;
+-- remove loot from Tree Frog
+UPDATE `zp_mangosd`.`creature_template` SET `lootid`='0' WHERE (`entry`='7549') limit 1;
+-- remove skinloot from Silver Tabby cat
+UPDATE `zp_mangosd`.`creature_template` SET `lootid`='0' WHERE (`entry`='7549') limit 1;
+-- remove money loot from frogs
+UPDATE `zp_mangosd`.`creature_template` SET `maxgold`='0' WHERE (`entry`='7549') limit 1;
+UPDATE `zp_mangosd`.`creature_template` SET `maxgold`='0' WHERE (`entry`='7550') limit 1;
