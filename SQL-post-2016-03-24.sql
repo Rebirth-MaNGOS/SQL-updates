@@ -664,28 +664,28 @@ REPLACE INTO `zp_mangosd`.`spell_target_position` VALUES (30211, 533, 2794.61, -
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=4091 WHERE  `entry`=11486;
 
 -- Text for Gerard Abernathy event
-REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720236, 'Didn’t I tell you my new domination techniques would work?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 1');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720236, 'DidnÂ’t I tell you my new domination techniques would work?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 1');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720237, 'Truly amazing, Gerard. How did you do it?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 6, 'UC RP - 1');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720238, 'It was simple once I broke her spirit.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 1');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720239, 'I am truly impressed, Gerard. I thought you were all talk, but I see I have been proven wrong.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 4, 'UC RP - 1');
-REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720240, 'Didn’t I tell you my new domination techniques would work?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 2');
-REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720241, 'I’ve never seen anything like it. No concentration or loss of awareness while the subject is dominated. What did you do to her?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 6, 'UC RP - 2');
-REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720242, 'Everyone has a weakness, it’s just a matter of finding it.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 2');
-REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720243, 'I don’t agree with your turning to alchemy to fix some of the problems, but I do agree with the results. Very well done.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720240, 'DidnÂ’t I tell you my new domination techniques would work?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720241, 'IÂ’ve never seen anything like it. No concentration or loss of awareness while the subject is dominated. What did you do to her?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 6, 'UC RP - 2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720242, 'Everyone has a weakness, itÂ’s just a matter of finding it.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720243, 'I donÂ’t agree with your turning to alchemy to fix some of the problems, but I do agree with the results. Very well done.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 2');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720244, 'So what do you think of my new toy?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 3');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720245, 'Truly amazing, Gerard. How did you do it?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 6, 'UC RP - 3');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720246, 'I managed to discover that certain parts of the brain when removed or stimulated will make the subject much more docile.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 3');
-REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720247, 'I don’t agree with your turning to alchemy to fix some of the problems, but I do agree with the results. Very well done.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 3');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720247, 'I donÂ’t agree with your turning to alchemy to fix some of the problems, but I do agree with the results. Very well done.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 3');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720248, 'How do you like my pet?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 4');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720249, 'She retains knowledge and speech, and even the self sufficiency to perform tasks for you. Precisely what did you do?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 6, 'UC RP - 4');
-REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720250, 'You don’t expect me to give up all of my secrets, do you?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 4');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720250, 'You donÂ’t expect me to give up all of my secrets, do you?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 4');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720251, 'Bravo, Gerard, you have exceeded yourself yet again.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 4, 'UC RP - 4');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720252, 'As good as I told you it would be, yes?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 5');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720253, 'Amazing! How did you manage a permanent dominate?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 6, 'UC RP - 5');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720254, 'A little torture, a pinch of magic, and an ample helping of invasive surgery. She was conscious, of course.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 5');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720255, 'Did you have to house train her, Gerard?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 5');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720256, 'How do you like my pet?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 6');
-REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720257, 'I don’t approve of your experiments, Gerard, but I must admit the results are impressive. What exactly did you do to her?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 6, 'UC RP - 6');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720257, 'I donÂ’t approve of your experiments, Gerard, but I must admit the results are impressive. What exactly did you do to her?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 6, 'UC RP - 6');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720258, 'A little ritual torture can go a long way.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 6');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1720259, 'An amazing discovery you have made. I would love an opportunity to look at all of the failed experiments.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 33, 1, 'UC RP - 6');
 
@@ -727,3 +727,9 @@ UPDATE `zp_mangosd`.`npc_text` SET `text0_0`='Buliwyf can show you how to swing 
 
 -- Quest exp multiplier command
 REPLACE INTO `zp_mangosd`.`command` (`name`, `security`, `help`) VALUES ('questexp', 0, 'Syntax: .questexp #rate sets the quest experience reward multiplier. Valid range is 1 - 5.');
+
+-- let several vendors/trainers who also are questgiver show all options right away
+REPLACE INTO `zp_mangosd`.`creature_template` VALUES ('6301', '0', '0', '5023', '0', 'Gorbold Steelhand', 'Trade Supplies', '0', '30', '30', '1605', '1605', '0', '0', '0', '80', '80', '7', '0.94', '0.95', '0', '0', '42', '53', '0', '22', '1', '2000', '0', '0', '1', '4608', '0', '0', '0', '0', '0', '0', '45.144', '62.073', '100', '7', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'EventAI', '0', '3', '0', '0', '1', '738', '0', '0', '0', '2', 'mob_eventai');
+REPLACE INTO `zp_mangosd`.`creature_template` VALUES ('14740', '0', '0', '14772', '0', 'Katoom the Angler', 'Fishing Trainer & Supplies', '0', '40', '40', '2471', '2471', '0', '0', '3250', '1494', '1494', '23', '1.1', '0.95', '0', '0', '64', '83', '0', '34', '1', '2000', '0', '0', '1', '36864', '0', '0', '2', '0', '0', '0', '55.968', '76.956', '100', '7', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '3', '0', '0', '1', '2069', '0', '0', '0', '2', '');
+REPLACE INTO `zp_mangosd`.`creature_template` VALUES ('14737', '0', '0', '14769', '0', 'Smith Slagtree', 'Blacksmithing Supplies', '0', '45', '45', '2972', '2972', '0', '0', '3600', '1494', '1494', '16391', '1.1', '0.95', '0', '0', '72', '93', '0', '38', '1', '2000', '0', '0', '1', '36864', '0', '0', '0', '0', '0', '0', '61.776', '84.942', '100', '7', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '', '0', '3', '0', '0', '1', '443', '0', '0', '0', '2', '');
+
