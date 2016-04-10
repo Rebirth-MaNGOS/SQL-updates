@@ -756,3 +756,8 @@ UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='13' WHER
 UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='13' WHERE (`entry`='10738') AND (`item`='12431');
 UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='13' WHERE (`entry`='10916') AND (`item`='12431');
 
+-- Fix missing name in warrior low level quest
+UPDATE `zp_mangosd`.`quest_template` SET `OfferRewardText`='I bid you greetings, $N. Your name rings loudly in Darnassus, for you show promise. But we shall soon see if you possess the strength of will to follow the path of the $C.' WHERE (`entry`='1684');
+
+-- Another vendor having quests
+UPDATE `zp_mangosd`.`creature_template` SET `npcflag`='7' WHERE (`entry`='14637');
