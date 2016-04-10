@@ -1098,3 +1098,315 @@ REPLACE INTO `zp_mangosd`.`db_script_string` VALUES ('2000006034', 'You''re very
 REPLACE INTO `zp_mangosd`.`db_script_string` VALUES ('2000006035', 'Oh, I will my friend. I will indeed. You, too, be safe.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 REPLACE INTO `zp_mangosd`.`db_script_string` VALUES ('2000006036', 'Antonio Perelli lets out a deep sigh.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
+
+/*Eastern Plaguelands*/
+
+/*Tyr's Hand*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='9451');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='9448');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='9450');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='9447');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='9449');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='9452');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='10828');
+
+/*Plaguewood*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='12262');
+
+
+/*Western Plaguelands*/
+
+/*Hearthglen Scarlets*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1827');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1846');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1834');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='10608');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1832');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1836');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1841');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1839');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='12128');
+
+/*Gahhron's Withering ghosts*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1802');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1804');
+
+/*Andorhal undeads*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1805');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1794');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1795');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1788');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1852');
+
+
+/*Tirisfal Glade*/
+
+/*Scarlet Monastery*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='4283');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='4285');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='4284');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='4280');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='4282');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='4281');
+
+
+/*Silverpine Forest*/
+
+/*Fenris Keep*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1947');
+
+/*Pyrewood Village*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1891');
+
+
+/*Alterac Mountains*/
+
+/*Alterac City ogres*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='2256');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='2287');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='2255');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='2254');
+
+
+/*Hinterlands*/
+
+/*Jintha'alor trolls*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='4465');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='2641');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='2640');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1000' WHERE (`entry`='2643');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='2642');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='2645');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1000' WHERE (`entry`='2644');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='2647');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='2646');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='2648');
+
+/*The Altar of Zul*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='8636');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='7996');
+
+
+/*Arathi Highlands*/
+
+/*Stromgarde Ogres and Syndicate*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='2588');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='2590');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='2591');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1000' WHERE (`entry`='2597');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='3000' WHERE (`entry`='2599');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1000' WHERE (`entry`='2569');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1000' WHERE (`entry`='2558');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='2570');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2500' WHERE (`entry`='2571');
+
+/*Stromgarde Humans*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='2738');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='2612');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='2583');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='2584');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='2585');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='2607');
+
+/*Myzrael questline*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='2755');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='2611');
+
+
+/*Wetlands*/
+
+/*Dark Iron Dwarves*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1051');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1052');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='6523');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1053');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1000' WHERE (`entry`='1054');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1364');
+
+/*Dragonmaw Orcs*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='2901');
+
+/*Grim Batol Dragons*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1046');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1045');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1047');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1048');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1049');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1050');
+
+
+/*Loch Modan*/
+
+/*Mo'gosh ogres*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1179');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1178');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1180');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1181');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1183');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1210');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1225');
+
+/*Ol' Sooty*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='1225');
+
+/*Haren Swifthoof*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='2478');
+
+
+/*Badlands*/
+
+/*Uldaman outdoor mobs*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='4844');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='4846');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='4845');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='4856');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='4851');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='4872');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='2892');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='6733');
+
+/*Lethlor Ravine dragons*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='2726');
+
+
+/*Searing Gorge*/
+
+/*Margol the Rager*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='5833');
+
+/*Dark Irons*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='8504');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='8400');
+
+/*Firewatch Ridge elites*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='5860');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='8419');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='8282');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='14621');
+
+/*Trade Master Kovick and mount*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='8447');
+
+
+/*Burning Steppes*/
+
+/*Dragons*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='7043');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='7042');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='7046');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='7041');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='7040');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='7044');
+
+
+/*Redridge*/
+
+/*Stonewatch Keep mobs*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='436');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='4064');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='486');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='4462');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='4464');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='334');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='335');
+
+/*Morganth*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='397');
+
+
+/*Westfall*/
+
+/*Klaven Mortwake*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='7053');
+
+/*Vultros*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='462');
+
+/*Deadmines outdoor mobs*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='1725');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='625');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='624');
+
+
+/*Duskwood*/
+
+/*Defias*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='910');
+
+
+/*Deadwind Pass*/
+
+
+/*Swamps of Sorrow*/
+
+/*Dragons*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='742');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='743');
+
+/*Sunken Temple outdoor mobs*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='5224');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='5225');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='5261');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='5243');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='5269');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='5263');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='5401');
+
+
+/*Blasted Lands*/
+
+/*The Tainted Scar*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='8717');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='8718');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='8716');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='12396');
+
+
+/*Stranglethorn Vale*/
+
+/*Colonel Kurzen*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='813');
+
+/*Zul'gurub outdoor*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='11346');
+
+/*Bhag'thera*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1000' WHERE (`entry`='728');
+
+/*Mosh'ogg ogres*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='709');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='678');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='679');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='710');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='680');
+
+/*Mogh the Undying*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1060');
+
+/*King Bangalash*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1000' WHERE (`entry`='731');
+
+/*Tethis*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='730');
+
+/*Vile Reef murlocs*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500', `rangeattacktime`='1500' WHERE (`entry`='875');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='873');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='877');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='871');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='875');
+
+/*Crocolisks/basilisks*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='2635');
+
+/*Sin'dall*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1000' WHERE (`entry`='729');
+
+/*Gorlash*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='1492');
+
+/*King Mukla*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='1559');
+
+/*Mok'rash*/
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='1493');
