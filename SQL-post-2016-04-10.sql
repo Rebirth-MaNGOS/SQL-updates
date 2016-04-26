@@ -28,3 +28,7 @@ DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE (`item`='11948');
 -- Remove Empty Cursed Ooze Jar from loot tables of a lockbox and mobs
 DELETE FROM `zp_mangosd`.`item_loot_template` WHERE (`entry`='5758') AND (`item`='11914');
 DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE (`item`='11914');
+
+-- Adjusted loot tables for Zum'rah (grey/green loot added)
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES ('7271', '24043', '30', '0', '-24043', '1', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES ('7271', '24036', '15', '0', '-24036', '1', '0', '0', '0');
