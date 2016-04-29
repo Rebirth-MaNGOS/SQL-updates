@@ -41,3 +41,9 @@ REPLACE INTO `zp_mangosd`.`creature_template` VALUES ('9087', '0', '0', '8356', 
 
 -- Quest: Spooky Lighthouse, fixed typo
 REPLACE INTO `zp_mangosd`.`quest_template` VALUES ('1687', '2', '-284', '10', '60', '0', '0', '77', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '4', '0', '1468', '0', '-1479', '0', '0', '0', '0', 'Spooky Lighthouse', 'Sometimes late at night, our matrons at the orphanage will tell us spooky stories.  Those RULE!  There\'s one about a ghost that haunts a lighthouse in Westfall.  They say he was a pirate captain who had his ship taken from him by other pirates.  Wow!$B$BCould you please take me to the lighthouse in Westfall?  I wanna see if the ghost of that captain is there!  I promise to stay close to you; I won\'t run off or anything!', 'Take the orphan to see the lighthouse off the coast of Westfall.\r\n', 'WOW, that was a real life ghost! That was so awesome - I can\'t wait to tell everyone back at the orphanage. Captain Grayson... he even looked like a pirate! When I grow up I wanna be a ghost pirate too!$B$BThanks for taking me to Westfall, $N. I know there are scary things out there in the wilds of Westfall, and I hope I wasn\'t too much of a pain. You\'re awesome!', NULL, 'Go to the Westfall Lighthouse.', '', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '469', '0', '0', '0', '0', '75', '0', '0', '0', '0', '0', '390', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
+
+-- Remove Chicken egg from loot tables of mobs
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE (`entry`='525') AND (`item`='11110');
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE (`entry`='114') AND (`item`='11110');
+
+
