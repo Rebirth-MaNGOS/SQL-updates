@@ -52,3 +52,12 @@ REPLACE INTO `zp_mangosd`.`quest_template` (`entry`, `Method`, `ZoneOrSort`, `Mi
 -- Fix typo in quest Gateway to the Frontier
 REPLACE INTO `zp_mangosd`.`quest_template` VALUES ('911', '2', '-284', '10', '60', '0', '0', '178', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '4', '0', '172', '0', '-910', '0', '0', '0', '0', 'Gateway to the Frontier', 'They say that Ashenvale is the new frontier, and that the Mor\'shan Rampart in the Barrens is the gateway to it.  That would be so cool to be a pioneer, carving everything you need out of the untamed wilds!  They say that this is where the Horde and Alliance will clash the most in the future, and I want to be there $N!$B$BWould you take me to the Mor\'shan Rampart so I can see what the frontier looks like, please?  I wanna see where the Horde is driving out those smelly night elves!', 'Take your ward to the Mor\'shan Rampart in the northern part of the Barrens, just before entering Ashenvale.', 'Wow, Ashenvale is where real adventure happens! Have you ever fought in Ashenvale, $N? When I become a hero when I grow up, I wanna come to Ashenvale and fight for the glory Horde!$B$BThank you for taking me to the frontier, $N. You\'re the best!', NULL, 'Go to the Mor\'shan Rampart in the Barrens.', '', '', '', '', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '390', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
 
+-- Remove the item Father Flame from creature loot tables
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE (`entry`='9096') AND (`item`='13371');
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE (`entry`='9817') AND (`item`='13371');
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE (`entry`='9819') AND (`item`='13371');
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE (`entry`='10083') AND (`item`='13371');
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE (`entry`='10161') AND (`item`='13371');
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE (`entry`='10258') AND (`item`='13371');
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE (`entry`='10683') AND (`item`='13371');
+
