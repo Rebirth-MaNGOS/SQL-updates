@@ -61,3 +61,50 @@ DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE (`entry`='10161') AND (`
 DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE (`entry`='10258') AND (`item`='13371');
 DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE (`entry`='10683') AND (`item`='13371');
 
+-- Quest object respawn timers
+-- Bloodsail Charts
+UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`='60' WHERE (`guid`='12154');
+
+-- Fathom Stone
+UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`='60' WHERE (`guid`='32686');
+
+-- Doom Weed
+UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`='120' WHERE (`id`='176753');
+
+-- Crossroad Supply Crate
+UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`='60' WHERE (`id`='175708');
+
+-- Gloom Weed
+UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`='120' WHERE (`id`='175566');
+
+-- Milly's Harvest
+UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`='120' WHERE (`id`='161557');
+
+-- Dead-tooth's Strongbox
+UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`='90' WHERE (`guid`='27085');
+
+-- Compendium of the Fallen
+UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`='30' WHERE (`guid`='32236');
+
+-- Stolen Supply Sack
+UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`='120' WHERE (`id`='3290');
+
+-- Half-Buried Bottle
+UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`='300' WHERE (`id`='2560');
+
+-- Bloodsail Orders
+UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`='90' WHERE (`id`='2087');
+
+-- Tirisfal Pumpkin
+UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`='99' WHERE (`id`='375');
+
+-- Mudsnout Blossom
+UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`='90' WHERE (`id`='1723');
+
+-- Shipment of Iron
+UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`='90' WHERE (`guid`='20778');
+
+
+
+
+
