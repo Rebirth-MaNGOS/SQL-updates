@@ -14,3 +14,9 @@ UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=0 WHERE  `ent
 UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=0 WHERE  `entry`=10418;
 UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=0 WHERE  `entry`=10419;
 UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=0 WHERE  `entry`=10420;
+
+-- Eranikus, Tyrant of the Dream added armor and taunt immune
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=4691, `flags_extra`=259 WHERE  `entry`=15491;
+
+-- Nightmare Phantasm immune fear and horror
+UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=8388624 WHERE  `entry`=15629;
