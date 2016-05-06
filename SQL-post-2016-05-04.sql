@@ -20,3 +20,11 @@ UPDATE `zp_mangosd`.`creature_template` SET `armor`=4691, `flags_extra`=259 WHER
 
 -- Nightmare Phantasm immune fear and horror
 UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=8388624 WHERE  `entry`=15629;
+
+-- Fix loot of Scalebane Royal Guards (dropped too many and good stuff)
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='3.1' WHERE (`entry`='1050') AND (`item`='24033');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='0.1' WHERE (`entry`='1050') AND (`item`='24034');
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES ('1050', '24024', '5.68', '0', '-24024', '1', '0', '0', '0');
+
+
+
