@@ -111,3 +111,7 @@ REPLACE INTO `zp_mangosd`.`creature_formations` (`leaderGUID`, `memberGUID`, `di
 
 -- Pattern: Runed Stygian Leggings should no longer drop from Twilight Geolord
 DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=11881 AND `item`=20546;
+
+-- C'Thun stomach trigger code.
+replace into scripted_areatrigger values ('4033', 'area_trigger_cthun_stomach_knockback');
+replace into scripted_areatrigger values ('4034', 'area_trigger_cthun_stomach_teleport');
