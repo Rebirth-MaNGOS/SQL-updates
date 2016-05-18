@@ -99,3 +99,12 @@ REPLACE INTO `zp_mangosd`.`creature_formations` (`leaderGUID`, `memberGUID`, `di
 REPLACE INTO `zp_mangosd`.`creature_formations` (`leaderGUID`, `memberGUID`, `dist`, `angle`, `groupAI`) VALUES (3517, 87641, 0, 0, 2);
 REPLACE INTO `zp_mangosd`.`creature_formations` (`leaderGUID`, `memberGUID`, `dist`, `angle`, `groupAI`) VALUES (3517, 87643, 0, 0, 2);
 REPLACE INTO `zp_mangosd`.`creature_formations` (`leaderGUID`, `memberGUID`, `dist`, `angle`, `groupAI`) VALUES (3517, 87640, 0, 0, 2);
+
+-- Bug trio linking
+
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (320, 800108, 531, 0, 0, -8577.76, 2168.59, -4.86372, 1.75536, 25, 5, 0, 646473, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_formations` (`leaderGUID`, `memberGUID`, `dist`, `angle`, `groupAI`) VALUES (320, 320, 0, 0, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` (`leaderGUID`, `memberGUID`, `dist`, `angle`, `groupAI`) VALUES (320, 87603, 0, 0, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` (`leaderGUID`, `memberGUID`, `dist`, `angle`, `groupAI`) VALUES (320, 87601, 0, 0, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` (`leaderGUID`, `memberGUID`, `dist`, `angle`, `groupAI`) VALUES (320, 87602, 0, 0, 2);
