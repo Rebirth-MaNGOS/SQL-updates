@@ -115,3 +115,12 @@ DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=11881 AND `item
 -- C'Thun stomach trigger code.
 replace into scripted_areatrigger values ('4033', 'area_trigger_cthun_stomach_knockback');
 replace into scripted_areatrigger values ('4034', 'area_trigger_cthun_stomach_teleport');
+
+-- fankriss aggro range
+UPDATE `zp_mangosd`.`creature_template` SET `aggrorangeoverride`=70 WHERE  `entry`=15510;
+
+-- vekniss drone respawn 
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=30 WHERE  `id`=15300;
+
+-- Sartura run on all waypoints in case reset after combat
+UPDATE `zp_mangosd`.`creature_movement` SET `script_id`=1 WHERE  `id`=10515;
