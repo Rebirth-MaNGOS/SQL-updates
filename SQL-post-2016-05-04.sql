@@ -127,3 +127,7 @@ UPDATE `zp_mangosd`.`creature_movement` SET `script_id`=1 WHERE  `id`=10515;
 
 -- respawn time 30min for Obsidian Eradicator
 UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=1800 WHERE  `id`=15262;
+
+-- qiraji scorpions and scarabs should have aura 22413
+REPLACE INTO `zp_mangosd`.`creature_template_addon` VALUES (15316, 0, 0, 0, 0, 0, 0, '22413');
+REPLACE INTO `zp_mangosd`.`creature_template_addon` VALUES (15317, 0, 0, 0, 0, 0, 0, '22413');
