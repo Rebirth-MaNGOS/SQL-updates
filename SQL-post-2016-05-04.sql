@@ -134,3 +134,6 @@ REPLACE INTO `zp_mangosd`.`creature_template_addon` VALUES (15317, 0, 0, 0, 0, 0
 
 -- Greater scarab coffer should need key to be unlocked
 UPDATE `zp_mangosd`.`gameobject_template` SET `faction`=94, `flags`=2 WHERE  `entry`=180690;
+
+-- Amulet of Draconic Subversion area requirement
+REPLACE INTO `zp_mangosd`.`spell_area` (`spell`, `area`, `quest_start`, `quest_start_active`, `quest_end`, `aura_spell`, `racemask`, `gender`, `autocast`) VALUES (19937, 2158, 0, 0, 0, 0, 0, 2, 0);
