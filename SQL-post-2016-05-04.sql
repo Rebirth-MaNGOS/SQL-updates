@@ -124,3 +124,6 @@ UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=30 WHERE  `id`=15300;
 
 -- Sartura run on all waypoints in case reset after combat
 UPDATE `zp_mangosd`.`creature_movement` SET `script_id`=1 WHERE  `id`=10515;
+
+-- respawn time 30min for Obsidian Eradicator
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=1800 WHERE  `id`=15262;
