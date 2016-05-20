@@ -131,3 +131,6 @@ UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=1800 WHERE  `id`=15262;
 -- qiraji scorpions and scarabs should have aura 22413
 REPLACE INTO `zp_mangosd`.`creature_template_addon` VALUES (15316, 0, 0, 0, 0, 0, 0, '22413');
 REPLACE INTO `zp_mangosd`.`creature_template_addon` VALUES (15317, 0, 0, 0, 0, 0, 0, '22413');
+
+-- Greater scarab coffer should need key to be unlocked
+UPDATE `zp_mangosd`.`gameobject_template` SET `faction`=94, `flags`=2 WHERE  `entry`=180690;
