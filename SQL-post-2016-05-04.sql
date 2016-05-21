@@ -288,3 +288,10 @@ update zp_mangosd.creature_template set ScriptName = "mob_tentacle_portal" where
 
 -- Change the scale for C'Thun's eye.
 update zp_mangosd.creature_template set scale = 1 where entry = 15589;
+
+-- Qiraji mounts only usable in AQ40
+
+REPLACE INTO `zp_mangosd`.`spell_area` (`spell`, `area`, `quest_start`, `quest_start_active`, `quest_end`, `aura_spell`, `racemask`, `gender`, `autocast`) VALUES (26056, 3428, 0, 0, 0, 0, 0, 2, 0);
+REPLACE INTO `zp_mangosd`.`spell_area` (`spell`, `area`, `quest_start`, `quest_start_active`, `quest_end`, `aura_spell`, `racemask`, `gender`, `autocast`) VALUES (25953, 3428, 0, 0, 0, 0, 0, 2, 0);
+REPLACE INTO `zp_mangosd`.`spell_area` (`spell`, `area`, `quest_start`, `quest_start_active`, `quest_end`, `aura_spell`, `racemask`, `gender`, `autocast`) VALUES (26054, 3428, 0, 0, 0, 0, 0, 2, 0);
+REPLACE INTO `zp_mangosd`.`spell_area` (`spell`, `area`, `quest_start`, `quest_start_active`, `quest_end`, `aura_spell`, `racemask`, `gender`, `autocast`) VALUES (26055, 3428, 0, 0, 0, 0, 0, 2, 0);
