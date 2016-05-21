@@ -262,7 +262,7 @@ REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCred
 REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCredit2`, `modelid_1`, `modelid_2`, `name`, `subname`, `gossip_menu_id`, `minlevel`, `maxlevel`, `minhealth`, `maxhealth`, `minmana`, `maxmana`, `armor`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `aggrorangeoverride`, `unit_class`, `unit_flags`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `PetSpellDataId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `Civilian`, `RacialLeader`, `RegenHealth`, `equipment_id`, `trainer_id`, `vendor_id`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`) VALUES (15355, 0, 0, 15347, 0, 'Anubisath Guardian', NULL, 0, 62, 62, 61503, 61503, 0, 0, 4391, 14, 14, 0, 1.5, 1.11286, 0, 1, 1295, 1717, 0, 2000, 1, 1500, 1650, 0, 0, 0, 0, 0, 0, 0, 0, 0, 203.77, 289.86, 100, 10, 8, 15355, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 0, 0, 1, 0, 0, 0, 1, 0, 'mob_anubisath_guardian');
 
 -- AI for the exit trigger in C'Thun's stomach.
-update creature_template set ScriptName = "npc_cthun_stomach_exit_trigger" where entry = 15800;
+update zp_mangosd.creature_template set ScriptName = "npc_cthun_stomach_exit_trigger" where entry = 15800;
 
 -- AQ20 boss armor / health / damage
 -- Kurinaxx
@@ -282,3 +282,9 @@ REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCred
 
 -- Moam
 REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCredit2`, `modelid_1`, `modelid_2`, `name`, `subname`, `gossip_menu_id`, `minlevel`, `maxlevel`, `minhealth`, `maxhealth`, `minmana`, `maxmana`, `armor`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `aggrorangeoverride`, `unit_class`, `unit_flags`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `PetSpellDataId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `Civilian`, `RacialLeader`, `RegenHealth`, `equipment_id`, `trainer_id`, `vendor_id`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`) VALUES (15340, 0, 0, 15392, 0, 'Moam', NULL, 0, 63, 63, 346450, 346450, 26200, 26200, 3795, 14, 14, 0, 2.3, 1.11286, 0, 1, 1738, 2301, 0, 2000, 1, 2000, 1800, 0, 0, 0, 0, 0, 0, 0, 0, 0, 220.81, 320.77, 100, 10, 76, 15340, 0, 0, 0, 0, 0, 0, 0, 0, 25672, 15550, 25685, 0, 0, 564999, 690554, '', 0, 3, 0, 0, 1, 0, 0, 0, 617299803, 513, 'boss_moam');
+
+-- Add AI for the new portal AI at C'Thun.
+update zp_mangosd.creature_template set ScriptName = "mob_tentacle_portal" where entry in (15904, 15910);
+
+-- Change the scale for C'Thun's eye.
+update zp_mangosd.creature_template set scale = 1 where entry = 15589;
