@@ -295,3 +295,7 @@ REPLACE INTO `zp_mangosd`.`spell_area` (`spell`, `area`, `quest_start`, `quest_s
 REPLACE INTO `zp_mangosd`.`spell_area` (`spell`, `area`, `quest_start`, `quest_start_active`, `quest_end`, `aura_spell`, `racemask`, `gender`, `autocast`) VALUES (25953, 3428, 0, 0, 0, 0, 0, 2, 0);
 REPLACE INTO `zp_mangosd`.`spell_area` (`spell`, `area`, `quest_start`, `quest_start_active`, `quest_end`, `aura_spell`, `racemask`, `gender`, `autocast`) VALUES (26054, 3428, 0, 0, 0, 0, 0, 2, 0);
 REPLACE INTO `zp_mangosd`.`spell_area` (`spell`, `area`, `quest_start`, `quest_start_active`, `quest_end`, `aura_spell`, `racemask`, `gender`, `autocast`) VALUES (26055, 3428, 0, 0, 0, 0, 0, 2, 0);
+
+
+-- Fix typo in quest Highperch Venom
+UPDATE `zp_mangosd`.`quest_template` SET `Objectives`='Bring 10 Highperch Venom Sacs to Fiora Longears in Theramore.' WHERE (`entry`='1135');
