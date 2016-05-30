@@ -299,3 +299,2188 @@ REPLACE INTO `zp_mangosd`.`spell_area` (`spell`, `area`, `quest_start`, `quest_s
 
 -- Fix typo in quest Highperch Venom
 UPDATE `zp_mangosd`.`quest_template` SET `Objectives`='Bring 10 Highperch Venom Sacs to Fiora Longears in Theramore.' WHERE (`entry`='1135');
+
+-- AQ40 change entry of one idol
+UPDATE `zp_mangosd`.`item_template` SET `entry`=20880 WHERE  `entry`=20882;
+Update `zp_mangosd`.`creature_loot_template` SET `item` = 20880 where `item` = 20882;
+Update `zp_mangosd`.`gameobject_loot_template` SET `item` = 20880 where `item` = 20882;
+Update `zp_mangosd`.`item_loot_template` SET `item` = 20880 where `item` = 20882;
+
+-- AQ40 change swarmguards to qiraji lashers
+UPDATE `zp_mangosd`.`creature` SET `id`=15249 WHERE  `guid`=88008;
+UPDATE `zp_mangosd`.`creature` SET `id`=15249 WHERE  `guid`=88003;
+UPDATE `zp_mangosd`.`creature` SET `id`=15249 WHERE  `guid`=87999;
+
+-- AQ20
+-- coffer respawn, 21600 förut, nu 7 dagar för att inte kunna farm loot
+UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`=604800 WHERE  `id`=180691;
+
+-- add large coffers to world AQ40
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10256, 180690, 531, -8551.57, 1983.16, -3.05227, 0.843439, 0, 0, 0.40933, 0.912386, 604800, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10257, 180690, 531, -8583.23, 1288.77, -68.8623, 4.81208, 0, 0, 0.670997, -0.74146, 604800, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10258, 180690, 531, -8684.67, 1608.26, -86.6851, 1.49376, 0, 0, 0.679352, 0.733812, 604800, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10259, 180690, 531, -8881.29, 1362.69, -98.9149, 4.21124, 0, 0, 0.86036, -0.509687, 604800, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10260, 180690, 531, -9093.74, 1515.52, -98.3209, 1.93435, 0, 0, 0.823285, 0.567628, 604800, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10261, 180690, 531, -9206.27, 1487.27, -94.4021, 3.97639, 0, 0, 0.914147, -0.405382, 604800, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10262, 180690, 531, -9159.24, 1583.67, -78.7985, 0.1829, 0, 0, 0.0913225, 0.995821, 604800, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10263, 180690, 531, -9243.85, 1578.06, -74.2997, 2.44564, 0, 0, 0.940064, 0.340998, 604800, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10264, 180690, 531, -9204.45, 1960.49, -49.9113, 4.50338, 0, 0, 0.777012, -0.629486, 604800, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10265, 180690, 531, -8927.32, 1822.98, -18.9925, 4.00074, 0, 0, 0.909144, -0.416482, 604800, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10266, 180690, 531, -8144.86, 1128.44, -85.7327, 3.88139, 0, 0, 0.932364, -0.36152, 604800, 100, 1);
+
+-- add GY for aq, get rooted and can't move when spawning there tho
+REPLACE INTO `zp_mangosd`.`game_graveyard_zone` VALUES (913, 3429, 0);
+REPLACE INTO `zp_mangosd`.`game_graveyard_zone` VALUES (913, 3428, 0);
+
+-- small scarab coffer loot
+UPDATE `zp_mangosd`.`gameobject_loot_template` SET `ChanceOrQuestChance`=10 WHERE  `entry`=17532 AND `item`<> 21156 LIMIT 10;
+
+-- large scarab coffer loot, higher drop bag in aq40
+UPDATE `zp_mangosd`.`gameobject_loot_template` SET `ChanceOrQuestChance`=14 WHERE  `entry`=17533 AND `item`<> 21156 LIMIT 10;
+UPDATE `zp_mangosd`.`gameobject_loot_template` SET `ChanceOrQuestChance`=100 WHERE  `entry`=17533 AND `item`=21156;
+-- chance for 2nd bag
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (211560, 21156, 40, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`gameobject_loot_template` VALUES (17533, 211560, 100, 0, -211560, 1, 0, 0, 0);
+
+-- 1-4 all items in scarab bag
+UPDATE `zp_mangosd`.`item_loot_template` SET `maxcount`=4 WHERE  `entry`=21156 AND `item`=20862;
+UPDATE `zp_mangosd`.`item_loot_template` SET `maxcount`=4 WHERE  `entry`=21156 AND `item`=20864;
+
+-- Delete old loot tables AQ20 bosses
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15348;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15341;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15340;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15370;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15369;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15339;
+
+-- swarmguard
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15343;
+
+-- add scarabs
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15343, 20858, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15343, 20859, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15343, 20860, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15343, 20861, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15343, 20862, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15343, 20863, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15343, 20864, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15343, 20865, 1.7, 0, 1, 1, 0, 0, 0);
+-- idols
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15343, 20866, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15343, 20866, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15343, 20867, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15343, 20868, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15343, 20869, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15343, 20870, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15343, 20871, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15343, 20872, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15343, 20873, 0.4, 0, 1, 1, 0, 0, 0);
+
+-- gladiator
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15324;
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15324, 20858, 1.7, 0, 1, 1, 0, 0, 0);                                                                                                                                                                                            
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15324, 20859, 1.7, 0, 1, 1, 0, 0, 0);                                                                                                                                                                                            
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15324, 20860, 1.7, 0, 1, 1, 0, 0, 0);                                                                                                                                                                                            
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15324, 20861, 1.7, 0, 1, 1, 0, 0, 0);                                                                                                                                                                                            
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15324, 20862, 1.7, 0, 1, 1, 0, 0, 0);                                                                                                                                                                                            
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15324, 20863, 1.7, 0, 1, 1, 0, 0, 0);                                                                                                                                                                                            
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15324, 20864, 1.7, 0, 1, 1, 0, 0, 0);                                                                                                                                                                                            
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15324, 20865, 1.7, 0, 1, 1, 0, 0, 0);   
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15324, 20866, 0.4, 0, 1, 1, 0, 0, 0);                                                                                                                                                                                            
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15324, 20867, 0.4, 0, 1, 1, 0, 0, 0);                                                                                                                                                                                            
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15324, 20868, 0.4, 0, 1, 1, 0, 0, 0);                                                                                                                                                                                            
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15324, 20869, 0.4, 0, 1, 1, 0, 0, 0);                                                                                                                                                                                            
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15324, 20870, 0.4, 0, 1, 1, 0, 0, 0);                                                                                                                                                                                            
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15324, 20871, 0.4, 0, 1, 1, 0, 0, 0);                                                                                                                                                                                            
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15324, 20872, 0.4, 0, 1, 1, 0, 0, 0);                                                                                                                                                                                            
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15324, 20873, 0.4, 0, 1, 1, 0, 0, 0);    
+
+
+-- hive'zara stinger
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15327;
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15327, 20858, 1.7, 0, 1, 1, 0, 0, 0);                                                                                                                                                                                            
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15327, 20859, 1.7, 0, 1, 1, 0, 0, 0);                                                                                                                                                                                            
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15327, 20860, 1.7, 0, 1, 1, 0, 0, 0);                                                                                                                                                                                            
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15327, 20861, 1.7, 0, 1, 1, 0, 0, 0);                                                                                                                                                                                            
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15327, 20862, 1.7, 0, 1, 1, 0, 0, 0);                                                                                                                                                                                            
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15327, 20863, 1.7, 0, 1, 1, 0, 0, 0);                                                                                                                                                                                            
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15327, 20864, 1.7, 0, 1, 1, 0, 0, 0);                                                                                                                                                                                            
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15327, 20865, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15327, 20866, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15327, 20867, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15327, 20868, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15327, 20869, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15327, 20870, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15327, 20871, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15327, 20872, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15327, 20873, 0.4, 0, 1, 1, 0, 0, 0);
+
+
+-- hive zara wasp
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15325;
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15325, 20858, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15325, 20859, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15325, 20860, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15325, 20861, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15325, 20862, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15325, 20863, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15325, 20864, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15325, 20865, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15325, 20866, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15325, 20867, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15325, 20868, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15325, 20869, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15325, 20870, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15325, 20871, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15325, 20872, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15325, 20873, 0.4, 0, 1, 1, 0, 0, 0);
+
+-- qiraji warrior
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15387;
+UPDATE `zp_mangosd`.`creature_template` SET `lootid`=0 WHERE  `entry`=15387;
+
+-- qiraji needler
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15344;
+UPDATE `zp_mangosd`.`creature_template` SET `lootid`=0 WHERE  `entry`=15344;
+
+-- obsidian destroyer
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15338;
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15338, 20858, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15338, 20859, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15338, 20860, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15338, 20861, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15338, 20862, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15338, 20863, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15338, 20864, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15338, 20865, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15338, 20866, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15338, 20867, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15338, 20868, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15338, 20869, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15338, 20870, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15338, 20871, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15338, 20872, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15338, 20873, 0.4, 0, 1, 1, 0, 0, 0);
+
+-- spitting scarab
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15462;
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15462, 20858, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15462, 20859, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15462, 20860, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15462, 20861, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15462, 20862, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15462, 20863, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15462, 20864, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15462, 20865, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15462, 20866, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15462, 20867, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15462, 20868, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15462, 20869, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15462, 20870, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15462, 20871, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15462, 20872, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15462, 20873, 0.2, 0, 1, 1, 0, 0, 0);
+
+-- shrieking scarab
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15461;
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15461, 20858, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15461, 20859, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15461, 20860, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15461, 20861, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15461, 20862, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15461, 20863, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15461, 20864, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15461, 20865, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15461, 20866, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15461, 20867, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15461, 20868, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15461, 20869, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15461, 20870, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15461, 20871, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15461, 20872, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15461, 20873, 0.2, 0, 1, 1, 0, 0, 0);
+
+-- flesh hunter
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15335;
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15335, 20858, 2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15335, 20859, 2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15335, 20860, 2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15335, 20861, 2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15335, 20862, 2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15335, 20863, 2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15335, 20864, 2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15335, 20865, 2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15335, 20866, 0.6, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15335, 20867, 0.6, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15335, 20868, 0.6, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15335, 20869, 0.6, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15335, 20870, 0.6, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15335, 20871, 0.6, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15335, 20872, 0.6, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15335, 20873, 0.6, 0, 1, 1, 0, 0, 0);
+
+-- silicate feeder
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15333;
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15333, 20858, 0.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15333, 20859, 0.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15333, 20860, 0.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15333, 20861, 0.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15333, 20862, 0.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15333, 20863, 0.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15333, 20864, 0.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15333, 20865, 0.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15333, 20866, 0.1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15333, 20867, 0.1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15333, 20868, 0.1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15333, 20869, 0.1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15333, 20870, 0.1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15333, 20871, 0.1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15333, 20872, 0.1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15333, 20873, 0.1, 0, 1, 1, 0, 0, 0);
+
+-- hive'zara larva
+UPDATE `zp_mangosd`.`creature_template` SET `mingold`=0, `maxgold`=0 WHERE  `entry`=15555;
+
+-- hive'zara soldier
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15320;
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15320, 20858, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15320, 20859, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15320, 20860, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15320, 20861, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15320, 20862, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15320, 20863, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15320, 20864, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15320, 20865, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15320, 20866, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15320, 20867, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15320, 20868, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15320, 20869, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15320, 20870, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15320, 20871, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15320, 20872, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15320, 20873, 0.4, 0, 1, 1, 0, 0, 0);
+
+-- zara sandstalker
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15323;
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15323, 20858, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15323, 20859, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15323, 20860, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15323, 20861, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15323, 20862, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15323, 20863, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15323, 20864, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15323, 20865, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15323, 20866, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15323, 20867, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15323, 20868, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15323, 20869, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15323, 20870, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15323, 20871, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15323, 20872, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15323, 20873, 0.4, 0, 1, 1, 0, 0, 0);
+
+-- collector
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15319;
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15319, 20858, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15319, 20859, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15319, 20860, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15319, 20861, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15319, 20862, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15319, 20863, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15319, 20864, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15319, 20865, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15319, 20866, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15319, 20867, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15319, 20868, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15319, 20869, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15319, 20870, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15319, 20871, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15319, 20872, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15319, 20873, 0.2, 0, 1, 1, 0, 0, 0);
+
+-- drone
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15318;
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15318, 20858, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15318, 20859, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15318, 20860, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15318, 20861, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15318, 20862, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15318, 20863, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15318, 20864, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15318, 20865, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15318, 20866, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15318, 20867, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15318, 20868, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15318, 20869, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15318, 20870, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15318, 20871, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15318, 20872, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15318, 20873, 0.2, 0, 1, 1, 0, 0, 0);
+
+-- tail lasher
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15336;
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15336, 20858, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15336, 20859, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15336, 20860, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15336, 20861, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15336, 20862, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15336, 20863, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15336, 20864, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15336, 20865, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15336, 20866, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15336, 20867, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15336, 20868, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15336, 20869, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15336, 20870, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15336, 20871, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15336, 20872, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15336, 20873, 0.2, 0, 1, 1, 0, 0, 0);
+
+-- anubisat guardian
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15355;
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15355, 20858, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15355, 20859, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15355, 20860, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15355, 20861, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15355, 20862, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15355, 20863, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15355, 20864, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15355, 20865, 1.7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15355, 20866, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15355, 20867, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15355, 20868, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15355, 20869, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15355, 20870, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15355, 20871, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15355, 20872, 0.4, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15355, 20873, 0.4, 0, 1, 1, 0, 0, 0);
+
+-- canal frenzy
+UPDATE `zp_mangosd`.`creature_template` SET `lootid`=0 WHERE  `entry`=15505;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15505;
+
+-- rajaxx bosses
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15385;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15386;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15388;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15389;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15390;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15391;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15392;
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15385, 20858, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15385, 20859, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15385, 20860, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15385, 20861, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15385, 20862, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15385, 20863, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15385, 20864, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15385, 20865, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15385, 20866, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15385, 20867, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15385, 20868, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15385, 20869, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15385, 20870, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15385, 20871, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15385, 20872, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15385, 20873, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15386, 20858, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15386, 20859, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15386, 20860, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15386, 20861, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15386, 20862, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15386, 20863, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15386, 20864, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15386, 20865, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15386, 20866, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15386, 20867, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15386, 20868, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15386, 20869, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15386, 20870, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15386, 20871, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15386, 20872, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15386, 20873, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15388, 20858, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15388, 20859, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15388, 20860, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15388, 20861, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15388, 20862, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15388, 20863, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15388, 20864, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15388, 20865, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15388, 20866, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15388, 20867, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15388, 20868, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15388, 20869, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15388, 20870, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15388, 20871, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15388, 20872, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15388, 20873, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15389, 20858, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15389, 20859, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15389, 20860, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15389, 20861, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15389, 20862, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15389, 20863, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15389, 20864, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15389, 20865, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15389, 20866, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15389, 20867, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15389, 20868, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15389, 20869, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15389, 20870, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15389, 20871, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15389, 20872, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15389, 20873, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15390, 20858, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15390, 20859, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15390, 20860, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15390, 20861, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15390, 20862, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15390, 20863, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15390, 20864, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15390, 20865, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15390, 20866, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15390, 20867, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15390, 20868, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15390, 20869, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15390, 20870, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15390, 20871, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15390, 20872, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15390, 20873, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15391, 20858, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15391, 20859, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15391, 20860, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15391, 20861, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15391, 20862, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15391, 20863, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15391, 20864, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15391, 20865, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15391, 20866, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15391, 20867, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15391, 20868, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15391, 20869, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15391, 20870, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15391, 20871, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15391, 20872, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15391, 20873, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15392, 20858, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15392, 20859, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15392, 20860, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15392, 20861, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15392, 20862, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15392, 20863, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15392, 20864, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15392, 20865, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15392, 20866, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15392, 20867, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15392, 20868, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15392, 20869, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15392, 20870, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15392, 20871, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15392, 20872, 0.3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15392, 20873, 0.3, 0, 1, 1, 0, 0, 0);
+
+
+-- AQ40
+
+-- anubisath defender
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15264;
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 20858, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 20859, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 20860, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 20861, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 20862, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 20863, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 20864, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 20865, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 20874, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 20875, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 20876, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 20877, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 20878, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 20879, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 20880, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 20881, 0.25, 0, 1, 1, 0, 0, 0);
+
+-- eradicator
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15262;
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 20858, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 20859, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 20860, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 20861, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 20862, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 20863, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 20864, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 20865, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 20874, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 20875, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 20876, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 20877, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 20878, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 20879, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 20880, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 20881, 0.25, 0, 1, 1, 0, 0, 0);
+
+-- vekniss guardian
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15233;
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15233, 20858, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15233, 20859, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15233, 20860, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15233, 20861, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15233, 20862, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15233, 20863, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15233, 20864, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15233, 20865, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15233, 20874, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15233, 20875, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15233, 20876, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15233, 20877, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15233, 20878, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15233, 20879, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15233, 20880, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15233, 20881, 0.25, 0, 1, 1, 0, 0, 0);
+
+-- brainwasher
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15247;
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 20858, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 20859, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 20860, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 20861, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 20862, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 20863, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 20864, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 20865, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 20874, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 20875, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 20876, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 20877, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 20878, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 20879, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 20880, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 20881, 0.25, 0, 1, 1, 0, 0, 0);
+
+-- vekniss warrior
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15230;
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15230, 20858, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15230, 20859, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15230, 20860, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15230, 20861, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15230, 20862, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15230, 20863, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15230, 20864, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15230, 20865, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15230, 20874, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15230, 20875, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15230, 20876, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15230, 20877, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15230, 20878, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15230, 20879, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15230, 20880, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15230, 20881, 0.25, 0, 1, 1, 0, 0, 0);
+
+-- vekniss soldier
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15229;
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15229, 20858, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15229, 20859, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15229, 20860, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15229, 20861, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15229, 20862, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15229, 20863, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15229, 20864, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15229, 20865, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15229, 20874, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15229, 20875, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15229, 20876, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15229, 20877, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15229, 20878, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15229, 20879, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15229, 20880, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15229, 20881, 0.25, 0, 1, 1, 0, 0, 0);
+
+-- vekniss hive crawler
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15240;
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15240, 20858, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15240, 20859, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15240, 20860, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15240, 20861, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15240, 20862, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15240, 20863, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15240, 20864, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15240, 20865, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15240, 20874, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15240, 20875, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15240, 20876, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15240, 20877, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15240, 20878, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15240, 20879, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15240, 20880, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15240, 20881, 0.25, 0, 1, 1, 0, 0, 0);
+
+-- vekniss wasp
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15236;
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15236, 20858, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15236, 20859, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15236, 20860, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15236, 20861, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15236, 20862, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15236, 20863, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15236, 20864, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15236, 20865, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15236, 20874, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15236, 20875, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15236, 20876, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15236, 20877, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15236, 20878, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15236, 20879, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15236, 20880, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15236, 20881, 0.25, 0, 1, 1, 0, 0, 0);
+
+-- vekniss stinger
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15235;
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15235, 20858, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15235, 20859, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15235, 20860, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15235, 20861, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15235, 20862, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15235, 20863, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15235, 20864, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15235, 20865, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15235, 20874, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15235, 20875, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15235, 20876, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15235, 20877, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15235, 20878, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15235, 20879, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15235, 20880, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15235, 20881, 0.25, 0, 1, 1, 0, 0, 0);
+
+-- anubisath swarmguard no gold
+UPDATE `zp_mangosd`.`creature_template` SET `mingold`=0, `maxgold`=0 WHERE  `entry`=15538;
+
+-- anubisath defender
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15277;
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 20858, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 20859, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 20860, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 20861, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 20862, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 20863, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 20864, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 20865, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 20874, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 20875, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 20876, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 20877, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 20878, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 20879, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 20880, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 20881, 0.25, 0, 1, 1, 0, 0, 0);
+
+-- qiraji scarab no loot
+UPDATE `zp_mangosd`.`creature_template` SET `skinloot`=0 WHERE  `entry`=15316;
+
+-- qiraji slayer
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15250;
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 20858, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 20859, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 20860, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 20861, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 20862, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 20863, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 20864, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 20865, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 20874, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 20875, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 20876, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 20877, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 20878, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 20879, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 20880, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 20881, 0.25, 0, 1, 1, 0, 0, 0);
+
+-- qiraji lasher
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15249;
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 20858, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 20859, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 20860, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 20861, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 20862, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 20863, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 20864, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 20865, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 20874, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 20875, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 20876, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 20877, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 20878, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 20879, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 20880, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 20881, 0.25, 0, 1, 1, 0, 0, 0);
+
+-- qiraji champion
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15252;
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 20858, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 20859, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 20860, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 20861, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 20862, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 20863, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 20864, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 20865, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 20874, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 20875, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 20876, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 20877, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 20878, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 20879, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 20880, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 20881, 0.25, 0, 1, 1, 0, 0, 0);
+
+-- nullifier
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15312;
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 20858, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 20859, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 20860, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 20861, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 20862, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 20863, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 20864, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 20865, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 20874, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 20875, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 20876, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 20877, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 20878, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 20879, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 20880, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 20881, 0.25, 0, 1, 1, 0, 0, 0);
+
+-- anubisath warden
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15311;
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 20858, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 20859, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 20860, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 20861, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 20862, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 20863, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 20864, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 20865, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 20874, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 20875, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 20876, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 20877, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 20878, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 20879, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 20880, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 20881, 0.25, 0, 1, 1, 0, 0, 0);
+
+-- qiraji mindslayer
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15246;
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 20858, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 20859, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 20860, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 20861, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 20862, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 20863, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 20864, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 20865, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 20874, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 20875, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 20876, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 20877, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 20878, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 20879, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 20880, 0.25, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 20881, 0.25, 0, 1, 1, 0, 0, 0);
+
+-- ouro scarab no skinning
+UPDATE `zp_mangosd`.`creature_template` SET `skinloot`=0 WHERE  `entry`=15718;
+
+
+-- AQ40 mount drops
+
+-- aubisath Defender
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 21321, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 21323, 9, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 21324, 9, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 21218, 9, 0, 1, 1, 0, 0, 0);
+
+-- 15264 - anubisath sentinel beefn'
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 21321, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 21323, 9, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 21324, 9, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 21218, 9, 0, 1, 1, 0, 0, 0);
+
+-- 15311 - anubisath warder
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 21321, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 21323, 9, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 21324, 9, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 21218, 9, 0, 1, 1, 0, 0, 0);
+
+-- 15262 - obsidian eradicator beefn
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 21321, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 21323, 9, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 21324, 9, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 21218, 9, 0, 1, 1, 0, 0, 0);
+
+-- 15312 - obsidian nullifier beefn
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 21321, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 21323, 9, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 21324, 9, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 21218, 9, 0, 1, 1, 0, 0, 0);
+
+-- 15247 - brainwasher, halvnoob
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 21321, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 21323, 9, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 21324, 9, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 21218, 9, 0, 1, 1, 0, 0, 0);
+
+-- 15252 - qiraji champion
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 21321, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 21323, 9, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 21324, 9, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 21218, 9, 0, 1, 1, 0, 0, 0);
+
+-- 15249 - qiraji lasher
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 21321, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 21323, 9, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 21324, 9, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 21218, 9, 0, 1, 1, 0, 0, 0);
+
+-- 15246 - qiraji mindslayer
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 21321, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 21323, 9, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 21324, 9, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 21218, 9, 0, 1, 1, 0, 0, 0);
+
+-- 15250 - qiraji slayer
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 21321, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 21323, 9, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 21324, 9, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 21218, 9, 0, 1, 1, 0, 0, 0);
+
+
+-- AQ20 captain blue zone drop
+
+-- qeez, tuubid, drenn, xurrem
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15391, 21806, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15391, 21809, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15391, 21810, 1, 0, 1, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15392, 21806, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15392, 21809, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15392, 21810, 1, 0, 1, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15389, 21806, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15389, 21809, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15389, 21810, 1, 0, 1, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15390, 21806, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15390, 21809, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15390, 21810, 1, 0, 1, 1, 0, 0, 0);
+
+-- yeggeth, pakkon
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15386, 21806, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15386, 21809, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15386, 21810, 1.5, 0, 1, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15388, 21806, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15388, 21809, 1.5, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15388, 21810, 1.5, 0, 1, 1, 0, 0, 0);
+
+-- zerran
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15385, 21806, 3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15385, 21809, 3, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15385, 21810, 3, 0, 1, 1, 0, 0, 0);
+
+-- add aq20 reference pool zone drops
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (218000, 21800, 0, 8, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (218000, 21801, 0, 8, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (218000, 21802, 0, 8, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (218000, 21803, 0, 8, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (218000, 21804, 0, 8, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (218000, 21805, 0, 8, 1, 1, 0, 0, 0);
+
+-- add blue pool to aq20 mobs
+/*
+anubisath guardian
+qeez
+zerran
+collector
+sandstalker
+stinger
+pakkon
+destrojer
+qiraju swarmguard
+silicate feeder
+drenn
+xurrem
+flesh hunter
+drone
+soldier
+wasp
+yeggeth
+gladiator
+shrieker scarab
+spitting scarab
+*/
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15355, 218000, 0.03, 0, -218000, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15391, 218000, 0.03, 0, -218000, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15385, 218000, 0.03, 0, -218000, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15319, 218000, 0.03, 0, -218000, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15323, 218000, 0.03, 0, -218000, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15327, 218000, 0.03, 0, -218000, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15388, 218000, 0.03, 0, -218000, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15338, 218000, 0.03, 0, -218000, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15343, 218000, 0.03, 0, -218000, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15333, 218000, 0.03, 0, -218000, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15389, 218000, 0.03, 0, -218000, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15390, 218000, 0.03, 0, -218000, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15335, 218000, 0.03, 0, -218000, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15318, 218000, 0.03, 0, -218000, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15320, 218000, 0.03, 0, -218000, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15325, 218000, 0.03, 0, -218000, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15386, 218000, 0.03, 0, -218000, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15324, 218000, 0.03, 0, -218000, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15462, 218000, 0.03, 0, -218000, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15461, 218000, 0.03, 0, -218000, 1, 0, 0, 0);
+
+-- AQ40 add epic zone drops
+-- shard of the fallen star
+/* anubisath defender
+anubisath warder 
+obsidian nullifier
+qiraji mindslayer
+qiraji champion
+vekniss hive crawler */
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 21891, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 21891, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 21891, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 21891, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 21891, 0.2, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15240, 21891, 0.2, 0, 1, 1, 0, 0, 0);
+
+-- epic zone drops, add loot template
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (218360, 21836, 0, 7, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (218360, 21837, 0, 7, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (218360, 21838, 0, 7, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (218360, 21856, 0, 7, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (218360, 21888, 0, 7, 1, 1, 0, 0, 0);
+
+/*
+anubisath sentinel
+wiraji brainwasher
+qiraji slayer
+vekniss soldier
+vekniss warrior
+obsidian eradicator
+qiraji lasher
+vekniss guardian
+vekniss stinger
+vekniss wasp
+*/
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 218360, 0.1, 0, -218360, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 218360, 0.1, 0, -218360, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 218360, 0.1, 0, -218360, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15229, 218360, 0.1, 0, -218360, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15230, 218360, 0.1, 0, -218360, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 218360, 0.1, 0, -218360, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 218360, 0.1, 0, -218360, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15233, 218360, 0.1, 0, -218360, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15235, 218360, 0.1, 0, -218360, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15236, 218360, 0.1, 0, -218360, 1, 0, 0, 0);
+
+-- Keys AQ20 21761
+/*
+15391 - captain queez
+15392 - captain tuubid
+15389 - captain drenn
+15390 - captain xurrem
+15386 - major yeggeth
+15388 - major pakkon
+15385 - colonel zerran
+15343 - qiraji swarmguard
+15324 - qiraji gladiator
+15338 - obsidian destroyer
+15355 - anubisath guardian
+*/
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15391, 21761, 7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15392, 21761, 7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15389, 21761, 7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15390, 21761, 7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15386, 21761, 7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15388, 21761, 7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15385, 21761, 7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15343, 21761, 7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15324, 21761, 7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15338, 21761, 7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15355, 21761, 7, 0, 1, 1, 0, 0, 0);
+
+-- Keys AQ40 21762
+/*
+15264 - anubisath sentinel beefn'
+15262 - obsidian eradicator beefn
+15247 - qiraji brainwasher, halvnoob?
+15277 - anubisath defender beefn'
+15250 - qiraji slayer
+15249 - qiraji lasher
+15252 - qiraji champion
+15312 - obsidian nullifier beefn'
+15311 - anubisath warder
+15246 - qiraji mindslayer
+*/
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 21762, 7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 21762, 7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 21762, 7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 21762, 7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 21762, 7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 21762, 7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 21762, 7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 21762, 7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 21762, 7, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 21762, 7, 0, 1, 1, 0, 0, 0);
+
+-- AQ20 and 40 keys shouldn't be bound to map, revert old fix
+UPDATE `zp_mangosd`.`item_template` SET `Map`=0 WHERE  `entry`=21761;
+UPDATE `zp_mangosd`.`item_template` SET `Map`=0 WHERE  `entry`=21762;
+
+-- AQ40 artifact drops 21230
+/*
+15264 - anubisath sentinel beefn'
+15262 - obsidian eradicator beefn
+15233 - vekniss guardian noob?
+15247 - qiraji brainwasher, halvnoob?
+15230 - vekniss warrior
+15229 - vekniss soldier
+15240 - vekniss hive crawler
+15236 - vekniss wasp
+15235 - vekniss stinger
+15277 - anubisath defender beefn'
+15250 - qiraji slayer
+15249 - qiraji lasher
+15252 - qiraji champion
+15312 - obsidian nullifier beefn'
+15311 - anubisath warder
+15246 - qiraji mindslayer
+*/
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 21230, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 21230, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15233, 21230, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 21230, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15230, 21230, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15229, 21230, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15240, 21230, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15236, 21230, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15235, 21230, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 21230, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 21230, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 21230, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 21230, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 21230, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 21230, 1, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 21230, 1, 0, 1, 1, 0, 0, 0);
+
+-- AQ20 vile scarab loot and remove rep
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15168;
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15168, 21222, 30, 0, 1, 1, 0, 0, 0);
+DELETE FROM `zp_mangosd`.`creature_onkill_reputation` WHERE  `creature_id`=15168;
+
+-- add armored chitin 21222 40% drop 1-2
+/*
+15343 - swarmguard
+15324 - gladiator
+15327 - hive'zara stinger
+15325 - hive'zara wasp
+15462 - spitting scarab - lägre, 1 och 0.2
+15461 - shrieker scarab - lägre, 1 och 0.2
+15320 - hive'zara soldier
+15323 - hive'zara sandstalker
+15319 - hive'zara collector - lägre, 1 och 0.2
+15318 - hive'zara drone - lägre, 1 och 0.2
+15336 - hive'zara tail lasher - lägre, 1 och 0.2
+
+15391 - qeez
+15392 - tuubid
+15390 - xurrem
+15388 - pakkon
+15385 - zerran
+15386 - yeggeth
+15389 - drenn
+
+15233 - vekniss guardian noob?
+15247 - brainwasher, halvnoob?
+15230 - vekniss warrior
+15229 - vekniss soldier
+15240 - vekniss hive crawler
+15236 - vekniss wasp
+15235 - vekniss stinger
+15250 - qiraji slayer
+15249 - qiraji lasher
+15252 - qiraji champion
+15246 - qiraji mindslayer
+*/
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15343, 21222, 40, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15324, 21222, 40, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15327, 21222, 40, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15325, 21222, 40, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15462, 21222, 40, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15461, 21222, 40, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15320, 21222, 40, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15323, 21222, 40, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15319, 21222, 40, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15318, 21222, 40, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15336, 21222, 40, 0, 1, 2, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15391, 21222, 40, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15392, 21222, 40, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15390, 21222, 40, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15388, 21222, 40, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15385, 21222, 40, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15386, 21222, 40, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15389, 21222, 40, 0, 1, 2, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15233, 21222, 40, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 21222, 40, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15230, 21222, 40, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15229, 21222, 40, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15240, 21222, 40, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15236, 21222, 40, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15235, 21222, 40, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 21222, 40, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 21222, 40, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 21222, 40, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 21222, 40, 0, 1, 2, 0, 0, 0);
+
+-- aq ancient armor fragment 21224
+/*
+15391 - qeez
+15392 - tuubid
+15390 - xurrem
+15388 - pakkon
+15385 - zerran
+15386 - yeggeth
+15389 - drenn
+
+15247 - qiraji brainwasher, halvnoob?
+15250 - qiraji slayer
+15249 - qiraji lasher
+15252 - qiraji champion
+15246 - qiraji mindslayer
+15343 - qiraji swarmguard
+15324 - qiraji gladiator
+*/
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15391, 21224, 30, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15392, 21224, 30, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15390, 21224, 30, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15388, 21224, 30, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15385, 21224, 30, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15386, 21224, 30, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15389, 21224, 30, 0, 1, 2, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 21224, 30, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 21224, 30, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 21224, 30, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 21224, 30, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 21224, 30, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15343, 21224, 30, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15324, 21224, 30, 0, 1, 2, 0, 0, 0);
+
+-- heavy silithid husk 21225
+/*
+15327 - hive'zara stinger
+15325 - hive'zara wasp
+15320 - hive'zara soldier
+15323 - hive'zara sandstalker
+15319 - hive'zara collector
+15318 - hive'zara drone
+
+15233 - vekniss guardian noob?
+15230 - vekniss warrior
+15229 - vekniss soldier
+15236 - vekniss wasp
+15235 - vekniss stinger
+*/
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15327, 21225, 30, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15325, 21225, 30, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15320, 21225, 30, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15323, 21225, 30, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15319, 21225, 30, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15318, 21225, 30, 0, 1, 2, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15233, 21225, 30, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15230, 21225, 30, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15229, 21225, 30, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15236, 21225, 30, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15235, 21225, 30, 0, 1, 2, 0, 0, 0);
+
+-- black stone 21223
+/*
+15338 - obsidian destroyer
+15355 - anubisath guardian
+
+15264 - anubisath sentinel beefn'
+15262 - obsidian eradicator beefn
+15277 - anubisath defender beefn'
+15312 - obsidian nullifier beefn'
+15311 - anubisath warder
+*/
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15338, 21223, 50, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15355, 21223, 50, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 21223, 50, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 21223, 50, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 21223, 50, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 21223, 50, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 21223, 50, 0, 1, 2, 0, 0, 0);
+
+-- add huge venom sack 19441
+/*
+15462 - spitting scarab
+15461 - shrieker scarab
+15168 - vile scarab
+15240 - vekniss hive crawler
+15336 -hive'zara tail lasher
+*/
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15462, 19441, 15, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15461, 19441, 15, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15168, 19441, 15, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15240, 19441, 15, 0, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15336, 19441, 15, 0, 1, 1, 0, 0, 0);
+
+-- flesh hunter add hero skull, random grey pool and oozing bag
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15335, 21227, 12, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15335, 24024, 15, 0, -24024, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15335, 20768, 12, 0, 1, 1, 0, 0, 0);
+
+-- silicate feeder add larval acid and lower chance in epl
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15333, 18512, 5, 0, 1, 1, 0, 0, 0);
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=5.92 WHERE  `entry`=8605 AND `item`=18512;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=3.75 WHERE  `entry`=8603 AND `item`=18512;
+
+-- runic stone 21226 
+/*
+15355 - anubisath guardian
+15264 - anubisath sentinel
+15277 - anubisath defender
+15311 - anubisath warder
+*/
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15355, 21226, 20, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 21226, 20, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 21226, 20, 0, 1, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 21226, 20, 0, 1, 2, 0, 0, 0);
+
+-- Random drops from all mobs
+-- epic pooler 24089 24090 0.01%
+-- blåa pooler 24019 24017 0.02%
+-- gröna pooler 24016 24018 24020 0.02%
+
+-- AQ20
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15343, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15343, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15343, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15343, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15343, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15343, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15343, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15324, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15324, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15324, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15324, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15324, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15324, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15324, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15327, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15327, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15327, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15327, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15327, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15327, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15327, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15325, 24016, 0.02, 0, -24016, 1, 0, 0, 0);                                                                                 
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15325, 24017, 0.02, 0, -24017, 1, 0, 0, 0);                                                                                 
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15325, 24018, 0.02, 0, -24018, 1, 0, 0, 0);                                                                                 
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15325, 24019, 0.02, 0, -24019, 1, 0, 0, 0);                                                                                                                                                                              
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15325, 24020, 0.02, 0, -24020, 1, 0, 0, 0);                                                                                                                                                                              
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15325, 24089, 0.01, 0, -24089, 1, 0, 0, 0);                                                                                                                                                                              
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15325, 24090, 0.01, 0, -24090, 1, 0, 0, 0);  
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15338, 24016, 0.02, 0, -24016, 1, 0, 0, 0);                                                                                                                                                                              
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15338, 24017, 0.02, 0, -24017, 1, 0, 0, 0);                                                                                                                                                                              
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15338, 24018, 0.02, 0, -24018, 1, 0, 0, 0);                                                                                                                                                                              
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15338, 24019, 0.02, 0, -24019, 1, 0, 0, 0);                                                                                                                                                                              
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15338, 24020, 0.02, 0, -24020, 1, 0, 0, 0);                                                                                                                                                                              
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15338, 24089, 0.01, 0, -24089, 1, 0, 0, 0);                                                                                                                                                                              
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15338, 24090, 0.01, 0, -24090, 1, 0, 0, 0); 
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15462, 24016, 0.02, 0, -24016, 1, 0, 0, 0);                                                                                                                                                                              
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15462, 24017, 0.02, 0, -24017, 1, 0, 0, 0);                                                                                                                                                                              
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15462, 24018, 0.02, 0, -24018, 1, 0, 0, 0);                                                                                                                                                                              
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15462, 24019, 0.02, 0, -24019, 1, 0, 0, 0);                                                                                                                                                                              
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15462, 24020, 0.02, 0, -24020, 1, 0, 0, 0);                                                                                                                                                                              
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15462, 24089, 0.01, 0, -24089, 1, 0, 0, 0);                                                                                                                                                                              
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15462, 24090, 0.01, 0, -24090, 1, 0, 0, 0); 
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15461, 24016, 0.02, 0, -24016, 1, 0, 0, 0);                                                                                                                                                                              
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15461, 24017, 0.02, 0, -24017, 1, 0, 0, 0);                                                                                                                                                                              
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15461, 24018, 0.02, 0, -24018, 1, 0, 0, 0);                                                                                                                                                                              
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15461, 24019, 0.02, 0, -24019, 1, 0, 0, 0);                                                                                                                                                                              
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15461, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15461, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15461, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15335, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15335, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15335, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15335, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15335, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15335, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15335, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15333, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15333, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15333, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15333, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15333, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15333, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15333, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15320, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15320, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15320, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15320, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15320, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15320, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15320, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15323, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15323, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15323, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15323, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15323, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15323, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15323, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15319, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15319, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15319, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15319, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15319, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15319, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15319, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15318, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15318, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15318, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15318, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15318, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15318, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15318, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15336, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15336, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15336, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15336, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15336, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15336, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15336, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15355, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15355, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15355, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15355, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15355, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15355, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15355, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15391, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15391, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15391, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15391, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15391, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15391, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15391, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15392, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15392, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15392, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15392, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15392, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15392, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15392, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15390, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15390, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15390, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15390, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15390, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15390, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15390, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15388, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15388, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15388, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15388, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15388, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15388, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15388, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15385, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15385, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15385, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15385, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15385, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15385, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15385, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15386, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15386, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15386, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15386, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15386, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15386, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15386, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15389, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15389, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15389, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15389, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15389, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15389, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15389, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+-- AQ40
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15264, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15262, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15233, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15233, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15233, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15233, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15233, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15233, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15233, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15247, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15230, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15230, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15230, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15230, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15230, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15230, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15230, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15229, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15229, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15229, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15229, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15229, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15229, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15229, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15240, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15240, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15240, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15240, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15240, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15240, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15240, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15236, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15236, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15236, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15236, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15236, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15236, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15236, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15235, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15235, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15235, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15235, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15235, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15235, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15235, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15277, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15250, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15249, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15252, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15312, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 24016, 0.02, 0, -24016, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 24017, 0.02, 0, -24017, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 24018, 0.02, 0, -24018, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 24019, 0.02, 0, -24019, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 24020, 0.02, 0, -24020, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 24089, 0.01, 0, -24089, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15246, 24090, 0.01, 0, -24090, 1, 0, 0, 0);
+
+-- AQ40 Enchants
+-- Twins
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15276, 20735, 4, 8, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15275, 20726, 4, 8, 1, 1, 0, 0, 0);
+
+-- reference for all enchants
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (207270, 20727, 0, 6, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (207270, 20734, 0, 6, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (207270, 20728, 0, 6, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (207270, 20736, 0, 6, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (207270, 20730, 0, 6, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (207270, 20731, 0, 6, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (207270, 20729, 0, 6, 1, 1, 0, 0, 0);
+
+-- AQ40 enchants
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15263, 207270, 1, 8, -207270, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15511, 207270, 1, 8, -207270, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15543, 207270, 1, 8, -207270, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15544, 207270, 1, 8, -207270, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15516, 207270, 1, 8, -207270, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15510, 207270, 1, 8, -207270, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15299, 207270, 1, 8, -207270, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15509, 207270, 1, 8, -207270, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15517, 207270, 1, 8, -207270, 1, 0, 0, 0);
+
+-- AQ20
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15348, 207270, 0.5, 8, -207270, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15341, 207270, 0.5, 8, -207270, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15340, 207270, 0.5, 8, -207270, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15370, 207270, 0.5, 8, -207270, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15369, 207270, 0.5, 8, -207270, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15339, 207270, 0.5, 8, -207270, 1, 0, 0, 0);
+
+-- Main Pool for books
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (212940, 21294, 0, 5, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (212940, 21295, 0, 5, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (212940, 21296, 0, 5, 1, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (212940, 21304, 0, 5, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (212940, 21306, 0, 5, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (212940, 21307, 0, 5, 1, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (212940, 21214, 0, 5, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (212940, 21279, 0, 5, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (212940, 21280, 0, 5, 1, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (212940, 21288, 0, 5, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (212940, 21289, 0, 5, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (212940, 21290, 0, 5, 1, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (212940, 21284, 0, 5, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (212940, 21285, 0, 5, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (212940, 21287, 0, 5, 1, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (212940, 21300, 0, 5, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (212940, 21302, 0, 5, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (212940, 21303, 0, 5, 1, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (212940, 21291, 0, 5, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (212940, 21292, 0, 5, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (212940, 21293, 0, 5, 1, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (212940, 21281, 0, 5, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (212940, 21282, 0, 5, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (212940, 21283, 0, 5, 1, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (212940, 21297, 0, 5, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (212940, 21298, 0, 5, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (212940, 21299, 0, 5, 1, 1, 0, 0, 0);
+
+-- add book drops to bosses
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15348, 212940, 100, 7, -212940, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15341, 212940, 100, 7, -212940, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15340, 212940, 100, 7, -212940, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15370, 212940, 100, 7, -212940, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15369, 212940, 100, 7, -212940, 2, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15339, 212940, 100, 7, -212940, 3, 0, 0, 0);
+
+-- AQ20 boss loot
+
+-- Boss loot Kurinnaxx 22217 q item
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15348, 22217, -100, 9, 1, 1, 0, 0, 0);
+-- boss loot
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15348, 20884, 10, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15348, 20885, 40, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15348, 20888, 10, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15348, 20889, 40, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15348, 21498, 10, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15348, 21499, 10, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15348, 21500, 20, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15348, 21501, 20, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15348, 21502, 20, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15348, 21503, 20, 1, 1, 1, 0, 0, 0);
+
+-- rajaxx
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15341, 20884, 10, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15341, 20885, 40, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15341, 20888, 10, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15341, 20889, 40, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15341, 21492, 10, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15341, 21493, 10, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15341, 21494, 20, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15341, 21495, 20, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15341, 21496, 20, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15341, 21497, 20, 1, 1, 1, 0, 0, 0);
+
+-- moam
+-- BS plans
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15340, 22220, 10, 0, 1, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15340, 20884, 10, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15340, 20886, 40, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15340, 20888, 10, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15340, 20890, 40, 1, 1, 1, 0, 0, 0);
+
+-- reference loot template for loot
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (208840, 21472, 5, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (208840, 21479, 5, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (208840, 21471, 5, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (208840, 21467, 5, 1, 1, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (208840, 21477, 10, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (208840, 21476, 10, 1, 1, 1, 6, 67, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (208840, 21475, 10, 1, 1, 1, 6, 469, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (208840, 21474, 10, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (208840, 21473, 10, 1, 1, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (208840, 21470, 10, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (208840, 21469, 10, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (208840, 21468, 10, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (208840, 21455, 10, 1, 1, 1, 0, 0, 0);
+
+-- add loot
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15340, 208840, 100, 2, -208840, 2, 0, 0, 0);
+
+-- update group ids
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=2 WHERE  `entry`=15340 AND `item`=20884;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=2 WHERE  `entry`=15340 AND `item`=20886;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=2 WHERE  `entry`=15340 AND `item`=20888;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=2 WHERE  `entry`=15340 AND `item`=20890;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=1 WHERE  `entry`=15340 AND `item`=208840;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=9 WHERE  `entry`=15340 AND `item`=22220;
+
+-- Buru
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15370, 20884, 30, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15370, 20885, 10, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15370, 20886, 10, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15370, 20888, 30, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15370, 20889, 10, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15370, 20890, 10, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15370, 21485, 10, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15370, 21486, 10, 1, 1, 1, 6, 469, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15370, 21487, 10, 1, 1, 1, 6, 67, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15370, 21488, 20, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15370, 21489, 20, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15370, 21490, 20, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15370, 21491, 20, 1, 1, 1, 0, 0, 0);
+
+-- ayamiss
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15369, 20884, 30, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15369, 20885, 10, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15369, 20886, 10, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15369, 20888, 30, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15369, 20889, 10, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15369, 20890, 10, 2, 1, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15369, 21466, 6, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15369, 21478, 7, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15369, 21479, 7, 1, 1, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15369, 21480, 20, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15369, 21481, 20, 1, 1, 1, 6, 469, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15369, 21482, 20, 1, 1, 1, 6, 67, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15369, 21483, 20, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15369, 21484, 20, 1, 1, 1, 0, 0, 0);
+
+-- Ossirian
+-- new pool for drops
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (214520, 21452, 4, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (214520, 21453, 10, 1, 1, 1, 6, 469, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (214520, 21454, 10, 1, 1, 1, 6, 67, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (214520, 21456, 10, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (214520, 21457, 10, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (214520, 21458, 10, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (214520, 21459, 3, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (214520, 21460, 10, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (214520, 21461, 10, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (214520, 21462, 10, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (214520, 21463, 10, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (214520, 21464, 10, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (214520, 21715, 3, 1, 1, 1, 0, 0, 0);
+
+-- loot
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15339, 214520, 100, 1, -214520, 2, 0, 0, 0);
+
+-- hilt and rings
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15339, 20884, 10, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15339, 20888, 10, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15339, 20886, 40, 2, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15339, 20890, 40, 2, 1, 1, 0, 0, 0);
+
+-- add head
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15339, 21220, 100, 3, 1, 1, 0, 0, 0);
+
+-- remove some gold from rajaxx event mobs
+UPDATE `zp_mangosd`.`creature_template` SET `mingold`=0, `maxgold`=0 WHERE  `entry`=15387;
+UPDATE `zp_mangosd`.`creature_template` SET `mingold`=0, `maxgold`=0 WHERE  `entry`=15344;
+
+-- Loot for AQ40 bosses
+
+-- q item should drop last
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=9 WHERE `item`=21229;
+
+-- 15263 Skeram
+-- update pool 
+UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=9.4 WHERE  `entry`=34046;
+-- lower for weapons
+UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=3 WHERE  `entry`=34046 AND `item`=21128;
+UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=3 WHERE  `entry`=34046 AND `item`=21703;
+
+-- pool shaman/paladin
+UPDATE `zp_mangosd`.`reference_loot_template` SET `lootcondition`=6, `condition_value1`=469 WHERE  `entry`=34046 AND `item`=21704;
+UPDATE `zp_mangosd`.`reference_loot_template` SET `lootcondition`=6, `condition_value1`=67 WHERE  `entry`=34046 AND `item`=21705;
+
+-- pattern drop
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=10, `groupid`=7 WHERE  `entry`=15263 AND `item`=22222;
+
+-- remove old loot
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15263 AND `item`=34045;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15263 AND `item`=190045;
+
+-- gold drop
+UPDATE `zp_mangosd`.`creature_template` SET `mingold`=450000, `maxgold`=550000 WHERE  `entry`=15263;
+
+-- 15516 sartura
+UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=9.4 WHERE  `entry`=34047;
+-- lower for weapons
+UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=3 WHERE  `entry`=34047 AND `item`=21673;
+UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=3 WHERE  `entry`=34047 AND `item`=21666;
+
+-- paladin/shaman
+UPDATE `zp_mangosd`.`reference_loot_template` SET `lootcondition`=6, `condition_value1`=469 WHERE  `entry`=34047 AND `item`=21667;
+UPDATE `zp_mangosd`.`reference_loot_template` SET `lootcondition`=6, `condition_value1`=67 WHERE  `entry`=34047 AND `item`=21668;
+
+-- delete old
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15516 AND `item`=34045;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15516 AND `item`=190045;
+
+-- 15510 Fankriss
+UPDATE `zp_mangosd`.`reference_loot_template` SET `lootcondition`=6, `condition_value1`=67 WHERE  `entry`=34048 AND `item`=22396;
+UPDATE `zp_mangosd`.`reference_loot_template` SET `lootcondition`=6, `condition_value1`=469 WHERE  `entry`=34048 AND `item`=22402;
+
+UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=10.1112 WHERE  `entry`=34048;
+UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=3 WHERE  `entry`=34048 AND `item`=22396;
+UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=3 WHERE  `entry`=34048 AND `item`=22402;
+UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=3 WHERE  `entry`=34048 AND `item`=21650;
+UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=3 WHERE  `entry`=34048 AND `item`=21635;
+
+-- delete old
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15510 AND `item`=34045;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15510 AND `item`=190045;
+
+-- 15509 hurhuran
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15509 AND `item`=34045;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15509 AND `item`=190045;
+
+-- loot drop chance
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=10 WHERE  `entry`=15509 AND `item`=21616;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=18 WHERE  `entry`=15509 AND `item`=21617;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=18 WHERE  `entry`=15509 AND `item`=21618;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=18 WHERE  `entry`=15509 AND `item`=21619;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=18 WHERE  `entry`=15509 AND `item`=21620;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=18 WHERE  `entry`=15509 AND `item`=21621;
+
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=2 WHERE  `entry`=15509 AND `item`=20928;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=3 WHERE  `entry`=15509 AND `item`=20932;
+
+-- 15276 Vek'lor
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=10 WHERE  `entry`=15276 AND `item`=21597;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=2 WHERE  `entry`=15276 AND `item`=20930;
+
+-- chance for loot
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=18 WHERE  `entry`=15276 AND `item`=21598;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=18 WHERE  `entry`=15276 AND `item`=21599;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=18 WHERE  `entry`=15276 AND `item`=21600;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=18 WHERE  `entry`=15276 AND `item`=21601;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=18 WHERE  `entry`=15276 AND `item`=21602;
+-- delete old
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15276 AND `item`=34045;
+
+-- 15275 vek'nilash
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=2 WHERE  `entry`=15275 AND `item`=20926;
+-- paladin / shaman
+UPDATE `zp_mangosd`.`creature_loot_template` SET `lootcondition`=6, `condition_value1`=469 WHERE  `entry`=15275 AND `item`=21606;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `lootcondition`=6, `condition_value1`=67 WHERE  `entry`=15275 AND `item`=21607;
+
+-- drop chances
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=18 WHERE  `entry`=15275 AND `item`=21604;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=18 WHERE  `entry`=15275 AND `item`=21605;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=18 WHERE  `entry`=15275 AND `item`=21606;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=18 WHERE  `entry`=15275 AND `item`=21607;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=18 WHERE  `entry`=15275 AND `item`=21608;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=10 WHERE  `entry`=15275 AND `item`=21679;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=18 WHERE  `entry`=15275 AND `item`=21609;
+
+-- delete old
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15275 AND `item`=34045;
+
+-- C'thun
+UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=10.1112 WHERE  `entry`=34049;
+UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=3 WHERE  `entry`=34049 AND `item`=21134;
+UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=3 WHERE  `entry`=34049 AND `item`=21126;
+UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=3 WHERE  `entry`=34049 AND `item`=21839;
+
+-- organize loot
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=1 WHERE  `entry`=15727 AND `item`=34049;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=2 WHERE  `entry`=15727 AND `item`=20929;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=3 WHERE  `entry`=15727 AND `item`=20933;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=4 WHERE  `entry`=15727 AND `item`=21221;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=5 WHERE  `entry`=15727 AND `item`=22734;
+
+-- viscidus
+-- remove old loot
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15299 AND `item`=34045;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15299 AND `item`=190045;
+
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=2 WHERE  `entry`=15299 AND `item`=20928;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=3 WHERE  `entry`=15299 AND `item`=20932;
+
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=10 WHERE  `entry`=15299 AND `item`=21622;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=18 WHERE  `entry`=15299 AND `item`=21623;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=18 WHERE  `entry`=15299 AND `item`=21624;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=18 WHERE  `entry`=15299 AND `item`=21625;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=18 WHERE  `entry`=15299 AND `item`=21626;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=18 WHERE  `entry`=15299 AND `item`=21677;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=18 WHERE  `entry`=15299 AND `item`=22399;
+
+-- paladin/shaman
+UPDATE `zp_mangosd`.`creature_loot_template` SET `lootcondition`=6, `condition_value1`=469 WHERE  `entry`=15299 AND `item`=21623;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `lootcondition`=6, `condition_value1`=67 WHERE  `entry`=15299 AND `item`=21624;
+
+-- Ouro
+-- remove old
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15517 AND `item`=34045;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15517 AND `item`=90045;
+
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=2 WHERE  `entry`=15517 AND `item`=20927;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=3 WHERE  `entry`=15517 AND `item`=20931;
+
+-- drop chances
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=16 WHERE  `entry`=15517 AND `item`=21610;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=16 WHERE  `entry`=15517 AND `item`=23557;
+
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=17 WHERE  `entry`=15517 AND `item`=21611;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=17 WHERE  `entry`=15517 AND `item`=21615;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=17 WHERE  `entry`=15517 AND `item`=23558;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=17 WHERE  `entry`=15517 AND `item`=23570;
+
+-- bug trio
+
+-- yauj
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15543 AND `item`=34045;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15543 AND `item`=190045;
+
+-- Paladin/shaman
+UPDATE `zp_mangosd`.`creature_loot_template` SET `lootcondition`=6, `condition_value1`=469 WHERE  `entry`=15543 AND `item`=21683;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `lootcondition`=6, `condition_value1`=67 WHERE  `entry`=15543 AND `item`=21684;
+
+-- vem
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15544 AND `item`=190045;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15544 AND `item`=34045;
+
+-- kri
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15511 AND `item`=190045;
+DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=15511 AND `item`=34045;
+
+-- imperial qiraji regalia and armaments 4% alla utom skeram 1%
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (212320, 21232, 0, 1, 1, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (212320, 21237, 0, 1, 1, 1, 0, 0, 0);
+
+-- add to bosses
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15263, 212320, 1, 6, -212320, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15516, 212320, 4, 6, -212320, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15510, 212320, 4, 6, -212320, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15509, 212320, 4, 6, -212320, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15276, 212320, 4, 6, -212320, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15275, 212320, 4, 6, -212320, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15299, 212320, 4, 6, -212320, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15517, 212320, 4, 6, -212320, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15543, 212320, 4, 6, -212320, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15544, 212320, 4, 6, -212320, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15511, 212320, 4, 6, -212320, 1, 0, 0, 0);
+
+-- Rep aq40
+-- c'thun cc and brood
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15727, 910, 609, 7, 0, 500, 7, 0, 500, 0);
+
+-- trash rep
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15264, 910, 0, 3, 0, 100, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15262, 910, 0, 3, 0, 100, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15230, 910, 0, 3, 0, 100, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15229, 910, 0, 3, 0, 100, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15240, 910, 0, 3, 0, 100, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15236, 910, 0, 3, 0, 100, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15235, 910, 0, 3, 0, 100, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15277, 910, 0, 3, 0, 100, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15249, 910, 0, 3, 0, 100, 0, 0, 0, 0);
+
+-- no rep from twins
+DELETE FROM `zp_mangosd`.`creature_onkill_reputation` WHERE  `creature_id`=15276;
+DELETE FROM `zp_mangosd`.`creature_onkill_reputation` WHERE  `creature_id`=15275;
+
+-- Quests
+-- mortal champions
+UPDATE `zp_mangosd`.`quest_template` SET `PrevQuestId`=8579 WHERE  `entry`=8595;
+REPLACE INTO `zp_mangosd`.`quest_template` VALUES (8579, 2, 3428, 60, 60, 62, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 256, 0, 0, 8595, 0, 0, 0, 0, 0, 'Mortal Champions', 'I see that you\'re no ordinary mortal, $n. Your chances against the Old God, however infinitely small, are greater than ours at this point. After all, while he expects dragons at his doorstep, he is not prepared for someone like you.$b$bJust as Anachronos and Staghelm defeated the Qiraji a thousand years ago through the alliance of mortal and dragon races, we too shall form a pact. Gain the trust of the Bronze Dragonflight and you\'ll gain our trust. Only then we shall make a true champion out of you.', 'Bring a Qiraji Lord\'s Insignia to Kandrostrasz.', 'I see that you\'re no ordinary mortal, $n. Your chances against the Old God, however infinitely small, are greater than ours at this point. After all, while he expects dragons at his doorstep, he is not prepared for someone like you.$b$bJust as Anachronos and Staghelm defeated the Qiraji a thousand years ago through the alliance of mortal and dragon races, we too shall form a pact. Gain the trust of the Bronze Dragonflight and you\'ll gain our trust. Only then we shall make a true champion out of you.', 'We sense the presence of our enslaved brethren deeper inside Ahn\'Qiraj; yet not even an army of dragons would be enough to rescue them, $r. The same spell that imprisoned them would place us firmly under C\'Thun\'s control should we come any closer to him. The Old God has foreseen our arrival.  All hope is lost.  What difference could a mere mortal like you possibly make?', '', '', '', '', '', 21229, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 910, 609, 0, 0, 0, 500, 100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_questrelation` VALUES (15503, 8579);
+REPLACE INTO `zp_mangosd`.`creature_involvedrelation` VALUES (15503, 8579);
+
+UPDATE `zp_mangosd`.`quest_template` SET `Details`='' WHERE  `entry`=8595;
+
+-- c'thun eye quest
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction2`=910, `RewRepValue2`=200 WHERE  `entry`=8802;
+REPLACE INTO `zp_mangosd`.`quest_template` VALUES (8801, 2, 3428, 60, 60, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 0, 0, 8802, 21221, 1, 0, 'C\'Thun\'s Legacy', 'The walls of Ahn\'Qiraj tremble. A force of evil, older than the world itself, has been destroyed.$B$BAs you look at the remnants of the colossal abomination your heart nearly freezes. Even in death you can feel the legacy of C\'Thun\'s evil around you.$B$BYou have done what was thought to be impossible.$B$BYou grab at an eye stalk of the fiend, stowing it safely in your pack.$B$BTake the Eye of C\'Thun to the dragons in the next chamber. ', 'Take the Eye of C\'Thun to Caelestrasz in the Temple of Ahn\'Qiraj.', 'We will leave this place on our own, $gLord:Lady; $N - once we are certain that the evil within has been wholly destroyed. Your journey of legend is almost at an end.', '$gLord:Lady; $N, you have freed us of its grasp.', '', '', '', '', '', 21221, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 609, 910, 0, 0, 0, 200, 200, 0, 0, 0, 0, 8580, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 68, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+UPDATE `zp_mangosd`.`quest_template` SET `RequestItemsText`='$gLord:Lady; $N! It is over...' WHERE  `entry`=8802;
+
+-- ossirian head quest
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepFaction2`=910 WHERE  `entry`=8791;
+UPDATE `zp_mangosd`.`quest_template` SET `CompleteScript`=8791 WHERE  `entry`=8791;
+
+REPLACE INTO `zp_mangosd`.`db_script_string` VALUES (2000006037, 'Soldiers of Kalimdor! Heroes of Silithus! One among you has dealt a vicious blow to our mortal enemies! $N and $ghis:her; allies have relieved the Ruins of Ahn\'Qiraj of its merciless leader! Ossirian the Unscarred, scourge of Silithus, has finally been destroyed and his armies wholly dismantled!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+-- delete old to run it again
+DELETE FROM `zp_mangosd`.`quest_end_scripts` WHERE  `id`=8791 LIMIT 5;
+REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (8791, 3, 1, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'The Fall of Ossirian - yell emote');
+REPLACE INTO `zp_mangosd`.`quest_end_scripts` VALUES (8791, 3, 0, 6, 0, 0, 0, 0, 2000006037, 0, 0, 0, 0, 0, 0, 0, 'The Fall of Ossirian - yell');
+
+-- armaments quests
+UPDATE `zp_mangosd`.`quest_template` SET  `RewRepFaction1`=910, `RewRepValue1`=200 WHERE  `entry`=8790;
+UPDATE `zp_mangosd`.`quest_template` SET  `RewRepFaction1`=910, `RewRepValue1`=200 WHERE  `entry`=8789;
+
+-- rep AQ20 class quests
+-- druid
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=100 WHERE  `entry`=8708;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=100 WHERE  `entry`=8700;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=100 WHERE  `entry`=8692;
+
+-- mage
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=100 WHERE  `entry`=8691;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=100 WHERE  `entry`=8707;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=100 WHERE  `entry`=8699;
+
+-- rogue
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=100 WHERE  `entry`=8709;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=100 WHERE  `entry`=8693;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=100 WHERE  `entry`=8701;
+
+-- paladin
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=100 WHERE  `entry`=8703;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=100 WHERE  `entry`=8711;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=100 WHERE  `entry`=8695;
+
+-- shaman
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=100 WHERE  `entry`=8698;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=100 WHERE  `entry`=8706;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=100 WHERE  `entry`=8690;
+
+
+-- hunter
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=100 WHERE  `entry`=8704;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=100 WHERE  `entry`=8712;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=100 WHERE  `entry`=8696;
+
+-- priest
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=100 WHERE  `entry`=8689;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=100 WHERE  `entry`=8697;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=100 WHERE  `entry`=8705;
+
+-- warlock
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=100 WHERE  `entry`=8694;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=100 WHERE  `entry`=8702;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=100 WHERE  `entry`=8710;
+
+-- warrior
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=100 WHERE  `entry`=8556;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=100 WHERE  `entry`=8558;
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=609, `RewRepValue1`=100 WHERE  `entry`=8557;
+
+-- AQ40 class quests
+-- paladin
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=910, `RewRepValue1`=200 WHERE  `Title` Like 'Avenger\'s%' Limit 5;
+
+-- warrior
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=910, `RewRepValue1`=200 WHERE  `Title` Like 'Conqueror\'s%' Limit 5;
+
+-- rogue
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=910, `RewRepValue1`=200 WHERE  `Title` Like 'Deathdealer\'s%' Limit 5;
+
+-- warlock
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=910, `RewRepValue1`=200 WHERE  `Title` Like 'Doomcaller\'s%' Limit 5;
+
+-- mage
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=910, `RewRepValue1`=200 WHERE  `Title` Like 'Enigma%' Limit 5;
+
+-- druid
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=910, `RewRepValue1`=200 WHERE  `Title` Like 'Genesis%' Limit 5;
+
+-- shaman
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=910, `RewRepValue1`=200 WHERE  `Title` Like 'Stormcaller\'s%' Limit 5;
+
+-- hunter
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=910, `RewRepValue1`=200 WHERE  `Title` Like 'Striker\'s%' Limit 5;
+
+-- priest
+UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=910, `RewRepValue1`=200 WHERE  `Title` Like '%of the Oracle' Limit 5;
+
+-- Skinning 
+-- AQ20
+/*
+15327 - hive'zara stinger ok
+15325 - hive'zara wasp ok
+15320 - hive'zara soldier ok
+15323 - hive'zara sandstalker ok
+15319 - hive'zara collector ok
+15318 - hive'zara drone ok
+15336 - hive'zara tail lasher - lägre, 1 och 0.2
+*/
+-- loot for drone
+REPLACE INTO `zp_mangosd`.`skinning_loot_template` VALUES (15318, 20499, 100, 1, 1, 1, 0, 0, 0);
+
+UPDATE `zp_mangosd`.`creature_template` SET `skinloot`=0 WHERE  `entry`=15338;
+UPDATE `zp_mangosd`.`creature_template` SET `skinloot`=15318 WHERE  `entry`=15318;
+
+-- AQ40 no skinnable mobs
+
+-- Misc
+
+-- qiraji warrior stats
+UPDATE `zp_mangosd`.`creature_template` SET `minlevel`=61, `minhealth`=50304, `maxhealth`=50304, `mindmg`=2540, `maxdmg`=3367 WHERE  `entry`=15324;
+
+-- hive'zara stinger
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=50304, `maxhealth`=50304, `mindmg`=529, `maxdmg`=702 WHERE  `entry`=153270;
+
+-- hive'zara swarmer
+UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`=4, `speed_run`=1.17, `mindmg`=98, `attackpower`=610, `minrangedmg`=610, `maxrangedmg`=910 WHERE  `entry`=155460;
+UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`=4, `speed_run`=1.17, `mingold`=0, `maxgold`=0, `MovementType`=2, `InhabitType`=4, `ScriptName`='mob_hivezara_swarmer' WHERE  `entry`=15546;
+
+-- hive'zara wasp
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=25152, `maxhealth`=25152, `mindmg`=1058, `maxdmg`=1403 WHERE  `entry`=153250;
+-- add AI again in case it wasn't there
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (15325001, 153250, 9, 0, 100, 3, 0, 40, 5000, 7000, 11, 25185, 4, 32, 0, 0, 0, 0, 0, 0, 0, 0, 'Hive\'Zara Wasp - Cast Itch');
+
+-- hive'zara hornet elite and damage
+UPDATE `zp_mangosd`.`creature_template` SET `rank`=1, `mindmg`=741, `maxdmg`=982 WHERE  `entry`=15934;
+
+-- no gold Hive'zara drone, qiraji swarmguard
+UPDATE `zp_mangosd`.`creature_template` SET `mingold`=0, `maxgold`=0 WHERE  `entry`=15318;
+UPDATE `zp_mangosd`.`creature_template` SET `mingold`=0, `maxgold`=0 WHERE  `entry`=15343;
+
+-- ouro gold
+UPDATE `zp_mangosd`.`creature_template` SET `mingold`=950000, `maxgold`=1050000 WHERE  `entry`=15517;
+
+-- ouru scarab hp armor
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=10900, `maxhealth`=10900, `armor`=3791 WHERE  `entry`=15718;
+
+-- and elite
+UPDATE `zp_mangosd`.`creature_template` SET `rank`=1 WHERE  `entry`=15718;
+
+-- remove ouro scarab from world
+DELETE FROM `zp_mangosd`.`creature` WHERE  `id`=15718;
+
+-- Qiraji Scarab hp
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=3052, `maxhealth`=3052 WHERE  `entry`=15316;
+
+-- adjust large obsidian chunk drop
+UPDATE `zp_mangosd`.`gameobject_loot_template` SET `mincountOrRef`=1 WHERE  `entry`=17884 AND `item`=22202;
+UPDATE `zp_mangosd`.`gameobject_loot_template` SET `ChanceOrQuestChance`=0.4 WHERE  `entry`=17884 AND `item`=12363;
+
+UPDATE `zp_mangosd`.`gameobject_loot_template` SET `groupid`=2 WHERE  `entry`=17884;
+UPDATE `zp_mangosd`.`gameobject_loot_template` SET `ChanceOrQuestChance`=60, `groupid`=1 WHERE  `entry`=17884 AND `item`=22202;
+UPDATE `zp_mangosd`.`gameobject_loot_template` SET `ChanceOrQuestChance`=40, `groupid`=1 WHERE  `entry`=17884 AND `item`=22203;
+
+-- small chunk
+UPDATE `zp_mangosd`.`gameobject_loot_template` SET `groupid`=2 WHERE  `entry`=17883;
+
+UPDATE `zp_mangosd`.`gameobject_loot_template` SET `ChanceOrQuestChance`=96, `groupid`=1 WHERE  `entry`=17883 AND `item`=22202;
+UPDATE `zp_mangosd`.`gameobject_loot_template` SET `ChanceOrQuestChance`=4, `groupid`=1 WHERE  `entry`=17883 AND `item`=22203;
