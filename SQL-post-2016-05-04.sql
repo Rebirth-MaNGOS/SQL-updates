@@ -2607,3 +2607,5 @@ REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `pos
 
 DELETE FROM `zp_mangosd`.`game_event_creature` WHERE  `guid`=52457 LIMIT 1;
 DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=52457 LIMIT 1;
+
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (48231, 14720, 1, 0, 1907, -6981.97, 958.803, 10.0798, 2.58161, 25, 0, 0, 600000, 0, 0, 2);
