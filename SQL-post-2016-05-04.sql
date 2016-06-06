@@ -2594,3 +2594,16 @@ REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (52126,
 REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (52127, 54);
 REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (52128, 54);
 REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (52129, 54);
+
+-- More aq 10 hour war event
+
+REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (52442, 1, -6970.21, 939.54, 13.7144, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.58318, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (52129, 1, -6967.33, 935.938, 13.8174, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.48107, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (52128, 1, -6957.71, 958.351, 14.9562, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.7756, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (52127, 1, -6959.57, 953.45, 14.5987, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.74811, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (52126, 1, -6961.5, 949.048, 13.9553, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.73241, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (52125, 1, -6963.27, 944.352, 13.5925, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.68136, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (52124, 1, -6965.28, 939.385, 14.218, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.62638, 0, 0);
+
+DELETE FROM `zp_mangosd`.`game_event_creature` WHERE  `guid`=52457 LIMIT 1;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `guid`=52457 LIMIT 1;
