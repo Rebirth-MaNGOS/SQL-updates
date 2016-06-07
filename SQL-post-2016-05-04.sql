@@ -2612,3 +2612,7 @@ REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment
 
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (48231, 14720, 1, 0, 1907, -6981.97, 958.803, 10.0798, 2.58161, 25, 0, 0, 600000, 0, 0, 2);
 REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (48231, 1, -6983.27, 959.511, 9.84839, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.63188, 0, 0);
+
+-- AQ event troop respawn timers
+
+UPDATE zp_mangosd.creature INNER JOIN zp_mangosd.game_event_creature ON zp_mangosd.creature.guid = zp_mangosd.game_event_creature.guid SET zp_mangosd.creature.spawntimesecs = 300 WHERE zp_mangosd.game_event_creature.event = 54 OR zp_mangosd.game_event_creature.event = 55;
