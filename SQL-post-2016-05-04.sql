@@ -2616,3 +2616,8 @@ REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `pos
 -- AQ event troop respawn timers
 
 UPDATE zp_mangosd.creature INNER JOIN zp_mangosd.game_event_creature ON zp_mangosd.creature.guid = zp_mangosd.game_event_creature.guid SET zp_mangosd.creature.spawntimesecs = 300 WHERE zp_mangosd.game_event_creature.event = 54 OR zp_mangosd.game_event_creature.event = 55;
+
+-- AQ supply troops patrols
+
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=12790 LIMIT 1;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=12789 LIMIT 1;
