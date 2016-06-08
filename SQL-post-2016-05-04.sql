@@ -2725,6 +2725,9 @@ UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, 
 
 -- AQ40 mobs
 
+-- 15984 - sartura guards stunable
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650328063 WHERE  `entry`=15984;
+
 -- 15264 - anubisath sentinel beefn'
 UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=15264;
 
