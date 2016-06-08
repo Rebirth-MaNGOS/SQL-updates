@@ -2851,3 +2851,12 @@ UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.1, `combat_rea
 UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`=5, `aggrorangeoverride`=40 WHERE  `entry`=15544;
 UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=2.9 WHERE  `entry`=15511;
 UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=2.9 WHERE  `entry`=15543;
+
+-- larva at ayamiss shouldn't be boss mob
+UPDATE `zp_mangosd`.`creature` SET `id`=15333 WHERE  `guid`=85896;
+
+-- 15630 - spawn of fankriss
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650328063 WHERE  `entry`=15630;
+
+-- 15962 - vekniss hatchling
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=641940463 WHERE  `entry`=15962;
