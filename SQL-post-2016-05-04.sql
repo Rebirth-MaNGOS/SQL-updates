@@ -2625,3 +2625,226 @@ UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=12789 LIMIT 1;
 -- AQ supply troops saurfang faction
 
 REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCredit2`, `modelid_1`, `modelid_2`, `name`, `subname`, `gossip_menu_id`, `minlevel`, `maxlevel`, `minhealth`, `maxhealth`, `minmana`, `maxmana`, `armor`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `aggrorangeoverride`, `unit_class`, `unit_flags`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `PetSpellDataId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `Civilian`, `RacialLeader`, `RegenHealth`, `equipment_id`, `trainer_id`, `vendor_id`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`) VALUES (14720, 0, 0, 14732, 0, 'High Overlord Saurfang', NULL, 0, 62, 62, 600000, 600000, 0, 0, 5892, 1080, 1080, 3, 1.1, 3.28571, 0, 1, 1118, 1440, 0, 295, 1, 1158, 0, 0, 1, 37376, 0, 0, 0, 0, 0, 0, 63.1904, 86.8868, 100, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'EventAI', 0, 3, 0, 0, 1, 1907, 0, 0, 650854239, 256, '');
+
+-- AQ20
+-- 15343 - qiraji swarmguard root
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330047 WHERE  `entry`=15343;
+-- 15324 - qiraji gladiator allt
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=15324;
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=153240;
+
+-- 15327 - hive'zara stinger root 
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330047 WHERE  `entry`=15327;
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330047 WHERE  `entry`=153270;
+
+-- 15325 - hive'zara wasp root
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330047 WHERE  `entry`=15325;
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330047 WHERE  `entry`=153250;
+
+-- 15387 - qiraji warrior rajaxx mob, ska gå allt 0
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50 WHERE  `entry`=15387;
+
+-- 15344 - swarmguard needler, rajaxx mob ska gå allt 0
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50 WHERE  `entry`=15344;
+
+-- 15338 - obsidian destroyer allt
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=15338;
+
+-- 15462 - spitting scarab - root
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330047 WHERE  `entry`=15462;
+
+-- 15461 - shrieker scarab - root
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330047 WHERE  `entry`=15461;
+
+-- 15335 - flesh hunter - allt
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=15335;
+
+-- 15333 - silithid feeder 0 INTE HA MANA ELLER VARA ELITE
+UPDATE `zp_mangosd`.`creature_template` SET `minmana`=0, `maxmana`=0, `armor`=3791, `faction_A`=32, `faction_H`=32, `rank`=0, `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50 WHERE  `entry`=15333;
+
+-- 15521 - hive'zara hatchling, inte ändra
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50 WHERE  `entry`=15521;
+
+-- 15555 - hive'zara larva, IMMUN ALLT
+UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=650330111 WHERE  `entry`=15555;
+
+-- 15320 - hive'zara soldier root
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330047 WHERE  `entry`=15320;
+
+-- 15323 - hive'zara sandstalker root
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330047 WHERE  `entry`=15323;
+
+-- 155460 - hive'zara swarmer, 0
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50 WHERE  `entry`=155460;
+
+-- 15546 - hive'zara swarmer, 0
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50 WHERE  `entry`=15546;
+
+-- 15319 - hive'zara collector - root
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330047 WHERE  `entry`=15319;
+
+-- 15318 - hive'zara drone - root
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330047 WHERE  `entry`=15318;
+
+-- 15336 - hive'zara tail lasher - root
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330047 WHERE  `entry`=15336;
+
+-- 15355 - anubisath guardian - allt
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=15355;
+
+-- 15505 - canal frenzy, 0
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50 WHERE  `entry`=15505;
+
+-- minibosses shouldn't be mechanical, 15391 - qeez, 15392 - tuubid, 15390 - xurrem, 15388 - pakkon, 15385 - zerran, 15386 - yeggeth, 15389 - drenn
+UPDATE `zp_mangosd`.`creature_template` SET `type`=10, `mechanic_immune_mask`=650330111 WHERE  `entry`=15391;
+UPDATE `zp_mangosd`.`creature_template` SET `type`=10, `mechanic_immune_mask`=650330111 WHERE  `entry`=15392;
+UPDATE `zp_mangosd`.`creature_template` SET `type`=10, `mechanic_immune_mask`=650330111 WHERE  `entry`=15390;
+UPDATE `zp_mangosd`.`creature_template` SET `type`=10, `mechanic_immune_mask`=650330111 WHERE  `entry`=15388;
+UPDATE `zp_mangosd`.`creature_template` SET `type`=10, `mechanic_immune_mask`=650330111 WHERE  `entry`=15385;
+UPDATE `zp_mangosd`.`creature_template` SET `type`=10, `mechanic_immune_mask`=650330111 WHERE  `entry`=15386;
+UPDATE `zp_mangosd`.`creature_template` SET `type`=10, `mechanic_immune_mask`=650330111 WHERE  `entry`=15389;
+
+-- aq20 bossar
+-- 15348 - kurinnaxx allt
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111, `flags_extra`=513 WHERE  `entry`=15348;
+
+-- 15341 - general rajaxx
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=15341;
+
+-- 15340 - moam (optional) allt
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111, `flags_extra`=769 WHERE  `entry`=15340;
+
+-- 15370 - buru the gorger (optional) allt
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111, `flags_extra`=513 WHERE  `entry`=15370;
+
+-- 15369 - ayamiss the hunter (optional) all
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111, `flags_extra`=513 WHERE  `entry`=15369;
+
+-- 15339 - ossirian the unscarred - allt
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111, `flags_extra`=513 WHERE  `entry`=15339;
+
+-- AQ40 mobs
+
+-- 15264 - anubisath sentinel beefn'
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=15264;
+
+-- 15262 - obsidian eradicator beefn
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=15262;
+
+-- 15233 - vekniss guardian noob?
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=15233;
+
+-- 15247 - brainwasher, halvnoob?
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=15247;
+
+-- 15230 - vekniss warrior
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=15230;
+
+-- 15300 - vekniss drone - 0 inte immun
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50 WHERE  `entry`=15300;
+
+-- 15229 - vekniss soldier
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=15229;
+
+-- 15240 - vekniss hive crawler
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=15240;
+
+-- 15236 - vekniss wasp
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=15236;
+
+-- 15235 - vekniss stinger
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=15235;
+
+-- 15538 - anubisath swarmguard, supernoob inge loot
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50 WHERE  `entry`=15538;
+
+-- 15277 - anubisath defender beefn'
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=15277;
+
+-- 15316 - qiraji scarab - 0 inte immun
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50 WHERE  `entry`=15316;
+
+-- 15317 - qiraji scorpion - 0 inte immun
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50 WHERE  `entry`=15317;
+
+-- 15250 - qiraji slayer
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=15250;
+
+-- 15249 - qiraji lasher
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=15249;
+
+-- 15537 - anubisath warrior noob inge drop
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50 WHERE  `entry`=15537;
+
+-- 15252 - qiraji champion
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=15252;
+
+-- 15312 - obsidian nullifier beefn'
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=15312;
+
+-- 15311 - anubisath warder
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=15311;
+
+-- 15246 - qiraji mindslayer
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=15246;
+
+-- 15718 - ouro scarab 0 inte immun något
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50 WHERE  `entry`=15718;
+
+-- cthun mobs allt
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=15725;
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=15726;
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=15728;
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=15334;
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=15802;
+
+-- bossar aq40 - immunities and taunt immune
+-- 15263 - skeram allt, ska gå CS
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=616775679 WHERE  `entry`=15263;
+
+-- 15511 - kri opt
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111, `flags_extra`=769 WHERE  `entry`=15511;
+
+-- 15543 - yauj opt
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111, `flags_extra`=769 WHERE  `entry`=15543;
+
+-- 15544 - vem opt
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111, `flags_extra`=769 WHERE  `entry`=15544;
+
+-- 15516 - sartura
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650328063 WHERE  `entry`=15516;
+
+-- 15510 - fankriss
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=15510;
+
+-- 15299 - viscidus opt
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111, `flags_extra`=769 WHERE  `entry`=15299;
+
+-- 15509 - huhuran
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111, `flags_extra`=769 WHERE  `entry`=15509;
+
+-- 15276 - veklor
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111, `flags_extra`=769 WHERE  `entry`=15276;
+
+-- 15275 veknilash
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111, `flags_extra`=769 WHERE  `entry`=15275;
+
+-- 15517 - ouru opt
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111, `flags_extra`=769 WHERE  `entry`=15517;
+
+-- 15727 - cthun
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111, `flags_extra`=769 WHERE  `entry`=15727;
+
+-- 15589 - eye of cthun
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111, `flags_extra`=769 WHERE  `entry`=15589;
+
+-- aq20
+-- mana fiend stats and hitbox
+UPDATE `zp_mangosd`.`creature_template` SET `mingold`=0, `maxgold`=0, `mechanic_immune_mask`=650330111 WHERE  `entry`=15527;
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1552703, 15527, 11, 0, 100, 0, 0, 0, 0, 0, 44, 64, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Mana fiend - Set arcane immunity on spawn');
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.1, `combat_reach`=1.2 WHERE  `modelid`=15547;
+
+-- vem kri and yauj speed and aggro range test if 50 is better
+UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`=5, `aggrorangeoverride`=40 WHERE  `entry`=15544;
+UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=2.9 WHERE  `entry`=15511;
+UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=2.9 WHERE  `entry`=15543;
