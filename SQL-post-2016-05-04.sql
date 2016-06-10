@@ -2865,7 +2865,7 @@ UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, 
 UPDATE `zp_mangosd`.`item_template` SET `spellid_1`=26656 WHERE  `entry`=21176;
 
 -- respawn time for buru eggs
-UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=180 WHERE  `id`=15514;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=120 WHERE  `id`=15514;
 
 -- hatchling stats
 UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=1.25, `scale`=0 WHERE  `entry`=15521;
