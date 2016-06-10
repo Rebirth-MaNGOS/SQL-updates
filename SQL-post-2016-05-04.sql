@@ -2860,3 +2860,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, 
 
 -- 15962 - vekniss hatchling
 UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=641940463 WHERE  `entry`=15962;
+
+-- Black Qiraji Resonating Crystal corrected spell to 3 sec
+UPDATE `zp_mangosd`.`item_template` SET `spellid_1`=26656 WHERE  `entry`=21176;
