@@ -2863,3 +2863,34 @@ UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, 
 
 -- Black Qiraji Resonating Crystal corrected spell to 3 sec
 UPDATE `zp_mangosd`.`item_template` SET `spellid_1`=26656 WHERE  `entry`=21176;
+
+-- respawn time for buru eggs
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=180 WHERE  `id`=15514;
+
+-- hatchling stats
+UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=1.25, `scale`=0 WHERE  `entry`=15521;
+
+-- ouro scarab speed
+UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=1.25 WHERE  `entry`=15718;
+
+-- AQ40
+-- new entries for caelestrasz
+REPLACE INTO `zp_mangosd`.`creature_template` VALUES (153790, 0, 0, 15419, 0, 'Caelestrasz', NULL, 0, 63, 63, 365000, 365000, 78600, 78600, 3791, 35, 35, 2, 1.1, 1.11286, 0, 3, 1403, 1599, 0, 693, 1, 1300, 1500, 0, 0, 0, 0, 0, 0, 0, 0, 0, 220.81, 320.77, 100, 2, 0, 0, 0, 100001, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 0, 0, 1, 0, 0, 0, 617299803, 3, 'npc_caelestrasz');
+UPDATE `zp_mangosd`.`creature` SET `id`=153790 WHERE  `guid`=87562;
+
+-- Merithra of the Dream
+REPLACE INTO `zp_mangosd`.`creature_template` VALUES (153780, 0, 0, 15420, 0, 'Merithra of the Dream', NULL, 0, 63, 63, 346200, 346200, 78600, 78600, 3791, 35, 35, 2, 1.1, 1.11286, 0, 3, 1297, 1542, 0, 655, 1, 1300, 1500, 0, 0, 0, 0, 0, 0, 0, 0, 0, 220.81, 320.77, 100, 2, 0, 0, 0, 100001, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 0, 0, 1, 0, 0, 0, 617299803, 3, 'npc_merithra');
+UPDATE `zp_mangosd`.`creature` SET `id`=153780 WHERE  `guid`=87561;
+
+-- Arygos
+REPLACE INTO `zp_mangosd`.`creature_template` VALUES (153800, 0, 0, 15418, 0, 'Arygos', NULL, 0, 63, 63, 384000, 384000, 78600, 78600, 3795, 35, 35, 2, 1.1, 1.11286, 0, 3, 3127, 3822, 0, 1604, 1, 1300, 1500, 0, 0, 0, 0, 0, 0, 0, 0, 0, 220.81, 320.77, 100, 2, 0, 0, 0, 100001, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 0, 0, 1, 0, 0, 0, 617299803, 3, 'npc_arygos');
+UPDATE `zp_mangosd`.`creature` SET `id`=153800 WHERE  `guid`=87563;
+
+-- quests for the new templates
+REPLACE INTO `zp_mangosd`.`creature_questrelation` VALUES (153800, 8789);
+REPLACE INTO `zp_mangosd`.`creature_questrelation` VALUES (153790, 8802);
+REPLACE INTO `zp_mangosd`.`creature_questrelation` VALUES (153780, 8790);
+
+REPLACE INTO `zp_mangosd`.`creature_involvedrelation` VALUES (153780, 8790);
+REPLACE INTO `zp_mangosd`.`creature_involvedrelation` VALUES (153790, 8801);
+REPLACE INTO `zp_mangosd`.`creature_involvedrelation` VALUES (153800, 8789);
