@@ -2913,4 +2913,11 @@ REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCred
 REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCredit2`, `modelid_1`, `modelid_2`, `name`, `subname`, `gossip_menu_id`, `minlevel`, `maxlevel`, `minhealth`, `maxhealth`, `minmana`, `maxmana`, `armor`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `aggrorangeoverride`, `unit_class`, `unit_flags`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `PetSpellDataId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `Civilian`, `RacialLeader`, `RegenHealth`, `equipment_id`, `trainer_id`, `vendor_id`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`) VALUES (15854, 0, 0, 15825, 0, 'Orgrimmar Elite Cavalryman', NULL, 0, 60, 60, 9278, 9278, 0, 0, 0, 495, 495, 0, 1.5, 0.95, 0, 0, 601, 755, 0, 313, 1, 1420, 1562, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 599, 4836, '', 0, 3, 0, 0, 1, 0, 0, 0, 0, 0, '');
 
 -- Glob of Viscidus stats
-UPDATE `zp_mangosd`.`creature_template` SET `minmana`=0, `maxmana`=0, `armor`=3791, `rank`=0, `type`=10, `mechanic_immune_mask`=650330111 WHERE  `entry`=15667;
+UPDATE `zp_mangosd`.`creature_template` SET `minmana`=0, `maxmana`=0, `armor`=3791, `speed_run`=0.13, `rank`=0, `type`=10, `mechanic_immune_mask`=650330111 WHERE  `entry`=15667;
+
+-- new dummy for viscidus
+REPLACE INTO `zp_mangosd`.`creature_template` VALUES (800109, 0, 0, 6296, 0, 'Viscidus Dummy', NULL, 0, 62, 62, 646473, 646473, 0, 0, 0, 35, 35, 0, 1, 0.95, 1, 0, 0, 0, 0, 0, 1, 1000, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 0, 0, 1, 0, 0, 0, 0, 128, '');
+
+-- add to world
+REPLACE INTO `zp_mangosd`.`creature` VALUES (87940, 800109, 531, 6296, 0, -7990.69, 922.47, -52.8781, 2.01064, 30, 0, 0, 600000, 0, 0, 0);
+
