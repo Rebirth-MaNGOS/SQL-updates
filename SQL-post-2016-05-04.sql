@@ -2934,3 +2934,8 @@ REPLACE INTO `zp_mangosd`.`creature` VALUES (87917, 800110, 531, 0, 0, -8062, 11
 REPLACE INTO `zp_mangosd`.`creature` VALUES (87918, 800110, 531, 0, 0, -8141.24, 1208.36, -92.0793, 6.11436, 30, 0, 0, 646473, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature` VALUES (87919, 800110, 531, 0, 0, -8008.72, 1190.52, -86.9502, 0.577309, 30, 0, 0, 646473, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature` VALUES (87920, 800110, 531, 0, 0, -8056.97, 1253.9, -87.3126, 5.87088, 30, 0, 0, 646473, 0, 0, 0);
+
+-- vekniss hatchling and spawn of fankriss stats, fankriss speed
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=2000, `maxdmg`=2500, `baseattacktime`=2000 WHERE  `entry`=15630;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=675, `maxdmg`=950 WHERE  `entry`=15962;
+UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=1.64 WHERE  `entry`=15510;
