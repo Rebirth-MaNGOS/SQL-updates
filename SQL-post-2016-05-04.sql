@@ -116,9 +116,6 @@ DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE  `entry`=11881 AND `item
 replace into scripted_areatrigger values ('4033', 'area_trigger_cthun_stomach_knockback');
 replace into scripted_areatrigger values ('4034', 'area_trigger_cthun_stomach_teleport');
 
--- fankriss aggro range
-UPDATE `zp_mangosd`.`creature_template` SET `aggrorangeoverride`=70 WHERE  `entry`=15510;
-
 -- vekniss drone respawn 
 UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=30 WHERE  `id`=15300;
 
@@ -2921,3 +2918,5 @@ REPLACE INTO `zp_mangosd`.`creature_template` VALUES (800109, 0, 0, 6296, 0, 'Vi
 -- add to world
 REPLACE INTO `zp_mangosd`.`creature` VALUES (87940, 800109, 531, 6296, 0, -7990.69, 922.47, -52.8781, 2.01064, 30, 0, 0, 600000, 0, 0, 0);
 
+-- fankriss aggro range
+UPDATE `zp_mangosd`.`creature_template` SET `aggrorangeoverride`=70 WHERE  `entry`=15510;
