@@ -2920,3 +2920,17 @@ REPLACE INTO `zp_mangosd`.`creature` VALUES (87940, 800109, 531, 6296, 0, -7990.
 
 -- fankriss aggro range
 UPDATE `zp_mangosd`.`creature_template` SET `aggrorangeoverride`=70 WHERE  `entry`=15510;
+
+-- add template for fankriss dummy
+REPLACE INTO `zp_mangosd`.`creature_template` VALUES (800110, 0, 0, 6296, 0, 'Fankriss Aggro Dummy', NULL, 0, 62, 62, 646473, 646473, 0, 0, 0, 35, 35, 0, 1, 0.95, 1, 0, 0, 0, 0, 0, 1, 1000, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 0, 0, 1, 0, 0, 0, 0, 128, 'npc_fankriss_aggro_dummy');
+
+-- add to world
+REPLACE INTO `zp_mangosd`.`creature` VALUES (87912, 800110, 531, 0, 0, -8020.91, 1227.27, -84.5965, 3.18877, 30, 0, 0, 646473, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (87913, 800110, 531, 0, 0, -8038.71, 1243.6, -85.1917, 0.32992, 30, 0, 0, 646473, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (87914, 800110, 531, 0, 0, -8024.76, 1238.52, -84.2484, 0.78154, 30, 0, 0, 646473, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (87915, 800110, 531, 0, 0, -8015.99, 1208.24, -86.4364, 0.25137, 30, 0, 0, 646473, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (87916, 800110, 531, 0, 0, -8032.32, 1178.52, -89.8358, 6.22038, 30, 0, 0, 646473, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (87917, 800110, 531, 0, 0, -8062, 1151.69, -91.1445, 3.93881, 30, 0, 0, 646473, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (87918, 800110, 531, 0, 0, -8141.24, 1208.36, -92.0793, 6.11436, 30, 0, 0, 646473, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (87919, 800110, 531, 0, 0, -8008.72, 1190.52, -86.9502, 0.577309, 30, 0, 0, 646473, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (87920, 800110, 531, 0, 0, -8056.97, 1253.9, -87.3126, 5.87088, 30, 0, 0, 646473, 0, 0, 0);
