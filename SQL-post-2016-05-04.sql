@@ -2939,3 +2939,6 @@ REPLACE INTO `zp_mangosd`.`creature` VALUES (87920, 800110, 531, 0, 0, -8056.97,
 UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=2000, `maxdmg`=2500, `baseattacktime`=2000 WHERE  `entry`=15630;
 UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=675, `maxdmg`=950 WHERE  `entry`=15962;
 UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=1.64 WHERE  `entry`=15510;
+
+-- aggro range for huhuran
+UPDATE `zp_mangosd`.`creature_template` SET `aggrorangeoverride`=70 WHERE  `entry`=15509;
