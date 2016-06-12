@@ -3048,3 +3048,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `armor`=3791 WHERE  `entry`=15726;
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=3791 WHERE  `entry`=15725;
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=4091 WHERE  `entry`=15334;
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=4091 WHERE  `entry`=15728;
+
+-- armor and aggro for cthun
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=4691, `aggrorangeoverride`=40 WHERE  `entry`=15589;
