@@ -2948,3 +2948,106 @@ UPDATE `zp_mangosd`.`creature_template` SET `aggrorangeoverride`=70 WHERE  `entr
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12786, 15742, 1, 0, 0, -6547.64, 971.98, 0.376849, 3.91513, 86400, 5, 0, 3331000, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12785, 15741, 1, 0, 0, -7828.12, 536.281, -35.5381, 2.92552, 86400, 5, 0, 3331000, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12784, 15740, 1, 0, 0, -7322.63, 1648.95, -31.4682, 3.84444, 86400, 5, 0, 3331000, 0, 0, 0);
+
+-- 10 hour war RP
+
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `comment`) VALUES (-1720262, 'I am Saurfang. Brother of Broxigar. You know me to be the Supreme Commander of the Might of Kalimdor. An orc - a true orc warrior - wishes for one thing: To die in the glory of battle against a hated enemy. Some of you have fought in battles. Peace has been with us for many years. Many years we sat idle but many years we battled. In those years - where strife, the land and Legion and Scourge, sacked our homes, killed our families — these insects dwelled beneath us. Beneath our homes — waiting. Waiting to crush the life from our little ones. To slay all in their path. This they do for their god. And for our gods? We defend. We stand. We show that as one. United. We destroy. Their god will fall. To die today, on this field of battle, is to die an orcish death. To die today is to die for our little ones. Our old ones. Our … loved ones. Would any of you deny yourselves such a death? Such an honor?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `comment`) VALUES (-1720261, 'FOR HONOR!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `comment`) VALUES (-1720260, 'FER MAGNI!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, NULL);
+
+REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCredit2`, `modelid_1`, `modelid_2`, `name`, `subname`, `gossip_menu_id`, `minlevel`, `maxlevel`, `minhealth`, `maxhealth`, `minmana`, `maxmana`, `armor`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `aggrorangeoverride`, `unit_class`, `unit_flags`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `PetSpellDataId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `Civilian`, `RacialLeader`, `RegenHealth`, `equipment_id`, `trainer_id`, `vendor_id`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`) VALUES (15861, 0, 0, 15835, 0, 'Ironforge Infantryman', NULL, 0, 59, 60, 862, 881, 0, 0, 0, 495, 495, 0, 1, 1.11286, 0, 1, 330, 476, 0, 186, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'EventAI', 0, 3, 0, 0, 1, 783, 0, 0, 0, 0, 'mob_tenhourwar_generic_rp');
+REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCredit2`, `modelid_1`, `modelid_2`, `name`, `subname`, `gossip_menu_id`, `minlevel`, `maxlevel`, `minhealth`, `maxhealth`, `minmana`, `maxmana`, `armor`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `aggrorangeoverride`, `unit_class`, `unit_flags`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `PetSpellDataId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `Civilian`, `RacialLeader`, `RegenHealth`, `equipment_id`, `trainer_id`, `vendor_id`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`) VALUES (15860, 0, 0, 15689, 0, 'Kaldorei Marksman', NULL, 0, 60, 60, 960, 960, 2434, 2434, 0, 495, 495, 0, 1, 1.11286, 0, 1, 335, 484, 0, 189, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'EventAI', 0, 3, 0, 0, 1, 15860, 0, 0, 0, 0, 'mob_tenhourwar_generic_rp');
+REPLACE INTO `zp_mangosd`.`creature_template` (`entry`, `KillCredit1`, `KillCredit2`, `modelid_1`, `modelid_2`, `name`, `subname`, `gossip_menu_id`, `minlevel`, `maxlevel`, `minhealth`, `maxhealth`, `minmana`, `maxmana`, `armor`, `faction_A`, `faction_H`, `npcflag`, `speed_walk`, `speed_run`, `scale`, `rank`, `mindmg`, `maxdmg`, `dmgschool`, `attackpower`, `dmg_multiplier`, `baseattacktime`, `rangeattacktime`, `aggrorangeoverride`, `unit_class`, `unit_flags`, `dynamicflags`, `family`, `trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `minrangedmg`, `maxrangedmg`, `rangedattackpower`, `type`, `type_flags`, `lootid`, `pickpocketloot`, `skinloot`, `resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, `spell1`, `spell2`, `spell3`, `spell4`, `PetSpellDataId`, `mingold`, `maxgold`, `AIName`, `MovementType`, `InhabitType`, `Civilian`, `RacialLeader`, `RegenHealth`, `equipment_id`, `trainer_id`, `vendor_id`, `mechanic_immune_mask`, `flags_extra`, `ScriptName`) VALUES (14719, 0, 0, 14732, 0, 'High Overlord Saurfang', NULL, 0, 62, 62, 600000, 600000, 0, 0, 5892, 495, 495, 3, 1.1, 3.28571, 0, 1, 1118, 1440, 0, 295, 1, 1158, 0, 0, 1, 37376, 0, 0, 0, 0, 0, 0, 63.1904, 86.8868, 100, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'EventAI', 0, 3, 0, 0, 1, 1907, 0, 0, 650854239, 2, 'mob_tenhourwar_generic_rp');
+
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (48231, 14719, 1, 0, 1907, -6958.01, 945.391, 14.5456, 2.67115, 300, 0, 0, 600000, 0, 0, 2);
+
+-- AQ40 hitboxes
+-- eradicator + skeram
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.5, `combat_reach`=1.6 WHERE  `modelid`=15346;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.6, `combat_reach`=1.7 WHERE  `modelid`=15345;
+
+-- vekniss guardian + brainwasher
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.6, `combat_reach`=1.7 WHERE  `modelid`=15360;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.9, `combat_reach`=2 WHERE  `modelid`=14521;
+
+-- vekniss warrior
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.9, `combat_reach`=2 WHERE  `modelid`=15334;
+
+-- bug trio vem, kri, yauj
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.9, `combat_reach`=2 WHERE  `modelid`=15658;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=3.1, `combat_reach`=3.2 WHERE  `modelid`=15656;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=3.1, `combat_reach`=3.2 WHERE  `modelid`=15657;
+
+-- sartura guards, sartura box and speed
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.2, `combat_reach`=1.3 WHERE  `modelid`=15465;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.3, `combat_reach`=1.4 WHERE  `modelid`=15583;
+UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`=1.55, `speed_run`=2.14 WHERE  `entry`=15984;
+UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`=1.55, `speed_run`=2.14 WHERE  `entry`=15516;
+
+-- drone + soldier
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.2, `combat_reach`=1.3 WHERE  `modelid`=15362;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.2, `combat_reach`=1.3 WHERE  `modelid`=15434;
+
+-- spawn of fankriss
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.2, `combat_reach`=1.3 WHERE  `modelid`=15582;
+
+-- viscidus, speed box and dummy for aggro
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=4.5, `combat_reach`=4.6 WHERE  `modelid`=15686;
+UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=1.2, `aggrorangeoverride`=70 WHERE  `entry`=15299;
+REPLACE INTO `zp_mangosd`.`creature_template` VALUES (800111, 0, 0, 6296, 0, 'Viscidus Aggro Dummy', NULL, 0, 62, 62, 646473, 646473, 0, 0, 0, 35, 35, 0, 1, 0.95, 1, 0, 0, 0, 0, 0, 1, 1000, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 0, 0, 1, 0, 0, 0, 0, 128, 'npc_viscidus_aggro_dummy');
+-- add to world
+REPLACE INTO `zp_mangosd`.`creature` VALUES (87921, 800111, 531, 0, 0, -7999.13, 976.354, -42.307, 1.51524, 30, 0, 0, 646473, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (87922, 800111, 531, 0, 0, -7977.07, 986.838, -41.2089, 4.49975, 30, 0, 0, 646473, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (87923, 800111, 531, 0, 0, -8014.93, 998.422, -40.2564, 1.98648, 30, 0, 0, 646473, 0, 0, 0);
+
+-- hive crawler, wasp, stinger
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.2, `combat_reach`=1.3 WHERE  `modelid`=15533;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.2, `combat_reach`=1.3 WHERE  `modelid`=15335;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.2, `combat_reach`=1.3 WHERE  `modelid`=15338;
+
+-- huhuran
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=2.1, `combat_reach`=2.2 WHERE  `modelid`=15739;
+UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=1.21 WHERE  `entry`=15509;
+
+-- defender
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.2, `combat_reach`=1.3 WHERE  `modelid`=15351;
+
+-- scarab, scorpion
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=0.8, `combat_reach`=0.9 WHERE  `modelid`=9354;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=0.8, `combat_reach`=0.9 WHERE  `modelid`=9749;
+
+-- twins + speed
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.2, `combat_reach`=1.3 WHERE  `modelid`=15778;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.2, `combat_reach`=1.3 WHERE  `modelid`=15761;
+UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=2.04 WHERE  `entry`=15276;
+UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=2.04 WHERE  `entry`=15275;
+
+-- warrior swarmguard
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=0.9, `combat_reach`=1 WHERE  `modelid`=15545;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=0.9, `combat_reach`=1 WHERE  `modelid`=15354;
+
+-- champion + mindslayer
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.2, `combat_reach`=1.3 WHERE  `modelid`=15340;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.6, `combat_reach`=1.7 WHERE  `modelid`=15740;
+
+-- ouro scarab
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1, `combat_reach`=1.1 WHERE  `modelid`=11108;
+
+-- cthun p1
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=12.2, `combat_reach`=12.3 WHERE  `modelid`=15556;
+
+-- claw tentacle, eye tentacle, giant claw, flesh
+UPDATE `zp_mangosd`.`creature_model_info` SET `combat_reach`=1.2 WHERE  `modelid`=15789;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.2, `combat_reach`=1.3 WHERE  `modelid`=15788;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.2, `combat_reach`=1.3 WHERE  `modelid`=15790;
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.5, `combat_reach`=2.1 WHERE  `modelid`=15793;
+
+-- tentacle armor
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=3791 WHERE  `entry`=15802;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=3791 WHERE  `entry`=15726;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=3791 WHERE  `entry`=15725;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=4091 WHERE  `entry`=15334;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=4091 WHERE  `entry`=15728;
+
+-- armor and aggro for cthun
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=4691, `aggrorangeoverride`=40 WHERE  `entry`=15589;
