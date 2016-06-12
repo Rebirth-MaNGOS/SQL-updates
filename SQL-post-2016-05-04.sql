@@ -2942,3 +2942,9 @@ UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=1.64 WHERE  `entry`=1551
 
 -- aggro range for huhuran
 UPDATE `zp_mangosd`.`creature_template` SET `aggrorangeoverride`=70 WHERE  `entry`=15509;
+
+-- Colossus should not respawn during 10h event
+
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12786, 15742, 1, 0, 0, -6547.64, 971.98, 0.376849, 3.91513, 86400, 5, 0, 3331000, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12785, 15741, 1, 0, 0, -7828.12, 536.281, -35.5381, 2.92552, 86400, 5, 0, 3331000, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (12784, 15740, 1, 0, 0, -7322.63, 1648.95, -31.4682, 3.84444, 86400, 5, 0, 3331000, 0, 0, 0);
