@@ -3065,3 +3065,18 @@ UPDATE `zp_mangosd`.`creature_template` SET `armor`=3791 WHERE  `entry`=15962;
 REPLACE INTO `zp_mangosd`.`creature_template` VALUES (157120, 0, 0, 15294, 0, 'Npc Ouro Ground', NULL, 0, 63, 63, 999999, 999999, 0, 0, 0, 35, 35, 0, 1, 0.75, 0, 0, 2, 2, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 0, 0, 1, 0, 0, 0, 0, 0, 'npc_ouro_ground');
 -- add to world
 REPLACE INTO `zp_mangosd`.`creature` VALUES (87924, 157120, 531, 15294, 0, -9186.93, 2088.43, -64.1258, 0.300496, 604800, 0, 0, 1934097, 0, 0, 0);
+
+-- aq 10 hour war RP
+
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_tenhourwar_generic_rp' WHERE  `entry`=15868 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_tenhourwar_generic_rp' WHERE  `entry`=15866 LIMIT 1;
+
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `comment`) VALUES (-1720264, 'FOR KALIMDOR!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `comment`) VALUES (-1720263, 'I am with you until I gasp my last dying breath.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, NULL);
+
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (48228, 15868, 1, 0, 1338, -6956.07, 950.558, 15.1366, 2.60493, 300, 0, 0, 32344, 0, 0, 2);
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (48230, 15866, 1, 0, 8008, -6970.29, 946.567, 12.7232, 2.51486, 300, 0, 0, 45763, 0, 0, 2);
+
+REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (48230, 1, -6983.22, 954.272, 10.6251, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.60911, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (48228, 1, -6979.13, 963.973, 10.0648, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.58137, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (48231, 1, -6983.27, 959.511, 9.84839, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.63188, 0, 0);
