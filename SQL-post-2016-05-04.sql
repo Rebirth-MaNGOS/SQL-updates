@@ -3239,3 +3239,6 @@ REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `pos
     /*C'thun*/
     UPDATE `creature_template` SET `minhealth`='999300', `maxhealth`='999300' WHERE (`entry`='15727');
     UPDATE `creature_template` SET `mindmg`='110', `maxdmg`='146' WHERE (`entry`='15727');
+
+-- dirt mound speed
+UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`=1.15 WHERE  `entry`=15712;
