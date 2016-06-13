@@ -3060,3 +3060,8 @@ UPDATE `zp_mangosd`.`creature_template` SET `armor`=3795 WHERE  `entry`=15262;
 
 -- vekniss hatchling armor
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=3791 WHERE  `entry`=15962;
+
+-- Ouro ground visual
+REPLACE INTO `zp_mangosd`.`creature_template` VALUES (157120, 0, 0, 15294, 0, 'Npc Ouro Ground', NULL, 0, 63, 63, 999999, 999999, 0, 0, 0, 35, 35, 0, 1, 0.75, 0, 0, 2, 2, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 0, 0, 1, 0, 0, 0, 0, 0, 'npc_ouro_ground');
+-- add to world
+REPLACE INTO `zp_mangosd`.`creature` VALUES (87924, 157120, 531, 15294, 0, -9186.93, 2088.43, -64.1258, 0.300496, 604800, 0, 0, 1934097, 0, 0, 0);
