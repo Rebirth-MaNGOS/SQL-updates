@@ -3051,3 +3051,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `armor`=4091 WHERE  `entry`=15728;
 
 -- armor and aggro for cthun
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=4691, `aggrorangeoverride`=40 WHERE  `entry`=15589;
+
+-- obsidian nullifier stats
+UPDATE `zp_mangosd`.`creature_template` SET `minmana`=50050, `maxmana`=50050, `armor`=3795, `AIName`='', `ScriptName`='mob_obsidian_nullifier' WHERE  `entry`=15312;
