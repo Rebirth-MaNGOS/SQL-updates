@@ -3242,3 +3242,6 @@ REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `pos
 
 -- dirt mound speed
 UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`=1.15 WHERE  `entry`=15712;
+
+-- mindslayer should be able to MC tank
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param2`=4 WHERE  `id`=1524602;
