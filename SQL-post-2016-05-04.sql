@@ -3053,4 +3053,10 @@ UPDATE `zp_mangosd`.`creature_template` SET `armor`=4091 WHERE  `entry`=15728;
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=4691, `aggrorangeoverride`=40 WHERE  `entry`=15589;
 
 -- obsidian nullifier stats
-UPDATE `zp_mangosd`.`creature_template` SET `minmana`=50050, `maxmana`=50050, `armor`=3795, `AIName`='', `ScriptName`='mob_obsidian_nullifier' WHERE  `entry`=15312;
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=125750, `maxhealth`=125750, `minmana`=50050, `maxmana`=50050, `armor`=3795, `mindmg`=1950, `maxdmg`=2285, `attackpower`=2000, `AIName`='', `ScriptName`='mob_obsidian_nullifier' WHERE  `entry`=15312;
+
+-- eradicator armor
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=3795 WHERE  `entry`=15262;
+
+-- vekniss hatchling armor
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=3791 WHERE  `entry`=15962;
