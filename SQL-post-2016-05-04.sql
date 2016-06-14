@@ -3248,3 +3248,55 @@ UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param2`=1 WHERE  `id`=152
 
 -- AQ 10 hour war crystal
 REPLACE INTO `zp_mangosd`.`gameobject_template` (`entry`, `type`, `displayId`, `name`, `faction`, `flags`, `size`, `data0`, `data1`, `data2`, `data3`, `data4`, `data5`, `data6`, `data7`, `data8`, `data9`, `data10`, `data11`, `data12`, `data13`, `data14`, `data15`, `data16`, `data17`, `data18`, `data19`, `data20`, `data21`, `data22`, `data23`, `mingold`, `maxgold`, `ScriptName`) VALUES (180810, 5, 6573, 'Resonating Crystal Formation', 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '');
+
+-- AQ 10 hour war crystal mobs
+
+-- health / armor / damage
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=220, `maxdmg`=331 WHERE  `entry`=15751 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=5550, `maxhealth`=6100 WHERE  `entry`=15748 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=129, `maxdmg`=166 WHERE  `entry`=15748 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=2400 WHERE  `entry`=15748 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=3489 WHERE  `entry`=15755 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=2725 WHERE  `entry`=15758 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=1686 WHERE  `entry`=15807 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=1000 WHERE  `entry`=15810 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `subname`='' WHERE  `entry`=15815 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=1032 WHERE  `entry`=15817 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `maxdmg`=1368 WHERE  `entry`=15817 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=106820, `maxhealth`=106820 WHERE  `entry`=15817 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=1032 WHERE  `entry`=15755 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `maxdmg`=1368 WHERE  `entry`=15755 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=509 WHERE  `entry`=15758 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `maxdmg`=614 WHERE  `entry`=15758 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=1032 WHERE  `entry`=15743 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `maxdmg`=1368 WHERE  `entry`=15743 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=715, `maxdmg`=815 WHERE  `entry`=15758 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=2725 WHERE  `entry`=15817 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=2725 WHERE  `entry`=15743 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=2000, `maxhealth`=2000 WHERE  `entry`=15813 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=1000 WHERE  `entry`=15813 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=93, `maxdmg`=134 WHERE  `entry`=15813 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=1686 WHERE  `entry`=15814 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=143 WHERE  `entry`=15814 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `maxdmg`=207 WHERE  `entry`=15814 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=3405, `maxhealth`=3405 WHERE  `entry`=15814 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=28710, `maxhealth`=28710 WHERE  `entry`=15816 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=3489 WHERE  `entry`=15816 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=323 WHERE  `entry`=15816 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `maxdmg`=466 WHERE  `entry`=15816 LIMIT 1;
+
+-- Rep
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` (`creature_id`, `RewOnKillRepFaction1`, `RewOnKillRepFaction2`, `MaxStanding1`, `IsTeamAward1`, `RewOnKillRepValue1`, `MaxStanding2`, `IsTeamAward2`, `RewOnKillRepValue2`, `TeamDependent`) VALUES (15810, 910, 0, 5, 1, 1, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` (`creature_id`, `RewOnKillRepFaction1`, `RewOnKillRepFaction2`, `MaxStanding1`, `IsTeamAward1`, `RewOnKillRepValue1`, `MaxStanding2`, `IsTeamAward2`, `RewOnKillRepValue2`, `TeamDependent`) VALUES (15807, 910, 0, 5, 1, 1, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` (`creature_id`, `RewOnKillRepFaction1`, `RewOnKillRepFaction2`, `MaxStanding1`, `IsTeamAward1`, `RewOnKillRepValue1`, `MaxStanding2`, `IsTeamAward2`, `RewOnKillRepValue2`, `TeamDependent`) VALUES (15751, 910, 0, 5, 1, 1, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` (`creature_id`, `RewOnKillRepFaction1`, `RewOnKillRepFaction2`, `MaxStanding1`, `IsTeamAward1`, `RewOnKillRepValue1`, `MaxStanding2`, `IsTeamAward2`, `RewOnKillRepValue2`, `TeamDependent`) VALUES (15748, 910, 0, 5, 1, 1, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` (`creature_id`, `RewOnKillRepFaction1`, `RewOnKillRepFaction2`, `MaxStanding1`, `IsTeamAward1`, `RewOnKillRepValue1`, `MaxStanding2`, `IsTeamAward2`, `RewOnKillRepValue2`, `TeamDependent`) VALUES (15758, 910, 0, 5, 1, 5, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` (`creature_id`, `RewOnKillRepFaction1`, `RewOnKillRepFaction2`, `MaxStanding1`, `IsTeamAward1`, `RewOnKillRepValue1`, `MaxStanding2`, `IsTeamAward2`, `RewOnKillRepValue2`, `TeamDependent`) VALUES (15755, 910, 0, 5, 1, 5, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` (`creature_id`, `RewOnKillRepFaction1`, `RewOnKillRepFaction2`, `MaxStanding1`, `IsTeamAward1`, `RewOnKillRepValue1`, `MaxStanding2`, `IsTeamAward2`, `RewOnKillRepValue2`, `TeamDependent`) VALUES (15743, 910, 0, 5, 1, 5, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` (`creature_id`, `RewOnKillRepFaction1`, `RewOnKillRepFaction2`, `MaxStanding1`, `IsTeamAward1`, `RewOnKillRepValue1`, `MaxStanding2`, `IsTeamAward2`, `RewOnKillRepValue2`, `TeamDependent`) VALUES (15817, 910, 0, 5, 1, 5, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` (`creature_id`, `RewOnKillRepFaction1`, `RewOnKillRepFaction2`, `MaxStanding1`, `IsTeamAward1`, `RewOnKillRepValue1`, `MaxStanding2`, `IsTeamAward2`, `RewOnKillRepValue2`, `TeamDependent`) VALUES (15754, 910, 0, 5, 1, 1, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` (`creature_id`, `RewOnKillRepFaction1`, `RewOnKillRepFaction2`, `MaxStanding1`, `IsTeamAward1`, `RewOnKillRepValue1`, `MaxStanding2`, `IsTeamAward2`, `RewOnKillRepValue2`, `TeamDependent`) VALUES (15814, 910, 0, 5, 1, 1, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` (`creature_id`, `RewOnKillRepFaction1`, `RewOnKillRepFaction2`, `MaxStanding1`, `IsTeamAward1`, `RewOnKillRepValue1`, `MaxStanding2`, `IsTeamAward2`, `RewOnKillRepValue2`, `TeamDependent`) VALUES (15813, 910, 0, 5, 1, 1, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` (`creature_id`, `RewOnKillRepFaction1`, `RewOnKillRepFaction2`, `MaxStanding1`, `IsTeamAward1`, `RewOnKillRepValue1`, `MaxStanding2`, `IsTeamAward2`, `RewOnKillRepValue2`, `TeamDependent`) VALUES (15816, 910, 0, 5, 1, 1, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` (`creature_id`, `RewOnKillRepFaction1`, `RewOnKillRepFaction2`, `MaxStanding1`, `IsTeamAward1`, `RewOnKillRepValue1`, `MaxStanding2`, `IsTeamAward2`, `RewOnKillRepValue2`, `TeamDependent`) VALUES (15815, 910, 0, 5, 1, 1, 0, 0, 0, 0);
+
