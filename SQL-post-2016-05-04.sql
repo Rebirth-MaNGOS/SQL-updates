@@ -3379,3 +3379,6 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (85111, 55, -9386.42, 1393.
 
 -- speed for kurinnaxx
 UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=1.64 WHERE  `entry`=15348;
+
+-- hitbox for tyrant devilsaur
+UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.5, `combat_reach`=1.8 WHERE  `modelid`=5240;
