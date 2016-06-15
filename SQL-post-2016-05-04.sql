@@ -3438,3 +3438,7 @@ UPDATE `zp_mangosd`.`creature_onkill_reputation` SET `RewOnKillRepValue1`=250 WH
 UPDATE `zp_mangosd`.`creature_onkill_reputation` SET `RewOnKillRepValue1`=5 WHERE  `creature_id`=15815 LIMIT 1;
 UPDATE `zp_mangosd`.`creature_onkill_reputation` SET `RewOnKillRepValue1`=5 WHERE  `creature_id`=15816 LIMIT 1;
 UPDATE `zp_mangosd`.`creature_onkill_reputation` SET `RewOnKillRepValue1`=250 WHERE  `creature_id`=15818 LIMIT 1;
+
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=4000 WHERE  `entry`=15860 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `maxhealth`=4000 WHERE  `entry`=15860 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=4000, `maxhealth`=4000 WHERE  `entry`=15861 LIMIT 1;
