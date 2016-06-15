@@ -3377,3 +3377,5 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (85111, 53, -9392.95, 1369.
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (85111, 54, -9389.9, 1388.69, 21.3866, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3036119, 1.42076, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (85111, 55, -9386.42, 1393.09, 21.3866, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3036120, 0.776731, 0, 0);
 
+-- speed for kurinnaxx
+UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=1.64 WHERE  `entry`=15348;
