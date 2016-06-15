@@ -3382,3 +3382,59 @@ UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=1.64 WHERE  `entry`=1534
 
 -- hitbox for tyrant devilsaur
 UPDATE `zp_mangosd`.`creature_model_info` SET `bounding_radius`=1.5, `combat_reach`=1.8 WHERE  `modelid`=5240;
+
+-- AQ 10 hour war
+
+UPDATE `zp_mangosd`.`creature_template` SET `modelid_1`=15738 WHERE  `entry`=15818 LIMIT 1;
+
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES (1000011158, 15818, 0, 0, 100, 0, 30000, 30000, 30000, 30000, 11, 26167, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Lieutenant general nokhor - Colossal Smash');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES (1000011159, 15818, 0, 0, 100, 0, 10000, 15000, 10000, 15000, 11, 19643, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Lieutenant general nokhor - Colossal Smash');
+
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE  `entry`=15818 LIMIT 1;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=3000 WHERE  `guid`=3034099 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=4691 WHERE  `entry`=15741 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=4691 WHERE  `entry`=15740 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=4691 WHERE  `entry`=15818 LIMIT 1;
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (15818, 34002, 100, 0, -34002, 2, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) VALUES (32695, 15818, 1, 0, 0, -7435.24, -3588.81, 11.5004, 0.696611, 3000, 5, 0, 490589, 393000, 0, 2);
+
+REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (32695, 1, -7432.52, -3566.45, 9.92427, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.4777, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (32695, 2, -7407.78, -3538.71, 9.08789, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.849159, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (32695, 3, -7388.24, -3506.73, 12.2038, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.837377, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (32695, 4, -7428.52, -3471.95, 13.1676, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.00715, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (32695, 5, -7470.39, -3490.61, 10.6596, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.54631, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (32695, 6, -7500.57, -3535.61, 11.4199, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.24531, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (32695, 7, -7497.5, -3595.05, 10.2093, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.14459, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (32695, 8, -7478.03, -3637.27, 12.822, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.21135, 0, 0);
+
+UPDATE `zp_mangosd`.`creature_onkill_reputation` SET `RewOnKillRepValue1`=250 WHERE  `creature_id`=15755 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_onkill_reputation` SET `RewOnKillRepValue1`=250 WHERE  `creature_id`=15743 LIMIT 1;
+
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` (`creature_id`, `RewOnKillRepFaction1`, `RewOnKillRepFaction2`, `MaxStanding1`, `IsTeamAward1`, `RewOnKillRepValue1`, `MaxStanding2`, `IsTeamAward2`, `RewOnKillRepValue2`, `TeamDependent`) VALUES (15818, 910, 0, 5, 1, 250, 0, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`game_event_creature` (`guid`, `event`) VALUES (32695, 54);
+
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_anubisath_warbringer' WHERE  `entry`=15810 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_anubisath_warbringer' WHERE  `entry`=15807 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_anubisath_warbringer' WHERE  `entry`=15758 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_anubisath_warbringer' WHERE  `entry`=15754 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_anubisath_warbringer' WHERE  `entry`=15751 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_anubisath_warbringer' WHERE  `entry`=15748 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_anubisath_warbringer' WHERE  `entry`=15815 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_anubisath_warbringer' WHERE  `entry`=15816 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_anubisath_warbringer' WHERE  `entry`=15814 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_anubisath_warbringer' WHERE  `entry`=15817 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_anubisath_warbringer' WHERE  `entry`=15813 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_anubisath_warbringer' WHERE  `entry`=15755 LIMIT 1;
+
+UPDATE `zp_mangosd`.`creature_onkill_reputation` SET `RewOnKillRepValue1`=250 WHERE  `creature_id`=15817 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_onkill_reputation` SET `RewOnKillRepValue1`=250 WHERE  `creature_id`=15758 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_onkill_reputation` SET `RewOnKillRepValue1`=50 WHERE  `creature_id`=15754 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_onkill_reputation` SET `RewOnKillRepValue1`=5 WHERE  `creature_id`=15751 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_onkill_reputation` SET `RewOnKillRepValue1`=5 WHERE  `creature_id`=15748 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_onkill_reputation` SET `RewOnKillRepValue1`=250 WHERE  `creature_id`=15743 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_onkill_reputation` SET `RewOnKillRepValue1`=5 WHERE  `creature_id`=15815 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_onkill_reputation` SET `RewOnKillRepValue1`=5 WHERE  `creature_id`=15816 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_onkill_reputation` SET `RewOnKillRepValue1`=250 WHERE  `creature_id`=15818 LIMIT 1;
