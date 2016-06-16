@@ -4262,3 +4262,7 @@ REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10254, 180691, 509, -9695.8, 1654
 REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10255, 180691, 509, -9312.41, 1174.65, 21.3863, 5.79273, 0, 0, 0.242777, -0.970082, 21600, 100, 1);
 
 UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=1.5 WHERE  `entry`=15343;
+
+-- delete text looks like shit
+DELETE FROM `zp_scriptdevzerod`.`script_texts` WHERE  `entry`=-1509030;
+DELETE FROM `zp_scriptdevzerod`.`script_texts` WHERE  `entry`=-1509029;
