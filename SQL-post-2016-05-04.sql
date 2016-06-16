@@ -4242,3 +4242,6 @@ UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=5400 WHERE  `id`=15249;
 -- defender respawn
 UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=43200 WHERE  `id`=15277;
 
+-- andorov text
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1509029, 'Come get some!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'andorov SAY_ANDOROV_INTRO_4');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1509030, 'Kill first, ask questions later... Incoming!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'andorov SAY_ANDOROV_ATTACK_START');
