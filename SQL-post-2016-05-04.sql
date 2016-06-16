@@ -4298,9 +4298,12 @@ REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `pos
 REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (52128, 1, -6957.71, 958.351, 14.9562, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.7756, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES (52129, 1, -6967.33, 935.938, 13.8174, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.48107, 0, 0);
 
+
 UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=52442 LIMIT 1;
 UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=52124 LIMIT 1;
 UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=52125 LIMIT 1;
 UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=52126 LIMIT 1;
 UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=52128 LIMIT 1;
 UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=52129 LIMIT 1;
+
+update zp_mangosd.game_event set length = 36000 where entry = 54;
