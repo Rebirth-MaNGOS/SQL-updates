@@ -309,7 +309,7 @@ UPDATE `zp_mangosd`.`creature` SET `id`=15249 WHERE  `guid`=88003;
 UPDATE `zp_mangosd`.`creature` SET `id`=15249 WHERE  `guid`=87999;
 
 -- AQ20
--- coffer respawn, 21600 förut, nu 7 dagar för att inte kunna farm loot
+-- coffer respawn, 21600 fÃ¶rut, nu 7 dagar fÃ¶r att inte kunna farm loot
 UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`=604800 WHERE  `id`=180691;
 
 -- add large coffers to world AQ40
@@ -1396,13 +1396,13 @@ DELETE FROM `zp_mangosd`.`creature_onkill_reputation` WHERE  `creature_id`=15168
 15324 - gladiator
 15327 - hive'zara stinger
 15325 - hive'zara wasp
-15462 - spitting scarab - lägre, 1 och 0.2
-15461 - shrieker scarab - lägre, 1 och 0.2
+15462 - spitting scarab - lÃ¤gre, 1 och 0.2
+15461 - shrieker scarab - lÃ¤gre, 1 och 0.2
 15320 - hive'zara soldier
 15323 - hive'zara sandstalker
-15319 - hive'zara collector - lägre, 1 och 0.2
-15318 - hive'zara drone - lägre, 1 och 0.2
-15336 - hive'zara tail lasher - lägre, 1 och 0.2
+15319 - hive'zara collector - lÃ¤gre, 1 och 0.2
+15318 - hive'zara drone - lÃ¤gre, 1 och 0.2
+15336 - hive'zara tail lasher - lÃ¤gre, 1 och 0.2
 
 15391 - qeez
 15392 - tuubid
@@ -1581,8 +1581,8 @@ REPLACE INTO `zp_mangosd`.`creature_loot_template` VALUES (15311, 21226, 20, 0, 
 
 -- Random drops from all mobs
 -- epic pooler 24089 24090 0.01%
--- blåa pooler 24019 24017 0.02%
--- gröna pooler 24016 24018 24020 0.02%
+-- blÃ¥a pooler 24019 24017 0.02%
+-- grÃ¶na pooler 24016 24018 24020 0.02%
 
 -- AQ20
 
@@ -2419,7 +2419,7 @@ UPDATE `zp_mangosd`.`quest_template` SET `RewRepFaction1`=910, `RewRepValue1`=20
 15323 - hive'zara sandstalker ok
 15319 - hive'zara collector ok
 15318 - hive'zara drone ok
-15336 - hive'zara tail lasher - lägre, 1 och 0.2
+15336 - hive'zara tail lasher - lÃ¤gre, 1 och 0.2
 */
 -- loot for drone
 REPLACE INTO `zp_mangosd`.`skinning_loot_template` VALUES (15318, 20499, 100, 1, 1, 1, 0, 0, 0);
@@ -2638,10 +2638,10 @@ UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, 
 UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330047 WHERE  `entry`=15325;
 UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330047 WHERE  `entry`=153250;
 
--- 15387 - qiraji warrior rajaxx mob, ska gå allt 0
+-- 15387 - qiraji warrior rajaxx mob, ska gÃ¥ allt 0
 UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50 WHERE  `entry`=15387;
 
--- 15344 - swarmguard needler, rajaxx mob ska gå allt 0
+-- 15344 - swarmguard needler, rajaxx mob ska gÃ¥ allt 0
 UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50 WHERE  `entry`=15344;
 
 -- 15338 - obsidian destroyer allt
@@ -2659,7 +2659,7 @@ UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, 
 -- 15333 - silithid feeder 0 INTE HA MANA ELLER VARA ELITE
 UPDATE `zp_mangosd`.`creature_template` SET `minmana`=0, `maxmana`=0, `armor`=3791, `faction_A`=32, `faction_H`=32, `rank`=0, `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50 WHERE  `entry`=15333;
 
--- 15521 - hive'zara hatchling, inte ändra
+-- 15521 - hive'zara hatchling, inte Ã¤ndra
 UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50 WHERE  `entry`=15521;
 
 -- 15555 - hive'zara larva, IMMUN ALLT
@@ -2788,7 +2788,7 @@ UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, 
 -- 15246 - qiraji mindslayer
 UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=15246;
 
--- 15718 - ouro scarab 0 inte immun något
+-- 15718 - ouro scarab 0 inte immun nÃ¥got
 UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50 WHERE  `entry`=15718;
 
 -- cthun mobs allt
@@ -2799,7 +2799,7 @@ UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, 
 UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=650330111 WHERE  `entry`=15802;
 
 -- bossar aq40 - immunities and taunt immune
--- 15263 - skeram allt, ska gå CS
+-- 15263 - skeram allt, ska gÃ¥ CS
 UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=616775679 WHERE  `entry`=15263;
 
 -- 15511 - kri opt
@@ -2951,7 +2951,7 @@ REPLACE INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment
 
 -- 10 hour war RP
 
-REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `comment`) VALUES (-1720262, 'I am Saurfang. Brother of Broxigar. You know me to be the Supreme Commander of the Might of Kalimdor. An orc - a true orc warrior - wishes for one thing: To die in the glory of battle against a hated enemy. Some of you have fought in battles. Peace has been with us for many years. Many years we sat idle but many years we battled. In those years - where strife, the land and Legion and Scourge, sacked our homes, killed our families — these insects dwelled beneath us. Beneath our homes — waiting. Waiting to crush the life from our little ones. To slay all in their path. This they do for their god. And for our gods? We defend. We stand. We show that as one. United. We destroy. Their god will fall. To die today, on this field of battle, is to die an orcish death. To die today is to die for our little ones. Our old ones. Our … loved ones. Would any of you deny yourselves such a death? Such an honor?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, NULL);
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `comment`) VALUES (-1720262, 'I am Saurfang. Brother of Broxigar. You know me to be the Supreme Commander of the Might of Kalimdor. An orc - a true orc warrior - wishes for one thing: To die in the glory of battle against a hated enemy. Some of you have fought in battles. Peace has been with us for many years. Many years we sat idle but many years we battled. In those years - where strife, the land and Legion and Scourge, sacked our homes, killed our families Â— these insects dwelled beneath us. Beneath our homes Â— waiting. Waiting to crush the life from our little ones. To slay all in their path. This they do for their god. And for our gods? We defend. We stand. We show that as one. United. We destroy. Their god will fall. To die today, on this field of battle, is to die an orcish death. To die today is to die for our little ones. Our old ones. Our Â… loved ones. Would any of you deny yourselves such a death? Such an honor?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, NULL);
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `comment`) VALUES (-1720261, 'FOR HONOR!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, NULL);
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `comment`) VALUES (-1720260, 'FER MAGNI!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, NULL);
 
@@ -3442,3 +3442,89 @@ UPDATE `zp_mangosd`.`creature_onkill_reputation` SET `RewOnKillRepValue1`=250 WH
 UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=4000 WHERE  `entry`=15860 LIMIT 1;
 UPDATE `zp_mangosd`.`creature_template` SET `maxhealth`=4000 WHERE  `entry`=15860 LIMIT 1;
 UPDATE `zp_mangosd`.`creature_template` SET `minhealth`=4000, `maxhealth`=4000 WHERE  `entry`=15861 LIMIT 1;
+
+-- Fix typo in quest Highperch Venom
+UPDATE `zp_mangosd`.`quest_template` SET `Objectives`='Bring 10 Highperch Venom Sacs to Fiora Longears in Theramore.' WHERE (`entry`='1135');
+
+-- Fix the look of Blooddreched Mask
+UPDATE `zp_mangosd`.`item_template` SET `displayid`='15308' WHERE (`entry`='22718');
+
+-- Brumeran, set movement type to pathing_barriers and set new spawn point
+UPDATE `zp_mangosd`.`creature_template` SET `MovementType`='2' WHERE (`entry`='10807');
+REPLACE INTO `zp_mangosd`.`creature` VALUES ('41758', '10807', '1', '0', '0', '6370.82', '-4194.23', '708.745', '3.76561', '333', '0', '0', '11705', '0', '0', '2');
+
+-- Brumeran, add pathing
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '1', '6370.82', '-4194.23', '708.745', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3041983', '3.76561', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '2', '6349.9', '-4206.46', '715.207', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3041984', '3.67137', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '3', '6319.9', '-4217.94', '722.16', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3041985', '3.34935', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '4', '6288.01', '-4225.18', '725.532', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3041986', '3.36506', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '5', '6260.12', '-4239.74', '734.515', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3041987', '3.60853', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '6', '6231.03', '-4244.07', '738.138', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3041988', '3.30615', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '7', '6203.26', '-4261.42', '736.144', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3041989', '3.72634', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '8', '6184.36', '-4273.23', '742.282', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3041990', '3.62031', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '9', '6168.84', '-4280.29', '745.575', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3041991', '3.56534', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '10', '6154.23', '-4286.06', '740.624', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3041992', '3.50643', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '11', '6109.75', '-4301.72', '728.056', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3041993', '3.45931', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '12', '6080.95', '-4319.68', '724.259', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3041994', '3.73027', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '13', '6057.93', '-4342.09', '719.754', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3041995', '3.91484', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '14', '6021.58', '-4365.48', '716.958', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3041996', '3.71849', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '15', '5989.76', '-4394.76', '716.306', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3041997', '3.91091', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '16', '5973.93', '-4418.03', '715.933', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3041998', '4.11119', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '17', '5956.22', '-4462.41', '710.215', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3041999', '4.38215', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '18', '5943.75', '-4518.63', '715.417', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042000', '4.51566', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '19', '5936.7', '-4549.95', '718.925', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042001', '4.39393', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '20', '5909.41', '-4586.01', '724.435', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042002', '4.05228', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '21', '5875.39', '-4598.82', '739.676', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042003', '3.96981', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '22', '5845.86', '-4631.08', '751.177', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042004', '4.18187', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '23', '5816.55', '-4701.07', '760.861', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042005', '4.30753', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '24', '5787.69', '-4729.97', '770.126', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042006', '3.26295', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '25', '5768.05', '-4730.58', '774.834', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042007', '3.17263', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '26', '5739.69', '-4727.63', '776.264', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042008', '2.52861', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '27', '5718.7', '-4709.89', '780.701', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042009', '2.39509', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '28', '5705.17', '-4696.53', '780.427', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042010', '2.15947', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '29', '5691.86', '-4673.18', '776.577', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042011', '2.08486', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '30', '5669.54', '-4632.35', '770.852', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042012', '2.06129', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '31', '5648.36', '-4589.5', '769.567', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042013', '1.96312', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '32', '5629.96', '-4550.37', '761.589', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042014', '2.06915', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '33', '5607.27', '-4519.12', '760.518', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042015', '2.23801', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '34', '5586.91', '-4501.79', '759.632', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042016', '2.60322', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '35', '5560.44', '-4494.66', '758.15', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042017', '2.98021', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '36', '5531.03', '-4495.38', '755.837', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042018', '3.21976', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '37', '5497.07', '-4498.04', '752.834', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042019', '3.21976', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '38', '5530.47', '-4496.55', '755.706', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042020', '0.042816', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '39', '5565.78', '-4497.01', '758.221', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042021', '5.84691', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '40', '5592.22', '-4515.04', '761.912', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042022', '5.57595', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '41', '5622.05', '-4553.12', '763.248', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042023', '5.28929', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '42', '5638.92', '-4581.15', '768.811', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042024', '5.25002', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '43', '5669.69', '-4633.75', '770.815', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042025', '5.22646', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '44', '5694.72', '-4677.55', '777.916', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042026', '5.24217', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '45', '5715', '-4707.29', '780.729', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042027', '5.3639', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '46', '5736.35', '-4729.28', '776.74', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042028', '5.72125', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '47', '5757.9', '-4736.91', '776.15', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042029', '6.165', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '48', '5781.88', '-4730.75', '771.861', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042030', '0.317711', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '49', '5814.98', '-4714.05', '760.925', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042031', '0.612235', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '50', '5846', '-4681.19', '755.202', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042032', '0.808585', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '51', '5877.29', '-4649.47', '745.214', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042033', '0.816439', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '52', '5905.39', '-4617.47', '734.097', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042034', '0.875344', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '53', '5924.5', '-4584.62', '719.5', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042035', '1.07562', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '54', '5943.86', '-4547.4', '716.829', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042036', '1.09133', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '55', '5957.07', '-4519.55', '712.669', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042037', '1.14631', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '56', '5964.55', '-4493.08', '707.478', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042038', '1.29553', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '57', '5972.93', '-4450.03', '710.08', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042039', '1.30339', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '58', '5991.99', '-4412.85', '713.003', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042040', '1.02457', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '59', '6015.32', '-4388.93', '714.437', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042041', '0.808585', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '60', '6049.93', '-4355.97', '716.326', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042042', '0.714337', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '61', '6083.83', '-4328.14', '725.357', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042043', '0.596527', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '62', '6112.93', '-4314.77', '730.298', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042044', '0.376616', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '63', '6136.34', '-4308.82', '734.252', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042045', '0.140996', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '64', '6155.18', '-4306.13', '736.16', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042046', '0.459082', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '65', '6183.18', '-4310.58', '736.884', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042047', '0.247025', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '66', '6205.23', '-4292.02', '732.276', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042048', '0.973518', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '67', '6219.72', '-4261.92', '735.699', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042049', '1.04813', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '68', '6240.99', '-4247.77', '736.161', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042050', '0.545476', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '69', '6268.9', '-4234.89', '732.184', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042051', '0.356981', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '70', '6307.5', '-4224.48', '724.615', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042052', '0.243098', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '71', '6342.48', '-4215.8', '718.878', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042053', '0.3452', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '72', '6359.93', '-4203.03', '712.671', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042054', '0.63187', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '73', '6384.73', '-4184.79', '704.849', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042055', '0.643651', '0', '0');
+
