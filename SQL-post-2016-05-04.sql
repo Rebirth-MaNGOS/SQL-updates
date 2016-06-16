@@ -4070,3 +4070,12 @@ UPDATE `zp_mangosd`.`creature_template` SET `scale`='1' WHERE (`entry`='15246');
 UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=604800, `MovementType`=0 WHERE  `id`=15250;
 UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=604800, `MovementType`=0 WHERE  `id`=15252;
 UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=604800, `MovementType`=0 WHERE  `id`=15246;
+
+-- Qiraji slayer reduce threat on knockback and emote
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action2_type`=13, `action2_param1`=-20, `action2_param2`=1 WHERE  `id`=1525002;
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action2_type`=1, `action2_param1`=-15252 WHERE  `id`=1525004;
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-15252, '%s lets out a battlecry!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 2, 0, 0, 'Qiraji Slayer');
+
+-- vekniss guardian emote
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-15323, '%s emits a strange noise.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 2, 0, 0, 'Vekniss Guardian');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1523303, 15233, 0, 0, 100, 2, 0, 0, 0, 0, 1, -15323, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Vekniss Guardian - Emote on Aggro');
