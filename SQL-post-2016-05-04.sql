@@ -4305,5 +4305,6 @@ UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=52125 LIMIT 1;
 UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=52126 LIMIT 1;
 UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=52128 LIMIT 1;
 UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=52129 LIMIT 1;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`=2 WHERE  `guid`=52127 LIMIT 1;
 
 update zp_mangosd.game_event set length = 36000 where entry = 54;
