@@ -1,4 +1,4 @@
--- Obsidian Sentinel should no longer be immune to snare and root
+﻿-- Obsidian Sentinel should no longer be immune to snare and root
 UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=617298843 WHERE  `entry`=7023;
 
 -- Scarlet Sentry, Crimson Gallant, Crimson Battle Mage, Crimson Inquisitor, Crimson Defender, Crimson Sorcerer, Crimson Priest, Crimson Monk, Crimson Guardsman, Crimson Conjuror, Crimson Initiate and Anvilrage Overseer should no longer be immune to MC
@@ -3677,3 +3677,6 @@ UPDATE `zp_mangosd`.`quest_template` SET `OfferRewardText`='You are not alone, h
 UPDATE `zp_mangosd`.`quest_template` SET `RequestItemsText`='There is much history rooted in their distrust of the mortal races; but alas, such is a tale better left for the Brood to tell when the time is right.' WHERE (`entry`='8301');
 UPDATE `zp_mangosd`.`quest_template` SET `RequestItemsText`='Perhaps one day the whole of Cenarion Hold will be working under your command.' WHERE (`entry`='8302');
 
+-- 30 min respawn on skeram trash
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=1800 WHERE  `id`=15264;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=1800 WHERE  `id`=15262;
