@@ -3669,3 +3669,11 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '50', '-6779.74', 
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '51', '-6766.01', '1839.14', '4.4305', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047209', '0.895278', '0', '0');
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '52', '-6748.66', '1861.32', '4.76229', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047210', '0.907058', '0', '0');
 
+-- Fix typo in the quest Corrupted Saber
+UPDATE `zp_scriptdevzerod`.`script_texts` SET `content_default`='%s follows $N obediently.' WHERE (`entry`='-1000542');
+
+-- fix typoes in quests The Path of the Righteous and The Hand of the Righteous
+UPDATE `zp_mangosd`.`quest_template` SET `OfferRewardText`='You are not alone, hero. I will now grant you the ability to deputize others to help you in your quest. If you are to be the champion of your people, you will need assistance in your tasks and duties.' WHERE (`entry`='8301');
+UPDATE `zp_mangosd`.`quest_template` SET `RequestItemsText`='There is much history rooted in their distrust of the mortal races; but alas, such is a tale better left for the Brood to tell when the time is right.' WHERE (`entry`='8301');
+UPDATE `zp_mangosd`.`quest_template` SET `RequestItemsText`='Perhaps one day the whole of Cenarion Hold will be working under your command.' WHERE (`entry`='8302');
+
