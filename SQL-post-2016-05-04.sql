@@ -3528,3 +3528,144 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '71', '6342.48', 
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '72', '6359.93', '-4203.03', '712.671', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042054', '0.63187', '0', '0');
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('41758', '73', '6384.73', '-4184.79', '704.849', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3042055', '0.643651', '0', '0');
 
+
+-- Weaponmaster Sayoc in Orgrimmar shouldn't mention Silvermoon anymore
+UPDATE `zp_mangosd`.`npc_text` SET `text0_0`='Archibald, Undercity\'s weapon master, can train you; he is in the War Quarter.' WHERE (`ID`='10779');
+UPDATE `zp_mangosd`.`npc_text` SET `text0_1`='Archibald, Undercity\'s weapon master, can train you; he is in the War Quarter.' WHERE (`ID`='10779');
+UPDATE `zp_mangosd`.`npc_text` SET `text0_0`='The Forsaken weapon master Archibald knows his way around the polearm. He trains others in the War Quarter of the Undercity.' WHERE (`ID`='10777');
+UPDATE `zp_mangosd`.`npc_text` SET `text0_1`='The Forsaken weapon master Archibald knows his way around the polearm. He trains others in the War Quarter of the Undercity.' WHERE (`ID`='10777');
+
+-- Adjust respawn timers for several npcs
+-- Colonel Kurzen
+UPDATE `creature` SET `spawntimesecs`='600' WHERE (`guid`='1481');
+-- Tethis
+UPDATE `creature` SET `spawntimesecs`='600' WHERE (`guid`='1342');
+-- Kind Bangalash
+UPDATE `creature` SET `spawntimesecs`='900' WHERE (`guid`='2169');
+-- Mistress Natalia 
+UPDATE `creature` SET `spawntimesecs`='900' WHERE (`guid`='43097');
+-- Sin'Dall
+UPDATE `creature` SET `spawntimesecs`='600' WHERE (`guid`='2127');
+-- Bhag'thera
+UPDATE `creature` SET `spawntimesecs`='600' WHERE (`guid`='1348');
+
+-- Twilight Prophets, south one
+-- add two mobs, adjust respawn timer and movement type
+REPLACE INTO `zp_mangosd`.`creature`  VALUES ('10494', '800008', '1', '0', '0', '-7570.81', '1701.4', '5.3528', '4.18844', '25', '0', '0', '646473', '0', '0', '2');
+REPLACE INTO `zp_mangosd`.`creature`  VALUES ('10495', '11880', '1', '0', '306', '-7570.81', '1701.4', '5.3528', '4.18844', '300', '0', '0', '3883', '0', '0', '2');
+REPLACE INTO `zp_mangosd`.`creature`  VALUES ('42969', '11880', '1', '11811', '0', '-7570.81', '1701.4', '5.3528', '4.18844', '300', '0', '0', '600000', '0', '0', '2');
+REPLACE INTO `zp_mangosd`.`creature`  VALUES ('43322', '15308', '1', '15373', '0', '-7570.81', '1701.4', '5.3528', '4.18844', '14400', '0', '0', '600000', '11502', '0', '2');
+
+-- set up formation
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES ('10494', '10494', '0', '0', '2');
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES ('10494', '43322', '0', '0', '2');
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES ('10494', '42969', '2', '270', '2');
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES ('10494', '14495', '2', '90', '2');
+
+-- add pathing to the prophet's dummy
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '1', '-7574.52', '1695.76', '5.37053', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043057', '4.12954', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '2', '-7580.3', '1686.99', '5.08518', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043058', '4.12954', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '3', '-7586.85', '1677.06', '5.01298', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043059', '4.12954', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '4', '-7593.16', '1667.49', '5.83941', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043060', '4.12954', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '5', '-7598.17', '1657.06', '2.92171', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043061', '4.29839', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '6', '-7599.15', '1649.15', '1.12362', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043062', '4.56543', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '7', '-7605.11', '1635.55', '1.60166', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043063', '4.29839', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '8', '-7609.32', '1625.93', '1.59502', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043064', '4.31017', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '9', '-7612.34', '1618.13', '2.4147', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043065', '4.55757', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '10', '-7613.11', '1608.6', '2.67941', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043066', '4.42013', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '11', '-7616.91', '1599.19', '4.43854', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043067', '4.3141', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '12', '-7620.5', '1592.34', '5.69754', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043068', '4.09812', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '13', '-7624.48', '1588.78', '6.14029', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043069', '3.77218', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '14', '-7630.39', '1586.88', '5.86006', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043070', '3.37948', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '15', '-7637.69', '1587.27', '5.53186', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043071', '3.04176', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '16', '-7645.7', '1590.09', '5.09842', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043072', '2.74331', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '17', '-7648.85', '1592.96', '4.896', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043073', '2.38988', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '18', '-7653.71', '1599.81', '4.46223', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043074', '2.17389', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '19', '-7658.43', '1610.13', '5.55651', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043075', '1.96576', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '20', '-7661.53', '1620.36', '6.52057', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043076', '1.85188', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '21', '-7667.28', '1630.25', '6.33222', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043077', '2.14641', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '22', '-7683.33', '1643.96', '5.26506', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043078', '2.44093', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '23', '-7696.71', '1655.24', '6.93672', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043079', '2.44093', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '24', '-7710.39', '1666.14', '6.47792', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043080', '2.51554', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '25', '-7733.5', '1681.94', '7.47707', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043081', '2.55874', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '26', '-7755.82', '1696.03', '2.35385', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043082', '2.58623', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '27', '-7764.29', '1701.83', '1.37475', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043083', '2.4802', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '28', '-7773.55', '1713.91', '1.75859', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043084', '2.05608', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '29', '-7775.57', '1724.2', '2.28389', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043085', '1.65553', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '30', '-7776.5', '1752.14', '1.38545', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043086', '1.52594', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '31', '-7782.73', '1776.87', '1.20003', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043087', '2.22495', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '32', '-7793.91', '1790.33', '-0.767349', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043088', '2.276', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '33', '-7808.52', '1807.27', '3.58441', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043089', '2.28778', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '34', '-7830.82', '1827.97', '5.16363', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043090', '2.42522', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '35', '-7842.93', '1836.52', '3.8087', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043091', '2.58623', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '36', '-7859.58', '1841.9', '2.54878', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043092', '2.81399', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '37', '-7879.17', '1849.42', '4.24954', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043093', '2.73545', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '38', '-7905.08', '1858.17', '3.28829', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043094', '2.94358', '0', '0');
+
+-- Twilight Prophets, south one
+-- add two mobs, adjust respawn timer and movement type
+REPLACE INTO `zp_mangosd`.`creature` VALUES ('1448', '800008', '1', '0', '0', '-6752.1', '1856.98', '5.0446', '3.91044', '25', '0', '0', '646473', '0', '0', '2');
+REPLACE INTO `zp_mangosd`.`creature` VALUES ('42983', '11880', '1', '11823', '0', '-6750.87', '1857.03', '5.04945', '3.9662', '300', '0', '0', '600000', '0', '0', '2');
+REPLACE INTO `zp_mangosd`.`creature` VALUES ('42984', '11880', '1', '11812', '0', '-6750.87', '1857.03', '5.04945', '3.9662', '300', '0', '0', '600000', '0', '0', '2');
+REPLACE INTO `zp_mangosd`.`creature` VALUES ('43323', '15308', '1', '15373', '0', '-6752.1', '1856.98', '5.0446', '3.91044', '14400', '0', '0', '600000', '11502', '0', '2');
+
+-- set up formation
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES ('1448', '1448', '0', '0', '2');
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES ('1448', '43323', '0', '0', '2');
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES ('1448', '42983', '2', '270', '2');
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES ('1448', '42984', '2', '90', '2');
+
+-- add pathing to the prophet's dummy
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '1', '-6759.11', '1848.59', '4.75505', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047159', '4.01332', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '2', '-6774.87', '1829.84', '4.09737', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047160', '4.01332', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '3', '-6796.17', '1802.08', '2.65633', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047161', '4.07223', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '4', '-6814.99', '1776.82', '2.09988', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047162', '4.07223', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '5', '-6829.46', '1752.89', '1.50611', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047163', '4.20181', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '6', '-6843.14', '1728.46', '3.47621', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047164', '4.20181', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '7', '-6856.83', '1704.03', '3.47838', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047165', '4.20181', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '8', '-6872.22', '1676.55', '4.7189', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047166', '4.20181', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '9', '-6885.16', '1640.38', '3.03107', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047167', '4.41387', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '10', '-6875.16', '1615.99', '1.08375', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047168', '4.62199', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '11', '-6859.06', '1563.6', '-0.635531', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047169', '4.64948', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '12', '-6848.12', '1511.15', '1.92289', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047170', '4.64948', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '13', '-6838.12', '1461.31', '4.37632', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047171', '4.64948', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '14', '-6863.36', '1390.14', '3.36951', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047172', '4.5788', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '15', '-6877.56', '1352.12', '2.64496', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047173', '4.5788', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '16', '-6891.81', '1318.34', '2.42191', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047174', '4.58272', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '17', '-6899.38', '1299.47', '3.84198', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047175', '4.59058', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '18', '-6908.93', '1270.88', '0.817347', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047176', '4.59058', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '19', '-6915.11', '1250.81', '4.39636', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047177', '4.59843', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '20', '-6922.63', '1226.36', '4.07944', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047178', '4.61806', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '21', '-6927.62', '1207.32', '4.39694', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047179', '4.52774', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '22', '-6932.8', '1199.36', '5.78382', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047180', '4.11934', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '23', '-6942.19', '1185.98', '9.6243', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047181', '4.24893', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '24', '-6937.31', '1193.01', '7.84251', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047182', '0.965963', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '25', '-6931.36', '1201.62', '5.31721', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047183', '0.965963', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '26', '-6925.71', '1209.54', '3.7799', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047184', '1.06414', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '27', '-6921.07', '1227.95', '3.91709', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047185', '1.31547', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '28', '-6915.02', '1249.41', '4.35671', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047186', '1.29583', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '29', '-6907.79', '1272.54', '0.384373', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047187', '1.26442', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '30', '-6899.7', '1298.11', '3.65345', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047188', '1.26442', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '31', '-6893.55', '1316.11', '2.91573', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047189', '1.233', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '32', '-6878.7', '1351.78', '2.54359', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047190', '1.15839', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '33', '-6863.95', '1388.22', '3.32821', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047191', '1.1898', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '34', '-6848.92', '1426.62', '0.367135', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047192', '1.20551', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '35', '-6837.37', '1457.95', '4.37115', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047193', '1.233', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '36', '-6831.39', '1486.82', '0.594194', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047194', '1.36652', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '37', '-6829.91', '1518.13', '-0.60206', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047195', '1.55501', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '38', '-6837.03', '1541.29', '1.29376', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047196', '1.8731', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '39', '-6848.14', '1568.55', '1.80092', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047197', '1.97127', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '40', '-6860.17', '1598.24', '-0.087305', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047198', '1.86917', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '41', '-6864.05', '1615.49', '0.55422', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047199', '1.78278', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '42', '-6869.32', '1637.12', '3.25275', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047200', '1.79063', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '43', '-6874.13', '1662.18', '4.01711', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047201', '1.72387', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '44', '-6872.2', '1674.5', '4.71376', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047202', '1.39008', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '45', '-6860.43', '1697.91', '3.61161', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047203', '1.09163', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '46', '-6844.32', '1726.43', '3.23925', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047204', '1.04843', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '47', '-6828.81', '1752.25', '1.60413', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047205', '1.01309', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '48', '-6815.12', '1773.86', '2.5577', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047206', '0.989525', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '49', '-6794.58', '1802.61', '2.8005', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047207', '0.93062', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '50', '-6779.74', '1822.51', '3.64122', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047208', '0.926693', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '51', '-6766.01', '1839.14', '4.4305', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047209', '0.895278', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('1448', '52', '-6748.66', '1861.32', '4.76229', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3047210', '0.907058', '0', '0');
+
