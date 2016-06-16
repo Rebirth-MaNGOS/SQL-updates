@@ -4070,3 +4070,150 @@ UPDATE `zp_mangosd`.`creature_template` SET `scale`='1' WHERE (`entry`='15246');
 UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=604800, `MovementType`=0 WHERE  `id`=15250;
 UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=604800, `MovementType`=0 WHERE  `id`=15252;
 UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=604800, `MovementType`=0 WHERE  `id`=15246;
+
+-- AQ 10 hour war
+
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=25 WHERE  `entry`=15743 AND `item`=24034 LIMIT 1;
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (15743, 24031, 100, 0, -24031, 1, 0, 0, 0);
+
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=25 WHERE  `entry`=15743 AND `item`=24030 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=25 WHERE  `entry`=15743 AND `item`=24028 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=25 WHERE  `entry`=15743 AND `item`=24026 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=1 WHERE  `entry`=15743 AND `item`=24030 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=1 WHERE  `entry`=15743 AND `item`=24028 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=1 WHERE  `entry`=15743 AND `item`=24026 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=1 WHERE  `entry`=15743 AND `item`=24034 LIMIT 1;
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (15755, 24031, 100, 0, -24031, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (15755, 24030, 25, 1, -24030, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (15755, 24028, 25, 1, -24028, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (15755, 24026, 25, 1, -24026, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (15755, 13446, 28.5714, 0, 2, 3, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (15755, 13444, 42.8571, 0, 2, 3, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (15755, 24034, 25, 1, -24034, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (15758, 24031, 100, 0, -24031, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (15758, 24030, 5, 1, -24030, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (15758, 24028, 5, 1, -24028, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (15758, 24026, 5, 1, -24026, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (15758, 24034, 5, 1, -24034, 1, 0, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (15754, 24026, 5, 1, -24026, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (15754, 24028, 5, 1, -24028, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (15754, 24030, 5, 1, -24030, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (15754, 24031, 75, 0, -24031, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (15754, 24034, 5, 1, -24034, 1, 0, 0, 0);
+
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=50 WHERE  `entry`=15751 AND `item`=24045 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=5 WHERE  `entry`=15751 AND `item`=24044 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=25 WHERE  `entry`=15751 AND `item`=24043 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=1 WHERE  `entry`=15751 AND `item`=24043 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=1 WHERE  `entry`=15751 AND `item`=24045 LIMIT 1;
+
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=50 WHERE  `entry`=15748 AND `item`=24056 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=5 WHERE  `entry`=15748 AND `item`=24055 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=25 WHERE  `entry`=15748 AND `item`=24054 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=1 WHERE  `entry`=15748 AND `item`=24054 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=1 WHERE  `entry`=15748 AND `item`=24056 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=15, `groupid`=1 WHERE  `entry`=15748 AND `item`=24052 LIMIT 1;
+
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=50 WHERE  `entry`=15807 AND `item`=24068 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=25, `groupid`=1 WHERE  `entry`=15807 AND `item`=24064 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=1 WHERE  `entry`=15807 AND `item`=24068 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=5 WHERE  `entry`=15807 AND `item`=24069 LIMIT 1;
+
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=50 WHERE  `entry`=15810 AND `item`=24077 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=5 WHERE  `entry`=15810 AND `item`=24065 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=5, `groupid`=1 WHERE  `entry`=15810 AND `item`=24061 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=1 WHERE  `entry`=15810 AND `item`=24065 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=5, `groupid`=1 WHERE  `entry`=15810 AND `item`=24063 LIMIT 1;
+
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=100 WHERE  `entry`=15817 AND `item`=24033 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=10 WHERE  `entry`=15817 AND `item`=24032 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=10, `groupid`=1 WHERE  `entry`=15817 AND `item`=24034 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=1 WHERE  `entry`=15817 AND `item`=24032 LIMIT 1;
+
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=100 WHERE  `entry`=15816 AND `item`=24045 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=10 WHERE  `entry`=15816 AND `item`=24044 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=100, `groupid`=1 WHERE  `entry`=15816 AND `item`=24027 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=1 WHERE  `entry`=15816 AND `item`=24045 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=10, `groupid`=2 WHERE  `entry`=15816 AND `item`=24026 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=2 WHERE  `entry`=15816 AND `item`=24044 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=100, `groupid`=1 WHERE  `entry`=15816 AND `item`=24025 LIMIT 1;
+
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=100 WHERE  `entry`=15814 AND `item`=24068 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=10 WHERE  `entry`=15814 AND `item`=24067 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=100 WHERE  `entry`=15814 AND `item`=24066 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=10 WHERE  `entry`=15814 AND `item`=24049 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=100 WHERE  `entry`=15814 AND `item`=24048 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=10 WHERE  `entry`=15814 AND `item`=24069 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=1 WHERE  `entry`=15814 AND `item`=24068 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=1 WHERE  `entry`=15814 AND `item`=24066 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=1 WHERE  `entry`=15814 AND `item`=24048 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=2 WHERE  `entry`=15814 AND `item`=24067 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=2 WHERE  `entry`=15814 AND `item`=24049 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=2 WHERE  `entry`=15814 AND `item`=24069 LIMIT 1;
+
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=100 WHERE  `entry`=15813 AND `item`=24066 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=10 WHERE  `entry`=15813 AND `item`=24065 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=100 WHERE  `entry`=15813 AND `item`=24064 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=10 WHERE  `entry`=15813 AND `item`=24063 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=100 WHERE  `entry`=15813 AND `item`=24062 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=100 WHERE  `entry`=15813 AND `item`=24066 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=10 WHERE  `entry`=15813 AND `item`=24065 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=100 WHERE  `entry`=15813 AND `item`=24064 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=10 WHERE  `entry`=15813 AND `item`=24063 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=100 WHERE  `entry`=15813 AND `item`=24062 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=10 WHERE  `entry`=15813 AND `item`=24061 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=100 WHERE  `entry`=15813 AND `item`=24060 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=100 WHERE  `entry`=15813 AND `item`=24078 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=1 WHERE  `entry`=15813 AND `item`=24066 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=1 WHERE  `entry`=15813 AND `item`=24064 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=1 WHERE  `entry`=15813 AND `item`=24062 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=1 WHERE  `entry`=15813 AND `item`=24060 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=1 WHERE  `entry`=15813 AND `item`=24078 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=2 WHERE  `entry`=15813 AND `item`=24065 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=2 WHERE  `entry`=15813 AND `item`=24063 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=2 WHERE  `entry`=15813 AND `item`=24061 LIMIT 1;
+
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=50 WHERE  `entry`=15751 AND `item`=24041 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=25 WHERE  `entry`=15751 AND `item`=24039 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=5 WHERE  `entry`=15751 AND `item`=24026 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=1 WHERE  `entry`=15751 AND `item`=24041 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=1 WHERE  `entry`=15751 AND `item`=24039 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=2 WHERE  `entry`=15751 AND `item`=24044 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=2 WHERE  `entry`=15751 AND `item`=24026 LIMIT 1;
+
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=25, `groupid`=1 WHERE  `entry`=15748 AND `item`=24050 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=5, `groupid`=2 WHERE  `entry`=15748 AND `item`=24042 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=2 WHERE  `entry`=15748 AND `item`=24055 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=5, `groupid`=2 WHERE  `entry`=15748 AND `item`=24038 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=5, `groupid`=2 WHERE  `entry`=15748 AND `item`=24057 LIMIT 1;
+
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=5, `groupid`=2 WHERE  `entry`=15807 AND `item`=24067 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=2 WHERE  `entry`=15807 AND `item`=24069 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=25, `groupid`=1 WHERE  `entry`=15807 AND `item`=24066 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=5, `groupid`=2 WHERE  `entry`=15807 AND `item`=24053 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=5, `groupid`=2 WHERE  `entry`=15807 AND `item`=24051 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=5, `groupid`=2 WHERE  `entry`=15807 AND `item`=24049 LIMIT 1;
+
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=1 WHERE  `entry`=15810 AND `item`=24077 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `groupid`=2 WHERE  `entry`=15810 AND `item`=24077 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=15, `groupid`=2 WHERE  `entry`=15810 AND `item`=24064 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=10, `groupid`=2 WHERE  `entry`=15810 AND `item`=24062 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=25, `groupid`=2 WHERE  `entry`=15810 AND `item`=24060 LIMIT 1;
+
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`=5, `groupid`=2 WHERE  `entry`=15751 AND `item`=24046 LIMIT 1;
+
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (15815, 24026, 10, 2, -24026, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (15815, 24039, 25, 1, -24039, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (15815, 24041, 50, 1, -24041, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (15815, 24043, 25, 1, -24043, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (15815, 24044, 10, 2, -24044, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (15815, 24045, 50, 1, -24045, 1, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQuestChance`, `groupid`, `mincountOrRef`, `maxcount`, `lootcondition`, `condition_value1`, `condition_value2`) VALUES (15815, 24046, 10, 2, -24046, 1, 0, 0, 0);
+
+UPDATE `zp_mangosd`.`creature_onkill_reputation` SET `RewOnKillRepValue1`=100 WHERE  `creature_id`=15817 LIMIT 1;
+UPDATE `zp_mangosd`.`creature_onkill_reputation` SET `RewOnKillRepValue1`=75 WHERE  `creature_id`=15758 LIMIT 1;
