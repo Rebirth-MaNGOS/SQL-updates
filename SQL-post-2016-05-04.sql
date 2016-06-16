@@ -3537,17 +3537,17 @@ UPDATE `zp_mangosd`.`npc_text` SET `text0_1`='The Forsaken weapon master Archiba
 
 -- Adjust respawn timers for several npcs
 -- Colonel Kurzen
-UPDATE `creature` SET `spawntimesecs`='600' WHERE (`guid`='1481');
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`='600' WHERE (`guid`='1481');
 -- Tethis
-UPDATE `creature` SET `spawntimesecs`='600' WHERE (`guid`='1342');
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`='600' WHERE (`guid`='1342');
 -- Kind Bangalash
-UPDATE `creature` SET `spawntimesecs`='900' WHERE (`guid`='2169');
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`='900' WHERE (`guid`='2169');
 -- Mistress Natalia 
-UPDATE `creature` SET `spawntimesecs`='900' WHERE (`guid`='43097');
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`='900' WHERE (`guid`='43097');
 -- Sin'Dall
-UPDATE `creature` SET `spawntimesecs`='600' WHERE (`guid`='2127');
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`='600' WHERE (`guid`='2127');
 -- Bhag'thera
-UPDATE `creature` SET `spawntimesecs`='600' WHERE (`guid`='1348');
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`='600' WHERE (`guid`='1348');
 
 -- Twilight Prophets, south one
 -- add two mobs, adjust respawn timer and movement type
