@@ -4245,3 +4245,20 @@ UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=43200 WHERE  `id`=15277;
 -- andorov text
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1509029, 'Come get some!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 'andorov SAY_ANDOROV_INTRO_4');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1509030, 'Kill first, ask questions later... Incoming!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'andorov SAY_ANDOROV_ATTACK_START');
+
+
+
+-- AQ20 add Scarab Coffer to world
+DELETE FROM `zp_mangosd`.`gameobject` WHERE  `id`=180691;
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10246, 180691, 509, -8716.24, 1545.66, 32.0371, 0.836854, 0, 0, 0.406324, 0.913729, 21600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10247, 180691, 509, -9108.18, 1488.17, 26.1798, 2.55688, 0, 0, 0.957567, 0.28821, 21600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10248, 180691, 509, -8951.36, 1839.78, -0.374717, 1.09996, 0, 0, 0.522672, 0.852534, 21600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10249, 180691, 509, -8769.42, 2008.84, 23.0657, 4.68139, 0, 0, 0.71798, -0.696063, 21600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10250, 180691, 509, -9010.93, 1994.84, 32.1079, 3.00849, 0, 0, 0.997786, 0.0665029, 21600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10251, 180691, 509, -9131.6, 2185.47, 26.9048, 3.83315, 0, 0, 0.940811, -0.338931, 21600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10252, 180691, 509, -9505.93, 2003.66, 107.568, 5.58461, 0, 0, 0.342231, -0.939616, 21600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10253, 180691, 509, -9540.7, 1587.88, 26.1903, 0.903626, 0, 0, 0.436597, 0.899657, 21600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10254, 180691, 509, -9695.8, 1654.47, 22.5454, 2.80036, 0, 0, 0.985481, 0.169788, 21600, 100, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (10255, 180691, 509, -9312.41, 1174.65, 21.3863, 5.79273, 0, 0, 0.242777, -0.970082, 21600, 100, 1);
+
+UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=1.5 WHERE  `entry`=15343;
