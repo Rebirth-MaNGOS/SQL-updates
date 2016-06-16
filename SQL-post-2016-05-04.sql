@@ -3552,15 +3552,15 @@ UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`='600' WHERE (`guid`='1348');
 -- Twilight Prophets, south one
 -- add two mobs, adjust respawn timer and movement type
 REPLACE INTO `zp_mangosd`.`creature`  VALUES ('10494', '800008', '1', '0', '0', '-7570.81', '1701.4', '5.3528', '4.18844', '25', '0', '0', '646473', '0', '0', '2');
-REPLACE INTO `zp_mangosd`.`creature`  VALUES ('10495', '11880', '1', '0', '306', '-7570.81', '1701.4', '5.3528', '4.18844', '300', '0', '0', '3883', '0', '0', '2');
-REPLACE INTO `zp_mangosd`.`creature`  VALUES ('42969', '11880', '1', '11811', '0', '-7570.81', '1701.4', '5.3528', '4.18844', '300', '0', '0', '600000', '0', '0', '2');
-REPLACE INTO `zp_mangosd`.`creature`  VALUES ('43322', '15308', '1', '15373', '0', '-7570.81', '1701.4', '5.3528', '4.18844', '14400', '0', '0', '600000', '11502', '0', '2');
+REPLACE INTO `zp_mangosd`.`creature`  VALUES ('10495', '11880', '1', '0', '306', '-7570.81', '1701.4', '5.3528', '4.18844', '300', '0', '0', '3883', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature`  VALUES ('42969', '11880', '1', '11811', '0', '-7570.81', '1701.4', '5.3528', '4.18844', '300', '0', '0', '600000', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature`  VALUES ('43322', '15308', '1', '15373', '0', '-7570.81', '1701.4', '5.3528', '4.18844', '14400', '0', '0', '600000', '11502', '0', '0');
 
 -- set up formation
 REPLACE INTO `zp_mangosd`.`creature_formations` VALUES ('10494', '10494', '0', '0', '2');
 REPLACE INTO `zp_mangosd`.`creature_formations` VALUES ('10494', '43322', '0', '0', '2');
 REPLACE INTO `zp_mangosd`.`creature_formations` VALUES ('10494', '42969', '2', '270', '2');
-REPLACE INTO `zp_mangosd`.`creature_formations` VALUES ('10494', '14495', '2', '90', '2');
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES ('10494', '10495', '2', '90', '2');
 
 -- add pathing to the prophet's dummy
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '1', '-7574.52', '1695.76', '5.37053', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3043057', '4.12954', '0', '0');
@@ -3605,9 +3605,9 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('10494', '38', '-7905.08',
 -- Twilight Prophets, south one
 -- add two mobs, adjust respawn timer and movement type
 REPLACE INTO `zp_mangosd`.`creature` VALUES ('1448', '800008', '1', '0', '0', '-6752.1', '1856.98', '5.0446', '3.91044', '25', '0', '0', '646473', '0', '0', '2');
-REPLACE INTO `zp_mangosd`.`creature` VALUES ('42983', '11880', '1', '11823', '0', '-6750.87', '1857.03', '5.04945', '3.9662', '300', '0', '0', '600000', '0', '0', '2');
-REPLACE INTO `zp_mangosd`.`creature` VALUES ('42984', '11880', '1', '11812', '0', '-6750.87', '1857.03', '5.04945', '3.9662', '300', '0', '0', '600000', '0', '0', '2');
-REPLACE INTO `zp_mangosd`.`creature` VALUES ('43323', '15308', '1', '15373', '0', '-6752.1', '1856.98', '5.0446', '3.91044', '14400', '0', '0', '600000', '11502', '0', '2');
+REPLACE INTO `zp_mangosd`.`creature` VALUES ('42983', '11880', '1', '11823', '0', '-6750.87', '1857.03', '5.04945', '3.9662', '300', '0', '0', '600000', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature` VALUES ('42984', '11880', '1', '11812', '0', '-6750.87', '1857.03', '5.04945', '3.9662', '300', '0', '0', '600000', '0', '0', '0');
+REPLACE INTO `zp_mangosd`.`creature` VALUES ('43323', '15308', '1', '15373', '0', '-6752.1', '1856.98', '5.0446', '3.91044', '14400', '0', '0', '600000', '11502', '0', '0');
 
 -- set up formation
 REPLACE INTO `zp_mangosd`.`creature_formations` VALUES ('1448', '1448', '0', '0', '2');
