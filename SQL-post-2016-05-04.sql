@@ -4266,3 +4266,12 @@ UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=1.5 WHERE  `entry`=15343
 -- delete text looks like shit
 DELETE FROM `zp_scriptdevzerod`.`script_texts` WHERE  `entry`=-1509030;
 DELETE FROM `zp_scriptdevzerod`.`script_texts` WHERE  `entry`=-1509029;
+
+-- NEW SQL
+-- add buru eggs
+REPLACE INTO `zp_mangosd`.`creature` VALUES (8493, 15514, 509, 0, 0, -9242.15, 1273.64, -63.4076, 0.006106, 120, 0, 0, 26652, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (8494, 15514, 509, 0, 0, -9263.81, 1297.04, -63.4714, 5.44499, 120, 0, 0, 26646, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (8495, 15514, 509, 0, 0, -9302.91, 1303.53, -63.3969, 2.31125, 120, 0, 0, 26650, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (8496, 15514, 509, 0, 0, -9300.18, 1267.1, -63.4539, 1.21955, 120, 0, 0, 26656, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (8497, 15514, 509, 0, 0, -9271.2, 1245.07, -63.4566, 5.68061, 120, 0, 0, 26673, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (8498, 15514, 509, 0, 0, -9233.02, 1242.57, -63.284, 3.28123, 120, 0, 0, 26661, 0, 0, 0);
