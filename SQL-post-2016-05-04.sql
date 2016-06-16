@@ -3085,36 +3085,36 @@ REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `pos
 
 
     /*Anubisath Sentinel*/
-    UPDATE `creature_template` SET `minlevel`='61' WHERE (`entry`='15264');
-    UPDATE `creature_template` SET `minhealth`='110040', `maxhealth`='110040' WHERE (`entry`='15264');
-    UPDATE `creature_template` SET `mindmg`='1799', `maxdmg`='2385' WHERE (`entry`='15264');
+    UPDATE `zp_mangosd`.`creature_template` SET `minlevel`='61' WHERE (`entry`='15264');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='110040', `maxhealth`='110040' WHERE (`entry`='15264');
+    UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1799', `maxdmg`='2385' WHERE (`entry`='15264');
 
     /*Anubisath Defender*/
-    UPDATE `creature_template` SET `minhealth`='485550', `maxhealth`='485550' WHERE (`entry`='15277');
-    UPDATE `creature_template` SET `mindmg`='3237', `maxdmg`='4294' WHERE (`entry`='15277');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='485550', `maxhealth`='485550' WHERE (`entry`='15277');
+    UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='3237', `maxdmg`='4294' WHERE (`entry`='15277');
 
     /*Anubisath Warrior*/
-    UPDATE `creature_template` SET `minlevel`='61', `maxlevel`='61' WHERE (`entry`='15537');
-    UPDATE `creature_template` SET `minhealth`='37728', `maxhealth`='37728' WHERE (`entry`='15537');
-    UPDATE `creature_template` SET `mindmg`='317', `maxdmg`='421' WHERE (`entry`='15537');
+    UPDATE `zp_mangosd`.`creature_template` SET `minlevel`='61', `maxlevel`='61' WHERE (`entry`='15537');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='37728', `maxhealth`='37728' WHERE (`entry`='15537');
+    UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='317', `maxdmg`='421' WHERE (`entry`='15537');
 
     /*Anubisath Warder*/
-    UPDATE `creature_template` SET `minhealth`='299790', `maxhealth`='299790' WHERE (`entry`='15311');
-    UPDATE `creature_template` SET `mindmg`='3075', `maxdmg`='4077' WHERE (`entry`='15311');
-    UPDATE `creature_template` SET `baseattacktime`='1500' WHERE (`entry`='15311');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='299790', `maxhealth`='299790' WHERE (`entry`='15311');
+    UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='3075', `maxdmg`='4077' WHERE (`entry`='15311');
+    UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='15311');
 
 
     /*Obsidian mobs*/
 
 
     /*Obsidian Eradicator*/
-    UPDATE `creature_template` SET `minhealth`='170940', `maxhealth`='170940' WHERE (`entry`='15262');
-    UPDATE `creature_template` SET `armor`='4091' WHERE (`entry`='15262');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='170940', `maxhealth`='170940' WHERE (`entry`='15262');
+    UPDATE `zp_mangosd`.`creature_template` SET `armor`='4091' WHERE (`entry`='15262');
 
     /*Obsidian Nullifier*/
-    UPDATE `creature_template` SET `minhealth`='120000', `maxhealth`='120000' WHERE (`entry`='15312');
-    UPDATE `creature_template` SET `armor`='4091' WHERE (`entry`='15312');
-    UPDATE `creature_template` SET `mindmg`='1140', `maxdmg`='1750' WHERE (`entry`='15312');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='120000', `maxhealth`='120000' WHERE (`entry`='15312');
+    UPDATE `zp_mangosd`.`creature_template` SET `armor`='4091' WHERE (`entry`='15312');
+    UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1140', `maxdmg`='1750' WHERE (`entry`='15312');
 
 
 
@@ -3122,123 +3122,123 @@ REPLACE INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `pos
 
 
     /*Qiraji Brainwasher*/
-    UPDATE `creature_template` SET `minhealth`='78600', `maxhealth`='78600' WHERE (`entry`='15247');
-    UPDATE `creature_template` SET `mindmg`='1270', `maxdmg`='1684' WHERE (`entry`='15247');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='78600', `maxhealth`='78600' WHERE (`entry`='15247');
+    UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1270', `maxdmg`='1684' WHERE (`entry`='15247');
 
     /*Qiraji Champion*/
-    UPDATE `creature_template` SET `minhealth`='266480', `maxhealth`='266480' WHERE (`entry`='15252');
-    UPDATE `creature_template` SET `mindmg`='2746', `maxdmg`='3640' WHERE (`entry`='15252');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='266480', `maxhealth`='266480' WHERE (`entry`='15252');
+    UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='2746', `maxdmg`='3640' WHERE (`entry`='15252');
 
     /*Qiraji Lasher*/
-    UPDATE `creature_template` SET `minhealth`='94320', `maxhealth`='94320' WHERE (`entry`='15249');
-    UPDATE `creature_template` SET `mindmg`='1524', `maxdmg`='2020' WHERE (`entry`='15249');
-    UPDATE `creature_template` SET `baseattacktime`='1000' WHERE (`entry`='15249');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='94320', `maxhealth`='94320' WHERE (`entry`='15249');
+    UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1524', `maxdmg`='2020' WHERE (`entry`='15249');
+    UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1000' WHERE (`entry`='15249');
 
     /*Qiraji Slayer*/
-    UPDATE `creature_template` SET `minhealth`='100600', `maxhealth`='100600' WHERE (`entry`='15250');
-    UPDATE `creature_template` SET `mindmg`='1971', `maxdmg`='2707' WHERE (`entry`='15250');
-    UPDATE `creature_template` SET `baseattacktime`='1000' WHERE (`entry`='15250');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='100600', `maxhealth`='100600' WHERE (`entry`='15250');
+    UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1971', `maxdmg`='2707' WHERE (`entry`='15250');
+    UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1000' WHERE (`entry`='15250');
 
     /*Qiraji Mindslayer*/
-    UPDATE `creature_template` SET `minhealth`='125760', `maxhealth`='125760' WHERE (`entry`='15246');
-    UPDATE `creature_template` SET `mindmg`='2116', `maxdmg`='2806' WHERE (`entry`='15246');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='125760', `maxhealth`='125760' WHERE (`entry`='15246');
+    UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='2116', `maxdmg`='2806' WHERE (`entry`='15246');
 
 
     /*Vekniss mobs*/
 
 
     /*Vekniss Guardian*/
-    UPDATE `creature_template` SET `minhealth`='62880', `maxhealth`='62880' WHERE (`entry`='15233');
-    UPDATE `creature_template` SET `mindmg`='1587', `maxdmg`='2105' WHERE (`entry`='15233');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='62880', `maxhealth`='62880' WHERE (`entry`='15233');
+    UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1587', `maxdmg`='2105' WHERE (`entry`='15233');
 
     /*Vekniss warrior*/
-    UPDATE `creature_template` SET `minlevel`='61' WHERE (`entry`='15230');
-    UPDATE `creature_template` SET `minhealth`='50304', `maxhealth`='50304' WHERE (`entry`='15230');
-    UPDATE `creature_template` SET `mindmg`='1270', `maxdmg`='1684' WHERE (`entry`='15230');
+    UPDATE `zp_mangosd`.`creature_template` SET `minlevel`='61' WHERE (`entry`='15230');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='50304', `maxhealth`='50304' WHERE (`entry`='15230');
+    UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1270', `maxdmg`='1684' WHERE (`entry`='15230');
 
     /*Vekniss Drone*/
-    UPDATE `creature_template` SET `minhealth`='6104', `maxhealth`='6104' WHERE (`entry`='15300');
-    UPDATE `creature_template` SET `mindmg`='208', `maxdmg`='276' WHERE (`entry`='15300');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='6104', `maxhealth`='6104' WHERE (`entry`='15300');
+    UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='208', `maxdmg`='276' WHERE (`entry`='15300');
 
     /*Vekniss Soldier*/
-    UPDATE `creature_template` SET `minhealth`='81744', `maxhealth`='81744' WHERE (`entry`='15229');
-    UPDATE `creature_template` SET `mindmg`='847', `maxdmg`='1122' WHERE (`entry`='15229');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='81744', `maxhealth`='81744' WHERE (`entry`='15229');
+    UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='847', `maxdmg`='1122' WHERE (`entry`='15229');
 
     /*Vekniss Hive Crawler*/
-    UPDATE `creature_template` SET `minhealth`='97110', `maxhealth`='97110' WHERE (`entry`='15240');
-    UPDATE `creature_template` SET `mindmg`='2158', `maxdmg`='2862' WHERE (`entry`='15240');
-    UPDATE `creature_template` SET `baseattacktime`='1500' WHERE (`entry`='15240');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='97110', `maxhealth`='97110' WHERE (`entry`='15240');
+    UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='2158', `maxdmg`='2862' WHERE (`entry`='15240');
+    UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='15240');
 
     /*Vekniss Wasp*/
-    UPDATE `creature_template` SET `minhealth`='30520', `maxhealth`='30520' WHERE (`entry`='15236');
-    UPDATE `creature_template` SET `mindmg`='831', `maxdmg`='1103' WHERE (`entry`='15236');
-    UPDATE `creature_template` SET `baseattacktime`='1500' WHERE (`entry`='15236');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='30520', `maxhealth`='30520' WHERE (`entry`='15236');
+    UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='831', `maxdmg`='1103' WHERE (`entry`='15236');
+    UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='15236');
 
     /*Vekniss Stinger*/
-    UPDATE `creature_template` SET `minhealth`='64740', `maxhealth`='64740' WHERE (`entry`='15235');
-    UPDATE `creature_template` SET `mindmg`='1295', `maxdmg`='1717' WHERE (`entry`='15235');
-    UPDATE `creature_template` SET `baseattacktime`='1500' WHERE (`entry`='15235');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='64740', `maxhealth`='64740' WHERE (`entry`='15235');
+    UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1295', `maxdmg`='1717' WHERE (`entry`='15235');
+    UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='15235');
 
 
     /*Boss mobs*/
 
 
     /*The Prophet Skeram*/
-    UPDATE `creature_template` SET `minhealth`='466375', `maxhealth`='466375' WHERE (`entry`='15263');
-    UPDATE `creature_template` SET `mindmg`='2045', `maxdmg`='2707' WHERE (`entry`='15263');
-    UPDATE `creature_template` SET `baseattacktime`='1500' WHERE (`entry`='15263');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='466375', `maxhealth`='466375' WHERE (`entry`='15263');
+    UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='2045', `maxdmg`='2707' WHERE (`entry`='15263');
+    UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='15263');
 
     /*Princess Yauj*/
-    UPDATE `creature_template` SET `minhealth`='299790', `maxhealth`='299790' WHERE (`entry`='15543');
-    UPDATE `creature_template` SET `mindmg`='2197', `maxdmg`='2912' WHERE (`entry`='15543');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='299790', `maxhealth`='299790' WHERE (`entry`='15543');
+    UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='2197', `maxdmg`='2912' WHERE (`entry`='15543');
 
     /*Vem*/
-    UPDATE `creature_template` SET `minhealth`='433030', `maxhealth`='433030' WHERE (`entry`='15544');
-    UPDATE `creature_template` SET `mindmg`='2471', `maxdmg`='3276' WHERE (`entry`='15544');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='433030', `maxhealth`='433030' WHERE (`entry`='15544');
+    UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='2471', `maxdmg`='3276' WHERE (`entry`='15544');
 
     /*Lord Kri*/
-    UPDATE `creature_template` SET `minhealth`='266480', `maxhealth`='266480' WHERE (`entry`='15511');
-    UPDATE `creature_template` SET `mindmg`='3432', `maxdmg`='4550' WHERE (`entry`='15511');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='266480', `maxhealth`='266480' WHERE (`entry`='15511');
+    UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='3432', `maxdmg`='4550' WHERE (`entry`='15511');
 
     /*Battleguard Sartura*/
-    UPDATE `creature_template` SET `minhealth`='749475', `maxhealth`='749475' WHERE (`entry`='15516');
-    UPDATE `creature_template` SET `mindmg`='1977', `maxdmg`='2621' WHERE (`entry`='15516');
-    UPDATE `creature_template` SET `baseattacktime`='1000' WHERE (`entry`='15516');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='749475', `maxhealth`='749475' WHERE (`entry`='15516');
+    UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1977', `maxdmg`='2621' WHERE (`entry`='15516');
+    UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1000' WHERE (`entry`='15516');
 
     /*Sartura's Royal Guard*/
-    UPDATE `creature_template` SET `minhealth`='94320', `maxhealth`='94320' WHERE (`entry`='15984');
-    UPDATE `creature_template` SET `mindmg`='1524', `maxdmg`='2020' WHERE (`entry`='15984');
-    UPDATE `creature_template` SET `baseattacktime`='1000' WHERE (`entry`='15984');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='94320', `maxhealth`='94320' WHERE (`entry`='15984');
+    UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='1524', `maxdmg`='2020' WHERE (`entry`='15984');
+    UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1000' WHERE (`entry`='15984');
 
     /*Fankriss the Unyielding.*/
-    UPDATE `creature_template` SET `minhealth`='999300', `maxhealth`='999300' WHERE (`entry`='15510');
-    UPDATE `creature_template` SET `mindmg`='2197', `maxdmg`='2912' WHERE (`entry`='15510');
-    UPDATE `creature_template` SET `baseattacktime`='1500' WHERE (`entry`='15510');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='999300', `maxhealth`='999300' WHERE (`entry`='15510');
+    UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='2197', `maxdmg`='2912' WHERE (`entry`='15510');
+    UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='15510');
 
     /*Viscidus*/
-    UPDATE `creature_template` SET `minhealth`='1998600', `maxhealth`='1998600' WHERE (`entry`='15299');
-    UPDATE `creature_template` SET `mindmg`='2356', `maxdmg`='3123' WHERE (`entry`='15299');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='1998600', `maxhealth`='1998600' WHERE (`entry`='15299');
+    UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='2356', `maxdmg`='3123' WHERE (`entry`='15299');
 
     /*Princess Huhuran*/
-    UPDATE `creature_template` SET `minhealth`='999300', `maxhealth`='999300' WHERE (`entry`='15509');
-    UPDATE `creature_template` SET `mindmg`='2746', `maxdmg`='3640' WHERE (`entry`='15509');
-    UPDATE `creature_template` SET `baseattacktime`='1500' WHERE (`entry`='15509');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='999300', `maxhealth`='999300' WHERE (`entry`='15509');
+    UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='2746', `maxdmg`='3640' WHERE (`entry`='15509');
+    UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='1500' WHERE (`entry`='15509');
 
     /*Emperor Vek'nilash*/
-    UPDATE `creature_template` SET `minhealth`='2165150', `maxhealth`='2165150' WHERE (`entry`='15275');
-    UPDATE `creature_template` SET `mindmg`='3295', `maxdmg`='4368' WHERE (`entry`='15275');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='2165150', `maxhealth`='2165150' WHERE (`entry`='15275');
+    UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='3295', `maxdmg`='4368' WHERE (`entry`='15275');
 
     /*Emperor Vek'lor*/
-    UPDATE `creature_template` SET `minhealth`='1732250', `maxhealth`='1732250' WHERE (`entry`='15276');
-    UPDATE `creature_template` SET `mindmg`='3067', `maxdmg`='4060' WHERE (`entry`='15276');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='1732250', `maxhealth`='1732250' WHERE (`entry`='15276');
+    UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='3067', `maxdmg`='4060' WHERE (`entry`='15276');
 
     /*Ouro*/
-    UPDATE `creature_template` SET `minhealth`='1998600', `maxhealth`='1998600' WHERE (`entry`='15517');
-    UPDATE `creature_template` SET `mindmg`='5190', `maxdmg`='6880' WHERE (`entry`='15517');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='1998600', `maxhealth`='1998600' WHERE (`entry`='15517');
+    UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='5190', `maxdmg`='6880' WHERE (`entry`='15517');
 
     /*C'thun*/
-    UPDATE `creature_template` SET `minhealth`='999300', `maxhealth`='999300' WHERE (`entry`='15727');
-    UPDATE `creature_template` SET `mindmg`='110', `maxdmg`='146' WHERE (`entry`='15727');
+    UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='999300', `maxhealth`='999300' WHERE (`entry`='15727');
+    UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='110', `maxdmg`='146' WHERE (`entry`='15727');
 
 -- dirt mound speed
 UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`=1.15 WHERE  `entry`=15712;
@@ -4217,3 +4217,28 @@ REPLACE INTO `zp_mangosd`.`creature_loot_template` (`entry`, `item`, `ChanceOrQu
 
 UPDATE `zp_mangosd`.`creature_onkill_reputation` SET `RewOnKillRepValue1`=100 WHERE  `creature_id`=15817 LIMIT 1;
 UPDATE `zp_mangosd`.`creature_onkill_reputation` SET `RewOnKillRepValue1`=75 WHERE  `creature_id`=15758 LIMIT 1;
+
+-- Qiraji slayer reduce threat on knockback and emote
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action2_type`=13, `action2_param1`=-20, `action2_param2`=1 WHERE  `id`=1525002;
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action2_type`=1, `action2_param1`=-15252 WHERE  `id`=1525004;
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-15252, '%s lets out a battlecry!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 2, 0, 0, 'Qiraji Slayer');
+
+-- vekniss guardian emote
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-15323, '%s emits a strange noise.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 2, 0, 0, 'Vekniss Guardian');
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1523303, 15233, 0, 0, 100, 2, 0, 0, 0, 0, 1, -15323, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Vekniss Guardian - Emote on Aggro');
+
+--  Qiraji Brainwasher, Vekniss Guardian, Vekniss Warrior respawn times
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=5400 WHERE  `id`=15247;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=5400 WHERE  `id`=15233;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=5400 WHERE  `id`=15230;
+
+-- huhuran trash
+-- hive crawler, vekniss wasp, stinger, qiraji slayer
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=5400 WHERE  `id`=15240;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=5400 WHERE  `id`=15236;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=5400 WHERE  `id`=15235;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=5400 WHERE  `id`=15249;
+
+-- defender respawn
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=43200 WHERE  `id`=15277;
+
