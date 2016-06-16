@@ -4079,3 +4079,18 @@ REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-15252, '%s lets out a bat
 -- vekniss guardian emote
 REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-15323, '%s emits a strange noise.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 2, 0, 0, 'Vekniss Guardian');
 REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1523303, 15233, 0, 0, 100, 2, 0, 0, 0, 0, 1, -15323, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Vekniss Guardian - Emote on Aggro');
+
+--  Qiraji Brainwasher, Vekniss Guardian, Vekniss Warrior respawn times
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=5400 WHERE  `id`=15247;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=5400 WHERE  `id`=15233;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=5400 WHERE  `id`=15230;
+
+-- huhuran trash
+-- hive crawler, vekniss wasp, stinger, qiraji slayer
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=5400 WHERE  `id`=15240;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=5400 WHERE  `id`=15236;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=5400 WHERE  `id`=15235;
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=5400 WHERE  `id`=15249;
+
+-- defender respawn
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=43200 WHERE  `id`=15277;
