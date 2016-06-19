@@ -132,3 +132,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `aggrorangeoverride`=1.7 WHERE  `ent
 -- twin emp attack speed
 UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`=2000, `rangeattacktime`=2000 WHERE  `entry`=15276;
 UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`=2000, `rangeattacktime`=2000 WHERE  `entry`=15275;
+
+-- 15543 - yauj opt should be interuptable
+UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=616775679, `flags_extra`=769 WHERE  `entry`=15543;
