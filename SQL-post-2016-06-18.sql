@@ -138,3 +138,10 @@ UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, 
 
 -- mana fiend immunities
 UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=650198975 WHERE  `entry`=15527;
+
+-- fankriss adds stats
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='33310', `maxhealth`='33310' WHERE (`entry`='15630');
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='2856', `maxdmg`='3786' WHERE (`entry`='15630');
+UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='15630');
+UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='9284', `maxhealth`='9284' WHERE (`entry`='15962');
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='817', `maxdmg`='1139' WHERE (`entry`='15962');
