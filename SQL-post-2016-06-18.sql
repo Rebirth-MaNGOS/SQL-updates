@@ -150,6 +150,11 @@ UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='817', `maxdmg`='1139' WHER
 UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_param1`=10000, `event_param2`=10000 WHERE  `id`=1563001;
 
 -- bug trio speed
-UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=2.4 WHERE  `entry`=15544;
+UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=2.45 WHERE  `entry`=15544;
 UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=2.25 WHERE  `entry`=15543;
 UPDATE `zp_mangosd`.`creature_template` SET `speed_run`=2.25 WHERE  `entry`=15511;
+
+UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`=4 WHERE  `entry`=15544;
+
+-- aggro range sartura
+UPDATE `zp_mangosd`.`creature_template` SET `aggrorangeoverride`=40 WHERE  `entry`=15516;
