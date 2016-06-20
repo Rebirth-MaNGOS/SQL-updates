@@ -145,3 +145,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='2856', `maxdmg`='3786' WHE
 UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`='2000' WHERE (`entry`='15630');
 UPDATE `zp_mangosd`.`creature_template` SET `minhealth`='9284', `maxhealth`='9284' WHERE (`entry`='15962');
 UPDATE `zp_mangosd`.`creature_template` SET `mindmg`='817', `maxdmg`='1139' WHERE (`entry`='15962');
+
+-- spawn of fankriss faster enrage
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_param1`=10000, `event_param2`=10000 WHERE  `id`=1563001;
