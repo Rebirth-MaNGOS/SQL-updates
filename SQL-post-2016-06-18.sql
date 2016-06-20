@@ -135,3 +135,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `baseattacktime`=2000, `rangeattackt
 
 -- 15543 - yauj opt should be interuptable
 UPDATE `zp_mangosd`.`creature_template` SET `resistance2`=50, `resistance3`=50, `resistance4`=50, `resistance5`=50, `resistance6`=50, `mechanic_immune_mask`=616775679, `flags_extra`=769 WHERE  `entry`=15543;
+
+-- mana fiend immunities
+UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=650198975 WHERE  `entry`=15527;
