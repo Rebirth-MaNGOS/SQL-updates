@@ -46,3 +46,15 @@ UPDATE `zp_mangosd`.`creature_template` SET `armor`=3791 WHERE `entry`=10917;
 
 -- quest flags
 UPDATE `zp_mangosd`.`quest_template` SET `Method`=0 WHERE  `entry`=5125;
+
+-- add texts for scarlet bastion event
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1329023, 'Move back and hold the line! We cannot fail or all will be lost!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'YELL_BASTION_BARRICADE');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1329024, 'Move to the stairs and defend!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'YELL_BASTION_STAIRS');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1329025, 'The Scourge have broken into the Bastion! Redouble your efforts! We must not fail', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'YELL_BASTION_ENTRANCE');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1329026, 'They have broken into the Hall of Lights! We must stop the intruders!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'YELL_BASTION_HALL_LIGHTS');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1329027, 'The Scourge have broken through in all wings! May the light defeat these foul creatures! We shall fight to the last!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'YELL_BASTION_INNER_1');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1329028, 'This will not be the end of the Scarlet Crusade! You will not break our line!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'YELL_BASTION_INNER_2');
+
+-- no movement after summoned
+UPDATE `zp_mangosd`.`creature_template` SET `MovementType`=0 WHERE  `entry`=10424;
+UPDATE `zp_mangosd`.`creature_template` SET `MovementType`=0 WHERE  `entry`=11043;
