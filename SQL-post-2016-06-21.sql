@@ -35,3 +35,14 @@ UPDATE `zp_mangosd`.`creature_template` SET `type`=0 WHERE  `entry`=15726;
 UPDATE `zp_mangosd`.`creature_template` SET `type`=0 WHERE  `entry`=15802;
 UPDATE `zp_mangosd`.`creature_template` SET `type`=0 WHERE  `entry`=15904;
 UPDATE `zp_mangosd`.`creature_template` SET `type`=0 WHERE  `entry`=15910;
+
+-- gossip for aurius
+REPLACE INTO `zp_mangosd`.`npc_text` VALUES (3755, 'It is good to see others who fight the Scourge in Stratholme, for it is here they are strongest.$B$BGreetings. I am Aurius. I was once a paladin of the Silver Hand, but like others whose faith wavered... I fell from grace. The Scourge seduced me and nearly transformed me into a death knight!$B$BFinally sensing my peril, I fled to this chapel. It is a sacred place, where the first paladin, Uther the Lightbringer, was ordained into the order of the Silver Hand.', '', 0, 1, 0, 0, 0, 0, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0);
+UPDATE `zp_mangosd`.`npc_text` SET `text0_0`='I do not have much time in this world, but Light willing, it is time enough to fulfill my destiny. When you face Baron Rivendare, I will be with you.' WHERE  `ID`=3756;
+UPDATE `zp_mangosd`.`npc_text` SET `text0_0`='Leave me. My wounds are great and I fear they will overtake me. Thank you, $N. I will die here, but because of you... I\'ll die in peace.' WHERE  `ID`=3757;
+
+-- armor
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=3791 WHERE `entry`=10917;
+
+-- quest flags
+UPDATE `zp_mangosd`.`quest_template` SET `Method`=0 WHERE  `entry`=5125;
