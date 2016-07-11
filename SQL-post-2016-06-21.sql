@@ -7,3 +7,6 @@ REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` (`creature_id`, `RewOnKil
 REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` (`creature_id`, `RewOnKillRepFaction1`, `RewOnKillRepFaction2`, `MaxStanding1`, `IsTeamAward1`, `RewOnKillRepValue1`, `MaxStanding2`, `IsTeamAward2`, `RewOnKillRepValue2`, `TeamDependent`) VALUES (15246, 910, 0, 3, 0, 100, 0, 0, 0, 0);
 
 UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='npc_andorgos' WHERE  `entry`=15502 LIMIT 1;
+
+-- change quest templates to reflect change of Idol of war entry change, tier 2.5 quests
+UPDATE `zp_mangosd`.`quest_template` SET `ReqItemId2`=20880 WHERE  `ReqItemId2`=20882;
