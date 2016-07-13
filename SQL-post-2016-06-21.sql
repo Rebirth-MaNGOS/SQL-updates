@@ -58,3 +58,11 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1329028, 'This will not
 -- no movement after summoned
 UPDATE `zp_mangosd`.`creature_template` SET `MovementType`=0 WHERE  `entry`=10424;
 UPDATE `zp_mangosd`.`creature_template` SET `MovementType`=0 WHERE  `entry`=11043;
+
+-- Hakkar pool horde/ally 2 items
+UPDATE `zp_mangosd`.`reference_loot_template` SET `lootcondition`=6, `condition_value1`=469 WHERE  `entry`=34090 AND `item`=20264;
+UPDATE `zp_mangosd`.`reference_loot_template` SET `lootcondition`=6, `condition_value1`=67 WHERE  `entry`=34090 AND `item`=20257;
+
+-- Flamegore loot should always drop 2x loot
+UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=7.25 WHERE  `entry`=34037 AND `item`=16948;
+UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=7.25 WHERE  `entry`=34037 AND `item`=16956;
