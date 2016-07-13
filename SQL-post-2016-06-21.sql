@@ -66,3 +66,11 @@ UPDATE `zp_mangosd`.`reference_loot_template` SET `lootcondition`=6, `condition_
 -- Flamegore loot should always drop 2x loot
 UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=7.25 WHERE  `entry`=34037 AND `item`=16948;
 UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=7.25 WHERE  `entry`=34037 AND `item`=16956;
+
+-- Lethon, pool plate / mail gear for ally / horde
+UPDATE `zp_mangosd`.`reference_loot_template` SET `lootcondition`=6, `condition_value1`=67 WHERE  `entry`=34005 AND `item`=20629;
+UPDATE `zp_mangosd`.`reference_loot_template` SET `lootcondition`=6, `condition_value1`=469 WHERE  `entry`=34005 AND `item`=20630;
+
+-- Ysondre loot
+UPDATE `zp_mangosd`.`reference_loot_template` SET `lootcondition`=6, `condition_value1`=469 WHERE  `entry`=34008 AND `item`=20639;
+UPDATE `zp_mangosd`.`reference_loot_template` SET `lootcondition`=6, `condition_value1`=67 WHERE  `entry`=34008 AND `item`=20638;
