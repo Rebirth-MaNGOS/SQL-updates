@@ -74,3 +74,6 @@ UPDATE `zp_mangosd`.`reference_loot_template` SET `lootcondition`=6, `condition_
 -- Ysondre loot
 UPDATE `zp_mangosd`.`reference_loot_template` SET `lootcondition`=6, `condition_value1`=469 WHERE  `entry`=34008 AND `item`=20639;
 UPDATE `zp_mangosd`.`reference_loot_template` SET `lootcondition`=6, `condition_value1`=67 WHERE  `entry`=34008 AND `item`=20638;
+
+-- added missing item, Bloodstained Coif, to Jin'do the Hexxer's loot table
+REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (34089, 19875, 0, 1, 1, 1, 0, 0, 0);
