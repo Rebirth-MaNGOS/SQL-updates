@@ -77,3 +77,11 @@ UPDATE `zp_mangosd`.`reference_loot_template` SET `lootcondition`=6, `condition_
 
 -- added missing item, Bloodstained Coif, to Jin'do the Hexxer's loot table
 REPLACE INTO `zp_mangosd`.`reference_loot_template` VALUES (34089, 19875, 0, 1, 1, 1, 0, 0, 0);
+
+-- Superior Armaments of Battle - Honored Amongst the Dawn and exalted should now be repeteable
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=9223;
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`=1 WHERE  `entry`=9227;
+
+-- Frostmane Seer change lightning shield spell
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param1`=324 WHERE  `id`=139702;
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param1`=324 WHERE  `id`=139713;
