@@ -8,3 +8,6 @@ UPDATE `zp_mangosd`.`page_text` SET `text`='Solomon,$B$BThe carrier of this decr
 
 -- adjusted money drop for Stonard Grunts' 
 UPDATE `zp_mangosd`.`creature_template` SET `mingold`='400', `maxgold`='700' WHERE (`entry`='866');
+
+-- Fix to make the quest The Ultimate Deception repeatable (already changed on live server)
+UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`='1' WHERE (`entry`='8829');
