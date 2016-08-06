@@ -66,3 +66,5 @@ UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=2200, `maxdmg`=2800 WHERE  
 -- Fix for Arena Master, shouldn't lose the quest item at delivery
 UPDATE `zp_mangosd`.`quest_template` SET `SrcItemId`='18706', `ReqItemId1`='0', `ReqItemCount1`='0' WHERE (`entry`='7810');
 
+-- SQL for mandokir fight
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_chained_spirit' WHERE  `entry`=15117;
