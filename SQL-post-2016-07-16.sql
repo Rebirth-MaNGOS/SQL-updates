@@ -62,3 +62,7 @@ UPDATE `zp_mangosd`.`gameobject_template` SET `data1`=498 WHERE  `entry`=1722;
 
 -- Number Two, buff damage a bit
 UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=2200, `maxdmg`=2800 WHERE  `entry`=15554;
+
+-- Fix for Arena Master, shouldn't lose the quest item at delivery
+UPDATE `zp_mangosd`.`quest_template` SET `SrcItemId`='18706', `ReqItemId1`='0', `ReqItemCount1`='0' WHERE (`entry`='7810');
+
