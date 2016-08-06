@@ -24,3 +24,6 @@ UPDATE `zp_mangosd`.`quest_template` SET `OfferRewardText`='Congratulations, $N 
 UPDATE `zp_mangosd`.`quest_template` SET `RequestItemsText`='' WHERE  `entry`=8110;
 UPDATE `zp_mangosd`.`quest_template` SET `RequestItemsText`='' WHERE  `entry`=8101;
 UPDATE `zp_mangosd`.`quest_template` SET `RequestItemsText`='' WHERE  `entry`=8116;
+
+-- Prince Nazjak correct respawn time
+UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=129600 WHERE  `guid`=84713;
