@@ -11,3 +11,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `mingold`='400', `maxgold`='700' WHE
 
 -- Fix to make the quest The Ultimate Deception repeatable (already changed on live server)
 UPDATE `zp_mangosd`.`quest_template` SET `SpecialFlags`='1' WHERE (`entry`='8829');
+
+-- Quest: Stealing Supplies should now award correct amount of silver star item
+UPDATE `zp_mangosd`.`quest_template` SET `RewChoiceItemCount3`=200 WHERE  `entry`=1370;
