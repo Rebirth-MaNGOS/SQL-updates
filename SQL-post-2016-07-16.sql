@@ -30,3 +30,7 @@ UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=129600 WHERE  `guid`=84713;
 
 -- Tyrant Devilsaur fear cd
 UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_param3`=10000, `event_param4`=20000 WHERE  `id`=650001;
+
+-- Jailor Marlgen remove wrong text and lower chance of net
+DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=242802;
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_chance`=10 WHERE  `id`=242807;
