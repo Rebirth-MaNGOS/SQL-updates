@@ -59,3 +59,6 @@ REPLACE INTO `zp_mangosd`.`db_script_string` VALUES (2000006041, 'I will only sl
 
 -- gobj template
 UPDATE `zp_mangosd`.`gameobject_template` SET `data1`=498 WHERE  `entry`=1722;
+
+-- Number Two, buff damage a bit
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=2200, `maxdmg`=2800 WHERE  `entry`=15554;
