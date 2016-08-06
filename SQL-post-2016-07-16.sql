@@ -27,3 +27,6 @@ UPDATE `zp_mangosd`.`quest_template` SET `RequestItemsText`='' WHERE  `entry`=81
 
 -- Prince Nazjak correct respawn time
 UPDATE `zp_mangosd`.`creature` SET `spawntimesecs`=129600 WHERE  `guid`=84713;
+
+-- Tyrant Devilsaur fear cd
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_param3`=10000, `event_param4`=20000 WHERE  `id`=650001;
