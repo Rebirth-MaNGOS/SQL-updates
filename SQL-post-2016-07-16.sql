@@ -34,3 +34,6 @@ UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_param3`=10000, `event_param
 -- Jailor Marlgen remove wrong text and lower chance of net
 DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=242802;
 UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_chance`=10 WHERE  `id`=242807;
+
+-- Venture Co Mechanic removed wrong say
+DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=109702;
