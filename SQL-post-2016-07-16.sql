@@ -37,3 +37,25 @@ UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_chance`=10 WHERE  `id`=2428
 
 -- Venture Co Mechanic removed wrong say
 DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=109702;
+
+-- The Rescue RP
+-- remove old sql
+DELETE FROM `zp_mangosd`.`event_scripts` WHERE  `id`=312 LIMIT 4;
+DELETE FROM `zp_mangosd`.`event_scripts` WHERE  `id`=313 LIMIT 4;
+
+-- Drull
+REPLACE INTO `zp_mangosd`.`event_scripts` VALUES (312, 2, 0, 0, 2239, 10, 1, 0, 2000006038, 0, 0, 0, 0, 0, 0, 0, 'Drull - say 1');
+REPLACE INTO `zp_mangosd`.`event_scripts` VALUES (312, 6, 0, 0, 2239, 10, 1, 0, 2000006039, 0, 0, 0, 0, 0, 0, 0, 'Drull - say 2');
+
+-- Tog'thar
+REPLACE INTO `zp_mangosd`.`event_scripts` VALUES (313, 2, 0, 0, 2238, 10, 1, 0, 2000006040, 0, 0, 0, 0, 0, 0, 0, 'Drull - say 1');
+REPLACE INTO `zp_mangosd`.`event_scripts` VALUES (313, 6, 0, 0, 2238, 10, 1, 0, 2000006041, 0, 0, 0, 0, 0, 0, 0, 'Drull - say 2');
+
+-- add text
+REPLACE INTO `zp_mangosd`.`db_script_string` VALUES (2000006038, 'Ah, it is good to be free of my bonds! Have you freed Tog\'thar yet? The humans split us up after our capture.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+REPLACE INTO `zp_mangosd`.`db_script_string` VALUES (2000006039, 'Go on ahead without me! I will make my own way to Tarren Mill.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+REPLACE INTO `zp_mangosd`.`db_script_string` VALUES (2000006040, 'Have you freed Drull yet? I don\'t know where he\'s being held.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+REPLACE INTO `zp_mangosd`.`db_script_string` VALUES (2000006041, 'I will only slow you down, but no pink-skinned humans will keep me from freedom!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+-- gobj template
+UPDATE `zp_mangosd`.`gameobject_template` SET `data1`=498 WHERE  `entry`=1722;
