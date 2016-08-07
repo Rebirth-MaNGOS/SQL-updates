@@ -75,3 +75,42 @@ UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='boss_gora
 
 -- move gobj
 REPLACE INTO `zp_mangosd`.`gameobject` VALUES (35792, 175970, 229, 147.224, -240.436, 112.2, 4.66086, 0, 0, 0.72509, -0.688654, 250, 0, 1);
+
+-- Item Troll Tribal Necklace, increased drop chance and should always drop (independent of being on the quest)
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='25.33' WHERE (`entry`='10802') AND (`item`='9259');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='31.14' WHERE (`entry`='8636') AND (`item`='9259');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='27.96' WHERE (`entry`='8216') AND (`item`='9259');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='31.17' WHERE (`entry`='2648') AND (`item`='9259');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='33.75' WHERE (`entry`='2639') AND (`item`='9259');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='33.38' WHERE (`entry`='2646') AND (`item`='9259');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='30.82' WHERE (`entry`='2644') AND (`item`='9259');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='31.88' WHERE (`entry`='2645') AND (`item`='9259');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='33.54' WHERE (`entry`='4467') AND (`item`='9259');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='32.15' WHERE (`entry`='4465') AND (`item`='9259');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='33.91' WHERE (`entry`='2654') AND (`item`='9259');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='33.71' WHERE (`entry`='2653') AND (`item`='9259');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='33.62' WHERE (`entry`='2652') AND (`item`='9259');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='35.34' WHERE (`entry`='8218') AND (`item`='9259');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='24.51' WHERE (`entry`='8217') AND (`item`='9259');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='17.1' WHERE (`entry`='7996') AND (`item`='9259');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='24.36' WHERE (`entry`='7995') AND (`item`='9259');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='33.25' WHERE (`entry`='7809') AND (`item`='9259');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='31.98' WHERE (`entry`='2643') AND (`item`='9259');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='30.86' WHERE (`entry`='2641') AND (`item`='9259');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='34.03' WHERE (`entry`='4466') AND (`item`='9259');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='32.68' WHERE (`entry`='2642') AND (`item`='9259');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='33.81' WHERE (`entry`='2647') AND (`item`='9259');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='33.26' WHERE (`entry`='2640') AND (`item`='9259');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='33.35' WHERE (`entry`='2651') AND (`item`='9259');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='33.92' WHERE (`entry`='2649') AND (`item`='9259');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='33.76' WHERE (`entry`='2650') AND (`item`='9259');
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='30.27' WHERE (`entry`='8219') AND (`item`='9259');
+
+-- Followup assignments shouldn't be emopty anymore
+UPDATE `zp_mangosd`.`item_loot_template` SET `groupid`='1' WHERE entry in ('20805','21386','21133','21131');
+
+-- fix for speed of npcs at Razorgore
+UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`='0.95' WHERE entry in ('12420', '12416', '14456', '12557');
+
+
+
