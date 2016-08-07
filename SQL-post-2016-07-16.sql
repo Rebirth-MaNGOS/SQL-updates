@@ -68,3 +68,10 @@ UPDATE `zp_mangosd`.`quest_template` SET `SrcItemId`='18706', `ReqItemId1`='0', 
 
 -- SQL for mandokir fight
 UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='mob_chained_spirit' WHERE  `entry`=15117;
+
+-- Demon forge quest
+-- anvilcrack ai
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='boss_goraluk_anvilcrack' WHERE  `entry`=10899;
+
+-- move gobj
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (35792, 175970, 229, 147.224, -240.436, 112.2, 4.66086, 0, 0, 0.72509, -0.688654, 250, 0, 1);
