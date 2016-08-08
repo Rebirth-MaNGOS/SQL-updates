@@ -124,4 +124,5 @@ UPDATE `zp_mangosd`.`quest_template` SET `PrevQuestId`='3791' WHERE (`entry`='37
 UPDATE `zp_mangosd`.`quest_template` SET `PrevQuestId`='3381' WHERE (`entry`='3503');
 UPDATE `zp_mangosd`.`quest_template` SET `NextQuestId`='3503' WHERE (`entry`='3381');
 
-
+-- Fix for vendor/questgiver Dirge Quikcleave
+UPDATE `zp_mangosd`.`creature_template` SET `npcflag`='7' WHERE (`entry`='8125');
