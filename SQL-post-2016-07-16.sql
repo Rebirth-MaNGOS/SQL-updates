@@ -112,5 +112,16 @@ UPDATE `zp_mangosd`.`item_loot_template` SET `groupid`='1' WHERE entry in ('2080
 -- fix for speed of npcs at Razorgore
 UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`='0.95' WHERE entry in ('12420', '12416', '14456', '12557');
 
+-- Q: Sweet Amber, adjusted respawn timer for an object to be the same as two other objects for the quest have
+UPDATE `zp_mangosd`.`gameobject` SET `spawntimesecs`='2' WHERE (`guid`='29680');
+
+-- Morrowgrain chain of Feathermoon Strongold fixed
+UPDATE `zp_mangosd`.`quest_template` SET `ExclusiveGroup`='3787', `NextQuestId`='3791' WHERE `entry`in ('3787','3788');
+UPDATE `zp_mangosd`.`quest_template` SET `NextQuestInChain`='3792' WHERE (`entry`='3791');
+UPDATE `zp_mangosd`.`quest_template` SET `PrevQuestId`='3791' WHERE (`entry`='3792');
+
+-- (A) Meeting with the Master, chain fixed
+UPDATE `zp_mangosd`.`quest_template` SET `PrevQuestId`='3381' WHERE (`entry`='3503');
+UPDATE `zp_mangosd`.`quest_template` SET `NextQuestId`='3503' WHERE (`entry`='3381');
 
 
