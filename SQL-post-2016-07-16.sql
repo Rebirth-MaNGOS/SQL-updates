@@ -282,4 +282,6 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('5726', '130', '-1031.13',
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('5726', '131', '-1039.76', '-3280.35', '46.3643', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3048353', '0', '0', '0');
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('5726', '132', '-1052.61', '-3295.11', '51.2955', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3048354', '0', '0', '0');
 
-
+-- Fix to make Q Winterfall Activity preQ of Q Beads for Salfa
+UPDATE `zp_mangosd`.`quest_template` SET `PrevQuestId`='6241' WHERE (`entry`='8469');
+UPDATE `zp_mangosd`.`quest_template` SET `NextQuestId`='8469' WHERE (`entry`='6241');
