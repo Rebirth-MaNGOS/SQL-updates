@@ -285,3 +285,9 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES ('5726', '132', '-1052.61',
 -- Fix to make Q Winterfall Activity preQ of Q Beads for Salfa
 UPDATE `zp_mangosd`.`quest_template` SET `PrevQuestId`='6241' WHERE (`entry`='8469');
 UPDATE `zp_mangosd`.`quest_template` SET `NextQuestId`='8469' WHERE (`entry`='6241');
+
+-- Changes Lookout's Spyglass droprate from 100% to 10%
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='-10' WHERE (`entry`='8566') AND (`item`='18960');
+
+-- Changes Smithing Tuyere droprate from 100% to 10%
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='-10' WHERE (`entry`='5840') AND (`item`='18959');
