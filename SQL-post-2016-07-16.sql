@@ -291,3 +291,7 @@ UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='-10' WHE
 
 -- Changes Smithing Tuyere droprate from 100% to 10%
 UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='-10' WHERE (`entry`='5840') AND (`item`='18959');
+
+-- Dusty tomes adjusted drop rate for class books
+UPDATE `zp_mangosd`.`gameobject_loot_template` SET `ChanceOrQuestChance`=13 WHERE  `entry`=16563 AND `item`=36079;
+DELETE FROM `zp_mangosd`.`gameobject_loot_template` WHERE  `entry`=16563 AND `item`=18364;
