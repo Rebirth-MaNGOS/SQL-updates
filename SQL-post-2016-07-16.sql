@@ -295,3 +295,13 @@ UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='-10' WHE
 -- Dusty tomes adjusted drop rate for class books
 UPDATE `zp_mangosd`.`gameobject_loot_template` SET `ChanceOrQuestChance`=13 WHERE  `entry`=16563 AND `item`=36079;
 DELETE FROM `zp_mangosd`.`gameobject_loot_template` WHERE  `entry`=16563 AND `item`=18364;
+
+-- Large scarab coffers should always drop 1 idol
+UPDATE `zp_mangosd`.`gameobject_loot_template` SET `ChanceOrQuestChance`=0, `groupid`=1 WHERE  `entry`=17533 AND `item`=20874;
+UPDATE `zp_mangosd`.`gameobject_loot_template` SET `ChanceOrQuestChance`=0, `groupid`=1 WHERE  `entry`=17533 AND `item`=20875;
+UPDATE `zp_mangosd`.`gameobject_loot_template` SET `ChanceOrQuestChance`=0, `groupid`=1 WHERE  `entry`=17533 AND `item`=20876;
+UPDATE `zp_mangosd`.`gameobject_loot_template` SET `ChanceOrQuestChance`=0, `groupid`=1 WHERE  `entry`=17533 AND `item`=20877;
+UPDATE `zp_mangosd`.`gameobject_loot_template` SET `ChanceOrQuestChance`=0, `groupid`=1 WHERE  `entry`=17533 AND `item`=20878;
+UPDATE `zp_mangosd`.`gameobject_loot_template` SET `ChanceOrQuestChance`=0, `groupid`=1 WHERE  `entry`=17533 AND `item`=20879;
+UPDATE `zp_mangosd`.`gameobject_loot_template` SET `ChanceOrQuestChance`=0, `groupid`=1 WHERE  `entry`=17533 AND `item`=20880;
+UPDATE `zp_mangosd`.`gameobject_loot_template` SET `ChanceOrQuestChance`=0, `groupid`=1 WHERE  `entry`=17533 AND `item`=20881;
