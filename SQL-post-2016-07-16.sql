@@ -305,3 +305,7 @@ UPDATE `zp_mangosd`.`gameobject_loot_template` SET `ChanceOrQuestChance`=0, `gro
 UPDATE `zp_mangosd`.`gameobject_loot_template` SET `ChanceOrQuestChance`=0, `groupid`=1 WHERE  `entry`=17533 AND `item`=20879;
 UPDATE `zp_mangosd`.`gameobject_loot_template` SET `ChanceOrQuestChance`=0, `groupid`=1 WHERE  `entry`=17533 AND `item`=20880;
 UPDATE `zp_mangosd`.`gameobject_loot_template` SET `ChanceOrQuestChance`=0, `groupid`=1 WHERE  `entry`=17533 AND `item`=20881;
+
+-- Added missing aura to Fetid zombie
+UPDATE `zp_mangosd`.`creature_addon` SET `auras`='8713' WHERE  `guid`=46609;
+UPDATE `zp_mangosd`.`creature_addon` SET `auras`='8713' WHERE  `guid`=46685;
