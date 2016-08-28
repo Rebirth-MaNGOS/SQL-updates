@@ -309,3 +309,6 @@ UPDATE `zp_mangosd`.`gameobject_loot_template` SET `ChanceOrQuestChance`=0, `gro
 -- Added missing aura to Fetid zombie
 UPDATE `zp_mangosd`.`creature_addon` SET `auras`='8713' WHERE  `guid`=46609;
 UPDATE `zp_mangosd`.`creature_addon` SET `auras`='8713' WHERE  `guid`=46685;
+
+-- Stonard Grunt armor and no loot
+UPDATE `zp_mangosd`.`creature_template` SET `armor`=3791, `lootid`=0, `mingold`=0, `maxgold`=0 WHERE  `entry`=866;
