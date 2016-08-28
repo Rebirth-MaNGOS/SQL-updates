@@ -312,3 +312,6 @@ UPDATE `zp_mangosd`.`creature_addon` SET `auras`='8713' WHERE  `guid`=46685;
 
 -- Stonard Grunt armor and no loot
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=3791, `lootid`=0, `mingold`=0, `maxgold`=0 WHERE  `entry`=866;
+
+-- Vekniss Hatchling should no longer have mana
+UPDATE `zp_mangosd`.`creature_template` SET `minmana`=0, `maxmana`=0 WHERE  `entry`=15962;
