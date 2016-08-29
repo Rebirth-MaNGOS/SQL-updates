@@ -315,3 +315,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `armor`=3791, `lootid`=0, `mingold`=
 
 -- Vekniss Hatchling should no longer have mana
 UPDATE `zp_mangosd`.`creature_template` SET `minmana`=0, `maxmana`=0 WHERE  `entry`=15962;
+
+-- The quest Eranikus, Tyrant of the Dream should now have pre quest
+UPDATE `zp_mangosd`.`quest_template` SET `PrevQuestId`=8555 WHERE  `entry`=8733;
