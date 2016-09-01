@@ -327,3 +327,9 @@ REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (88349, 88349, 0, 0, 2);
 REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (88349, 88346, 0, 0, 2);
 REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (88349, 88347, 0, 0, 2);
 REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (88349, 88348, 0, 0, 2);
+
+-- Mossflayer scout added missing emote
+REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-8560, '%s searches for help!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 2, 0, 0, 'Mossflayer Scout');
+
+-- add text to AI
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action2_type`=1, `action2_param1`=-8560 WHERE  `id`=856002;
