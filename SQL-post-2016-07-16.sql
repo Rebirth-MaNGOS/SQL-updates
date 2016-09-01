@@ -338,3 +338,6 @@ UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action2_type`=1, `action2_param1`
 UPDATE `zp_mangosd`.`item_template` SET `spellcategory_1`=1153, `spellcategorycooldown_1`=120000 WHERE  `entry`=19008;
 UPDATE `zp_mangosd`.`item_template` SET `spellcategory_1`=1153, `spellcategorycooldown_1`=120000 WHERE  `entry`=19010;
 UPDATE `zp_mangosd`.`item_template` SET `spellcategory_1`=1153, `spellcategorycooldown_1`=120000 WHERE  `entry`=5510;
+
+-- Corrects dropchance for Larval Acid from Silicate Feeder
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='15.865' WHERE (`entry`='15333') AND (`item`='18512');
