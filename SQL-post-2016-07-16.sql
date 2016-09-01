@@ -333,3 +333,8 @@ REPLACE INTO `zp_mangosd`.`creature_ai_texts` VALUES (-8560, '%s searches for he
 
 -- add text to AI
 UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action2_type`=1, `action2_param1`=-8560 WHERE  `id`=856002;
+
+-- All healthstones should now share CD
+UPDATE `zp_mangosd`.`item_template` SET `spellcategory_1`=1153, `spellcategorycooldown_1`=120000 WHERE  `entry`=19008;
+UPDATE `zp_mangosd`.`item_template` SET `spellcategory_1`=1153, `spellcategorycooldown_1`=120000 WHERE  `entry`=19010;
+UPDATE `zp_mangosd`.`item_template` SET `spellcategory_1`=1153, `spellcategorycooldown_1`=120000 WHERE  `entry`=5510;
