@@ -347,3 +347,11 @@ UPDATE `zp_scriptdevzerod`.`script_texts` SET `content_default`='Which one shall
 
 -- reduced melee damage of Emperor Vek'lor
 UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=550, `maxdmg`=790 WHERE  `entry`=15276;
+
+-- web wrap, Maexxna and spiderling faction
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=14, `faction_H`=14 WHERE  `entry`=16486;
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=14, `faction_H`=14 WHERE  `entry`=15952;
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=14, `faction_H`=14 WHERE  `entry`=17055;
+
+-- delete web wraps from world
+DELETE FROM `zp_mangosd`.`creature` WHERE  `id`=16486;
