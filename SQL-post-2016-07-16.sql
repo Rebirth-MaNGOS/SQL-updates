@@ -344,3 +344,6 @@ UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='15.865' 
 
 -- Corrected text for anub'rekhan
 UPDATE `zp_scriptdevzerod`.`script_texts` SET `content_default`='Which one shall I eat first? So difficult to choose. They all smell so delicious...' WHERE  `entry`=-1533006;
+
+-- reduced melee damage of Emperor Vek'lor
+UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=550, `maxdmg`=790 WHERE  `entry`=15276;
