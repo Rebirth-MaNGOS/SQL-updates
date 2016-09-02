@@ -341,3 +341,6 @@ UPDATE `zp_mangosd`.`item_template` SET `spellcategory_1`=1153, `spellcategoryco
 
 -- Corrects dropchance for Larval Acid from Silicate Feeder
 UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='15.865' WHERE (`entry`='15333') AND (`item`='18512');
+
+-- Corrected text for anub'rekhan
+UPDATE `zp_scriptdevzerod`.`script_texts` SET `content_default`='Which one shall I eat first? So difficult to choose. They all smell so delicious...' WHERE  `entry`=-1533006;
