@@ -378,3 +378,7 @@ INSERT INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `posi
 INSERT INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES ('11825', '16', '-1259.7', '-2511.54', '20.7318', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3052225', '4.80368', '0', '0');
 INSERT INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES ('11825', '17', '-1262.1', '-2523.18', '20.7719', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3052226', '4.72513', '0', '0');
 INSERT INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `wpguid`, `orientation`, `model1`, `model2`) VALUES ('11825', '18', '-1257.39', '-2525.9', '21.0632', '0', '0', '0', '0', '0', '0', '0', '0', '0', '3052227', '0.83348', '0', '0');
+
+-- Bloodscalp Axe Thrower shouldn't run away
+DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=69408;
+DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=69407;
