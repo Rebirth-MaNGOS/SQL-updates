@@ -382,3 +382,7 @@ INSERT INTO `zp_mangosd`.`creature_movement` (`id`, `point`, `position_x`, `posi
 -- Bloodscalp Axe Thrower shouldn't run away
 DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=69408;
 DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=69407;
+
+-- spore and Loatheb faction
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=14, `faction_H`=14, `ScriptName`='mob_spore' WHERE  `entry`=16286;
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=14, `faction_H`=14 WHERE  `entry`=16011;
