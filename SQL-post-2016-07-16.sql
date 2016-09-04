@@ -386,3 +386,17 @@ DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=69407;
 -- spore and Loatheb faction
 UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=14, `faction_H`=14, `ScriptName`='mob_spore' WHERE  `entry`=16286;
 UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=14, `faction_H`=14 WHERE  `entry`=16011;
+
+-- Naxramas combat dummy added to world, from stock mangos
+REPLACE INTO `zp_mangosd`.`creature` VALUES (127802, 16211, 533, 0, 0, 2784.04, -3086.38, 267.768, 3.92699, 3600, 0, 0, 42, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (127803, 16211, 533, 0, 0, 2835.89, -3215.61, 298.344, 1.01229, 3600, 0, 0, 42, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (127804, 16211, 533, 0, 0, 2756.07, -3113.2, 267.768, 0.890118, 3600, 0, 0, 42, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (127805, 16211, 533, 0, 0, 2814.28, -3154.13, 298.229, 4.76475, 3600, 0, 0, 42, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (127806, 16211, 533, 0, 0, 2779.97, -3115.92, 267.768, 2.16421, 3600, 0, 0, 42, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (127807, 16211, 533, 0, 0, 2860.08, -3187.86, 298.234, 3.08923, 3600, 0, 0, 42, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (127808, 16211, 533, 0, 0, 2760.84, -3082.67, 267.768, 5.25344, 3600, 0, 0, 42, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (127809, 16211, 533, 0, 0, 2825.51, -3154.79, 298.229, 4.5204, 3600, 0, 0, 42, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (127810, 16211, 533, 0, 0, 2844.48, -3157.53, 298.233, 4.2237, 3600, 0, 0, 42, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (127811, 16211, 533, 0, 0, 2827.83, -3209.98, 298.344, 0.994838, 3600, 0, 0, 42, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (127812, 16211, 533, 0, 0, 2851.85, -3162.62, 298.236, 4.08407, 3600, 0, 0, 42, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (127813, 16211, 533, 0, 0, 2859.65, -3180.16, 298.237, 3.24631, 3600, 0, 0, 42, 0, 0, 0);
