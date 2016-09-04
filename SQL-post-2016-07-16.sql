@@ -400,3 +400,12 @@ REPLACE INTO `zp_mangosd`.`creature` VALUES (127810, 16211, 533, 0, 0, 2844.48, 
 REPLACE INTO `zp_mangosd`.`creature` VALUES (127811, 16211, 533, 0, 0, 2827.83, -3209.98, 298.344, 0.994838, 3600, 0, 0, 42, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature` VALUES (127812, 16211, 533, 0, 0, 2851.85, -3162.62, 298.236, 4.08407, 3600, 0, 0, 42, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature` VALUES (127813, 16211, 533, 0, 0, 2859.65, -3180.16, 298.237, 3.24631, 3600, 0, 0, 42, 0, 0, 0);
+
+-- Death Knight Understudy should stand and attack
+REPLACE INTO `creature_template_addon` VALUES (16803, 0, 0, 1, 0, 36, 0, NULL);
+
+-- add them to world again after being moved
+REPLACE INTO `creature` VALUES (88461, 16803, 533, 16539, 0, 2762.43, -3085.16, 267.685, 2.18589, 21600, 0, 0, 600000, 0, 0, 0);
+REPLACE INTO `creature` VALUES (88462, 16803, 533, 16539, 0, 2781.95, -3088.36, 267.685, 0.838932, 21600, 0, 0, 600000, 0, 0, 0);
+REPLACE INTO `creature` VALUES (88463, 16803, 533, 16539, 0, 2778.31, -3113.39, 267.685, 5.35498, 21600, 0, 0, 600000, 0, 0, 0);
+REPLACE INTO `creature` VALUES (88464, 16803, 533, 16539, 0, 2758.34, -3110.88, 267.685, 3.94518, 21600, 0, 0, 600000, 0, 0, 0);
