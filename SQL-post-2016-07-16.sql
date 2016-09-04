@@ -349,9 +349,9 @@ UPDATE `zp_scriptdevzerod`.`script_texts` SET `content_default`='Which one shall
 UPDATE `zp_mangosd`.`creature_template` SET `mindmg`=550, `maxdmg`=790 WHERE  `entry`=15276;
 
 -- web wrap, Maexxna and spiderling faction
-UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=14, `faction_H`=14 WHERE  `entry`=16486;
-UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=14, `faction_H`=14 WHERE  `entry`=15952;
-UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=14, `faction_H`=14 WHERE  `entry`=17055;
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=21, `faction_H`=21 WHERE  `entry`=16486;
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=21, `faction_H`=21 WHERE  `entry`=15952;
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=21, `faction_H`=21 WHERE  `entry`=17055;
 
 -- delete web wraps from world
 DELETE FROM `zp_mangosd`.`creature` WHERE  `id`=16486;
@@ -384,8 +384,8 @@ DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=69408;
 DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=69407;
 
 -- spore and Loatheb faction
-UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=14, `faction_H`=14, `ScriptName`='mob_spore' WHERE  `entry`=16286;
-UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=14, `faction_H`=14 WHERE  `entry`=16011;
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=21, `faction_H`=21, `ScriptName`='mob_spore' WHERE  `entry`=16286;
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=21, `faction_H`=21 WHERE  `entry`=16011;
 
 -- Naxramas combat dummy added to world, from stock mangos
 REPLACE INTO `zp_mangosd`.`creature` VALUES (127802, 16211, 533, 0, 0, 2784.04, -3086.38, 267.768, 3.92699, 3600, 0, 0, 42, 0, 0, 0);
@@ -409,3 +409,8 @@ REPLACE INTO `creature` VALUES (88461, 16803, 533, 16539, 0, 2762.43, -3085.16, 
 REPLACE INTO `creature` VALUES (88462, 16803, 533, 16539, 0, 2781.95, -3088.36, 267.685, 0.838932, 21600, 0, 0, 600000, 0, 0, 0);
 REPLACE INTO `creature` VALUES (88463, 16803, 533, 16539, 0, 2778.31, -3113.39, 267.685, 5.35498, 21600, 0, 0, 600000, 0, 0, 0);
 REPLACE INTO `creature` VALUES (88464, 16803, 533, 16539, 0, 2758.34, -3110.88, 267.685, 3.94518, 21600, 0, 0, 600000, 0, 0, 0);
+
+-- Adds on Noth, change faction
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=21, `faction_H`=21 WHERE  `entry`=16981;
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=21, `faction_H`=21 WHERE  `entry`=16982;
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=21, `faction_H`=21 WHERE  `entry`=16983;
