@@ -414,3 +414,7 @@ REPLACE INTO `creature` VALUES (88464, 16803, 533, 16539, 0, 2758.34, -3110.88, 
 UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=21, `faction_H`=21 WHERE  `entry`=16981;
 UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=21, `faction_H`=21 WHERE  `entry`=16982;
 UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=21, `faction_H`=21 WHERE  `entry`=16983;
+
+-- coordinates for summon spells used by noth
+REPLACE INTO `zp_mangosd`.`spell_target_position` VALUES (29257, 533, 2704.86, -3458.79, 264.067, 3.85584);
+REPLACE INTO `zp_mangosd`.`spell_target_position` VALUES (29227, 533, 2663.92, -3464.7, 262.574, 5.15958);
