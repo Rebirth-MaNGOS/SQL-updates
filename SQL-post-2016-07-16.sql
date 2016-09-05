@@ -418,3 +418,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=21, `faction_H`=21 WHERE
 -- coordinates for summon spells used by noth
 REPLACE INTO `zp_mangosd`.`spell_target_position` VALUES (29257, 533, 2704.86, -3458.79, 264.067, 3.85584);
 REPLACE INTO `zp_mangosd`.`spell_target_position` VALUES (29227, 533, 2663.92, -3464.7, 262.574, 5.15958);
+
+-- Bloodscalp Berserker shouldn't run away in fear
+DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=59702;
