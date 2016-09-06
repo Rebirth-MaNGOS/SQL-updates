@@ -421,3 +421,25 @@ REPLACE INTO `zp_mangosd`.`spell_target_position` VALUES (29227, 533, 2663.92, -
 
 -- Bloodscalp Berserker shouldn't run away in fear
 DELETE FROM `zp_mangosd`.`creature_ai_scripts` WHERE  `id`=59702;
+
+-- SQL for Thaddius
+-- correct script name
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='boss_feugen' WHERE  `entry`=15930;
+
+-- add coil npc
+REPLACE INTO `zp_mangosd`.`creature_template` VALUES (16218, 0, 0, 13069, 0, 'Tesla Coil', NULL, 0, 60, 60, 17010, 17010, 0, 0, 9729, 14, 14, 0, 1, 1.14286, 1, 0, 422, 586, 0, 642, 1, 2000, 0, 0, 0, 33554688, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 7, 0, 0, 1, 0, 0, 0, 0, 0, 'npc_tesla_coil');
+
+-- add to world
+REPLACE INTO `zp_mangosd`.`creature` VALUES (6095, 16218, 533, 0, 0, 3487.76, -2911.2, 319.406, 3.90954, 120, 0, 0, 17010, 0, 0, 2);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (6096, 16218, 533, 0, 0, 3527.81, -2952.38, 319.326, 3.90954, 120, 0, 0, 17010, 0, 0, 2);
+
+-- wp so they stay in the air
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (6095, 1, 3487.76, -2911.2, 319.406, 600000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.90954, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (6096, 1, 3527.81, -2952.38, 319.326, 600000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.90954, 0, 0);
+
+-- gobj
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (82254, 181477, 533, 3527.94, -2952.26, 318.898, 3.14159, 0, 0, -1, 0, 180, 255, 0);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (82255, 181478, 533, 3487.32, -2911.38, 318.898, 3.14159, 0, 0, -1, 0, 180, 255, 0);
+
+-- size
+UPDATE `zp_mangosd`.`gameobject_template` SET `size`=1.78059 WHERE  `entry`=181477;
