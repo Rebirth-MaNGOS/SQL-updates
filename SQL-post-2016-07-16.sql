@@ -443,3 +443,46 @@ REPLACE INTO `zp_mangosd`.`gameobject` VALUES (82255, 181478, 533, 3487.32, -291
 
 -- size
 UPDATE `zp_mangosd`.`gameobject_template` SET `size`=1.78059 WHERE  `entry`=181477;
+
+-- Gothik - remove adds in world
+DELETE FROM `zp_mangosd`.`creature` WHERE  `id`=16124;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `id`=16125;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `id`=16126;
+
+DELETE FROM `zp_mangosd`.`creature` WHERE  `id`=16127;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `id`=16148;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `id`=16149;
+DELETE FROM `zp_mangosd`.`creature` WHERE  `id`=16150;
+
+-- add doors
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (65818, 181170, 533, 2692.07, -3360.78, 267.504, 3.14159, 0, 0, -1, 0, 180, 0, 0);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (65758, 181125, 533, 2633.84, -3336.82, 267.084, 0, 0, 0, 0, 1, 180, 0, 1);
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES (65757, 181124, 533, 2750.49, -3384.36, 267.341, 0, 0, 0, 0, 1, 180, 0, 0);
+
+-- add trigger positions
+REPLACE INTO `zp_mangosd`.`creature` VALUES (127618, 16137, 533, 0, 0, 2692.16, -3430.75, 268.646, 1.6057, 3600, 0, 0, 17010, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (127619, 16137, 533, 0, 0, 2733.46, -3349.39, 267.768, 1.78024, 3600, 0, 0, 17010, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (127620, 16137, 533, 0, 0, 2739.99, -3321.73, 284.232, 2.82743, 3600, 0, 0, 17010, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (127621, 16137, 533, 0, 0, 2692.21, -3428.78, 268.646, 1.48353, 3600, 0, 0, 17010, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (127622, 16137, 533, 0, 0, 2739.99, -3399.78, 284.295, 6.10865, 3600, 0, 0, 17010, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (127623, 16137, 533, 0, 0, 2714.56, -3430.61, 268.646, 1.41372, 3600, 0, 0, 17010, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (127624, 16137, 533, 0, 0, 2683.89, -3304.21, 267.768, 2.49582, 3600, 0, 0, 17010, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (127625, 16137, 533, 0, 0, 2669.58, -3428.86, 268.646, 1.37881, 3600, 0, 0, 17010, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (127626, 16137, 533, 0, 0, 2700.27, -3322.35, 267.768, 3.52556, 3600, 0, 0, 17010, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (127627, 16137, 533, 0, 0, 2643.73, -3399.68, 284.183, 6.0912, 3600, 0, 0, 17010, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (127628, 16137, 533, 0, 0, 2664.87, -3340.75, 267.767, 5.93412, 3600, 0, 0, 17010, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (127629, 16137, 533, 0, 0, 2725.82, -3309.57, 267.769, 2.82743, 3600, 0, 0, 17010, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (127630, 16137, 533, 0, 0, 2643.73, -3321.73, 284.233, 6.19592, 3600, 0, 0, 17010, 0, 0, 0);
+
+-- faction for adds
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=21, `faction_H`=21, `aggrorangeoverride`=60 WHERE  `entry`=16124;
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=21, `faction_H`=21, `aggrorangeoverride`=60 WHERE  `entry`=16125;
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=21, `faction_H`=21, `aggrorangeoverride`=60 WHERE  `entry`=16126;
+UPDATE `zp_mangosd`.`creature_template` SET `aggrorangeoverride`=60 WHERE  `entry`=16147;
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=21, `faction_H`=21, `aggrorangeoverride`=60 WHERE  `entry`=16148;
+UPDATE `zp_mangosd`.`creature_template` SET `aggrorangeoverride`=60 WHERE  `entry`=16149;
+UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=21, `faction_H`=21, `aggrorangeoverride`=60 WHERE  `entry`=16150;
+
+-- spell coords
+REPLACE INTO `zp_mangosd`.`spell_target_position` VALUES (28025, 533, 2692, -3399.27, 267.686, 4.70454);
+REPLACE INTO `zp_mangosd`.`spell_target_position` VALUES (28026, 533, 2692, -3321.86, 267.686, 2.19126);
