@@ -486,3 +486,7 @@ UPDATE `zp_mangosd`.`creature_template` SET `faction_A`=21, `faction_H`=21, `agg
 -- spell coords
 REPLACE INTO `zp_mangosd`.`spell_target_position` VALUES (28025, 533, 2692, -3399.27, 267.686, 4.70454);
 REPLACE INTO `zp_mangosd`.`spell_target_position` VALUES (28026, 533, 2692, -3321.86, 267.686, 2.19126);
+
+-- Frogger event in Naxx
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE  `entry`=16027;
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1602701, 16027, 10, 0, 100, 0, 0, 5, 0, 0, 11, 28433, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Living Poison - Cast Explode on Hostile LOS');
