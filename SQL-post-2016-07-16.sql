@@ -490,3 +490,8 @@ REPLACE INTO `zp_mangosd`.`spell_target_position` VALUES (28026, 533, 2692, -332
 -- Frogger event in Naxx
 UPDATE `zp_mangosd`.`creature_template` SET `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE  `entry`=16027;
 REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1602701, 16027, 10, 0, 100, 0, 0, 5, 0, 0, 11, 28433, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Living Poison - Cast Explode on Hostile LOS');
+
+-- Quest: Etched Note, corrected typos
+UPDATE `zp_mangosd`.`quest_template` SET `OfferRewardText`='And it is my job to make sure you are prepared by teaching you the basics of our profession--how to tame your pet, how to fire your rifle, and many other skills that will become necessary.$b$bHunters are a strong part of our tradition and history, $N. You would do well to remember how important you are to the tribe. You will be respected and revered if you serve our people well.' WHERE (`entry`='3092');
+UPDATE `zp_mangosd`.`quest_template` SET `RequestItemsText`='Welcome to Camp Narache, $N. I hear good things about you. Your bloodline is strong, and many of the elders consider you skilled already. But that we will test.$b$bThe plains of Mulgore will be your home for sometime--you should do your best to learn it very well. One day you will travel to unfamilar lands to master greater skills. You must be ready.' WHERE (`entry`='3092');
+
