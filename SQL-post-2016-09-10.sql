@@ -42,3 +42,6 @@ REPLACE INTO `zp_mangosd`.`pool_creature` VALUES (47777, 2128, 50, 'Molten War G
 
 -- add armor
 UPDATE `zp_mangosd`.`creature_template` SET `armor`=3971 WHERE  `entry`=8923;
+
+-- Make the mages in Tyr's Hand run towards the player if they're not casting.
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET action1_param1 = 1, comment = "Scarlet Enchanter - Allow Combat Movement and Set Phase to 0 on Spawn" WHERE id = 945201 LIMIT 1;
