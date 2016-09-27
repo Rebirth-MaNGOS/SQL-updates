@@ -45,3 +45,12 @@ UPDATE `zp_mangosd`.`creature_template` SET `armor`=3971 WHERE  `entry`=8923;
 
 -- Make the mages in Tyr's Hand run towards the player if they're not casting.
 UPDATE `zp_mangosd`.`creature_ai_scripts` SET action1_param1 = 1, comment = "Scarlet Enchanter - Allow Combat Movement and Set Phase to 0 on Spawn" WHERE id = 945201 LIMIT 1;
+
+-- Skul (rare) in Stratholme - increased spawn rate
+UPDATE `zp_mangosd`.`pool_creature` SET `chance`='90' WHERE (`guid`='3034008');
+UPDATE `zp_mangosd`.`pool_creature` SET `chance`='2' WHERE (`guid`='3034003');
+UPDATE `zp_mangosd`.`pool_creature` SET `chance`='2' WHERE (`guid`='3034004');
+UPDATE `zp_mangosd`.`pool_creature` SET `chance`='2' WHERE (`guid`='3034005');
+UPDATE `zp_mangosd`.`pool_creature` SET `chance`='2' WHERE (`guid`='3034006');
+UPDATE `zp_mangosd`.`pool_creature` SET `chance`='2' WHERE (`guid`='3034007');
+
