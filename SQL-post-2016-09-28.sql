@@ -20,3 +20,6 @@ DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE `item`=20878;
 DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE `item`=20879;
 DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE `item`=20880;
 DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE `item`=20881;
+
+-- Maraudine Scout increased ranged damage, spell 6660 before
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param1`=15620 WHERE  `id`=465402;
