@@ -23,3 +23,18 @@ DELETE FROM `zp_mangosd`.`creature_loot_template` WHERE `item`=20881;
 
 -- Maraudine Scout increased ranged damage, spell 6660 before
 UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param1`=15620 WHERE  `id`=465402;
+
+-- Cthun, adjusted drop rate in pool to 100%, slightly more for weapons than before
+UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=4.4 WHERE  `entry`=34049 AND `item`=21839;
+UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=4.4 WHERE  `entry`=34049 AND `item`=21134;
+UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=4.4 WHERE  `entry`=34049 AND `item`=21126;
+UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=8.68 WHERE  `entry`=34049 AND `item`=22732;
+UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=8.68 WHERE  `entry`=34049 AND `item`=22731;
+UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=8.68 WHERE  `entry`=34049 AND `item`=22730;
+UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=8.68 WHERE  `entry`=34049 AND `item`=21596;
+UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=8.68 WHERE  `entry`=34049 AND `item`=21586;
+UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=8.68 WHERE  `entry`=34049 AND `item`=21585;
+UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=8.68 WHERE  `entry`=34049 AND `item`=21583;
+UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=8.68 WHERE  `entry`=34049 AND `item`=21582;
+UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=8.68 WHERE  `entry`=34049 AND `item`=21581;
+UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=8.68 WHERE  `entry`=34049 AND `item`=21579;
