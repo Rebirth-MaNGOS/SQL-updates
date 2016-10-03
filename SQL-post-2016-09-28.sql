@@ -38,3 +38,10 @@ UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=8.68 WHE
 UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=8.68 WHERE  `entry`=34049 AND `item`=21582;
 UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=8.68 WHERE  `entry`=34049 AND `item`=21581;
 UPDATE `zp_mangosd`.`reference_loot_template` SET `ChanceOrQuestChance`=8.68 WHERE  `entry`=34049 AND `item`=21579;
+
+-- add missing rep for trash post twins AQ40
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15246, 910, 0, 3, 0, 100, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15250, 910, 0, 3, 0, 100, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15252, 910, 0, 3, 0, 100, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15312, 910, 0, 3, 0, 100, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_onkill_reputation` VALUES (15311, 910, 0, 3, 0, 100, 0, 0, 0, 0);
