@@ -284,3 +284,6 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3001300, 32, 442.384, -151
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3001300, 33, 431.399, -159.894, -63.6199, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.89685, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (3001300, 34, 418.216, -174.246, -62.5961, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.03037, 0, 0);
 
+-- Fix for the d2 event in BRD
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES ('500364', '181074', '230', '596.82', '-188.77', '-54.1544', '6.20586', '0', '0', '0.038653', '-0.999253', '-7200', '0', '1');
+REPLACE INTO `zp_mangosd`.`gameobject` VALUES ('99906', '300065', '230', '596.82', '-188.77', '-54.15', '0', '0', '0', '0', '0', '180', '0', '1');
