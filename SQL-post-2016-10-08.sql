@@ -194,3 +194,9 @@ REPLACE INTO `zp_mangosd`.`creature` VALUES (8050, 16400, 533, 0, 0, 3178.83, -3
 
 -- Added dummy for Web Wrap (maexxna, naxx)
 REPLACE INTO `zp_mangosd`.`creature_template` VALUES (800113, 0, 0, 6296, 0, 'Web Wrap Dummy', NULL, 0, 62, 62, 1000, 1000, 0, 0, 0, 35, 35, 0, 1, 0.95, 1, 0, 0, 0, 0, 0, 1, 1000, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 0, 0, 1, 0, 0, 0, 0, 128, 'npc_web_wrap_dummy');
+
+-- Naxxramas Worshipper shouldn't be immune MC and added spell when MC'd. Can't cast it tho
+UPDATE `zp_mangosd`.`creature_template` SET `spell1`=28732, `mechanic_immune_mask`=67584 WHERE  `entry`=16506;
+
+-- Naxxramas Follower immune sheep + MC
+UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=65537 WHERE  `entry`=16505;
