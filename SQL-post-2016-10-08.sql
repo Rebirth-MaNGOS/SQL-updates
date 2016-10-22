@@ -200,3 +200,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `spell1`=28732, `mechanic_immune_mas
 
 -- Naxxramas Follower immune sheep + MC
 UPDATE `zp_mangosd`.`creature_template` SET `mechanic_immune_mask`=65537 WHERE  `entry`=16505;
+
+-- Princess Yauj should be tauntable
+UPDATE `zp_mangosd`.`creature_template` SET `flags_extra`=513 WHERE  `entry`=15543;
