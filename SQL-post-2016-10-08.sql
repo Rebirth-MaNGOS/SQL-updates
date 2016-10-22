@@ -20,3 +20,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `mingold`=71655, `maxgold`=93753 WHE
 
 -- Enchanted Moonstalker Cloak should only work in darkshore
 REPLACE INTO `zp_mangosd`.`spell_area` VALUES (6298, 148, 0, 0, 0, 0, 0, 2, 0);
+
+-- Loatheb, remove spore from world
+DELETE FROM `zp_mangosd`.`creature` WHERE  `id`=16286;
