@@ -178,3 +178,17 @@ DELETE FROM `zp_mangosd`.`event_scripts` WHERE  `id`=1449 Limit 10;
 
 -- Add the correct felhunter
 REPLACE INTO `zp_mangosd`.`event_scripts` VALUES (1449, 0, 10, 6268, 180000, 0, 0, 0, 0, 0, 0, 0, -767.591, -3721.71, 42.3617, 2.79602, '');
+
+-- Toxic Tunnel at Gluth add AI and adjust stats
+UPDATE `zp_mangosd`.`creature_template` SET `minlevel`=61, `maxlevel`=61, `faction_A`=21, `faction_H`=21, `unit_flags`=33554946, `AIName`='EventAI', `ScriptName`='mob_eventai' WHERE  `entry`=16400;
+
+-- add AI
+REPLACE INTO `zp_mangosd`.`creature_ai_scripts` VALUES (1640001, 16400, 1, 0, 100, 1, 0, 0, 6000, 8000, 11, 28369, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Toxic Tunnel - Cast Gas');
+
+-- Add to world
+REPLACE INTO `zp_mangosd`.`creature` VALUES (8046, 16400, 533, 0, 0, 3242.36, -3199.11, 317.104, 4.00224, 25, 0, 0, 17010, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (8047, 16400, 533, 0, 0, 3228.38, -3215.01, 316.501, 3.94333, 25, 0, 0, 17010, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (8048, 16400, 533, 0, 0, 3211.47, -3231.93, 315.48, 3.94333, 25, 0, 0, 17010, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (8049, 16400, 533, 0, 0, 3194.56, -3248.98, 315.299, 3.90407, 25, 0, 0, 17010, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (8050, 16400, 533, 0, 0, 3178.83, -3263.66, 316.465, 3.89229, 25, 0, 0, 17010, 0, 0, 0);
+
