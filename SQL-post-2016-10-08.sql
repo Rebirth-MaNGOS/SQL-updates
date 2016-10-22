@@ -128,3 +128,6 @@ REPLACE INTO `zp_mangosd`.`gameobject` VALUES (82256, 181228, 533, 3635.36, -509
 
 -- Spawn of Fankriss changed enrage to 20 sec instead of 10
 UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_param1`=20000, `event_param2`=20000 WHERE  `id`=1563001;
+
+-- The Rethban Gauntlet added missing spell on quest accept
+UPDATE `zp_mangosd`.`quest_template` SET `SrcSpell`=8553 WHERE  `entry`=1699;
