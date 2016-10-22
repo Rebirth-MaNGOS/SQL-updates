@@ -131,3 +131,50 @@ UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_param1`=20000, `event_param
 
 -- The Rethban Gauntlet added missing spell on quest accept
 UPDATE `zp_mangosd`.`quest_template` SET `SrcSpell`=8553 WHERE  `entry`=1699;
+
+-- UC the binding
+-- Warlock quests(the binding) to summon voidwalkers spawn multiple, remove old
+DELETE FROM `zp_mangosd`.`event_scripts` WHERE  `id`=1785 Limit 10;
+
+-- Add the correct vw
+REPLACE INTO `zp_mangosd`.`event_scripts` VALUES (1785, 0, 10, 5676, 180000, 0, 0, 0, 0, 0, 0, 0, 1704.61, 41.9147, -63.8433, 0.435896, '');
+
+-- remove old
+DELETE FROM `zp_mangosd`.`event_scripts` WHERE  `id`=1786 Limit 10;
+
+-- Add the correct succubus
+REPLACE INTO `zp_mangosd`.`event_scripts` VALUES (1786, 0, 10, 5677, 180000, 0, 0, 0, 0, 0, 0, 0, 1704.61, 41.9147, -63.8433, 0.435896, '');
+
+-- Org the binding
+-- remove old
+DELETE FROM `zp_mangosd`.`event_scripts` WHERE  `id`=1787 Limit 10;
+
+-- Add the correct vw
+REPLACE INTO `zp_mangosd`.`event_scripts` VALUES (1787, 0, 10, 5676, 180000, 0, 0, 0, 0, 0, 0, 0, 1806.13, -4372.67, -17.4888, 4.41785, '');
+
+-- remove old
+DELETE FROM `zp_mangosd`.`event_scripts` WHERE  `id`=1788 Limit 10;
+
+-- Add the correct succubus
+REPLACE INTO `zp_mangosd`.`event_scripts` VALUES (1788, 0, 10, 5677, 180000, 0, 0, 0, 0, 0, 0, 0, 1806.13, -4372.67, -17.4888, 4.41785, '');
+
+-- SW the binding
+-- remove old
+DELETE FROM `zp_mangosd`.`event_scripts` WHERE  `id`=1131 Limit 10;
+
+-- Add the correct vw
+REPLACE INTO `zp_mangosd`.`event_scripts` VALUES (1131, 0, 10, 5676, 180000, 0, 0, 0, 0, 0, 0, 0, -8973.05, 1043.72, 52.8631, 2, '');
+
+-- remove old
+DELETE FROM `zp_mangosd`.`event_scripts` WHERE  `id`=1134 Limit 10;
+
+-- Add the correct succubus
+REPLACE INTO `zp_mangosd`.`event_scripts` VALUES (1134, 0, 10, 5677, 180000, 0, 0, 0, 0, 0, 0, 0, -8973.05, 1043.72, 52.8631, 2, '');
+
+-- Ratchet felhunter
+
+-- remove old
+DELETE FROM `zp_mangosd`.`event_scripts` WHERE  `id`=1449 Limit 10;
+
+-- Add the correct felhunter
+REPLACE INTO `zp_mangosd`.`event_scripts` VALUES (1449, 0, 10, 6268, 180000, 0, 0, 0, 0, 0, 0, 0, -767.591, -3721.71, 42.3617, 2.79602, '');
