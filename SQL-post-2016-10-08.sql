@@ -192,3 +192,5 @@ REPLACE INTO `zp_mangosd`.`creature` VALUES (8048, 16400, 533, 0, 0, 3211.47, -3
 REPLACE INTO `zp_mangosd`.`creature` VALUES (8049, 16400, 533, 0, 0, 3194.56, -3248.98, 315.299, 3.90407, 25, 0, 0, 17010, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature` VALUES (8050, 16400, 533, 0, 0, 3178.83, -3263.66, 316.465, 3.89229, 25, 0, 0, 17010, 0, 0, 0);
 
+-- Added dummy for Web Wrap (maexxna, naxx)
+REPLACE INTO `zp_mangosd`.`creature_template` VALUES (800113, 0, 0, 6296, 0, 'Web Wrap Dummy', NULL, 0, 62, 62, 1000, 1000, 0, 0, 0, 35, 35, 0, 1, 0.95, 1, 0, 0, 0, 0, 0, 1, 1000, 1000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 0, 0, 1, 0, 0, 0, 0, 128, 'npc_web_wrap_dummy');
