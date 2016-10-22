@@ -126,3 +126,5 @@ REPLACE INTO `zp_mangosd`.`gameobject` VALUES (82253, 181405, 533, 3698.6, -5187
 -- exit door
 REPLACE INTO `zp_mangosd`.`gameobject` VALUES (82256, 181228, 533, 3635.36, -5090.29, 142.983, -1.77151, 0, 0, -0.774393, 0.632705, 180, 255, 0);
 
+-- Spawn of Fankriss changed enrage to 20 sec instead of 10
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_param1`=20000, `event_param2`=20000 WHERE  `id`=1563001;
