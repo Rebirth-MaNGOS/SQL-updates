@@ -17,3 +17,6 @@ UPDATE `zp_mangosd`.`creature_template` SET `minlevel`=57, `maxlevel`=58, `minhe
 
 -- Emeriss, change gold drop to same as the other dragons
 UPDATE `zp_mangosd`.`creature_template` SET `mingold`=71655, `maxgold`=93753 WHERE  `entry`=14889;
+
+-- Enchanted Moonstalker Cloak should only work in darkshore
+REPLACE INTO `zp_mangosd`.`spell_area` VALUES (6298, 148, 0, 0, 0, 0, 0, 2, 0);
