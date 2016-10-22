@@ -15,3 +15,5 @@ UPDATE `zp_mangosd`.`item_template` SET `spellcharges_1`=0 WHERE  `entry`=18606;
 -- Cursed Justicar updated stats
 UPDATE `zp_mangosd`.`creature_template` SET `minlevel`=57, `maxlevel`=58, `minhealth`=6891, `maxhealth`=7107, `armor`=3799, `rank`=1, `mindmg`=406, `maxdmg`=495, `attackpower`=250 WHERE  `entry`=7072;
 
+-- Emeriss, change gold drop to same as the other dragons
+UPDATE `zp_mangosd`.`creature_template` SET `mingold`=71655, `maxgold`=93753 WHERE  `entry`=14889;
