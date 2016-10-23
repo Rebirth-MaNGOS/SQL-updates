@@ -1264,3 +1264,26 @@ UPDATE `zp_mangosd`.`creature` SET position_x = 1012.858887, position_y = 1488.1
 REPLACE INTO `zp_mangosd`.`creature_template` VALUES (16783, 0, 0, 11139, 0, 'Plague Slime (Blue)', NULL, 0, 61, 61, 12000, 12000, 0, 0, 0, 21, 21, 0, 1, 1.14286, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 0, 0, 1, 0, 0, 0, 0, 0, '');
 REPLACE INTO `zp_mangosd`.`creature_template` VALUES (16784, 0, 0, 681, 0, 'Plague Slime (Red)', NULL, 0, 61, 61, 12000, 12000, 0, 0, 0, 21, 21, 0, 1, 1.14286, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 0, 0, 1, 0, 0, 0, 0, 0, '');
 REPLACE INTO `zp_mangosd`.`creature_template` VALUES (16785, 0, 0, 11137, 0, 'Plague Slime (Green)', NULL, 0, 61, 61, 12000, 12000, 0, 0, 0, 21, 21, 0, 1, 1.14286, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 0, 0, 1, 0, 0, 0, 0, 0, '');
+
+-- Cmangos Naxx models that don't need scale adjustments
+UPDATE `zp_mangosd`.`creature_template` SET `Scale`='0' WHERE `Entry`='15975';
+UPDATE `zp_mangosd`.`creature_template` SET `Scale`='0' WHERE `Entry`='15974';
+UPDATE `zp_mangosd`.`creature_template` SET `Scale`='0' WHERE `Entry`='16068';
+UPDATE `zp_mangosd`.`creature_template` SET `Scale`='0' WHERE `Entry`='16029';
+UPDATE `zp_mangosd`.`creature_template` SET `Scale`='0' WHERE `Entry`='16368';
+UPDATE `zp_mangosd`.`creature_template` SET `Scale`='0' WHERE `Entry`='16451';
+UPDATE `zp_mangosd`.`creature_template` SET `Scale`='0' WHERE `Entry`='16452';
+UPDATE `zp_mangosd`.`creature_template` SET `Scale`='0' WHERE `Entry`='15976';
+UPDATE `zp_mangosd`.`creature_template` SET `Scale`='0' WHERE `Entry`='16027';
+UPDATE `zp_mangosd`.`creature_template` SET `Scale`='0' WHERE `Entry`='16127';
+UPDATE `zp_mangosd`.`creature_template` SET `Scale`='0' WHERE `Entry`='16145';
+UPDATE `zp_mangosd`.`creature_template` SET `Scale`='0' WHERE `Entry`='16163';
+UPDATE `zp_mangosd`.`creature_template` SET `Scale`='0' WHERE `Entry`='16164';
+UPDATE `zp_mangosd`.`creature_template` SET `Scale`='0' WHERE `Entry`='16146';
+UPDATE `zp_mangosd`.`creature_template` SET `Scale`='0' WHERE `Entry`='16400';
+UPDATE `zp_mangosd`.`creature_template` SET `Scale`='0' WHERE `Entry`='16165';
+UPDATE `zp_mangosd`.`creature_template` SET `Scale`='0' WHERE `Entry`='16390';
+UPDATE `zp_mangosd`.`creature_template` SET `Scale`='0' WHERE `Entry`='16017';
+UPDATE `zp_mangosd`.`creature_template` SET `Scale`='0' WHERE `Entry`='16449';
+UPDATE `zp_mangosd`.`creature_template` SET `Scale`='0' WHERE `Entry`='16446';
+UPDATE `zp_mangosd`.`creature_template` SET `Scale`='0' WHERE `Entry`='16861';
