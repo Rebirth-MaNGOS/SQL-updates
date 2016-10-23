@@ -1256,3 +1256,6 @@ INSERT INTO `zp_mangosd`.creature (guid, id, map, position_x, position_y, positi
 (23630, 5432, 1,  -9754, -4453, 0.569, 4.148, 430,15, 6702, 0, 1),
 (23651, 5432, 1,  -9718, -4372, 5.972, 3.225, 430,15, 6702, 0, 1),
 (23635, 5432, 1, -9628, -4404, 0.569, 1.831, 430,15, 6702, 0, 1);
+
+-- Cmangos, Corrected spawn Mottled Worg inside tree
+UPDATE `zp_mangosd`.`creature` SET position_x = 1012.858887, position_y = 1488.146973, position_z = 41.295895, orientation = 0.157890, spawndist = 5, movementType = 1 WHERE guid = 17952;
