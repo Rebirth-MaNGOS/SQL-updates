@@ -1259,3 +1259,8 @@ INSERT INTO `zp_mangosd`.creature (guid, id, map, position_x, position_y, positi
 
 -- Cmangos, Corrected spawn Mottled Worg inside tree
 UPDATE `zp_mangosd`.`creature` SET position_x = 1012.858887, position_y = 1488.146973, position_z = 41.295895, orientation = 0.157890, spawndist = 5, movementType = 1 WHERE guid = 17952;
+
+-- Cmangos These templates are needed to cast the following spells: 28988, 28989 and 28990.
+REPLACE INTO `zp_mangosd`.`creature_template` VALUES (16783, 0, 0, 11139, 0, 'Plague Slime (Blue)', NULL, 0, 61, 61, 12000, 12000, 0, 0, 0, 21, 21, 0, 1, 1.14286, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 0, 0, 1, 0, 0, 0, 0, 0, '');
+REPLACE INTO `zp_mangosd`.`creature_template` VALUES (16784, 0, 0, 681, 0, 'Plague Slime (Red)', NULL, 0, 61, 61, 12000, 12000, 0, 0, 0, 21, 21, 0, 1, 1.14286, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 0, 0, 1, 0, 0, 0, 0, 0, '');
+REPLACE INTO `zp_mangosd`.`creature_template` VALUES (16785, 0, 0, 11137, 0, 'Plague Slime (Green)', NULL, 0, 61, 61, 12000, 12000, 0, 0, 0, 21, 21, 0, 1, 1.14286, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 0, 0, 1, 0, 0, 0, 0, 0, '');
