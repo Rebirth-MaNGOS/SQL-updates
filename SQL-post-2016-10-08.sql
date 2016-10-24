@@ -1560,3 +1560,16 @@ INSERT INTO `zp_mangosd`.`creature_movement_template` (`entry`, `point`, `positi
 -- Enabled creature 7978 to use waypoints
 UPDATE `zp_mangosd`.`creature` SET `MovementType` = 2 WHERE `id` = 7978;
 UPDATE `zp_mangosd`.`creature_template` SET `MovementType` = 2 WHERE `entry` = 7978;
+
+-- Naxxramas Acolyte was using a normal version of Arcane explosion instead of the more powerful raid version it should use
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `action1_param1`='28450' WHERE  `id`=1598101;
+
+-- Plague beast cast aura on spawn
+UPDATE `zp_mangosd`.`creature_ai_scripts` SET `event_type`='11' WHERE  `id`=1603402;
+
+-- Fixed speed of creatures 16451 (Deathknight Vindicator) and 16452 (Necro Knight Guardian) in Naxxramas Outer Ring
+-- because they were patrolling far too quickly
+UPDATE `zp_mangosd`.creature_template SET `speed_walk` = 1.5 WHERE `entry` IN (16451, 16452);
+
+-- Move Thaddius
+UPDATE `zp_mangosd`.`creature` SET `position_x` = 3508.018, `position_y` = -2931.33, `position_z` = 303.0154, `orientation` = 3.935162 WHERE `id` = 15928;
