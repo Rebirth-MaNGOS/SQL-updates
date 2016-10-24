@@ -1735,3 +1735,33 @@ UPDATE `zp_mangosd`.creature_template SET `speed_walk` = 1.5 WHERE `entry` IN (1
 
 -- Move Thaddius
 UPDATE `zp_mangosd`.`creature` SET `position_x` = 3508.018, `position_y` = -2931.33, `position_z` = 303.0154, `orientation` = 3.935162 WHERE `id` = 15928;
+
+-- Fixed creature 16146 (Deathknight) in Naxxramas not wielding its shield
+UPDATE `zp_mangosd`.`creature_equip_template_raw` SET `equipslot1` = 781, `equipinfo1` = 33490690 WHERE `entry` = 142;
+
+-- Updated Naxxramas Military Sub-Boss Trigger level from 80 to 60
+UPDATE `zp_mangosd`.`creature_template` SET `minlevel` = 60, `maxlevel` = 60 WHERE `entry` = 16137;
+
+-- Fixed rank of creatures involved in Gothic Fight because they were missing their Elite rank
+UPDATE `zp_mangosd`.`creature_template` SET `rank` = 1 WHERE `entry` IN (16126, 16124, 16125, 16148, 16150);
+
+-- Removed the whitespace in "Death Knight" for creatures 16125 & 16148 as it was introduced in WotLK
+UPDATE `zp_mangosd`.`creature_template` SET `name` = 'Unrelenting Deathknight' WHERE `entry` = 16125;
+UPDATE `zp_mangosd`.`creature_template` SET `name` = 'Spectral Deathknight' WHERE `entry` = 16148;
+
+-- Added cloud disease ability to creature 16029 (Sludge Belcher) in Naxxramas
+DELETE FROM `zp_mangosd`.`creature_template_addon` WHERE `entry` = 16029;
+INSERT INTO `zp_mangosd`.`creature_template_addon` VALUES
+(16029, 0, 0, 1, 16, 0, 0, '28362');
+ 
+-- Added cloud disease ability to creature 16017 (Patchwork Golem) in Naxxramas
+DELETE FROM `zp_mangosd`.`creature_template_addon` WHERE `entry` = 16017;
+INSERT INTO `zp_mangosd`.`creature_template_addon` VALUES
+(16017, 0, 0, 1, 16, 0, 0, '27793');
+
+-- Fixed creature 16024 (Embalming Slime) in Naxxramas Construction Wing
+UPDATE `zp_mangosd`.`creature` SET `spawndist` = 8, `MovementType` = 1 WHERE `id` = 16024;
+UPDATE `zp_mangosd`.`creature_template` SET `scale` = 1.0 WHERE `entry` = 16024;
+
+-- Change weapon of creature 16156 (Dark Touched Warrior) from axe to bucket.
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id` = 1139 WHERE `entry` = 16156;
