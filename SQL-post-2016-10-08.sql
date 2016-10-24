@@ -1410,3 +1410,7 @@ INSERT INTO `zp_mangosd`.`creature` (`guid`, `id`, `map`, `modelid`, `equipment_
 
 -- Remove duplicates
 DELETE FROM `zp_mangosd`.`creature` WHERE `guid` IN('88265', '88266', '88271');
+
+-- Cmangos, needs to complete right q to port into naxx
+UPDATE  `zp_mangosd`.`areatrigger_teleport` SET `required_quest_done`='9378' WHERE `id`='4055';
+UPDATE  `zp_mangosd`.`areatrigger_teleport` SET `required_quest_done`='9378' WHERE `id`='4156';
