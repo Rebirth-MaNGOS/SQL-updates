@@ -1775,3 +1775,7 @@ INSERT INTO `zp_mangosd`.`creature_movement_scripts` VALUES
 
 -- spell pos
 REPLACE INTO `zp_mangosd`.`spell_target_position` VALUES (28280, 533, 3125.44, -3309.74, 293.251, 3.14929);
+
+UPDATE `zp_mangosd`.`creature_template` SET `MovementType` = 1, `scale` = 2 WHERE `entry` = 16375;
+-- Removed wrong spawns of creature 16375 (Sewage Slime): they are summoned by the script above
+DELETE FROM `zp_mangosd`.`creature` WHERE `id` = 16375;
