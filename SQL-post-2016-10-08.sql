@@ -1765,3 +1765,13 @@ UPDATE `zp_mangosd`.`creature_template` SET `scale` = 1.0 WHERE `entry` = 16024;
 
 -- Change weapon of creature 16156 (Dark Touched Warrior) from axe to bucket.
 UPDATE `zp_mangosd`.`creature_template` SET `equipment_id` = 1139 WHERE `entry` = 16156;
+
+-- Movement script for Grobbulus
+DELETE FROM `zp_mangosd`.`creature_movement_scripts` WHERE `id` = 1593101;
+INSERT INTO `zp_mangosd`.`creature_movement_scripts` VALUES
+(1593101, 1, 15, 28280, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'cast summon sewage slime'),
+(1593101, 3, 15, 28280, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'cast summon sewage slime'),
+(1593101, 5, 15, 28280, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'cast summon sewage slime');
+
+-- spell pos
+REPLACE INTO `zp_mangosd`.`spell_target_position` VALUES (28280, 533, 3125.44, -3309.74, 293.251, 3.14929);
