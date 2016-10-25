@@ -3365,7 +3365,14 @@ REPLACE INTO `zp_mangosd`.`creature_movement_scripts` VALUES (11, 13, 1, 36, 0, 
 REPLACE INTO `zp_mangosd`.`creature_movement_scripts` VALUES (11, 20, 1, 36, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Deathknight attacks combat dummy');
 REPLACE INTO `zp_mangosd`.`creature_movement_scripts` VALUES (11, 21, 1, 36, 0, 16146, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Deathknight buddy attacks combat dummy');
 
+-- Death Knight Cavalier
+UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`='1' WHERE  `entry`=16163;
 
+-- Adjust names
+UPDATE `zp_mangosd`.`creature_template` SET `name`='Deathknight Captain' WHERE  `entry`=16145;
+UPDATE `zp_mangosd`.`creature_template` SET `name`='Deathknight' WHERE  `entry`=16146;
+UPDATE `zp_mangosd`.`creature_template` SET `name`='Deathknight Cavalier' WHERE  `entry`=16163;
+UPDATE `zp_mangosd`.`creature_template` SET `name`='Deathknight Understudy' WHERE  `entry`=16803;
 
 
 
