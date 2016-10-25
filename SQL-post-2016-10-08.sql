@@ -3374,6 +3374,21 @@ UPDATE `zp_mangosd`.`creature_template` SET `name`='Deathknight' WHERE  `entry`=
 UPDATE `zp_mangosd`.`creature_template` SET `name`='Deathknight Cavalier' WHERE  `entry`=16163;
 UPDATE `zp_mangosd`.`creature_template` SET `name`='Deathknight Understudy' WHERE  `entry`=16803;
 
+-- Patchwerk pat
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (88298, 1, 3305.03, -3231.81, 294.063, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.14091, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (88298, 2, 3257.44, -3230.36, 294.063, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.78355, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (88298, 3, 3232.6, -3210.97, 294.063, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.35551, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (88298, 4, 3208.7, -3188.16, 294.063, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.37515, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (88298, 5, 3182.32, -3163.56, 294.063, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.37908, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (88298, 6, 3161.25, -3145.45, 294.063, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.64612, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (88298, 7, 3134.11, -3140.88, 294.063, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.12128, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (88298, 8, 3107.4, -3145.3, 294.063, 60000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.41188, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (88298, 9, 3134.25, -3140.29, 294.063, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6.17256, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (88298, 10, 3160.95, -3145.5, 294.063, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.68954, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (88298, 11, 3182.92, -3162.53, 294.063, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.50497, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (88298, 12, 3209.04, -3188.25, 294.063, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.49712, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (88298, 13, 3233.26, -3210.67, 294.063, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.53246, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (88298, 14, 3257.23, -3230.15, 294.063, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6.17648, 0, 0);
 
 
 
