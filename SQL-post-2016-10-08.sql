@@ -3636,3 +3636,6 @@ REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (8086, 8086, 0, 0, 2);
 REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (8086, 88346, 0, 0, 2);
 REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (8086, 88347, 0, 0, 2);
 REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (8086, 88348, 0, 0, 2);
+
+-- Coords for naxxramas portal spell
+REPLACE INTO `zp_mangosd`.`spell_target_position` VALUES (28444, 533, 3005.74, -3434.27, 304.196, 0);
