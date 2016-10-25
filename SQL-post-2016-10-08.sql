@@ -3622,3 +3622,17 @@ INSERT INTO `zp_mangosd`.`creature_movement_scripts` VALUES
 -- work animation for one lumberjack
 REPLACE INTO `zp_mangosd`.`creature_addon` VALUES (45477, 0, 0, 1, 16, 234, 0, NULL);
 UPDATE `zp_mangosd`.`creature` SET `modelid`='308' WHERE  `guid`=45477;
+
+-- Anub'Rekhan Add dummy
+REPLACE INTO `zp_mangosd`.`creature` VALUES (8086, 800108, 533, 0, 0, 3294.63, -3476.64, 287.077, 0.0510492, 25, 0, 0, 646473, 0, 0, 0);
+
+-- delete old wrong linking
+DELETE FROM `zp_mangosd`.`creature_formations` WHERE  `memberGUID`=88346;
+DELETE FROM `zp_mangosd`.`creature_formations` WHERE  `memberGUID`=88347;
+DELETE FROM `zp_mangosd`.`creature_formations` WHERE  `memberGUID`=88348;
+
+-- Add link for Anub'rekhan and adds
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (8086, 8086, 0, 0, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (8086, 88346, 0, 0, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (8086, 88347, 0, 0, 2);
+REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (8086, 88348, 0, 0, 2);
