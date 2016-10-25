@@ -3106,7 +3106,7 @@ REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (8068, 88930, 3, 270, 2);
 REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (8068, 88931, 3, 0, 2);
 
 -- remove/add wp
-UPDATE `zp_mangosd`.`creature` SET `MovementType`='0' WHERE  `guid`=88929;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`='0' WHERE  `guid`=88928;
 UPDATE `zp_mangosd`.`creature` SET `MovementType`='2' WHERE  `guid`=8068;
 
 -- add dummies, link and remove wp movement
@@ -3218,7 +3218,7 @@ REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (8076, 88966, 3, 270, 2);
 REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (8076, 88967, 3, 0, 2);
 
 -- remove/add wp
-UPDATE `zp_mangosd`.`creature` SET `MovementType`='0' WHERE  `guid`=88960;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`='0' WHERE  `guid`=88964;
 UPDATE `zp_mangosd`.`creature` SET `MovementType`='2' WHERE  `guid`=8076;
 
 -- add dummies, link and remove wp movement
@@ -3390,5 +3390,103 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (88298, 12, 3209.04, -3188.
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (88298, 13, 3233.26, -3210.67, 294.063, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.53246, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (88298, 14, 3257.23, -3230.15, 294.063, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6.17648, 0, 0);
 
+-- Added Pathing for Skeletal Smith as well as blacksmith emotes and positions
+DELETE FROM `creature_addon` WHERE `guid` IN (88408,88409);
+INSERT INTO `zp_mangosd`.`creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (88408, 0, 0, 1, 0, 173, 0, NULL);
+INSERT INTO `zp_mangosd`.`creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (88409, 0, 0, 1, 0, 173, 0, NULL);
 
+-- Removes mana from Unholy axe, Unholy Staff, Unholy Swords
+UPDATE `creature_template` SET `minmana` = 0, `maxmana` = 0 WHERE `entry` IN (16194, 16215, 16216);
 
+-- All unholy weapons equip id
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (16194, 11342, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (16215, 12959, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (16216, 13222, 13222, 0);
+
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`='16194' WHERE  `entry`=16194;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`='16215' WHERE  `entry`=16215;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`='16216' WHERE  `entry`=16216;
+
+-- Adds correct graveyard for players dying in Naxxramas
+DELETE FROM `game_graveyard_zone` WHERE `id` = 909 AND `ghost_zone` = 3456;
+INSERT INTO `game_graveyard_zone` VALUES (909, 3456, 0);
+
+-- Updates gameobject 181575 (Naxxramas Portal) to match behavior of the three others portal
+-- Now players will be able to teleport to the instance entrance after defeating Maexxna
+UPDATE `zp_mangosd`.`gameobject_template` SET `type` = 10, `data0` = 0, `data10` = 28444, `data11` = 1, `data12` = 129 WHERE `entry` = 181575;
+
+-- Sapphiron size
+UPDATE `zp_mangosd`.`creature_template` SET `scale`='0' WHERE  `entry`=15989;
+
+-- Updates scale of creature 16064 (Thane Korth'azz) to make it match size of the three others Horsemen
+UPDATE `zp_mangosd`.`creature_template` SET `scale`='0' WHERE  `entry`=16064;
+
+-- Updates scale of creatures 16775 to 16778 (spirit of each of the Four Horsemen) to make it match size of the Four Horsemen
+UPDATE `zp_mangosd`.`creature_template` SET `scale` = 0 WHERE `entry` IN (16775, 16776, 16777, 16778);
+
+-- Added addon for combat emote Deathknight. They will no longer stand idle in front of their Combat Dummy
+DELETE FROM `zp_mangosd`.`creature_addon` WHERE `guid` IN ( 88434, 88435);
+INSERT INTO `zp_mangosd`.`creature_addon` VALUES (88435, 0, 0, 0, 0, 36, 0, '18950'); -- attack
+INSERT INTO `zp_mangosd`.`creature_addon` VALUES (88434, 0, 0, 0, 0, 36, 0, '18950'); -- attack
+
+-- Improved attitude of creatures 16146 (Deaathknight) and 16803 (Deathknight Understudy)
+-- by updating their addon to make them look ready to combat
+UPDATE `zp_mangosd`.`creature_addon` SET `emote` = 333 WHERE `guid` IN (88461, 88462, 88463, 88464, 88436, 88437, 88438, 88439, 88435, 88434);
+
+-- plagued bat & frenzied bat down to scale
+UPDATE `zp_mangosd`.`creature_template` SET `scale` = 0.6 WHERE `entry` = 16037;
+UPDATE `zp_mangosd`.`creature_template` SET `scale` = 0.6 WHERE `entry` = 16036;
+
+-- bats in plague wing on stairs statue when ooc turn rock
+DELETE FROM `zp_mangosd`.`creature_addon` WHERE `guid` IN (88092,88093,88096,88097,88098,88099);
+INSERT INTO `zp_mangosd`.`creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (88092, 0, 9, 1, 0, 0, 0, NULL);
+INSERT INTO `zp_mangosd`.`creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (88093, 0, 9, 1, 0, 0, 0, NULL);
+INSERT INTO `zp_mangosd`.`creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (88096, 0, 9, 1, 0, 0, 0, NULL);
+INSERT INTO `zp_mangosd`.`creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (88097, 0, 9, 1, 0, 0, 0, NULL);
+INSERT INTO `zp_mangosd`.`creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (88098, 0, 9, 1, 0, 0, 0, NULL);
+INSERT INTO `zp_mangosd`.`creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (88099, 0, 9, 1, 0, 0, 0, NULL);
+
+-- Changed Name of Stitched Giant to Stitched Spewer.
+-- (Stitched giant is the wrath name,also uses a larger different model)
+UPDATE `zp_mangosd`.`creature_template` SET `name` = 'Stitched Spewer' WHERE `entry` = 16025;
+
+-- Changed Scale on Naxxramas Combat Dummy
+UPDATE `zp_mangosd`.`creature_template` SET `scale` = 1.4 WHERE `entry` = 16211;
+
+-- Maggot size
+UPDATE `zp_mangosd`.`creature_template` SET `subname`='', `scale`='0' WHERE  `entry`=16030;
+
+-- equipment for lots of mobs
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`='16981' WHERE  `entry`=16981;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`='16983' WHERE  `entry`=16983;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`='16984' WHERE  `entry`=16984;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`='16861' WHERE  `entry`=16861;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`='16126' WHERE  `entry`=16126;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`='16150' WHERE  `entry`=16150;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`='16451' WHERE  `entry`=16451;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`='16368' WHERE  `entry`=16368;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`='16452' WHERE  `entry`=16452;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`='16165' WHERE  `entry`=16165;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`='52402' WHERE  `entry`=16125;
+UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`='52402' WHERE  `entry`=16148;
+
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (16981, 5305, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (16983, 4991, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (16984, 12285, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (16861, 13623, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (16126, 2181, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (16150, 2181, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (16451, 2181, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (16368, 10617, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (16452, 5305, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (16165, 24418, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_equip_template_raw` VALUES (52402, 16128, 30993, 0, 218169346, 234948100, 0, 3, 4, 0);
+
+-- add items for weapons above
+REPLACE INTO `zp_mangosd`.`item_template` VALUES (24418, 2, 15, 'Monster - Dagger Badass Naxx', 35819, 0, 0, 1, 0, 0, 13, -1, -1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 1, 3, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`item_template` VALUES (5305, 2, 7, 'Monster - Sword, Broadsword Silver Hilt', 7526, 0, 0, 1, 0, 0, 13, -1, -1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 1, 3, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`item_template` VALUES (4991, 2, 8, 'Monster - Sword2H, Broadsword', 5175, 0, 0, 1, 0, 0, 17, -1, -1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`item_template` VALUES (12285, 2, 1, 'Monster - Axe, 2H Rev. Bearded Single Bladed - Red', 18607, 0, 0, 1, 0, 0, 17, -1, -1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`item_template` VALUES (13623, 2, 8, 'Monster - Sword2H, Horde Skull Blue Flame', 24342, 0, 0, 1, 0, 0, 17, -1, -1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`item_template` VALUES (2181, 2, 8, 'Monster - Sword2H, Baron Rivendare', 7489, 0, 0, 1, 0, 0, 17, -1, -1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`item_template` VALUES (10617, 2, 15, 'Monster - Dagger, Curved Bone Bloody', 19556, 0, 0, 1, 0, 0, 13, -1, -1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 1, 3, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0);
