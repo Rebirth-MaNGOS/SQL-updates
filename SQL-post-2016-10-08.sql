@@ -3860,3 +3860,6 @@ UPDATE `zp_mangosd`.`gameobject_template` SET `flags`='16' WHERE  `entry`=181578
 -- Grobbulus size
 UPDATE `zp_mangosd`.`creature_template` SET `scale`='0' WHERE  `entry`=15931;
 UPDATE `zp_mangosd`.`creature_template` SET `speed_walk`='0.004', `speed_run`='0.00142857' WHERE  `entry`=16363;
+
+-- razuvious door
+UPDATE `zp_mangosd`.`gameobject_template` SET `data1`='0' WHERE  `entry`=181124;
