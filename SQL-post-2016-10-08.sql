@@ -4218,3 +4218,8 @@ REPLACE INTO `zp_mangosd`.`creature` VALUES (12703, 800114, 531, 0, 0, -8582.09,
 REPLACE INTO `zp_mangosd`.`creature` VALUES (12704, 800114, 531, 0, 0, -8593.03, 2047.65, 3.17067, 1.92354, 25, 0, 0, 646473, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature` VALUES (12705, 800114, 531, 0, 0, -8576.18, 2053.72, 2.17951, 1.92354, 25, 0, 0, 646473, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature` VALUES (12706, 800114, 531, 0, 0, -8583.4, 2047.25, -1.53725, 1.92354, 25, 0, 0, 646473, 0, 0, 0);
+
+-- Bugtrio update gold
+UPDATE `zp_mangosd`.`creature_template` SET `mingold`='532499', `maxgold`='650832' WHERE  `entry`=15544;
+UPDATE `zp_mangosd`.`creature_template` SET `mingold`='532499', `maxgold`='650832' WHERE  `entry`=15543;
+UPDATE `zp_mangosd`.`creature_template` SET `mingold`='532499', `maxgold`='650832' WHERE  `entry`=15511;
