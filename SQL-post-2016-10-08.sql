@@ -3391,12 +3391,12 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (88298, 13, 3233.26, -3210.
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (88298, 14, 3257.23, -3230.15, 294.063, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6.17648, 0, 0);
 
 -- Added Pathing for Skeletal Smith as well as blacksmith emotes and positions
-DELETE FROM `creature_addon` WHERE `guid` IN (88408,88409);
+DELETE FROM `zp_mangosd`.`creature_addon` WHERE `guid` IN (88408,88409);
 INSERT INTO `zp_mangosd`.`creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (88408, 0, 0, 1, 0, 173, 0, NULL);
 INSERT INTO `zp_mangosd`.`creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (88409, 0, 0, 1, 0, 173, 0, NULL);
 
 -- Removes mana from Unholy axe, Unholy Staff, Unholy Swords
-UPDATE `creature_template` SET `minmana` = 0, `maxmana` = 0 WHERE `entry` IN (16194, 16215, 16216);
+UPDATE `zp_mangosd`.`creature_template` SET `minmana` = 0, `maxmana` = 0 WHERE `entry` IN (16194, 16215, 16216);
 
 -- All unholy weapons equip id
 REPLACE INTO `zp_mangosd`.`creature_equip_template` VALUES (16194, 11342, 0, 0);
@@ -3408,8 +3408,8 @@ UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`='16215' WHERE  `entry
 UPDATE `zp_mangosd`.`creature_template` SET `equipment_id`='16216' WHERE  `entry`=16216;
 
 -- Adds correct graveyard for players dying in Naxxramas
-DELETE FROM `game_graveyard_zone` WHERE `id` = 909 AND `ghost_zone` = 3456;
-INSERT INTO `game_graveyard_zone` VALUES (909, 3456, 0);
+DELETE FROM `zp_mangosd`.`game_graveyard_zone` WHERE `id` = 909 AND `ghost_zone` = 3456;
+INSERT INTO `zp_mangosd`.`game_graveyard_zone` VALUES (909, 3456, 0);
 
 -- Updates gameobject 181575 (Naxxramas Portal) to match behavior of the three others portal
 -- Now players will be able to teleport to the instance entrance after defeating Maexxna
@@ -3530,7 +3530,7 @@ INSERT INTO `zp_mangosd`.creature_addon VALUES
 (45477,0,0,1,16,234,0,NULL),
 (45524,0,0,1,16,0,0,NULL),
 (89861,0,0,1,16,0,0,NULL);
-UPDATE creature SET equipment_id = 0, spawndist = 0, MovementType = 2 WHERE guid IN (44296,45524,89861);
+UPDATE zp_mangosd.creature SET equipment_id = 0, spawndist = 0, MovementType = 2 WHERE guid IN (44296,45524,89861);
 DELETE FROM `zp_mangosd`.creature_movement WHERE id IN (44296,45524,89861);
 INSERT INTO `zp_mangosd`.creature_movement VALUES
 -- 44296
@@ -3896,7 +3896,7 @@ UPDATE `zp_mangosd`.`creature` SET `spawntimesecs` = @TIMER_RESPAWN, `MovementTy
 UPDATE `zp_mangosd`.`creature` SET `spawntimesecs` = @TIMER_RESPAWN, `MovementType` = 2 WHERE `id` = 11625;
 
 -- Clean movement table: only Cork will have a pathway
-DELETE FROM `zp_mangosd`.`creature_movement` WHERE `id` IN (SELECT `guid` FROM `creature` WHERE `id` IN (11564, 11625, 11626));
+DELETE FROM `zp_mangosd`.`creature_movement` WHERE `id` IN (SELECT `guid` FROM `zp_mangosd`.`creature` WHERE `id` IN (11564, 11625, 11626));
 
 -- At quest proposal
 DELETE FROM `zp_mangosd`.`creature_movement_scripts` WHERE `id` IN (1162577, 11625209);
