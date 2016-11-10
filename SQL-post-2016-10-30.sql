@@ -506,3 +506,6 @@ REPLACE INTO `zp_mangosd`.`creature_formations` VALUES (8598, 49135, 2, 270, 2);
 UPDATE `zp_mangosd`.`creature` SET `MovementType`='0' WHERE  `guid`=49134;
 UPDATE `zp_mangosd`.`creature` SET `MovementType`='0' WHERE  `guid`=49135;
 UPDATE `zp_mangosd`.`creature` SET `MovementType`='0' WHERE  `guid`=49136;
+
+-- Deepstrider Searcher should be able to walk in water
+UPDATE `zp_mangosd`.`creature_template` SET `InhabitType`='3' WHERE  `entry`=4687;
