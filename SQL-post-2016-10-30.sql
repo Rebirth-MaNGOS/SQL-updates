@@ -8,3 +8,7 @@
 -- Vem and Kri should be tauntable
 UPDATE `zp_mangosd`.`creature_template` SET `flags_extra`='513' WHERE  `entry`=15511;
 UPDATE `zp_mangosd`.`creature_template` SET `flags_extra`='513' WHERE  `entry`=15544;
+
+-- armor for Thistleshrub Dew Collector and Thistleshrub Rootshaper
+UPDATE `zp_mangosd`.`creature_template` SET `armor`='4344' WHERE `entry` in ('5481','5485');
+
