@@ -509,3 +509,6 @@ UPDATE `zp_mangosd`.`creature` SET `MovementType`='0' WHERE  `guid`=49136;
 
 -- Deepstrider Searcher should be able to walk in water
 UPDATE `zp_mangosd`.`creature_template` SET `InhabitType`='3' WHERE  `entry`=4687;
+
+-- Grace of Air Totem III should now behave like a totem
+UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='' WHERE  `entry`=15463;
