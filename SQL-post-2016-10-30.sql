@@ -512,3 +512,43 @@ UPDATE `zp_mangosd`.`creature_template` SET `InhabitType`='3' WHERE  `entry`=468
 
 -- Grace of Air Totem III should now behave like a totem
 UPDATE `zp_mangosd`.`creature_template` SET `ScriptName`='' WHERE  `entry`=15463;
+
+-- ZG Gurubashi Blood Drinker add some rp attacking
+-- add movement
+UPDATE `zp_mangosd`.`creature` SET `MovementType`='2' WHERE  `guid`=49776;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`='2' WHERE  `guid`=49777;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`='2' WHERE  `guid`=49791;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`='2' WHERE  `guid`=49792;
+
+UPDATE `zp_mangosd`.`creature` SET `MovementType`='2' WHERE  `guid`=49789;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`='2' WHERE  `guid`=49790;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`='2' WHERE  `guid`=51578;
+UPDATE `zp_mangosd`.`creature` SET `MovementType`='2' WHERE  `guid`=51579;
+
+-- add wp
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49776, 1, -12264.8, -1862.98, 132.538, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.68781, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49776, 2, -12264.8, -1862.98, 132.538, 8000, 11353, 0, 0, 0, 0, 0, 0, 0, 0, 2.68781, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49777, 1, -12267.4, -1861.41, 131.826, 4000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.70723, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49777, 2, -12267.4, -1861.41, 131.826, 11000, 11354, 0, 0, 0, 0, 0, 0, 0, 0, 5.70723, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49791, 1, -12267.7, -1865.83, 132.445, 2000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.23402, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49791, 2, -12267.7, -1865.83, 132.445, 9000, 11354, 0, 0, 0, 0, 0, 0, 0, 0, 2.23402, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49792, 1, -12270, -1863.72, 131.597, 4000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.52, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49792, 2, -12270, -1863.72, 131.597, 12000, 11353, 0, 0, 0, 0, 0, 0, 0, 0, 5.52, 0, 0);
+
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49789, 1, -12347, -1847.58, 131.092, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.3911, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49789, 2, -12347, -1847.58, 131.092, 8000, 11353, 0, 0, 0, 0, 0, 0, 0, 0, 2.3911, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49790, 1, -12349.6, -1845.43, 131.042, 4000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.67232, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (49790, 2, -12349.6, -1845.43, 131.042, 11000, 11354, 0, 0, 0, 0, 0, 0, 0, 0, 5.67232, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (51578, 1, -12352, -1843.97, 130.966, 2000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.71042, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (51578, 2, -12352, -1843.97, 130.966, 9000, 11354, 0, 0, 0, 0, 0, 0, 0, 0, 1.71042, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (51579, 1, -12352.5, -1841.72, 131.105, 4000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.0091, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (51579, 2, -12352.5, -1841.72, 131.105, 12000, 11353, 0, 0, 0, 0, 0, 0, 0, 0, 5.0091, 0, 0);
+
+-- add scripts
+DELETE FROM `zp_mangosd`.`creature_movement_scripts` WHERE  `id`=11353 LIMIT 6;
+REPLACE INTO `zp_mangosd`.`creature_movement_scripts` VALUES (11353, 0, 1, 37, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Gurubashi Blood Drinker attack');
+REPLACE INTO `zp_mangosd`.`creature_movement_scripts` VALUES (11353, 5, 1, 38, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Gurubashi Blood Drinker attack');
+
+DELETE FROM `zp_mangosd`.`creature_movement_scripts` WHERE  `id`=11354 LIMIT 6;
+REPLACE INTO `zp_mangosd`.`creature_movement_scripts` VALUES (11354, 1, 1, 37, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Gurubashi Blood Drinker attack');
+REPLACE INTO `zp_mangosd`.`creature_movement_scripts` VALUES (11354, 7, 1, 38, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Gurubashi Blood Drinker attack');
