@@ -552,3 +552,11 @@ REPLACE INTO `zp_mangosd`.`creature_movement_scripts` VALUES (11353, 5, 1, 38, 0
 DELETE FROM `zp_mangosd`.`creature_movement_scripts` WHERE  `id`=11354 LIMIT 6;
 REPLACE INTO `zp_mangosd`.`creature_movement_scripts` VALUES (11354, 1, 1, 37, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Gurubashi Blood Drinker attack');
 REPLACE INTO `zp_mangosd`.`creature_movement_scripts` VALUES (11354, 7, 1, 38, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Gurubashi Blood Drinker attack');
+
+-- move hegnar rumbleshot and his fellow mortar team
+REPLACE INTO `zp_mangosd`.`creature` VALUES (265, 1243, 0, 3412, 0, -6015.51, -201.511, 407.437, 0.0349066, 180, 0, 0, 372, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (266, 10803, 0, 10111, 0, -6008.53, -199.145, 406.687, 4.37218, 180, 0, 0, 372, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (267, 10611, 0, 9947, 0, -6007.46, -202.158, 407.448, 2.47837, 900, 0, 0, 413, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (268, 10804, 0, 10110, 0, -6010.67, -199.434, 406.792, 5.53269, 180, 0, 0, 372, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (269, 10610, 0, 9946, 0, -6009.25, -202.65, 406.983, 1.58825, 180, 0, 0, 456, 0, 0, 0);
+REPLACE INTO `zp_mangosd`.`creature` VALUES (272, 10805, 0, 10109, 0, -6007.3, -200.348, 406.777, 3.28222, 180, 0, 0, 196, 0, 0, 0);
