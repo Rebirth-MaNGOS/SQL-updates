@@ -1873,3 +1873,9 @@ REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (2258, 27, 620.092
 REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (2258, 28, 622.218, -1054.98, 163.22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.857007, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (2258, 29, 634.789, -1041.15, 163.826, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.495724, 0, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement_template` VALUES (2258, 30, 653.802, -1032.34, 163.225, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.420457, 0, 0, 0);
+
+-- Tome of Conjure Food VII should be rare
+UPDATE `zp_mangosd`.`item_template` SET `Quality`='3' WHERE  `entry`=22897;
+
+-- 10% drop instead of 14
+UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='10' WHERE  `entry`=10811 AND `item`=22897;
