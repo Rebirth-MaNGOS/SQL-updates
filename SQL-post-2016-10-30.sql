@@ -2205,3 +2205,11 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (4211, 38, -10545, -1184.4,
 UPDATE `zp_mangosd`.`reference_loot_template` SET `lootcondition`='6', `condition_value1`='67' WHERE  `entry`=986332 AND `item`=18829;
 UPDATE `zp_mangosd`.`reference_loot_template` SET `lootcondition`='6', `condition_value1`='469' WHERE  `entry`=986332 AND `item`=18824;
 
+-- brd emp yells
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1230065, 'Prepare to meet your doom at the hands of Ragnaros\' most powerful servant!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Emperor Thaurissan YELL_AGGRO_3');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1230064, 'I will crush you into little tiny pieces!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Emperor Thaurissan YELL_AGGRO_2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1230063, 'Your efforts are utterly pointless, fools! You will never be able to defeat me!', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Emperor Thaurissan YELL_SENATOR_4');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1230062, 'They were just getting in the way anyways.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Emperor Thaurissan YELL_SENATOR_3');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1230061, 'Is that the best you can do? Do you really expect that you could defeat someone as awe inspiring as me?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Emperor Thaurissan YELL_SENATOR_2');
+REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1230060, 'Ha! You can\'t even begin to imagine the futility of your efforts.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Emperor Thaurissan YELL_SENATOR_1');
+
