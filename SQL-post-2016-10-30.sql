@@ -1879,3 +1879,6 @@ UPDATE `zp_mangosd`.`item_template` SET `Quality`='3' WHERE  `entry`=22897;
 
 -- 10% drop instead of 14
 UPDATE `zp_mangosd`.`creature_loot_template` SET `ChanceOrQuestChance`='10' WHERE  `entry`=10811 AND `item`=22897;
+
+-- script Avarus Kharag AI so he can cast on players
+UPDATE `zp_mangosd`.`creature_template` SET `AIName`='', `ScriptName`='npc_avarus_kharag' WHERE  `entry`=1679;
