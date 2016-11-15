@@ -2201,3 +2201,7 @@ REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (4211, 36, -10527.6, -1186.
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (4211, 37, -10536.8, -1186.55, 28.0243, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.19143, 0, 0);
 REPLACE INTO `zp_mangosd`.`creature_movement` VALUES (4211, 38, -10545, -1184.4, 27.791, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.40603, 0, 0);
 
+-- Magma Tempered Boots and Deep Earth Spaulders pooled ally/horde
+UPDATE `zp_mangosd`.`reference_loot_template` SET `lootcondition`='6', `condition_value1`='67' WHERE  `entry`=986332 AND `item`=18829;
+UPDATE `zp_mangosd`.`reference_loot_template` SET `lootcondition`='6', `condition_value1`='469' WHERE  `entry`=986332 AND `item`=18824;
+
