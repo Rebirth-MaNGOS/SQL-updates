@@ -2213,3 +2213,9 @@ REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1230062, 'They were jus
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1230061, 'Is that the best you can do? Do you really expect that you could defeat someone as awe inspiring as me?', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Emperor Thaurissan YELL_SENATOR_2');
 REPLACE INTO `zp_scriptdevzerod`.`script_texts` VALUES (-1230060, 'Ha! You can\'t even begin to imagine the futility of your efforts.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'Emperor Thaurissan YELL_SENATOR_1');
 
+-- not sure what's in live DB for invis npcs so adding it again
+REPLACE INTO `zp_mangosd`.`creature_template_addon` VALUES (8888, 0, 65536, 1, 0, 0, 0, '10848');
+REPLACE INTO `zp_mangosd`.`creature_template_addon` VALUES (9299, 0, 65536, 1, 16, 0, 0, '10848');
+
+REPLACE INTO `zp_mangosd`.`creature_template` VALUES (8888, 0, 0, 8698, 0, 'Franclorn Forgewright', NULL, 1663, 60, 60, 3857, 3857, 0, 0, 0, 35, 35, 3, 1.1, 0.95, 0, 0, 164, 212, 0, 87, 1, 2000, 0, 0, 0, 768, 0, 0, 0, 0, 0, 0, 74.448, 102.366, 100, 7, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 0, 0, 1, 0, 0, 0, 0, 2, '');
+REPLACE INTO `zp_mangosd`.`creature_template` VALUES (9299, 0, 0, 8717, 0, 'Gaeriyan', NULL, 0, 54, 54, 3986, 3986, 0, 0, 0, 35, 35, 3, 1.24, 0.95, 0, 0, 154, 196, 0, 81, 1, 1440, 1584, 0, 1, 0, 0, 0, 0, 0, 0, 0, 68.4288, 94.0896, 100, 7, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 3, 0, 0, 1, 0, 0, 0, 0, 2, '');
